@@ -953,38 +953,6 @@ button.card:hover {
 .reveal-cta {
   text-align: center;
 }
-.reel {
-  margin: 1.25rem auto;
-  min-height: 5.5rem;
-  display: grid;
-  place-items: center;
-  padding: 1rem;
-  border-radius: 16px;
-  background: var(--surface-2);
-  font-size: 1.6rem;
-  font-weight: 800;
-  overflow: hidden;
-  max-width: 480px;
-}
-.reel span {
-  animation: drop 0.12s ease-out;
-}
-.reel.landed {
-  background: linear-gradient(135deg, var(--accent-soft), color-mix(in srgb, var(--gold) 25%, transparent));
-  animation: pop 0.5s ease-out;
-}
-@keyframes drop {
-  from {
-    transform: translateY(-40%);
-    opacity: 0.3;
-  }
-}
-@keyframes pop {
-  50% {
-    transform: scale(1.06);
-  }
-}
-
 .table-wrap {
   overflow-x: auto;
   margin: 1rem 0;
@@ -1202,4 +1170,34 @@ button.card:hover {
 .delete-draw {
   display: block;
   margin-top: 0.6rem;
+}
+
+/* ---------- Spinning wheel ---------- */
+
+.wheel-wrap {
+  position: relative;
+  width: min(320px, 82vw);
+  margin: 1.25rem auto 1rem;
+}
+.wheel {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 6px 24px rgb(0 0 0 / 0.18);
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.12, 0.7, 0.12, 1);
+}
+.wheel-pointer {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 26px solid var(--text);
+  filter: drop-shadow(0 2px 2px rgb(0 0 0 / 0.3));
 }

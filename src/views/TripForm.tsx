@@ -15,7 +15,8 @@ export interface TripDraft {
 }
 
 export function TripForm({ trip, draft, onClose }: { trip?: Trip; draft?: TripDraft; onClose: () => void }) {
-  const { me, reload } = useData();
+  const { me, reload, ideas } = useData();
+  const fromIdea = ideas.find((i) => i.id === draft?.idea_id);
   const [title, setTitle] = useState(trip?.title ?? draft?.title ?? "");
   const [start, setStart] = useState(trip?.start_date ?? "");
   const [end, setEnd] = useState(trip?.end_date ?? "");
@@ -23,6 +24,7 @@ export function TripForm({ trip, draft, onClose }: { trip?: Trip; draft?: TripDr
   const [rating, setRating] = useState<number | null>(trip?.rating ?? null);
   const [notes, setNotes] = useState(trip?.notes ?? "");
   const [cover, setCover] = useState(trip?.cover_url ?? "");
+  const [roadTrip, setRoadTrip] = useState(trip?.road_trip ?? fromIdea?.holiday_types.includes("road-trip") ?? false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -36,6 +38,7 @@ export function TripForm({ trip, draft, onClose }: { trip?: Trip; draft?: TripDr
       rating,
       notes: notes || null,
       cover_url: cover || null,
+      road_trip: roadTrip,
       idea_id: trip?.idea_id ?? draft?.idea_id ?? null,
       created_by: trip?.created_by ?? me?.id ?? null,
     };
@@ -80,6 +83,13 @@ export function TripForm({ trip, draft, onClose }: { trip?: Trip; draft?: TripDr
           <PlaceChips places={places} onRemove={(i) => setPlaces(places.filter((_, j) => j !== i))} />
           <PlaceSearch onAdd={(p) => setPlaces([...places, p])} />
         </div>
+        <label className="check-row">
+          <input type="checkbox" checked={roadTrip} onChange={(e) => setRoadTrip(e.target.checked)} />
+          <span>
+            <strong>🚗 Road trip</strong>
+            <span className="muted small">The map joins the places in order instead of from the first one.</span>
+          </span>
+        </label>
         <div className="field">
           <span>Rating</span>
           <Stars value={rating} onChange={setRating} />

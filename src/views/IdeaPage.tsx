@@ -6,7 +6,7 @@ import { budgetLabel, holidayType, travelTimeLabel, tripLengthLabel } from "../.
 import { ticketRanges } from "../../shared/draw";
 import { estimateTravel, formatHours } from "../../shared/travelTime";
 import { WorldMap } from "../components/WorldMap";
-import type { Pin } from "../components/WorldMap";
+import type { Pin, Route } from "../components/WorldMap";
 import { IdeaForm } from "./IdeaForm";
 import { TripForm } from "./TripForm";
 import type { TripDraft } from "./TripForm";
@@ -31,6 +31,11 @@ export function IdeaPage({ id }: { id: number }) {
   const pins = useMemo<Pin[]>(
     () =>
       (idea?.places ?? []).flatMap((p) => (p.lat !== null && p.lon !== null ? [{ lat: p.lat, lon: p.lon, label: `${p.name}, ${p.country}`, kind: "idea" as const }] : [])),
+    [idea],
+  );
+
+  const routes = useMemo<Route[]>(
+    () => (idea ? [{ places: idea.places, roadTrip: idea.holiday_types.includes("road-trip"), label: idea.title, kind: "idea" }] : []),
     [idea],
   );
 
@@ -134,7 +139,7 @@ export function IdeaPage({ id }: { id: number }) {
             ))}
           </ol>
           <div className="map-wrap">
-            <WorldMap visited={NONE} ideas={countries} pins={pins} selected={null} onSelect={() => {}} />
+            <WorldMap visited={NONE} ideas={countries} pins={pins} routes={routes} selected={null} onSelect={() => {}} />
           </div>
         </>
       ) : (

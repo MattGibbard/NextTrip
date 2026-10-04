@@ -6,7 +6,7 @@ import type { CountrySummary } from "../countries";
 import { CONTINENT_NAMES, WORLD_COUNTRIES, continentOf } from "../continents";
 import { dateRange, plural } from "../format";
 import { WorldMap } from "../components/WorldMap";
-import type { Pin } from "../components/WorldMap";
+import type { Pin, Route } from "../components/WorldMap";
 
 type Mode = "countries" | "cities" | "years";
 
@@ -20,10 +20,14 @@ export function PlacesView() {
   const visited = useMemo(() => summarise(trips.map((t) => t.places)), [trips]);
   const activeIdeas = useMemo(() => ideas.filter((i) => i.status === "active" || i.status === "won"), [ideas]);
 
-  const { visitedCodes, ideaCodes, pins } = useMemo(() => {
+  const { visitedCodes, ideaCodes, pins, routes } = useMemo(() => {
     const visitedCodes = new Set(visited.map((c) => c.code));
     const ideaCodes = new Set<string>();
     const pins: Pin[] = [];
+    const routes: Route[] = trips.map((t) => ({ places: t.places, roadTrip: t.road_trip, label: t.title, kind: "visited" }));
+    if (showIdeas)
+      for (const i of activeIdeas)
+        routes.push({ places: i.places, roadTrip: i.holiday_types.includes("road-trip"), label: `Idea: ${i.title}`, kind: "idea" });
     const seen = new Set<string>();
     for (const t of trips)
       for (const p of t.places)
@@ -40,7 +44,7 @@ export function PlacesView() {
             pins.push({ lat: p.lat, lon: p.lon, label: `${p.name} (idea: ${i.title})`, kind: "idea" });
           }
         }
-    return { visitedCodes, ideaCodes, pins };
+    return { visitedCodes, ideaCodes, pins, routes };
   }, [trips, activeIdeas, visited, showIdeas]);
 
   const cities = useMemo(
@@ -82,7 +86,7 @@ export function PlacesView() {
       </div>
 
       <div className="map-wrap" ref={mapRef}>
-        <WorldMap visited={visitedCodes} ideas={ideaCodes} pins={pins} selected={selected} onSelect={select} />
+        <WorldMap visited={visitedCodes} ideas={ideaCodes} pins={pins} routes={routes} selected={selected} onSelect={select} />
         <div className="legend">
           <span>
             <i className="swatch visited" /> Been

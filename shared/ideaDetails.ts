@@ -28,6 +28,7 @@ export const HOLIDAY_TYPES = [
   { key: "culture", label: "Culture & history", icon: "🏛️" },
   { key: "food", label: "Food & drink", icon: "🍷" },
   { key: "road-trip", label: "Road trip", icon: "🚗" },
+  { key: "cruise", label: "Cruise", icon: "🛳️" },
   { key: "ski", label: "Skiing", icon: "⛷️" },
   { key: "relax", label: "Relax & spa", icon: "🧘" },
 ] as const;

@@ -41,3 +41,10 @@ describe("greatCircle", () => {
     expect(pts.at(-1)![1]).toBeCloseTo(-122.4 + 360);
   });
 });
+
+it("follows the route in order for road trips and cruises", async () => {
+  const { followsInOrder } = await import("../shared/routes");
+  expect(followsInOrder(["road-trip"])).toBe(true);
+  expect(followsInOrder(["cruise", "relax"])).toBe(true);
+  expect(followsInOrder(["city"])).toBe(false);
+});

@@ -16,7 +16,8 @@ export interface Pin {
 /** Lines between the places of one trip or idea. */
 export interface Route {
   places: { lat: number | null; lon: number | null }[];
-  roadTrip: boolean;
+  /** Join the places in order (road trips, cruises) instead of from the first one. */
+  inOrder: boolean;
   label: string;
   kind: "visited" | "idea";
 }
@@ -110,7 +111,7 @@ export function WorldMap({ visited, ideas, pins, routes = NO_ROUTES, selected, o
       // Routes go under the pins so the city dots stay tappable.
       for (const r of routes) {
         const color = r.kind === "visited" ? visitedColor : ideaColor;
-        for (const [from, to] of routeLegs(r.places, r.roadTrip)) {
+        for (const [from, to] of routeLegs(r.places, r.inOrder)) {
           const path = greatCircle(from, to);
           // A pale halo keeps the line readable on top of a shaded country.
           L.polyline(path, { color: "#fff", weight: 5, opacity: 0.7, interactive: false }).addTo(group);

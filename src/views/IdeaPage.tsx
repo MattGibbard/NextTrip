@@ -7,6 +7,7 @@ import { ticketRanges } from "../../shared/draw";
 import { estimateTravel, formatHours } from "../../shared/travelTime";
 import { WorldMap } from "../components/WorldMap";
 import type { Pin, Route } from "../components/WorldMap";
+import { followsInOrder } from "../../shared/routes";
 import { IdeaForm } from "./IdeaForm";
 import { TripForm } from "./TripForm";
 import type { TripDraft } from "./TripForm";
@@ -35,7 +36,7 @@ export function IdeaPage({ id }: { id: number }) {
   );
 
   const routes = useMemo<Route[]>(
-    () => (idea ? [{ places: idea.places, roadTrip: idea.holiday_types.includes("road-trip"), label: idea.title, kind: "idea" }] : []),
+    () => (idea ? [{ places: idea.places, inOrder: followsInOrder(idea.holiday_types), label: idea.title, kind: "idea" }] : []),
     [idea],
   );
 

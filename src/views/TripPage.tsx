@@ -21,7 +21,7 @@ export function TripPage({ id }: { id: number }) {
       (trip?.places ?? []).flatMap((p) => (p.lat !== null && p.lon !== null ? [{ lat: p.lat, lon: p.lon, label: `${p.name}, ${p.country}`, kind: "visited" as const }] : [])),
     [trip],
   );
-  const routes = useMemo<Route[]>(() => (trip ? [{ places: trip.places, roadTrip: trip.road_trip, label: trip.title, kind: "visited" }] : []), [trip]);
+  const routes = useMemo<Route[]>(() => (trip ? [{ places: trip.places, inOrder: trip.road_trip || trip.cruise, label: trip.title, kind: "visited" }] : []), [trip]);
 
   if (!trip) {
     return (
@@ -69,6 +69,7 @@ export function TripPage({ id }: { id: number }) {
       <div className="trip-meta">
         {trip.rating ? <Stars value={trip.rating} /> : <span className="muted small">Not rated</span>}
         {trip.road_trip && <span className="detail">🚗 Road trip</span>}
+        {trip.cruise && <span className="detail">🛳️ Cruise</span>}
         {idea && (
           <a className="detail" href={`#/ideas/${idea.id}`}>
             🏆 From the idea "{idea.title}"

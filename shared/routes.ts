@@ -5,15 +5,20 @@ interface Point {
 
 type LatLon = [number, number];
 
+/** Road trips and cruises go place to place in order rather than out from the first place. */
+export function followsInOrder(holidayTypes: readonly string[]): boolean {
+  return holidayTypes.includes("road-trip") || holidayTypes.includes("cruise");
+}
+
 /**
- * The legs to draw between a trip or idea's places. A road trip goes city to
- * city in order; anything else fans out from the first city. Places without
+ * The legs to draw between a trip or idea's places. A road trip or cruise goes
+ * place to place in order; anything else fans out from the first city. Places without
  * coordinates are skipped, and a single place has no legs.
  */
-export function routeLegs(places: Point[], roadTrip: boolean): [LatLon, LatLon][] {
+export function routeLegs(places: Point[], inOrder: boolean): [LatLon, LatLon][] {
   const pts = places.flatMap((p): LatLon[] => (p.lat !== null && p.lon !== null ? [[p.lat, p.lon]] : []));
   if (pts.length < 2) return [];
-  if (roadTrip) return pts.slice(1).map((p, i) => [pts[i], p]);
+  if (inOrder) return pts.slice(1).map((p, i) => [pts[i], p]);
   return pts.slice(1).map((p) => [pts[0], p]);
 }
 

@@ -25,6 +25,7 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
   const [notes, setNotes] = useState(trip?.notes ?? "");
   const [cover, setCover] = useState(trip?.cover_url ?? "");
   const [roadTrip, setRoadTrip] = useState(trip?.road_trip ?? fromIdea?.holiday_types.includes("road-trip") ?? false);
+  const [cruise, setCruise] = useState(trip?.cruise ?? fromIdea?.holiday_types.includes("cruise") ?? false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -39,6 +40,7 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
       notes: notes || null,
       cover_url: cover || null,
       road_trip: roadTrip,
+      cruise,
       idea_id: trip?.idea_id ?? draft?.idea_id ?? null,
       created_by: trip?.created_by ?? me?.id ?? null,
     };
@@ -84,13 +86,22 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
           <PlaceChips places={places} onRemove={(i) => setPlaces(places.filter((_, j) => j !== i))} />
           <PlaceSearch onAdd={(p) => setPlaces([...places, p])} />
         </div>
-        <label className="check-row">
-          <input type="checkbox" checked={roadTrip} onChange={(e) => setRoadTrip(e.target.checked)} />
-          <span>
-            <strong>🚗 Road trip</strong>
-            <span className="muted small">The map joins the places in order instead of from the first one.</span>
-          </span>
-        </label>
+        <div className="field">
+          <span>Route on the map</span>
+          <label className="check-row">
+            <input type="checkbox" checked={roadTrip} onChange={(e) => setRoadTrip(e.target.checked)} />
+            <span>
+              <strong>🚗 Road trip</strong>
+            </span>
+          </label>
+          <label className="check-row">
+            <input type="checkbox" checked={cruise} onChange={(e) => setCruise(e.target.checked)} />
+            <span>
+              <strong>🛳️ Cruise</strong>
+            </span>
+          </label>
+          <span className="muted small">Road trips and cruises join the places in order. Otherwise lines go out from the first place.</span>
+        </div>
         <div className="field">
           <span>Rating</span>
           <Stars value={rating} onChange={setRating} />

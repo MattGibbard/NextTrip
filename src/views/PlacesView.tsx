@@ -7,6 +7,7 @@ import { CONTINENT_NAMES, WORLD_COUNTRIES, continentOf } from "../continents";
 import { dateRange, plural } from "../format";
 import { WorldMap } from "../components/WorldMap";
 import type { Pin, Route } from "../components/WorldMap";
+import { followsInOrder } from "../../shared/routes";
 
 type Mode = "countries" | "cities" | "years";
 
@@ -24,10 +25,10 @@ export function PlacesView() {
     const visitedCodes = new Set(visited.map((c) => c.code));
     const ideaCodes = new Set<string>();
     const pins: Pin[] = [];
-    const routes: Route[] = trips.map((t) => ({ places: t.places, roadTrip: t.road_trip, label: t.title, kind: "visited" }));
+    const routes: Route[] = trips.map((t) => ({ places: t.places, inOrder: t.road_trip || t.cruise, label: t.title, kind: "visited" }));
     if (showIdeas)
       for (const i of activeIdeas)
-        routes.push({ places: i.places, roadTrip: i.holiday_types.includes("road-trip"), label: `Idea: ${i.title}`, kind: "idea" });
+        routes.push({ places: i.places, inOrder: followsInOrder(i.holiday_types), label: `Idea: ${i.title}`, kind: "idea" });
     const seen = new Set<string>();
     for (const t of trips)
       for (const p of t.places)

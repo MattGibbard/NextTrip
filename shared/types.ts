@@ -27,6 +27,8 @@ export interface Trip {
   cover_url: string | null;
   /** Road trips draw their route city to city, in order. */
   road_trip: boolean;
+  /** Cruises also draw their route port to port, in order. */
+  cruise: boolean;
   idea_id: number | null;
   created_by: number | null;
   created_at: string;

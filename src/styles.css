@@ -1067,3 +1067,135 @@ button.card:hover {
     filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);
   }
 }
+
+/* ---------- Idea details + vetoes ---------- */
+
+.details-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.35rem;
+}
+.detail {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: 0.12rem 0.5rem;
+  white-space: nowrap;
+}
+.choice-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.choice {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.choice.small {
+  padding: 0.25rem 0.65rem;
+  font-size: 0.8rem;
+}
+.choice.on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+.filter-row {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.9rem;
+  scrollbar-width: none;
+}
+.filter-row .choice {
+  flex-shrink: 0;
+}
+.veto-link {
+  margin-top: 0.2rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+.veto-used {
+  font-size: 0.9rem;
+}
+.veto-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.9rem;
+  display: grid;
+  gap: 0.4rem;
+}
+.veto-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 12px;
+  border: 1px dashed var(--border);
+}
+
+/* ---------- Places extras ---------- */
+
+.stats .meter {
+  display: block;
+  height: 4px;
+  margin-top: 0.4rem;
+  border-radius: 99px;
+  background: linear-gradient(to right, var(--accent) var(--pct), var(--surface-2) var(--pct));
+}
+.list-row.clickable {
+  cursor: pointer;
+}
+.list-row.clickable:hover {
+  background: var(--surface-2);
+}
+.hint {
+  margin: -0.4rem 0 1rem;
+}
+.country-panel h2 {
+  font-size: 1.25rem;
+}
+.detail.new {
+  border: 0;
+  cursor: pointer;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.timeline {
+  position: relative;
+  padding-left: 1.4rem;
+  border-left: 2px solid var(--border);
+  margin-left: 0.5rem;
+}
+.timeline-year {
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+.timeline-dot {
+  position: absolute;
+  left: calc(-1.4rem - 7px);
+  top: 0.3rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+}
+.timeline-trips {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: grid;
+  gap: 0.3rem;
+}
+.map-wrap {
+  scroll-margin-top: 70px;
+}

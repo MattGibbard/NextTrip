@@ -10,7 +10,7 @@
     "typecheck": "tsc -b",
     "db:migrate:local": "wrangler d1 migrations apply nexttrip --local",
     "db:migrate:remote": "wrangler d1 migrations apply nexttrip --remote",
-    "deploy": "npm run build && wrangler deploy && wrangler d1 migrations apply nexttrip --remote",
+    "deploy": "npm run build && wrangler deploy",
     "cf-typegen": "wrangler types"
   },
   "dependencies": {

@@ -1,8 +1,9 @@
 import { Hono } from "hono";
 import type { Context } from "hono";
-import schemaSql from "../migrations/0001_init.sql?raw";
+import { migrate } from "./migrate";
 import { ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
 import { parseNominatim } from "../shared/geocode";
+import { cleanDetails } from "../shared/ideaDetails";
 import type {
   Allocation,
   Idea,
@@ -31,29 +32,16 @@ app.onError((err, c) => {
 
 let schemaReady: Promise<void> | null = null;
 
-/** Statements from the (idempotent) schema file, without comments. */
-export function schemaStatements(sql: string): string[] {
-  return sql
-    .split("\n")
-    .filter((line) => !line.trim().startsWith("--"))
-    .join("\n")
-    .split(";")
-    .map((s) => s.trim())
-    .filter(Boolean);
-}
-
-// Create the tables on first use, once per Worker instance, so the site works
-// even if the deploy never ran `wrangler d1 migrations apply`.
+// Bring the database up to date on first use, once per Worker instance, so the
+// site works even if the deploy never ran `wrangler d1 migrations apply`.
 app.use("*", async (c, next) => {
   if (!c.env.DB) {
     return c.json({ error: "The database isn't connected. Check the D1 binding named DB on the Worker." }, 500);
   }
-  schemaReady ??= c.env.DB.batch(schemaStatements(schemaSql).map((s) => c.env.DB.prepare(s)))
-    .then(() => undefined)
-    .catch((err) => {
-      schemaReady = null;
-      throw err;
-    });
+  schemaReady ??= migrate(c.env.DB).catch((err) => {
+    schemaReady = null;
+    throw err;
+  });
   await schemaReady;
   await next();
 });
@@ -243,21 +231,36 @@ function ideaInput(b: Record<string, unknown>): IdeaInput {
     description: cleanText(b.description, 5000),
     created_by: typeof b.created_by === "number" ? b.created_by : null,
     places: cleanPlaces(b.places),
+    ...cleanDetails(b),
   };
+}
+
+type IdeaRow = Omit<Idea, "places" | "holiday_types"> & { holiday_types: string | null };
+
+function parseTypes(raw: string | null): Idea["holiday_types"] {
+  try {
+    const v = JSON.parse(raw ?? "[]");
+    return cleanDetails({ holiday_types: v }).holiday_types;
+  } catch {
+    return [];
+  }
 }
 
 app.get("/ideas", async (c) => {
   const [{ results }, places] = await Promise.all([
-    c.env.DB.prepare("SELECT * FROM ideas WHERE status != 'archived' ORDER BY created_at DESC").all<Omit<Idea, "places">>(),
+    c.env.DB.prepare("SELECT * FROM ideas WHERE status != 'archived' ORDER BY created_at DESC").all<IdeaRow>(),
     loadPlaces(c.env.DB, "idea_places", "idea_id"),
   ]);
-  return c.json(results.map((i) => ({ ...i, places: places.get(i.id) ?? [] })));
+  return c.json(results.map((i) => ({ ...i, holiday_types: parseTypes(i.holiday_types), places: places.get(i.id) ?? [] })));
 });
 
 app.post("/ideas", async (c) => {
   const i = ideaInput(await body(c));
-  const row = await c.env.DB.prepare("INSERT INTO ideas (title, description, created_by) VALUES (?, ?, ?) RETURNING id")
-    .bind(i.title, i.description, i.created_by ?? viewerId(c))
+  const row = await c.env.DB.prepare(
+    `INSERT INTO ideas (title, description, created_by, budget, trip_length, travel_time, holiday_types)
+     VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id`,
+  )
+    .bind(i.title, i.description, i.created_by ?? viewerId(c), i.budget, i.trip_length, i.travel_time, JSON.stringify(i.holiday_types))
     .first<{ id: number }>();
   await c.env.DB.batch(placeInserts(c.env.DB, "idea_places", "idea_id", row!.id, i.places));
   return c.json({ id: row!.id }, 201);
@@ -266,8 +269,11 @@ app.post("/ideas", async (c) => {
 app.put("/ideas/:id", async (c) => {
   const id = idParam(c);
   const i = ideaInput(await body(c));
-  const res = await c.env.DB.prepare("UPDATE ideas SET title = ?, description = ? WHERE id = ? AND status != 'archived'")
-    .bind(i.title, i.description, id)
+  const res = await c.env.DB.prepare(
+    `UPDATE ideas SET title = ?, description = ?, budget = ?, trip_length = ?, travel_time = ?, holiday_types = ?
+     WHERE id = ? AND status != 'archived'`,
+  )
+    .bind(i.title, i.description, i.budget, i.trip_length, i.travel_time, JSON.stringify(i.holiday_types), id)
     .run();
   if (!res.meta.changes) throw new HttpError(404, "Not found");
   await c.env.DB.batch(placeInserts(c.env.DB, "idea_places", "idea_id", id, i.places));
@@ -300,11 +306,12 @@ app.delete("/ideas/:id", async (c) => {
 async function loadRounds(db: D1Database, viewer: number | null, onlyId?: number): Promise<Round[]> {
   const where = onlyId === undefined ? "" : "WHERE id = ?";
   const roundsQ = db.prepare(`SELECT * FROM rounds ${where} ORDER BY id DESC`);
-  const { results: rounds } = await (onlyId === undefined ? roundsQ : roundsQ.bind(onlyId)).all<Omit<Round, "locked" | "allocations" | "ideas">>();
+  const { results: rounds } = await (onlyId === undefined ? roundsQ : roundsQ.bind(onlyId)).all<Omit<Round, "locked" | "vetoes" | "allocations" | "ideas">>();
   if (rounds.length === 0) return [];
-  const [allocs, locks, ideas] = await Promise.all([
+  const [allocs, locks, vetoes, ideas] = await Promise.all([
     db.prepare("SELECT round_id, person_id, idea_id, points FROM allocations").all<Allocation & { round_id: number }>(),
     db.prepare("SELECT round_id, person_id FROM round_locks").all<{ round_id: number; person_id: number }>(),
+    db.prepare("SELECT round_id, person_id, idea_id FROM round_vetoes").all<{ round_id: number; person_id: number; idea_id: number }>(),
     db.prepare("SELECT id, title, status FROM ideas").all<{ id: number; title: string; status: IdeaStatus }>(),
   ]);
   const ideaById = new Map(ideas.results.map((i) => [i.id, i]));
@@ -314,9 +321,12 @@ async function loadRounds(db: D1Database, viewer: number | null, onlyId?: number
     const visible = r.status === "drawn" ? all : all.filter((a) => a.person_id === viewer);
     const ideaIds = new Set(visible.map((a) => a.idea_id));
     if (r.winner_idea_id !== null) ideaIds.add(r.winner_idea_id);
+    const roundVetoes = vetoes.results.filter((v) => v.round_id === r.id).map(({ person_id, idea_id }) => ({ person_id, idea_id }));
+    for (const v of roundVetoes) ideaIds.add(v.idea_id);
     return {
       ...r,
       locked: locks.results.filter((l) => l.round_id === r.id).map((l) => l.person_id),
+      vetoes: roundVetoes,
       allocations: visible.map(({ person_id, idea_id, points }) => ({ person_id, idea_id, points })),
       ideas: [...ideaIds].flatMap((id) => {
         const i = ideaById.get(id);
@@ -335,9 +345,17 @@ async function openRound(db: D1Database, id: number) {
   return r;
 }
 
-async function activeIdeaIds(db: D1Database) {
-  const { results } = await db.prepare("SELECT id FROM ideas WHERE status = 'active'").all<{ id: number }>();
+/** Ideas that can take points in a round: in the pool and not vetoed in that round. */
+async function eligibleIdeaIds(db: D1Database, roundId: number) {
+  const { results } = await db
+    .prepare("SELECT id FROM ideas WHERE status = 'active' AND id NOT IN (SELECT idea_id FROM round_vetoes WHERE round_id = ?)")
+    .bind(roundId)
+    .all<{ id: number }>();
   return new Set(results.map((r) => r.id));
+}
+
+async function isLocked(db: D1Database, roundId: number, personId: number) {
+  return !!(await db.prepare("SELECT 1 FROM round_locks WHERE round_id = ? AND person_id = ?").bind(roundId, personId).first());
 }
 
 app.get("/rounds", async (c) => c.json(await loadRounds(c.env.DB, viewerId(c))));
@@ -365,13 +383,12 @@ app.delete("/rounds/:id", async (c) => {
 app.put("/rounds/:id/allocations", async (c) => {
   const viewer = requireViewer(c);
   const r = await openRound(c.env.DB, idParam(c));
-  const locked = await c.env.DB.prepare("SELECT 1 FROM round_locks WHERE round_id = ? AND person_id = ?").bind(r.id, viewer).first();
-  if (locked) throw new HttpError(409, "Unlock your points before changing them");
+  if (await isLocked(c.env.DB, r.id, viewer)) throw new HttpError(409, "Unlock your points before changing them");
   const b = await body(c);
   const entries = Array.isArray(b.allocations)
     ? b.allocations.map((a: { idea_id?: unknown; points?: unknown }) => ({ idea_id: Number(a?.idea_id), points: Number(a?.points) }))
     : [];
-  const error = validateAllocation(entries, r.points_per_person, await activeIdeaIds(c.env.DB), false);
+  const error = validateAllocation(entries, r.points_per_person, await eligibleIdeaIds(c.env.DB, r.id), false);
   if (error) throw new HttpError(400, error);
   await c.env.DB.batch([
     c.env.DB.prepare("DELETE FROM allocations WHERE round_id = ? AND person_id = ?").bind(r.id, viewer),
@@ -390,7 +407,7 @@ app.post("/rounds/:id/lock", async (c) => {
   const { results } = await c.env.DB.prepare("SELECT idea_id, points FROM allocations WHERE round_id = ? AND person_id = ?")
     .bind(r.id, viewer)
     .all<{ idea_id: number; points: number }>();
-  const error = validateAllocation(results, r.points_per_person, await activeIdeaIds(c.env.DB), true);
+  const error = validateAllocation(results, r.points_per_person, await eligibleIdeaIds(c.env.DB, r.id), true);
   if (error) throw new HttpError(400, error);
   await c.env.DB.prepare("INSERT OR IGNORE INTO round_locks (round_id, person_id) VALUES (?, ?)").bind(r.id, viewer).run();
   return c.json({ ok: true });
@@ -400,6 +417,38 @@ app.delete("/rounds/:id/lock", async (c) => {
   const viewer = requireViewer(c);
   const r = await openRound(c.env.DB, idParam(c));
   await c.env.DB.prepare("DELETE FROM round_locks WHERE round_id = ? AND person_id = ?").bind(r.id, viewer).run();
+  return c.json({ ok: true });
+});
+
+app.post("/rounds/:id/veto", async (c) => {
+  const viewer = requireViewer(c);
+  const db = c.env.DB;
+  const r = await openRound(db, idParam(c));
+  if (await isLocked(db, r.id, viewer)) throw new HttpError(409, "Unlock your points before using your veto");
+  const b = await body(c);
+  const ideaId = Number(b.idea_id);
+  const existing = await db.prepare("SELECT 1 FROM round_vetoes WHERE round_id = ? AND person_id = ?").bind(r.id, viewer).first();
+  if (existing) throw new HttpError(409, "You've already used your veto this round");
+  const eligible = await eligibleIdeaIds(db, r.id);
+  if (!eligible.has(ideaId)) throw new HttpError(400, "That idea can't be vetoed");
+  if (eligible.size <= 1) throw new HttpError(409, "That's the last idea left in this round");
+  // Points anyone had on the vetoed idea go back to them, and they're unlocked to re-spend them.
+  const affected = await db.prepare("SELECT person_id FROM allocations WHERE round_id = ? AND idea_id = ?")
+    .bind(r.id, ideaId)
+    .all<{ person_id: number }>();
+  await db.batch([
+    db.prepare("INSERT INTO round_vetoes (round_id, person_id, idea_id) VALUES (?, ?, ?)").bind(r.id, viewer, ideaId),
+    db.prepare("DELETE FROM allocations WHERE round_id = ? AND idea_id = ?").bind(r.id, ideaId),
+    ...affected.results.map((a) => db.prepare("DELETE FROM round_locks WHERE round_id = ? AND person_id = ?").bind(r.id, a.person_id)),
+  ]);
+  return c.json({ ok: true });
+});
+
+app.delete("/rounds/:id/veto", async (c) => {
+  const viewer = requireViewer(c);
+  const r = await openRound(c.env.DB, idParam(c));
+  if (await isLocked(c.env.DB, r.id, viewer)) throw new HttpError(409, "Unlock your points before changing your veto");
+  await c.env.DB.prepare("DELETE FROM round_vetoes WHERE round_id = ? AND person_id = ?").bind(r.id, viewer).run();
   return c.json({ ok: true });
 });
 

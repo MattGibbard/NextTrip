@@ -1,3 +1,5 @@
+import type { HolidayType, TravelTime, TripLength } from "./ideaDetails";
+
 export interface Person {
   id: number;
   name: string;
@@ -31,7 +33,15 @@ export type TripInput = Omit<Trip, "id" | "created_at">;
 
 export type IdeaStatus = "active" | "won" | "done" | "archived";
 
-export interface Idea {
+export interface IdeaDetails {
+  /** 1–3, shown as £ to £££. */
+  budget: number | null;
+  trip_length: TripLength | null;
+  travel_time: TravelTime | null;
+  holiday_types: HolidayType[];
+}
+
+export interface Idea extends IdeaDetails {
   id: number;
   title: string;
   description: string | null;
@@ -41,7 +51,7 @@ export interface Idea {
   places: Place[];
 }
 
-export interface IdeaInput {
+export interface IdeaInput extends IdeaDetails {
   title: string;
   description: string | null;
   created_by: number | null;
@@ -66,6 +76,8 @@ export interface Round {
   drawn_at: string | null;
   /** Person ids that have locked in their points. */
   locked: number[];
+  /** Everyone's veto for this round (vetoes are public as soon as they're used). */
+  vetoes: { person_id: number; idea_id: number }[];
   /**
    * Before the draw: only the viewing person's own allocations.
    * After the draw: everyone's.

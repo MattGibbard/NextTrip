@@ -9,6 +9,14 @@ export function flag(code: string): string {
   return String.fromCodePoint(...[...code].map((ch) => 0x1f1a5 + ch.charCodeAt(0)));
 }
 
+export function alpha2FromNumeric(numeric: string): string | undefined {
+  return countries.numericToAlpha2(numeric);
+}
+
+export function countryName(alpha2: string): string {
+  return countries.getName(alpha2, "en") ?? alpha2;
+}
+
 /** ISO numeric code as used by the world-atlas map ids ("040" for Austria). */
 export function numericCode(alpha2: string): string | undefined {
   return countries.alpha2ToNumeric(alpha2);

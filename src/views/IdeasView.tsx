@@ -2,6 +2,8 @@ import { useMemo, useState } from "react";
 import type { Idea } from "../../shared/types";
 import { useData } from "../data";
 import { flag } from "../countries";
+import { IdeaDetailsLine } from "../components/IdeaDetails";
+import { BUDGETS, HOLIDAY_TYPES } from "../../shared/ideaDetails";
 import { IdeaForm } from "./IdeaForm";
 import { TripForm } from "./TripForm";
 import type { TripDraft } from "./TripForm";
@@ -18,7 +20,18 @@ export function IdeasView() {
   const [editing, setEditing] = useState<Idea | "new" | null>(null);
   const [tripDraft, setTripDraft] = useState<TripDraft | null>(null);
 
-  const shown = useMemo(() => ideas.filter((i) => i.status === filter), [ideas, filter]);
+  const [budget, setBudget] = useState<number | null>(null);
+  const [type, setType] = useState<string | null>(null);
+
+  const inTab = useMemo(() => ideas.filter((i) => i.status === filter), [ideas, filter]);
+  const typesInUse = useMemo(() => HOLIDAY_TYPES.filter((t) => inTab.some((i) => i.holiday_types.includes(t.key))), [inTab]);
+  const shown = useMemo(
+    () =>
+      inTab.filter(
+        (i) => (budget === null || i.budget === budget) && (type === null || i.holiday_types.some((t) => t === type)),
+      ),
+    [inTab, budget, type],
+  );
   const counts = useMemo(() => Object.fromEntries(FILTERS.map((f) => [f.id, ideas.filter((i) => i.status === f.id).length])), [ideas]);
 
   return (
@@ -32,13 +45,30 @@ export function IdeasView() {
 
       <div className="segmented">
         {FILTERS.map((f) => (
-          <button key={f.id} className={filter === f.id ? "active" : ""} onClick={() => setFilter(f.id)}>
+          <button key={f.id} className={filter === f.id ? "active" : ""} onClick={() => (setFilter(f.id), setBudget(null), setType(null))}>
             {f.label} <span className="count">{counts[f.id]}</span>
           </button>
         ))}
       </div>
 
-      {shown.length === 0 && (
+      {inTab.length > 1 && (
+        <div className="filter-row" aria-label="Filter ideas">
+          {BUDGETS.filter((b) => inTab.some((i) => i.budget === b.key)).map((b) => (
+            <button key={b.key} className={`choice small ${budget === b.key ? "on" : ""}`} onClick={() => setBudget(budget === b.key ? null : b.key)}>
+              {b.label}
+            </button>
+          ))}
+          {typesInUse.map((t) => (
+            <button key={t.key} className={`choice small ${type === t.key ? "on" : ""}`} onClick={() => setType(type === t.key ? null : t.key)}>
+              {t.icon} {t.label}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {inTab.length > 0 && shown.length === 0 && <p className="muted center">No ideas match those filters.</p>}
+
+      {inTab.length === 0 && (
         <div className="empty">
           {filter === "active" ? (
             <>
@@ -62,6 +92,7 @@ export function IdeasView() {
                 <div className="idea-flags">{[...new Set(i.places.map((p) => p.country_code))].map(flag).join(" ") || "💡"}</div>
                 <h3>{i.title}</h3>
                 {i.places.length > 0 && <p className="small">{i.places.map((p) => p.name).join(" → ")}</p>}
+                <IdeaDetailsLine idea={i} />
                 {i.description && <p className="muted small clamp">{i.description}</p>}
                 <p className="muted small by">
                   <span className="dot" style={{ background: creator?.color ?? "#999" }} /> {personName(i.created_by)}'s idea

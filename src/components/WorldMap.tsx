@@ -3,7 +3,7 @@ import L from "leaflet";
 import { feature } from "topojson-client";
 import type { FeatureCollection, Geometry } from "geojson";
 import type { GeometryCollection, Topology } from "topojson-specification";
-import { numericCode } from "../countries";
+import { alpha2FromNumeric, numericCode } from "../countries";
 
 export interface Pin {
   lat: number;
@@ -27,10 +27,24 @@ function cssVar(name: string) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 }
 
-export function WorldMap({ visited, ideas, pins }: { visited: Set<string>; ideas: Set<string>; pins: Pin[] }) {
+interface Props {
+  visited: Set<string>;
+  ideas: Set<string>;
+  pins: Pin[];
+  /** Alpha-2 code of the highlighted country. */
+  selected: string | null;
+  onSelect: (code: string) => void;
+}
+
+export function WorldMap({ visited, ideas, pins, selected, onSelect }: Props) {
   const el = useRef<HTMLDivElement>(null);
   const map = useRef<L.Map | null>(null);
   const layers = useRef<L.LayerGroup | null>(null);
+  const countryLayers = useRef(new Map<string, L.Path & { getBounds(): L.LatLngBounds }>());
+  const selectRef = useRef(onSelect);
+  selectRef.current = onSelect;
+  const selectedRef = useRef(selected);
+  selectedRef.current = selected;
 
   useEffect(() => {
     if (!el.current) return;
@@ -56,6 +70,7 @@ export function WorldMap({ visited, ideas, pins }: { visited: Set<string>; ideas
       if (cancelled || !map.current || !layers.current) return;
       const group = layers.current;
       group.clearLayers();
+      countryLayers.current.clear();
       const visitedColor = cssVar("--map-visited");
       const ideaColor = cssVar("--map-idea");
       L.geoJSON(countries, {
@@ -70,8 +85,15 @@ export function WorldMap({ visited, ideas, pins }: { visited: Set<string>; ideas
             dashArray: isVisited ? undefined : "4 3",
           };
         },
-        onEachFeature: (f, layer) => layer.bindTooltip(f.properties.name, { sticky: true }),
+        onEachFeature: (f, layer) => {
+          layer.bindTooltip(f.properties.name, { sticky: true });
+          const code = alpha2FromNumeric(String(f.id));
+          if (!code) return;
+          countryLayers.current.set(code, layer as L.Path & { getBounds(): L.LatLngBounds });
+          layer.on("click", () => selectRef.current(code));
+        },
       }).addTo(group);
+      highlight(selectedRef.current, false);
 
       const bounds: L.LatLngTuple[] = [];
       for (const p of pins) {
@@ -81,6 +103,7 @@ export function WorldMap({ visited, ideas, pins }: { visited: Set<string>; ideas
           .addTo(group);
         bounds.push([p.lat, p.lon]);
       }
+      if (selectedRef.current && countryLayers.current.has(selectedRef.current)) return;
       if (bounds.length > 1) map.current.fitBounds(bounds, { padding: [40, 40], maxZoom: 5 });
       else if (bounds.length === 1) map.current.setView(bounds[0], 5);
     });
@@ -88,6 +111,20 @@ export function WorldMap({ visited, ideas, pins }: { visited: Set<string>; ideas
       cancelled = true;
     };
   }, [visited, ideas, pins]);
+
+  function highlight(code: string | null, fly: boolean) {
+    for (const [c, layer] of countryLayers.current) layer.setStyle({ weight: c === code ? 3 : 1 });
+    const layer = code ? countryLayers.current.get(code) : undefined;
+    if (layer && map.current) {
+      layer.bringToFront();
+      if (fly) map.current.flyToBounds(layer.getBounds(), { padding: [30, 30], maxZoom: 6, duration: 0.6 });
+    }
+  }
+
+  useEffect(() => {
+    highlight(selected, true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selected]);
 
   return <div ref={el} className="world-map" />;
 }

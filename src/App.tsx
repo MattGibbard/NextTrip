@@ -6,6 +6,7 @@ import { IdeasView } from "./views/IdeasView";
 import { DrawView } from "./views/DrawView";
 import { SettingsView } from "./views/SettingsView";
 import { IdeaPage } from "./views/IdeaPage";
+import { TripPage } from "./views/TripPage";
 import { PersonPicker } from "./components/PersonPicker";
 
 const TABS = [
@@ -89,7 +90,7 @@ function Shell() {
           <p className="muted center">Loading…</p>
         ) : (
           <>
-            {tab === "trips" && <TripsView />}
+            {tab === "trips" && (route.id ? <TripPage key={route.id} id={route.id} /> : <TripsView />)}
             {tab === "places" && <PlacesView />}
             {tab === "ideas" && (route.id ? <IdeaPage key={route.id} id={route.id} /> : <IdeasView />)}
             {tab === "draw" && <DrawView />}

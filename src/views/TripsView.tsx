@@ -2,13 +2,13 @@ import { useMemo, useState } from "react";
 import type { Trip } from "../../shared/types";
 import { useData } from "../data";
 import { flag } from "../countries";
-import { dateRange, plural } from "../format";
+import { cssUrl, dateRange, plural } from "../format";
 import { Stars } from "../components/Stars";
 import { TripForm } from "./TripForm";
 
 export function TripsView() {
   const { trips } = useData();
-  const [editing, setEditing] = useState<Trip | "new" | null>(null);
+  const [adding, setAdding] = useState(false);
 
   const stats = useMemo(() => {
     const countries = new Set<string>();
@@ -34,7 +34,7 @@ export function TripsView() {
     <section>
       <div className="page-head">
         <h1>Our trips</h1>
-        <button className="btn" onClick={() => setEditing("new")}>
+        <button className="btn" onClick={() => setAdding(true)}>
           + Add trip
         </button>
       </div>
@@ -57,7 +57,7 @@ export function TripsView() {
       {trips.length === 0 && (
         <div className="empty">
           <p>No trips yet. Add the holidays you've already been on to fill in your map.</p>
-          <button className="btn" onClick={() => setEditing("new")}>
+          <button className="btn" onClick={() => setAdding(true)}>
             Add your first trip
           </button>
         </div>
@@ -68,24 +68,24 @@ export function TripsView() {
           <h2 className="year">{year}</h2>
           <div className="card-grid">
             {list.map((t) => (
-              <TripCard key={t.id} trip={t} onClick={() => setEditing(t)} />
+              <TripCard key={t.id} trip={t} />
             ))}
           </div>
         </div>
       ))}
 
-      {editing && <TripForm trip={editing === "new" ? undefined : editing} onClose={() => setEditing(null)} />}
+      {adding && <TripForm onClose={() => setAdding(false)} />}
     </section>
   );
 }
 
-function TripCard({ trip, onClick }: { trip: Trip; onClick: () => void }) {
+function TripCard({ trip }: { trip: Trip }) {
   const countries = [...new Map(trip.places.map((p) => [p.country_code, p.country])).entries()];
   const dates = dateRange(trip.start_date, trip.end_date);
   return (
-    <button className="card trip-card" onClick={onClick}>
+    <a className="card trip-card" href={`#/trips/${trip.id}`}>
       {trip.cover_url ? (
-        <div className="cover" style={{ backgroundImage: `url("${trip.cover_url.replace(/"/g, "%22")}")` }} />
+        <div className="cover" style={{ backgroundImage: cssUrl(trip.cover_url) }} />
       ) : (
         <div className="cover placeholder">{countries.map(([c]) => flag(c)).join(" ") || "🧳"}</div>
       )}
@@ -102,6 +102,6 @@ function TripCard({ trip, onClick }: { trip: Trip; onClick: () => void }) {
           {trip.places.length > 0 && <span className="muted small">{plural(trip.places.length, "place")}</span>}
         </div>
       </div>
-    </button>
+    </a>
   );
 }

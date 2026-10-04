@@ -111,7 +111,10 @@ export function WorldMap({ visited, ideas, pins, routes = NO_ROUTES, selected, o
       for (const r of routes) {
         const color = r.kind === "visited" ? visitedColor : ideaColor;
         for (const [from, to] of routeLegs(r.places, r.roadTrip)) {
-          L.polyline(greatCircle(from, to), {
+          const path = greatCircle(from, to);
+          // A pale halo keeps the line readable on top of a shaded country.
+          L.polyline(path, { color: "#fff", weight: 5, opacity: 0.7, interactive: false }).addTo(group);
+          L.polyline(path, {
             color,
             weight: 2.5,
             opacity: 0.85,

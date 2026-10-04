@@ -186,7 +186,7 @@ function CountryPanel({ code, onClose }: { code: string; onClose: () => void }) 
       {here.length > 0 && (
         <ul className="list compact">
           {here.map((t) => (
-            <li key={t.id} className="list-row">
+            <li key={t.id} className="list-row clickable" onClick={() => (location.hash = `/trips/${t.id}`)}>
               <div className="grow">
                 <strong>{t.title}</strong>
                 <div className="muted small">
@@ -255,7 +255,10 @@ function Timeline({ trips, onSelect }: { trips: Trip[]; onSelect: (code: string)
           <ul className="timeline-trips">
             {list.map((t) => (
               <li key={t.id}>
-                {[...new Set(t.places.map((p) => p.country_code))].map(flag).join(" ")} <strong>{t.title}</strong>{" "}
+                {[...new Set(t.places.map((p) => p.country_code))].map(flag).join(" ")}{" "}
+                <a className="plain-link" href={`#/trips/${t.id}`}>
+                  <strong>{t.title}</strong>
+                </a>{" "}
                 <span className="muted small">{dateRange(t.start_date, t.end_date)}</span>
               </li>
             ))}

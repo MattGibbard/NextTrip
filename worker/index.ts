@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import type { Context } from "hono";
 import { migrate } from "./migrate";
-import { ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
+import { countedAllocations, ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
 import { parseNominatim } from "../shared/geocode";
 import { cleanDetails } from "../shared/ideaDetails";
 import { cleanFilters, matchesFilters } from "../shared/roundFilters";
@@ -331,7 +331,10 @@ async function loadRounds(db: D1Database, viewer: number | null, onlyId?: number
     const visible = r.status === "drawn" ? all : all.filter((a) => a.person_id === viewer);
     const ideaIds = new Set(visible.map((a) => a.idea_id));
     if (r.winner_idea_id !== null) ideaIds.add(r.winner_idea_id);
-    const roundVetoes = vetoes.results.filter((v) => v.round_id === r.id).map(({ person_id, idea_id }) => ({ person_id, idea_id }));
+    // Vetoes are secret too: before the draw you only see your own.
+    const roundVetoes = vetoes.results
+      .filter((v) => v.round_id === r.id && (r.status === "drawn" || v.person_id === viewer))
+      .map(({ person_id, idea_id }) => ({ person_id, idea_id }));
     for (const v of roundVetoes) ideaIds.add(v.idea_id);
     return {
       ...r,
@@ -364,15 +367,18 @@ async function matchingIdeaIds(db: D1Database, filters: RoundFilters) {
   return results.filter((i) => matchesFilters({ ...i, holiday_types: parseTypes(i.holiday_types) }, filters)).map((i) => i.id);
 }
 
-/** Ideas that can take points in a round: in the pool, fit its filters and not vetoed in it. */
-async function eligibleIdeaIds(db: D1Database, roundId: number) {
-  const [round, vetoes] = await Promise.all([
+/**
+ * Ideas a person can put points on in a round: in the pool, fit its filters,
+ * and not vetoed by that person. Someone else's veto is secret, so it doesn't
+ * stop you spending points on that idea; those points just don't count in the draw.
+ */
+async function eligibleIdeaIds(db: D1Database, roundId: number, personId: number) {
+  const [round, veto] = await Promise.all([
     db.prepare("SELECT filters FROM rounds WHERE id = ?").bind(roundId).first<{ filters: string }>(),
-    db.prepare("SELECT idea_id FROM round_vetoes WHERE round_id = ?").bind(roundId).all<{ idea_id: number }>(),
+    db.prepare("SELECT idea_id FROM round_vetoes WHERE round_id = ? AND person_id = ?").bind(roundId, personId).first<{ idea_id: number }>(),
   ]);
-  const vetoed = new Set(vetoes.results.map((v) => v.idea_id));
   const ids = await matchingIdeaIds(db, cleanFilters(round?.filters));
-  return new Set(ids.filter((id) => !vetoed.has(id)));
+  return new Set(ids.filter((id) => id !== veto?.idea_id));
 }
 
 async function isLocked(db: D1Database, roundId: number, personId: number) {
@@ -422,7 +428,7 @@ app.put("/rounds/:id/allocations", async (c) => {
   const entries = Array.isArray(b.allocations)
     ? b.allocations.map((a: { idea_id?: unknown; points?: unknown }) => ({ idea_id: Number(a?.idea_id), points: Number(a?.points) }))
     : [];
-  const error = validateAllocation(entries, r.points_per_person, await eligibleIdeaIds(c.env.DB, r.id), false);
+  const error = validateAllocation(entries, r.points_per_person, await eligibleIdeaIds(c.env.DB, r.id, viewer), false);
   if (error) throw new HttpError(400, error);
   await c.env.DB.batch([
     c.env.DB.prepare("DELETE FROM allocations WHERE round_id = ? AND person_id = ?").bind(r.id, viewer),
@@ -441,7 +447,7 @@ app.post("/rounds/:id/lock", async (c) => {
   const { results } = await c.env.DB.prepare("SELECT idea_id, points FROM allocations WHERE round_id = ? AND person_id = ?")
     .bind(r.id, viewer)
     .all<{ idea_id: number; points: number }>();
-  const error = validateAllocation(results, r.points_per_person, await eligibleIdeaIds(c.env.DB, r.id), true);
+  const error = validateAllocation(results, r.points_per_person, await eligibleIdeaIds(c.env.DB, r.id, viewer), true);
   if (error) throw new HttpError(400, error);
   await c.env.DB.prepare("INSERT OR IGNORE INTO round_locks (round_id, person_id) VALUES (?, ?)").bind(r.id, viewer).run();
   return c.json({ ok: true });
@@ -463,17 +469,13 @@ app.post("/rounds/:id/veto", async (c) => {
   const ideaId = Number(b.idea_id);
   const existing = await db.prepare("SELECT 1 FROM round_vetoes WHERE round_id = ? AND person_id = ?").bind(r.id, viewer).first();
   if (existing) throw new HttpError(409, "You've already used your veto this round");
-  const eligible = await eligibleIdeaIds(db, r.id);
+  const eligible = await eligibleIdeaIds(db, r.id, viewer);
   if (!eligible.has(ideaId)) throw new HttpError(400, "That idea can't be vetoed");
   if (eligible.size <= 1) throw new HttpError(409, "That's the last idea left in this round");
-  // Points anyone had on the vetoed idea go back to them, and they're unlocked to re-spend them.
-  const affected = await db.prepare("SELECT person_id FROM allocations WHERE round_id = ? AND idea_id = ?")
-    .bind(r.id, ideaId)
-    .all<{ person_id: number }>();
+  // Only your own points on it come back. Nobody else is told, so their points stay put.
   await db.batch([
     db.prepare("INSERT INTO round_vetoes (round_id, person_id, idea_id) VALUES (?, ?, ?)").bind(r.id, viewer, ideaId),
-    db.prepare("DELETE FROM allocations WHERE round_id = ? AND idea_id = ?").bind(r.id, ideaId),
-    ...affected.results.map((a) => db.prepare("DELETE FROM round_locks WHERE round_id = ? AND person_id = ?").bind(r.id, a.person_id)),
+    db.prepare("DELETE FROM allocations WHERE round_id = ? AND person_id = ? AND idea_id = ?").bind(r.id, viewer, ideaId),
   ]);
   return c.json({ ok: true });
 });
@@ -489,15 +491,17 @@ app.delete("/rounds/:id/veto", async (c) => {
 app.post("/rounds/:id/draw", async (c) => {
   const db = c.env.DB;
   const r = await openRound(db, idParam(c));
-  const [people, locks, allocs] = await Promise.all([
+  const [people, locks, allocs, vetoes] = await Promise.all([
     db.prepare("SELECT id FROM people").all<{ id: number }>(),
     db.prepare("SELECT person_id FROM round_locks WHERE round_id = ?").bind(r.id).all<{ person_id: number }>(),
     db.prepare("SELECT person_id, idea_id, points FROM allocations WHERE round_id = ?").bind(r.id).all<Allocation>(),
+    db.prepare("SELECT idea_id FROM round_vetoes WHERE round_id = ?").bind(r.id).all<{ idea_id: number }>(),
   ]);
   const lockedIds = new Set(locks.results.map((l) => l.person_id));
   if (!people.results.every((p) => lockedIds.has(p.id))) throw new HttpError(409, "Everyone needs to lock in their points first");
 
-  const ranges = ticketRanges(allocs.results);
+  // Points on vetoed ideas don't become tickets.
+  const ranges = ticketRanges(countedAllocations(allocs.results, vetoes.results.map((v) => v.idea_id)));
   const total = ranges.reduce((n, r) => n + r.tickets, 0);
   const ticket = randomTicket(total, (buf) => crypto.getRandomValues(buf));
   const winner = ideaForTicket(ranges, ticket);

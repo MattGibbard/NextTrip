@@ -1303,3 +1303,6 @@ button.card:hover {
 .stops li {
   margin: 0.3rem 0;
 }
+.breakdown tr.vetoed td {
+  color: var(--muted);
+}

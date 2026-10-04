@@ -8,6 +8,7 @@ import { load, save } from "../storage";
 import { plural } from "../format";
 import { TripForm } from "./TripForm";
 import { IdeaDetailsLine } from "../components/IdeaDetails";
+import { SpinWheel } from "../components/SpinWheel";
 import type { TripDraft } from "./TripForm";
 
 export function DrawView() {
@@ -405,48 +406,21 @@ function AllocRow({
 function Reveal({ round, onDone, onClose }: { round: Round; onDone: () => void; onClose: () => void }) {
   const ranges = useMemo(() => ticketRanges(round.allocations), [round]);
   const titleOf = (id: number) => round.ideas.find((i) => i.id === id)?.title ?? "Idea";
-  const reel = useMemo(() => {
-    const names = ranges.flatMap((r) => Array<string>(r.tickets).fill(titleOf(r.idea_id)));
-    for (let i = names.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [names[i], names[j]] = [names[j], names[i]];
-    }
-    return names;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ranges]);
-  const [current, setCurrent] = useState(reel[0] ?? "");
   const [finished, setFinished] = useState(false);
-  const doneRef = useRef(onDone);
-  doneRef.current = onDone;
-
-  useEffect(() => {
-    let i = 0;
-    let delay = 45;
-    let timer: ReturnType<typeof setTimeout>;
-    const tick = () => {
-      i++;
-      if (delay > 420) {
-        setCurrent(titleOf(round.winner_idea_id!));
-        setFinished(true);
-        doneRef.current();
-        return;
-      }
-      setCurrent(reel[i % reel.length]);
-      delay *= 1.09;
-      timer = setTimeout(tick, delay);
-    };
-    timer = setTimeout(tick, delay);
-    return () => clearTimeout(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [reel, round.winner_idea_id]);
 
   return (
     <div className="panel reveal">
       <p className="muted">{round.name}</p>
-      <div className={`reel ${finished ? "landed" : ""}`}>
-        <span key={current}>{current}</span>
-      </div>
-      {finished && (
+      <SpinWheel
+        ranges={ranges}
+        titleOf={titleOf}
+        winningTicket={round.winning_ticket!}
+        onLanded={() => {
+          setFinished(true);
+          onDone();
+        }}
+      />
+      {finished ? (
         <>
           <p className="big">🎉 You're going to {titleOf(round.winner_idea_id!)}!</p>
           <p className="muted small">
@@ -457,6 +431,8 @@ function Reveal({ round, onDone, onClose }: { round: Round; onDone: () => void; 
             Done
           </button>
         </>
+      ) : (
+        <p className="muted">Spinning…</p>
       )}
     </div>
   );

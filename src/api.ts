@@ -41,6 +41,8 @@ export const api = {
     request("PUT", `/rounds/${id}/allocations`, { allocations }),
   lock: (id: number) => request("POST", `/rounds/${id}/lock`),
   unlock: (id: number) => request("DELETE", `/rounds/${id}/lock`),
+  veto: (id: number, idea_id: number) => request("POST", `/rounds/${id}/veto`, { idea_id }),
+  unveto: (id: number) => request("DELETE", `/rounds/${id}/veto`),
   draw: (id: number) => request<Round>("POST", `/rounds/${id}/draw`),
 
   geocode: (q: string) => request<GeocodeResult[]>("GET", `/geocode?q=${encodeURIComponent(q)}`),

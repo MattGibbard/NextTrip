@@ -7,6 +7,7 @@ import { flag } from "../countries";
 import { load, save } from "../storage";
 import { plural } from "../format";
 import { TripForm } from "./TripForm";
+import { IdeaDetailsLine } from "../components/IdeaDetails";
 import type { TripDraft } from "./TripForm";
 
 export function DrawView() {
@@ -168,11 +169,14 @@ function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => vo
                 {p.name}
                 {p.id === me?.id ? " (you)" : ""}
               </span>
+              {round.vetoes.some((v) => v.person_id === p.id) && <span className="veto-used" title="Veto used">🚫</span>}
               <span className="state">{locked ? "🔒 Locked in" : "Choosing…"}</span>
             </li>
           );
         })}
       </ul>
+
+      <Vetoes round={round} />
 
       {everyone ? (
         <div className="draw-ready">
@@ -193,6 +197,43 @@ function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => vo
         <Allocator key={round.id} round={round} />
       ) : null}
     </div>
+  );
+}
+
+/** Lists the ideas knocked out of this round, with an undo for your own veto. */
+function Vetoes({ round }: { round: Round }) {
+  const { me, people, reload } = useData();
+  const [error, setError] = useState<string | null>(null);
+  if (round.vetoes.length === 0) return null;
+  const iLocked = me ? round.locked.includes(me.id) : false;
+  const undo = async () => {
+    try {
+      await api.unveto(round.id);
+      await reload();
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  };
+  return (
+    <ul className="veto-list">
+      {round.vetoes.map((v) => {
+        const who = people.find((p) => p.id === v.person_id);
+        const title = round.ideas.find((i) => i.id === v.idea_id)?.title ?? "An idea";
+        return (
+          <li key={v.person_id}>
+            <span className="grow">
+              🚫 <s>{title}</s> <span className="muted small">vetoed by {v.person_id === me?.id ? "you" : (who?.name ?? "someone")}</span>
+            </span>
+            {v.person_id === me?.id && !iLocked && (
+              <button className="link" onClick={undo}>
+                Undo
+              </button>
+            )}
+          </li>
+        );
+      })}
+      {error && <li className="error-text">{error}</li>}
+    </ul>
   );
 }
 
@@ -223,7 +264,9 @@ function MyLockedPoints({ round }: { round: Round }) {
 
 function Allocator({ round }: { round: Round }) {
   const { ideas, me, reload } = useData();
-  const pool = useMemo(() => ideas.filter((i) => i.status === "active"), [ideas]);
+  const vetoed = useMemo(() => new Set(round.vetoes.map((v) => v.idea_id)), [round.vetoes]);
+  const pool = useMemo(() => ideas.filter((i) => i.status === "active" && !vetoed.has(i.id)), [ideas, vetoed]);
+  const canVeto = !round.vetoes.some((v) => v.person_id === me?.id) && pool.length > 1;
   const [points, setPoints] = useState<Record<number, number>>(() =>
     Object.fromEntries(round.allocations.filter((a) => a.person_id === me?.id).map((a) => [a.idea_id, a.points])),
   );
@@ -263,6 +306,16 @@ function Allocator({ round }: { round: Round }) {
     setPoints({ ...points, [id]: next });
   };
 
+  const veto = async (idea: Idea) => {
+    if (!confirm(`Use your one veto on "${idea.title}"? It's out of this round for both of you, and any points on it go back.`)) return;
+    try {
+      await api.veto(round.id, idea.id);
+      await reload();
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  };
+
   const lock = async () => {
     try {
       await api.saveAllocations(round.id, live.filter((a) => a.points > 0));
@@ -279,11 +332,21 @@ function Allocator({ round }: { round: Round }) {
         <strong>{left}</strong> of {round.points_per_person} points left
         <span className="save-state">{saveState === "saving" ? "Saving…" : saveState === "saved" ? "Saved" : ""}</span>
       </div>
-      <p className="muted small">{me?.name}, your points are hidden from everyone else until the draw.</p>
+      <p className="muted small">
+        {me?.name}, your points are hidden from everyone else until the draw.
+        {canVeto && " You also have one veto to knock an idea out of this round."}
+      </p>
 
       <ul className="alloc-list">
         {pool.map((i) => (
-          <AllocRow key={i.id} idea={i} points={points[i.id] ?? 0} canAdd={left > 0} onChange={(d) => change(i.id, d)} />
+          <AllocRow
+            key={i.id}
+            idea={i}
+            points={points[i.id] ?? 0}
+            canAdd={left > 0}
+            onChange={(d) => change(i.id, d)}
+            onVeto={canVeto ? () => veto(i) : undefined}
+          />
         ))}
       </ul>
 
@@ -295,7 +358,19 @@ function Allocator({ round }: { round: Round }) {
   );
 }
 
-function AllocRow({ idea, points, canAdd, onChange }: { idea: Idea; points: number; canAdd: boolean; onChange: (delta: number) => void }) {
+function AllocRow({
+  idea,
+  points,
+  canAdd,
+  onChange,
+  onVeto,
+}: {
+  idea: Idea;
+  points: number;
+  canAdd: boolean;
+  onChange: (delta: number) => void;
+  onVeto?: () => void;
+}) {
   const { personName } = useData();
   return (
     <li className={`alloc-row ${points > 0 ? "has" : ""}`}>
@@ -306,6 +381,12 @@ function AllocRow({ idea, points, canAdd, onChange }: { idea: Idea; points: numb
         <div className="muted small">
           {idea.places.map((p) => p.name).join(" → ") || "No places yet"} · {personName(idea.created_by)}
         </div>
+        <IdeaDetailsLine idea={idea} />
+        {onVeto && (
+          <button className="link danger veto-link" onClick={onVeto}>
+            🚫 Veto
+          </button>
+        )}
       </div>
       <div className="stepper">
         <button onClick={() => onChange(-1)} disabled={points === 0} aria-label={`Remove a point from ${idea.title}`}>
@@ -417,6 +498,14 @@ function Breakdown({ round }: { round: Round }) {
           ))}
         </tbody>
       </table>
+      {round.vetoes.length > 0 && (
+        <p className="muted small">
+          Vetoed:{" "}
+          {round.vetoes
+            .map((v) => `${round.ideas.find((x) => x.id === v.idea_id)?.title ?? "an idea"} (${people.find((p) => p.id === v.person_id)?.name ?? "someone"})`)
+            .join(", ")}
+        </p>
+      )}
     </div>
   );
 }

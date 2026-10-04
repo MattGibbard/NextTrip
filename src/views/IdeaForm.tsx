@@ -1,0 +1,77 @@
+import { useState } from "react";
+import type { FormEvent } from "react";
+import type { Idea, Place } from "../../shared/types";
+import { api } from "../api";
+import { useData } from "../data";
+import { Modal } from "../components/Modal";
+import { PlaceSearch } from "../components/PlaceSearch";
+import { PlaceChips } from "../components/PlaceChips";
+
+export function IdeaForm({ idea, onClose }: { idea?: Idea; onClose: () => void }) {
+  const { me, reload, rounds } = useData();
+  const [title, setTitle] = useState(idea?.title ?? "");
+  const [description, setDescription] = useState(idea?.description ?? "");
+  const [places, setPlaces] = useState<Place[]>(idea?.places ?? []);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const openRound = rounds.find((r) => r.status === "open");
+
+  const submit = async (e: FormEvent) => {
+    e.preventDefault();
+    const input = { title, description: description || null, places, created_by: idea?.created_by ?? me?.id ?? null };
+    setSaving(true);
+    try {
+      if (idea) await api.updateIdea(idea.id, input);
+      else await api.createIdea(input);
+      await reload();
+      onClose();
+    } catch (err) {
+      setError((err as Error).message);
+      setSaving(false);
+    }
+  };
+
+  const remove = async () => {
+    if (!idea) return;
+    const warn = openRound ? " Any points on it in the current round go back to whoever spent them." : "";
+    if (!confirm(`Delete "${idea.title}"?${warn}`)) return;
+    await api.deleteIdea(idea.id);
+    await reload();
+    onClose();
+  };
+
+  return (
+    <Modal title={idea ? "Edit idea" : "New holiday idea"} onClose={onClose}>
+      <form className="form" onSubmit={submit}>
+        <label>
+          Name
+          <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="e.g. Japan by train" required autoFocus={!idea} />
+        </label>
+        <div className="field">
+          <span>Places</span>
+          <PlaceChips places={places} onRemove={(i) => setPlaces(places.filter((_, j) => j !== i))} />
+          <PlaceSearch onAdd={(p) => setPlaces([...places, p])} />
+        </div>
+        <label>
+          Details
+          <textarea rows={4} value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Why it's great, rough budget, best time to go…" />
+        </label>
+        {error && <p className="error-text">{error}</p>}
+        <div className="form-actions">
+          {idea && (
+            <button type="button" className="btn danger ghost" onClick={remove}>
+              Delete
+            </button>
+          )}
+          <span className="spacer" />
+          <button type="button" className="btn ghost" onClick={onClose}>
+            Cancel
+          </button>
+          <button className="btn" disabled={saving}>
+            {saving ? "Saving…" : "Save"}
+          </button>
+        </div>
+      </form>
+    </Modal>
+  );
+}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { Person } from "../../shared/types";
 import { api } from "../api";
 import { useData } from "../data";
+import { isInstalled, isIos, useInstallPrompt } from "../install";
 
 export function SettingsView() {
   const { people, me, setMe } = useData();
@@ -26,7 +27,35 @@ export function SettingsView() {
           Switch person
         </button>
       </div>
+      <InstallPanel />
     </section>
+  );
+}
+
+/** How to put NextTrip on the home screen, for whichever browser this is. */
+function InstallPanel() {
+  const install = useInstallPrompt();
+  if (isInstalled()) return null;
+  return (
+    <div className="panel">
+      <h2>Add to your home screen</h2>
+      {install ? (
+        <>
+          <p className="muted small">Open NextTrip like an app, full screen and without the browser bars.</p>
+          <button className="btn" onClick={() => void install()}>
+            📲 Install NextTrip
+          </button>
+        </>
+      ) : isIos() ? (
+        <p className="muted small">
+          In Safari, tap the <strong>Share</strong> button, then <strong>Add to Home Screen</strong>.
+        </p>
+      ) : (
+        <p className="muted small">
+          Open your browser's menu and choose <strong>Install app</strong> or <strong>Add to Home screen</strong>.
+        </p>
+      )}
+    </div>
   );
 }
 

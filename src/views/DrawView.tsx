@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Idea, Round } from "../../shared/types";
-import { ticketRanges } from "../../shared/draw";
+import { countedAllocations, ticketRanges, vetoesIgnored } from "../../shared/draw";
 import { api } from "../api";
 import { useData } from "../data";
 import { flag } from "../countries";
@@ -247,7 +247,11 @@ function Vetoes({ round }: { round: Round }) {
         return (
           <li key={v.person_id}>
             <span className="grow">
-              🚫 <s>{title}</s> <span className="muted small">vetoed by {v.person_id === me?.id ? "you" : (who?.name ?? "someone")}</span>
+              🚫 <s>{title}</s>{" "}
+              <span className="muted small">
+                vetoed by {v.person_id === me?.id ? "you" : (who?.name ?? "someone")}
+                {round.status === "open" && " · secret until the results"}
+              </span>
             </span>
             {v.person_id === me?.id && !iLocked && (
               <button className="link" onClick={undo}>
@@ -335,7 +339,8 @@ function Allocator({ round }: { round: Round }) {
   };
 
   const veto = async (idea: Idea) => {
-    if (!confirm(`Use your one veto on "${idea.title}"? It's out of this round for both of you, and any points on it go back.`)) return;
+    const msg = `Use your one veto on "${idea.title}"? Any points you have on it come back to you. It stays secret until the results, and points anyone else puts on it won't count in the draw.`;
+    if (!confirm(msg)) return;
     try {
       await api.veto(round.id, idea.id);
       await reload();
@@ -362,7 +367,7 @@ function Allocator({ round }: { round: Round }) {
       </div>
       <p className="muted small">
         {me?.name}, your points are hidden from everyone else until the draw.
-        {canVeto && " You also have one veto to knock an idea out of this round."}
+        {canVeto && " You also have one secret veto to knock an idea out of the draw."}
       </p>
 
       <ul className="alloc-list">
@@ -430,8 +435,13 @@ function AllocRow({
 }
 
 /** Weighted slot-machine style reveal, then the full breakdown. */
+/** The ticket layout the server drew from: points on vetoed ideas don't count. */
+function drawnRanges(round: Round) {
+  return ticketRanges(countedAllocations(round.allocations, round.vetoes.map((v) => v.idea_id)));
+}
+
 function Reveal({ round, onDone, onClose }: { round: Round; onDone: () => void; onClose: () => void }) {
-  const ranges = useMemo(() => ticketRanges(round.allocations), [round]);
+  const ranges = useMemo(() => drawnRanges(round), [round]);
   const titleOf = (id: number) => round.ideas.find((i) => i.id === id)?.title ?? "Idea";
   const [finished, setFinished] = useState(false);
 
@@ -467,9 +477,17 @@ function Reveal({ round, onDone, onClose }: { round: Round; onDone: () => void; 
 
 function Breakdown({ round }: { round: Round }) {
   const { people } = useData();
-  const ranges = ticketRanges(round.allocations);
-  const total = ranges.reduce((n, r) => n + r.tickets, 0);
-  const rows = [...ranges].sort((a, b) => b.tickets - a.tickets);
+  const counted = drawnRanges(round);
+  const total = counted.reduce((n, r) => n + r.tickets, 0);
+  const ignored = vetoesIgnored(round.allocations, round.vetoes.map((v) => v.idea_id));
+  const vetoOf = (ideaId: number) => (ignored ? undefined : round.vetoes.find((v) => v.idea_id === ideaId));
+  // Every idea that got points, including vetoed ones, so you can see what each veto knocked out.
+  const rows = ticketRanges(round.allocations)
+    .map((r) => ({ idea_id: r.idea_id, tickets: counted.find((c) => c.idea_id === r.idea_id)?.tickets ?? 0 }))
+    .sort((a, b) => b.tickets - a.tickets);
+  const vetoedWithoutPoints = round.vetoes.filter((v) => !rows.some((r) => r.idea_id === v.idea_id));
+  const titleOf = (id: number) => round.ideas.find((i) => i.id === id)?.title ?? "an idea";
+  const nameOf = (id: number) => people.find((p) => p.id === id)?.name ?? "someone";
   return (
     <div className="table-wrap">
       <table className="breakdown">
@@ -485,30 +503,32 @@ function Breakdown({ round }: { round: Round }) {
           </tr>
         </thead>
         <tbody>
-          {rows.map((r) => (
-            <tr key={r.idea_id} className={r.idea_id === round.winner_idea_id ? "winner" : ""}>
-              <td>
-                {r.idea_id === round.winner_idea_id && "🏆 "}
-                {round.ideas.find((i) => i.id === r.idea_id)?.title ?? "Idea"}
-              </td>
-              {people.map((p) => (
-                <td key={p.id} className="num">
-                  {round.allocations.find((a) => a.person_id === p.id && a.idea_id === r.idea_id)?.points ?? "–"}
+          {rows.map((r) => {
+            const veto = vetoOf(r.idea_id);
+            return (
+              <tr key={r.idea_id} className={r.idea_id === round.winner_idea_id ? "winner" : veto ? "vetoed" : ""}>
+                <td>
+                  {r.idea_id === round.winner_idea_id && "🏆 "}
+                  {veto ? <s>{titleOf(r.idea_id)}</s> : titleOf(r.idea_id)}
+                  {veto && <div className="muted small">🚫 Vetoed by {nameOf(veto.person_id)}</div>}
                 </td>
-              ))}
-              <td className="num">{Math.round((r.tickets / total) * 100)}%</td>
-            </tr>
-          ))}
+                {people.map((p) => (
+                  <td key={p.id} className="num">
+                    {round.allocations.find((a) => a.person_id === p.id && a.idea_id === r.idea_id)?.points ?? "–"}
+                  </td>
+                ))}
+                <td className="num">{r.tickets ? `${Math.round((r.tickets / total) * 100)}%` : "–"}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
-      {round.vetoes.length > 0 && (
+      {vetoedWithoutPoints.length > 0 && (
         <p className="muted small">
-          Vetoed:{" "}
-          {round.vetoes
-            .map((v) => `${round.ideas.find((x) => x.id === v.idea_id)?.title ?? "an idea"} (${people.find((p) => p.id === v.person_id)?.name ?? "someone"})`)
-            .join(", ")}
+          Also vetoed: {vetoedWithoutPoints.map((v) => `${titleOf(v.idea_id)} (${nameOf(v.person_id)})`).join(", ")}
         </p>
       )}
+      {ignored && <p className="muted small">The vetoes knocked out every ticket, so they were ignored for this draw.</p>}
     </div>
   );
 }

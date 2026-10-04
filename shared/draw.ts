@@ -70,3 +70,21 @@ export function validateAllocation(
   }
   return null;
 }
+
+/**
+ * The points that count in a draw: everything except points on vetoed ideas.
+ * Vetoes are secret until the draw, so if they happen to knock out every
+ * ticket they're ignored and all points count.
+ */
+export function countedAllocations(allocations: Allocation[], vetoedIdeaIds: Iterable<number>): Allocation[] {
+  const vetoed = new Set(vetoedIdeaIds);
+  const kept = allocations.filter((a) => !vetoed.has(a.idea_id));
+  return kept.some((a) => a.points > 0) ? kept : allocations;
+}
+
+/** True when vetoes knocked out every ticket, so they were ignored for the draw. */
+export function vetoesIgnored(allocations: Allocation[], vetoedIdeaIds: Iterable<number>): boolean {
+  const vetoed = new Set(vetoedIdeaIds);
+  const points = allocations.filter((a) => a.points > 0);
+  return vetoed.size > 0 && points.length > 0 && points.every((a) => vetoed.has(a.idea_id));
+}

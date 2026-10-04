@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
+import { countedAllocations, ideaForTicket, randomTicket, ticketRanges, validateAllocation, vetoesIgnored } from "../shared/draw";
 
 describe("ticketRanges", () => {
   it("adds both people's points per idea and lays tickets end to end", () => {
@@ -54,5 +54,28 @@ describe("validateAllocation", () => {
     expect(validateAllocation([{ idea_id: 1, points: 11 }], 10, active, false)).toMatch(/only have 10/);
     expect(validateAllocation([{ idea_id: 1, points: 1.5 }], 10, active, false)).toMatch(/whole/);
     expect(validateAllocation([{ idea_id: 9, points: 1 }], 10, active, false)).toMatch(/pool/);
+  });
+});
+
+describe("countedAllocations", () => {
+  const allocs = [
+    { person_id: 1, idea_id: 10, points: 6 },
+    { person_id: 1, idea_id: 20, points: 4 },
+    { person_id: 2, idea_id: 10, points: 10 },
+  ];
+
+  it("drops points on vetoed ideas", () => {
+    expect(countedAllocations(allocs, [10])).toEqual([{ person_id: 1, idea_id: 20, points: 4 }]);
+    expect(vetoesIgnored(allocs, [10])).toBe(false);
+  });
+
+  it("keeps everything when the vetoes would knock out every ticket", () => {
+    expect(countedAllocations(allocs, [10, 20])).toEqual(allocs);
+    expect(vetoesIgnored(allocs, [10, 20])).toBe(true);
+  });
+
+  it("changes nothing without vetoes", () => {
+    expect(countedAllocations(allocs, [])).toEqual(allocs);
+    expect(vetoesIgnored(allocs, [])).toBe(false);
   });
 });

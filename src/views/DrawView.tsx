@@ -141,7 +141,7 @@ function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => vo
 
   const cancel = async () => {
     if (!confirm(`Cancel ${round.name}? Everyone's points for it will be cleared.`)) return;
-    await api.cancelRound(round.id);
+    await api.deleteRound(round.id);
     await reload();
   };
 
@@ -513,7 +513,13 @@ function Breakdown({ round }: { round: Round }) {
 function HistoryRow({ round, hidden }: { round: Round; hidden: boolean }) {
   const [open, setOpen] = useState(false);
   const [draft, setDraft] = useState<TripDraft | null>(null);
-  const { ideas } = useData();
+  const { ideas, reload } = useData();
+  const remove = async () => {
+    const back = winnerIdea?.status === "won" ? ` ${winnerIdea.title} goes back into the pool.` : "";
+    if (!confirm(`Delete ${round.name} and everyone's points for it?${back}`)) return;
+    await api.deleteRound(round.id);
+    await reload();
+  };
   const winner = round.ideas.find((i) => i.id === round.winner_idea_id);
   const winnerIdea: Idea | undefined = ideas.find((i) => i.id === round.winner_idea_id);
   const date = round.drawn_at ? new Date(round.drawn_at.replace(" ", "T") + "Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : "";
@@ -537,6 +543,9 @@ function HistoryRow({ round, hidden }: { round: Round; hidden: boolean }) {
             </button>
           )}
           {winnerIdea?.status === "done" && <p className="muted small">✓ Added to your trips</p>}
+          <button className="link danger delete-draw" onClick={remove}>
+            Delete this draw
+          </button>
         </div>
       )}
       {draft && <TripForm draft={draft} onClose={() => setDraft(null)} />}

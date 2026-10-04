@@ -375,8 +375,17 @@ app.post("/rounds", async (c) => {
 });
 
 app.delete("/rounds/:id", async (c) => {
-  const r = await openRound(c.env.DB, idParam(c));
-  await c.env.DB.prepare("DELETE FROM rounds WHERE id = ?").bind(r.id).run();
+  const db = c.env.DB;
+  const r = await db.prepare("SELECT id, winner_idea_id FROM rounds WHERE id = ?")
+    .bind(idParam(c))
+    .first<{ id: number; winner_idea_id: number | null }>();
+  if (!r) throw new HttpError(404, "Not found");
+  const stmts = [db.prepare("DELETE FROM rounds WHERE id = ?").bind(r.id)];
+  // Deleting a draw puts its winner back in the pool, unless you've already turned it into a trip.
+  if (r.winner_idea_id !== null) {
+    stmts.push(db.prepare("UPDATE ideas SET status = 'active' WHERE id = ? AND status = 'won'").bind(r.winner_idea_id));
+  }
+  await db.batch(stmts);
   return c.json({ ok: true });
 });
 

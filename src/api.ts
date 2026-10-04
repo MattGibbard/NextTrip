@@ -36,7 +36,7 @@ export const api = {
 
   rounds: () => request<Round[]>("GET", "/rounds"),
   createRound: (r: { name?: string; points_per_person: number }) => request<{ id: number }>("POST", "/rounds", r),
-  cancelRound: (id: number) => request("DELETE", `/rounds/${id}`),
+  deleteRound: (id: number) => request("DELETE", `/rounds/${id}`),
   saveAllocations: (id: number, allocations: { idea_id: number; points: number }[]) =>
     request("PUT", `/rounds/${id}/allocations`, { allocations }),
   lock: (id: number) => request("POST", `/rounds/${id}/lock`),

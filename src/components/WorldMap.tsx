@@ -4,10 +4,19 @@ import { feature } from "topojson-client";
 import type { FeatureCollection, Geometry } from "geojson";
 import type { GeometryCollection, Topology } from "topojson-specification";
 import { alpha2FromNumeric, numericCode } from "../countries";
+import { greatCircle, routeLegs } from "../../shared/routes";
 
 export interface Pin {
   lat: number;
   lon: number;
+  label: string;
+  kind: "visited" | "idea";
+}
+
+/** Lines between the places of one trip or idea. */
+export interface Route {
+  places: { lat: number | null; lon: number | null }[];
+  roadTrip: boolean;
   label: string;
   kind: "visited" | "idea";
 }
@@ -27,16 +36,19 @@ function cssVar(name: string) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 }
 
+const NO_ROUTES: Route[] = [];
+
 interface Props {
   visited: Set<string>;
   ideas: Set<string>;
   pins: Pin[];
+  routes?: Route[];
   /** Alpha-2 code of the highlighted country. */
   selected: string | null;
   onSelect: (code: string) => void;
 }
 
-export function WorldMap({ visited, ideas, pins, selected, onSelect }: Props) {
+export function WorldMap({ visited, ideas, pins, routes = NO_ROUTES, selected, onSelect }: Props) {
   const el = useRef<HTMLDivElement>(null);
   const map = useRef<L.Map | null>(null);
   const layers = useRef<L.LayerGroup | null>(null);
@@ -95,6 +107,22 @@ export function WorldMap({ visited, ideas, pins, selected, onSelect }: Props) {
       }).addTo(group);
       highlight(selectedRef.current, false);
 
+      // Routes go under the pins so the city dots stay tappable.
+      for (const r of routes) {
+        const color = r.kind === "visited" ? visitedColor : ideaColor;
+        for (const [from, to] of routeLegs(r.places, r.roadTrip)) {
+          L.polyline(greatCircle(from, to), {
+            color,
+            weight: 2.5,
+            opacity: 0.85,
+            dashArray: r.kind === "idea" ? "6 6" : undefined,
+            interactive: true,
+          })
+            .bindTooltip(r.label, { sticky: true })
+            .addTo(group);
+        }
+      }
+
       const bounds: L.LatLngTuple[] = [];
       for (const p of pins) {
         const color = p.kind === "visited" ? visitedColor : ideaColor;
@@ -110,7 +138,7 @@ export function WorldMap({ visited, ideas, pins, selected, onSelect }: Props) {
     return () => {
       cancelled = true;
     };
-  }, [visited, ideas, pins]);
+  }, [visited, ideas, pins, routes]);
 
   function highlight(code: string | null, fly: boolean) {
     for (const [c, layer] of countryLayers.current) layer.setStyle({ weight: c === code ? 3 : 1 });

@@ -25,6 +25,8 @@ export interface Trip {
   notes: string | null;
   rating: number | null;
   cover_url: string | null;
+  /** Road trips draw their route city to city, in order. */
+  road_trip: boolean;
   idea_id: number | null;
   created_by: number | null;
   created_at: string;

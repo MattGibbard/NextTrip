@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { FormEvent } from "react";
 import type { Idea, IdeaDetails, Place } from "../../shared/types";
 import { api } from "../api";
@@ -8,6 +8,7 @@ import { PlaceSearch } from "../components/PlaceSearch";
 import { PlaceChips } from "../components/PlaceChips";
 import { IdeaDetailsFields } from "../components/IdeaDetails";
 import { estimateTravel, formatHours } from "../../shared/travelTime";
+import { travelTimeLabel } from "../../shared/ideaDetails";
 
 export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: () => void; onDeleted?: () => void }) {
   const { me, reload, rounds, home } = useData();
@@ -21,18 +22,7 @@ export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: (
     travel_time: idea?.travel_time ?? null,
     holiday_types: idea?.holiday_types ?? [],
   });
-  // Travel time follows the distance from home until you pick one yourself.
   const estimate = estimateTravel(home, places);
-  const [autoTravel, setAutoTravel] = useState(
-    () => !idea || idea.travel_time === null || idea.travel_time === estimateTravel(home, idea.places)?.travel_time,
-  );
-  useEffect(() => {
-    if (autoTravel && estimate) setDetails((d) => (d.travel_time === estimate.travel_time ? d : { ...d, travel_time: estimate.travel_time }));
-  }, [autoTravel, estimate?.travel_time]); // eslint-disable-line react-hooks/exhaustive-deps
-  const changeDetails = (next: IdeaDetails) => {
-    if (next.travel_time !== details.travel_time) setAutoTravel(false);
-    setDetails(next);
-  };
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const openRound = rounds.find((r) => r.status === "open");
@@ -74,21 +64,17 @@ export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: (
           <PlaceChips places={places} onRemove={(i) => setPlaces(places.filter((_, j) => j !== i))} />
           <PlaceSearch onAdd={(p) => setPlaces([...places, p])} />
         </div>
-        <IdeaDetailsFields value={details} onChange={changeDetails} />
-        {estimate && home ? (
+        <IdeaDetailsFields value={details} onChange={setDetails} />
+        <div className="field">
+          <span>Travel time (each way)</span>
           <p className="muted small travel-hint">
-            ✈️ About {formatHours(estimate.hours)} from {home.name} ({Math.round(estimate.km).toLocaleString("en-GB")} km).{" "}
-            {autoTravel ? (
-              "Travel time is set from this."
-            ) : estimate.travel_time !== details.travel_time ? (
-              <button type="button" className="link" onClick={() => setAutoTravel(true)}>
-                Use the estimate
-              </button>
-            ) : null}
+            {estimate && home
+              ? `✈️ ${travelTimeLabel(estimate.travel_time)}, about ${formatHours(estimate.hours)} from ${home.name} (${Math.round(estimate.km).toLocaleString("en-GB")} km).`
+              : home
+                ? "Worked out from home once you add a place."
+                : "Set your home in Settings and it's worked out for you."}
           </p>
-        ) : (
-          !home && <p className="muted small travel-hint">Set your home in Settings and travel time will fill itself in.</p>
-        )}
+        </div>
         <label>
           Cover photo link
           <input type="url" value={cover} onChange={(e) => setCover(e.target.value)} placeholder="https://…" />

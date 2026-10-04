@@ -1,16 +1,19 @@
+-- Idempotent: the Worker also runs this on first use, so a deploy that skips
+-- `wrangler d1 migrations apply` still gets its tables.
+
 -- The two travellers. Names are editable in Settings.
-CREATE TABLE people (
+CREATE TABLE IF NOT EXISTS people (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL,
   color TEXT NOT NULL
 );
 
-INSERT INTO people (id, name, color) VALUES
+INSERT OR IGNORE INTO people (id, name, color) VALUES
   (1, 'Matt', '#2563eb'),
   (2, 'Partner', '#db2777');
 
 -- Holidays already taken.
-CREATE TABLE trips (
+CREATE TABLE IF NOT EXISTS trips (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   title TEXT NOT NULL,
   start_date TEXT,
@@ -23,7 +26,7 @@ CREATE TABLE trips (
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
-CREATE TABLE trip_places (
+CREATE TABLE IF NOT EXISTS trip_places (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   trip_id INTEGER NOT NULL REFERENCES trips(id) ON DELETE CASCADE,
   position INTEGER NOT NULL DEFAULT 0,
@@ -33,11 +36,11 @@ CREATE TABLE trip_places (
   lat REAL,
   lon REAL
 );
-CREATE INDEX trip_places_trip ON trip_places(trip_id);
+CREATE INDEX IF NOT EXISTS trip_places_trip ON trip_places(trip_id);
 
 -- Holiday ideas. status: active (in the pool), won (drawn), done (turned into a trip),
 -- archived (removed but kept so past draws still make sense).
-CREATE TABLE ideas (
+CREATE TABLE IF NOT EXISTS ideas (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   title TEXT NOT NULL,
   description TEXT,
@@ -46,7 +49,7 @@ CREATE TABLE ideas (
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
-CREATE TABLE idea_places (
+CREATE TABLE IF NOT EXISTS idea_places (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   idea_id INTEGER NOT NULL REFERENCES ideas(id) ON DELETE CASCADE,
   position INTEGER NOT NULL DEFAULT 0,
@@ -56,10 +59,10 @@ CREATE TABLE idea_places (
   lat REAL,
   lon REAL
 );
-CREATE INDEX idea_places_idea ON idea_places(idea_id);
+CREATE INDEX IF NOT EXISTS idea_places_idea ON idea_places(idea_id);
 
 -- A points round ending in a draw. status: open, drawn.
-CREATE TABLE rounds (
+CREATE TABLE IF NOT EXISTS rounds (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT NOT NULL,
   points_per_person INTEGER NOT NULL CHECK (points_per_person > 0),
@@ -71,7 +74,7 @@ CREATE TABLE rounds (
   drawn_at TEXT
 );
 
-CREATE TABLE allocations (
+CREATE TABLE IF NOT EXISTS allocations (
   round_id INTEGER NOT NULL REFERENCES rounds(id) ON DELETE CASCADE,
   person_id INTEGER NOT NULL REFERENCES people(id),
   idea_id INTEGER NOT NULL REFERENCES ideas(id) ON DELETE CASCADE,
@@ -79,7 +82,7 @@ CREATE TABLE allocations (
   PRIMARY KEY (round_id, person_id, idea_id)
 );
 
-CREATE TABLE round_locks (
+CREATE TABLE IF NOT EXISTS round_locks (
   round_id INTEGER NOT NULL REFERENCES rounds(id) ON DELETE CASCADE,
   person_id INTEGER NOT NULL REFERENCES people(id),
   locked_at TEXT NOT NULL DEFAULT (datetime('now')),

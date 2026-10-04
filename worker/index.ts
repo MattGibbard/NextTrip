@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 import type { Context } from "hono";
+import schemaSql from "../migrations/0001_init.sql?raw";
 import { ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
 import { parseNominatim } from "../shared/geocode";
 import type {
@@ -26,6 +27,35 @@ app.onError((err, c) => {
   if (err instanceof HttpError) return c.json({ error: err.message }, err.status);
   console.error(err);
   return c.json({ error: "Something went wrong" }, 500);
+});
+
+let schemaReady: Promise<void> | null = null;
+
+/** Statements from the (idempotent) schema file, without comments. */
+export function schemaStatements(sql: string): string[] {
+  return sql
+    .split("\n")
+    .filter((line) => !line.trim().startsWith("--"))
+    .join("\n")
+    .split(";")
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
+
+// Create the tables on first use, once per Worker instance, so the site works
+// even if the deploy never ran `wrangler d1 migrations apply`.
+app.use("*", async (c, next) => {
+  if (!c.env.DB) {
+    return c.json({ error: "The database isn't connected. Check the D1 binding named DB on the Worker." }, 500);
+  }
+  schemaReady ??= c.env.DB.batch(schemaStatements(schemaSql).map((s) => c.env.DB.prepare(s)))
+    .then(() => undefined)
+    .catch((err) => {
+      schemaReady = null;
+      throw err;
+    });
+  await schemaReady;
+  await next();
 });
 
 class HttpError extends Error {

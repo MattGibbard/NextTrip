@@ -34,11 +34,10 @@ export function WorldMap({ visited, ideas, pins }: { visited: Set<string>; ideas
 
   useEffect(() => {
     if (!el.current) return;
-    const dark = matchMedia("(prefers-color-scheme: dark)").matches;
     const m = L.map(el.current, { worldCopyJump: true, minZoom: 1, zoomSnap: 0.5 }).setView([30, 10], 1.5);
-    L.tileLayer(`https://{s}.basemaps.cartocdn.com/${dark ? "dark_all" : "light_all"}/{z}/{x}/{y}{r}.png`, {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: "abcd",
+    // Standard OpenStreetMap tiles need no API key. Dark mode darkens them with a CSS filter.
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 19,
     }).addTo(m);
     map.current = m;

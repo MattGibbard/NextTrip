@@ -1,4 +1,5 @@
 import type { GeocodeResult, Idea, IdeaInput, Person, Round, Trip, TripInput } from "../shared/types";
+import type { RoundFilters } from "../shared/roundFilters";
 
 let currentPerson: number | null = null;
 
@@ -35,7 +36,7 @@ export const api = {
   deleteIdea: (id: number) => request("DELETE", `/ideas/${id}`),
 
   rounds: () => request<Round[]>("GET", "/rounds"),
-  createRound: (r: { name?: string; points_per_person: number }) => request<{ id: number }>("POST", "/rounds", r),
+  createRound: (r: { name?: string; points_per_person: number; filters?: RoundFilters }) => request<{ id: number }>("POST", "/rounds", r),
   deleteRound: (id: number) => request("DELETE", `/rounds/${id}`),
   saveAllocations: (id: number, allocations: { idea_id: number; points: number }[]) =>
     request("PUT", `/rounds/${id}/allocations`, { allocations }),

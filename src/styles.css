@@ -1201,3 +1201,30 @@ button.card:hover {
   border-top: 26px solid var(--text);
   filter: drop-shadow(0 2px 2px rgb(0 0 0 / 0.3));
 }
+
+/* ---------- Round filters ---------- */
+
+.round-filters {
+  align-items: center;
+}
+.round-filters .detail {
+  white-space: normal;
+}
+.filters-box {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.6rem 0.8rem;
+}
+.filters-box summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.filters-box[open] summary {
+  margin-bottom: 0.6rem;
+}
+.filters-box .field + .field {
+  margin-top: 0.6rem;
+}
+.match-count {
+  margin: 0;
+}

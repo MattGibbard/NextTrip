@@ -4,9 +4,12 @@ import { migrate } from "./migrate";
 import { ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
 import { parseNominatim } from "../shared/geocode";
 import { cleanDetails } from "../shared/ideaDetails";
+import { cleanFilters, matchesFilters } from "../shared/roundFilters";
+import type { RoundFilters } from "../shared/roundFilters";
 import type {
   Allocation,
   Idea,
+  IdeaDetails,
   IdeaInput,
   IdeaStatus,
   Person,
@@ -306,7 +309,7 @@ app.delete("/ideas/:id", async (c) => {
 async function loadRounds(db: D1Database, viewer: number | null, onlyId?: number): Promise<Round[]> {
   const where = onlyId === undefined ? "" : "WHERE id = ?";
   const roundsQ = db.prepare(`SELECT * FROM rounds ${where} ORDER BY id DESC`);
-  const { results: rounds } = await (onlyId === undefined ? roundsQ : roundsQ.bind(onlyId)).all<Omit<Round, "locked" | "vetoes" | "allocations" | "ideas">>();
+  const { results: rounds } = await (onlyId === undefined ? roundsQ : roundsQ.bind(onlyId)).all<Omit<Round, "locked" | "vetoes" | "allocations" | "ideas" | "filters"> & { filters: string }>();
   if (rounds.length === 0) return [];
   const [allocs, locks, vetoes, ideas] = await Promise.all([
     db.prepare("SELECT round_id, person_id, idea_id, points FROM allocations").all<Allocation & { round_id: number }>(),
@@ -325,6 +328,7 @@ async function loadRounds(db: D1Database, viewer: number | null, onlyId?: number
     for (const v of roundVetoes) ideaIds.add(v.idea_id);
     return {
       ...r,
+      filters: cleanFilters(r.filters),
       locked: locks.results.filter((l) => l.round_id === r.id).map((l) => l.person_id),
       vetoes: roundVetoes,
       allocations: visible.map(({ person_id, idea_id, points }) => ({ person_id, idea_id, points })),
@@ -345,13 +349,23 @@ async function openRound(db: D1Database, id: number) {
   return r;
 }
 
-/** Ideas that can take points in a round: in the pool and not vetoed in that round. */
-async function eligibleIdeaIds(db: D1Database, roundId: number) {
+/** Active ideas that fit a round's filters. */
+async function matchingIdeaIds(db: D1Database, filters: RoundFilters) {
   const { results } = await db
-    .prepare("SELECT id FROM ideas WHERE status = 'active' AND id NOT IN (SELECT idea_id FROM round_vetoes WHERE round_id = ?)")
-    .bind(roundId)
-    .all<{ id: number }>();
-  return new Set(results.map((r) => r.id));
+    .prepare("SELECT id, budget, trip_length, travel_time, holiday_types FROM ideas WHERE status = 'active'")
+    .all<Omit<IdeaDetails, "holiday_types"> & { id: number; holiday_types: string | null }>();
+  return results.filter((i) => matchesFilters({ ...i, holiday_types: parseTypes(i.holiday_types) }, filters)).map((i) => i.id);
+}
+
+/** Ideas that can take points in a round: in the pool, fit its filters and not vetoed in it. */
+async function eligibleIdeaIds(db: D1Database, roundId: number) {
+  const [round, vetoes] = await Promise.all([
+    db.prepare("SELECT filters FROM rounds WHERE id = ?").bind(roundId).first<{ filters: string }>(),
+    db.prepare("SELECT idea_id FROM round_vetoes WHERE round_id = ?").bind(roundId).all<{ idea_id: number }>(),
+  ]);
+  const vetoed = new Set(vetoes.results.map((v) => v.idea_id));
+  const ids = await matchingIdeaIds(db, cleanFilters(round?.filters));
+  return new Set(ids.filter((id) => !vetoed.has(id)));
 }
 
 async function isLocked(db: D1Database, roundId: number, personId: number) {
@@ -368,8 +382,12 @@ app.post("/rounds", async (c) => {
   if (existing) throw new HttpError(409, "There is already an open round");
   const count = await c.env.DB.prepare("SELECT COUNT(*) AS n FROM rounds").first<{ n: number }>();
   const name = cleanText(b.name, 100) ?? `Round ${(count?.n ?? 0) + 1}`;
-  const row = await c.env.DB.prepare("INSERT INTO rounds (name, points_per_person) VALUES (?, ?) RETURNING id")
-    .bind(name, points)
+  const filters = cleanFilters(b.filters);
+  if ((await matchingIdeaIds(c.env.DB, filters)).length < 2) {
+    throw new HttpError(400, "At least 2 ideas need to match the filters");
+  }
+  const row = await c.env.DB.prepare("INSERT INTO rounds (name, points_per_person, filters) VALUES (?, ?, ?) RETURNING id")
+    .bind(name, points, JSON.stringify(filters))
     .first<{ id: number }>();
   return c.json({ id: row!.id }, 201);
 });

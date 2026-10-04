@@ -47,9 +47,11 @@ interface Props {
   /** Alpha-2 code of the highlighted country. */
   selected: string | null;
   onSelect: (code: string) => void;
+  /** Zoom in as close as the pins allow, for a single trip or idea. */
+  close?: boolean;
 }
 
-export function WorldMap({ visited, ideas, pins, routes = NO_ROUTES, selected, onSelect }: Props) {
+export function WorldMap({ visited, ideas, pins, routes = NO_ROUTES, selected, onSelect, close = false }: Props) {
   const el = useRef<HTMLDivElement>(null);
   const map = useRef<L.Map | null>(null);
   const layers = useRef<L.LayerGroup | null>(null);
@@ -61,7 +63,7 @@ export function WorldMap({ visited, ideas, pins, routes = NO_ROUTES, selected, o
 
   useEffect(() => {
     if (!el.current) return;
-    const m = L.map(el.current, { worldCopyJump: true, minZoom: 1, zoomSnap: 0.5 }).setView([30, 10], 1.5);
+    const m = L.map(el.current, { worldCopyJump: true, minZoom: 1, zoomSnap: 0.25 }).setView([30, 10], 1.5);
     // Standard OpenStreetMap tiles need no API key. Dark mode darkens them with a CSS filter.
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -136,13 +138,13 @@ export function WorldMap({ visited, ideas, pins, routes = NO_ROUTES, selected, o
         bounds.push([p.lat, p.lon]);
       }
       if (selectedRef.current && countryLayers.current.has(selectedRef.current)) return;
-      if (bounds.length > 1) map.current.fitBounds(bounds, { padding: [40, 40], maxZoom: 5 });
-      else if (bounds.length === 1) map.current.setView(bounds[0], 5);
+      if (bounds.length > 1) map.current.fitBounds(bounds, close ? { padding: [28, 28], maxZoom: 11 } : { padding: [40, 40], maxZoom: 5 });
+      else if (bounds.length === 1) map.current.setView(bounds[0], close ? 9 : 5);
     });
     return () => {
       cancelled = true;
     };
-  }, [visited, ideas, pins, routes]);
+  }, [visited, ideas, pins, routes, close]);
 
   function highlight(code: string | null, fly: boolean) {
     for (const [c, layer] of countryLayers.current) layer.setStyle({ weight: c === code ? 3 : 1 });

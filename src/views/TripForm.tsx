@@ -14,7 +14,7 @@ export interface TripDraft {
   idea_id?: number | null;
 }
 
-export function TripForm({ trip, draft, onClose }: { trip?: Trip; draft?: TripDraft; onClose: () => void }) {
+export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; draft?: TripDraft; onClose: () => void; onDeleted?: () => void }) {
   const { me, reload, ideas } = useData();
   const fromIdea = ideas.find((i) => i.id === draft?.idea_id);
   const [title, setTitle] = useState(trip?.title ?? draft?.title ?? "");
@@ -59,6 +59,7 @@ export function TripForm({ trip, draft, onClose }: { trip?: Trip; draft?: TripDr
     await api.deleteTrip(trip.id);
     await reload();
     onClose();
+    onDeleted?.();
   };
 
   return (

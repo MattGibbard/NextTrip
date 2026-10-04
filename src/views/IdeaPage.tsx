@@ -108,7 +108,7 @@ export function IdeaPage({ id }: { id: number }) {
       )}
       {trip && (
         <p className="small">
-          ✓ You went: <a href="#/trips">{trip.title}</a>
+          ✓ You went: <a href={`#/trips/${trip.id}`}>{trip.title}</a>
         </p>
       )}
 

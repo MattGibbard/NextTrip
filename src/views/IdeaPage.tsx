@@ -140,7 +140,7 @@ export function IdeaPage({ id }: { id: number }) {
             ))}
           </ol>
           <div className="map-wrap">
-            <WorldMap visited={NONE} ideas={countries} pins={pins} routes={routes} selected={null} onSelect={() => {}} />
+            <WorldMap visited={NONE} ideas={countries} pins={pins} routes={routes} selected={null} onSelect={() => {}} close />
           </div>
         </>
       ) : (

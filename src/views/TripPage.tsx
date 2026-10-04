@@ -90,7 +90,7 @@ export function TripPage({ id }: { id: number }) {
             ))}
           </ol>
           <div className="map-wrap">
-            <WorldMap visited={countries} ideas={NONE} pins={pins} routes={routes} selected={null} onSelect={() => {}} />
+            <WorldMap visited={countries} ideas={NONE} pins={pins} routes={routes} selected={null} onSelect={() => {}} close />
           </div>
         </>
       ) : (

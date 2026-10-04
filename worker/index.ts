@@ -161,14 +161,14 @@ function tripInput(b: Record<string, unknown>): TripInput {
     return t && /^\d{4}-\d{2}-\d{2}$/.test(t) ? t : null;
   };
   const rating = typeof b.rating === "number" && b.rating >= 1 && b.rating <= 5 ? Math.round(b.rating) : null;
-  const cover = cleanText(b.cover_url, 1000);
+  const cover = cleanUrl(b.cover_url);
   return {
     title,
     start_date: date(b.start_date),
     end_date: date(b.end_date),
     notes: cleanText(b.notes, 5000),
     rating,
-    cover_url: cover && /^https?:\/\//.test(cover) ? cover : null,
+    cover_url: cover,
     idea_id: typeof b.idea_id === "number" ? b.idea_id : null,
     created_by: typeof b.created_by === "number" ? b.created_by : null,
     places: cleanPlaces(b.places),
@@ -226,12 +226,19 @@ app.delete("/trips/:id", async (c) => {
 
 // ---------- Ideas ----------
 
+/** An http(s) link, or null. */
+function cleanUrl(v: unknown) {
+  const url = cleanText(v, 1000);
+  return url && /^https?:\/\//.test(url) ? url : null;
+}
+
 function ideaInput(b: Record<string, unknown>): IdeaInput {
   const title = cleanText(b.title, 200);
   if (!title) throw new HttpError(400, "Give the idea a name");
   return {
     title,
     description: cleanText(b.description, 5000),
+    cover_url: cleanUrl(b.cover_url),
     created_by: typeof b.created_by === "number" ? b.created_by : null,
     places: cleanPlaces(b.places),
     ...cleanDetails(b),
@@ -260,10 +267,10 @@ app.get("/ideas", async (c) => {
 app.post("/ideas", async (c) => {
   const i = ideaInput(await body(c));
   const row = await c.env.DB.prepare(
-    `INSERT INTO ideas (title, description, created_by, budget, trip_length, travel_time, holiday_types)
-     VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id`,
+    `INSERT INTO ideas (title, description, cover_url, created_by, budget, trip_length, travel_time, holiday_types)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
   )
-    .bind(i.title, i.description, i.created_by ?? viewerId(c), i.budget, i.trip_length, i.travel_time, JSON.stringify(i.holiday_types))
+    .bind(i.title, i.description, i.cover_url, i.created_by ?? viewerId(c), i.budget, i.trip_length, i.travel_time, JSON.stringify(i.holiday_types))
     .first<{ id: number }>();
   await c.env.DB.batch(placeInserts(c.env.DB, "idea_places", "idea_id", row!.id, i.places));
   return c.json({ id: row!.id }, 201);
@@ -273,10 +280,10 @@ app.put("/ideas/:id", async (c) => {
   const id = idParam(c);
   const i = ideaInput(await body(c));
   const res = await c.env.DB.prepare(
-    `UPDATE ideas SET title = ?, description = ?, budget = ?, trip_length = ?, travel_time = ?, holiday_types = ?
+    `UPDATE ideas SET title = ?, description = ?, cover_url = ?, budget = ?, trip_length = ?, travel_time = ?, holiday_types = ?
      WHERE id = ? AND status != 'archived'`,
   )
-    .bind(i.title, i.description, i.budget, i.trip_length, i.travel_time, JSON.stringify(i.holiday_types), id)
+    .bind(i.title, i.description, i.cover_url, i.budget, i.trip_length, i.travel_time, JSON.stringify(i.holiday_types), id)
     .run();
   if (!res.meta.changes) throw new HttpError(404, "Not found");
   await c.env.DB.batch(placeInserts(c.env.DB, "idea_places", "idea_id", id, i.places));

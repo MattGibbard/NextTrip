@@ -5,6 +5,7 @@ import { PlacesView } from "./views/PlacesView";
 import { IdeasView } from "./views/IdeasView";
 import { DrawView } from "./views/DrawView";
 import { SettingsView } from "./views/SettingsView";
+import { IdeaPage } from "./views/IdeaPage";
 import { PersonPicker } from "./components/PersonPicker";
 
 const TABS = [
@@ -16,9 +17,12 @@ const TABS = [
 
 type TabId = (typeof TABS)[number]["id"] | "settings";
 
-function currentTab(): TabId {
-  const h = location.hash.replace("#/", "").replace("#", "");
-  return (["trips", "places", "ideas", "draw", "settings"] as const).find((t) => t === h) ?? "trips";
+/** Reads routes like #/ideas or #/ideas/12. */
+function currentRoute(): { tab: TabId; id: number | null } {
+  const [first, second] = location.hash.replace(/^#\/?/, "").split("/");
+  const tab = (["trips", "places", "ideas", "draw", "settings"] as const).find((t) => t === first) ?? "trips";
+  const id = Number(second);
+  return { tab, id: Number.isInteger(id) && id > 0 ? id : null };
 }
 
 export function App() {
@@ -31,18 +35,21 @@ export function App() {
 
 function Shell() {
   const { me, people, loading, error, reload } = useData();
-  const [tab, setTab] = useState<TabId>(currentTab);
+  const [route, setRoute] = useState(currentRoute);
+  const tab = route.tab;
   const [picking, setPicking] = useState(false);
 
   useEffect(() => {
-    const onHash = () => setTab(currentTab());
+    const onHash = () => {
+      setRoute(currentRoute());
+      window.scrollTo({ top: 0 });
+    };
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
   const go = (t: TabId) => {
     location.hash = `/${t}`;
-    window.scrollTo({ top: 0 });
   };
 
   return (
@@ -84,7 +91,7 @@ function Shell() {
           <>
             {tab === "trips" && <TripsView />}
             {tab === "places" && <PlacesView />}
-            {tab === "ideas" && <IdeasView />}
+            {tab === "ideas" && (route.id ? <IdeaPage key={route.id} id={route.id} /> : <IdeasView />)}
             {tab === "draw" && <DrawView />}
             {tab === "settings" && <SettingsView />}
           </>

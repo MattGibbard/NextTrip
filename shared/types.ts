@@ -46,6 +46,7 @@ export interface Idea extends IdeaDetails {
   id: number;
   title: string;
   description: string | null;
+  cover_url: string | null;
   status: IdeaStatus;
   created_by: number | null;
   created_at: string;
@@ -55,6 +56,7 @@ export interface Idea extends IdeaDetails {
 export interface IdeaInput extends IdeaDetails {
   title: string;
   description: string | null;
+  cover_url: string | null;
   created_by: number | null;
   places: Place[];
 }

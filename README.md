@@ -4,7 +4,7 @@ A private little holiday planner for two, running on Cloudflare Workers with a D
 
 - **Trips:** every holiday you've been on, with dates, cities, notes, a rating and a cover photo.
 - **Places:** a world map of the countries and cities you've visited, with ideas you haven't been to yet shown in orange. Tap a country to see your trips there. It also shows how much of the world and how many continents you've covered, with lists by country, by city and by year.
-- **Ideas:** holiday ideas either of you can add, each with one or more places, a budget (£ to £££), trip length, travel time and holiday types. You can filter by budget and type.
+- **Ideas:** holiday ideas either of you can add, each with one or more places, a budget (£ to £££), trip length, travel time and holiday types. Each idea can have a cover photo and has its own page with all its details, a map of its places, its draw history and an Edit button. You can filter by budget and type.
 - **Draw:** start a round and you each get the same number of points (10 by default). You can filter a round by budget, trip length, travel time or type of holiday, so only matching ideas are in it. Spread your points across those ideas. Each of you also gets one veto per round to knock an idea out. Points stay hidden until you've both locked in. Then every point is one ticket and the server picks the winner at random. There are no re-rolls, and every draw is kept in the history. Once you've been, the winning idea becomes a trip.
 - **Home screen app:** add NextTrip to your phone's home screen and it opens full screen like an app, with its own icon. Settings shows how for your browser.
 

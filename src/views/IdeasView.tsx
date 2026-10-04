@@ -1,10 +1,10 @@
 import { useMemo, useState } from "react";
-import type { Idea } from "../../shared/types";
 import { useData } from "../data";
 import { flag } from "../countries";
 import { IdeaDetailsLine } from "../components/IdeaDetails";
 import { BUDGETS, HOLIDAY_TYPES } from "../../shared/ideaDetails";
 import { IdeaForm } from "./IdeaForm";
+import { cssUrl } from "../format";
 import { TripForm } from "./TripForm";
 import type { TripDraft } from "./TripForm";
 
@@ -17,7 +17,7 @@ const FILTERS = [
 export function IdeasView() {
   const { ideas, people, personName } = useData();
   const [filter, setFilter] = useState<(typeof FILTERS)[number]["id"]>("active");
-  const [editing, setEditing] = useState<Idea | "new" | null>(null);
+  const [adding, setAdding] = useState(false);
   const [tripDraft, setTripDraft] = useState<TripDraft | null>(null);
 
   const [budget, setBudget] = useState<number | null>(null);
@@ -38,7 +38,7 @@ export function IdeasView() {
     <section>
       <div className="page-head">
         <h1>Holiday ideas</h1>
-        <button className="btn" onClick={() => setEditing("new")}>
+        <button className="btn" onClick={() => setAdding(true)}>
           + New idea
         </button>
       </div>
@@ -73,7 +73,7 @@ export function IdeasView() {
           {filter === "active" ? (
             <>
               <p>No ideas in the pool yet. Add places you'd love to go, then spend your points on them in the Draw tab.</p>
-              <button className="btn" onClick={() => setEditing("new")}>
+              <button className="btn" onClick={() => setAdding(true)}>
                 Add an idea
               </button>
             </>
@@ -88,16 +88,19 @@ export function IdeasView() {
           const creator = people.find((p) => p.id === i.created_by);
           return (
             <article key={i.id} className="card idea-card">
-              <button className="card-body as-button" onClick={() => setEditing(i)}>
-                <div className="idea-flags">{[...new Set(i.places.map((p) => p.country_code))].map(flag).join(" ") || "💡"}</div>
-                <h3>{i.title}</h3>
-                {i.places.length > 0 && <p className="small">{i.places.map((p) => p.name).join(" → ")}</p>}
-                <IdeaDetailsLine idea={i} />
-                {i.description && <p className="muted small clamp">{i.description}</p>}
-                <p className="muted small by">
-                  <span className="dot" style={{ background: creator?.color ?? "#999" }} /> {personName(i.created_by)}'s idea
-                </p>
-              </button>
+              <a className="as-button idea-link" href={`#/ideas/${i.id}`}>
+                {i.cover_url && <div className="cover" style={{ backgroundImage: cssUrl(i.cover_url) }} />}
+                <div className="card-body">
+                  <div className="idea-flags">{[...new Set(i.places.map((p) => p.country_code))].map(flag).join(" ") || "💡"}</div>
+                  <h3>{i.title}</h3>
+                  {i.places.length > 0 && <p className="small">{i.places.map((p) => p.name).join(" → ")}</p>}
+                  <IdeaDetailsLine idea={i} />
+                  {i.description && <p className="muted small clamp">{i.description}</p>}
+                  <p className="muted small by">
+                    <span className="dot" style={{ background: creator?.color ?? "#999" }} /> {personName(i.created_by)}'s idea
+                  </p>
+                </div>
+              </a>
               {i.status === "won" && (
                 <div className="card-actions">
                   <span className="badge win">🏆 Winner</span>
@@ -111,7 +114,7 @@ export function IdeasView() {
         })}
       </div>
 
-      {editing && <IdeaForm idea={editing === "new" ? undefined : editing} onClose={() => setEditing(null)} />}
+      {adding && <IdeaForm onClose={() => setAdding(false)} />}
       {tripDraft && <TripForm draft={tripDraft} onClose={() => setTripDraft(null)} />}
     </section>
   );

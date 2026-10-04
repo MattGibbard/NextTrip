@@ -1,4 +1,5 @@
 import type { RoundFilters } from "./roundFilters";
+import type { Shortlist } from "./shortlist";
 import type { HolidayType, TravelTime, TripLength } from "./ideaDetails";
 
 export interface Person {
@@ -79,6 +80,14 @@ export interface Round {
   drawn_at: string | null;
   /** Which ideas this round is limited to, chosen when it started. */
   filters: RoundFilters;
+  /** Whether the round starts with everyone swiping to make a shortlist. */
+  swipe: boolean;
+  /** Fixed once everyone has swiped; until then (or without swiping) null. */
+  shortlist: Shortlist | null;
+  /** The viewing person's own swipes. Nobody sees anyone else's. */
+  my_swipes: { idea_id: number; liked: boolean }[];
+  /** People who still have ideas to swipe on, while the shortlist is being made. */
+  swiping: number[];
   /** Person ids that have locked in their points. */
   locked: number[];
   /** Everyone's veto for this round (vetoes are public as soon as they're used). */
@@ -96,3 +105,6 @@ export interface GeocodeResult {
   label: string;
   place: Place;
 }
+
+/** Where travel times are measured from. */
+export type Home = Place | null;

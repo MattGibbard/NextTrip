@@ -4,6 +4,7 @@ import { flag } from "../countries";
 import { cssUrl, plural } from "../format";
 import { budgetLabel, holidayType, travelTimeLabel, tripLengthLabel } from "../../shared/ideaDetails";
 import { ticketRanges } from "../../shared/draw";
+import { estimateTravel, formatHours } from "../../shared/travelTime";
 import { WorldMap } from "../components/WorldMap";
 import type { Pin } from "../components/WorldMap";
 import { IdeaForm } from "./IdeaForm";
@@ -21,7 +22,7 @@ const NONE = new Set<string>();
 
 /** Everything about one idea: photo, details, places on a map and its draw history. */
 export function IdeaPage({ id }: { id: number }) {
-  const { ideas, trips, rounds, people, personName } = useData();
+  const { ideas, trips, rounds, people, personName, home } = useData();
   const idea = ideas.find((i) => i.id === id);
   const [editing, setEditing] = useState(false);
   const [tripDraft, setTripDraft] = useState<TripDraft | null>(null);
@@ -61,6 +62,7 @@ export function IdeaPage({ id }: { id: number }) {
 
   const creator = people.find((p) => p.id === idea.created_by);
   const trip = trips.find((t) => t.idea_id === idea.id);
+  const estimate = estimateTravel(home, idea.places);
   const type = idea.holiday_types.map(holidayType).filter((t) => t !== undefined);
   const facts = [
     ["Budget", budgetLabel(idea.budget)],
@@ -110,6 +112,11 @@ export function IdeaPage({ id }: { id: number }) {
           <div key={label}>
             <dt>{label}</dt>
             <dd className={value ? "" : "muted"}>{value ?? "Not set"}</dd>
+            {label === "Travel time" && estimate && home && (
+              <dd className="muted small">
+                ≈ {formatHours(estimate.hours)} from {home.name}
+              </dd>
+            )}
           </div>
         ))}
       </dl>

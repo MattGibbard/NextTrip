@@ -3,6 +3,10 @@ import type { Person } from "../../shared/types";
 import { api } from "../api";
 import { useData } from "../data";
 import { isInstalled, isIos, useInstallPrompt } from "../install";
+import { flag } from "../countries";
+import { PlaceSearch } from "../components/PlaceSearch";
+import { estimateTravel } from "../../shared/travelTime";
+import { plural } from "../format";
 
 export function SettingsView() {
   const { people, me, setMe } = useData();
@@ -18,6 +22,7 @@ export function SettingsView() {
           <PersonEditor key={p.id} person={p} />
         ))}
       </div>
+      <HomePanel />
       <div className="panel">
         <h2>This device</h2>
         <p>
@@ -29,6 +34,67 @@ export function SettingsView() {
       </div>
       <InstallPanel />
     </section>
+  );
+}
+
+/** Where travel times are measured from, plus a one-tap fill for ideas missing a travel time. */
+function HomePanel() {
+  const { home, ideas, reload } = useData();
+  const [changing, setChanging] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const missing = ideas.filter((i) => (i.status === "active" || i.status === "won") && i.travel_time === null && estimateTravel(home, i.places));
+
+  const save = async (place: Parameters<typeof api.setHome>[0]) => {
+    setError(null);
+    try {
+      await api.setHome(place);
+      await reload();
+      setChanging(false);
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  };
+
+  const fill = async () => {
+    setBusy(true);
+    try {
+      for (const i of missing) {
+        const { title, description, cover_url, created_by, places, budget, trip_length, holiday_types } = i;
+        const travel_time = estimateTravel(home, places)!.travel_time;
+        await api.updateIdea(i.id, { title, description, cover_url, created_by, places, budget, trip_length, travel_time, holiday_types });
+      }
+      await reload();
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <div className="panel">
+      <h2>Home</h2>
+      <p className="muted small">Travel times on ideas are worked out from here, as a rough direct flight.</p>
+      {home && !changing ? (
+        <div className="home-row">
+          <span className="grow">
+            {flag(home.country_code)} <strong>{home.name}</strong> <span className="muted small">{home.country}</span>
+          </span>
+          <button className="btn ghost small" onClick={() => setChanging(true)}>
+            Change
+          </button>
+        </div>
+      ) : (
+        <PlaceSearch onAdd={(p) => void save(p)} />
+      )}
+      {error && <p className="error-text">{error}</p>}
+      {home && missing.length > 0 && (
+        <button className="btn small" onClick={fill} disabled={busy}>
+          {busy ? "Filling in…" : `Fill in travel time for ${plural(missing.length, "idea")}`}
+        </button>
+      )}
+    </div>
   );
 }
 

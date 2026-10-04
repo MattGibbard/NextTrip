@@ -4,10 +4,13 @@ import { migrate } from "./migrate";
 import { countedAllocations, ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
 import { parseNominatim } from "../shared/geocode";
 import { cleanDetails } from "../shared/ideaDetails";
-import { cleanFilters, matchesFilters } from "../shared/roundFilters";
+import { NO_FILTERS, cleanFilters, matchesFilters } from "../shared/roundFilters";
+import { buildShortlist, parseShortlist, unswiped } from "../shared/shortlist";
+import type { Swipe } from "../shared/shortlist";
 import type { RoundFilters } from "../shared/roundFilters";
 import type {
   Allocation,
+  Home,
   Idea,
   IdeaDetails,
   IdeaInput,
@@ -287,6 +290,8 @@ app.put("/ideas/:id", async (c) => {
     .run();
   if (!res.meta.changes) throw new HttpError(404, "Not found");
   await c.env.DB.batch(placeInserts(c.env.DB, "idea_places", "idea_id", id, i.places));
+  // An edit can move an idea out of a filtered round's pool.
+  await finishOpenShortlist(c.env.DB);
   return c.json({ ok: true });
 });
 
@@ -308,24 +313,40 @@ app.delete("/ideas/:id", async (c) => {
   // Ideas that took part in a past draw are archived so the history still reads correctly.
   stmts.push(used ? db.prepare("UPDATE ideas SET status = 'archived' WHERE id = ?").bind(id) : db.prepare("DELETE FROM ideas WHERE id = ?").bind(id));
   await db.batch(stmts);
+  // Removing the last idea someone had left to swipe can complete the shortlist.
+  await finishOpenShortlist(db);
   return c.json({ ok: true });
 });
 
 // ---------- Rounds and the draw ----------
 
+type RoundRow = Omit<Round, "locked" | "vetoes" | "allocations" | "ideas" | "filters" | "swipe" | "shortlist" | "my_swipes" | "swiping"> & {
+  filters: string;
+  swipe: number;
+  shortlist: string | null;
+};
+type SwipeRow = { round_id: number; person_id: number; idea_id: number; liked: number };
+const toSwipe = (s: Omit<SwipeRow, "round_id">): Swipe => ({ person_id: s.person_id, idea_id: s.idea_id, liked: !!s.liked });
+
 async function loadRounds(db: D1Database, viewer: number | null, onlyId?: number): Promise<Round[]> {
   const where = onlyId === undefined ? "" : "WHERE id = ?";
   const roundsQ = db.prepare(`SELECT * FROM rounds ${where} ORDER BY id DESC`);
-  const { results: rounds } = await (onlyId === undefined ? roundsQ : roundsQ.bind(onlyId)).all<Omit<Round, "locked" | "vetoes" | "allocations" | "ideas" | "filters"> & { filters: string }>();
+  const { results: rounds } = await (onlyId === undefined ? roundsQ : roundsQ.bind(onlyId)).all<RoundRow>();
   if (rounds.length === 0) return [];
-  const [allocs, locks, vetoes, ideas] = await Promise.all([
+  const [allocs, locks, vetoes, ideas, swipes, people] = await Promise.all([
     db.prepare("SELECT round_id, person_id, idea_id, points FROM allocations").all<Allocation & { round_id: number }>(),
     db.prepare("SELECT round_id, person_id FROM round_locks").all<{ round_id: number; person_id: number }>(),
     db.prepare("SELECT round_id, person_id, idea_id FROM round_vetoes").all<{ round_id: number; person_id: number; idea_id: number }>(),
     db.prepare("SELECT id, title, status FROM ideas").all<{ id: number; title: string; status: IdeaStatus }>(),
+    db.prepare("SELECT round_id, person_id, idea_id, liked FROM round_swipes").all<SwipeRow>(),
+    db.prepare("SELECT id FROM people").all<{ id: number }>(),
   ]);
   const ideaById = new Map(ideas.results.map((i) => [i.id, i]));
+  // Who is still swiping only matters for an open round that's still building its shortlist.
+  const building = rounds.find((r) => r.status === "open" && r.swipe && !r.shortlist);
+  const pool = building ? await matchingIdeaIds(db, cleanFilters(building.filters)) : [];
   return rounds.map((r) => {
+    const roundSwipes = swipes.results.filter((s) => s.round_id === r.id).map(toSwipe);
     const all = allocs.results.filter((a) => a.round_id === r.id);
     // Points stay secret until the draw: before it you only see your own.
     const visible = r.status === "drawn" ? all : all.filter((a) => a.person_id === viewer);
@@ -339,6 +360,10 @@ async function loadRounds(db: D1Database, viewer: number | null, onlyId?: number
     return {
       ...r,
       filters: cleanFilters(r.filters),
+      swipe: !!r.swipe,
+      shortlist: parseShortlist(r.shortlist),
+      my_swipes: roundSwipes.filter((x) => x.person_id === viewer).map(({ idea_id, liked }) => ({ idea_id, liked })),
+      swiping: r === building ? people.results.map((p) => p.id).filter((id) => unswiped(id, pool, roundSwipes).length > 0) : [],
       locked: locks.results.filter((l) => l.round_id === r.id).map((l) => l.person_id),
       vetoes: roundVetoes,
       allocations: visible.map(({ person_id, idea_id, points }) => ({ person_id, idea_id, points })),
@@ -351,9 +376,9 @@ async function loadRounds(db: D1Database, viewer: number | null, onlyId?: number
 }
 
 async function openRound(db: D1Database, id: number) {
-  const r = await db.prepare("SELECT id, points_per_person, status FROM rounds WHERE id = ?")
+  const r = await db.prepare("SELECT id, points_per_person, status, swipe, shortlist, filters FROM rounds WHERE id = ?")
     .bind(id)
-    .first<{ id: number; points_per_person: number; status: string }>();
+    .first<{ id: number; points_per_person: number; status: string; swipe: number; shortlist: string | null; filters: string }>();
   if (!r) throw new HttpError(404, "Not found");
   if (r.status !== "open") throw new HttpError(409, "This round has already been drawn");
   return r;
@@ -374,9 +399,16 @@ async function matchingIdeaIds(db: D1Database, filters: RoundFilters) {
  */
 async function eligibleIdeaIds(db: D1Database, roundId: number, personId: number) {
   const [round, veto] = await Promise.all([
-    db.prepare("SELECT filters FROM rounds WHERE id = ?").bind(roundId).first<{ filters: string }>(),
+    db.prepare("SELECT filters, swipe, shortlist FROM rounds WHERE id = ?").bind(roundId).first<{ filters: string; swipe: number; shortlist: string | null }>(),
     db.prepare("SELECT idea_id FROM round_vetoes WHERE round_id = ? AND person_id = ?").bind(roundId, personId).first<{ idea_id: number }>(),
   ]);
+  // A swipe round takes no points until its shortlist is made, then only shortlisted ideas.
+  if (round?.swipe) {
+    const shortlist = parseShortlist(round.shortlist);
+    if (!shortlist) return new Set<number>();
+    const active = new Set(await matchingIdeaIds(db, NO_FILTERS));
+    return new Set(shortlist.ids.filter((id) => active.has(id) && id !== veto?.idea_id));
+  }
   const ids = await matchingIdeaIds(db, cleanFilters(round?.filters));
   return new Set(ids.filter((id) => id !== veto?.idea_id));
 }
@@ -399,8 +431,8 @@ app.post("/rounds", async (c) => {
   if ((await matchingIdeaIds(c.env.DB, filters)).length < 2) {
     throw new HttpError(400, "At least 2 ideas need to match the filters");
   }
-  const row = await c.env.DB.prepare("INSERT INTO rounds (name, points_per_person, filters) VALUES (?, ?, ?) RETURNING id")
-    .bind(name, points, JSON.stringify(filters))
+  const row = await c.env.DB.prepare("INSERT INTO rounds (name, points_per_person, filters, swipe) VALUES (?, ?, ?, ?) RETURNING id")
+    .bind(name, points, JSON.stringify(filters), b.swipe === true ? 1 : 0)
     .first<{ id: number }>();
   return c.json({ id: row!.id }, 201);
 });
@@ -460,6 +492,49 @@ app.delete("/rounds/:id/lock", async (c) => {
   return c.json({ ok: true });
 });
 
+/**
+ * Fixes a swipe round's shortlist once everyone has swiped every idea in its
+ * pool. Safe to call any time; it does nothing until then, or once it's set.
+ */
+async function finishShortlist(db: D1Database, roundId: number) {
+  const r = await db.prepare("SELECT filters FROM rounds WHERE id = ? AND status = 'open' AND swipe = 1 AND shortlist IS NULL")
+    .bind(roundId)
+    .first<{ filters: string }>();
+  if (!r) return;
+  const [pool, people, swipes] = await Promise.all([
+    matchingIdeaIds(db, cleanFilters(r.filters)),
+    db.prepare("SELECT id FROM people").all<{ id: number }>(),
+    db.prepare("SELECT person_id, idea_id, liked FROM round_swipes WHERE round_id = ?").bind(roundId).all<Omit<SwipeRow, "round_id">>(),
+  ]);
+  const all = swipes.results.map(toSwipe);
+  const ids = people.results.map((p) => p.id);
+  if (ids.some((id) => unswiped(id, pool, all).length > 0)) return;
+  const shortlist = buildShortlist(pool, ids, all);
+  await db.prepare("UPDATE rounds SET shortlist = ? WHERE id = ? AND shortlist IS NULL").bind(JSON.stringify(shortlist), roundId).run();
+}
+
+async function finishOpenShortlist(db: D1Database) {
+  const r = await db.prepare("SELECT id FROM rounds WHERE status = 'open'").first<{ id: number }>();
+  if (r) await finishShortlist(db, r.id);
+}
+
+app.put("/rounds/:id/swipes", async (c) => {
+  const viewer = requireViewer(c);
+  const db = c.env.DB;
+  const r = await openRound(db, idParam(c));
+  if (!r.swipe) throw new HttpError(400, "This round doesn't use swiping");
+  if (r.shortlist) throw new HttpError(409, "The shortlist is already made");
+  const b = await body(c);
+  const ideaId = Number(b.idea_id);
+  if (typeof b.liked !== "boolean") throw new HttpError(400, "Say yes or no");
+  if (!(await matchingIdeaIds(db, cleanFilters(r.filters))).includes(ideaId)) throw new HttpError(400, "That idea isn't in this round");
+  await db.prepare("INSERT OR REPLACE INTO round_swipes (round_id, person_id, idea_id, liked) VALUES (?, ?, ?, ?)")
+    .bind(r.id, viewer, ideaId, b.liked ? 1 : 0)
+    .run();
+  await finishShortlist(db, r.id);
+  return c.json({ ok: true });
+});
+
 app.post("/rounds/:id/veto", async (c) => {
   const viewer = requireViewer(c);
   const db = c.env.DB;
@@ -516,6 +591,29 @@ app.post("/rounds/:id/draw", async (c) => {
   await db.prepare("UPDATE ideas SET status = 'won' WHERE id = ? AND status = 'active'").bind(winner).run();
   const [round] = await loadRounds(db, viewerId(c), r.id);
   return c.json(round);
+});
+
+// ---------- Settings ----------
+
+app.get("/home", async (c) => {
+  const row = await c.env.DB.prepare("SELECT value FROM settings WHERE key = 'home'").first<{ value: string }>();
+  let home: Home = null;
+  try {
+    home = row ? (cleanPlaces([JSON.parse(row.value)])[0] ?? null) : null;
+  } catch {
+    home = null;
+  }
+  return c.json(home);
+});
+
+app.put("/home", async (c) => {
+  const b = await body(c);
+  const [home] = cleanPlaces([b.home]);
+  if (b.home !== null && (!home || home.lat === null || home.lon === null)) throw new HttpError(400, "Pick home from the search so it has a location");
+  await c.env.DB.prepare(home ? "INSERT OR REPLACE INTO settings (key, value) VALUES ('home', ?)" : "DELETE FROM settings WHERE key = 'home'")
+    .bind(...(home ? [JSON.stringify(home)] : []))
+    .run();
+  return c.json({ ok: true });
 });
 
 // ---------- Place search ----------

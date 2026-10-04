@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
-import type { Idea, Person, Round, Trip } from "../shared/types";
+import type { Home, Idea, Person, Round, Trip } from "../shared/types";
 import { api, setApiPerson } from "./api";
 import { load, save } from "./storage";
 
@@ -9,6 +9,8 @@ interface Data {
   trips: Trip[];
   ideas: Idea[];
   rounds: Round[];
+  /** Where travel times are measured from, if it's been set. */
+  home: Home;
   me: Person | null;
   setMe: (id: number | null) => void;
   loading: boolean;
@@ -29,16 +31,18 @@ export function DataProvider({ children }: { children: ReactNode }) {
   const [trips, setTrips] = useState<Trip[]>([]);
   const [ideas, setIdeas] = useState<Idea[]>([]);
   const [rounds, setRounds] = useState<Round[]>([]);
+  const [home, setHome] = useState<Home>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const reload = useCallback(async () => {
     try {
-      const [p, t, i, r] = await Promise.all([api.people(), api.trips(), api.ideas(), api.rounds()]);
+      const [p, t, i, r, h] = await Promise.all([api.people(), api.trips(), api.ideas(), api.rounds(), api.home()]);
       setPeople(p);
       setTrips(t);
       setIdeas(i);
       setRounds(r);
+      setHome(h);
       setError(null);
     } catch (e) {
       setError((e as Error).message);
@@ -63,6 +67,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       trips,
       ideas,
       rounds,
+      home,
       me: people.find((p) => p.id === meId) ?? null,
       setMe,
       loading,
@@ -70,7 +75,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       reload,
       personName: (id) => people.find((p) => p.id === id)?.name ?? "Someone",
     }),
-    [people, trips, ideas, rounds, meId, setMe, loading, error, reload],
+    [people, trips, ideas, rounds, home, meId, setMe, loading, error, reload],
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

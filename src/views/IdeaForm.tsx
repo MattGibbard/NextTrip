@@ -8,10 +8,11 @@ import { PlaceSearch } from "../components/PlaceSearch";
 import { PlaceChips } from "../components/PlaceChips";
 import { IdeaDetailsFields } from "../components/IdeaDetails";
 
-export function IdeaForm({ idea, onClose }: { idea?: Idea; onClose: () => void }) {
+export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: () => void; onDeleted?: () => void }) {
   const { me, reload, rounds } = useData();
   const [title, setTitle] = useState(idea?.title ?? "");
   const [description, setDescription] = useState(idea?.description ?? "");
+  const [cover, setCover] = useState(idea?.cover_url ?? "");
   const [places, setPlaces] = useState<Place[]>(idea?.places ?? []);
   const [details, setDetails] = useState<IdeaDetails>({
     budget: idea?.budget ?? null,
@@ -25,7 +26,7 @@ export function IdeaForm({ idea, onClose }: { idea?: Idea; onClose: () => void }
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
-    const input = { title, description: description || null, places, created_by: idea?.created_by ?? me?.id ?? null, ...details };
+    const input = { title, description: description || null, cover_url: cover.trim() || null, places, created_by: idea?.created_by ?? me?.id ?? null, ...details };
     setSaving(true);
     try {
       if (idea) await api.updateIdea(idea.id, input);
@@ -45,6 +46,7 @@ export function IdeaForm({ idea, onClose }: { idea?: Idea; onClose: () => void }
     await api.deleteIdea(idea.id);
     await reload();
     onClose();
+    onDeleted?.();
   };
 
   return (
@@ -60,6 +62,10 @@ export function IdeaForm({ idea, onClose }: { idea?: Idea; onClose: () => void }
           <PlaceSearch onAdd={(p) => setPlaces([...places, p])} />
         </div>
         <IdeaDetailsFields value={details} onChange={setDetails} />
+        <label>
+          Cover photo link
+          <input type="url" value={cover} onChange={(e) => setCover(e.target.value)} placeholder="https://…" />
+        </label>
         <label>
           Notes
           <textarea rows={4} value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Why it's great, rough budget, best time to go…" />

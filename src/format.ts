@@ -24,3 +24,8 @@ export function monthYear(d: string): string {
 export function plural(n: number, word: string, many = `${word}s`) {
   return `${n} ${n === 1 ? word : many}`;
 }
+
+/** A link as a CSS background-image value. */
+export function cssUrl(url: string) {
+  return `url("${url.replace(/"/g, "%22")}")`;
+}

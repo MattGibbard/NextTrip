@@ -34,5 +34,5 @@ If the migration step can't find the database, run `npx wrangler d1 create nextt
 
 - `worker/index.ts`: the API (Hono) under `/api/*`. Everything else is served as static assets.
 - `shared/`: types plus the draw logic (`draw.ts`), shared by the API and the UI.
-- `src/`: the React app (Vite). The map uses Leaflet with CARTO tiles, and city search goes through the Worker to OpenStreetMap's Nominatim.
+- `src/`: the React app (Vite). The map uses Leaflet with OpenStreetMap tiles (no API key needed), and city search goes through the Worker to OpenStreetMap's Nominatim.
 - `migrations/`: the D1 schema.

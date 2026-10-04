@@ -9,6 +9,7 @@ import { plural } from "../format";
 import { TripForm } from "./TripForm";
 import { IdeaDetailsLine } from "../components/IdeaDetails";
 import { SpinWheel } from "../components/SpinWheel";
+import { SwipeDeck } from "../components/SwipeDeck";
 import { RoundFilterFields, RoundFilterLine } from "../components/RoundFilters";
 import { NO_FILTERS, hasFilters, matchesFilters } from "../../shared/roundFilters";
 import type { RoundFilters } from "../../shared/roundFilters";
@@ -82,13 +83,14 @@ function StartRound({ lastPoints }: { lastPoints: number }) {
   const [name, setName] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [filters, setFilters] = useState<RoundFilters>(NO_FILTERS);
+  const [swipe, setSwipe] = useState(true);
   const pool = ideas.filter((i) => i.status === "active");
   const matching = pool.filter((i) => matchesFilters(i, filters));
   const filtered = hasFilters(filters);
 
   const start = async () => {
     try {
-      await api.createRound({ name: name.trim() || undefined, points_per_person: points, filters });
+      await api.createRound({ name: name.trim() || undefined, points_per_person: points, filters, swipe });
       await reload();
     } catch (e) {
       setError((e as Error).message);
@@ -134,6 +136,13 @@ function StartRound({ lastPoints }: { lastPoints: number }) {
               </>
             )}
           </p>
+          <label className="check-row">
+            <input type="checkbox" checked={swipe} onChange={(e) => setSwipe(e.target.checked)} />
+            <span>
+              <strong>Swipe to shortlist first</strong>
+              <span className="muted small">You each swipe yes or no on every idea. Only the ones you both like go into the draw.</span>
+            </span>
+          </label>
           {error && <p className="error-text">{error}</p>}
           <button className="btn large" onClick={start} disabled={matching.length < 2}>
             Start round with {plural(points, "point")} each
@@ -148,6 +157,7 @@ function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => vo
   const { people, me, reload } = useData();
   const iLocked = me ? round.locked.includes(me.id) : false;
   const everyone = people.every((p) => round.locked.includes(p.id));
+  const shortlisting = round.swipe && !round.shortlist;
   const [drawing, setDrawing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -195,15 +205,24 @@ function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => vo
                 {p.id === me?.id ? " (you)" : ""}
               </span>
               {round.vetoes.some((v) => v.person_id === p.id) && <span className="veto-used" title="Veto used">🚫</span>}
-              <span className="state">{locked ? "🔒 Locked in" : "Choosing…"}</span>
+              <span className="state">
+                {shortlisting ? (round.swiping.includes(p.id) ? "Swiping…" : "✅ Done swiping") : locked ? "🔒 Locked in" : "Choosing…"}
+              </span>
             </li>
           );
         })}
       </ul>
 
-      <Vetoes round={round} />
+      {shortlisting ? (
+        me && <SwipeDeck key={round.id} round={round} />
+      ) : (
+        <>
+          <ShortlistNote round={round} />
+          <Vetoes round={round} />
+        </>
+      )}
 
-      {everyone ? (
+      {shortlisting ? null : everyone ? (
         <div className="draw-ready">
           <p>Everyone's locked in. Time to find out where you're going.</p>
           {error && <p className="error-text">{error}</p>}
@@ -223,6 +242,17 @@ function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => vo
       ) : null}
     </div>
   );
+}
+
+function ShortlistNote({ round }: { round: Round }) {
+  if (!round.shortlist) return null;
+  const n = round.shortlist.ids.length;
+  const text = {
+    both: `You both liked ${plural(n, "idea")}, so they're the shortlist.`,
+    either: `You didn't both like enough ideas, so the shortlist is the ${plural(n, "idea")} either of you liked.`,
+    all: `Hardly anything got a yes, so all ${plural(n, "idea")} are in.`,
+  }[round.shortlist.rule];
+  return <p className="banner">💞 {text}</p>;
 }
 
 /** Lists the ideas knocked out of this round, with an undo for your own veto. */
@@ -295,7 +325,12 @@ function Allocator({ round }: { round: Round }) {
   const { ideas, me, reload } = useData();
   const vetoed = useMemo(() => new Set(round.vetoes.map((v) => v.idea_id)), [round.vetoes]);
   const pool = useMemo(
-    () => ideas.filter((i) => i.status === "active" && !vetoed.has(i.id) && matchesFilters(i, round.filters)),
+    () => ideas.filter(
+        (i) =>
+          i.status === "active" &&
+          !vetoed.has(i.id) &&
+          (round.shortlist ? round.shortlist.ids.includes(i.id) : matchesFilters(i, round.filters)),
+      ),
     [ideas, vetoed, round.filters],
   );
   const canVeto = !round.vetoes.some((v) => v.person_id === me?.id) && pool.length > 1;

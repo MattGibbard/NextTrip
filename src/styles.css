@@ -1306,3 +1306,112 @@ button.card:hover {
 .breakdown tr.vetoed td {
   color: var(--muted);
 }
+
+/* ---------- Home and travel time ---------- */
+
+.home-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.travel-hint {
+  margin-top: -0.4rem;
+}
+
+/* ---------- Swipe to shortlist ---------- */
+
+.check-row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  font-weight: 400;
+}
+.check-row input {
+  margin-top: 0.25rem;
+  width: auto;
+}
+.check-row > span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.swipe {
+  margin-top: 1rem;
+}
+.swipe-stack {
+  position: relative;
+  height: 400px;
+  margin: 0.75rem auto;
+  max-width: 360px;
+}
+.swipe-card {
+  position: absolute;
+  inset: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+  overflow: hidden;
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+}
+.swipe-card .cover {
+  height: 190px;
+}
+.swipe-card.behind {
+  transform: scale(0.95) translateY(10px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+.swipe-card.animate {
+  transition: transform 0.22s ease;
+}
+.swipe-stamp {
+  position: absolute;
+  top: 1rem;
+  padding: 0.2rem 0.6rem;
+  border: 3px solid;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  background: var(--surface);
+}
+.swipe-stamp.yes {
+  left: 1rem;
+  color: #16a34a;
+  transform: rotate(-12deg);
+}
+.swipe-stamp.no {
+  right: 1rem;
+  color: var(--danger);
+  transform: rotate(12deg);
+}
+.swipe-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.swipe-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 1.6rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+}
+.swipe-btn.no {
+  color: var(--danger);
+}
+.swipe-btn.yes {
+  color: #e11d48;
+}
+.swipe-done {
+  text-align: center;
+  padding: 1.5rem 0 0.5rem;
+}

@@ -2,7 +2,6 @@ import type { IdeaDetails as Details } from "../../shared/types";
 import {
   BUDGETS,
   HOLIDAY_TYPES,
-  TRAVEL_TIMES,
   TRIP_LENGTHS,
   budgetLabel,
   holidayType,
@@ -70,7 +69,7 @@ function ChoiceRow<K extends string | number>({
   );
 }
 
-/** Editors for the practical details. Tapping a selected choice clears it. */
+/** Editors for the practical details. Tapping a selected choice clears it. Travel time is worked out from home, so it has no editor. */
 export function IdeaDetailsFields({ value, onChange }: { value: Details; onChange: (v: Details) => void }) {
   const toggleType = (k: Details["holiday_types"][number]) =>
     onChange({
@@ -81,7 +80,6 @@ export function IdeaDetailsFields({ value, onChange }: { value: Details; onChang
     <>
       <ChoiceRow label="Budget" options={BUDGETS} value={value.budget} onChange={(budget) => onChange({ ...value, budget })} />
       <ChoiceRow label="Trip length" options={TRIP_LENGTHS} value={value.trip_length} onChange={(trip_length) => onChange({ ...value, trip_length })} />
-      <ChoiceRow label="Travel time (each way)" options={TRAVEL_TIMES} value={value.travel_time} onChange={(travel_time) => onChange({ ...value, travel_time })} />
       <div className="field">
         <span>Type of holiday</span>
         <div className="choice-row">

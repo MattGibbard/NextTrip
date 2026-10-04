@@ -4,6 +4,7 @@ import { migrate } from "./migrate";
 import { countedAllocations, ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
 import { parseNominatim } from "../shared/geocode";
 import { cleanDetails } from "../shared/ideaDetails";
+import { estimateTravel } from "../shared/travelTime";
 import { NO_FILTERS, cleanFilters, matchesFilters } from "../shared/roundFilters";
 import { buildShortlist, parseShortlist, unswiped } from "../shared/shortlist";
 import type { Swipe } from "../shared/shortlist";
@@ -271,11 +272,13 @@ app.get("/ideas", async (c) => {
 
 app.post("/ideas", async (c) => {
   const i = ideaInput(await body(c));
+  // Travel time is always worked out from home, never typed in.
+  const travel = estimateTravel(await loadHome(c.env.DB), i.places)?.travel_time ?? null;
   const row = await c.env.DB.prepare(
     `INSERT INTO ideas (title, description, cover_url, created_by, budget, trip_length, travel_time, holiday_types)
      VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
   )
-    .bind(i.title, i.description, i.cover_url, i.created_by ?? viewerId(c), i.budget, i.trip_length, i.travel_time, JSON.stringify(i.holiday_types))
+    .bind(i.title, i.description, i.cover_url, i.created_by ?? viewerId(c), i.budget, i.trip_length, travel, JSON.stringify(i.holiday_types))
     .first<{ id: number }>();
   await c.env.DB.batch(placeInserts(c.env.DB, "idea_places", "idea_id", row!.id, i.places));
   return c.json({ id: row!.id }, 201);
@@ -284,11 +287,13 @@ app.post("/ideas", async (c) => {
 app.put("/ideas/:id", async (c) => {
   const id = idParam(c);
   const i = ideaInput(await body(c));
+  // Without an estimate (no home, or no located places) the old travel time stays.
+  const travel = estimateTravel(await loadHome(c.env.DB), i.places)?.travel_time ?? null;
   const res = await c.env.DB.prepare(
-    `UPDATE ideas SET title = ?, description = ?, cover_url = ?, budget = ?, trip_length = ?, travel_time = ?, holiday_types = ?
+    `UPDATE ideas SET title = ?, description = ?, cover_url = ?, budget = ?, trip_length = ?, travel_time = COALESCE(?, travel_time), holiday_types = ?
      WHERE id = ? AND status != 'archived'`,
   )
-    .bind(i.title, i.description, i.cover_url, i.budget, i.trip_length, i.travel_time, JSON.stringify(i.holiday_types), id)
+    .bind(i.title, i.description, i.cover_url, i.budget, i.trip_length, travel, JSON.stringify(i.holiday_types), id)
     .run();
   if (!res.meta.changes) throw new HttpError(404, "Not found");
   await c.env.DB.batch(placeInserts(c.env.DB, "idea_places", "idea_id", id, i.places));
@@ -597,16 +602,16 @@ app.post("/rounds/:id/draw", async (c) => {
 
 // ---------- Settings ----------
 
-app.get("/home", async (c) => {
-  const row = await c.env.DB.prepare("SELECT value FROM settings WHERE key = 'home'").first<{ value: string }>();
-  let home: Home = null;
+async function loadHome(db: D1Database): Promise<Home> {
+  const row = await db.prepare("SELECT value FROM settings WHERE key = 'home'").first<{ value: string }>();
   try {
-    home = row ? (cleanPlaces([JSON.parse(row.value)])[0] ?? null) : null;
+    return row ? (cleanPlaces([JSON.parse(row.value)])[0] ?? null) : null;
   } catch {
-    home = null;
+    return null;
   }
-  return c.json(home);
-});
+}
+
+app.get("/home", async (c) => c.json(await loadHome(c.env.DB)));
 
 app.put("/home", async (c) => {
   const b = await body(c);

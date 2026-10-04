@@ -708,8 +708,13 @@ button.card:hover {
 }
 .row.two {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 0.6rem;
+}
+/* Date inputs have a wide built-in minimum that would push the form sideways on phones. */
+.row.two > label,
+.row.two input {
+  min-width: 0;
 }
 .form-actions {
   display: flex;
@@ -1321,8 +1326,10 @@ button.card:hover {
 
 /* ---------- Swipe to shortlist ---------- */
 
+.form .check-row,
 .check-row {
   display: flex;
+  flex-direction: row;
   gap: 0.6rem;
   align-items: flex-start;
   font-weight: 400;

@@ -9,6 +9,9 @@ import { plural } from "../format";
 import { TripForm } from "./TripForm";
 import { IdeaDetailsLine } from "../components/IdeaDetails";
 import { SpinWheel } from "../components/SpinWheel";
+import { RoundFilterFields, RoundFilterLine } from "../components/RoundFilters";
+import { NO_FILTERS, hasFilters, matchesFilters } from "../../shared/roundFilters";
+import type { RoundFilters } from "../../shared/roundFilters";
 import type { TripDraft } from "./TripForm";
 
 export function DrawView() {
@@ -78,11 +81,14 @@ function StartRound({ lastPoints }: { lastPoints: number }) {
   const [points, setPoints] = useState(lastPoints);
   const [name, setName] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const [filters, setFilters] = useState<RoundFilters>(NO_FILTERS);
   const pool = ideas.filter((i) => i.status === "active");
+  const matching = pool.filter((i) => matchesFilters(i, filters));
+  const filtered = hasFilters(filters);
 
   const start = async () => {
     try {
-      await api.createRound({ name: name.trim() || undefined, points_per_person: points });
+      await api.createRound({ name: name.trim() || undefined, points_per_person: points, filters });
       await reload();
     } catch (e) {
       setError((e as Error).message);
@@ -111,8 +117,25 @@ function StartRound({ lastPoints }: { lastPoints: number }) {
               <input type="number" min={1} max={100} value={points} onChange={(e) => setPoints(Math.max(1, Math.min(100, Number(e.target.value) || 1)))} />
             </label>
           </div>
+          <details className="filters-box" open={filtered || undefined}>
+            <summary>Filter ideas{filtered ? "" : " (optional)"}</summary>
+            <RoundFilterFields value={filters} onChange={setFilters} />
+          </details>
+          <p className={`match-count small ${matching.length < 2 ? "error-text" : "muted"}`}>
+            {filtered
+              ? `${matching.length} of ${plural(pool.length, "idea")} match${matching.length < 2 ? ". You need at least 2 to start a round." : ""}`
+              : `All ${plural(pool.length, "idea")} in the pool are in this round.`}
+            {filtered && (
+              <>
+                {" "}
+                <button className="link" onClick={() => setFilters(NO_FILTERS)}>
+                  Clear filters
+                </button>
+              </>
+            )}
+          </p>
           {error && <p className="error-text">{error}</p>}
-          <button className="btn large" onClick={start}>
+          <button className="btn large" onClick={start} disabled={matching.length < 2}>
             Start round with {plural(points, "point")} each
           </button>
         </div>
@@ -152,6 +175,7 @@ function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => vo
         <div>
           <h2>{round.name}</h2>
           <p className="muted small">{plural(round.points_per_person, "point")} each</p>
+          <RoundFilterLine filters={round.filters} />
         </div>
         <button className="link danger" onClick={cancel}>
           Cancel round
@@ -266,7 +290,10 @@ function MyLockedPoints({ round }: { round: Round }) {
 function Allocator({ round }: { round: Round }) {
   const { ideas, me, reload } = useData();
   const vetoed = useMemo(() => new Set(round.vetoes.map((v) => v.idea_id)), [round.vetoes]);
-  const pool = useMemo(() => ideas.filter((i) => i.status === "active" && !vetoed.has(i.id)), [ideas, vetoed]);
+  const pool = useMemo(
+    () => ideas.filter((i) => i.status === "active" && !vetoed.has(i.id) && matchesFilters(i, round.filters)),
+    [ideas, vetoed, round.filters],
+  );
   const canVeto = !round.vetoes.some((v) => v.person_id === me?.id) && pool.length > 1;
   const [points, setPoints] = useState<Record<number, number>>(() =>
     Object.fromEntries(round.allocations.filter((a) => a.person_id === me?.id).map((a) => [a.idea_id, a.points])),
@@ -512,6 +539,7 @@ function HistoryRow({ round, hidden }: { round: Round; hidden: boolean }) {
       </button>
       {open && (
         <div className="history-body">
+          <RoundFilterLine filters={round.filters} />
           <Breakdown round={round} />
           {winnerIdea?.status === "won" && (
             <button className="btn small" onClick={() => setDraft({ title: winnerIdea.title, places: winnerIdea.places, idea_id: winnerIdea.id })}>

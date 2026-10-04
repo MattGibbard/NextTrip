@@ -1,3 +1,4 @@
+import type { RoundFilters } from "./roundFilters";
 import type { HolidayType, TravelTime, TripLength } from "./ideaDetails";
 
 export interface Person {
@@ -74,6 +75,8 @@ export interface Round {
   total_tickets: number | null;
   created_at: string;
   drawn_at: string | null;
+  /** Which ideas this round is limited to, chosen when it started. */
+  filters: RoundFilters;
   /** Person ids that have locked in their points. */
   locked: number[];
   /** Everyone's veto for this round (vetoes are public as soon as they're used). */

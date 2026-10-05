@@ -3,8 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#18201d" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" />
+    <script>
+      // Pick light or dark before the first paint so the page doesn't flash. src/theme.ts keeps it up to date.
+      (function () {
+        var choice = "system";
+        try {
+          choice = JSON.parse(localStorage.getItem("nexttrip.theme")) || "system";
+        } catch (e) {}
+        var dark = choice === "dark" || (choice !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", dark ? "#18201d" : "#ffffff");
+      })();
+    </script>
     <meta name="description" content="Where we've been, and where we're going next." />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

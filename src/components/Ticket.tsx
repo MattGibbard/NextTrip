@@ -19,26 +19,26 @@ export function Flaps({ value, label }: { value: number; label: string }) {
   );
 }
 
-/** Five-letter station codes are set smaller so they fit beside a three-letter one. */
-const codeClass = (end: TicketEnd) => (end.code.length > 3 ? "code long" : "code");
-
 /** "LHR - - ✈️ - - NAP" with the place names underneath. */
 export function RouteLine({ from, to, icon, names = true }: { from: TicketEnd; to: TicketEnd; icon: string; names?: boolean }) {
   return (
     <div className="route-line">
-      <div>
-        <div className={codeClass(from)}>{from.code}</div>
-        {names && <div className="code-name">{from.name}</div>}
+      {/* The names sit on their own row so a long name doesn't push the line off centre. */}
+      <div className="route-codes">
+        <div className="code">{from.code}</div>
+        <div className="route-dash" aria-hidden>
+          <span />
+          <span className="route-icon">{icon}</span>
+          <span />
+        </div>
+        <div className="code">{to.code}</div>
       </div>
-      <div className="route-dash" aria-hidden>
-        <span />
-        <span className="route-icon">{icon}</span>
-        <span />
-      </div>
-      <div className="end">
-        <div className={codeClass(to)}>{to.code}</div>
-        {names && <div className="code-name">{to.name}</div>}
-      </div>
+      {names && (
+        <div className="route-names">
+          <div className="code-name">{from.name}</div>
+          <div className="code-name end">{to.name}</div>
+        </div>
+      )}
     </div>
   );
 }

@@ -44,38 +44,37 @@
   -webkit-font-smoothing: antialiased;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0f1412;
-    --surface: #18201d;
-    --surface-2: #212b27;
-    --text: #e7ece9;
-    --muted: #96a29c;
-    --border: #2c3833;
-    --accent: #2dd4bf;
-    --accent-hover: #5eead4;
-    --accent-soft: #123b36;
-    --accent-text: #052e2a;
-    --danger: #fb923c;
-    --gold: #fbbf24;
-    --map-visited: #2dd4bf;
-    --map-idea: #fb923c;
-    --shadow: 0 1px 2px rgb(0 0 0 / 0.4);
-    --flight-ink: #2dd4bf;
-    --train-ink: #a78bfa;
-    --cruise-ink: #60a5fa;
-    --road-ink: #f59e0b;
-    --standby-ink: #fb923c;
-    --flight-line: #115e59;
-    --train-line: #5b21b6;
-    --cruise-line: #1e40af;
-    --road-line: #92400e;
-    --standby-line: #9a3412;
-    --board: #0a0e0c;
-    --board-line: #26302c;
-    --paper: #141a17;
-    color-scheme: dark;
-  }
+/* Dark colours follow data-theme, which src/theme.ts sets from the device or the choice in Settings. */
+:root[data-theme="dark"] {
+  --bg: #0f1412;
+  --surface: #18201d;
+  --surface-2: #212b27;
+  --text: #e7ece9;
+  --muted: #96a29c;
+  --border: #2c3833;
+  --accent: #2dd4bf;
+  --accent-hover: #5eead4;
+  --accent-soft: #123b36;
+  --accent-text: #052e2a;
+  --danger: #fb923c;
+  --gold: #fbbf24;
+  --map-visited: #2dd4bf;
+  --map-idea: #fb923c;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+  --flight-ink: #2dd4bf;
+  --train-ink: #a78bfa;
+  --cruise-ink: #60a5fa;
+  --road-ink: #f59e0b;
+  --standby-ink: #fb923c;
+  --flight-line: #115e59;
+  --train-line: #5b21b6;
+  --cruise-line: #1e40af;
+  --road-line: #92400e;
+  --standby-line: #9a3412;
+  --board: #0a0e0c;
+  --board-line: #26302c;
+  --paper: #141a17;
+  color-scheme: dark;
 }
 
 * {
@@ -1102,10 +1101,8 @@ button.card:hover {
   font: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  .world-map .leaflet-tile-pane {
-    filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);
-  }
+[data-theme="dark"] .world-map .leaflet-tile-pane {
+  filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);
 }
 
 /* ---------- Idea details + vetoes ---------- */
@@ -1833,7 +1830,7 @@ a.detail {
 }
 
 /* Route line: "LHR - - ✈️ - - NAP" */
-.route-line {
+.route-codes {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -1842,14 +1839,16 @@ a.detail {
   font: 500 2.25rem/1 var(--mono);
   letter-spacing: -0.02em;
 }
-.route-line .code.long {
-  font-size: 1.5rem;
+.route-names {
+  display: none;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.3rem;
 }
 .route-line .code-name {
   font-size: 0.85rem;
   opacity: 0.85;
-  margin-top: 0.3rem;
-  display: none;
+  max-width: 50%;
 }
 .route-line .end {
   text-align: right;
@@ -1865,17 +1864,14 @@ a.detail {
   border-top: 2px dashed var(--mode-line, rgb(255 255 255 / 0.55));
 }
 @media (min-width: 760px) {
-  .route-line {
+  .route-codes {
     gap: 1.4rem;
   }
   .route-line .code {
     font-size: 4rem;
   }
-  .route-line .code.long {
-    font-size: 2.6rem;
-  }
-  .route-line .code-name {
-    display: block;
+  .route-names {
+    display: flex;
   }
   .route-icon {
     font-size: 1.4rem;

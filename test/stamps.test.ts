@@ -9,8 +9,8 @@ describe("stampLook", () => {
   });
 
   it("varies shapes, borders, trims and labels across countries", () => {
-    const looks = CODES.map((c) => stampLook(c, "Italy"));
-    expect(new Set(looks.map((l) => l.shape)).size).toBeGreaterThanOrEqual(4);
+    const looks = Array.from({ length: 60 }, (_, i) => stampLook(`${i}-IT`, "Italy"));
+    expect(new Set(looks.map((l) => l.shape)).size).toBeGreaterThanOrEqual(8);
     expect(new Set(looks.map((l) => l.border)).size).toBe(3);
     expect(new Set(looks.map((l) => l.trim)).size).toBe(3);
     expect(new Set(looks.map((l) => l.label)).size).toBeGreaterThanOrEqual(3);

@@ -1,6 +1,7 @@
 // How each Places stamp looks: varied by country, but always the same for a given country.
 
-const SHAPES = ["rounded", "square", "circle", "oval", "octagon", "ticket"] as const;
+const SHAPES = ["rounded", "square", "circle", "oval", "octagon", "ticket", "hexagon", "shield", "arrow", "banner"] as const;
+const CUT = new Set<string>(["octagon", "ticket", "hexagon", "shield", "arrow", "banner"]);
 const BORDERS = ["single", "double", "inner"] as const;
 const TRIMS = ["plain", "stars", "rules"] as const;
 const LABELS = ["ARRIVED", "ENTRY", "ADMITTED", "IMMIGRATION"];
@@ -26,8 +27,8 @@ export function stampLook(key: string, name: string) {
   };
   let shape: (typeof SHAPES)[number] = SHAPES[roll(SHAPES.length)];
   if ((shape === "circle" && name.length > 11) || (shape === "oval" && name.length > 16)) shape = "rounded";
-  // Octagons and tickets draw their own outline, which has no room for a second line.
-  const border = shape === "octagon" || shape === "ticket" ? "single" : BORDERS[roll(BORDERS.length)];
+  // Cut shapes and tickets draw their own outline, which has no room for a second line.
+  const border = CUT.has(shape) ? "single" : BORDERS[roll(BORDERS.length)];
   const trim = TRIMS[roll(TRIMS.length)];
   const label = LABELS[roll(LABELS.length)];
   // Anywhere from 4° left to 4° right, whichever column the stamp lands in.

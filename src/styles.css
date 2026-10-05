@@ -2717,30 +2717,69 @@ a.detail {
   min-width: 0;
   padding: 0.5rem 1rem;
 }
-/* Octagons draw their outline as two clipped layers: ink, then the card on top. */
-.stamp.shape-octagon {
+/* Cut shapes draw their outline as two clipped layers: ink, then the card on top. */
+.stamp.shape-octagon,
+.stamp.shape-hexagon,
+.stamp.shape-shield,
+.stamp.shape-arrow,
+.stamp.shape-banner {
   --cut: 14px;
   border: 0;
   background: none;
   padding: 0.65rem 0.95rem;
+  isolation: isolate;
+}
+.stamp.shape-octagon {
+  --outline: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 calc(100% - var(--cut)), 0 var(--cut));
+}
+.stamp.shape-hexagon {
+  --cut: 18px;
+  --outline: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% 50%, calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 50%);
+  padding-inline: 1.5rem;
+}
+.stamp.shape-shield {
+  --outline: polygon(0 0, 100% 0, 100% 68%, 50% 100%, 0 68%);
+  padding-bottom: 1.6rem;
+}
+.stamp.shape-arrow {
+  --cut: 20px;
+  --outline: polygon(0 0, calc(100% - var(--cut)) 0, 100% 50%, calc(100% - var(--cut)) 100%, 0 100%);
+  padding-right: 1.7rem;
+}
+.stamp.shape-banner {
+  --outline: polygon(0 0, 100% 0, calc(100% - var(--cut)) 50%, 100% 100%, 0 100%, var(--cut) 50%);
+  padding-inline: 1.5rem;
 }
 .stamp.shape-octagon::before,
-.stamp.shape-octagon::after {
+.stamp.shape-octagon::after,
+.stamp.shape-hexagon::before,
+.stamp.shape-hexagon::after,
+.stamp.shape-shield::before,
+.stamp.shape-shield::after,
+.stamp.shape-arrow::before,
+.stamp.shape-arrow::after,
+.stamp.shape-banner::before,
+.stamp.shape-banner::after {
   content: "";
   position: absolute;
   z-index: -1;
-  clip-path: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 calc(100% - var(--cut)), 0 var(--cut));
+  clip-path: var(--outline);
 }
-.stamp.shape-octagon::before {
+.stamp.shape-octagon::before,
+.stamp.shape-hexagon::before,
+.stamp.shape-shield::before,
+.stamp.shape-arrow::before,
+.stamp.shape-banner::before {
   inset: 0;
   background: var(--mode-ink);
 }
-.stamp.shape-octagon::after {
+.stamp.shape-octagon::after,
+.stamp.shape-hexagon::after,
+.stamp.shape-shield::after,
+.stamp.shape-arrow::after,
+.stamp.shape-banner::after {
   inset: 2px;
   background: var(--surface);
-}
-.stamp.shape-octagon {
-  isolation: isolate;
 }
 /* Tickets take the notches from the boarding passes. */
 .stamp.shape-ticket {

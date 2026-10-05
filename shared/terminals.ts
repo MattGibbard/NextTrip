@@ -102,7 +102,7 @@ function at(p: { lat: number | null; lon: number | null } | null | undefined): L
 
 /**
  * The dotted legs to and from a trip's places. Flights and trains go departure to
- * arrival. A cruise sails from its port to the first place. A road trip flies
+ * arrival. A cruise sails from its port to the first place and back from the last. A road trip flies
  * airport to airport, then flies home from the last place to where it set off.
  */
 export function journeyLegs(
@@ -116,7 +116,7 @@ export function journeyLegs(
   const located = places.map(at).filter((p): p is LatLon => p !== null);
   const legs: [LatLon, LatLon][] = [];
   if (mode === "cruise") {
-    if (located[0]) legs.push([from, located[0]]);
+    if (located.length > 0) legs.push([from, located[0]], [located[located.length - 1], from]);
     return legs;
   }
   const to = at(arrive);

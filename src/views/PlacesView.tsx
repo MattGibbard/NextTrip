@@ -5,8 +5,9 @@ import { countryName, flag, summarise } from "../countries";
 import { CONTINENT_NAMES, WORLD_COUNTRIES, continentOf } from "../continents";
 import { dateRange, plural } from "../format";
 import { WorldMap } from "../components/WorldMap";
-import { MODES, placeCode, tripMode } from "../../shared/travelMode";
+import { placeCode, tripMode } from "../../shared/travelMode";
 import { TripForm } from "./TripForm";
+import { ModeIcon } from "../components/ModeIcon";
 import { stampDate, stampLook, visitNumbers } from "../stamps";
 import type { Pin } from "../components/WorldMap";
 
@@ -294,7 +295,7 @@ function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: s
         const key = `${trip.id}-${place.country_code}`;
         const entry =
           mode === "flight" ? placeCode(place.name) : mode === "cruise" ? `PORT OF ${placeCode(place.name)}` : place.name.toUpperCase();
-        out.push({ key, code: place.country_code, name: place.country, mode, top: `${MODES[mode].icon} ${entry}`, when: trip.start_date, created: trip.created_at, look: stampLook(key, place.country) });
+        out.push({ key, code: place.country_code, name: place.country, mode, entry, when: trip.start_date, created: trip.created_at, look: stampLook(key, place.country) });
       }
     }
     const visit = visitNumbers(out);
@@ -313,7 +314,10 @@ function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: s
                 <i className="stamp-notch right" />
               </>
             )}
-            <span className="stamp-top">{s.top}</span>
+            <span className="stamp-top">
+              <ModeIcon mode={s.mode} className="stamp-icon" />
+              {s.entry}
+            </span>
             <span className="stamp-name">{s.name.toUpperCase()}</span>
             <span className="stamp-date">
               <span className="stamp-label">{s.look.label}</span>

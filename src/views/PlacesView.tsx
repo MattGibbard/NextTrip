@@ -7,7 +7,7 @@ import { dateRange, plural } from "../format";
 import { WorldMap } from "../components/WorldMap";
 import { MODES, placeCode, tripMode } from "../../shared/travelMode";
 import { TripForm } from "./TripForm";
-import { countryCode3, stampDate, stampLook, visitNumbers } from "../stamps";
+import { stampDate, stampLook, visitNumbers } from "../stamps";
 import type { Pin } from "../components/WorldMap";
 
 type Mode = "countries" | "cities" | "years";
@@ -314,10 +314,6 @@ function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: s
               </>
             )}
             <span className="stamp-top">{s.top}</span>
-            <span className="stamp-flag">
-              {flag(s.code)}
-              <span className="stamp-code">{countryCode3(s.code)}</span>
-            </span>
             <span className="stamp-name">{s.name.toUpperCase()}</span>
             <span className="stamp-date">
               <span className="stamp-label">{s.look.label}</span>
@@ -334,7 +330,6 @@ function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: s
         <button key={s.code} className="stamp-cell" onClick={() => onSelect(s.code)} title={`${s.name}: an idea, not been yet`}>
           <span className="stamp pending" style={{ rotate: `${stampLook(`idea-${s.code}`, s.name).tilt}deg` }}>
             <span className="stamp-top">VISA PENDING</span>
-            <span className="stamp-flag">{flag(s.code)}</span>
             <span className="stamp-name">{s.name.toUpperCase()}</span>
             <span className="stamp-date desktop-only">💡 {s.idea}</span>
           </span>

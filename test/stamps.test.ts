@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { countryCode3, stampDate, stampLook, visitNumbers } from "../src/stamps";
+import { stampDate, stampLook, visitNumbers } from "../src/stamps";
 
 const CODES = ["FR", "IT", "ES", "PT", "JP", "US", "GB", "NO", "AT", "CH", "IS", "ME", "BA", "DE", "GR", "HR", "TH", "PE", "KE", "MX"];
 
@@ -35,11 +35,6 @@ describe("stampLook", () => {
 it("prints dates like an entry stamp", () => {
   expect(stampDate("2019-04-12")).toBe("12 APR 2019");
   expect(stampDate(null)).toBe("UNDATED");
-});
-
-it("prints three-letter country codes", () => {
-  expect(countryCode3("PT")).toBe("PRT");
-  expect(countryCode3("JP")).toBe("JPN");
 });
 
 it("numbers visits to a country in date order", () => {

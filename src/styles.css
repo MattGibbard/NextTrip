@@ -2826,13 +2826,7 @@ a.detail {
 .stamp.trim-waves .stamp-label::after {
   content: " ∿";
 }
-/* Small print: the country's three-letter code beside the flag, then visit and serial numbers. */
-.stamp-code {
-  font: 500 0.55rem var(--mono);
-  letter-spacing: 0.14em;
-  margin-left: 0.35rem;
-  vertical-align: middle;
-}
+/* Small print: visit and serial numbers. */
 .stamp-serial {
   font: 500 0.5rem var(--mono);
   letter-spacing: 0.12em;
@@ -2861,16 +2855,9 @@ a.detail {
   background: none;
   border-radius: 14px;
 }
-.stamp.pending .stamp-flag {
-  opacity: 0.55;
-}
 .stamp-top {
   font: 500 0.56rem var(--mono);
   letter-spacing: 0.12em;
-}
-.stamp-flag {
-  font-size: 1.25rem;
-  line-height: 1.2;
 }
 .stamp-name {
   font: 500 0.85rem var(--mono);
@@ -2914,9 +2901,6 @@ a.detail {
     font-size: 0.66rem;
     letter-spacing: 0.14em;
   }
-  .stamp-flag {
-    font-size: 1.6rem;
-  }
   .stamp-name {
     font-size: 1.2rem;
     letter-spacing: 0.06em;
@@ -2931,9 +2915,6 @@ a.detail {
   }
   .stamp.shape-circle {
     width: 158px;
-  }
-  .stamp-code {
-    font-size: 0.65rem;
   }
   .stamp-serial {
     font-size: 0.58rem;

@@ -1,5 +1,4 @@
 // How each Places stamp looks: varied per stamp, but always the same for a given trip and country.
-import countries from "i18n-iso-countries";
 
 const SHAPES = ["rounded", "square", "circle", "oval", "octagon", "ticket", "hexagon", "shield", "banner"] as const;
 const CUT = new Set<string>(["octagon", "ticket", "hexagon", "shield", "banner"]);
@@ -36,11 +35,6 @@ export function stampLook(key: string, name: string) {
   const tilt = (roll(81) - 40) / 10;
   const serial = `Nº ${String(roll(9000) + 1000)}`;
   return { shape, border, trim, label, tilt, serial };
-}
-
-/** The three-letter code printed beside the flag: "PT" → "PRT". */
-export function countryCode3(code: string): string {
-  return countries.alpha2ToAlpha3(code) ?? code;
 }
 
 /**

@@ -1,27 +1,29 @@
 import { useMemo, useState } from "react";
 import { useData } from "../data";
 import { flag } from "../countries";
-import { cssUrl, plural } from "../format";
+import { plural } from "../format";
 import { budgetLabel, holidayType, travelTimeLabel, tripLengthLabel } from "../../shared/ideaDetails";
 import { ticketRanges } from "../../shared/draw";
 import { estimateTravel, formatHours } from "../../shared/travelTime";
+import { MODES, ideaMode, placeCode, ticketEnds } from "../../shared/travelMode";
+import { followsInOrder } from "../../shared/routes";
+import { Pass } from "../components/Ticket";
 import { WorldMap } from "../components/WorldMap";
 import type { Pin, Route } from "../components/WorldMap";
-import { followsInOrder } from "../../shared/routes";
 import { IdeaForm } from "./IdeaForm";
 import { TripForm } from "./TripForm";
 import type { TripDraft } from "./TripForm";
 
 const STATUS = {
-  active: "In the pool",
-  won: "🏆 Won a draw",
-  done: "✓ Been",
-  archived: "Archived",
+  active: "IN THE POOL",
+  won: "🏆 WON A DRAW",
+  done: "✓ BEEN",
+  archived: "ARCHIVED",
 } as const;
 
 const NONE = new Set<string>();
 
-/** Everything about one idea: photo, details, places on a map and its draw history. */
+/** Everything about one idea, as a standby ticket: details, places on a map and its draw history. */
 export function IdeaPage({ id }: { id: number }) {
   const { ideas, trips, rounds, people, personName, home } = useData();
   const idea = ideas.find((i) => i.id === id);
@@ -50,7 +52,8 @@ export function IdeaPage({ id }: { id: number }) {
           const mine = ranges.find((x) => x.idea_id === id)?.tickets ?? 0;
           if (!mine) return [];
           const total = ranges.reduce((n, x) => n + x.tickets, 0);
-          return [{ round: r, tickets: mine, total, won: r.winner_idea_id === id }];
+          const winner = r.ideas.find((i) => i.id === r.winner_idea_id)?.title ?? null;
+          return [{ round: r, tickets: mine, total, won: r.winner_idea_id === id, winner }];
         }),
     [rounds, id],
   );
@@ -69,16 +72,16 @@ export function IdeaPage({ id }: { id: number }) {
   const creator = people.find((p) => p.id === idea.created_by);
   const trip = trips.find((t) => t.idea_id === idea.id);
   const estimate = estimateTravel(home, idea.places);
-  const type = idea.holiday_types.map(holidayType).filter((t) => t !== undefined);
-  const facts = [
-    ["Budget", budgetLabel(idea.budget)],
-    ["Trip length", tripLengthLabel(idea.trip_length)],
-    ["Travel time", travelTimeLabel(idea.travel_time)],
-    ["Type", type.map((t) => `${t.icon} ${t.label}`).join(", ") || null],
-  ] as const;
+  const types = idea.holiday_types.map(holidayType).filter((t) => t !== undefined);
+  const mode = ideaMode(idea.holiday_types);
+  const m = MODES[mode];
+  const ends = ticketEnds(mode, idea.places, home);
+  const flags = [...countries].map(flag).join(" ");
+  const codes = ends ? `${placeCode(ends.from.name)}–${placeCode(ends.to.name)}` : null;
+  const travel = travelTimeLabel(idea.travel_time);
 
   return (
-    <section className="idea-page">
+    <section className="pass-page">
       <div className="page-head">
         <a className="back-link" href="#/ideas">
           ← Ideas
@@ -88,16 +91,35 @@ export function IdeaPage({ id }: { id: number }) {
         </button>
       </div>
 
-      {idea.cover_url ? (
-        <div className="hero" style={{ backgroundImage: cssUrl(idea.cover_url) }} />
-      ) : (
-        <div className="hero placeholder">{[...countries].map(flag).join(" ") || "💡"}</div>
-      )}
-
-      <h1>{idea.title}</h1>
-      <p className="muted small">
-        <span className="dot" style={{ background: creator?.color ?? "#999" }} /> {personName(idea.created_by)}'s idea · {STATUS[idea.status]}
-      </p>
+      <Pass
+        tone="standby"
+        photo={{ url: idea.cover_url, fallback: flags || "💡" }}
+        head={[`STANDBY · ${m.icon} ${m.kind}`, STATUS[idea.status]]}
+        route={ends && { from: ends.from.name, to: ends.to.name, icon: m.icon }}
+        title={`${flags} ${idea.title}`.trim()}
+        byline={
+          <div className="muted small byline">
+            <span className="dot" style={{ background: creator?.color ?? "#999" }} /> {personName(idea.created_by)}'s idea
+          </div>
+        }
+        facts={[
+          ["BUDGET", budgetLabel(idea.budget) ?? <span className="muted">Not set</span>],
+          ["LENGTH", tripLengthLabel(idea.trip_length) ?? <span className="muted">Not set</span>],
+          [
+            "TRAVEL TIME",
+            travel ? (
+              <>
+                ✈️ {travel}
+                {estimate && home && <div className="muted small">≈ {formatHours(estimate.hours)} from {home.name}</div>}
+              </>
+            ) : (
+              <span className="muted">Not set</span>
+            ),
+          ],
+          ["TYPE", types.map((t) => `${t.icon} ${t.label}`).join(" · ") || <span className="muted">Not set</span>],
+        ]}
+        stub={["💡", codes ? `STANDBY · ${codes}` : "STANDBY", plural(history.length, "DRAW", "DRAWS")]}
+      />
 
       {idea.status === "won" && (
         <div className="panel win-panel">
@@ -113,58 +135,45 @@ export function IdeaPage({ id }: { id: number }) {
         </p>
       )}
 
-      <dl className="facts">
-        {facts.map(([label, value]) => (
-          <div key={label}>
-            <dt>{label}</dt>
-            <dd className={value ? "" : "muted"}>{value ?? "Not set"}</dd>
-            {label === "Travel time" && estimate && home && (
-              <dd className="muted small">
-                ≈ {formatHours(estimate.hours)} from {home.name}
-              </dd>
-            )}
-          </div>
-        ))}
-      </dl>
-
-      {idea.description && <p className="idea-notes">{idea.description}</p>}
-
-      <h2>{idea.places.length ? plural(idea.places.length, "place") : "Places"}</h2>
-      {idea.places.length > 0 ? (
-        <>
-          <ol className="stops">
+      <div className="pass-columns idea-columns">
+        {idea.description && <p className="pass-notes area-notes">{idea.description}</p>}
+        {idea.places.length > 0 ? (
+          <ol className="stepper-route area-steps" aria-label="Places in order">
             {idea.places.map((p, i) => (
               <li key={i}>
-                {flag(p.country_code)} <strong>{p.name}</strong> <span className="muted small">{p.country}</span>
+                <span className="step-num">{i + 1}</span>
+                <span className="step-name">{p.name}</span>
               </li>
             ))}
           </ol>
-          <div className="map-wrap">
+        ) : (
+          <p className="muted small area-steps">No places yet. Add some with Edit.</p>
+        )}
+        {pins.length > 0 && (
+          <div className="pass-map area-map">
             <WorldMap visited={NONE} ideas={countries} pins={pins} routes={routes} selected={null} onSelect={() => {}} close />
           </div>
-        </>
-      ) : (
-        <p className="muted small">No places yet. Add some with Edit.</p>
-      )}
-
-      {history.length > 0 && (
-        <>
-          <h2>In the draw</h2>
-          <ul className="list compact">
-            {history.map((h) => (
-              <li key={h.round.id} className="list-row">
-                <span className="grow">
-                  {h.won && "🏆 "}
-                  {h.round.name}
-                </span>
-                <span className="muted small">
-                  {plural(h.tickets, "ticket")} of {h.total} · {Math.round((h.tickets / h.total) * 100)}%
-                </span>
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
+        )}
+        {history.length > 0 && (
+          <div className="area-history">
+            <h2 className="pass-h2">Draw history</h2>
+            <ul className="draw-history">
+              {history.map((h) => (
+                <li key={h.round.id}>
+                  <span className="draw-odds">{Math.round((h.tickets / h.total) * 100)}%</span>
+                  <div className="grow">
+                    <strong>{h.round.name}</strong>
+                    <div className="muted small">
+                      {h.tickets} of {h.total} tickets
+                    </div>
+                  </div>
+                  <span className="muted small">{h.won ? "🏆 This won" : h.winner ? `🏆 ${h.winner} won` : ""}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
 
       {editing && <IdeaForm idea={idea} onClose={() => setEditing(false)} onDeleted={() => (location.hash = "/ideas")} />}
       {tripDraft && <TripForm draft={tripDraft} onClose={() => setTripDraft(null)} />}

@@ -7,6 +7,8 @@ import { Modal } from "../components/Modal";
 import { PlaceSearch } from "../components/PlaceSearch";
 import { PlaceChips } from "../components/PlaceChips";
 import { Stars } from "../components/Stars";
+import { MODES, MODE_KEYS, ideaMode, modeFlags, tripMode } from "../../shared/travelMode";
+import type { Mode } from "../../shared/travelMode";
 
 export interface TripDraft {
   title?: string;
@@ -24,8 +26,7 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
   const [rating, setRating] = useState<number | null>(trip?.rating ?? null);
   const [notes, setNotes] = useState(trip?.notes ?? "");
   const [cover, setCover] = useState(trip?.cover_url ?? "");
-  const [roadTrip, setRoadTrip] = useState(trip?.road_trip ?? fromIdea?.holiday_types.includes("road-trip") ?? false);
-  const [cruise, setCruise] = useState(trip?.cruise ?? fromIdea?.holiday_types.includes("cruise") ?? false);
+  const [mode, setMode] = useState<Mode>(trip ? tripMode(trip) : ideaMode(fromIdea?.holiday_types ?? []));
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -39,8 +40,7 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
       rating,
       notes: notes || null,
       cover_url: cover || null,
-      road_trip: roadTrip,
-      cruise,
+      ...modeFlags(mode),
       idea_id: trip?.idea_id ?? draft?.idea_id ?? null,
       created_by: trip?.created_by ?? me?.id ?? null,
     };
@@ -87,20 +87,15 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
           <PlaceSearch onAdd={(p) => setPlaces([...places, p])} />
         </div>
         <div className="field">
-          <span>Route on the map</span>
-          <label className="check-row">
-            <input type="checkbox" checked={roadTrip} onChange={(e) => setRoadTrip(e.target.checked)} />
-            <span>
-              <strong>🚗 Road trip</strong>
-            </span>
-          </label>
-          <label className="check-row">
-            <input type="checkbox" checked={cruise} onChange={(e) => setCruise(e.target.checked)} />
-            <span>
-              <strong>🛳️ Cruise</strong>
-            </span>
-          </label>
-          <span className="muted small">Road trips and cruises join the places in order. Otherwise lines go out from the first place.</span>
+          <span>How did you travel?</span>
+          <div className="choice-row" role="radiogroup" aria-label="How did you travel?">
+            {MODE_KEYS.map((k) => (
+              <button type="button" key={k} role="radio" aria-checked={mode === k} className={`choice ${mode === k ? "on" : ""}`} onClick={() => setMode(k)}>
+                {MODES[k].icon} {MODES[k].short}
+              </button>
+            ))}
+          </div>
+          <span className="muted small">Trains, cruises and road trips join the places in order on the map. Flights go out from the first place.</span>
         </div>
         <div className="field">
           <span>Rating</span>

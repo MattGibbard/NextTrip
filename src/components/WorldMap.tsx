@@ -11,6 +11,8 @@ export interface Pin {
   lon: number;
   label: string;
   kind: "visited" | "idea";
+  /** A CSS variable to colour it with instead of the usual been/idea colour. */
+  colorVar?: string;
 }
 
 /** Lines between the places of one trip or idea. */
@@ -20,6 +22,8 @@ export interface Route {
   inOrder: boolean;
   label: string;
   kind: "visited" | "idea";
+  /** A CSS variable to colour it with, such as the trip's travel mode. */
+  colorVar?: string;
 }
 
 let countriesPromise: Promise<FeatureCollection<Geometry, { name: string }>> | null = null;
@@ -112,7 +116,7 @@ export function WorldMap({ visited, ideas, pins, routes = NO_ROUTES, selected, o
 
       // Routes go under the pins so the city dots stay tappable.
       for (const r of routes) {
-        const color = r.kind === "visited" ? visitedColor : ideaColor;
+        const color = r.colorVar ? cssVar(r.colorVar) : r.kind === "visited" ? visitedColor : ideaColor;
         for (const [from, to] of routeLegs(r.places, r.inOrder)) {
           const path = greatCircle(from, to);
           // A pale halo keeps the line readable on top of a shaded country.
@@ -131,7 +135,7 @@ export function WorldMap({ visited, ideas, pins, routes = NO_ROUTES, selected, o
 
       const bounds: L.LatLngTuple[] = [];
       for (const p of pins) {
-        const color = p.kind === "visited" ? visitedColor : ideaColor;
+        const color = p.colorVar ? cssVar(p.colorVar) : p.kind === "visited" ? visitedColor : ideaColor;
         L.circleMarker([p.lat, p.lon], { radius: 6, color: "#fff", weight: 2, fillColor: color, fillOpacity: 1 })
           .bindTooltip(p.label)
           .addTo(group);

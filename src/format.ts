@@ -29,3 +29,22 @@ export function plural(n: number, word: string, many = `${word}s`) {
 export function cssUrl(url: string) {
   return `url("${url.replace(/"/g, "%22")}")`;
 }
+
+/** Nights between two dates, or null without both. */
+export function nights(start: string | null, end: string | null): number | null {
+  if (!start || !end) return null;
+  const n = Math.round((parse(end).getTime() - parse(start).getTime()) / 86400000);
+  return n > 0 ? n : null;
+}
+
+const MONTH = new Intl.DateTimeFormat("en-GB", { month: "short" });
+
+/** Compact dates for a ticket: "2–14 Apr 2026", "28 Mar – 3 Apr 2026", "30 Dec 2025 – 2 Jan 2026". */
+export function shortRange(start: string | null, end: string | null): string | null {
+  if (!start || !end || start === end) return start || end ? fmt.format(parse((start || end)!)) : null;
+  const a = parse(start);
+  const b = parse(end);
+  if (a.getFullYear() !== b.getFullYear()) return `${fmt.format(a)} – ${fmt.format(b)}`;
+  if (a.getMonth() !== b.getMonth()) return `${a.getDate()} ${MONTH.format(a)} – ${fmt.format(b)}`;
+  return `${a.getDate()}–${fmt.format(b)}`;
+}

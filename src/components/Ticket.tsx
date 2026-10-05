@@ -1,0 +1,135 @@
+import type { ReactNode } from "react";
+import { placeCode } from "../../shared/travelMode";
+import { cssUrl } from "../format";
+
+/** A number on split-flap tiles, like a departures board. */
+export function Flaps({ value, label }: { value: number; label: string }) {
+  const digits = String(value).padStart(2, "0").split("");
+  return (
+    <div className="flaps">
+      <div className="flap-row" aria-label={`${value} ${label.toLowerCase()}`}>
+        {digits.map((d, i) => (
+          <span key={i} className="flap" aria-hidden>
+            {d}
+          </span>
+        ))}
+      </div>
+      <span className="mono-label">{label}</span>
+    </div>
+  );
+}
+
+/** "LHR - - ✈️ - - NAP" with the place names underneath. */
+export function RouteLine({ from, to, icon, names = true }: { from: string; to: string; icon: string; names?: boolean }) {
+  return (
+    <div className="route-line">
+      <div>
+        <div className="code">{placeCode(from)}</div>
+        {names && <div className="code-name">{from}</div>}
+      </div>
+      <div className="route-dash" aria-hidden>
+        <span />
+        <span className="route-icon">{icon}</span>
+        <span />
+      </div>
+      <div className="end">
+        <div className="code">{placeCode(to)}</div>
+        {names && <div className="code-name">{to}</div>}
+      </div>
+    </div>
+  );
+}
+
+/** A cover photo, or the flags on a soft background when there isn't one. */
+export function Photo({ url, fallback, className = "" }: { url: string | null; fallback: string; className?: string }) {
+  return url ? (
+    <div className={`photo ${className}`} style={{ backgroundImage: cssUrl(url) }} />
+  ) : (
+    <div className={`photo placeholder ${className}`}>{fallback}</div>
+  );
+}
+
+/** A small labelled value on a ticket: "NIGHTS / 7". */
+export function Field({ label, children, className = "" }: { label: string; children: ReactNode; className?: string }) {
+  return (
+    <div className={className}>
+      <div className="mono-label">{label}</div>
+      <div className="tk-value">{children}</div>
+    </div>
+  );
+}
+
+interface PassProps {
+  /** "mode-cruise", or "standby" for an idea. */
+  tone: string;
+  photo: { url: string | null; fallback: string };
+  head: [ReactNode, ReactNode];
+  route: { from: string; to: string; icon: string } | null;
+  title: ReactNode;
+  byline?: ReactNode;
+  facts: [string, ReactNode][];
+  tags?: ReactNode;
+  stub: [ReactNode, ReactNode, ReactNode];
+}
+
+/**
+ * A whole trip or idea as one big ticket: photo, then the details, then a
+ * coloured stub. On a phone the photo sits on top and the stub drops away.
+ */
+export function Pass({ tone, photo, head, route, title, byline, facts, tags, stub }: PassProps) {
+  return (
+    <div className={`pass ${tone}`}>
+      <Photo url={photo.url} fallback={photo.fallback} className="pass-photo" />
+      <div className="pass-main">
+        <div className="pass-head">
+          <span>{head[0]}</span>
+          <span>{head[1]}</span>
+        </div>
+        <div className="pass-top">
+          {route && <RouteLine {...route} />}
+          <div>
+            <h1 className="pass-title">{title}</h1>
+            {byline}
+          </div>
+        </div>
+        <div className="pass-perf" aria-hidden />
+        <div className="pass-facts">
+          {facts.map(([label, value]) => (
+            <Field key={label} label={label}>
+              {value}
+            </Field>
+          ))}
+        </div>
+        {tags && <div className="pass-tags">{tags}</div>}
+      </div>
+      <div className="pass-stub">
+        <span>{stub[0]}</span>
+        <span className="stub-text">{stub[1]}</span>
+        <span className="stub-no">{stub[2]}</span>
+      </div>
+      <span className="notch top" />
+      <span className="notch bottom" />
+    </div>
+  );
+}
+
+/** A dark departures-board list of a trip's stops. */
+export function Board({ title, column, rows }: { title: string; column: string; rows: { label: ReactNode; note: string; lit: boolean }[] }) {
+  return (
+    <div className="board">
+      <div className="board-title mono-label mobile-only">{title}</div>
+      <div className="board-row board-headings mono-label desktop-only">
+        <span>STOP</span>
+        <span>{column}</span>
+        <span className="board-note">STATUS</span>
+      </div>
+      {rows.map((r, i) => (
+        <div key={i} className="board-row">
+          <span className="board-num">{String(i + 1).padStart(2, "0")}</span>
+          <span className="ellipsis">{r.label}</span>
+          <span className={`board-note ${r.lit ? "lit" : ""}`}>{r.note}</span>
+        </div>
+      ))}
+    </div>
+  );
+}

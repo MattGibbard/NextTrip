@@ -1,7 +1,7 @@
 // How each Places stamp looks: varied by country, but always the same for a given country.
 
-const SHAPES = ["rounded", "square", "circle", "oval", "octagon", "ticket", "hexagon", "shield", "arrow", "banner"] as const;
-const CUT = new Set<string>(["octagon", "ticket", "hexagon", "shield", "arrow", "banner"]);
+const SHAPES = ["rounded", "square", "circle", "oval", "octagon", "ticket", "hexagon", "shield", "diamond", "banner"] as const;
+const CUT = new Set<string>(["octagon", "ticket", "hexagon", "shield", "diamond", "banner"]);
 const BORDERS = ["single", "double", "inner"] as const;
 const TRIMS = ["plain", "stars", "rules"] as const;
 const LABELS = ["ARRIVED", "ENTRY", "ADMITTED", "IMMIGRATION"];
@@ -26,7 +26,7 @@ export function stampLook(key: string, name: string) {
     return ((h ^ (h >>> 15)) >>> 0) % n;
   };
   let shape: (typeof SHAPES)[number] = SHAPES[roll(SHAPES.length)];
-  if ((shape === "circle" && name.length > 11) || (shape === "oval" && name.length > 16)) shape = "rounded";
+  if ((shape === "circle" && name.length > 11) || (shape === "oval" && name.length > 16) || (shape === "diamond" && name.length > 9)) shape = "rounded";
   // Cut shapes and tickets draw their own outline, which has no room for a second line.
   const border = CUT.has(shape) ? "single" : BORDERS[roll(BORDERS.length)];
   const trim = TRIMS[roll(TRIMS.length)];

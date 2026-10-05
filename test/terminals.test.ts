@@ -48,8 +48,11 @@ describe("journeyLegs", () => {
     expect(journeyLegs("train", t("station", 0, 0), null, places)).toEqual([]);
   });
 
-  it("sails from the port to the first place", () => {
-    expect(journeyLegs("cruise", t("port", 0, 0), null, places)).toEqual([[[0, 0], [1, 1]]]);
+  it("sails from the port to the first place, and back from the last", () => {
+    expect(journeyLegs("cruise", t("port", 0, 0), null, places)).toEqual([
+      [[0, 0], [1, 1]],
+      [[3, 3], [0, 0]],
+    ]);
   });
 
   it("flies a road trip out, then home from the last place", () => {

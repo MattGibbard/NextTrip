@@ -138,7 +138,7 @@ export function JourneyFields({ mode, journey }: { mode: Mode; journey: ReturnTy
   const ends = ENDS[mode];
   const hint =
     mode === "cruise"
-      ? "Cruises come back to this port. The map draws a dotted line from here to the first place."
+      ? "Cruises come back to this port. The map draws dotted lines from here to the first place and back from the last."
       : mode === "road"
         ? "Just the flight out. The map joins the airports, then your route, then flies home from the last place."
         : "The map draws a dotted line between these.";

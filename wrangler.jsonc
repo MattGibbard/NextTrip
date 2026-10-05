@@ -5,6 +5,8 @@
   "compatibility_date": "2026-09-01",
   "compatibility_flags": ["nodejs_compat"],
   "observability": { "enabled": true },
+  // Lets Workers Builds run `wrangler preview` for pull requests. Everything else stays at the top level.
+  "previews": {},
   "assets": {
     "not_found_handling": "single-page-application",
     "run_worker_first": ["/api/*"]

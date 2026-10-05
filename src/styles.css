@@ -2721,7 +2721,25 @@ a.detail {
 .stamp.shape-octagon,
 .stamp.shape-hexagon,
 .stamp.shape-shield,
-.stamp.shape-diamond,
+.stamp.shape-banner {
+  --cut: 14px;
+  border: 0;
+  background: none;
+  padding: 0.65rem 0.95rem;
+  isolation: isolate;
+}
+.stamp.shape-octagon {
+  --outline: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 calc(100% - var(--cut)), 0 var(--cut));
+}
+.stamp.shape-hexagon {
+  --cut: 18px;
+  --outline: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% 50%, calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 50%);
+  padding-inline: 1.5rem;
+}
+.stamp.shape-shield {
+  --outline: polygon(0 0, 100% 0, 100% 68%, 50% 100%, 0 68%);
+  padding-bottom: 1.6rem;
+}
 .stamp.shape-banner {
   --cut: 14px;
   border: 0;
@@ -2768,8 +2786,6 @@ a.detail {
 .stamp.shape-hexagon::after,
 .stamp.shape-shield::before,
 .stamp.shape-shield::after,
-.stamp.shape-diamond::before,
-.stamp.shape-diamond::after,
 .stamp.shape-banner::before,
 .stamp.shape-banner::after {
   content: "";
@@ -2780,7 +2796,6 @@ a.detail {
 .stamp.shape-octagon::before,
 .stamp.shape-hexagon::before,
 .stamp.shape-shield::before,
-.stamp.shape-diamond::before,
 .stamp.shape-banner::before {
   inset: 0;
   background: var(--mode-ink);
@@ -2788,14 +2803,9 @@ a.detail {
 .stamp.shape-octagon::after,
 .stamp.shape-hexagon::after,
 .stamp.shape-shield::after,
-.stamp.shape-diamond::after,
 .stamp.shape-banner::after {
   inset: 2px;
   background: var(--surface);
-}
-/* Slanted sides look thinner, so the card layer sits further in. */
-.stamp.shape-diamond::after {
-  inset: 3.5px;
 }
 /* Tickets take the notches from the boarding passes. */
 .stamp.shape-ticket {
@@ -2933,9 +2943,6 @@ a.detail {
   }
   .stamp.shape-circle {
     width: 158px;
-  }
-  .stamp.shape-diamond {
-    height: 158px;
   }
   .stamp.border-double {
     border-width: 6px;

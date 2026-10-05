@@ -27,8 +27,8 @@ describe("stampLook", () => {
     expect(new Set(looks).size).toBeGreaterThan(1);
   });
 
-  it("keeps long names out of round and diamond stamps", () => {
-    for (const c of CODES) expect(["circle", "oval", "diamond"]).not.toContain(stampLook(c, "Bosnia and Herzegovina").shape);
+  it("keeps long names out of round stamps", () => {
+    for (const c of CODES) expect(["circle", "oval"]).not.toContain(stampLook(c, "Bosnia and Herzegovina").shape);
   });
 });
 

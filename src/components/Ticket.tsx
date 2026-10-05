@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { placeCode } from "../../shared/travelMode";
+import type { TicketEnd } from "../../shared/travelMode";
 import { cssUrl } from "../format";
 
 /** A number on split-flap tiles, like a departures board. */
@@ -19,13 +19,16 @@ export function Flaps({ value, label }: { value: number; label: string }) {
   );
 }
 
+/** Five-letter station codes are set smaller so they fit beside a three-letter one. */
+const codeClass = (end: TicketEnd) => (end.code.length > 3 ? "code long" : "code");
+
 /** "LHR - - ✈️ - - NAP" with the place names underneath. */
-export function RouteLine({ from, to, icon, names = true }: { from: string; to: string; icon: string; names?: boolean }) {
+export function RouteLine({ from, to, icon, names = true }: { from: TicketEnd; to: TicketEnd; icon: string; names?: boolean }) {
   return (
     <div className="route-line">
       <div>
-        <div className="code">{placeCode(from)}</div>
-        {names && <div className="code-name">{from}</div>}
+        <div className={codeClass(from)}>{from.code}</div>
+        {names && <div className="code-name">{from.name}</div>}
       </div>
       <div className="route-dash" aria-hidden>
         <span />
@@ -33,8 +36,8 @@ export function RouteLine({ from, to, icon, names = true }: { from: string; to: 
         <span />
       </div>
       <div className="end">
-        <div className="code">{placeCode(to)}</div>
-        {names && <div className="code-name">{to}</div>}
+        <div className={codeClass(to)}>{to.code}</div>
+        {names && <div className="code-name">{to.name}</div>}
       </div>
     </div>
   );
@@ -64,7 +67,7 @@ interface PassProps {
   tone: string;
   photo: { url: string | null; fallback: string };
   head: [ReactNode, ReactNode];
-  route: { from: string; to: string; icon: string } | null;
+  route: { from: TicketEnd; to: TicketEnd; icon: string } | null;
   title: ReactNode;
   byline?: ReactNode;
   facts: [string, ReactNode][];

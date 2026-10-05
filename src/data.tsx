@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
-import type { Home, Idea, Person, Round, Trip } from "../shared/types";
+import type { Home, HomeEnds, Idea, Person, Round, Trip } from "../shared/types";
 import { api, setApiPerson } from "./api";
 import { load, save } from "./storage";
 
@@ -11,6 +11,8 @@ interface Data {
   rounds: Round[];
   /** Where travel times are measured from, if it's been set. */
   home: Home;
+  /** The airport and station new trips and ideas set off from. */
+  homeEnds: HomeEnds;
   me: Person | null;
   setMe: (id: number | null) => void;
   loading: boolean;
@@ -32,17 +34,19 @@ export function DataProvider({ children }: { children: ReactNode }) {
   const [ideas, setIdeas] = useState<Idea[]>([]);
   const [rounds, setRounds] = useState<Round[]>([]);
   const [home, setHome] = useState<Home>(null);
+  const [homeEnds, setHomeEnds] = useState<HomeEnds>({ airport: null, station: null });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const reload = useCallback(async () => {
     try {
-      const [p, t, i, r, h] = await Promise.all([api.people(), api.trips(), api.ideas(), api.rounds(), api.home()]);
+      const [p, t, i, r, h, e] = await Promise.all([api.people(), api.trips(), api.ideas(), api.rounds(), api.home(), api.homeEnds()]);
       setPeople(p);
       setTrips(t);
       setIdeas(i);
       setRounds(r);
       setHome(h);
+      setHomeEnds(e);
       setError(null);
     } catch (e) {
       setError((e as Error).message);
@@ -68,6 +72,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       ideas,
       rounds,
       home,
+      homeEnds,
       me: people.find((p) => p.id === meId) ?? null,
       setMe,
       loading,
@@ -75,7 +80,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       reload,
       personName: (id) => people.find((p) => p.id === id)?.name ?? "Someone",
     }),
-    [people, trips, ideas, rounds, home, meId, setMe, loading, error, reload],
+    [people, trips, ideas, rounds, home, homeEnds, meId, setMe, loading, error, reload],
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

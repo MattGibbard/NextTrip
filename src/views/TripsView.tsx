@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import type { Idea, Trip } from "../../shared/types";
-import { MODES, MODE_KEYS, ideaMode, placeCode, ticketEnds, tripMode } from "../../shared/travelMode";
+import { MODES, MODE_KEYS, ideaMode, ticketEnds, tripMode } from "../../shared/travelMode";
 import type { Mode } from "../../shared/travelMode";
 import { budgetLabel, tripLengthLabel } from "../../shared/ideaDetails";
 import { useData } from "../data";
@@ -126,7 +126,7 @@ function TripTicket({ trip, passNo }: { trip: Trip; passNo: number }) {
   const { home } = useData();
   const mode = tripMode(trip);
   const m = MODES[mode];
-  const ends = ticketEnds(mode, trip.places, home);
+  const ends = ticketEnds(mode, trip, home);
   const n = nights(trip.start_date, trip.end_date);
   const flags = flagsOf(trip.places);
   const ordered = mode !== "flight";
@@ -136,7 +136,7 @@ function TripTicket({ trip, passNo }: { trip: Trip; passNo: number }) {
       <div className="ticket-body">
         <div className="ticket-top">
           <span className="mode-ink">
-            {m.icon} {ends ? `${placeCode(ends.from.name)} → ${placeCode(ends.to.name)}` : m.kind}
+            {m.icon} {ends ? `${ends.from.code} → ${ends.to.code}` : m.kind}
           </span>
           {n && <span className="muted desktop-only">{n} NIGHTS</span>}
         </div>
@@ -167,13 +167,14 @@ function NextDeparture({ onBeen }: { onBeen: (d: TripDraft) => void }) {
   const round = rounds.find((r) => r.status === "drawn" && won.some((i) => i.id === r.winner_idea_id));
   const idea: Idea = won.find((i) => i.id === round?.winner_idea_id) ?? won[0];
   const mode = ideaMode(idea.holiday_types);
-  // You get there by air (unless it's a train journey), then carry on by sea or road.
-  const arrival: Mode = mode === "train" ? "train" : "flight";
-  const ends = ticketEnds(arrival, idea.places, home);
+  // You get there by air (unless it's a train journey, or a cruise from a port you've set), then carry on by sea or road.
+  const arrival: Mode = mode === "train" ? "train" : mode === "cruise" && idea.depart ? "cruise" : "flight";
+  // A road trip's ends are the airports it flies between.
+  const ends = ticketEnds(idea.depart || idea.arrive ? mode : arrival, idea, home);
   const flags = flagsOf(idea.places);
   const then = mode === "cruise" || mode === "road" ? `${MODES[mode].icon} ${mode === "cruise" ? "Sail" : "Drive"} ${idea.places.length} stops` : null;
   const passengers = people.map((p) => p.name).join(" & ") || "—";
-  const been = () => onBeen({ title: idea.title, places: idea.places, idea_id: idea.id });
+  const been = () => onBeen({ title: idea.title, places: idea.places, idea_id: idea.id, depart: idea.depart, arrive: idea.arrive });
 
   return (
     <div className="departure">
@@ -182,7 +183,7 @@ function NextDeparture({ onBeen }: { onBeen: (d: TripDraft) => void }) {
           <span className="mono-label">NEXT DEPARTURE · {MODES[arrival].kind}</span>
           {round && <span className="departure-badge">🏆 Won in the {round.name} draw</span>}
         </div>
-        {ends ? <RouteLine from={ends.from.name} to={ends.to.name} icon={MODES[arrival].icon} /> : <div className="departure-flags">{flags || "🏆"}</div>}
+        {ends ? <RouteLine from={ends.from} to={ends.to} icon={MODES[arrival].icon} /> : <div className="departure-flags">{flags || "🏆"}</div>}
         <div className="departure-fields">
           <Field label="TRIP" className="departure-trip">
             <a href={`#/ideas/${idea.id}`}>

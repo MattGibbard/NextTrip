@@ -5,6 +5,8 @@ import { useData } from "../data";
 import { isInstalled, isIos, useInstallPrompt } from "../install";
 import { flag } from "../countries";
 import { PlaceSearch } from "../components/PlaceSearch";
+import { TerminalPicker } from "../components/TerminalPicker";
+import type { Terminal } from "../../shared/terminals";
 import { estimateTravel } from "../../shared/travelTime";
 import { plural } from "../format";
 
@@ -23,6 +25,7 @@ export function SettingsView() {
         ))}
       </div>
       <HomePanel />
+      <HomeEndsPanel />
       <div className="panel">
         <h2>This device</h2>
         <p>
@@ -43,7 +46,7 @@ function HomePanel() {
   const [changing, setChanging] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const missing = ideas.filter((i) => (i.status === "active" || i.status === "won") && i.travel_time === null && estimateTravel(home, i.places));
+  const missing = ideas.filter((i) => (i.status === "active" || i.status === "won") && i.travel_time === null && estimateTravel(i.depart ?? home, i.places));
 
   const save = async (place: Parameters<typeof api.setHome>[0]) => {
     setError(null);
@@ -60,9 +63,9 @@ function HomePanel() {
     setBusy(true);
     try {
       for (const i of missing) {
-        const { title, description, cover_url, created_by, places, budget, trip_length, holiday_types } = i;
-        const travel_time = estimateTravel(home, places)!.travel_time;
-        await api.updateIdea(i.id, { title, description, cover_url, created_by, places, budget, trip_length, travel_time, holiday_types });
+        const { title, description, cover_url, created_by, places, depart, arrive, budget, trip_length, holiday_types } = i;
+        const travel_time = estimateTravel(depart ?? home, places)!.travel_time;
+        await api.updateIdea(i.id, { title, description, cover_url, created_by, places, depart, arrive, budget, trip_length, travel_time, holiday_types });
       }
       await reload();
     } catch (e) {
@@ -94,6 +97,34 @@ function HomePanel() {
           {busy ? "Filling in…" : `Fill in travel time for ${plural(missing.length, "idea")}`}
         </button>
       )}
+    </div>
+  );
+}
+
+/** The airport and station new trips and ideas set off from unless you pick another. */
+function HomeEndsPanel() {
+  const { homeEnds, reload } = useData();
+  const [error, setError] = useState<string | null>(null);
+
+  const save = async (kind: "airport" | "station", t: Terminal | null) => {
+    setError(null);
+    try {
+      await api.setHomeEnds({ [kind]: t });
+      await reload();
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  };
+
+  return (
+    <div className="panel">
+      <h2>Where you usually leave from</h2>
+      <p className="muted small">New trips and ideas start with these filled in. You can change them on each one.</p>
+      <div className="journey-row">
+        <TerminalPicker kind="airport" label="Home airport" value={homeEnds.airport} onChange={(t) => void save("airport", t)} />
+        <TerminalPicker kind="station" label="Home station" value={homeEnds.station} onChange={(t) => void save("station", t)} />
+      </div>
+      {error && <p className="error-text">{error}</p>}
     </div>
   );
 }

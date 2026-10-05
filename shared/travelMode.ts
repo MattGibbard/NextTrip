@@ -1,4 +1,5 @@
 // How a trip or idea gets you there. Each mode is drawn as its own kind of ticket.
+import type { Terminal } from "./terminals";
 
 export const MODES = {
   flight: { icon: "✈️", kind: "BOARDING PASS", label: "Flights", short: "Fly" },
@@ -49,15 +50,36 @@ interface Named {
   name: string;
 }
 
+/** One end of a ticket: the big code and the name under it. */
+export interface TicketEnd {
+  code: string;
+  name: string;
+}
+
+interface Journey<P extends Named> {
+  depart: Terminal | null;
+  arrive: Terminal | null;
+  places: P[];
+}
+
+const endOf = (p: Named | Terminal): TicketEnd => ({ code: ("code" in p && p.code) || placeCode(p.name), name: p.name });
+
 /**
- * Where the ticket goes from and to. Cruises, road trips and trains run first stop
- * to last stop. A flight leaves from home (when it's set) and lands at the first place.
+ * Where the ticket goes from and to. A departure or arrival that's been set wins:
+ * flights, trains and road trips run departure to arrival, and a cruise sails from
+ * its port to the first place. Without them, cruises, road trips and trains run
+ * first stop to last stop, and a flight leaves from home (when it's set) for the first place.
  */
-export function ticketEnds<P extends Named>(mode: Mode, places: P[], home: Named | null): { from: P | Named; to: P | Named } | null {
-  if (places.length === 0) return null;
+export function ticketEnds<P extends Named>(mode: Mode, { depart, arrive, places }: Journey<P>, home: Named | null): { from: TicketEnd; to: TicketEnd } | null {
   const first = places[0];
   const last = places[places.length - 1];
-  if (mode === "flight" && home) return { from: home, to: first };
-  if (places.length === 1) return home ? { from: home, to: first } : null;
-  return { from: first, to: last };
+  if (depart || arrive) {
+    const from = depart ?? home ?? first;
+    const to = mode === "cruise" ? first : (arrive ?? (mode === "train" ? last : first));
+    return from && to ? { from: endOf(from), to: endOf(to) } : null;
+  }
+  if (places.length === 0) return null;
+  if (mode === "flight" && home) return { from: endOf(home), to: endOf(first) };
+  if (places.length === 1) return home ? { from: endOf(home), to: endOf(first) } : null;
+  return { from: endOf(first), to: endOf(last) };
 }

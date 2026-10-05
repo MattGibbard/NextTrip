@@ -796,6 +796,26 @@ button.card:hover {
   padding: 0.1rem 0.3rem;
 }
 
+/* Departure and arrival pickers: side by side, stacked on a phone. */
+.journey-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.6rem;
+  align-items: start;
+}
+@media (max-width: 520px) {
+  .journey-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.journey-hint {
+  margin-top: -0.4rem;
+}
+.chip-code {
+  font: 500 0.8rem var(--mono);
+  letter-spacing: 0.04em;
+}
+
 .place-search {
   position: relative;
   font-weight: 400;
@@ -1822,6 +1842,9 @@ a.detail {
   font: 500 2.25rem/1 var(--mono);
   letter-spacing: -0.02em;
 }
+.route-line .code.long {
+  font-size: 1.5rem;
+}
 .route-line .code-name {
   font-size: 0.85rem;
   opacity: 0.85;
@@ -1847,6 +1870,9 @@ a.detail {
   }
   .route-line .code {
     font-size: 4rem;
+  }
+  .route-line .code.long {
+    font-size: 2.6rem;
   }
   .route-line .code-name {
     display: block;

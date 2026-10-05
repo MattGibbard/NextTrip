@@ -5,6 +5,10 @@ import { countedAllocations, ideaForTicket, randomTicket, ticketRanges, validate
 import { parseNominatim } from "../shared/geocode";
 import { cleanDetails } from "../shared/ideaDetails";
 import { estimateTravel } from "../shared/travelTime";
+import { ideaMode, tripMode } from "../shared/travelMode";
+import { endsForMode } from "../shared/terminals";
+import type { Terminal } from "../shared/terminals";
+import { cleanTerminal, findTerminals } from "./terminals";
 import { NO_FILTERS, cleanFilters, matchesFilters } from "../shared/roundFilters";
 import { buildShortlist, parseShortlist, unswiped } from "../shared/shortlist";
 import type { Swipe } from "../shared/shortlist";
@@ -12,6 +16,7 @@ import type { RoundFilters } from "../shared/roundFilters";
 import type {
   Allocation,
   Home,
+  HomeEnds,
   Idea,
   IdeaDetails,
   IdeaInput,
@@ -157,6 +162,11 @@ function placeInserts(db: D1Database, table: "trip_places" | "idea_places", key:
 
 // ---------- Trips ----------
 
+const terminalJson = (t: Terminal | null) => (t ? JSON.stringify(t) : null);
+
+type EndsRow = { depart: string | null; arrive: string | null };
+const parseEnds = (r: EndsRow) => ({ depart: cleanTerminal(r.depart), arrive: cleanTerminal(r.arrive) });
+
 function tripInput(b: Record<string, unknown>): TripInput {
   const title = cleanText(b.title, 200);
   if (!title) throw new HttpError(400, "Give the trip a name");
@@ -164,6 +174,7 @@ function tripInput(b: Record<string, unknown>): TripInput {
     const t = cleanText(v, 10);
     return t && /^\d{4}-\d{2}-\d{2}$/.test(t) ? t : null;
   };
+  const flags = { road_trip: b.road_trip === true, cruise: b.cruise === true, rail: b.rail === true };
   const rating = typeof b.rating === "number" && b.rating >= 1 && b.rating <= 5 ? Math.round(b.rating) : null;
   const cover = cleanUrl(b.cover_url);
   return {
@@ -173,9 +184,8 @@ function tripInput(b: Record<string, unknown>): TripInput {
     notes: cleanText(b.notes, 5000),
     rating,
     cover_url: cover,
-    road_trip: b.road_trip === true,
-    cruise: b.cruise === true,
-    rail: b.rail === true,
+    ...flags,
+    ...endsForMode(tripMode(flags), cleanTerminal(b.depart), cleanTerminal(b.arrive)),
     idea_id: typeof b.idea_id === "number" ? b.idea_id : null,
     created_by: typeof b.created_by === "number" ? b.created_by : null,
     places: cleanPlaces(b.places),
@@ -184,19 +194,19 @@ function tripInput(b: Record<string, unknown>): TripInput {
 
 app.get("/trips", async (c) => {
   const [{ results }, places] = await Promise.all([
-    c.env.DB.prepare("SELECT * FROM trips ORDER BY COALESCE(start_date, created_at) DESC").all<Omit<Trip, "places" | "road_trip" | "cruise" | "rail"> & { road_trip: number; cruise: number; rail: number }>(),
+    c.env.DB.prepare("SELECT * FROM trips ORDER BY COALESCE(start_date, created_at) DESC").all<Omit<Trip, "places" | "road_trip" | "cruise" | "rail" | "depart" | "arrive"> & { road_trip: number; cruise: number; rail: number } & EndsRow>(),
     loadPlaces(c.env.DB, "trip_places", "trip_id"),
   ]);
-  return c.json(results.map((t) => ({ ...t, road_trip: !!t.road_trip, cruise: !!t.cruise, rail: !!t.rail, places: places.get(t.id) ?? [] })));
+  return c.json(results.map((t) => ({ ...t, road_trip: !!t.road_trip, cruise: !!t.cruise, rail: !!t.rail, ...parseEnds(t), places: places.get(t.id) ?? [] })));
 });
 
 app.post("/trips", async (c) => {
   const t = tripInput(await body(c));
   const row = await c.env.DB.prepare(
-    `INSERT INTO trips (title, start_date, end_date, notes, rating, cover_url, road_trip, cruise, rail, idea_id, created_by)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
+    `INSERT INTO trips (title, start_date, end_date, notes, rating, cover_url, road_trip, cruise, rail, depart, arrive, idea_id, created_by)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
   )
-    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.rail ? 1 : 0, t.idea_id, t.created_by ?? viewerId(c))
+    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.rail ? 1 : 0, terminalJson(t.depart), terminalJson(t.arrive), t.idea_id, t.created_by ?? viewerId(c))
     .first<{ id: number }>();
   const id = row!.id;
   const stmts = placeInserts(c.env.DB, "trip_places", "trip_id", id, t.places);
@@ -210,9 +220,9 @@ app.put("/trips/:id", async (c) => {
   const id = idParam(c);
   const t = tripInput(await body(c));
   const res = await c.env.DB.prepare(
-    `UPDATE trips SET title = ?, start_date = ?, end_date = ?, notes = ?, rating = ?, cover_url = ?, road_trip = ?, cruise = ?, rail = ? WHERE id = ?`,
+    `UPDATE trips SET title = ?, start_date = ?, end_date = ?, notes = ?, rating = ?, cover_url = ?, road_trip = ?, cruise = ?, rail = ?, depart = ?, arrive = ? WHERE id = ?`,
   )
-    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.rail ? 1 : 0, id)
+    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.rail ? 1 : 0, terminalJson(t.depart), terminalJson(t.arrive), id)
     .run();
   if (!res.meta.changes) throw new HttpError(404, "Not found");
   await c.env.DB.batch(placeInserts(c.env.DB, "trip_places", "trip_id", id, t.places));
@@ -242,17 +252,19 @@ function cleanUrl(v: unknown) {
 function ideaInput(b: Record<string, unknown>): IdeaInput {
   const title = cleanText(b.title, 200);
   if (!title) throw new HttpError(400, "Give the idea a name");
+  const details = cleanDetails(b);
   return {
     title,
     description: cleanText(b.description, 5000),
     cover_url: cleanUrl(b.cover_url),
     created_by: typeof b.created_by === "number" ? b.created_by : null,
     places: cleanPlaces(b.places),
-    ...cleanDetails(b),
+    ...endsForMode(ideaMode(details.holiday_types), cleanTerminal(b.depart), cleanTerminal(b.arrive)),
+    ...details,
   };
 }
 
-type IdeaRow = Omit<Idea, "places" | "holiday_types"> & { holiday_types: string | null };
+type IdeaRow = Omit<Idea, "places" | "holiday_types" | "depart" | "arrive"> & { holiday_types: string | null } & EndsRow;
 
 function parseTypes(raw: string | null): Idea["holiday_types"] {
   try {
@@ -268,18 +280,18 @@ app.get("/ideas", async (c) => {
     c.env.DB.prepare("SELECT * FROM ideas WHERE status != 'archived' ORDER BY created_at DESC").all<IdeaRow>(),
     loadPlaces(c.env.DB, "idea_places", "idea_id"),
   ]);
-  return c.json(results.map((i) => ({ ...i, holiday_types: parseTypes(i.holiday_types), places: places.get(i.id) ?? [] })));
+  return c.json(results.map((i) => ({ ...i, holiday_types: parseTypes(i.holiday_types), ...parseEnds(i), places: places.get(i.id) ?? [] })));
 });
 
 app.post("/ideas", async (c) => {
   const i = ideaInput(await body(c));
-  // Travel time is always worked out from home, never typed in.
-  const travel = estimateTravel(await loadHome(c.env.DB), i.places)?.travel_time ?? null;
+  // Travel time is always worked out from the departure point or home, never typed in.
+  const travel = estimateTravel(i.depart ?? (await loadHome(c.env.DB)), i.places)?.travel_time ?? null;
   const row = await c.env.DB.prepare(
-    `INSERT INTO ideas (title, description, cover_url, created_by, budget, trip_length, travel_time, holiday_types)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
+    `INSERT INTO ideas (title, description, cover_url, created_by, budget, trip_length, travel_time, holiday_types, depart, arrive)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
   )
-    .bind(i.title, i.description, i.cover_url, i.created_by ?? viewerId(c), i.budget, i.trip_length, travel, JSON.stringify(i.holiday_types))
+    .bind(i.title, i.description, i.cover_url, i.created_by ?? viewerId(c), i.budget, i.trip_length, travel, JSON.stringify(i.holiday_types), terminalJson(i.depart), terminalJson(i.arrive))
     .first<{ id: number }>();
   await c.env.DB.batch(placeInserts(c.env.DB, "idea_places", "idea_id", row!.id, i.places));
   return c.json({ id: row!.id }, 201);
@@ -288,13 +300,13 @@ app.post("/ideas", async (c) => {
 app.put("/ideas/:id", async (c) => {
   const id = idParam(c);
   const i = ideaInput(await body(c));
-  // Without an estimate (no home, or no located places) the old travel time stays.
-  const travel = estimateTravel(await loadHome(c.env.DB), i.places)?.travel_time ?? null;
+  // Without an estimate (no departure or home, or no located places) the old travel time stays.
+  const travel = estimateTravel(i.depart ?? (await loadHome(c.env.DB)), i.places)?.travel_time ?? null;
   const res = await c.env.DB.prepare(
-    `UPDATE ideas SET title = ?, description = ?, cover_url = ?, budget = ?, trip_length = ?, travel_time = COALESCE(?, travel_time), holiday_types = ?
+    `UPDATE ideas SET title = ?, description = ?, cover_url = ?, budget = ?, trip_length = ?, travel_time = COALESCE(?, travel_time), holiday_types = ?, depart = ?, arrive = ?
      WHERE id = ? AND status != 'archived'`,
   )
-    .bind(i.title, i.description, i.cover_url, i.budget, i.trip_length, travel, JSON.stringify(i.holiday_types), id)
+    .bind(i.title, i.description, i.cover_url, i.budget, i.trip_length, travel, JSON.stringify(i.holiday_types), terminalJson(i.depart), terminalJson(i.arrive), id)
     .run();
   if (!res.meta.changes) throw new HttpError(404, "Not found");
   await c.env.DB.batch(placeInserts(c.env.DB, "idea_places", "idea_id", id, i.places));
@@ -624,7 +636,41 @@ app.put("/home", async (c) => {
   return c.json({ ok: true });
 });
 
+async function loadHomeEnds(db: D1Database): Promise<HomeEnds> {
+  const { results } = await db.prepare("SELECT key, value FROM settings WHERE key IN ('home_airport', 'home_station')").all<{ key: string; value: string }>();
+  const get = (key: string, kind: string) => {
+    const t = cleanTerminal(results.find((r) => r.key === key)?.value ?? null);
+    return t?.kind === kind ? t : null;
+  };
+  return { airport: get("home_airport", "airport"), station: get("home_station", "station") };
+}
+
+app.get("/home-ends", async (c) => c.json(await loadHomeEnds(c.env.DB)));
+
+app.put("/home-ends", async (c) => {
+  const b = await body(c);
+  const stmts: D1PreparedStatement[] = [];
+  for (const kind of ["airport", "station"] as const) {
+    if (!(kind in b)) continue;
+    const t = cleanTerminal(b[kind]);
+    if (b[kind] !== null && t?.kind !== kind) throw new HttpError(400, `Pick the ${kind} from the search`);
+    stmts.push(
+      t
+        ? c.env.DB.prepare("INSERT OR REPLACE INTO settings (key, value) VALUES (?, ?)").bind(`home_${kind}`, JSON.stringify(t))
+        : c.env.DB.prepare("DELETE FROM settings WHERE key = ?").bind(`home_${kind}`),
+    );
+  }
+  if (stmts.length) await c.env.DB.batch(stmts);
+  return c.json({ ok: true });
+});
+
 // ---------- Place search ----------
+
+app.get("/terminals", (c) => {
+  const kind = c.req.query("kind");
+  if (kind !== "airport" && kind !== "station") throw new HttpError(400, "Search airports or stations");
+  return c.json(findTerminals(kind, cleanText(c.req.query("q"), 100) ?? ""));
+});
 
 app.get("/geocode", async (c) => {
   const q = cleanText(c.req.query("q"), 200);

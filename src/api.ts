@@ -1,5 +1,6 @@
-import type { GeocodeResult, Home, Idea, IdeaInput, Person, Round, Trip, TripInput } from "../shared/types";
+import type { GeocodeResult, Home, HomeEnds, Idea, IdeaInput, Person, Round, Trip, TripInput } from "../shared/types";
 import type { RoundFilters } from "../shared/roundFilters";
+import type { TerminalSearchResult } from "../shared/terminals";
 
 let currentPerson: number | null = null;
 
@@ -43,6 +44,8 @@ export const api = {
   swipe: (id: number, idea_id: number, liked: boolean) => request("PUT", `/rounds/${id}/swipes`, { idea_id, liked }),
   home: () => request<Home>("GET", "/home"),
   setHome: (home: Home) => request("PUT", "/home", { home }),
+  homeEnds: () => request<HomeEnds>("GET", "/home-ends"),
+  setHomeEnds: (ends: Partial<HomeEnds>) => request("PUT", "/home-ends", ends),
   saveAllocations: (id: number, allocations: { idea_id: number; points: number }[]) =>
     request("PUT", `/rounds/${id}/allocations`, { allocations }),
   lock: (id: number) => request("POST", `/rounds/${id}/lock`),
@@ -52,4 +55,5 @@ export const api = {
   draw: (id: number) => request<Round>("POST", `/rounds/${id}/draw`),
 
   geocode: (q: string) => request<GeocodeResult[]>("GET", `/geocode?q=${encodeURIComponent(q)}`),
+  terminals: (kind: "airport" | "station", q: string) => request<TerminalSearchResult[]>("GET", `/terminals?kind=${kind}&q=${encodeURIComponent(q)}`),
 };

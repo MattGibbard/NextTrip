@@ -48,23 +48,42 @@ function fold(s: string) {
     .toLowerCase();
 }
 
+/** Words of a name or search, without accents, split on spaces, hyphens and other punctuation. */
+function words(s: string) {
+  return fold(s).split(/[^a-z0-9]+/).filter(Boolean);
+}
+
+/** A name word starts with the searched word, allowing one wrong letter in longer words ("gard" finds "gare"). */
+function wordMatches(searched: string, word: string) {
+  if (word.startsWith(searched)) return true;
+  if (searched.length < 4 || word.length < searched.length) return false;
+  let wrong = 0;
+  for (let i = 0; i < searched.length && wrong < 2; i++) if (searched[i] !== word[i]) wrong++;
+  return wrong < 2;
+}
+
 /**
  * Finds airports or stations by code or name. An exact code comes first, then
- * codes starting with the search, then names or cities with a word starting with it.
+ * codes starting with the search, then names or cities where every searched word
+ * starts a word, with names or cities that begin with the search ahead of the rest.
  */
 export function searchTerminals(kind: TerminalKind, rows: readonly TerminalRow[], query: string, limit = 8): TerminalSearchResult[] {
-  const q = fold(query.trim());
-  if (q.length < 2) return [];
-  const upper = q.toUpperCase();
+  const searched = words(query);
+  if (searched.join("").length < 2) return [];
+  const upper = searched.join("").toUpperCase();
   const scored: [number, number, TerminalRow][] = [];
   rows.forEach((r, i) => {
     let score: number | null = null;
     if (r[0] === upper) score = 0;
-    else if (r[0].startsWith(upper)) score = 1;
+    else if (searched.length === 1 && r[0].startsWith(upper)) score = 1;
     else {
-      const words = fold(`${r[1]} ${r[2]}`);
-      if (words.startsWith(q)) score = 2;
-      else if (words.includes(` ${q}`) || words.includes(`-${q}`)) score = 3;
+      const name = words(r[1]);
+      const city = words(r[2]);
+      const all = [...name, ...city];
+      if (searched.every((w) => all.some((n) => wordMatches(w, n)))) {
+        const starts = [name[0], city[0]].some((n) => n !== undefined && wordMatches(searched[0], n));
+        score = starts ? 2 : 3;
+      }
     }
     // Rows are stored biggest first, so the index breaks ties.
     if (score !== null) scored.push([score, i, r]);

@@ -2741,42 +2741,6 @@ a.detail {
   padding-bottom: 1.6rem;
 }
 .stamp.shape-banner {
-  --cut: 14px;
-  border: 0;
-  background: none;
-  padding: 0.65rem 0.95rem;
-  isolation: isolate;
-}
-.stamp.shape-octagon {
-  --outline: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 calc(100% - var(--cut)), 0 var(--cut));
-}
-.stamp.shape-hexagon {
-  --cut: 18px;
-  --outline: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% 50%, calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 50%);
-  padding-inline: 1.5rem;
-}
-.stamp.shape-shield {
-  --outline: polygon(0 0, 100% 0, 100% 68%, 50% 100%, 0 68%);
-  padding-bottom: 1.6rem;
-}
-/* Diamonds are wide and flat, with room for just the flag, name and date. */
-.stamp.shape-diamond {
-  --outline: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-  width: 100%;
-  min-width: 0;
-  height: 122px;
-  justify-content: center;
-  padding: 0.5rem 2.2rem;
-}
-.stamp.shape-diamond .stamp-top,
-.stamp.shape-diamond .stamp-label {
-  display: none;
-}
-.stamp.shape-diamond .stamp-date {
-  border-top: 0;
-  padding-top: 0;
-}
-.stamp.shape-banner {
   --outline: polygon(0 0, 100% 0, calc(100% - var(--cut)) 50%, 100% 100%, 0 100%, var(--cut) 50%);
   padding-inline: 1.5rem;
 }

@@ -2814,6 +2814,30 @@ a.detail {
 .stamp.trim-stars .stamp-label::after {
   content: " ★";
 }
+.stamp.trim-dots .stamp-label::before {
+  content: "• • ";
+}
+.stamp.trim-dots .stamp-label::after {
+  content: " • •";
+}
+.stamp.trim-waves .stamp-label::before {
+  content: "∿ ";
+}
+.stamp.trim-waves .stamp-label::after {
+  content: " ∿";
+}
+/* Small print: the country's three-letter code beside the flag, then visit and serial numbers. */
+.stamp-code {
+  font: 500 0.55rem var(--mono);
+  letter-spacing: 0.14em;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+}
+.stamp-serial {
+  font: 500 0.5rem var(--mono);
+  letter-spacing: 0.12em;
+  opacity: 0.7;
+}
 .stamp.trim-rules .stamp-label {
   display: flex;
   align-items: center;
@@ -2907,6 +2931,12 @@ a.detail {
   }
   .stamp.shape-circle {
     width: 158px;
+  }
+  .stamp-code {
+    font-size: 0.65rem;
+  }
+  .stamp-serial {
+    font-size: 0.58rem;
   }
   .stamp.border-double {
     border-width: 6px;

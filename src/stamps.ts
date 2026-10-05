@@ -1,9 +1,10 @@
-// How each Places stamp looks: varied by country, but always the same for a given country.
+// How each Places stamp looks: varied per stamp, but always the same for a given trip and country.
+import countries from "i18n-iso-countries";
 
 const SHAPES = ["rounded", "square", "circle", "oval", "octagon", "ticket", "hexagon", "shield", "banner"] as const;
 const CUT = new Set<string>(["octagon", "ticket", "hexagon", "shield", "banner"]);
 const BORDERS = ["single", "double", "inner"] as const;
-const TRIMS = ["plain", "stars", "rules"] as const;
+const TRIMS = ["plain", "stars", "rules", "dots", "waves"] as const;
 const LABELS = ["ARRIVED", "ENTRY", "ADMITTED", "IMMIGRATION"];
 const MONTHS = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 
@@ -33,5 +34,27 @@ export function stampLook(key: string, name: string) {
   const label = LABELS[roll(LABELS.length)];
   // Anywhere from 4° left to 4° right, whichever column the stamp lands in.
   const tilt = (roll(81) - 40) / 10;
-  return { shape, border, trim, label, tilt };
+  const serial = `Nº ${String(roll(9000) + 1000)}`;
+  return { shape, border, trim, label, tilt, serial };
+}
+
+/** The three-letter code printed beside the flag: "PT" → "PRT". */
+export function countryCode3(code: string): string {
+  return countries.alpha2ToAlpha3(code) ?? code;
+}
+
+/**
+ * Numbers each visit to a country in date order, so the second trip to
+ * Portugal is visit 2. Undated trips count after dated ones.
+ */
+export function visitNumbers(visits: { key: string; code: string; when: string | null; created: string }[]): Map<string, number> {
+  const ordered = [...visits].sort((a, b) => (a.when ?? "9999").localeCompare(b.when ?? "9999") || a.created.localeCompare(b.created));
+  const count = new Map<string, number>();
+  const out = new Map<string, number>();
+  for (const v of ordered) {
+    const n = (count.get(v.code) ?? 0) + 1;
+    count.set(v.code, n);
+    out.set(v.key, n);
+  }
+  return out;
 }

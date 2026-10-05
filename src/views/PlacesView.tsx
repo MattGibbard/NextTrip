@@ -7,7 +7,7 @@ import { dateRange, plural } from "../format";
 import { WorldMap } from "../components/WorldMap";
 import { MODES, placeCode, tripMode } from "../../shared/travelMode";
 import { TripForm } from "./TripForm";
-import { stampDate, stampLook } from "../stamps";
+import { countryCode3, stampDate, stampLook, visitNumbers } from "../stamps";
 import type { Pin } from "../components/WorldMap";
 
 type Mode = "countries" | "cities" | "years";
@@ -297,8 +297,9 @@ function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: s
         out.push({ key, code: place.country_code, name: place.country, mode, top: `${MODES[mode].icon} ${entry}`, when: trip.start_date, created: trip.created_at, look: stampLook(key, place.country) });
       }
     }
+    const visit = visitNumbers(out);
     // Undated trips go last, as before.
-    return out.sort((a, b) => (b.when ?? "").localeCompare(a.when ?? "") || b.created.localeCompare(a.created));
+    return out.map((s) => ({ ...s, visit: visit.get(s.key) ?? 1 })).sort((a, b) => (b.when ?? "").localeCompare(a.when ?? "") || b.created.localeCompare(a.created));
   }, [trips]);
 
   return (
@@ -313,11 +314,18 @@ function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: s
               </>
             )}
             <span className="stamp-top">{s.top}</span>
-            <span className="stamp-flag">{flag(s.code)}</span>
+            <span className="stamp-flag">
+              {flag(s.code)}
+              <span className="stamp-code">{countryCode3(s.code)}</span>
+            </span>
             <span className="stamp-name">{s.name.toUpperCase()}</span>
             <span className="stamp-date">
               <span className="stamp-label">{s.look.label}</span>
               {stampDate(s.when)}
+            </span>
+            <span className="stamp-serial">
+              {s.visit > 1 && `VISIT ${s.visit} · `}
+              {s.look.serial}
             </span>
           </span>
         </button>

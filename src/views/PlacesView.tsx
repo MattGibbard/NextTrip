@@ -66,7 +66,8 @@ export function PlacesView() {
     return [...out.values()];
   }, [activeIdeas, visitedCodes]);
   // Eight stamps to a page, like the design's two-page spread.
-  const stampCount = visited.length + (showIdeas ? pendingStamps.length : 0) + 1;
+  const tripStamps = trips.reduce((n, t) => n + new Set(t.places.map((p) => p.country_code)).size, 0);
+  const stampCount = tripStamps + (showIdeas ? pendingStamps.length : 0) + 1;
   const pageCount = Math.max(1, Math.ceil(stampCount / 8));
   const pages = visited.length ? (pageCount === 1 ? "1" : `1–${pageCount}`) : null;
 
@@ -275,33 +276,36 @@ function Timeline({ trips, onSelect }: { trips: Trip[]; onSelect: (code: string)
   );
 }
 
-const TILT = ["-3deg", "2deg", "-1.5deg", "3deg", "-2deg", "1.5deg", "-2.5deg", "2deg"];
 /**
- * A passport page: one stamp per country, newest first, in the colour of how
- * you got there on your first trip, then dashed "visa pending" stamps for ideas.
+ * A passport page: one stamp per country on each trip, newest first, in the colour
+ * of how you got there, then dashed "visa pending" stamps for ideas.
  */
 function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: string; idea: string }[]; onSelect: (code: string) => void; onAdd: () => void }) {
   const { trips } = useData();
   const stamps = useMemo(() => {
-    // Oldest first, so the first trip to each country sets its stamp.
-    const ordered = [...trips].sort((a, b) => (a.start_date ?? a.created_at).localeCompare(b.start_date ?? b.created_at));
-    const first = new Map<string, { trip: Trip; place: Trip["places"][number] }>();
-    for (const t of ordered) for (const p of t.places) if (!first.has(p.country_code)) first.set(p.country_code, { trip: t, place: p });
-    return [...first.entries()]
-      .map(([code, { trip, place }]) => {
-        const mode = tripMode(trip);
+    // One stamp for each country on each trip, newest trip first.
+    const out = [];
+    for (const trip of trips) {
+      const mode = tripMode(trip);
+      const seen = new Set<string>();
+      for (const place of trip.places) {
+        if (seen.has(place.country_code)) continue;
+        seen.add(place.country_code);
+        const key = `${trip.id}-${place.country_code}`;
         const entry =
           mode === "flight" ? placeCode(place.name) : mode === "cruise" ? `PORT OF ${placeCode(place.name)}` : place.name.toUpperCase();
-        return { code, name: place.country, mode, top: `${MODES[mode].icon} ${entry}`, when: trip.start_date, look: stampLook(code, place.country) };
-      })
-      .sort((a, b) => (b.when ?? "").localeCompare(a.when ?? ""));
+        out.push({ key, code: place.country_code, name: place.country, mode, top: `${MODES[mode].icon} ${entry}`, when: trip.start_date, created: trip.created_at, look: stampLook(key, place.country) });
+      }
+    }
+    // Undated trips go last, as before.
+    return out.sort((a, b) => (b.when ?? "").localeCompare(a.when ?? "") || b.created.localeCompare(a.created));
   }, [trips]);
 
   return (
     <div className="passport">
-      {stamps.map((s, i) => (
-        <button key={s.code} className="stamp-cell" onClick={() => onSelect(s.code)} title={`${s.name}: see your trips there`}>
-          <span className={`stamp mode-${s.mode} shape-${s.look.shape} border-${s.look.border} trim-${s.look.trim}`} style={{ rotate: TILT[i % TILT.length] }}>
+      {stamps.map((s) => (
+        <button key={s.key} className="stamp-cell" onClick={() => onSelect(s.code)} title={`${s.name}: see your trips there`}>
+          <span className={`stamp mode-${s.mode} shape-${s.look.shape} border-${s.look.border} trim-${s.look.trim}`} style={{ rotate: `${s.look.tilt}deg` }}>
             {s.look.shape === "ticket" && (
               <>
                 <i className="stamp-notch left" />
@@ -318,9 +322,9 @@ function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: s
           </span>
         </button>
       ))}
-      {pending.map((s, i) => (
+      {pending.map((s) => (
         <button key={s.code} className="stamp-cell" onClick={() => onSelect(s.code)} title={`${s.name}: an idea, not been yet`}>
-          <span className="stamp pending" style={{ rotate: i % 2 ? "2deg" : "-2deg" }}>
+          <span className="stamp pending" style={{ rotate: `${stampLook(`idea-${s.code}`, s.name).tilt}deg` }}>
             <span className="stamp-top">VISA PENDING</span>
             <span className="stamp-flag">{flag(s.code)}</span>
             <span className="stamp-name">{s.name.toUpperCase()}</span>

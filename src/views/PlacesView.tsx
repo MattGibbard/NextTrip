@@ -3,10 +3,11 @@ import type { Trip } from "../../shared/types";
 import { useData } from "../data";
 import { countryName, flag, summarise } from "../countries";
 import { CONTINENT_NAMES, WORLD_COUNTRIES, continentOf } from "../continents";
-import { dateRange, monthYear, plural } from "../format";
+import { dateRange, plural } from "../format";
 import { WorldMap } from "../components/WorldMap";
 import { MODES, placeCode, tripMode } from "../../shared/travelMode";
 import { TripForm } from "./TripForm";
+import { stampDate, stampLook } from "../stamps";
 import type { Pin } from "../components/WorldMap";
 
 type Mode = "countries" | "cities" | "years";
@@ -275,8 +276,6 @@ function Timeline({ trips, onSelect }: { trips: Trip[]; onSelect: (code: string)
 }
 
 const TILT = ["-3deg", "2deg", "-1.5deg", "3deg", "-2deg", "1.5deg", "-2.5deg", "2deg"];
-const SHAPE = ["14px", "999px", "6px"];
-
 /**
  * A passport page: one stamp per country, newest first, in the colour of how
  * you got there on your first trip, then dashed "visa pending" stamps for ideas.
@@ -293,7 +292,7 @@ function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: s
         const mode = tripMode(trip);
         const entry =
           mode === "flight" ? placeCode(place.name) : mode === "cruise" ? `PORT OF ${placeCode(place.name)}` : place.name.toUpperCase();
-        return { code, name: place.country, mode, top: `${MODES[mode].icon} ${entry}`, when: trip.start_date };
+        return { code, name: place.country, mode, top: `${MODES[mode].icon} ${entry}`, when: trip.start_date, look: stampLook(code, place.country) };
       })
       .sort((a, b) => (b.when ?? "").localeCompare(a.when ?? ""));
   }, [trips]);
@@ -302,11 +301,20 @@ function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: s
     <div className="passport">
       {stamps.map((s, i) => (
         <button key={s.code} className="stamp-cell" onClick={() => onSelect(s.code)} title={`${s.name}: see your trips there`}>
-          <span className={`stamp mode-${s.mode}`} style={{ rotate: TILT[i % TILT.length], borderRadius: SHAPE[i % SHAPE.length] }}>
+          <span className={`stamp mode-${s.mode} shape-${s.look.shape} border-${s.look.border} trim-${s.look.trim}`} style={{ rotate: TILT[i % TILT.length] }}>
+            {s.look.shape === "ticket" && (
+              <>
+                <i className="stamp-notch left" />
+                <i className="stamp-notch right" />
+              </>
+            )}
             <span className="stamp-top">{s.top}</span>
             <span className="stamp-flag">{flag(s.code)}</span>
             <span className="stamp-name">{s.name.toUpperCase()}</span>
-            <span className="stamp-date">{s.when ? monthYear(s.when).toUpperCase() : "UNDATED"}</span>
+            <span className="stamp-date">
+              <span className="stamp-label">{s.look.label}</span>
+              {stampDate(s.when)}
+            </span>
           </span>
         </button>
       ))}

@@ -5,9 +5,9 @@ interface Point {
 
 type LatLon = [number, number];
 
-/** Road trips and cruises go place to place in order rather than out from the first place. */
+/** Road trips, cruises and train journeys go place to place in order rather than out from the first place. */
 export function followsInOrder(holidayTypes: readonly string[]): boolean {
-  return holidayTypes.includes("road-trip") || holidayTypes.includes("cruise");
+  return holidayTypes.includes("road-trip") || holidayTypes.includes("cruise") || holidayTypes.includes("rail");
 }
 
 /**

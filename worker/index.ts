@@ -175,6 +175,7 @@ function tripInput(b: Record<string, unknown>): TripInput {
     cover_url: cover,
     road_trip: b.road_trip === true,
     cruise: b.cruise === true,
+    rail: b.rail === true,
     idea_id: typeof b.idea_id === "number" ? b.idea_id : null,
     created_by: typeof b.created_by === "number" ? b.created_by : null,
     places: cleanPlaces(b.places),
@@ -183,19 +184,19 @@ function tripInput(b: Record<string, unknown>): TripInput {
 
 app.get("/trips", async (c) => {
   const [{ results }, places] = await Promise.all([
-    c.env.DB.prepare("SELECT * FROM trips ORDER BY COALESCE(start_date, created_at) DESC").all<Omit<Trip, "places" | "road_trip" | "cruise"> & { road_trip: number; cruise: number }>(),
+    c.env.DB.prepare("SELECT * FROM trips ORDER BY COALESCE(start_date, created_at) DESC").all<Omit<Trip, "places" | "road_trip" | "cruise" | "rail"> & { road_trip: number; cruise: number; rail: number }>(),
     loadPlaces(c.env.DB, "trip_places", "trip_id"),
   ]);
-  return c.json(results.map((t) => ({ ...t, road_trip: !!t.road_trip, cruise: !!t.cruise, places: places.get(t.id) ?? [] })));
+  return c.json(results.map((t) => ({ ...t, road_trip: !!t.road_trip, cruise: !!t.cruise, rail: !!t.rail, places: places.get(t.id) ?? [] })));
 });
 
 app.post("/trips", async (c) => {
   const t = tripInput(await body(c));
   const row = await c.env.DB.prepare(
-    `INSERT INTO trips (title, start_date, end_date, notes, rating, cover_url, road_trip, cruise, idea_id, created_by)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
+    `INSERT INTO trips (title, start_date, end_date, notes, rating, cover_url, road_trip, cruise, rail, idea_id, created_by)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
   )
-    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.idea_id, t.created_by ?? viewerId(c))
+    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.rail ? 1 : 0, t.idea_id, t.created_by ?? viewerId(c))
     .first<{ id: number }>();
   const id = row!.id;
   const stmts = placeInserts(c.env.DB, "trip_places", "trip_id", id, t.places);
@@ -209,9 +210,9 @@ app.put("/trips/:id", async (c) => {
   const id = idParam(c);
   const t = tripInput(await body(c));
   const res = await c.env.DB.prepare(
-    `UPDATE trips SET title = ?, start_date = ?, end_date = ?, notes = ?, rating = ?, cover_url = ?, road_trip = ?, cruise = ? WHERE id = ?`,
+    `UPDATE trips SET title = ?, start_date = ?, end_date = ?, notes = ?, rating = ?, cover_url = ?, road_trip = ?, cruise = ?, rail = ? WHERE id = ?`,
   )
-    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, t.road_trip ? 1 : 0, t.cruise ? 1 : 0, id)
+    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.rail ? 1 : 0, id)
     .run();
   if (!res.meta.changes) throw new HttpError(404, "Not found");
   await c.env.DB.batch(placeInserts(c.env.DB, "trip_places", "trip_id", id, t.places));

@@ -29,6 +29,8 @@ export interface Trip {
   road_trip: boolean;
   /** Cruises also draw their route port to port, in order. */
   cruise: boolean;
+  /** Train journeys also go station to station, in order. */
+  rail: boolean;
   idea_id: number | null;
   created_by: number | null;
   created_at: string;

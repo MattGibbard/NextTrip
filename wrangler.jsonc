@@ -5,6 +5,18 @@
   "compatibility_date": "2026-09-01",
   "compatibility_flags": ["nodejs_compat"],
   "observability": { "enabled": true },
+  // Lets Workers Builds run `wrangler preview` for pull requests. Previews don't inherit bindings,
+  // so they name the database here. They share the live nexttrip database (Matt's choice), so
+  // anything done in a preview changes real data and its migrations apply to the live database.
+  "previews": {
+    "d1_databases": [
+      {
+        "binding": "DB",
+        "database_name": "nexttrip",
+        "database_id": "a130c463-023d-4c39-a1e9-2ce8b29d4255"
+      }
+    ]
+  },
   "assets": {
     "not_found_handling": "single-page-application",
     "run_worker_first": ["/api/*"]

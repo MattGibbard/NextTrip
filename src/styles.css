@@ -37,6 +37,18 @@
   --board-muted: #96a29c;
   --board-lit: #2dd4bf;
   --paper: #fbfaf6;
+  /* Passport pages and the inks stamped on them. */
+  --page: #f3eedf;
+  --page-edge: rgb(150 120 60 / 0.12);
+  --page-print: rgb(15 118 110 / 0.45);
+  --spine: rgb(80 60 20 / 0.14);
+  --ink-red: #b42318;
+  --ink-blue: #1d4ea0;
+  --ink-purple: #6a3a9e;
+  --ink-green: #22744a;
+  --ink-black: #2a2a2e;
+  --pencil: #6b6b6b;
+  --ink-blend: multiply;
   color-scheme: light;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color: var(--text);
@@ -74,6 +86,17 @@
   --board: #0a0e0c;
   --board-line: #26302c;
   --paper: #141a17;
+  --page: #1c2421;
+  --page-edge: rgb(0 0 0 / 0.35);
+  --page-print: rgb(45 212 191 / 0.35);
+  --spine: rgb(0 0 0 / 0.45);
+  --ink-red: #f2786d;
+  --ink-blue: #7fa8f5;
+  --ink-purple: #bc9cf0;
+  --ink-green: #6fcf97;
+  --ink-black: #d4dad7;
+  --pencil: #9aa39f;
+  --ink-blend: normal;
   color-scheme: dark;
 }
 
@@ -2651,114 +2674,154 @@ a.detail {
     width: 360px;
   }
 }
-.passport {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.5rem;
-  padding: 0.75rem;
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 16px;
+/* The passport: pages of entry stamps, swiped one page (or a two-page spread) at a time. */
+.passport-book {
   margin-bottom: 1rem;
 }
-.passport-empty {
-  grid-column: 1 / -1;
-}
-.stamp-cell {
+.passport-pages {
   display: grid;
-  place-items: center;
-  height: 130px;
-  border: 0;
-  background: none;
-  padding: 0;
-  cursor: pointer;
-  color: inherit;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  border-radius: 6px 14px 14px 6px;
+  box-shadow: var(--shadow), 0 0 0 1px var(--border);
 }
-.stamp {
-  border: 2px solid var(--mode-ink);
-  color: var(--mode-ink);
-  background: var(--surface);
-  padding: 0.55rem 0.75rem;
-  min-width: 124px;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.15rem;
+.passport-pages::-webkit-scrollbar {
+  display: none;
+}
+.passport-pages.spread {
+  grid-auto-columns: 50%;
+  border-radius: 14px;
+}
+.passport-page {
+  position: relative;
+  aspect-ratio: 5 / 7;
+  scroll-snap-align: start;
+  overflow: hidden;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='24'%3E%3Cpath d='M0 12 C 20 0 40 0 60 12 S 100 24 120 12' fill='none' stroke='%230f766e' stroke-opacity='0.09'/%3E%3Cpath d='M0 6 C 20 18 40 18 60 6 S 100 -6 120 6' fill='none' stroke='%23b45309' stroke-opacity='0.07'/%3E%3C/svg%3E") 0 0 / 120px 24px,
+    radial-gradient(ellipse at 50% 45%, transparent 55%, var(--page-edge)),
+    var(--page);
+}
+.passport-pages.spread .passport-page.right {
+  scroll-snap-align: none;
+}
+/* The fold: a soft shadow where the pages meet the spine. */
+.passport-page::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 26px;
+  background: linear-gradient(90deg, var(--spine), transparent);
+  pointer-events: none;
+}
+.passport-page.left::after {
+  inset: 0 0 0 auto;
+  background: linear-gradient(270deg, var(--spine), transparent);
+}
+.visa-head,
+.visa-num,
+.visa-note {
+  position: absolute;
+  left: 0;
+  right: 0;
   text-align: center;
-  transition: transform 0.15s;
-}
-.stamp-cell:hover .stamp {
-  transform: scale(1.04);
-}
-.stamp.pending {
-  border: 2px dashed var(--map-idea);
-  color: var(--standby-ink);
-  background: none;
-  border-radius: 14px;
-}
-.stamp.pending .stamp-flag {
-  opacity: 0.55;
-}
-.stamp-top {
-  font: 500 0.56rem var(--mono);
-  letter-spacing: 0.12em;
-}
-.stamp-flag {
-  font-size: 1.25rem;
-  line-height: 1.2;
-}
-.stamp-name {
-  font: 500 0.85rem var(--mono);
-  overflow-wrap: anywhere;
-}
-.stamp-date {
   font: 500 0.6rem var(--mono);
+  letter-spacing: 0.3em;
+  color: var(--page-print);
+  pointer-events: none;
+}
+.visa-head {
+  top: 0.8rem;
+}
+.visa-num {
+  bottom: 0.7rem;
   letter-spacing: 0.1em;
-  border-top: 1px solid currentColor;
-  padding-top: 0.2rem;
 }
-.stamp.pending .stamp-date {
-  font-family: inherit;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0;
-  border-top-style: dashed;
+.visa-note {
+  top: 1.7rem;
+  letter-spacing: 0.15em;
+  font-style: italic;
 }
-.add-stamp {
-  border: 2px dashed var(--border);
-  border-radius: 14px;
+.stamp-spot {
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(var(--tilt));
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+  mix-blend-mode: var(--ink-blend);
+  transition: transform 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.stamp-spot:hover,
+.stamp-spot:focus-visible {
+  transform: translate(-50%, -50%) rotate(var(--tilt)) scale(1.05);
+  z-index: 1;
+}
+.stamp-spot.pending {
+  opacity: 0.75;
+}
+.stamp-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  font-family: var(--mono);
+}
+.pencil-note {
+  font-family: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
+}
+.passport-empty {
+  position: absolute;
+  inset: 40% 1.5rem auto;
+}
+.passport-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.6rem;
+}
+.passport-nav .mono-label {
+  min-width: 9.5rem;
+  text-align: center;
+  font: 500 0.7rem var(--mono);
+  letter-spacing: 0.12em;
   color: var(--muted);
-  font-weight: 600;
+}
+.passport-nav .icon-btn {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.passport-nav .icon-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
 }
 @media (min-width: 760px) {
-  .passport {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.9rem;
-    padding: 1.5rem;
-    border-radius: 18px;
+  .passport-book {
+    max-width: 920px;
+    margin: 0 auto 1.5rem;
   }
-  .stamp-cell {
-    height: 168px;
+  .passport-nav .add-trip {
+    position: absolute;
+    right: 0;
   }
-  .stamp {
-    border-width: 2.5px;
-    padding: 0.75rem 1.1rem;
-    min-width: 150px;
+  .passport-nav {
+    position: relative;
   }
-  .stamp-top {
-    font-size: 0.66rem;
-    letter-spacing: 0.14em;
+  .visa-head,
+  .visa-num {
+    font-size: 0.68rem;
   }
-  .stamp-flag {
-    font-size: 1.6rem;
-  }
-  .stamp-name {
-    font-size: 1.2rem;
-    letter-spacing: 0.06em;
-  }
-  .stamp-date {
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-  }
+}
+[data-theme="dark"] .passport-page {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='24'%3E%3Cpath d='M0 12 C 20 0 40 0 60 12 S 100 24 120 12' fill='none' stroke='%232dd4bf' stroke-opacity='0.10'/%3E%3Cpath d='M0 6 C 20 18 40 18 60 6 S 100 -6 120 6' fill='none' stroke='%23f59e0b' stroke-opacity='0.08'/%3E%3C/svg%3E") 0 0 / 120px 24px,
+    radial-gradient(ellipse at 50% 45%, transparent 55%, var(--page-edge)),
+    var(--page);
 }

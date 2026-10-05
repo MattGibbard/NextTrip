@@ -3,9 +3,9 @@ import type { Trip } from "../../shared/types";
 import { useData } from "../data";
 import { countryName, flag, summarise } from "../countries";
 import { CONTINENT_NAMES, WORLD_COUNTRIES, continentOf } from "../continents";
-import { dateRange, monthYear, plural } from "../format";
+import { dateRange, plural } from "../format";
 import { WorldMap } from "../components/WorldMap";
-import { MODES, placeCode, tripMode } from "../../shared/travelMode";
+import { Passport } from "../components/Passport";
 import { TripForm } from "./TripForm";
 import type { Pin } from "../components/WorldMap";
 
@@ -64,10 +64,8 @@ export function PlacesView() {
         if (!visitedCodes.has(p.country_code) && !out.has(p.country_code)) out.set(p.country_code, { code: p.country_code, name: p.country, idea: i.title });
     return [...out.values()];
   }, [activeIdeas, visitedCodes]);
-  // Eight stamps to a page, like the design's two-page spread.
-  const stampCount = visited.length + (showIdeas ? pendingStamps.length : 0) + 1;
-  const pageCount = Math.max(1, Math.ceil(stampCount / 8));
-  const pages = visited.length ? (pageCount === 1 ? "1" : `1–${pageCount}`) : null;
+
+  const stampTotal = useMemo(() => trips.reduce((n, t) => n + new Set(t.places.map((p) => p.country_code)).size, 0), [trips]);
 
   const select = (code: string, scroll = false) => {
     setSelected(code);
@@ -117,7 +115,7 @@ export function PlacesView() {
 
       <div className="stamps-head">
         <div>
-          <div className="eyebrow">PASSPORT{pages ? ` · PAGES ${pages}` : ""}</div>
+          <div className="eyebrow">PASSPORT{stampTotal ? ` · ${plural(stampTotal, "STAMP", "STAMPS")}` : ""}</div>
           <h2 className="display-2">{mode === "countries" ? "Stamps" : mode === "cities" ? "Cities" : "By year"}</h2>
         </div>
         <div className="segmented">
@@ -134,7 +132,7 @@ export function PlacesView() {
       </div>
 
       {mode === "countries" && (
-        <Stamps
+        <Passport
           pending={showIdeas ? pendingStamps : []}
           onSelect={(code) => select(code, true)}
           onAdd={() => setAdding(true)}
@@ -270,60 +268,6 @@ function Timeline({ trips, onSelect }: { trips: Trip[]; onSelect: (code: string)
       ))}
       {years.length === 0 && <p className="muted center">Add dates to your trips to see them on a timeline.</p>}
       {years.length > 0 && undated > 0 && <p className="muted small">{plural(undated, "trip")} without dates aren't shown.</p>}
-    </div>
-  );
-}
-
-const TILT = ["-3deg", "2deg", "-1.5deg", "3deg", "-2deg", "1.5deg", "-2.5deg", "2deg"];
-const SHAPE = ["14px", "999px", "6px"];
-
-/**
- * A passport page: one stamp per country, newest first, in the colour of how
- * you got there on your first trip, then dashed "visa pending" stamps for ideas.
- */
-function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: string; idea: string }[]; onSelect: (code: string) => void; onAdd: () => void }) {
-  const { trips } = useData();
-  const stamps = useMemo(() => {
-    // Oldest first, so the first trip to each country sets its stamp.
-    const ordered = [...trips].sort((a, b) => (a.start_date ?? a.created_at).localeCompare(b.start_date ?? b.created_at));
-    const first = new Map<string, { trip: Trip; place: Trip["places"][number] }>();
-    for (const t of ordered) for (const p of t.places) if (!first.has(p.country_code)) first.set(p.country_code, { trip: t, place: p });
-    return [...first.entries()]
-      .map(([code, { trip, place }]) => {
-        const mode = tripMode(trip);
-        const entry =
-          mode === "flight" ? placeCode(place.name) : mode === "cruise" ? `PORT OF ${placeCode(place.name)}` : place.name.toUpperCase();
-        return { code, name: place.country, mode, top: `${MODES[mode].icon} ${entry}`, when: trip.start_date };
-      })
-      .sort((a, b) => (b.when ?? "").localeCompare(a.when ?? ""));
-  }, [trips]);
-
-  return (
-    <div className="passport">
-      {stamps.map((s, i) => (
-        <button key={s.code} className="stamp-cell" onClick={() => onSelect(s.code)} title={`${s.name}: see your trips there`}>
-          <span className={`stamp mode-${s.mode}`} style={{ rotate: TILT[i % TILT.length], borderRadius: SHAPE[i % SHAPE.length] }}>
-            <span className="stamp-top">{s.top}</span>
-            <span className="stamp-flag">{flag(s.code)}</span>
-            <span className="stamp-name">{s.name.toUpperCase()}</span>
-            <span className="stamp-date">{s.when ? monthYear(s.when).toUpperCase() : "UNDATED"}</span>
-          </span>
-        </button>
-      ))}
-      {pending.map((s, i) => (
-        <button key={s.code} className="stamp-cell" onClick={() => onSelect(s.code)} title={`${s.name}: an idea, not been yet`}>
-          <span className="stamp pending" style={{ rotate: i % 2 ? "2deg" : "-2deg" }}>
-            <span className="stamp-top">VISA PENDING</span>
-            <span className="stamp-flag">{flag(s.code)}</span>
-            <span className="stamp-name">{s.name.toUpperCase()}</span>
-            <span className="stamp-date desktop-only">💡 {s.idea}</span>
-          </span>
-        </button>
-      ))}
-      <button className="stamp-cell add-stamp desktop-only" onClick={onAdd}>
-        + Add trip
-      </button>
-      {stamps.length === 0 && pending.length === 0 && <p className="muted center passport-empty">Add trips with places to collect stamps.</p>}
     </div>
   );
 }

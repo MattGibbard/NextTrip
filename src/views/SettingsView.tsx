@@ -9,6 +9,8 @@ import { TerminalPicker } from "../components/TerminalPicker";
 import type { Terminal } from "../../shared/terminals";
 import { estimateTravel } from "../../shared/travelTime";
 import { plural } from "../format";
+import { setThemeChoice, themeChoice } from "../theme";
+import type { ThemeChoice } from "../theme";
 
 export function SettingsView() {
   const { people, me, setMe } = useData();
@@ -26,6 +28,7 @@ export function SettingsView() {
       </div>
       <HomePanel />
       <HomeEndsPanel />
+      <AppearancePanel />
       <div className="panel">
         <h2>This device</h2>
         <p>
@@ -125,6 +128,34 @@ function HomeEndsPanel() {
         <TerminalPicker kind="station" label="Home station" value={homeEnds.station} onChange={(t) => void save("station", t)} />
       </div>
       {error && <p className="error-text">{error}</p>}
+    </div>
+  );
+}
+
+const THEMES: { key: ThemeChoice; label: string }[] = [
+  { key: "system", label: "📱 Match device" },
+  { key: "light", label: "☀️ Light" },
+  { key: "dark", label: "🌙 Dark" },
+];
+
+/** Light or dark mode for this browser. */
+function AppearancePanel() {
+  const [choice, setChoice] = useState(themeChoice);
+  const pick = (c: ThemeChoice) => {
+    setThemeChoice(c);
+    setChoice(c);
+  };
+  return (
+    <div className="panel">
+      <h2>Appearance</h2>
+      <p className="muted small">Just for this device.</p>
+      <div className="choice-row" role="radiogroup" aria-label="Appearance">
+        {THEMES.map((t) => (
+          <button type="button" key={t.key} role="radio" aria-checked={choice === t.key} className={`choice ${choice === t.key ? "on" : ""}`} onClick={() => pick(t.key)}>
+            {t.label}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

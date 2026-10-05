@@ -10,6 +10,12 @@ const rows: TerminalRow[] = [
   ["NAP", "Naples", "Napoli", "IT", 40.89, 14.29],
 ];
 
+const stations: TerminalRow[] = [
+  ["FRPNO", "Paris Gare du Nord", "", "FR", 48.88, 2.36],
+  ["NLASC", "Amsterdam-Centraal", "", "NL", 52.38, 4.9],
+  ["NLRTC", "Rotterdam Centraal", "", "NL", 51.93, 4.47],
+];
+
 describe("searchTerminals", () => {
   it("puts an exact code first, then codes starting with it", () => {
     expect(searchTerminals("airport", rows, "lhr").map((r) => r.terminal.code)).toEqual(["LHR"]);
@@ -21,6 +27,13 @@ describe("searchTerminals", () => {
     expect(searchTerminals("airport", rows, "london").map((r) => r.terminal.code)).toEqual(["LHR", "LGW"]);
     expect(searchTerminals("airport", rows, "napoli")[0].label).toBe("NAP · Naples, Napoli");
     expect(searchTerminals("airport", rows, "x")).toEqual([]);
+  });
+
+  it("matches several words in any order, across hyphens, with one wrong letter", () => {
+    expect(searchTerminals("station", stations, "Amsterdam Centraal").map((r) => r.terminal.code)).toEqual(["NLASC"]);
+    expect(searchTerminals("station", stations, "Gard Du Nord").map((r) => r.terminal.code)).toEqual(["FRPNO"]);
+    expect(searchTerminals("station", stations, "paris nord").map((r) => r.terminal.code)).toEqual(["FRPNO"]);
+    expect(searchTerminals("station", stations, "centraal").map((r) => r.terminal.code)).toEqual(["NLASC", "NLRTC"]);
   });
 });
 

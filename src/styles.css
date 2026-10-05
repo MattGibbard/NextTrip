@@ -2691,6 +2691,117 @@ a.detail {
 .stamp-cell:hover .stamp {
   transform: scale(1.04);
 }
+/* Stamp variety: each country gets a shape, border and trim (see stampLook). */
+.stamp {
+  position: relative;
+}
+.stamp.shape-rounded {
+  border-radius: 14px;
+}
+.stamp.shape-square {
+  border-radius: 4px;
+}
+.stamp.shape-circle,
+.stamp.shape-oval {
+  border-radius: 50%;
+  justify-content: center;
+  height: 122px;
+  padding: 0.5rem;
+}
+.stamp.shape-circle {
+  width: 122px;
+  min-width: 0;
+}
+.stamp.shape-oval {
+  width: 100%;
+  min-width: 0;
+  padding: 0.5rem 1rem;
+}
+/* Octagons draw their outline as two clipped layers: ink, then the card on top. */
+.stamp.shape-octagon {
+  --cut: 14px;
+  border: 0;
+  background: none;
+  padding: 0.65rem 0.95rem;
+}
+.stamp.shape-octagon::before,
+.stamp.shape-octagon::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  clip-path: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 calc(100% - var(--cut)), 0 var(--cut));
+}
+.stamp.shape-octagon::before {
+  inset: 0;
+  background: var(--mode-ink);
+}
+.stamp.shape-octagon::after {
+  inset: 2px;
+  background: var(--surface);
+}
+.stamp.shape-octagon {
+  isolation: isolate;
+}
+/* Tickets take the notches from the boarding passes. */
+.stamp.shape-ticket {
+  border-radius: 6px;
+  padding-inline: 1.1rem;
+}
+.stamp-notch {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  margin-top: -7px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--mode-ink);
+}
+.stamp-notch.left {
+  left: -8px;
+  clip-path: inset(0 0 0 50%);
+}
+.stamp-notch.right {
+  right: -8px;
+  clip-path: inset(0 50% 0 0);
+}
+.stamp.border-double {
+  border-style: double;
+  border-width: 5px;
+}
+.stamp.border-inner {
+  outline: 1px solid var(--mode-ink);
+  outline-offset: -6px;
+}
+.stamp-label {
+  display: block;
+  font-size: 0.85em;
+  letter-spacing: 0.16em;
+  opacity: 0.8;
+}
+.stamp.trim-stars .stamp-label::before {
+  content: "★ ";
+}
+.stamp.trim-stars .stamp-label::after {
+  content: " ★";
+}
+.stamp.trim-rules .stamp-label {
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+}
+.stamp.trim-rules .stamp-label::before,
+.stamp.trim-rules .stamp-label::after {
+  content: "";
+  flex: 1;
+  min-width: 0.6em;
+  border-top: 1px solid currentColor;
+}
+.stamp.shape-circle .stamp-date,
+.stamp.shape-oval .stamp-date {
+  border-top: 0;
+  padding-top: 0;
+}
 .stamp.pending {
   border: 2px dashed var(--map-idea);
   color: var(--standby-ink);
@@ -2760,5 +2871,15 @@ a.detail {
   .stamp-date {
     font-size: 0.7rem;
     letter-spacing: 0.12em;
+  }
+  .stamp.shape-circle,
+  .stamp.shape-oval {
+    height: 158px;
+  }
+  .stamp.shape-circle {
+    width: 158px;
+  }
+  .stamp.border-double {
+    border-width: 6px;
   }
 }

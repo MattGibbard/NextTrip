@@ -5,10 +5,11 @@ import { plural } from "../format";
 import { budgetLabel, holidayType, travelTimeLabel, tripLengthLabel } from "../../shared/ideaDetails";
 import { ticketRanges } from "../../shared/draw";
 import { estimateTravel, formatHours } from "../../shared/travelTime";
-import { MODES, ideaMode, placeCode, ticketEnds } from "../../shared/travelMode";
+import { MODES, ideaMode, ticketEnds } from "../../shared/travelMode";
 import { followsInOrder } from "../../shared/routes";
 import { Pass } from "../components/Ticket";
-import { WorldMap } from "../components/WorldMap";
+import { WorldMap, terminalPins } from "../components/WorldMap";
+import { journeyLegs } from "../../shared/terminals";
 import type { Pin, Route } from "../components/WorldMap";
 import { IdeaForm } from "./IdeaForm";
 import { TripForm } from "./TripForm";
@@ -32,13 +33,26 @@ export function IdeaPage({ id }: { id: number }) {
 
   const countries = useMemo(() => new Set(idea?.places.map((p) => p.country_code) ?? []), [idea]);
   const pins = useMemo<Pin[]>(
-    () =>
-      (idea?.places ?? []).flatMap((p) => (p.lat !== null && p.lon !== null ? [{ lat: p.lat, lon: p.lon, label: `${p.name}, ${p.country}`, kind: "idea" as const }] : [])),
+    () => [
+      ...(idea?.places ?? []).flatMap((p) => (p.lat !== null && p.lon !== null ? [{ lat: p.lat, lon: p.lon, label: `${p.name}, ${p.country}`, kind: "idea" as const }] : [])),
+      ...(idea ? terminalPins([idea.depart, idea.arrive], "idea") : []),
+    ],
     [idea],
   );
 
   const routes = useMemo<Route[]>(
-    () => (idea ? [{ places: idea.places, inOrder: followsInOrder(idea.holiday_types), label: idea.title, kind: "idea" }] : []),
+    () =>
+      idea
+        ? [
+            {
+              places: idea.places,
+              inOrder: followsInOrder(idea.holiday_types),
+              label: idea.title,
+              kind: "idea",
+              journey: journeyLegs(ideaMode(idea.holiday_types), idea.depart, idea.arrive, idea.places),
+            },
+          ]
+        : [],
     [idea],
   );
 
@@ -71,13 +85,14 @@ export function IdeaPage({ id }: { id: number }) {
 
   const creator = people.find((p) => p.id === idea.created_by);
   const trip = trips.find((t) => t.idea_id === idea.id);
-  const estimate = estimateTravel(home, idea.places);
+  const origin = idea.depart ?? home;
+  const estimate = estimateTravel(origin, idea.places);
   const types = idea.holiday_types.map(holidayType).filter((t) => t !== undefined);
   const mode = ideaMode(idea.holiday_types);
   const m = MODES[mode];
-  const ends = ticketEnds(mode, idea.places, home);
+  const ends = ticketEnds(mode, idea, home);
   const flags = [...countries].map(flag).join(" ");
-  const codes = ends ? `${placeCode(ends.from.name)}–${placeCode(ends.to.name)}` : null;
+  const codes = ends ? `${ends.from.code}–${ends.to.code}` : null;
   const travel = travelTimeLabel(idea.travel_time);
 
   return (
@@ -95,7 +110,7 @@ export function IdeaPage({ id }: { id: number }) {
         tone="standby"
         photo={{ url: idea.cover_url, fallback: flags || "💡" }}
         head={[`STANDBY · ${m.icon} ${m.kind}`, STATUS[idea.status]]}
-        route={ends && { from: ends.from.name, to: ends.to.name, icon: m.icon }}
+        route={ends && { from: ends.from, to: ends.to, icon: mode === "road" && idea.depart ? MODES.flight.icon : m.icon }}
         title={`${flags} ${idea.title}`.trim()}
         byline={
           <div className="muted small byline">
@@ -110,7 +125,7 @@ export function IdeaPage({ id }: { id: number }) {
             travel ? (
               <>
                 ✈️ {travel}
-                {estimate && home && <div className="muted small">≈ {formatHours(estimate.hours)} from {home.name}</div>}
+                {estimate && origin && <div className="muted small">≈ {formatHours(estimate.hours)} from {origin.name}</div>}
               </>
             ) : (
               <span className="muted">Not set</span>
@@ -124,7 +139,7 @@ export function IdeaPage({ id }: { id: number }) {
       {idea.status === "won" && (
         <div className="panel win-panel">
           <span className="grow">This one won a draw. Been yet?</span>
-          <button className="btn small" onClick={() => setTripDraft({ title: idea.title, places: idea.places, idea_id: idea.id })}>
+          <button className="btn small" onClick={() => setTripDraft({ title: idea.title, places: idea.places, idea_id: idea.id, depart: idea.depart, arrive: idea.arrive })}>
             We've been! Add trip
           </button>
         </div>

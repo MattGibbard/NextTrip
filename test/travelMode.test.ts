@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { ideaMode, modeFlags, placeCode, ticketEnds, tripMode } from "../shared/travelMode";
+import type { Terminal } from "../shared/terminals";
 
 describe("tripMode", () => {
   it("is a flight unless a trip says otherwise", () => {
@@ -34,17 +35,34 @@ describe("ticketEnds", () => {
   const a = { name: "Bergen" };
   const b = { name: "Geiranger" };
   const c = { name: "Ålesund" };
+  const trip = (places: { name: string }[], depart: Terminal | null = null, arrive: Terminal | null = null) => ({ places, depart, arrive });
+  const at = (code: string, name: string) => ({ code, name });
+  const terminal = (kind: Terminal["kind"], code: string | null, name: string): Terminal => ({ kind, code, name, country_code: "GB", lat: 0, lon: 0 });
 
   it("flies from home to the first place", () => {
-    expect(ticketEnds("flight", [a, b], home)).toEqual({ from: home, to: a });
+    expect(ticketEnds("flight", trip([a, b]), home)).toEqual({ from: at("LON", "London"), to: at("BER", "Bergen") });
   });
 
   it("sails first port to last", () => {
-    expect(ticketEnds("cruise", [a, b, c], home)).toEqual({ from: a, to: c });
+    expect(ticketEnds("cruise", trip([a, b, c]), home)).toEqual({ from: at("BER", "Bergen"), to: at("ALE", "Ålesund") });
   });
 
   it("has no ends without places, or with one place and no home", () => {
-    expect(ticketEnds("flight", [], home)).toBeNull();
-    expect(ticketEnds("train", [a], null)).toBeNull();
+    expect(ticketEnds("flight", trip([]), home)).toBeNull();
+    expect(ticketEnds("train", trip([a]), null)).toBeNull();
+  });
+
+  it("uses the airports or stations when they're set", () => {
+    const lhr = terminal("airport", "LHR", "London Heathrow");
+    const bgo = terminal("airport", "BGO", "Bergen");
+    expect(ticketEnds("flight", trip([a, b], lhr, bgo), home)).toEqual({ from: at("LHR", "London Heathrow"), to: at("BGO", "Bergen") });
+    expect(ticketEnds("road", trip([b, c], lhr, bgo), null)).toEqual({ from: at("LHR", "London Heathrow"), to: at("BGO", "Bergen") });
+    const stp = terminal("station", "STP", "London St Pancras International");
+    expect(ticketEnds("train", trip([b, c], stp), null)).toEqual({ from: at("STP", "London St Pancras International"), to: at("ALE", "Ålesund") });
+  });
+
+  it("sails from the embarking port to the first place", () => {
+    const port = terminal("port", null, "Southampton");
+    expect(ticketEnds("cruise", trip([a, b], port), home)).toEqual({ from: at("SOU", "Southampton"), to: at("BER", "Bergen") });
   });
 });

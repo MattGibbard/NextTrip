@@ -7,13 +7,17 @@ import { Modal } from "../components/Modal";
 import { PlaceSearch } from "../components/PlaceSearch";
 import { PlaceChips } from "../components/PlaceChips";
 import { Stars } from "../components/Stars";
+import { JourneyFields, useJourney } from "../components/TerminalPicker";
 import { MODES, MODE_KEYS, ideaMode, modeFlags, tripMode } from "../../shared/travelMode";
 import type { Mode } from "../../shared/travelMode";
+import type { Terminal } from "../../shared/terminals";
 
 export interface TripDraft {
   title?: string;
   places?: Place[];
   idea_id?: number | null;
+  depart?: Terminal | null;
+  arrive?: Terminal | null;
 }
 
 export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; draft?: TripDraft; onClose: () => void; onDeleted?: () => void }) {
@@ -27,6 +31,7 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
   const [notes, setNotes] = useState(trip?.notes ?? "");
   const [cover, setCover] = useState(trip?.cover_url ?? "");
   const [mode, setMode] = useState<Mode>(trip ? tripMode(trip) : ideaMode(fromIdea?.holiday_types ?? []));
+  const journey = useJourney(trip ?? draft ?? {}, !trip)(mode);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -41,6 +46,8 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
       notes: notes || null,
       cover_url: cover || null,
       ...modeFlags(mode),
+      depart: journey.depart,
+      arrive: journey.arrive,
       idea_id: trip?.idea_id ?? draft?.idea_id ?? null,
       created_by: trip?.created_by ?? me?.id ?? null,
     };
@@ -97,6 +104,7 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
           </div>
           <span className="muted small">Trains, cruises and road trips join the places in order on the map. Flights go out from the first place.</span>
         </div>
+        <JourneyFields mode={mode} journey={journey} />
         <div className="field">
           <span>Rating</span>
           <Stars value={rating} onChange={setRating} />

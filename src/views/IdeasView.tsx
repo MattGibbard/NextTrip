@@ -6,7 +6,7 @@ import { BUDGETS, HOLIDAY_TYPES } from "../../shared/ideaDetails";
 import { IdeaForm } from "./IdeaForm";
 import { plural } from "../format";
 import type { Idea } from "../../shared/types";
-import { MODES, ideaMode, placeCode, ticketEnds } from "../../shared/travelMode";
+import { MODES, ideaMode, ticketEnds } from "../../shared/travelMode";
 import { Photo } from "../components/Ticket";
 import { TripForm } from "./TripForm";
 import type { TripDraft } from "./TripForm";
@@ -106,7 +106,7 @@ export function IdeasView() {
 
       <div className="standby-grid">
         {shown.map((i) => (
-          <StandbyCard key={i.id} idea={i} onBeen={() => setTripDraft({ title: i.title, places: i.places, idea_id: i.id })} />
+          <StandbyCard key={i.id} idea={i} onBeen={() => setTripDraft({ title: i.title, places: i.places, idea_id: i.id, depart: i.depart, arrive: i.arrive })} />
         ))}
       </div>
 
@@ -121,7 +121,7 @@ function StandbyCard({ idea: i, onBeen }: { idea: Idea; onBeen: () => void }) {
   const creator = people.find((p) => p.id === i.created_by);
   const mode = ideaMode(i.holiday_types);
   const m = MODES[mode];
-  const ends = ticketEnds(mode, i.places, home);
+  const ends = ticketEnds(mode, i, home);
   const flags = [...new Set(i.places.map((p) => p.country_code))].map(flag).join(" ");
   const tag = i.status === "won" ? "🏆 WINNER" : i.status === "done" ? "✓ BEEN" : "STANDBY";
   return (
@@ -130,7 +130,7 @@ function StandbyCard({ idea: i, onBeen }: { idea: Idea; onBeen: () => void }) {
         <div className="standby-photo">
           <Photo url={i.cover_url} fallback={flags || "💡"} className="fill" />
           <span className="standby-tag">
-            {tag} · {m.icon} {ends ? `${placeCode(ends.from.name)} → ${placeCode(ends.to.name)}` : m.kind}
+            {tag} · {m.icon} {ends ? `${ends.from.code} → ${ends.to.code}` : m.kind}
           </span>
         </div>
         <div className="perf" aria-hidden />

@@ -5,6 +5,7 @@ import type { FeatureCollection, Geometry } from "geojson";
 import type { GeometryCollection, Topology } from "topojson-specification";
 import { alpha2FromNumeric, numericCode } from "../countries";
 import { greatCircle, routeLegs } from "../../shared/routes";
+import type { Terminal } from "../../shared/terminals";
 
 export interface Pin {
   lat: number;
@@ -13,6 +14,8 @@ export interface Pin {
   kind: "visited" | "idea";
   /** A CSS variable to colour it with instead of the usual been/idea colour. */
   colorVar?: string;
+  /** An airport, station or port: drawn as a ring rather than a dot. */
+  terminal?: boolean;
 }
 
 /** Lines between the places of one trip or idea. */
@@ -24,6 +27,8 @@ export interface Route {
   kind: "visited" | "idea";
   /** A CSS variable to colour it with, such as the trip's travel mode. */
   colorVar?: string;
+  /** Dotted legs to and from the places, such as the flight out. */
+  journey?: [[number, number], [number, number]][];
 }
 
 let countriesPromise: Promise<FeatureCollection<Geometry, { name: string }>> | null = null;
@@ -117,6 +122,13 @@ export function WorldMap({ visited, ideas, pins, routes = NO_ROUTES, selected, o
       // Routes go under the pins so the city dots stay tappable.
       for (const r of routes) {
         const color = r.colorVar ? cssVar(r.colorVar) : r.kind === "visited" ? visitedColor : ideaColor;
+        for (const [from, to] of r.journey ?? []) {
+          const path = greatCircle(from, to);
+          L.polyline(path, { color: "#fff", weight: 6, opacity: 0.6, interactive: false }).addTo(group);
+          L.polyline(path, { color, weight: 3.5, opacity: 0.9, dashArray: "0.1 8", lineCap: "round", interactive: true })
+            .bindTooltip(r.label, { sticky: true })
+            .addTo(group);
+        }
         for (const [from, to] of routeLegs(r.places, r.inOrder)) {
           const path = greatCircle(from, to);
           // A pale halo keeps the line readable on top of a shaded country.
@@ -136,7 +148,8 @@ export function WorldMap({ visited, ideas, pins, routes = NO_ROUTES, selected, o
       const bounds: L.LatLngTuple[] = [];
       for (const p of pins) {
         const color = p.colorVar ? cssVar(p.colorVar) : p.kind === "visited" ? visitedColor : ideaColor;
-        L.circleMarker([p.lat, p.lon], { radius: 6, color: "#fff", weight: 2, fillColor: color, fillOpacity: 1 })
+        const style = p.terminal ? { radius: 6, color, weight: 3, fillColor: "#fff", fillOpacity: 1 } : { radius: 6, color: "#fff", weight: 2, fillColor: color, fillOpacity: 1 };
+        L.circleMarker([p.lat, p.lon], style)
           .bindTooltip(p.label)
           .addTo(group);
         bounds.push([p.lat, p.lon]);
@@ -165,4 +178,11 @@ export function WorldMap({ visited, ideas, pins, routes = NO_ROUTES, selected, o
   }, [selected]);
 
   return <div ref={el} className="world-map" />;
+}
+
+/** Pins for where a trip or idea sets off from and arrives at. */
+export function terminalPins(ends: (Terminal | null)[], kind: Pin["kind"], colorVar?: string): Pin[] {
+  return ends.flatMap((t) =>
+    t && t.lat !== null && t.lon !== null ? [{ lat: t.lat, lon: t.lon, label: t.code ? `${t.code} · ${t.name}` : t.name, kind, colorVar, terminal: true }] : [],
+  );
 }

@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import type { Place } from "../../shared/types";
+import type { Terminal } from "../../shared/terminals";
 import { MODES, placeCode, ticketEnds, tripMode } from "../../shared/travelMode";
 import type { Mode } from "../../shared/travelMode";
 import { useData } from "../data";
@@ -7,7 +8,8 @@ import { flag } from "../countries";
 import { monthYear, nights, shortRange } from "../format";
 import { Stars } from "../components/Stars";
 import { Board, Pass } from "../components/Ticket";
-import { WorldMap } from "../components/WorldMap";
+import { WorldMap, terminalPins } from "../components/WorldMap";
+import { journeyLegs } from "../../shared/terminals";
 import type { Pin, Route } from "../components/WorldMap";
 import { TripForm } from "./TripForm";
 
@@ -21,8 +23,13 @@ const WORDING: Record<Mode, { went: string; board: string; column: string; notes
   road: { went: "DROVE", board: "THE ROUTE", column: "STOP", notes: ["SET OFF", "STOP", "FINISH"] },
 };
 
-function boardRows(mode: Mode, places: Place[]) {
+function boardRows(mode: Mode, places: Place[], depart: Terminal | null) {
   const [first, middle, last] = WORDING[mode].notes;
+  // A cruise with its port set leaves from and comes back to the port, so every place is a stop ashore.
+  if (mode === "cruise" && depart) {
+    const port = { label: `${flag(depart.country_code)} ${depart.name}`, lit: true };
+    return [{ ...port, note: first }, ...places.map((p) => ({ label: `${flag(p.country_code)} ${p.name}`, note: middle, lit: false })), { ...port, note: last }];
+  }
   return places.map((p, i) => {
     const note = places.length === 1 ? "VISITED" : i === 0 ? first : i === places.length - 1 ? last : middle;
     return { label: `${flag(p.country_code)} ${p.name}`, note, lit: places.length > 1 && (i === 0 || i === places.length - 1) && mode !== "flight" };
@@ -38,14 +45,28 @@ export function TripPage({ id }: { id: number }) {
 
   const countries = useMemo(() => new Set(trip?.places.map((p) => p.country_code) ?? []), [trip]);
   const pins = useMemo<Pin[]>(
-    () =>
-      (trip?.places ?? []).flatMap((p) =>
+    () => [
+      ...(trip?.places ?? []).flatMap((p) =>
         p.lat !== null && p.lon !== null ? [{ lat: p.lat, lon: p.lon, label: `${p.name}, ${p.country}`, kind: "visited" as const, colorVar: `--${mode}-ink` }] : [],
       ),
+      ...(trip ? terminalPins([trip.depart, trip.arrive], "visited", `--${mode}-ink`) : []),
+    ],
     [trip, mode],
   );
   const routes = useMemo<Route[]>(
-    () => (trip ? [{ places: trip.places, inOrder: mode !== "flight", label: trip.title, kind: "visited", colorVar: `--${mode}-ink` }] : []),
+    () =>
+      trip
+        ? [
+            {
+              places: trip.places,
+              inOrder: mode !== "flight",
+              label: trip.title,
+              kind: "visited",
+              colorVar: `--${mode}-ink`,
+              journey: journeyLegs(mode, trip.depart, trip.arrive, trip.places),
+            },
+          ]
+        : [],
     [trip, mode],
   );
 
@@ -63,7 +84,7 @@ export function TripPage({ id }: { id: number }) {
   const m = MODES[mode];
   const creator = people.find((p) => p.id === trip.created_by);
   const idea = ideas.find((i) => i.id === trip.idea_id);
-  const ends = ticketEnds(mode, trip.places, home);
+  const ends = ticketEnds(mode, trip, home);
   const n = nights(trip.start_date, trip.end_date);
   // Pass numbers count up from the oldest trip; trips arrive newest first.
   const passNo = `#${String(trips.length - trips.indexOf(trip)).padStart(2, "0")}`;
@@ -91,7 +112,7 @@ export function TripPage({ id }: { id: number }) {
             {trip.start_date && <span className="desktop-only"> · {monthYear(trip.start_date).toUpperCase()}</span>}
           </>,
         ]}
-        route={ends && { from: ends.from.name, to: ends.to.name, icon: m.icon }}
+        route={ends && { from: ends.from, to: ends.to, icon: mode === "road" && trip.depart ? MODES.flight.icon : m.icon }}
         title={trip.title}
         facts={[
           [WORDING[mode].went, shortRange(trip.start_date, trip.end_date) ?? "—"],
@@ -123,7 +144,7 @@ export function TripPage({ id }: { id: number }) {
         <div className="pass-left">
           {trip.notes && <p className="pass-notes">{trip.notes}</p>}
           {trip.places.length > 0 ? (
-            <Board title={WORDING[mode].board} column={WORDING[mode].column} rows={boardRows(mode, trip.places)} />
+            <Board title={WORDING[mode].board} column={WORDING[mode].column} rows={boardRows(mode, trip.places, trip.depart)} />
           ) : (
             <p className="muted small">No places yet. Add some with Edit.</p>
           )}

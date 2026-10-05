@@ -7,6 +7,8 @@ import { Modal } from "../components/Modal";
 import { PlaceSearch } from "../components/PlaceSearch";
 import { PlaceChips } from "../components/PlaceChips";
 import { IdeaDetailsFields } from "../components/IdeaDetails";
+import { JourneyFields, useJourney } from "../components/TerminalPicker";
+import { ideaMode } from "../../shared/travelMode";
 import { estimateTravel, formatHours } from "../../shared/travelTime";
 import { travelTimeLabel } from "../../shared/ideaDetails";
 
@@ -22,14 +24,18 @@ export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: (
     travel_time: idea?.travel_time ?? null,
     holiday_types: idea?.holiday_types ?? [],
   });
-  const estimate = estimateTravel(home, places);
+  const mode = ideaMode(details.holiday_types);
+  const journey = useJourney(idea ?? {}, !idea)(mode);
+  // Travel time is measured from where you set off, or from home without one.
+  const origin = journey.depart ?? home;
+  const estimate = estimateTravel(origin, places);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const openRound = rounds.find((r) => r.status === "open");
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
-    const input = { title, description: description || null, cover_url: cover.trim() || null, places, created_by: idea?.created_by ?? me?.id ?? null, ...details };
+    const input = { title, description: description || null, cover_url: cover.trim() || null, places, depart: journey.depart, arrive: journey.arrive, created_by: idea?.created_by ?? me?.id ?? null, ...details };
     setSaving(true);
     try {
       if (idea) await api.updateIdea(idea.id, input);
@@ -65,13 +71,14 @@ export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: (
           <PlaceSearch onAdd={(p) => setPlaces([...places, p])} />
         </div>
         <IdeaDetailsFields value={details} onChange={setDetails} />
+        <JourneyFields mode={mode} journey={journey} />
         <div className="field">
           <span>Travel time (each way)</span>
           <p className="muted small travel-hint">
-            {estimate && home
-              ? `✈️ ${travelTimeLabel(estimate.travel_time)}, about ${formatHours(estimate.hours)} from ${home.name} (${Math.round(estimate.km).toLocaleString("en-GB")} km).`
-              : home
-                ? "Worked out from home once you add a place."
+            {estimate && origin
+              ? `✈️ ${travelTimeLabel(estimate.travel_time)}, about ${formatHours(estimate.hours)} from ${origin.name} (${Math.round(estimate.km).toLocaleString("en-GB")} km).`
+              : origin
+                ? `Worked out from ${journey.depart ? "where you set off" : "home"} once you add a place.`
                 : "Set your home in Settings and it's worked out for you."}
           </p>
         </div>

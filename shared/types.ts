@@ -1,6 +1,7 @@
 import type { RoundFilters } from "./roundFilters";
 import type { Shortlist } from "./shortlist";
 import type { HolidayType, TravelTime, TripLength } from "./ideaDetails";
+import type { Terminal } from "./terminals";
 
 export interface Person {
   id: number;
@@ -31,6 +32,10 @@ export interface Trip {
   cruise: boolean;
   /** Train journeys also go station to station, in order. */
   rail: boolean;
+  /** The airport, station or port the trip set off from. */
+  depart: Terminal | null;
+  /** The airport or station it arrived at. Cruises have none. */
+  arrive: Terminal | null;
   idea_id: number | null;
   created_by: number | null;
   created_at: string;
@@ -58,6 +63,8 @@ export interface Idea extends IdeaDetails {
   created_by: number | null;
   created_at: string;
   places: Place[];
+  depart: Terminal | null;
+  arrive: Terminal | null;
 }
 
 export interface IdeaInput extends IdeaDetails {
@@ -66,6 +73,8 @@ export interface IdeaInput extends IdeaDetails {
   cover_url: string | null;
   created_by: number | null;
   places: Place[];
+  depart: Terminal | null;
+  arrive: Terminal | null;
 }
 
 export interface Allocation {
@@ -114,3 +123,9 @@ export interface GeocodeResult {
 
 /** Where travel times are measured from. */
 export type Home = Place | null;
+
+/** The airport and station new trips and ideas set off from unless you pick another. */
+export interface HomeEnds {
+  airport: Terminal | null;
+  station: Terminal | null;
+}

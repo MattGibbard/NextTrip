@@ -16,6 +16,17 @@ describe("stampLook", () => {
     expect(new Set(looks.map((l) => l.label)).size).toBeGreaterThanOrEqual(3);
   });
 
+  it("tilts stamps both ways, at most 4 degrees", () => {
+    const tilts = CODES.map((c) => stampLook(`7-${c}`, "Italy").tilt);
+    expect(tilts.some((t) => t < 0) && tilts.some((t) => t > 0)).toBe(true);
+    for (const t of tilts) expect(Math.abs(t)).toBeLessThanOrEqual(4);
+  });
+
+  it("gives repeat visits to a country different stamps", () => {
+    const looks = ["1-FR", "2-FR", "3-FR", "4-FR"].map((k) => JSON.stringify(stampLook(k, "France")));
+    expect(new Set(looks).size).toBeGreaterThan(1);
+  });
+
   it("keeps long names out of round stamps", () => {
     for (const c of CODES) expect(["circle", "oval"]).not.toContain(stampLook(c, "Bosnia and Herzegovina").shape);
   });

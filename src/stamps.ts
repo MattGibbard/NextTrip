@@ -13,12 +13,13 @@ export function stampDate(date: string | null): string {
 }
 
 /**
- * Picks a stamp's shape, border, trim and label from its country code, so each
- * country keeps the same stamp. Round shapes only take names short enough to fit.
+ * Picks a stamp's shape, border, trim, label and tilt from its key (trip and
+ * country), so each stamp keeps the same look. Round shapes only take names
+ * short enough to fit.
  */
-export function stampLook(code: string, name: string) {
+export function stampLook(key: string, name: string) {
   let h = 2166136261;
-  for (const ch of code) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+  for (const ch of key) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
   const roll = (n: number) => {
     h = Math.imul(h ^ (h >>> 13), 0x5bd1e995);
     return ((h ^ (h >>> 15)) >>> 0) % n;
@@ -27,5 +28,9 @@ export function stampLook(code: string, name: string) {
   if ((shape === "circle" && name.length > 11) || (shape === "oval" && name.length > 16)) shape = "rounded";
   // Octagons and tickets draw their own outline, which has no room for a second line.
   const border = shape === "octagon" || shape === "ticket" ? "single" : BORDERS[roll(BORDERS.length)];
-  return { shape, border, trim: TRIMS[roll(TRIMS.length)], label: LABELS[roll(LABELS.length)] };
+  const trim = TRIMS[roll(TRIMS.length)];
+  const label = LABELS[roll(LABELS.length)];
+  // Anywhere from 4° left to 4° right, whichever column the stamp lands in.
+  const tilt = (roll(81) - 40) / 10;
+  return { shape, border, trim, label, tilt };
 }

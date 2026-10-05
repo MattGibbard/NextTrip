@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { stampDate, stampLook } from "../src/stamps";
+import { stampDate, stampLook, visitNumbers } from "../src/stamps";
 
 const CODES = ["FR", "IT", "ES", "PT", "JP", "US", "GB", "NO", "AT", "CH", "IS", "ME", "BA", "DE", "GR", "HR", "TH", "PE", "KE", "MX"];
 
@@ -9,10 +9,10 @@ describe("stampLook", () => {
   });
 
   it("varies shapes, borders, trims and labels across countries", () => {
-    const looks = CODES.map((c) => stampLook(c, "Italy"));
-    expect(new Set(looks.map((l) => l.shape)).size).toBeGreaterThanOrEqual(4);
+    const looks = Array.from({ length: 60 }, (_, i) => stampLook(`${i}-IT`, "Italy"));
+    expect(new Set(looks.map((l) => l.shape)).size).toBeGreaterThanOrEqual(8);
     expect(new Set(looks.map((l) => l.border)).size).toBe(3);
-    expect(new Set(looks.map((l) => l.trim)).size).toBe(3);
+    expect(new Set(looks.map((l) => l.trim)).size).toBe(5);
     expect(new Set(looks.map((l) => l.label)).size).toBeGreaterThanOrEqual(3);
   });
 
@@ -35,4 +35,14 @@ describe("stampLook", () => {
 it("prints dates like an entry stamp", () => {
   expect(stampDate("2019-04-12")).toBe("12 APR 2019");
   expect(stampDate(null)).toBe("UNDATED");
+});
+
+it("numbers visits to a country in date order", () => {
+  const visits = visitNumbers([
+    { key: "2-PT", code: "PT", when: "2024-03-07", created: "b" },
+    { key: "1-PT", code: "PT", when: "2019-04-12", created: "a" },
+    { key: "3-PT", code: "PT", when: null, created: "c" },
+    { key: "1-ES", code: "ES", when: "2019-04-12", created: "a" },
+  ]);
+  expect(Object.fromEntries(visits)).toEqual({ "1-PT": 1, "2-PT": 2, "3-PT": 3, "1-ES": 1 });
 });

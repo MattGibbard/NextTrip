@@ -5,9 +5,10 @@ import { countryName, flag, summarise } from "../countries";
 import { CONTINENT_NAMES, WORLD_COUNTRIES, continentOf } from "../continents";
 import { dateRange, plural } from "../format";
 import { WorldMap } from "../components/WorldMap";
-import { MODES, placeCode, tripMode } from "../../shared/travelMode";
+import { placeCode, tripMode } from "../../shared/travelMode";
 import { TripForm } from "./TripForm";
-import { stampDate, stampLook } from "../stamps";
+import { ModeIcon } from "../components/ModeIcon";
+import { stampDate, stampLook, visitNumbers } from "../stamps";
 import type { Pin } from "../components/WorldMap";
 
 type Mode = "countries" | "cities" | "years";
@@ -294,11 +295,12 @@ function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: s
         const key = `${trip.id}-${place.country_code}`;
         const entry =
           mode === "flight" ? placeCode(place.name) : mode === "cruise" ? `PORT OF ${placeCode(place.name)}` : place.name.toUpperCase();
-        out.push({ key, code: place.country_code, name: place.country, mode, top: `${MODES[mode].icon} ${entry}`, when: trip.start_date, created: trip.created_at, look: stampLook(key, place.country) });
+        out.push({ key, code: place.country_code, name: place.country, mode, entry, when: trip.start_date, created: trip.created_at, look: stampLook(key, place.country) });
       }
     }
+    const visit = visitNumbers(out);
     // Undated trips go last, as before.
-    return out.sort((a, b) => (b.when ?? "").localeCompare(a.when ?? "") || b.created.localeCompare(a.created));
+    return out.map((s) => ({ ...s, visit: visit.get(s.key) ?? 1 })).sort((a, b) => (b.when ?? "").localeCompare(a.when ?? "") || b.created.localeCompare(a.created));
   }, [trips]);
 
   return (
@@ -312,12 +314,18 @@ function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: s
                 <i className="stamp-notch right" />
               </>
             )}
-            <span className="stamp-top">{s.top}</span>
-            <span className="stamp-flag">{flag(s.code)}</span>
+            <span className="stamp-top">
+              <ModeIcon mode={s.mode} className="stamp-icon" />
+              {s.entry}
+            </span>
             <span className="stamp-name">{s.name.toUpperCase()}</span>
             <span className="stamp-date">
               <span className="stamp-label">{s.look.label}</span>
               {stampDate(s.when)}
+            </span>
+            <span className="stamp-serial">
+              {s.visit > 1 && `VISIT ${s.visit} · `}
+              {s.look.serial}
             </span>
           </span>
         </button>
@@ -326,7 +334,6 @@ function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: s
         <button key={s.code} className="stamp-cell" onClick={() => onSelect(s.code)} title={`${s.name}: an idea, not been yet`}>
           <span className="stamp pending" style={{ rotate: `${stampLook(`idea-${s.code}`, s.name).tilt}deg` }}>
             <span className="stamp-top">VISA PENDING</span>
-            <span className="stamp-flag">{flag(s.code)}</span>
             <span className="stamp-name">{s.name.toUpperCase()}</span>
             <span className="stamp-date desktop-only">💡 {s.idea}</span>
           </span>

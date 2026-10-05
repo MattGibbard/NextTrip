@@ -2717,30 +2717,59 @@ a.detail {
   min-width: 0;
   padding: 0.5rem 1rem;
 }
-/* Octagons draw their outline as two clipped layers: ink, then the card on top. */
-.stamp.shape-octagon {
+/* Cut shapes draw their outline as two clipped layers: ink, then the card on top. */
+.stamp.shape-octagon,
+.stamp.shape-hexagon,
+.stamp.shape-shield,
+.stamp.shape-banner {
   --cut: 14px;
   border: 0;
   background: none;
   padding: 0.65rem 0.95rem;
+  isolation: isolate;
+}
+.stamp.shape-octagon {
+  --outline: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 calc(100% - var(--cut)), 0 var(--cut));
+}
+.stamp.shape-hexagon {
+  --cut: 18px;
+  --outline: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% 50%, calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 50%);
+  padding-inline: 1.5rem;
+}
+.stamp.shape-shield {
+  --outline: polygon(0 0, 100% 0, 100% 68%, 50% 100%, 0 68%);
+  padding-bottom: 1.6rem;
+}
+.stamp.shape-banner {
+  --outline: polygon(0 0, 100% 0, calc(100% - var(--cut)) 50%, 100% 100%, 0 100%, var(--cut) 50%);
+  padding-inline: 1.5rem;
 }
 .stamp.shape-octagon::before,
-.stamp.shape-octagon::after {
+.stamp.shape-octagon::after,
+.stamp.shape-hexagon::before,
+.stamp.shape-hexagon::after,
+.stamp.shape-shield::before,
+.stamp.shape-shield::after,
+.stamp.shape-banner::before,
+.stamp.shape-banner::after {
   content: "";
   position: absolute;
   z-index: -1;
-  clip-path: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 calc(100% - var(--cut)), 0 var(--cut));
+  clip-path: var(--outline);
 }
-.stamp.shape-octagon::before {
+.stamp.shape-octagon::before,
+.stamp.shape-hexagon::before,
+.stamp.shape-shield::before,
+.stamp.shape-banner::before {
   inset: 0;
   background: var(--mode-ink);
 }
-.stamp.shape-octagon::after {
+.stamp.shape-octagon::after,
+.stamp.shape-hexagon::after,
+.stamp.shape-shield::after,
+.stamp.shape-banner::after {
   inset: 2px;
   background: var(--surface);
-}
-.stamp.shape-octagon {
-  isolation: isolate;
 }
 /* Tickets take the notches from the boarding passes. */
 .stamp.shape-ticket {
@@ -2785,6 +2814,31 @@ a.detail {
 .stamp.trim-stars .stamp-label::after {
   content: " ★";
 }
+.stamp.trim-dots .stamp-label::before {
+  content: "• • ";
+}
+.stamp.trim-dots .stamp-label::after {
+  content: " • •";
+}
+.stamp.trim-waves .stamp-label::before {
+  content: "∿ ";
+}
+.stamp.trim-waves .stamp-label::after {
+  content: " ∿";
+}
+/* The travel icon at the top, drawn in the stamp's ink. */
+.stamp-icon {
+  width: 1.4em;
+  height: 1.4em;
+  margin-right: 0.35em;
+  vertical-align: -0.35em;
+}
+/* Small print: visit and serial numbers. */
+.stamp-serial {
+  font: 500 0.5rem var(--mono);
+  letter-spacing: 0.12em;
+  opacity: 0.7;
+}
 .stamp.trim-rules .stamp-label {
   display: flex;
   align-items: center;
@@ -2808,16 +2862,9 @@ a.detail {
   background: none;
   border-radius: 14px;
 }
-.stamp.pending .stamp-flag {
-  opacity: 0.55;
-}
 .stamp-top {
   font: 500 0.56rem var(--mono);
   letter-spacing: 0.12em;
-}
-.stamp-flag {
-  font-size: 1.25rem;
-  line-height: 1.2;
 }
 .stamp-name {
   font: 500 0.85rem var(--mono);
@@ -2861,9 +2908,6 @@ a.detail {
     font-size: 0.66rem;
     letter-spacing: 0.14em;
   }
-  .stamp-flag {
-    font-size: 1.6rem;
-  }
   .stamp-name {
     font-size: 1.2rem;
     letter-spacing: 0.06em;
@@ -2878,6 +2922,9 @@ a.detail {
   }
   .stamp.shape-circle {
     width: 158px;
+  }
+  .stamp-serial {
+    font-size: 0.58rem;
   }
   .stamp.border-double {
     border-width: 6px;

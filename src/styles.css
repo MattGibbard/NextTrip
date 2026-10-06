@@ -1028,6 +1028,32 @@ button.card:hover {
 .how h2 + p {
   margin-bottom: 1rem;
 }
+.legal-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 1.5rem 0 0.5rem;
+}
+.legal-links a {
+  color: inherit;
+}
+.legal {
+  max-width: 44rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.legal h1 {
+  font-size: 1.8rem;
+}
+.legal h2 {
+  margin-top: 1.5rem;
+}
+.legal ul {
+  padding-left: 1.2rem;
+}
+.legal li + li {
+  margin-top: 0.5rem;
+}
 
 /* ---------- Draw ---------- */
 

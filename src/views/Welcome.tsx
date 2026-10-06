@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import type { FormEvent, ReactNode } from "react";
 import { api } from "../api";
 
-function Frame({ children }: { children: ReactNode }) {
+export function Frame({ children }: { children: ReactNode }) {
   return (
     <div className="welcome">
       <header className="welcome-top">
@@ -12,7 +12,17 @@ function Frame({ children }: { children: ReactNode }) {
         </a>
       </header>
       {children}
+      <LegalLinks />
     </div>
+  );
+}
+
+export function LegalLinks() {
+  return (
+    <footer className="legal-links muted small">
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </footer>
   );
 }
 
@@ -113,7 +123,10 @@ function SignInForm() {
       <button className="btn large" disabled={state === "sending"}>
         {state === "sending" ? "Sending…" : "Email me a sign-in link"}
       </button>
-      <p className="muted small">No password needed. New here? The same link sets up your family.</p>
+      <p className="muted small">
+        No password needed. New here? The same link sets up your family. By signing in you agree to our <a href="/terms">terms</a> and{" "}
+        <a href="/privacy">privacy policy</a>.
+      </p>
     </form>
   );
 }

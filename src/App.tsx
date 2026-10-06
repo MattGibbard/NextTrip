@@ -3,6 +3,7 @@ import type { Session } from "../shared/types";
 import { api, setSignedOutHandler } from "./api";
 import { DataProvider, useData } from "./data";
 import { HomePage, JoinPage, SignInPage } from "./views/Welcome";
+import { LegalView, legalPage } from "./views/Legal";
 import { TripsView } from "./views/TripsView";
 import { PlacesView } from "./views/PlacesView";
 import { IdeasView } from "./views/IdeasView";
@@ -39,6 +40,11 @@ function entryLink(): { kind: "join" | "signin"; token: string } | null {
 }
 
 export function App() {
+  const legal = legalPage(location.pathname);
+  return legal ? <LegalView page={legal} /> : <Main />;
+}
+
+function Main() {
   const [session, setSession] = useState<Session | null>(null);
   const [entry, setEntry] = useState(entryLink);
   const [error, setError] = useState<string | null>(null);

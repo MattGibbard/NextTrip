@@ -14,7 +14,7 @@ import type { ThemeChoice } from "../theme";
 import { LegalLinks } from "./Welcome";
 
 export function SettingsView() {
-  const { people, me, setMe, isOwner } = useData();
+  const { people, me, isOwner } = useData();
   return (
     <section>
       <div className="page-head">
@@ -24,7 +24,9 @@ export function SettingsView() {
         <h2>Your family</h2>
         <p className="muted small">
           Names and colours show on ideas, points and draws.{" "}
-          {isOwner ? "Everyone here takes part in each draw, so remove anyone who isn't joining in." : "You can change your own."}
+          {isOwner
+            ? "Everyone here takes part in each draw, so remove anyone who isn't joining in. To get someone onto a new phone, send them their own sign-in link."
+            : "You can change your own."}
         </p>
         {people.map((p) => (isOwner || p.id === me?.id ? <PersonEditor key={p.id} person={p} /> : <PersonRow key={p.id} person={p} />))}
       </div>
@@ -37,11 +39,9 @@ export function SettingsView() {
         <p>
           You're using NextTrip as <strong>{me?.name ?? "nobody yet"}</strong>
           {isOwner ? ", signed in as the family organiser." : ", through the family link."}
+          {!isOwner && " If this isn't you, ask your family organiser for your own sign-in link."}
         </p>
         <div className="form-actions">
-          <button className="btn ghost" onClick={() => setMe(null)}>
-            Switch person
-          </button>
           <SignOutButton />
         </div>
       </div>
@@ -349,17 +349,75 @@ function PersonEditor({ person }: { person: Person }) {
   };
 
   return (
-    <div className="person-editor">
-      <input type="color" value={color} onChange={(e) => setColor(e.target.value)} aria-label={`${person.name}'s colour`} />
-      <input value={name} maxLength={40} onChange={(e) => setName(e.target.value)} aria-label="Name" />
-      <button className="btn small" disabled={!changed || !name.trim() || state === "saving"} onClick={saveIt}>
-        {state === "saved" && !changed ? "Saved" : "Save"}
-      </button>
-      {isOwner && person.id !== me?.id && (
-        <button className="btn small ghost danger" onClick={remove} aria-label={`Remove ${person.name}`}>
-          Remove
+    <>
+      <div className="person-editor">
+        <input type="color" value={color} onChange={(e) => setColor(e.target.value)} aria-label={`${person.name}'s colour`} />
+        <input value={name} maxLength={40} onChange={(e) => setName(e.target.value)} aria-label="Name" />
+        <button className="btn small" disabled={!changed || !name.trim() || state === "saving"} onClick={saveIt}>
+          {state === "saved" && !changed ? "Saved" : "Save"}
         </button>
+        {isOwner && person.id !== me?.id && (
+          <button className="btn small ghost danger" onClick={remove} aria-label={`Remove ${person.name}`}>
+            Remove
+          </button>
+        )}
+      </div>
+      {isOwner && person.id !== me?.id && <DeviceActions person={person} />}
+    </>
+  );
+}
+
+/** The organiser's tools for getting someone onto a new device, or off an old one. */
+function DeviceActions({ person }: { person: Person }) {
+  const [link, setLink] = useState<{ url: string; days: number } | null>(null);
+  const [note, setNote] = useState<string | null>(null);
+
+  const makeLink = async () => {
+    setNote(null);
+    try {
+      const made = await api.personLink(person.id);
+      setLink(made);
+      const text = `Here's your own link to NextTrip, ${person.name}. It works once, for ${made.days} days.`;
+      if (typeof navigator.share === "function") {
+        await navigator.share({ title: "NextTrip", text, url: made.url }).catch(() => {});
+      } else {
+        await navigator.clipboard.writeText(made.url).then(() => setNote("Copied. Send it to them."), () => {});
+      }
+    } catch (e) {
+      setNote((e as Error).message);
+    }
+  };
+
+  const signOut = async () => {
+    if (!confirm(`Sign ${person.name} out on all their devices? They'll need a new sign-in link from you to get back in.`)) return;
+    setNote(null);
+    try {
+      await api.signOutPerson(person.id);
+      setLink(null);
+      setNote(`${person.name} is signed out everywhere.`);
+    } catch (e) {
+      setNote((e as Error).message);
+    }
+  };
+
+  return (
+    <div className="device-actions">
+      <button className="btn small ghost" onClick={() => void makeLink()}>
+        Sign-in link
+      </button>
+      <button className="btn small ghost danger" onClick={() => void signOut()}>
+        Sign out
+      </button>
+      {link && (
+        <input
+          className="share-link"
+          readOnly
+          value={link.url}
+          onFocus={(e) => e.target.select()}
+          aria-label={`${person.name}'s sign-in link`}
+        />
       )}
+      {note && <p className="muted small">{note}</p>}
     </div>
   );
 }

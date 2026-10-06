@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 import type { Session } from "../shared/types";
-import { api, setSignedOutHandler } from "./api";
+import { api, forgetLegacyPerson, setSignedOutHandler } from "./api";
 import { DataProvider, useData } from "./data";
-import { HomePage, JoinPage, SignInPage } from "./views/Welcome";
+import { HomePage, JoinPage, PersonLinkPage, SignInPage } from "./views/Welcome";
 import { LegalView, legalPage } from "./views/Legal";
 import { TripsView } from "./views/TripsView";
 import { PlacesView } from "./views/PlacesView";
@@ -30,10 +30,15 @@ function currentRoute(): { tab: TabId; id: number | null } {
   return { tab, id: Number.isInteger(id) && id > 0 ? id : null };
 }
 
-/** A family link (/f/…) or an emailed sign-in link (/signin?token=…), if that's how we got here. */
-function entryLink(): { kind: "join" | "signin"; token: string } | null {
+/**
+ * A family link (/f/…), a person's own link from the organiser (/p/…) or an
+ * emailed sign-in link (/signin?token=…), if that's how we got here.
+ */
+function entryLink(): { kind: "join" | "person" | "signin"; token: string } | null {
   const join = location.pathname.match(/^\/f\/([\w-]+)\/?$/);
   if (join) return { kind: "join", token: join[1] };
+  const person = location.pathname.match(/^\/p\/([\w-]+)\/?$/);
+  if (person) return { kind: "person", token: person[1] };
   const token = new URLSearchParams(location.search).get("token");
   if (location.pathname === "/signin" && token) return { kind: "signin", token };
   return null;
@@ -52,6 +57,8 @@ function Main() {
   const refresh = useCallback(async () => {
     try {
       setSession(await api.session());
+      // The server has carried over any person this browser picked before, so the old choice can go.
+      forgetLegacyPerson();
       setError(null);
     } catch (e) {
       setError((e as Error).message);
@@ -72,6 +79,7 @@ function Main() {
   }, []);
 
   if (entry?.kind === "join") return <JoinPage token={entry.token} onJoined={entered} />;
+  if (entry?.kind === "person") return <PersonLinkPage token={entry.token} onJoined={entered} />;
   if (entry?.kind === "signin") return <SignInPage token={entry.token} onSignedIn={entered} />;
   if (!session) {
     return error ? (
@@ -84,7 +92,7 @@ function Main() {
   }
   if (!session.signed_in) return <HomePage />;
   return (
-    <DataProvider isOwner={session.role === "owner"} shareToken={session.share_token}>
+    <DataProvider isOwner={session.role === "owner"} shareToken={session.share_token} personId={session.person_id}>
       <Shell />
     </DataProvider>
   );
@@ -94,7 +102,6 @@ function Shell() {
   const { me, loading, error, reload } = useData();
   const [route, setRoute] = useState(currentRoute);
   const tab = route.tab;
-  const [picking, setPicking] = useState(false);
 
   useEffect(() => {
     const onHash = () => {
@@ -125,10 +132,10 @@ function Shell() {
         </nav>
         <div className="topbar-right">
           {me && (
-            <button className="me-chip" onClick={() => setPicking(true)} title="Switch person">
+            <a className="me-chip" href="#/settings" title="You, on this device">
               <span className="dot" style={{ background: me.color }} />
               {me.name}
-            </button>
+            </a>
           )}
           <button className={`icon-btn ${tab === "settings" ? "active" : ""}`} onClick={() => go("settings")} aria-label="Settings">
             ⚙️
@@ -164,7 +171,7 @@ function Shell() {
         ))}
       </nav>
 
-      {!loading && !error && (!me || picking) && <PersonPicker onDone={() => setPicking(false)} />}
+      {!loading && !error && !me && <PersonPicker />}
     </div>
   );
 }

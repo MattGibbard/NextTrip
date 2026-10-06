@@ -1,11 +1,16 @@
 import type { GeocodeResult, Home, HomeEnds, Idea, IdeaInput, Person, Round, Session, Trip, TripInput } from "../shared/types";
 import type { RoundFilters } from "../shared/roundFilters";
 import type { TerminalSearchResult } from "../shared/terminals";
+import { forget, load } from "./storage";
 
-let currentPerson: number | null = null;
+// Browsers that picked a person before the server kept track of it send that
+// choice once, so the server can carry it over. After that it's ignored.
+let legacyPerson: number | null = load<number | null>("person", null);
 
-export function setApiPerson(id: number | null) {
-  currentPerson = id;
+/** The server knows who this browser is now, so the old choice can go. */
+export function forgetLegacyPerson() {
+  legacyPerson = null;
+  forget("person");
 }
 
 let onSignedOut = () => {};
@@ -18,7 +23,7 @@ export function setSignedOutHandler(fn: () => void) {
 async function request<T>(method: string, path: string, body?: unknown): Promise<T> {
   const headers: Record<string, string> = {};
   if (body !== undefined) headers["Content-Type"] = "application/json";
-  if (currentPerson !== null) headers["X-Person-Id"] = String(currentPerson);
+  if (legacyPerson !== null) headers["X-Person-Id"] = String(legacyPerson);
   const res = await fetch(`/api${path}`, {
     method,
     headers,
@@ -37,6 +42,7 @@ export const api = {
   sendSignInEmail: (email: string) => request<{ ok: true; dev_link?: string }>("POST", "/auth/email", { email }),
   verifySignIn: (token: string) => request("POST", "/auth/verify", { token }),
   join: (token: string) => request("POST", "/auth/join", { token }),
+  usePersonLink: (token: string) => request("POST", "/auth/person-link", { token }),
   signOut: () => request("POST", "/auth/logout"),
   deleteAccount: (confirm: string) => request("DELETE", "/family", { confirm }),
   resetShareLink: () => request<{ share_token: string }>("POST", "/family/share-link"),
@@ -45,6 +51,10 @@ export const api = {
   addPerson: (p: { name: string; color: string }) => request<{ id: number }>("POST", "/people", p),
   updatePerson: (id: number, p: { name: string; color: string }) => request("PUT", `/people/${id}`, p),
   removePerson: (id: number) => request("DELETE", `/people/${id}`),
+  /** Organiser only: which of the family they are on this device. */
+  setMe: (id: number) => request("POST", "/me", { person_id: id }),
+  personLink: (id: number) => request<{ url: string; days: number }>("POST", `/family/people/${id}/link`),
+  signOutPerson: (id: number) => request("POST", `/family/people/${id}/sign-out`),
 
   trips: () => request<Trip[]>("GET", "/trips"),
   createTrip: (t: TripInput) => request<{ id: number }>("POST", "/trips", t),

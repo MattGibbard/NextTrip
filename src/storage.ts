@@ -15,3 +15,11 @@ export function save(key: string, value: unknown) {
     // ignore
   }
 }
+
+export function forget(key: string) {
+  try {
+    localStorage.removeItem(`nexttrip.${key}`);
+  } catch {
+    // ignore
+  }
+}

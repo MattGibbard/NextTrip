@@ -202,3 +202,33 @@ export function JoinPage({ token, onJoined }: { token: string; onJoined: () => v
     </Frame>
   );
 }
+
+/** A link the organiser made for one person, to sign them in on a new device. */
+export function PersonLinkPage({ token, onJoined }: { token: string; onJoined: () => void }) {
+  const [error, setError] = useState<string | null>(null);
+  const started = useRef(false);
+  useEffect(() => {
+    if (started.current) return;
+    started.current = true;
+    api.usePersonLink(token).then(onJoined, (e: Error) => setError(e.message));
+  }, [token, onJoined]);
+  return (
+    <Frame>
+      <section className="intro narrow">
+        <div className="panel signin">
+          {error ? (
+            <>
+              <p className="big">That link didn't work</p>
+              <p className="error-text">{error}</p>
+              <a className="btn ghost" href="/">
+                Go to the NextTrip home page
+              </a>
+            </>
+          ) : (
+            <p className="big">Signing you in…</p>
+          )}
+        </div>
+      </section>
+    </Frame>
+  );
+}

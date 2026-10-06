@@ -11,6 +11,7 @@ import { estimateTravel } from "../../shared/travelTime";
 import { plural } from "../format";
 import { setThemeChoice, themeChoice } from "../theme";
 import type { ThemeChoice } from "../theme";
+import { LegalLinks } from "./Welcome";
 
 export function SettingsView() {
   const { people, me, setMe, isOwner } = useData();
@@ -45,6 +46,7 @@ export function SettingsView() {
         </div>
       </div>
       <InstallPanel />
+      <LegalLinks />
     </section>
   );
 }

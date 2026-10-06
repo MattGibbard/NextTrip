@@ -6,14 +6,17 @@
   "compatibility_flags": ["nodejs_compat"],
   "observability": { "enabled": true },
   // Lets Workers Builds run `wrangler preview` for pull requests. Previews don't inherit bindings,
-  // so they name the database here. They share the live nexttrip database (Matt's choice), so
-  // anything done in a preview changes real data and its migrations apply to the live database.
+  // so they name their own database here: nexttrip-preview, kept apart from the live nexttrip
+  // database so nothing done in a preview touches real data. The Worker creates its tables on
+  // first use. Sign-in links show on the page instead of being emailed, so previews need no
+  // Resend key; anyone with a preview link can sign in, but only ever sees test data.
   "previews": {
+    "vars": { "DEV_LOGIN_LINKS": "1" },
     "d1_databases": [
       {
         "binding": "DB",
-        "database_name": "nexttrip",
-        "database_id": "a130c463-023d-4c39-a1e9-2ce8b29d4255"
+        "database_name": "nexttrip-preview",
+        "database_id": "PREVIEW_DATABASE_ID"
       }
     ]
   },

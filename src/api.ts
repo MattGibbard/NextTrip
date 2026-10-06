@@ -1,4 +1,4 @@
-import type { GeocodeResult, Home, HomeEnds, Idea, IdeaInput, Person, Round, Trip, TripInput } from "../shared/types";
+import type { GeocodeResult, Home, HomeEnds, Idea, IdeaInput, Person, Round, Session, Trip, TripInput } from "../shared/types";
 import type { RoundFilters } from "../shared/roundFilters";
 import type { TerminalSearchResult } from "../shared/terminals";
 
@@ -6,6 +6,13 @@ let currentPerson: number | null = null;
 
 export function setApiPerson(id: number | null) {
   currentPerson = id;
+}
+
+let onSignedOut = () => {};
+
+/** Called when the server says this browser isn't signed in any more. */
+export function setSignedOutHandler(fn: () => void) {
+  onSignedOut = fn;
 }
 
 async function request<T>(method: string, path: string, body?: unknown): Promise<T> {
@@ -20,13 +27,23 @@ async function request<T>(method: string, path: string, body?: unknown): Promise
     throw new Error(navigator.onLine ? "Couldn't reach NextTrip. Check your connection." : "You're offline. Connect to the internet to load your trips.");
   });
   const data = await res.json().catch(() => ({}));
+  if (res.status === 401) onSignedOut();
   if (!res.ok) throw new Error((data as { error?: string }).error ?? `Request failed (${res.status})`);
   return data as T;
 }
 
 export const api = {
+  session: () => request<Session>("GET", "/auth/me"),
+  sendSignInEmail: (email: string) => request<{ ok: true; dev_link?: string }>("POST", "/auth/email", { email }),
+  verifySignIn: (token: string) => request("POST", "/auth/verify", { token }),
+  join: (token: string) => request("POST", "/auth/join", { token }),
+  signOut: () => request("POST", "/auth/logout"),
+  resetShareLink: () => request<{ share_token: string }>("POST", "/family/share-link"),
+
   people: () => request<Person[]>("GET", "/people"),
+  addPerson: (p: { name: string; color: string }) => request<{ id: number }>("POST", "/people", p),
   updatePerson: (id: number, p: { name: string; color: string }) => request("PUT", `/people/${id}`, p),
+  removePerson: (id: number) => request("DELETE", `/people/${id}`),
 
   trips: () => request<Trip[]>("GET", "/trips"),
   createTrip: (t: TripInput) => request<{ id: number }>("POST", "/trips", t),

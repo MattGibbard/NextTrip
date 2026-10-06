@@ -21,7 +21,7 @@ export interface TripDraft {
 }
 
 export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; draft?: TripDraft; onClose: () => void; onDeleted?: () => void }) {
-  const { me, reload, ideas } = useData();
+  const { me, reload, ideas, isOwner } = useData();
   const fromIdea = ideas.find((i) => i.id === draft?.idea_id);
   const [title, setTitle] = useState(trip?.title ?? draft?.title ?? "");
   const [start, setStart] = useState(trip?.start_date ?? "");
@@ -119,7 +119,7 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
         </label>
         {error && <p className="error-text">{error}</p>}
         <div className="form-actions">
-          {trip && (
+          {trip && isOwner && (
             <button type="button" className="btn danger ghost" onClick={remove}>
               Delete
             </button>

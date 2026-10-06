@@ -1,36 +1,120 @@
+import { useState } from "react";
+import type { FormEvent } from "react";
+import { PERSON_COLORS } from "../../shared/auth";
+import { api } from "../api";
 import { useData } from "../data";
 
 export function PersonPicker({ onDone }: { onDone: () => void }) {
   const { people, me, setMe } = useData();
+  const [adding, setAdding] = useState(people.length === 0);
   return (
     <div className="overlay">
       <div className="sheet picker">
-        <h2>Who's this?</h2>
-        <p className="muted">Pick yourself so your points and ideas are yours. This browser will remember.</p>
-        <div className="picker-options">
-          {people.map((p) => (
-            <button
-              key={p.id}
-              className={`picker-option ${me?.id === p.id ? "selected" : ""}`}
-              style={{ borderColor: p.color }}
-              onClick={() => {
-                setMe(p.id);
-                onDone();
-              }}
-            >
-              <span className="avatar" style={{ background: p.color }}>
-                {p.name.slice(0, 1).toUpperCase()}
-              </span>
-              {p.name}
+        {adding ? (
+          <NewPerson
+            onAdded={(id) => {
+              setMe(id);
+              onDone();
+            }}
+            onCancel={people.length > 0 ? () => setAdding(false) : undefined}
+          />
+        ) : (
+          <>
+            <h2>Who's this?</h2>
+            <p className="muted">Pick yourself so your points and ideas are yours. This browser will remember.</p>
+            <div className="picker-options">
+              {people.map((p) => (
+                <button
+                  key={p.id}
+                  className={`picker-option ${me?.id === p.id ? "selected" : ""}`}
+                  style={{ borderColor: p.color }}
+                  onClick={() => {
+                    setMe(p.id);
+                    onDone();
+                  }}
+                >
+                  <span className="avatar" style={{ background: p.color }}>
+                    {p.name.slice(0, 1).toUpperCase()}
+                  </span>
+                  {p.name}
+                </button>
+              ))}
+            </div>
+            <button className="btn ghost" onClick={() => setAdding(true)}>
+              ➕ I'm not on the list
             </button>
-          ))}
-        </div>
-        {me && (
-          <button className="btn ghost" onClick={onDone}>
-            Cancel
-          </button>
+            {me && (
+              <button className="btn ghost" onClick={onDone}>
+                Cancel
+              </button>
+            )}
+          </>
         )}
       </div>
     </div>
+  );
+}
+
+function NewPerson({ onAdded, onCancel }: { onAdded: (id: number) => void; onCancel?: () => void }) {
+  const { people, reload } = useData();
+  const [name, setName] = useState("");
+  const [color, setColor] = useState(() => PERSON_COLORS.find((c) => !people.some((p) => p.color === c)) ?? PERSON_COLORS[0]);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const add = async (e: FormEvent) => {
+    e.preventDefault();
+    setBusy(true);
+    setError(null);
+    try {
+      const { id } = await api.addPerson({ name: name.trim(), color });
+      await reload();
+      onAdded(id);
+    } catch (err) {
+      setError((err as Error).message);
+      setBusy(false);
+    }
+  };
+
+  return (
+    <form className="form" onSubmit={add}>
+      <div>
+        <h2>What's your name?</h2>
+        <p className="muted">Your name and colour show on your ideas, points and draws. This browser will remember you.</p>
+      </div>
+      <label>
+        Name
+        <input value={name} maxLength={40} required autoFocus onChange={(e) => setName(e.target.value)} placeholder="e.g. Sam" />
+      </label>
+      <div className="field">
+        <span>Colour</span>
+        <div className="color-row" role="radiogroup" aria-label="Colour">
+          {PERSON_COLORS.map((c) => (
+            <button
+              type="button"
+              key={c}
+              role="radio"
+              aria-checked={color === c}
+              aria-label={c}
+              className={`color-swatch ${color === c ? "on" : ""}`}
+              style={{ background: c }}
+              onClick={() => setColor(c)}
+            />
+          ))}
+          <input type="color" value={color} onChange={(e) => setColor(e.target.value)} aria-label="Another colour" />
+        </div>
+      </div>
+      {error && <p className="error-text">{error}</p>}
+      <div className="form-actions">
+        <button className="btn" disabled={busy || !name.trim()}>
+          {busy ? "Adding…" : "That's me"}
+        </button>
+        {onCancel && (
+          <button type="button" className="btn ghost" onClick={onCancel}>
+            Back
+          </button>
+        )}
+      </div>
+    </form>
   );
 }

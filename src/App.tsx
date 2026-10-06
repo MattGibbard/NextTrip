@@ -1,5 +1,8 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import type { Session } from "../shared/types";
+import { api, setSignedOutHandler } from "./api";
 import { DataProvider, useData } from "./data";
+import { HomePage, JoinPage, SignInPage } from "./views/Welcome";
 import { TripsView } from "./views/TripsView";
 import { PlacesView } from "./views/PlacesView";
 import { IdeasView } from "./views/IdeasView";
@@ -26,16 +29,63 @@ function currentRoute(): { tab: TabId; id: number | null } {
   return { tab, id: Number.isInteger(id) && id > 0 ? id : null };
 }
 
+/** A family link (/f/…) or an emailed sign-in link (/signin?token=…), if that's how we got here. */
+function entryLink(): { kind: "join" | "signin"; token: string } | null {
+  const join = location.pathname.match(/^\/f\/([\w-]+)\/?$/);
+  if (join) return { kind: "join", token: join[1] };
+  const token = new URLSearchParams(location.search).get("token");
+  if (location.pathname === "/signin" && token) return { kind: "signin", token };
+  return null;
+}
+
 export function App() {
+  const [session, setSession] = useState<Session | null>(null);
+  const [entry, setEntry] = useState(entryLink);
+  const [error, setError] = useState<string | null>(null);
+
+  const refresh = useCallback(async () => {
+    try {
+      setSession(await api.session());
+      setError(null);
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  }, []);
+
+  // Once a link has done its job, tidy the address bar so it isn't bookmarked or shared by mistake.
+  const entered = useCallback(() => {
+    history.replaceState(null, "", "/");
+    setEntry(null);
+    void refresh();
+  }, [refresh]);
+
+  useEffect(() => {
+    setSignedOutHandler(() => setSession({ signed_in: false }));
+    if (!entry) void refresh();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  if (entry?.kind === "join") return <JoinPage token={entry.token} onJoined={entered} />;
+  if (entry?.kind === "signin") return <SignInPage token={entry.token} onSignedIn={entered} />;
+  if (!session) {
+    return error ? (
+      <div className="banner error">
+        {error} <button onClick={() => void refresh()}>Retry</button>
+      </div>
+    ) : (
+      <p className="muted center">Loading…</p>
+    );
+  }
+  if (!session.signed_in) return <HomePage />;
   return (
-    <DataProvider>
+    <DataProvider isOwner={session.role === "owner"} shareToken={session.share_token}>
       <Shell />
     </DataProvider>
   );
 }
 
 function Shell() {
-  const { me, people, loading, error, reload } = useData();
+  const { me, loading, error, reload } = useData();
   const [route, setRoute] = useState(currentRoute);
   const tab = route.tab;
   const [picking, setPicking] = useState(false);
@@ -108,7 +158,7 @@ function Shell() {
         ))}
       </nav>
 
-      {!loading && people.length > 0 && (!me || picking) && <PersonPicker onDone={() => setPicking(false)} />}
+      {!loading && !error && (!me || picking) && <PersonPicker onDone={() => setPicking(false)} />}
     </div>
   );
 }

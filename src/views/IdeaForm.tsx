@@ -13,7 +13,7 @@ import { estimateTravel, formatHours } from "../../shared/travelTime";
 import { travelTimeLabel } from "../../shared/ideaDetails";
 
 export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: () => void; onDeleted?: () => void }) {
-  const { me, reload, rounds, home } = useData();
+  const { me, reload, rounds, home, isOwner } = useData();
   const [title, setTitle] = useState(idea?.title ?? "");
   const [description, setDescription] = useState(idea?.description ?? "");
   const [cover, setCover] = useState(idea?.cover_url ?? "");
@@ -92,7 +92,7 @@ export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: (
         </label>
         {error && <p className="error-text">{error}</p>}
         <div className="form-actions">
-          {idea && (
+          {idea && isOwner && (
             <button type="button" className="btn danger ghost" onClick={remove}>
               Delete
             </button>

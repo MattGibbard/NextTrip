@@ -48,3 +48,8 @@ export function shortRange(start: string | null, end: string | null): string | n
   if (a.getMonth() !== b.getMonth()) return `${a.getDate()} ${MONTH.format(a)} – ${fmt.format(b)}`;
   return `${a.getDate()}–${fmt.format(b)}`;
 }
+
+/** "Sam", "Sam and Alex", "Sam, Alex and Jo". */
+export function listNames(names: string[]) {
+  return names.length <= 1 ? (names[0] ?? "") : `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}`;
+}

@@ -11,26 +11,60 @@ const LINK_MINUTES = 20;
 /** Sign-in emails allowed per address in a 15-minute window. */
 const LINKS_PER_WINDOW = 3;
 
-export async function readSession(c: Ctx): Promise<{ family: number; role: Role } | null> {
-  const token = getCookie(c, COOKIE);
-  if (!token) return null;
-  const row = await c.env.DB.prepare("SELECT family_id, role FROM sessions WHERE token_hash = ? AND expires_at > datetime('now')")
-    .bind(await sha256(token))
-    .first<{ family_id: number; role: Role }>();
-  return row ? { family: row.family_id, role: row.role } : null;
+/** How long a link the organiser makes for one person works for. */
+const PERSON_LINK_DAYS = 7;
+
+export interface SessionInfo {
+  family: number;
+  role: Role;
+  /** Who this browser is. Set by the server, never by the browser. */
+  person: number | null;
 }
 
-async function startSession(c: Ctx, family: number, role: Role) {
+export async function readSession(c: Ctx): Promise<SessionInfo | null> {
+  const token = getCookie(c, COOKIE);
+  if (!token) return null;
+  const db = c.env.DB;
+  const hash = await sha256(token);
+  const row = await db.prepare(
+    `SELECT s.family_id, s.role, s.legacy, p.id AS person_id FROM sessions s
+     LEFT JOIN people p ON p.id = s.person_id AND p.family_id = s.family_id AND p.removed = 0
+     WHERE s.token_hash = ? AND s.expires_at > datetime('now')`,
+  )
+    .bind(hash)
+    .first<{ family_id: number; role: Role; legacy: number; person_id: number | null }>();
+  if (!row) return null;
+  let person = row.person_id;
+  // A browser signed in before people were tied to sessions keeps whoever it had picked.
+  if (person === null && row.legacy) {
+    const raw = Number(c.req.header("X-Person-Id"));
+    const picked = Number.isInteger(raw)
+      ? await db.prepare("SELECT id FROM people WHERE id = ? AND family_id = ? AND removed = 0").bind(raw, row.family_id).first<{ id: number }>()
+      : null;
+    if (picked) {
+      await db.prepare("UPDATE sessions SET person_id = ?, legacy = 0 WHERE token_hash = ?").bind(picked.id, hash).run();
+      person = picked.id;
+    }
+  }
+  return { family: row.family_id, role: row.role, person };
+}
+
+/** Ties this browser's session to a person. */
+export async function setSessionPerson(c: Ctx, person: number) {
+  const token = getCookie(c, COOKIE);
+  if (!token) throw new HttpError(401, "Sign in to carry on");
+  await c.env.DB.prepare("UPDATE sessions SET person_id = ?, legacy = 0 WHERE token_hash = ?").bind(person, await sha256(token)).run();
+}
+
+async function startSession(c: Ctx, family: number, role: Role, person: number | null = null) {
   const token = randomToken(32);
   const days = SESSION_DAYS[role];
   await c.env.DB.batch([
     // Tidy up while we're here.
     c.env.DB.prepare("DELETE FROM sessions WHERE expires_at <= datetime('now')"),
-    c.env.DB.prepare(`INSERT INTO sessions (token_hash, family_id, role, expires_at) VALUES (?, ?, ?, datetime('now', '+${days} days'))`).bind(
-      await sha256(token),
-      family,
-      role,
-    ),
+    c.env.DB.prepare(
+      `INSERT INTO sessions (token_hash, family_id, role, person_id, expires_at) VALUES (?, ?, ?, ?, datetime('now', '+${days} days'))`,
+    ).bind(await sha256(token), family, role, person),
   ]);
   setCookie(c, COOKIE, token, { httpOnly: true, secure: true, sameSite: "Lax", path: "/", maxAge: days * 86400 });
 }
@@ -111,7 +145,7 @@ export function authRoutes(app: Hono<App>) {
     const share = s.role === "owner"
       ? (await c.env.DB.prepare("SELECT share_token FROM families WHERE id = ?").bind(s.family).first<{ share_token: string }>())?.share_token ?? null
       : null;
-    return c.json({ signed_in: true, role: s.role, share_token: share });
+    return c.json({ signed_in: true, role: s.role, share_token: share, person_id: s.person });
   });
 
   app.post("/auth/email", async (c) => {
@@ -166,6 +200,29 @@ export function authRoutes(app: Hono<App>) {
     return c.json({ ok: true });
   });
 
+  // A link the organiser made for one person: signs this browser in as them.
+  app.post("/auth/person-link", async (c) => {
+    const token = (await bodyOf(c)).token;
+    if (typeof token !== "string" || token.length > 100) throw new HttpError(404, "That sign-in link isn't valid");
+    const db = c.env.DB;
+    const link = await db.prepare(
+      `DELETE FROM person_links WHERE token_hash = ? AND expires_at > datetime('now')
+       AND person_id IN (SELECT id FROM people WHERE removed = 0) RETURNING family_id, person_id`,
+    )
+      .bind(await sha256(token))
+      .first<{ family_id: number; person_id: number }>();
+    if (!link) throw new HttpError(404, "That sign-in link has expired or been used. Ask your family organiser for a new one.");
+    // The organiser opening a link in their own browser stays the organiser.
+    const current = await readSession(c);
+    if (current?.family === link.family_id && current.role === "owner") {
+      await setSessionPerson(c, link.person_id);
+    } else {
+      if (current) await endSession(c);
+      await startSession(c, link.family_id, "member", link.person_id);
+    }
+    return c.json({ ok: true });
+  });
+
   app.post("/auth/logout", async (c) => {
     await endSession(c);
     return c.json({ ok: true });
@@ -183,6 +240,37 @@ export function familyRoutes(app: Hono<App>) {
       c.env.DB.prepare("DELETE FROM sessions WHERE family_id = ? AND role = 'member'").bind(c.get("family")),
     ]);
     return c.json({ share_token: token });
+  });
+
+  // A one-off link that signs a person in on a new device.
+  app.post("/family/people/:id/link", async (c) => {
+    requireOwner(c);
+    const person = await ownPerson(c);
+    const token = randomToken(24);
+    const db = c.env.DB;
+    await db.batch([
+      db.prepare("DELETE FROM person_links WHERE expires_at <= datetime('now')"),
+      // Only the newest link for someone works.
+      db.prepare("DELETE FROM person_links WHERE person_id = ?").bind(person),
+      db.prepare(`INSERT INTO person_links (token_hash, family_id, person_id, expires_at) VALUES (?, ?, ?, datetime('now', '+${PERSON_LINK_DAYS} days'))`).bind(
+        await sha256(token),
+        c.get("family"),
+        person,
+      ),
+    ]);
+    return c.json({ url: `${new URL(c.req.url).origin}/p/${token}`, days: PERSON_LINK_DAYS });
+  });
+
+  // Signs a person out on every device, for a lost phone or a mix-up. The organiser's own browser stays signed in.
+  app.post("/family/people/:id/sign-out", async (c) => {
+    requireOwner(c);
+    const person = await ownPerson(c);
+    const db = c.env.DB;
+    await db.batch([
+      db.prepare("DELETE FROM sessions WHERE person_id = ? AND role = 'member'").bind(person),
+      db.prepare("DELETE FROM person_links WHERE person_id = ?").bind(person),
+    ]);
+    return c.json({ ok: true });
   });
 
   // Deletes the organiser's account and everything the family made, and signs everyone out.
@@ -207,15 +295,27 @@ export function deleteFamilyStatements(db: D1Database, family: number): D1Prepar
     "DELETE FROM rounds WHERE family_id = ?1",
     "DELETE FROM trips WHERE family_id = ?1",
     "DELETE FROM ideas WHERE family_id = ?1",
+    // Sessions and person links point at people, so they go first.
+    "DELETE FROM sessions WHERE family_id = ?1",
+    "DELETE FROM person_links WHERE family_id = ?1",
     "DELETE FROM people WHERE family_id = ?1",
     "DELETE FROM family_settings WHERE family_id = ?1",
-    "DELETE FROM sessions WHERE family_id = ?1",
     "DELETE FROM login_links WHERE email_hash = (SELECT email_hash FROM families WHERE id = ?1)",
     "DELETE FROM families WHERE id = ?1",
   ];
   // Family 1 also owns the settings from before families existed.
   if (family === 1) stmts.push("DELETE FROM settings");
   return stmts.map((sql) => (sql.includes("?1") ? db.prepare(sql).bind(family) : db.prepare(sql)));
+}
+
+/** The :id person, if they're in this family and haven't been removed. */
+async function ownPerson(c: Ctx): Promise<number> {
+  const id = Number(c.req.param("id"));
+  const row = Number.isInteger(id)
+    ? await c.env.DB.prepare("SELECT id FROM people WHERE id = ? AND family_id = ? AND removed = 0").bind(id, c.get("family")).first<{ id: number }>()
+    : null;
+  if (!row) throw new HttpError(404, "Not found");
+  return row.id;
 }
 
 export function requireOwner(c: Ctx) {

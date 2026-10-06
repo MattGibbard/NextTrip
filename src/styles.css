@@ -234,6 +234,8 @@ textarea:focus {
   border-radius: 999px;
   padding: 0.3rem 0.75rem;
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -910,6 +912,18 @@ button.card:hover {
   align-items: center;
   gap: 0.6rem;
   margin-top: 0.7rem;
+}
+.device-actions {
+  display: flex;
+  margin-top: 0.4rem;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-left: calc(44px + 0.6rem);
+}
+.device-actions .share-link,
+.device-actions p {
+  flex-basis: 100%;
+  margin: 0;
 }
 .person-editor input[type="color"] {
   width: 44px;

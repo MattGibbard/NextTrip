@@ -20,6 +20,8 @@ export type Session =
       role: "owner" | "member";
       /** The family link's secret part. Only the organiser sees it. */
       share_token: string | null;
+      /** Who this browser is, set when they join. Null until they've given their name. */
+      person_id: number | null;
     };
 
 export interface Place {

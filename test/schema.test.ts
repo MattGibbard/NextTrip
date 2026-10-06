@@ -3,7 +3,7 @@ import { expect, it } from "vitest";
 import { MIGRATIONS, sqlStatements } from "../worker/migrate";
 
 it("finds every migration file in order", () => {
-  expect(MIGRATIONS.map((m) => m.name)).toEqual(["0001_init.sql", "0002_idea_details_and_vetoes.sql", "0003_round_filters.sql", "0004_idea_cover.sql", "0005_swipes_and_home.sql", "0006_trip_road_trip.sql", "0007_trip_cruise.sql", "0008_trip_rail.sql", "0009_trip_ends.sql", "0010_families.sql"]);
+  expect(MIGRATIONS.map((m) => m.name)).toEqual(["0001_init.sql", "0002_idea_details_and_vetoes.sql", "0003_round_filters.sql", "0004_idea_cover.sql", "0005_swipes_and_home.sql", "0006_trip_road_trip.sql", "0007_trip_cruise.sql", "0008_trip_rail.sql", "0009_trip_ends.sql", "0010_families.sql", "0011_session_person.sql"]);
 });
 
 it("splits the first schema into idempotent statements", () => {

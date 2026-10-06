@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { migrate } from "./migrate";
-import { authRoutes, familyRoutes, readSession, requireOwner } from "./auth";
+import { authRoutes, familyRoutes, readSession, requireOwner, setSessionPerson } from "./auth";
 import { HttpError } from "./env";
 import type { App, Ctx } from "./env";
 import { countedAllocations, ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
@@ -56,18 +56,14 @@ app.use("*", async (c, next) => {
 
 authRoutes(app);
 
-// Everything below needs a signed-in family. The browser says which family
-// member it is with the X-Person-Id header, which must be one of that family.
+// Everything below needs a signed-in family. Which family member this browser
+// is comes from its session, so nobody can act or vote as someone else.
 app.use("*", async (c, next) => {
   const session = await readSession(c);
   if (!session) throw new HttpError(401, "Sign in to carry on");
   c.set("family", session.family);
   c.set("role", session.role);
-  const raw = Number(c.req.header("X-Person-Id"));
-  const person = Number.isInteger(raw)
-    ? await c.env.DB.prepare("SELECT id FROM people WHERE id = ? AND family_id = ? AND removed = 0").bind(raw, session.family).first<{ id: number }>()
-    : null;
-  c.set("person", person?.id ?? null);
+  c.set("person", session.person);
   await next();
 });
 
@@ -133,8 +129,11 @@ function personInput(b: Record<string, unknown>) {
   return { name, color };
 }
 
-// Anyone in the family can add themselves.
+// Anyone in the family without a name yet can add themselves, and this browser
+// becomes them. The organiser can also add people who aren't on NextTrip themselves.
 app.post("/people", async (c) => {
+  const isOwner = c.get("role") === "owner";
+  if (viewerId(c) !== null && !isOwner) throw new HttpError(403, "You're already in the family on this device");
   const { name, color } = personInput(await body(c));
   const db = c.env.DB;
   const count = await db.prepare("SELECT COUNT(*) AS n FROM people WHERE family_id = ? AND removed = 0").bind(c.get("family")).first<{ n: number }>();
@@ -142,8 +141,22 @@ app.post("/people", async (c) => {
   const row = await db.prepare("INSERT INTO people (name, color, family_id) VALUES (?, ?, ?) RETURNING id")
     .bind(name, color ?? "#2563eb", c.get("family"))
     .first<{ id: number }>();
+  if (viewerId(c) === null) await setSessionPerson(c, row!.id);
   // A newcomer joins a shortlist still being made, so it waits for their swipes too.
   return c.json({ id: row!.id }, 201);
+});
+
+// The organiser can say which of the family they are on this device. Everyone
+// else gets an existing name only through a link the organiser sends them.
+app.post("/me", async (c) => {
+  requireOwner(c);
+  const id = Number((await body(c)).person_id);
+  const row = Number.isInteger(id)
+    ? await c.env.DB.prepare("SELECT id FROM people WHERE id = ? AND family_id = ? AND removed = 0").bind(id, c.get("family")).first<{ id: number }>()
+    : null;
+  if (!row) throw new HttpError(404, "Not found");
+  await setSessionPerson(c, row.id);
+  return c.json({ ok: true });
 });
 
 // The organiser can rename anyone; everyone else only themselves.
@@ -167,11 +180,14 @@ app.delete("/people/:id", async (c) => {
   const res = await db.prepare("UPDATE people SET removed = 1 WHERE id = ? AND family_id = ? AND removed = 0").bind(id, family).run();
   if (!res.meta.changes) throw new HttpError(404, "Not found");
   const open = "(SELECT id FROM rounds WHERE family_id = ? AND status = 'open')";
-  await db.batch(
-    ["allocations", "round_locks", "round_vetoes", "round_swipes"].map((t) =>
+  await db.batch([
+    ...["allocations", "round_locks", "round_vetoes", "round_swipes"].map((t) =>
       db.prepare(`DELETE FROM ${t} WHERE person_id = ? AND round_id IN ${open}`).bind(id, family),
     ),
-  );
+    // Their devices are signed out too.
+    db.prepare("DELETE FROM sessions WHERE person_id = ? AND role = 'member'").bind(id),
+    db.prepare("DELETE FROM person_links WHERE person_id = ?").bind(id),
+  ]);
   // They may have been the last one still swiping.
   await finishOpenShortlist(db, family);
   return c.json({ ok: true });

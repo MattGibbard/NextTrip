@@ -1,8 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import type { Home, HomeEnds, Idea, Person, Round, Trip } from "../shared/types";
-import { api, setApiPerson } from "./api";
-import { load, save } from "./storage";
+import { api } from "./api";
 
 interface Data {
   /** Everyone in the family who takes part. */
@@ -21,8 +20,10 @@ interface Data {
   home: Home;
   /** The airport and station new trips and ideas set off from. */
   homeEnds: HomeEnds;
+  /** Who this browser is. Only the server changes it. */
   me: Person | null;
-  setMe: (id: number | null) => void;
+  /** Call after the server has tied this browser to someone. */
+  setMe: (id: number) => void;
   loading: boolean;
   error: string | null;
   reload: () => Promise<void>;
@@ -31,13 +32,19 @@ interface Data {
 
 const DataContext = createContext<Data | null>(null);
 
-export function DataProvider({ children, isOwner, shareToken }: { children: ReactNode; isOwner: boolean; shareToken: string | null }) {
+export function DataProvider({
+  children,
+  isOwner,
+  shareToken,
+  personId,
+}: {
+  children: ReactNode;
+  isOwner: boolean;
+  shareToken: string | null;
+  personId: number | null;
+}) {
   const [token, setShareToken] = useState(shareToken);
-  const [meId, setMeId] = useState<number | null>(() => {
-    const id = load<number | null>("person", null);
-    setApiPerson(id);
-    return id;
-  });
+  const [meId, setMeId] = useState<number | null>(personId);
   const [people, setPeople] = useState<Person[]>([]);
   const [trips, setTrips] = useState<Trip[]>([]);
   const [ideas, setIdeas] = useState<Idea[]>([]);
@@ -68,11 +75,7 @@ export function DataProvider({ children, isOwner, shareToken }: { children: Reac
     void reload();
   }, [reload, meId]);
 
-  const setMe = useCallback((id: number | null) => {
-    setApiPerson(id);
-    save("person", id);
-    setMeId(id);
-  }, []);
+  const setMe = useCallback((id: number) => setMeId(id), []);
 
   const value = useMemo<Data>(
     () => ({

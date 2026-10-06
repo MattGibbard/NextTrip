@@ -361,6 +361,11 @@ textarea:focus {
 .btn.danger {
   color: var(--danger);
 }
+.btn.danger-fill,
+.btn.danger-fill:hover:not(:disabled) {
+  background: var(--danger);
+  color: var(--bg);
+}
 .btn.small {
   padding: 0.4rem 0.75rem;
   font-size: 0.85rem;

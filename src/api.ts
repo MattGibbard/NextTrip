@@ -38,6 +38,7 @@ export const api = {
   verifySignIn: (token: string) => request("POST", "/auth/verify", { token }),
   join: (token: string) => request("POST", "/auth/join", { token }),
   signOut: () => request("POST", "/auth/logout"),
+  deleteAccount: (confirm: string) => request("DELETE", "/family", { confirm }),
   resetShareLink: () => request<{ share_token: string }>("POST", "/family/share-link"),
 
   people: () => request<Person[]>("GET", "/people"),

@@ -184,6 +184,38 @@ export function familyRoutes(app: Hono<App>) {
     ]);
     return c.json({ share_token: token });
   });
+
+  // Deletes the organiser's account and everything the family made, and signs everyone out.
+  app.delete("/family", async (c) => {
+    requireOwner(c);
+    if ((await bodyOf(c)).confirm !== DELETE_CONFIRMATION) throw new HttpError(400, `Type ${DELETE_CONFIRMATION} to confirm`);
+    await c.env.DB.batch(deleteFamilyStatements(c.env.DB, c.get("family")));
+    deleteCookie(c, COOKIE, { path: "/", secure: true });
+    return c.json({ ok: true });
+  });
+}
+
+/** What the organiser types to confirm deleting their account. */
+export const DELETE_CONFIRMATION = "DELETE";
+
+/**
+ * Everything a family has, in an order the foreign keys allow. Deleting a round
+ * takes its points, locks, vetoes and swipes with it, and trips and ideas take their places.
+ */
+export function deleteFamilyStatements(db: D1Database, family: number): D1PreparedStatement[] {
+  const stmts = [
+    "DELETE FROM rounds WHERE family_id = ?1",
+    "DELETE FROM trips WHERE family_id = ?1",
+    "DELETE FROM ideas WHERE family_id = ?1",
+    "DELETE FROM people WHERE family_id = ?1",
+    "DELETE FROM family_settings WHERE family_id = ?1",
+    "DELETE FROM sessions WHERE family_id = ?1",
+    "DELETE FROM login_links WHERE email_hash = (SELECT email_hash FROM families WHERE id = ?1)",
+    "DELETE FROM families WHERE id = ?1",
+  ];
+  // Family 1 also owns the settings from before families existed.
+  if (family === 1) stmts.push("DELETE FROM settings");
+  return stmts.map((sql) => (sql.includes("?1") ? db.prepare(sql).bind(family) : db.prepare(sql)));
 }
 
 export function requireOwner(c: Ctx) {

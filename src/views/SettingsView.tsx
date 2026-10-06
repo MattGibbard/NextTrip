@@ -46,6 +46,7 @@ export function SettingsView() {
         </div>
       </div>
       <InstallPanel />
+      {isOwner && <DeleteAccountPanel />}
       <LegalLinks />
     </section>
   );
@@ -246,6 +247,61 @@ function AppearancePanel() {
 }
 
 /** How to put NextTrip on the home screen, for whichever browser this is. */
+const DELETE_WORD = "DELETE";
+
+/** Lets the organiser delete their account and everything the family has added. */
+function DeleteAccountPanel() {
+  const [open, setOpen] = useState(false);
+  const [typed, setTyped] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const remove = async () => {
+    setBusy(true);
+    setError(null);
+    try {
+      await api.deleteAccount(typed.trim());
+      location.href = "/";
+    } catch (e) {
+      setError((e as Error).message);
+      setBusy(false);
+    }
+  };
+
+  return (
+    <div className="panel">
+      <h2>Delete account</h2>
+      <p className="muted small">
+        This permanently deletes your account and everything your family has added: trips, places, ideas, draws, people and the family link. Everyone using it is signed out.
+        It can't be undone.
+      </p>
+      {open ? (
+        <>
+          <label className="field">
+            <span>
+              Type <strong>{DELETE_WORD}</strong> to confirm
+            </span>
+            <input value={typed} onChange={(e) => setTyped(e.target.value)} autoCapitalize="characters" autoComplete="off" spellCheck={false} />
+          </label>
+          {error && <p className="error-text">{error}</p>}
+          <div className="form-actions">
+            <button className="btn danger-fill" onClick={remove} disabled={busy || typed.trim() !== DELETE_WORD}>
+              {busy ? "Deleting…" : "Delete everything"}
+            </button>
+            <button className="btn ghost" onClick={() => (setOpen(false), setTyped(""), setError(null))} disabled={busy}>
+              Cancel
+            </button>
+          </div>
+        </>
+      ) : (
+        <button className="btn ghost danger" onClick={() => setOpen(true)}>
+          Delete account…
+        </button>
+      )}
+    </div>
+  );
+}
+
 function InstallPanel() {
   const install = useInstallPrompt();
   if (isInstalled()) return null;

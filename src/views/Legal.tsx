@@ -84,14 +84,14 @@ function Privacy() {
 
       <h2>How long we keep it</h2>
       <p>
-        Sign-in links expire after 20 minutes and are deleted within a day. Your family's data stays until the organiser deletes it or asks us to delete the family. Signing
+        Sign-in links expire after 20 minutes and are deleted within a day. Your family's data stays until the organiser deletes it. Deleting your account in Settings removes everything straight away. Signing
         out ends that device's session straight away.
       </p>
 
       <h2>Your rights</h2>
       <p>
-        Under UK data protection law you can ask to see, correct or delete the data we hold about you, or object to how it's used. The organiser can remove people and delete
-        trips and ideas in the app. For anything else, including deleting your whole family, <Contact>contact us</Contact>. You can also complain to the Information
+        Under UK data protection law you can ask to see, correct or delete the data we hold about you, or object to how it's used. The organiser can remove people, delete
+        trips and ideas, or delete the whole account and everything in it from Settings. For anything else, <Contact>contact us</Contact>. You can also complain to the Information
         Commissioner's Office (ico.org.uk).
       </p>
       <p>NextTrip is for families planning holidays together. The organiser should be an adult, and decides who in the family gets the link.</p>
@@ -136,7 +136,7 @@ function Terms() {
 
       <h2>Ending things</h2>
       <p>
-        You can stop using NextTrip at any time and ask us to delete your family. We may suspend families that break these terms, or close the service, and if we do we'll
+        You can stop using NextTrip at any time. The organiser can delete the account and all of the family's data from Settings. We may suspend families that break these terms, or close the service, and if we do we'll
         try to give you notice so you can save your data.
       </p>
 

@@ -1,6 +1,8 @@
 import { Hono } from "hono";
-import type { Context } from "hono";
 import { migrate } from "./migrate";
+import { authRoutes, familyRoutes, readSession, requireOwner } from "./auth";
+import { HttpError } from "./env";
+import type { App, Ctx } from "./env";
 import { countedAllocations, ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
 import { parseNominatim } from "../shared/geocode";
 import { cleanDetails } from "../shared/ideaDetails";
@@ -28,13 +30,7 @@ import type {
   TripInput,
 } from "../shared/types";
 
-interface Env {
-  DB: D1Database;
-}
-
-type Ctx = Context<{ Bindings: Env }>;
-
-const app = new Hono<{ Bindings: Env }>().basePath("/api");
+const app = new Hono<App>().basePath("/api");
 
 app.onError((err, c) => {
   if (err instanceof HttpError) return c.json({ error: err.message }, err.status);
@@ -58,20 +54,27 @@ app.use("*", async (c, next) => {
   await next();
 });
 
-class HttpError extends Error {
-  constructor(
-    public status: 400 | 404 | 409,
-    message: string,
-  ) {
-    super(message);
-  }
-}
+authRoutes(app);
 
-/** There is no login yet, so the browser says who it is with this header. */
+// Everything below needs a signed-in family. The browser says which family
+// member it is with the X-Person-Id header, which must be one of that family.
+app.use("*", async (c, next) => {
+  const session = await readSession(c);
+  if (!session) throw new HttpError(401, "Sign in to carry on");
+  c.set("family", session.family);
+  c.set("role", session.role);
+  const raw = Number(c.req.header("X-Person-Id"));
+  const person = Number.isInteger(raw)
+    ? await c.env.DB.prepare("SELECT id FROM people WHERE id = ? AND family_id = ? AND removed = 0").bind(raw, session.family).first<{ id: number }>()
+    : null;
+  c.set("person", person?.id ?? null);
+  await next();
+});
+
+familyRoutes(app);
+
 function viewerId(c: Ctx): number | null {
-  const raw = c.req.header("X-Person-Id");
-  const id = raw ? Number(raw) : NaN;
-  return Number.isInteger(id) ? id : null;
+  return c.get("person");
 }
 
 function requireViewer(c: Ctx): number {
@@ -117,28 +120,73 @@ async function body(c: Ctx): Promise<Record<string, unknown>> {
 // ---------- People ----------
 
 app.get("/people", async (c) => {
-  const { results } = await c.env.DB.prepare("SELECT id, name, color FROM people ORDER BY id").all<Person>();
-  return c.json(results);
+  const { results } = await c.env.DB.prepare("SELECT id, name, color, removed FROM people WHERE family_id = ? ORDER BY id")
+    .bind(c.get("family"))
+    .all<Omit<Person, "removed"> & { removed: number }>();
+  return c.json(results.map((p) => ({ ...p, removed: !!p.removed })));
 });
 
-app.put("/people/:id", async (c) => {
-  const id = idParam(c);
-  const b = await body(c);
+function personInput(b: Record<string, unknown>) {
   const name = cleanText(b.name, 40);
   const color = typeof b.color === "string" && /^#[0-9a-fA-F]{6}$/.test(b.color) ? b.color : null;
   if (!name) throw new HttpError(400, "Name is required");
-  const res = await c.env.DB.prepare("UPDATE people SET name = ?, color = COALESCE(?, color) WHERE id = ?")
-    .bind(name, color, id)
+  return { name, color };
+}
+
+// Anyone in the family can add themselves.
+app.post("/people", async (c) => {
+  const { name, color } = personInput(await body(c));
+  const db = c.env.DB;
+  const count = await db.prepare("SELECT COUNT(*) AS n FROM people WHERE family_id = ? AND removed = 0").bind(c.get("family")).first<{ n: number }>();
+  if ((count?.n ?? 0) >= 30) throw new HttpError(409, "A family can have up to 30 people");
+  const row = await db.prepare("INSERT INTO people (name, color, family_id) VALUES (?, ?, ?) RETURNING id")
+    .bind(name, color ?? "#2563eb", c.get("family"))
+    .first<{ id: number }>();
+  // A newcomer joins a shortlist still being made, so it waits for their swipes too.
+  return c.json({ id: row!.id }, 201);
+});
+
+// The organiser can rename anyone; everyone else only themselves.
+app.put("/people/:id", async (c) => {
+  const id = idParam(c);
+  if (c.get("role") !== "owner" && viewerId(c) !== id) throw new HttpError(403, "You can only change your own name");
+  const { name, color } = personInput(await body(c));
+  const res = await c.env.DB.prepare("UPDATE people SET name = ?, color = COALESCE(?, color) WHERE id = ? AND family_id = ? AND removed = 0")
+    .bind(name, color, id, c.get("family"))
     .run();
   if (!res.meta.changes) throw new HttpError(404, "Not found");
   return c.json({ ok: true });
 });
 
+// Removing someone keeps their name on past draws, but takes them out of the open round.
+app.delete("/people/:id", async (c) => {
+  requireOwner(c);
+  const id = idParam(c);
+  const db = c.env.DB;
+  const family = c.get("family");
+  const res = await db.prepare("UPDATE people SET removed = 1 WHERE id = ? AND family_id = ? AND removed = 0").bind(id, family).run();
+  if (!res.meta.changes) throw new HttpError(404, "Not found");
+  const open = "(SELECT id FROM rounds WHERE family_id = ? AND status = 'open')";
+  await db.batch(
+    ["allocations", "round_locks", "round_vetoes", "round_swipes"].map((t) =>
+      db.prepare(`DELETE FROM ${t} WHERE person_id = ? AND round_id IN ${open}`).bind(id, family),
+    ),
+  );
+  // They may have been the last one still swiping.
+  await finishOpenShortlist(db, family);
+  return c.json({ ok: true });
+});
+
 // ---------- Places helpers ----------
 
-async function loadPlaces(db: D1Database, table: "trip_places" | "idea_places", key: "trip_id" | "idea_id") {
+async function loadPlaces(db: D1Database, family: number, table: "trip_places" | "idea_places", key: "trip_id" | "idea_id") {
+  const parent = table === "trip_places" ? "trips" : "ideas";
   const { results } = await db
-    .prepare(`SELECT ${key} AS owner, name, country, country_code, lat, lon FROM ${table} ORDER BY ${key}, position`)
+    .prepare(
+      `SELECT ${key} AS owner, name, country, country_code, lat, lon FROM ${table}
+       WHERE ${key} IN (SELECT id FROM ${parent} WHERE family_id = ?) ORDER BY ${key}, position`,
+    )
+    .bind(family)
     .all<Place & { owner: number }>();
   const byOwner = new Map<number, Place[]>();
   for (const { owner, ...place } of results) {
@@ -194,19 +242,34 @@ function tripInput(b: Record<string, unknown>): TripInput {
 
 app.get("/trips", async (c) => {
   const [{ results }, places] = await Promise.all([
-    c.env.DB.prepare("SELECT * FROM trips ORDER BY COALESCE(start_date, created_at) DESC").all<Omit<Trip, "places" | "road_trip" | "cruise" | "rail" | "depart" | "arrive"> & { road_trip: number; cruise: number; rail: number } & EndsRow>(),
-    loadPlaces(c.env.DB, "trip_places", "trip_id"),
+    c.env.DB.prepare("SELECT * FROM trips WHERE family_id = ? ORDER BY COALESCE(start_date, created_at) DESC").bind(c.get("family")).all<Omit<Trip, "places" | "road_trip" | "cruise" | "rail" | "depart" | "arrive"> & { road_trip: number; cruise: number; rail: number } & EndsRow>(),
+    loadPlaces(c.env.DB, c.get("family"), "trip_places", "trip_id"),
   ]);
   return c.json(results.map((t) => ({ ...t, road_trip: !!t.road_trip, cruise: !!t.cruise, rail: !!t.rail, ...parseEnds(t), places: places.get(t.id) ?? [] })));
 });
 
+/** The id if it's one of this family's ideas, otherwise null. */
+async function familyIdea(c: Ctx, id: number | null) {
+  if (id === null) return null;
+  const row = await c.env.DB.prepare("SELECT id FROM ideas WHERE id = ? AND family_id = ?").bind(id, c.get("family")).first<{ id: number }>();
+  return row?.id ?? null;
+}
+
+/** The id if it's one of this family's people, otherwise whoever is using this browser. */
+async function familyPerson(c: Ctx, id: number | null) {
+  if (id === null) return viewerId(c);
+  const row = await c.env.DB.prepare("SELECT id FROM people WHERE id = ? AND family_id = ?").bind(id, c.get("family")).first<{ id: number }>();
+  return row?.id ?? viewerId(c);
+}
+
 app.post("/trips", async (c) => {
   const t = tripInput(await body(c));
+  t.idea_id = await familyIdea(c, t.idea_id);
   const row = await c.env.DB.prepare(
-    `INSERT INTO trips (title, start_date, end_date, notes, rating, cover_url, road_trip, cruise, rail, depart, arrive, idea_id, created_by)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
+    `INSERT INTO trips (title, start_date, end_date, notes, rating, cover_url, road_trip, cruise, rail, depart, arrive, idea_id, created_by, family_id)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
   )
-    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.rail ? 1 : 0, terminalJson(t.depart), terminalJson(t.arrive), t.idea_id, t.created_by ?? viewerId(c))
+    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.rail ? 1 : 0, terminalJson(t.depart), terminalJson(t.arrive), t.idea_id, await familyPerson(c, t.created_by), c.get("family"))
     .first<{ id: number }>();
   const id = row!.id;
   const stmts = placeInserts(c.env.DB, "trip_places", "trip_id", id, t.places);
@@ -220,9 +283,9 @@ app.put("/trips/:id", async (c) => {
   const id = idParam(c);
   const t = tripInput(await body(c));
   const res = await c.env.DB.prepare(
-    `UPDATE trips SET title = ?, start_date = ?, end_date = ?, notes = ?, rating = ?, cover_url = ?, road_trip = ?, cruise = ?, rail = ?, depart = ?, arrive = ? WHERE id = ?`,
+    `UPDATE trips SET title = ?, start_date = ?, end_date = ?, notes = ?, rating = ?, cover_url = ?, road_trip = ?, cruise = ?, rail = ?, depart = ?, arrive = ? WHERE id = ? AND family_id = ?`,
   )
-    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.rail ? 1 : 0, terminalJson(t.depart), terminalJson(t.arrive), id)
+    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.rail ? 1 : 0, terminalJson(t.depart), terminalJson(t.arrive), id, c.get("family"))
     .run();
   if (!res.meta.changes) throw new HttpError(404, "Not found");
   await c.env.DB.batch(placeInserts(c.env.DB, "trip_places", "trip_id", id, t.places));
@@ -230,8 +293,9 @@ app.put("/trips/:id", async (c) => {
 });
 
 app.delete("/trips/:id", async (c) => {
+  requireOwner(c);
   const id = idParam(c);
-  const trip = await c.env.DB.prepare("SELECT idea_id FROM trips WHERE id = ?").bind(id).first<{ idea_id: number | null }>();
+  const trip = await c.env.DB.prepare("SELECT idea_id FROM trips WHERE id = ? AND family_id = ?").bind(id, c.get("family")).first<{ idea_id: number | null }>();
   if (!trip) throw new HttpError(404, "Not found");
   const stmts = [c.env.DB.prepare("DELETE FROM trips WHERE id = ?").bind(id)];
   if (trip.idea_id !== null) {
@@ -277,8 +341,8 @@ function parseTypes(raw: string | null): Idea["holiday_types"] {
 
 app.get("/ideas", async (c) => {
   const [{ results }, places] = await Promise.all([
-    c.env.DB.prepare("SELECT * FROM ideas WHERE status != 'archived' ORDER BY created_at DESC").all<IdeaRow>(),
-    loadPlaces(c.env.DB, "idea_places", "idea_id"),
+    c.env.DB.prepare("SELECT * FROM ideas WHERE family_id = ? AND status != 'archived' ORDER BY created_at DESC").bind(c.get("family")).all<IdeaRow>(),
+    loadPlaces(c.env.DB, c.get("family"), "idea_places", "idea_id"),
   ]);
   return c.json(results.map((i) => ({ ...i, holiday_types: parseTypes(i.holiday_types), ...parseEnds(i), places: places.get(i.id) ?? [] })));
 });
@@ -286,12 +350,12 @@ app.get("/ideas", async (c) => {
 app.post("/ideas", async (c) => {
   const i = ideaInput(await body(c));
   // Travel time is always worked out from the departure point or home, never typed in.
-  const travel = estimateTravel(i.depart ?? (await loadHome(c.env.DB)), i.places)?.travel_time ?? null;
+  const travel = estimateTravel(i.depart ?? (await loadHome(c.env.DB, c.get("family"))), i.places)?.travel_time ?? null;
   const row = await c.env.DB.prepare(
-    `INSERT INTO ideas (title, description, cover_url, created_by, budget, trip_length, travel_time, holiday_types, depart, arrive)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
+    `INSERT INTO ideas (title, description, cover_url, created_by, budget, trip_length, travel_time, holiday_types, depart, arrive, family_id)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
   )
-    .bind(i.title, i.description, i.cover_url, i.created_by ?? viewerId(c), i.budget, i.trip_length, travel, JSON.stringify(i.holiday_types), terminalJson(i.depart), terminalJson(i.arrive))
+    .bind(i.title, i.description, i.cover_url, await familyPerson(c, i.created_by), i.budget, i.trip_length, travel, JSON.stringify(i.holiday_types), terminalJson(i.depart), terminalJson(i.arrive), c.get("family"))
     .first<{ id: number }>();
   await c.env.DB.batch(placeInserts(c.env.DB, "idea_places", "idea_id", row!.id, i.places));
   return c.json({ id: row!.id }, 201);
@@ -301,23 +365,25 @@ app.put("/ideas/:id", async (c) => {
   const id = idParam(c);
   const i = ideaInput(await body(c));
   // Without an estimate (no departure or home, or no located places) the old travel time stays.
-  const travel = estimateTravel(i.depart ?? (await loadHome(c.env.DB)), i.places)?.travel_time ?? null;
+  const travel = estimateTravel(i.depart ?? (await loadHome(c.env.DB, c.get("family"))), i.places)?.travel_time ?? null;
   const res = await c.env.DB.prepare(
     `UPDATE ideas SET title = ?, description = ?, cover_url = ?, budget = ?, trip_length = ?, travel_time = COALESCE(?, travel_time), holiday_types = ?, depart = ?, arrive = ?
-     WHERE id = ? AND status != 'archived'`,
+     WHERE id = ? AND family_id = ? AND status != 'archived'`,
   )
-    .bind(i.title, i.description, i.cover_url, i.budget, i.trip_length, travel, JSON.stringify(i.holiday_types), terminalJson(i.depart), terminalJson(i.arrive), id)
+    .bind(i.title, i.description, i.cover_url, i.budget, i.trip_length, travel, JSON.stringify(i.holiday_types), terminalJson(i.depart), terminalJson(i.arrive), id, c.get("family"))
     .run();
   if (!res.meta.changes) throw new HttpError(404, "Not found");
   await c.env.DB.batch(placeInserts(c.env.DB, "idea_places", "idea_id", id, i.places));
   // An edit can move an idea out of a filtered round's pool.
-  await finishOpenShortlist(c.env.DB);
+  await finishOpenShortlist(c.env.DB, c.get("family"));
   return c.json({ ok: true });
 });
 
 app.delete("/ideas/:id", async (c) => {
+  requireOwner(c);
   const id = idParam(c);
   const db = c.env.DB;
+  if ((await familyIdea(c, id)) === null) throw new HttpError(404, "Not found");
   const used = await db.prepare("SELECT 1 FROM allocations a JOIN rounds r ON r.id = a.round_id WHERE a.idea_id = ? AND r.status = 'drawn' LIMIT 1")
     .bind(id)
     .first();
@@ -334,7 +400,7 @@ app.delete("/ideas/:id", async (c) => {
   stmts.push(used ? db.prepare("UPDATE ideas SET status = 'archived' WHERE id = ?").bind(id) : db.prepare("DELETE FROM ideas WHERE id = ?").bind(id));
   await db.batch(stmts);
   // Removing the last idea someone had left to swipe can complete the shortlist.
-  await finishOpenShortlist(db);
+  await finishOpenShortlist(db, c.get("family"));
   return c.json({ ok: true });
 });
 
@@ -348,23 +414,30 @@ type RoundRow = Omit<Round, "locked" | "vetoes" | "allocations" | "ideas" | "fil
 type SwipeRow = { round_id: number; person_id: number; idea_id: number; liked: number };
 const toSwipe = (s: Omit<SwipeRow, "round_id">): Swipe => ({ person_id: s.person_id, idea_id: s.idea_id, liked: !!s.liked });
 
-async function loadRounds(db: D1Database, viewer: number | null, onlyId?: number): Promise<Round[]> {
-  const where = onlyId === undefined ? "" : "WHERE id = ?";
-  const roundsQ = db.prepare(`SELECT * FROM rounds ${where} ORDER BY id DESC`);
-  const { results: rounds } = await (onlyId === undefined ? roundsQ : roundsQ.bind(onlyId)).all<RoundRow>();
+/** People in a family who take part in draws. */
+async function activePeople(db: D1Database, family: number) {
+  const { results } = await db.prepare("SELECT id FROM people WHERE family_id = ? AND removed = 0").bind(family).all<{ id: number }>();
+  return results.map((p) => p.id);
+}
+
+async function loadRounds(db: D1Database, family: number, viewer: number | null, onlyId?: number): Promise<Round[]> {
+  const where = onlyId === undefined ? "" : "AND id = ?";
+  const roundsQ = db.prepare(`SELECT * FROM rounds WHERE family_id = ? ${where} ORDER BY id DESC`);
+  const { results: rounds } = await (onlyId === undefined ? roundsQ.bind(family) : roundsQ.bind(family, onlyId)).all<RoundRow>();
   if (rounds.length === 0) return [];
+  const mine = "round_id IN (SELECT id FROM rounds WHERE family_id = ?)";
   const [allocs, locks, vetoes, ideas, swipes, people] = await Promise.all([
-    db.prepare("SELECT round_id, person_id, idea_id, points FROM allocations").all<Allocation & { round_id: number }>(),
-    db.prepare("SELECT round_id, person_id FROM round_locks").all<{ round_id: number; person_id: number }>(),
-    db.prepare("SELECT round_id, person_id, idea_id FROM round_vetoes").all<{ round_id: number; person_id: number; idea_id: number }>(),
-    db.prepare("SELECT id, title, status FROM ideas").all<{ id: number; title: string; status: IdeaStatus }>(),
-    db.prepare("SELECT round_id, person_id, idea_id, liked FROM round_swipes").all<SwipeRow>(),
-    db.prepare("SELECT id FROM people").all<{ id: number }>(),
+    db.prepare(`SELECT round_id, person_id, idea_id, points FROM allocations WHERE ${mine}`).bind(family).all<Allocation & { round_id: number }>(),
+    db.prepare(`SELECT round_id, person_id FROM round_locks WHERE ${mine}`).bind(family).all<{ round_id: number; person_id: number }>(),
+    db.prepare(`SELECT round_id, person_id, idea_id FROM round_vetoes WHERE ${mine}`).bind(family).all<{ round_id: number; person_id: number; idea_id: number }>(),
+    db.prepare("SELECT id, title, status FROM ideas WHERE family_id = ?").bind(family).all<{ id: number; title: string; status: IdeaStatus }>(),
+    db.prepare(`SELECT round_id, person_id, idea_id, liked FROM round_swipes WHERE ${mine}`).bind(family).all<SwipeRow>(),
+    activePeople(db, family),
   ]);
   const ideaById = new Map(ideas.results.map((i) => [i.id, i]));
   // Who is still swiping only matters for an open round that's still building its shortlist.
   const building = rounds.find((r) => r.status === "open" && r.swipe && !r.shortlist);
-  const pool = building ? await matchingIdeaIds(db, cleanFilters(building.filters)) : [];
+  const pool = building ? await matchingIdeaIds(db, family, cleanFilters(building.filters)) : [];
   return rounds.map((r) => {
     const roundSwipes = swipes.results.filter((s) => s.round_id === r.id).map(toSwipe);
     const all = allocs.results.filter((a) => a.round_id === r.id);
@@ -383,7 +456,7 @@ async function loadRounds(db: D1Database, viewer: number | null, onlyId?: number
       swipe: !!r.swipe,
       shortlist: parseShortlist(r.shortlist),
       my_swipes: roundSwipes.filter((x) => x.person_id === viewer).map(({ idea_id, liked }) => ({ idea_id, liked })),
-      swiping: r === building ? people.results.map((p) => p.id).filter((id) => unswiped(id, pool, roundSwipes).length > 0) : [],
+      swiping: r === building ? people.filter((id) => unswiped(id, pool, roundSwipes).length > 0) : [],
       locked: locks.results.filter((l) => l.round_id === r.id).map((l) => l.person_id),
       vetoes: roundVetoes,
       allocations: visible.map(({ person_id, idea_id, points }) => ({ person_id, idea_id, points })),
@@ -395,9 +468,9 @@ async function loadRounds(db: D1Database, viewer: number | null, onlyId?: number
   });
 }
 
-async function openRound(db: D1Database, id: number) {
-  const r = await db.prepare("SELECT id, points_per_person, status, swipe, shortlist, filters FROM rounds WHERE id = ?")
-    .bind(id)
+async function openRound(c: Ctx) {
+  const r = await c.env.DB.prepare("SELECT id, points_per_person, status, swipe, shortlist, filters FROM rounds WHERE id = ? AND family_id = ?")
+    .bind(idParam(c), c.get("family"))
     .first<{ id: number; points_per_person: number; status: string; swipe: number; shortlist: string | null; filters: string }>();
   if (!r) throw new HttpError(404, "Not found");
   if (r.status !== "open") throw new HttpError(409, "This round has already been drawn");
@@ -405,9 +478,10 @@ async function openRound(db: D1Database, id: number) {
 }
 
 /** Active ideas that fit a round's filters. */
-async function matchingIdeaIds(db: D1Database, filters: RoundFilters) {
+async function matchingIdeaIds(db: D1Database, family: number, filters: RoundFilters) {
   const { results } = await db
-    .prepare("SELECT id, budget, trip_length, travel_time, holiday_types FROM ideas WHERE status = 'active'")
+    .prepare("SELECT id, budget, trip_length, travel_time, holiday_types FROM ideas WHERE family_id = ? AND status = 'active'")
+    .bind(family)
     .all<Omit<IdeaDetails, "holiday_types"> & { id: number; holiday_types: string | null }>();
   return results.filter((i) => matchesFilters({ ...i, holiday_types: parseTypes(i.holiday_types) }, filters)).map((i) => i.id);
 }
@@ -417,7 +491,7 @@ async function matchingIdeaIds(db: D1Database, filters: RoundFilters) {
  * and not vetoed by that person. Someone else's veto is secret, so it doesn't
  * stop you spending points on that idea; those points just don't count in the draw.
  */
-async function eligibleIdeaIds(db: D1Database, roundId: number, personId: number) {
+async function eligibleIdeaIds(db: D1Database, family: number, roundId: number, personId: number) {
   const [round, veto] = await Promise.all([
     db.prepare("SELECT filters, swipe, shortlist FROM rounds WHERE id = ?").bind(roundId).first<{ filters: string; swipe: number; shortlist: string | null }>(),
     db.prepare("SELECT idea_id FROM round_vetoes WHERE round_id = ? AND person_id = ?").bind(roundId, personId).first<{ idea_id: number }>(),
@@ -426,10 +500,10 @@ async function eligibleIdeaIds(db: D1Database, roundId: number, personId: number
   if (round?.swipe) {
     const shortlist = parseShortlist(round.shortlist);
     if (!shortlist) return new Set<number>();
-    const active = new Set(await matchingIdeaIds(db, NO_FILTERS));
+    const active = new Set(await matchingIdeaIds(db, family, NO_FILTERS));
     return new Set(shortlist.ids.filter((id) => active.has(id) && id !== veto?.idea_id));
   }
-  const ids = await matchingIdeaIds(db, cleanFilters(round?.filters));
+  const ids = await matchingIdeaIds(db, family, cleanFilters(round?.filters));
   return new Set(ids.filter((id) => id !== veto?.idea_id));
 }
 
@@ -437,30 +511,32 @@ async function isLocked(db: D1Database, roundId: number, personId: number) {
   return !!(await db.prepare("SELECT 1 FROM round_locks WHERE round_id = ? AND person_id = ?").bind(roundId, personId).first());
 }
 
-app.get("/rounds", async (c) => c.json(await loadRounds(c.env.DB, viewerId(c))));
+app.get("/rounds", async (c) => c.json(await loadRounds(c.env.DB, c.get("family"), viewerId(c))));
 
 app.post("/rounds", async (c) => {
   const b = await body(c);
   const points = typeof b.points_per_person === "number" ? Math.round(b.points_per_person) : 10;
   if (points < 1 || points > 100) throw new HttpError(400, "Points must be between 1 and 100");
-  const existing = await c.env.DB.prepare("SELECT 1 FROM rounds WHERE status = 'open'").first();
+  const family = c.get("family");
+  const existing = await c.env.DB.prepare("SELECT 1 FROM rounds WHERE family_id = ? AND status = 'open'").bind(family).first();
   if (existing) throw new HttpError(409, "There is already an open round");
-  const count = await c.env.DB.prepare("SELECT COUNT(*) AS n FROM rounds").first<{ n: number }>();
+  const count = await c.env.DB.prepare("SELECT COUNT(*) AS n FROM rounds WHERE family_id = ?").bind(family).first<{ n: number }>();
   const name = cleanText(b.name, 100) ?? `Round ${(count?.n ?? 0) + 1}`;
   const filters = cleanFilters(b.filters);
-  if ((await matchingIdeaIds(c.env.DB, filters)).length < 2) {
+  if ((await matchingIdeaIds(c.env.DB, family, filters)).length < 2) {
     throw new HttpError(400, "At least 2 ideas need to match the filters");
   }
-  const row = await c.env.DB.prepare("INSERT INTO rounds (name, points_per_person, filters, swipe) VALUES (?, ?, ?, ?) RETURNING id")
-    .bind(name, points, JSON.stringify(filters), b.swipe === true ? 1 : 0)
+  const row = await c.env.DB.prepare("INSERT INTO rounds (name, points_per_person, filters, swipe, family_id) VALUES (?, ?, ?, ?, ?) RETURNING id")
+    .bind(name, points, JSON.stringify(filters), b.swipe === true ? 1 : 0, family)
     .first<{ id: number }>();
   return c.json({ id: row!.id }, 201);
 });
 
 app.delete("/rounds/:id", async (c) => {
+  requireOwner(c);
   const db = c.env.DB;
-  const r = await db.prepare("SELECT id, winner_idea_id FROM rounds WHERE id = ?")
-    .bind(idParam(c))
+  const r = await db.prepare("SELECT id, winner_idea_id FROM rounds WHERE id = ? AND family_id = ?")
+    .bind(idParam(c), c.get("family"))
     .first<{ id: number; winner_idea_id: number | null }>();
   if (!r) throw new HttpError(404, "Not found");
   const stmts = [db.prepare("DELETE FROM rounds WHERE id = ?").bind(r.id)];
@@ -474,13 +550,13 @@ app.delete("/rounds/:id", async (c) => {
 
 app.put("/rounds/:id/allocations", async (c) => {
   const viewer = requireViewer(c);
-  const r = await openRound(c.env.DB, idParam(c));
+  const r = await openRound(c);
   if (await isLocked(c.env.DB, r.id, viewer)) throw new HttpError(409, "Unlock your points before changing them");
   const b = await body(c);
   const entries = Array.isArray(b.allocations)
     ? b.allocations.map((a: { idea_id?: unknown; points?: unknown }) => ({ idea_id: Number(a?.idea_id), points: Number(a?.points) }))
     : [];
-  const error = validateAllocation(entries, r.points_per_person, await eligibleIdeaIds(c.env.DB, r.id, viewer), false);
+  const error = validateAllocation(entries, r.points_per_person, await eligibleIdeaIds(c.env.DB, c.get("family"), r.id, viewer), false);
   if (error) throw new HttpError(400, error);
   await c.env.DB.batch([
     c.env.DB.prepare("DELETE FROM allocations WHERE round_id = ? AND person_id = ?").bind(r.id, viewer),
@@ -495,11 +571,11 @@ app.put("/rounds/:id/allocations", async (c) => {
 
 app.post("/rounds/:id/lock", async (c) => {
   const viewer = requireViewer(c);
-  const r = await openRound(c.env.DB, idParam(c));
+  const r = await openRound(c);
   const { results } = await c.env.DB.prepare("SELECT idea_id, points FROM allocations WHERE round_id = ? AND person_id = ?")
     .bind(r.id, viewer)
     .all<{ idea_id: number; points: number }>();
-  const error = validateAllocation(results, r.points_per_person, await eligibleIdeaIds(c.env.DB, r.id, viewer), true);
+  const error = validateAllocation(results, r.points_per_person, await eligibleIdeaIds(c.env.DB, c.get("family"), r.id, viewer), true);
   if (error) throw new HttpError(400, error);
   await c.env.DB.prepare("INSERT OR IGNORE INTO round_locks (round_id, person_id) VALUES (?, ?)").bind(r.id, viewer).run();
   return c.json({ ok: true });
@@ -507,7 +583,7 @@ app.post("/rounds/:id/lock", async (c) => {
 
 app.delete("/rounds/:id/lock", async (c) => {
   const viewer = requireViewer(c);
-  const r = await openRound(c.env.DB, idParam(c));
+  const r = await openRound(c);
   await c.env.DB.prepare("DELETE FROM round_locks WHERE round_id = ? AND person_id = ?").bind(r.id, viewer).run();
   return c.json({ ok: true });
 });
@@ -516,55 +592,54 @@ app.delete("/rounds/:id/lock", async (c) => {
  * Fixes a swipe round's shortlist once everyone has swiped every idea in its
  * pool. Safe to call any time; it does nothing until then, or once it's set.
  */
-async function finishShortlist(db: D1Database, roundId: number) {
+async function finishShortlist(db: D1Database, family: number, roundId: number) {
   const r = await db.prepare("SELECT filters FROM rounds WHERE id = ? AND status = 'open' AND swipe = 1 AND shortlist IS NULL")
     .bind(roundId)
     .first<{ filters: string }>();
   if (!r) return;
-  const [pool, people, swipes] = await Promise.all([
-    matchingIdeaIds(db, cleanFilters(r.filters)),
-    db.prepare("SELECT id FROM people").all<{ id: number }>(),
+  const [pool, ids, swipes] = await Promise.all([
+    matchingIdeaIds(db, family, cleanFilters(r.filters)),
+    activePeople(db, family),
     db.prepare("SELECT person_id, idea_id, liked FROM round_swipes WHERE round_id = ?").bind(roundId).all<Omit<SwipeRow, "round_id">>(),
   ]);
   const all = swipes.results.map(toSwipe);
-  const ids = people.results.map((p) => p.id);
   if (ids.some((id) => unswiped(id, pool, all).length > 0)) return;
   const shortlist = buildShortlist(pool, ids, all);
   await db.prepare("UPDATE rounds SET shortlist = ? WHERE id = ? AND shortlist IS NULL").bind(JSON.stringify(shortlist), roundId).run();
 }
 
-async function finishOpenShortlist(db: D1Database) {
-  const r = await db.prepare("SELECT id FROM rounds WHERE status = 'open'").first<{ id: number }>();
-  if (r) await finishShortlist(db, r.id);
+async function finishOpenShortlist(db: D1Database, family: number) {
+  const r = await db.prepare("SELECT id FROM rounds WHERE family_id = ? AND status = 'open'").bind(family).first<{ id: number }>();
+  if (r) await finishShortlist(db, family, r.id);
 }
 
 app.put("/rounds/:id/swipes", async (c) => {
   const viewer = requireViewer(c);
   const db = c.env.DB;
-  const r = await openRound(db, idParam(c));
+  const r = await openRound(c);
   if (!r.swipe) throw new HttpError(400, "This round doesn't use swiping");
   if (r.shortlist) throw new HttpError(409, "The shortlist is already made");
   const b = await body(c);
   const ideaId = Number(b.idea_id);
   if (typeof b.liked !== "boolean") throw new HttpError(400, "Say yes or no");
-  if (!(await matchingIdeaIds(db, cleanFilters(r.filters))).includes(ideaId)) throw new HttpError(400, "That idea isn't in this round");
+  if (!(await matchingIdeaIds(db, c.get("family"), cleanFilters(r.filters))).includes(ideaId)) throw new HttpError(400, "That idea isn't in this round");
   await db.prepare("INSERT OR REPLACE INTO round_swipes (round_id, person_id, idea_id, liked) VALUES (?, ?, ?, ?)")
     .bind(r.id, viewer, ideaId, b.liked ? 1 : 0)
     .run();
-  await finishShortlist(db, r.id);
+  await finishShortlist(db, c.get("family"), r.id);
   return c.json({ ok: true });
 });
 
 app.post("/rounds/:id/veto", async (c) => {
   const viewer = requireViewer(c);
   const db = c.env.DB;
-  const r = await openRound(db, idParam(c));
+  const r = await openRound(c);
   if (await isLocked(db, r.id, viewer)) throw new HttpError(409, "Unlock your points before using your veto");
   const b = await body(c);
   const ideaId = Number(b.idea_id);
   const existing = await db.prepare("SELECT 1 FROM round_vetoes WHERE round_id = ? AND person_id = ?").bind(r.id, viewer).first();
   if (existing) throw new HttpError(409, "You've already used your veto this round");
-  const eligible = await eligibleIdeaIds(db, r.id, viewer);
+  const eligible = await eligibleIdeaIds(db, c.get("family"), r.id, viewer);
   if (!eligible.has(ideaId)) throw new HttpError(400, "That idea can't be vetoed");
   if (eligible.size <= 1) throw new HttpError(409, "That's the last idea left in this round");
   // Only your own points on it come back. Nobody else is told, so their points stay put.
@@ -577,7 +652,7 @@ app.post("/rounds/:id/veto", async (c) => {
 
 app.delete("/rounds/:id/veto", async (c) => {
   const viewer = requireViewer(c);
-  const r = await openRound(c.env.DB, idParam(c));
+  const r = await openRound(c);
   if (await isLocked(c.env.DB, r.id, viewer)) throw new HttpError(409, "Unlock your points before changing your veto");
   await c.env.DB.prepare("DELETE FROM round_vetoes WHERE round_id = ? AND person_id = ?").bind(r.id, viewer).run();
   return c.json({ ok: true });
@@ -585,15 +660,15 @@ app.delete("/rounds/:id/veto", async (c) => {
 
 app.post("/rounds/:id/draw", async (c) => {
   const db = c.env.DB;
-  const r = await openRound(db, idParam(c));
+  const r = await openRound(c);
   const [people, locks, allocs, vetoes] = await Promise.all([
-    db.prepare("SELECT id FROM people").all<{ id: number }>(),
+    activePeople(db, c.get("family")),
     db.prepare("SELECT person_id FROM round_locks WHERE round_id = ?").bind(r.id).all<{ person_id: number }>(),
     db.prepare("SELECT person_id, idea_id, points FROM allocations WHERE round_id = ?").bind(r.id).all<Allocation>(),
     db.prepare("SELECT idea_id FROM round_vetoes WHERE round_id = ?").bind(r.id).all<{ idea_id: number }>(),
   ]);
   const lockedIds = new Set(locks.results.map((l) => l.person_id));
-  if (!people.results.every((p) => lockedIds.has(p.id))) throw new HttpError(409, "Everyone needs to lock in their points first");
+  if (people.length === 0 || !people.every((id) => lockedIds.has(id))) throw new HttpError(409, "Everyone needs to lock in their points first");
 
   // Points on vetoed ideas don't become tickets.
   const ranges = ticketRanges(countedAllocations(allocs.results, vetoes.results.map((v) => v.idea_id)));
@@ -609,14 +684,14 @@ app.post("/rounds/:id/draw", async (c) => {
     .run();
   if (!res.meta.changes) throw new HttpError(409, "This round has already been drawn");
   await db.prepare("UPDATE ideas SET status = 'won' WHERE id = ? AND status = 'active'").bind(winner).run();
-  const [round] = await loadRounds(db, viewerId(c), r.id);
+  const [round] = await loadRounds(db, c.get("family"), viewerId(c), r.id);
   return c.json(round);
 });
 
 // ---------- Settings ----------
 
-async function loadHome(db: D1Database): Promise<Home> {
-  const row = await db.prepare("SELECT value FROM settings WHERE key = 'home'").first<{ value: string }>();
+async function loadHome(db: D1Database, family: number): Promise<Home> {
+  const row = await db.prepare("SELECT value FROM family_settings WHERE family_id = ? AND key = 'home'").bind(family).first<{ value: string }>();
   try {
     return row ? (cleanPlaces([JSON.parse(row.value)])[0] ?? null) : null;
   } catch {
@@ -624,20 +699,26 @@ async function loadHome(db: D1Database): Promise<Home> {
   }
 }
 
-app.get("/home", async (c) => c.json(await loadHome(c.env.DB)));
+app.get("/home", async (c) => c.json(await loadHome(c.env.DB, c.get("family"))));
 
 app.put("/home", async (c) => {
+  requireOwner(c);
   const b = await body(c);
   const [home] = cleanPlaces([b.home]);
   if (b.home !== null && (!home || home.lat === null || home.lon === null)) throw new HttpError(400, "Pick home from the search so it has a location");
-  await c.env.DB.prepare(home ? "INSERT OR REPLACE INTO settings (key, value) VALUES ('home', ?)" : "DELETE FROM settings WHERE key = 'home'")
-    .bind(...(home ? [JSON.stringify(home)] : []))
+  await c.env.DB.prepare(
+    home ? "INSERT OR REPLACE INTO family_settings (family_id, key, value) VALUES (?, 'home', ?)" : "DELETE FROM family_settings WHERE family_id = ? AND key = 'home'",
+  )
+    .bind(c.get("family"), ...(home ? [JSON.stringify(home)] : []))
     .run();
   return c.json({ ok: true });
 });
 
-async function loadHomeEnds(db: D1Database): Promise<HomeEnds> {
-  const { results } = await db.prepare("SELECT key, value FROM settings WHERE key IN ('home_airport', 'home_station')").all<{ key: string; value: string }>();
+async function loadHomeEnds(db: D1Database, family: number): Promise<HomeEnds> {
+  const { results } = await db
+    .prepare("SELECT key, value FROM family_settings WHERE family_id = ? AND key IN ('home_airport', 'home_station')")
+    .bind(family)
+    .all<{ key: string; value: string }>();
   const get = (key: string, kind: string) => {
     const t = cleanTerminal(results.find((r) => r.key === key)?.value ?? null);
     return t?.kind === kind ? t : null;
@@ -645,9 +726,10 @@ async function loadHomeEnds(db: D1Database): Promise<HomeEnds> {
   return { airport: get("home_airport", "airport"), station: get("home_station", "station") };
 }
 
-app.get("/home-ends", async (c) => c.json(await loadHomeEnds(c.env.DB)));
+app.get("/home-ends", async (c) => c.json(await loadHomeEnds(c.env.DB, c.get("family"))));
 
 app.put("/home-ends", async (c) => {
+  requireOwner(c);
   const b = await body(c);
   const stmts: D1PreparedStatement[] = [];
   for (const kind of ["airport", "station"] as const) {
@@ -656,8 +738,8 @@ app.put("/home-ends", async (c) => {
     if (b[kind] !== null && t?.kind !== kind) throw new HttpError(400, `Pick the ${kind} from the search`);
     stmts.push(
       t
-        ? c.env.DB.prepare("INSERT OR REPLACE INTO settings (key, value) VALUES (?, ?)").bind(`home_${kind}`, JSON.stringify(t))
-        : c.env.DB.prepare("DELETE FROM settings WHERE key = ?").bind(`home_${kind}`),
+        ? c.env.DB.prepare("INSERT OR REPLACE INTO family_settings (family_id, key, value) VALUES (?, ?, ?)").bind(c.get("family"), `home_${kind}`, JSON.stringify(t))
+        : c.env.DB.prepare("DELETE FROM family_settings WHERE family_id = ? AND key = ?").bind(c.get("family"), `home_${kind}`),
     );
   }
   if (stmts.length) await c.env.DB.batch(stmts);

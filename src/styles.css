@@ -916,6 +916,119 @@ button.card:hover {
   flex-shrink: 0;
 }
 
+.picker .form {
+  text-align: left;
+}
+.color-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.color-swatch {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  box-shadow: 0 0 0 1px var(--border);
+  cursor: pointer;
+  padding: 0;
+}
+.color-swatch.on {
+  border-color: var(--surface);
+  box-shadow: 0 0 0 2px var(--text);
+}
+.color-row input[type="color"] {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  padding: 2px;
+  background: var(--surface);
+}
+.share-link {
+  font-family: var(--mono);
+  font-size: 0.85rem !important;
+  margin: 0.4rem 0 0.2rem;
+}
+
+/* ---------- Welcome (signed out) ---------- */
+
+.welcome {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1rem calc(2rem + env(safe-area-inset-bottom));
+}
+.welcome-top {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  padding-top: calc(1rem + env(safe-area-inset-top));
+}
+.welcome-top .brand {
+  text-decoration: none;
+  color: var(--text);
+}
+.intro {
+  display: grid;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1.5rem 0 2rem;
+}
+.intro h1 {
+  font-size: clamp(1.9rem, 6vw, 2.9rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.intro .lead {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 34rem;
+}
+.intro.narrow {
+  max-width: 440px;
+  margin: 2rem auto;
+}
+.signin {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0;
+}
+.signin .btn.large {
+  margin-top: 0.2rem;
+}
+@media (min-width: 760px) {
+  .intro:not(.narrow) {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2.5rem;
+    padding: 3rem 0;
+  }
+  .intro:not(.narrow) h1,
+  .intro:not(.narrow) .lead {
+    grid-column: 1;
+  }
+  .intro:not(.narrow) .signin {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.feature {
+  margin: 0;
+}
+.feature-icon {
+  font-size: 1.8rem;
+}
+.how h2 + p {
+  margin-bottom: 1rem;
+}
+
 /* ---------- Draw ---------- */
 
 .round-head {

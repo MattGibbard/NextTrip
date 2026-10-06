@@ -13,33 +13,116 @@ import { setThemeChoice, themeChoice } from "../theme";
 import type { ThemeChoice } from "../theme";
 
 export function SettingsView() {
-  const { people, me, setMe } = useData();
+  const { people, me, setMe, isOwner } = useData();
   return (
     <section>
       <div className="page-head">
         <h1>Settings</h1>
       </div>
       <div className="panel">
-        <h2>The two of you</h2>
-        <p className="muted small">Names and colours show on ideas, points and draws.</p>
-        {people.map((p) => (
-          <PersonEditor key={p.id} person={p} />
-        ))}
+        <h2>Your family</h2>
+        <p className="muted small">
+          Names and colours show on ideas, points and draws.{" "}
+          {isOwner ? "Everyone here takes part in each draw, so remove anyone who isn't joining in." : "You can change your own."}
+        </p>
+        {people.map((p) => (isOwner || p.id === me?.id ? <PersonEditor key={p.id} person={p} /> : <PersonRow key={p.id} person={p} />))}
       </div>
-      <HomePanel />
-      <HomeEndsPanel />
+      {isOwner && <SharePanel />}
+      {isOwner && <HomePanel />}
+      {isOwner && <HomeEndsPanel />}
       <AppearancePanel />
       <div className="panel">
         <h2>This device</h2>
         <p>
-          You're using NextTrip as <strong>{me?.name ?? "nobody yet"}</strong>.
+          You're using NextTrip as <strong>{me?.name ?? "nobody yet"}</strong>
+          {isOwner ? ", signed in as the family organiser." : ", through the family link."}
         </p>
-        <button className="btn ghost" onClick={() => setMe(null)}>
-          Switch person
-        </button>
+        <div className="form-actions">
+          <button className="btn ghost" onClick={() => setMe(null)}>
+            Switch person
+          </button>
+          <SignOutButton />
+        </div>
       </div>
       <InstallPanel />
     </section>
+  );
+}
+
+function PersonRow({ person }: { person: Person }) {
+  return (
+    <div className="person-editor">
+      <span className="avatar" style={{ background: person.color }}>
+        {person.name.slice(0, 1).toUpperCase()}
+      </span>
+      <span className="grow">{person.name}</span>
+    </div>
+  );
+}
+
+function SignOutButton() {
+  const { isOwner } = useData();
+  const signOut = async () => {
+    const msg = isOwner
+      ? "Sign out on this device? You can sign back in with your email."
+      : "Leave on this device? You'll need the family link to get back in.";
+    if (!confirm(msg)) return;
+    await api.signOut().catch(() => {});
+    location.href = "/";
+  };
+  return (
+    <button className="btn ghost danger" onClick={signOut}>
+      {isOwner ? "Sign out" : "Leave"}
+    </button>
+  );
+}
+
+/** The private link that lets the rest of the family in, for the organiser to share or reset. */
+function SharePanel() {
+  const { shareUrl, setShareToken } = useData();
+  const [copied, setCopied] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  if (!shareUrl) return null;
+
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setError("Couldn't copy. Press and hold the link to copy it instead.");
+    }
+  };
+  const share = () => void navigator.share?.({ title: "NextTrip", text: "Join our family's NextTrip to add holiday ideas and vote in the draw.", url: shareUrl }).catch(() => {});
+  const reset = async () => {
+    if (!confirm("Make a new family link? The old one stops working, and everyone who used it will need the new one.")) return;
+    try {
+      setShareToken((await api.resetShareLink()).share_token);
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  };
+
+  return (
+    <div className="panel">
+      <h2>Family link</h2>
+      <p className="muted small">Send this to your family. Anyone with it can add ideas, take part in draws and see the results, so keep it private.</p>
+      <input className="share-link" readOnly value={shareUrl} onFocus={(e) => e.target.select()} aria-label="Family link" />
+      <div className="form-actions">
+        <button className="btn small" onClick={copy}>
+          {copied ? "Copied" : "Copy link"}
+        </button>
+        {"share" in navigator && (
+          <button className="btn small ghost" onClick={share}>
+            Share…
+          </button>
+        )}
+        <button className="btn small ghost danger" onClick={reset}>
+          Make a new link
+        </button>
+      </div>
+      {error && <p className="error-text">{error}</p>}
+    </div>
   );
 }
 
@@ -188,7 +271,7 @@ function InstallPanel() {
 }
 
 function PersonEditor({ person }: { person: Person }) {
-  const { reload } = useData();
+  const { reload, isOwner, me } = useData();
   const [name, setName] = useState(person.name);
   const [color, setColor] = useState(person.color);
   const [state, setState] = useState<"idle" | "saving" | "saved">("idle");
@@ -201,6 +284,12 @@ function PersonEditor({ person }: { person: Person }) {
     setState("saved");
   };
 
+  const remove = async () => {
+    if (!confirm(`Remove ${person.name} from the family? They'll still show on past draws, and any points they've put in the open round are cleared.`)) return;
+    await api.removePerson(person.id);
+    await reload();
+  };
+
   return (
     <div className="person-editor">
       <input type="color" value={color} onChange={(e) => setColor(e.target.value)} aria-label={`${person.name}'s colour`} />
@@ -208,6 +297,11 @@ function PersonEditor({ person }: { person: Person }) {
       <button className="btn small" disabled={!changed || !name.trim() || state === "saving"} onClick={saveIt}>
         {state === "saved" && !changed ? "Saved" : "Save"}
       </button>
+      {isOwner && person.id !== me?.id && (
+        <button className="btn small ghost danger" onClick={remove} aria-label={`Remove ${person.name}`}>
+          Remove
+        </button>
+      )}
     </div>
   );
 }

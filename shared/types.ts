@@ -7,7 +7,20 @@ export interface Person {
   id: number;
   name: string;
   color: string;
+  /** Taken out of the family by the organiser. Still named on past draws. */
+  removed: boolean;
 }
+
+/** Who this browser is signed in as. */
+export type Session =
+  | { signed_in: false }
+  | {
+      signed_in: true;
+      /** owner: the organiser, who signed in by email. member: came in with the family link. */
+      role: "owner" | "member";
+      /** The family link's secret part. Only the organiser sees it. */
+      share_token: string | null;
+    };
 
 export interface Place {
   name: string;

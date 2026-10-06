@@ -5,7 +5,7 @@ import { api } from "../api";
 import { useData } from "../data";
 import { flag } from "../countries";
 import { load, save } from "../storage";
-import { plural } from "../format";
+import { listNames, plural } from "../format";
 import { TripForm } from "./TripForm";
 import { IdeaDetailsLine } from "../components/IdeaDetails";
 import { SpinWheel } from "../components/SpinWheel";
@@ -22,7 +22,7 @@ export function DrawView() {
   const [seen, setSeen] = useState<number[]>(() => load("seenRounds", []));
   const [revealing, setRevealing] = useState<Round | null>(null);
 
-  // Keep the lock-in status fresh while a round is open, so the partner's progress shows up.
+  // Keep the lock-in status fresh while a round is open, so everyone else's progress shows up.
   useEffect(() => {
     if (!open) return;
     const t = setInterval(() => void reload(), 8000);
@@ -101,7 +101,7 @@ function StartRound({ lastPoints }: { lastPoints: number }) {
     <div className="panel">
       <h2>Start a new round</h2>
       <p className="muted">
-        You each get the same number of points to spread across the ideas in the pool. Points stay secret until you've both locked in. Then every point becomes one ticket in the draw.
+        You each get the same number of points to spread across the ideas in the pool. Points stay secret until everyone has locked in. Then every point becomes one ticket in the draw.
       </p>
       {pool.length < 2 ? (
         <p className="banner">
@@ -140,7 +140,7 @@ function StartRound({ lastPoints }: { lastPoints: number }) {
             <input type="checkbox" checked={swipe} onChange={(e) => setSwipe(e.target.checked)} />
             <span>
               <strong>Swipe to shortlist first</strong>
-              <span className="muted small">You each swipe yes or no on every idea. Only the ones you both like go into the draw.</span>
+              <span className="muted small">You each swipe yes or no on every idea. Only the ones everyone likes go into the draw.</span>
             </span>
           </label>
           {error && <p className="error-text">{error}</p>}
@@ -154,7 +154,7 @@ function StartRound({ lastPoints }: { lastPoints: number }) {
 }
 
 function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => void }) {
-  const { people, me, reload } = useData();
+  const { people, me, reload, isOwner } = useData();
   const iLocked = me ? round.locked.includes(me.id) : false;
   const everyone = people.every((p) => round.locked.includes(p.id));
   const shortlisting = round.swipe && !round.shortlist;
@@ -187,9 +187,11 @@ function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => vo
           <p className="muted small">{plural(round.points_per_person, "point")} each</p>
           <RoundFilterLine filters={round.filters} />
         </div>
-        <button className="link danger" onClick={cancel}>
-          Cancel round
-        </button>
+        {isOwner && (
+          <button className="link danger" onClick={cancel}>
+            Cancel round
+          </button>
+        )}
       </div>
 
       <ul className="lock-status">
@@ -248,8 +250,8 @@ function ShortlistNote({ round }: { round: Round }) {
   if (!round.shortlist) return null;
   const n = round.shortlist.ids.length;
   const text = {
-    both: `You both liked ${plural(n, "idea")}, so they're the shortlist.`,
-    either: `You didn't both like enough ideas, so the shortlist is the ${plural(n, "idea")} either of you liked.`,
+    both: `Everyone liked ${plural(n, "idea")}, so they're the shortlist.`,
+    either: `Not enough ideas got a yes from everyone, so the shortlist is the ${plural(n, "idea")} someone liked.`,
     all: `Hardly anything got a yes, so all ${plural(n, "idea")} are in.`,
   }[round.shortlist.rule];
   return <p className="banner">💞 {text}</p>;
@@ -257,7 +259,7 @@ function ShortlistNote({ round }: { round: Round }) {
 
 /** Lists the ideas knocked out of this round, with an undo for your own veto. */
 function Vetoes({ round }: { round: Round }) {
-  const { me, people, reload } = useData();
+  const { me, allPeople: people, reload } = useData();
   const [error, setError] = useState<string | null>(null);
   if (round.vetoes.length === 0) return null;
   const iLocked = me ? round.locked.includes(me.id) : false;
@@ -302,7 +304,7 @@ function MyLockedPoints({ round }: { round: Round }) {
   return (
     <div>
       <p>
-        You're locked in. Waiting on <strong>{waitingOn.join(" and ")}</strong>.
+        You're locked in. Waiting on <strong>{listNames(waitingOn)}</strong>.
       </p>
       <ul className="list compact">
         {round.allocations
@@ -346,7 +348,7 @@ function Allocator({ round }: { round: Round }) {
   const spent = live.reduce((n, a) => n + a.points, 0);
   const left = round.points_per_person - spent;
 
-  // Save shortly after the last change, so both devices see a consistent picture.
+  // Save shortly after the last change, so every device sees a consistent picture.
   useEffect(() => {
     if (!dirty.current) return;
     const t = setTimeout(() => {
@@ -511,7 +513,9 @@ function Reveal({ round, onDone, onClose }: { round: Round; onDone: () => void; 
 }
 
 function Breakdown({ round }: { round: Round }) {
-  const { people } = useData();
+  const { allPeople } = useData();
+  // Everyone who took part in this round, even if they've since left the family.
+  const people = allPeople.filter((p) => round.locked.includes(p.id) || round.allocations.some((a) => a.person_id === p.id));
   const counted = drawnRanges(round);
   const total = counted.reduce((n, r) => n + r.tickets, 0);
   const ignored = vetoesIgnored(round.allocations, round.vetoes.map((v) => v.idea_id));
@@ -522,7 +526,7 @@ function Breakdown({ round }: { round: Round }) {
     .sort((a, b) => b.tickets - a.tickets);
   const vetoedWithoutPoints = round.vetoes.filter((v) => !rows.some((r) => r.idea_id === v.idea_id));
   const titleOf = (id: number) => round.ideas.find((i) => i.id === id)?.title ?? "an idea";
-  const nameOf = (id: number) => people.find((p) => p.id === id)?.name ?? "someone";
+  const nameOf = (id: number) => allPeople.find((p) => p.id === id)?.name ?? "someone";
   return (
     <div className="table-wrap">
       <table className="breakdown">
@@ -571,7 +575,7 @@ function Breakdown({ round }: { round: Round }) {
 function HistoryRow({ round, hidden }: { round: Round; hidden: boolean }) {
   const [open, setOpen] = useState(false);
   const [draft, setDraft] = useState<TripDraft | null>(null);
-  const { ideas, reload } = useData();
+  const { ideas, reload, isOwner } = useData();
   const remove = async () => {
     const back = winnerIdea?.status === "won" ? ` ${winnerIdea.title} goes back into the pool.` : "";
     if (!confirm(`Delete ${round.name} and everyone's points for it?${back}`)) return;
@@ -602,9 +606,11 @@ function HistoryRow({ round, hidden }: { round: Round; hidden: boolean }) {
             </button>
           )}
           {winnerIdea?.status === "done" && <p className="muted small">✓ Added to your trips</p>}
-          <button className="link danger delete-draw" onClick={remove}>
-            Delete this draw
-          </button>
+          {isOwner && (
+            <button className="link danger delete-draw" onClick={remove}>
+              Delete this draw
+            </button>
+          )}
         </div>
       )}
       {draft && <TripForm draft={draft} onClose={() => setDraft(null)} />}

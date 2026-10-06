@@ -10,6 +10,11 @@ describe("buildShortlist", () => {
     expect(buildShortlist([10, 20, 30], [1, 2], swipes)).toEqual({ ids: [10, 20], rule: "both" });
   });
 
+  it("needs everyone's yes in a bigger family", () => {
+    const swipes = [yes(1, 10), yes(2, 10), yes(3, 10), yes(1, 20), yes(2, 20), yes(3, 20), yes(1, 30), yes(2, 30), no(3, 30)];
+    expect(buildShortlist([10, 20, 30], [1, 2, 3], swipes)).toEqual({ ids: [10, 20], rule: "both" });
+  });
+
   it("falls back to ideas either of you liked", () => {
     const swipes = [yes(1, 10), yes(2, 10), yes(1, 20), no(2, 20), no(1, 30), no(2, 30)];
     expect(buildShortlist([10, 20, 30], [1, 2], swipes)).toEqual({ ids: [10, 20], rule: "either" });

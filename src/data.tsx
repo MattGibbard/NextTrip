@@ -5,7 +5,15 @@ import { api, setApiPerson } from "./api";
 import { load, save } from "./storage";
 
 interface Data {
+  /** Everyone in the family who takes part. */
   people: Person[];
+  /** Including people the organiser removed, for naming them on old draws. */
+  allPeople: Person[];
+  /** The organiser signed in by email; everyone else came in with the family link. */
+  isOwner: boolean;
+  /** The family link to share, for the organiser only. */
+  shareUrl: string | null;
+  setShareToken: (token: string) => void;
   trips: Trip[];
   ideas: Idea[];
   rounds: Round[];
@@ -23,7 +31,8 @@ interface Data {
 
 const DataContext = createContext<Data | null>(null);
 
-export function DataProvider({ children }: { children: ReactNode }) {
+export function DataProvider({ children, isOwner, shareToken }: { children: ReactNode; isOwner: boolean; shareToken: string | null }) {
+  const [token, setShareToken] = useState(shareToken);
   const [meId, setMeId] = useState<number | null>(() => {
     const id = load<number | null>("person", null);
     setApiPerson(id);
@@ -67,20 +76,24 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
   const value = useMemo<Data>(
     () => ({
-      people,
+      people: people.filter((p) => !p.removed),
+      allPeople: people,
+      isOwner,
+      shareUrl: token ? `${location.origin}/f/${token}` : null,
+      setShareToken,
       trips,
       ideas,
       rounds,
       home,
       homeEnds,
-      me: people.find((p) => p.id === meId) ?? null,
+      me: people.find((p) => p.id === meId && !p.removed) ?? null,
       setMe,
       loading,
       error,
       reload,
       personName: (id) => people.find((p) => p.id === id)?.name ?? "Someone",
     }),
-    [people, trips, ideas, rounds, home, homeEnds, meId, setMe, loading, error, reload],
+    [people, isOwner, token, trips, ideas, rounds, home, homeEnds, meId, setMe, loading, error, reload],
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

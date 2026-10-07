@@ -54,6 +54,20 @@ function esc(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
+/**
+ * Travelpayouts' site-ownership check, as they gave it. Temporary and home page only: take it out
+ * once they've approved the site for the Aviasales flight links.
+ */
+const TRAVELPAYOUTS_VERIFY = `<script data-cmp-ab="2">
+      (function () {
+        var script = document.createElement("script");
+        script.async = 1;
+        script.setAttribute("data-cmp-ab", "2");
+        script.src = "https://tpembars.com/NTgyNzQ5.js?t=582749";
+        document.head.appendChild(script);
+      })();
+    </script>`;
+
 /** The title, description, canonical address and share-preview tags for a page's <head>. */
 export function headTags(page: PublicPage): string {
   const m = PAGES[page];
@@ -80,6 +94,7 @@ export function headTags(page: PublicPage): string {
     `<meta property="og:image:alt" content="somewhere🎉: can't agree where to go next? Let the draw decide." />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
   );
+  if (page === "home") tags.push(TRAVELPAYOUTS_VERIFY);
   if (page === "home") tags.push(`<script type="application/ld+json">${JSON.stringify(structuredData()).replace(/</g, "\\u003c")}</script>`);
   return tags.join("\n    ");
 }

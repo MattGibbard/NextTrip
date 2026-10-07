@@ -31,11 +31,11 @@ const UTM = "utm_source=nexttrip&utm_medium=referral";
 export const UNSPLASH_URL = `https://unsplash.com/?${UTM}`;
 export const COMMONS_URL = "https://commons.wikimedia.org/";
 
-/** Search terms for the first few places, without repeats: "Lisbon Portugal". */
+/** The first few places, without repeats, as "Lisbon, Portugal". */
 export function photoQueries(places: Place[]): string[] {
   const out: string[] = [];
   for (const p of places) {
-    const q = p.name === p.country ? p.name : `${p.name} ${p.country}`;
+    const q = p.name === p.country ? p.name : `${p.name}, ${p.country}`;
     if (!out.includes(q)) out.push(q);
     if (out.length === PHOTO_PLACES) break;
   }
@@ -135,6 +135,13 @@ export function parseCommons(data: unknown): PhotoSuggestion[] {
 }
 
 /** Takes turns between each place's photos so every place gets a look in. */
+/** "New York, United States" into the place and its country. */
+export function splitQuery(q: string): { name: string; country: string | null } {
+  const i = q.lastIndexOf(",");
+  if (i < 0) return { name: q.trim(), country: null };
+  return { name: q.slice(0, i).trim(), country: q.slice(i + 1).trim() || null };
+}
+
 export function mixPhotos(lists: PhotoSuggestion[][], count = PHOTO_COUNT): PhotoSuggestion[] {
   const out: PhotoSuggestion[] = [];
   const seen = new Set<string>();

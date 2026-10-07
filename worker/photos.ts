@@ -1,32 +1,38 @@
 import type { Env } from "./env";
-import { PHOTO_COUNT, PHOTO_PLACES, mixPhotos, parseCommons, parseUnsplash } from "../shared/photos";
+import { PHOTO_COUNT, PHOTO_PLACES, mixPhotos, parseCommons, parseUnsplash, splitQuery } from "../shared/photos";
 import type { PhotoSuggestion } from "../shared/photos";
 
 const USER_AGENT = "NextTrip holiday planner (https://github.com/MattGibbard/NextTrip)";
-// The same place is looked up again and again as people edit, so answers are kept for a day.
-const CACHE = { cacheTtl: 86400, cacheEverything: true };
+// The same place is looked up again and again as people edit, so answers are kept for a
+// day. Errors aren't kept, so a fixed key or a fresh allowance works straight away.
+const CACHE = { cacheTtlByStatus: { "200-299": 86400, "300-599": 0 }, cacheEverything: true };
 
-async function getJson(url: URL): Promise<unknown> {
-  const res = await fetch(url, { headers: { "User-Agent": USER_AGENT, "Accept-Version": "v1" }, cf: CACHE }).catch(() => null);
-  if (!res?.ok) return null;
+async function getJson(url: URL, what: string): Promise<unknown> {
+  const res = await fetch(url, { headers: { "User-Agent": USER_AGENT, "Accept-Version": "v1" }, cf: CACHE }).catch((e: Error) => e);
+  if (res instanceof Error || !res.ok) {
+    // Shows up in the Worker's logs, so a bad key or a used-up allowance is easy to spot.
+    console.warn(`${what} photo search failed: ${res instanceof Error ? res.message : `${res.status} ${await res.text().catch(() => "")}`.slice(0, 300)}`);
+    return null;
+  }
   return res.json().catch(() => null);
 }
 
-function unsplash(key: string, q: string) {
+function unsplash(key: string, name: string, country: string | null) {
   const url = new URL("https://api.unsplash.com/search/photos");
   // The key goes in the address rather than a header so Cloudflare can cache the answer.
-  url.search = new URLSearchParams({ query: q, per_page: String(PHOTO_COUNT), orientation: "landscape", content_filter: "high", client_id: key }).toString();
-  return getJson(url).then(parseUnsplash);
+  const query = country ? `${name} ${country}` : name;
+  url.search = new URLSearchParams({ query, per_page: String(PHOTO_COUNT), orientation: "landscape", content_filter: "high", client_id: key }).toString();
+  return getJson(url, "Unsplash").then(parseUnsplash);
 }
 
-function commons(q: string) {
+function commons(search: string) {
   const url = new URL("https://commons.wikimedia.org/w/api.php");
   url.search = new URLSearchParams({
     action: "query",
     format: "json",
     formatversion: "2",
     generator: "search",
-    gsrsearch: `${q} filetype:bitmap -map -flag -coat -logo -locator -diagram`,
+    gsrsearch: `${search} filetype:bitmap -map -flag -coat -logo -locator -diagram`,
     gsrnamespace: "6",
     gsrlimit: "20",
     prop: "imageinfo",
@@ -34,7 +40,18 @@ function commons(q: string) {
     iiextmetadatafilter: "Artist|LicenseShortName",
     iiurlwidth: "1280",
   }).toString();
-  return getJson(url).then(parseCommons);
+  return getJson(url, "Wikimedia Commons").then(parseCommons);
+}
+
+/**
+ * Commons' own "quality images" are reviewed photos, so searching just those
+ * keeps out the scanned documents and drawings a plain search turns up.
+ * A plain search is the fallback for places with too few of them.
+ */
+async function commonsPhotos(name: string, country: string | null) {
+  const quality = await commons(`"${name}" incategory:Quality_images`);
+  if (quality.length >= 2) return quality;
+  return commons(country ? `"${name}" ${country}` : `"${name}"`);
 }
 
 /**
@@ -46,8 +63,9 @@ export async function findPhotos(env: Env, queries: string[]): Promise<PhotoSugg
   const terms = [...new Set(queries.map((q) => q.trim().slice(0, 100)).filter(Boolean))].slice(0, PHOTO_PLACES);
   const lists = await Promise.all(
     terms.map(async (q) => {
-      const found = env.UNSPLASH_ACCESS_KEY ? await unsplash(env.UNSPLASH_ACCESS_KEY, q) : [];
-      return found.length >= 2 ? found : commons(q);
+      const { name, country } = splitQuery(q);
+      const found = env.UNSPLASH_ACCESS_KEY ? await unsplash(env.UNSPLASH_ACCESS_KEY, name, country) : [];
+      return found.length >= 2 ? found : commonsPhotos(name, country);
     }),
   );
   return mixPhotos(lists);

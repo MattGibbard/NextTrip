@@ -1,16 +1,21 @@
 import { describe, expect, it } from "vitest";
-import { cleanCredit, mixPhotos, parseCommons, parseCredit, parseUnsplash, photoQueries, stripHtml } from "../shared/photos";
+import { cleanCredit, mixPhotos, parseCommons, parseCredit, parseUnsplash, photoQueries, splitQuery, stripHtml } from "../shared/photos";
 import type { PhotoSuggestion } from "../shared/photos";
 
 const place = (name: string, country = "Portugal") => ({ name, country, country_code: "PT", lat: 0, lon: 0 });
 
 describe("photoQueries", () => {
   it("looks up the first three places, once each", () => {
-    expect(photoQueries([place("Lisbon"), place("Porto"), place("Lisbon"), place("Faro"), place("Lagos")])).toEqual(["Lisbon Portugal", "Porto Portugal", "Faro Portugal"]);
+    expect(photoQueries([place("Lisbon"), place("Porto"), place("Lisbon"), place("Faro"), place("Lagos")])).toEqual(["Lisbon, Portugal", "Porto, Portugal", "Faro, Portugal"]);
   });
   it("doesn't repeat a country named after itself", () => {
     expect(photoQueries([place("Singapore", "Singapore")])).toEqual(["Singapore"]);
   });
+});
+
+it("splits a query into place and country", () => {
+  expect(splitQuery("Washington, D.C., United States")).toEqual({ name: "Washington, D.C.", country: "United States" });
+  expect(splitQuery("Singapore")).toEqual({ name: "Singapore", country: null });
 });
 
 describe("parseUnsplash", () => {

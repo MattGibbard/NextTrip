@@ -40,7 +40,7 @@ Sign-in links are sent with [Resend](https://resend.com) (free for 3,000 emails 
 
 ### Photo suggestions
 
-When you add places to a trip or idea, the form suggests a few cover photos. They come from [Unsplash](https://unsplash.com/developers) when the Worker has a key, and from Wikimedia Commons otherwise (or when Unsplash finds nothing). To use Unsplash, create a free app at unsplash.com/oauth/applications and add its **Access Key** as a secret called `UNSPLASH_ACCESS_KEY`. A new app is allowed 50 searches an hour; apply for production on the app's page to get 5,000. Each photo is credited under it, as both sites ask.
+When you add places to a trip or idea, the form suggests a few cover photos. They come from [Unsplash](https://unsplash.com/developers) when the Worker has a key, and from Wikimedia Commons otherwise (or when Unsplash finds nothing). To use Unsplash, create a free app at unsplash.com/oauth/applications and add its **Access Key** as a secret called `UNSPLASH_ACCESS_KEY`. A new app is allowed 50 searches an hour; apply for production on the app's page to get 5,000. Each photo is credited under it, as both sites ask. Previews don't see the live Worker's secrets, so they use Wikimedia Commons unless you also run `npx wrangler preview base-config secret put UNSPLASH_ACCESS_KEY`. If the key is wrong or the allowance runs out, the Worker logs say so and suggestions fall back to Commons.
 
 You can also deploy from your machine with `npx wrangler login` followed by `npm run deploy`.
 

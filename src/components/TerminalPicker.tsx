@@ -21,8 +21,8 @@ async function search(kind: TerminalKind, q: string): Promise<TerminalSearchResu
   }));
 }
 
-/** Picks one airport, station or port: a chip once chosen, a search box until then. */
-export function TerminalPicker({ kind, label, value, onChange }: { kind: TerminalKind; label: string; value: Terminal | null; onChange: (t: Terminal | null) => void }) {
+/** Searches airports, stations or ports as you type, keeping only the latest answer. */
+function useTerminalSearch(kind: TerminalKind) {
   const [q, setQ] = useState("");
   const [results, setResults] = useState<TerminalSearchResult[]>([]);
   const [busy, setBusy] = useState(false);
@@ -57,10 +57,37 @@ export function TerminalPicker({ kind, label, value, onChange }: { kind: Termina
     return () => clearTimeout(t);
   }, [q, kind]);
 
-  const pick = (t: Terminal) => {
-    onChange(t);
+  const clear = () => {
     setQ("");
     setResults([]);
+  };
+  return { q, setQ, results, busy, error, clear, open: results.length > 0 || busy || !!error || q.trim().length >= 2 };
+}
+
+function SearchResults({ search, onPick }: { search: ReturnType<typeof useTerminalSearch>; onPick: (t: Terminal) => void }) {
+  const { results, busy, error } = search;
+  return (
+    <ul className="results">
+      {busy && results.length === 0 && <li className="muted">Searching…</li>}
+      {error && <li className="muted">{error}</li>}
+      {results.map((r) => (
+        <li key={r.label}>
+          <button type="button" onClick={() => onPick(r.terminal)}>
+            {flag(r.terminal.country_code)} {r.label}
+          </button>
+        </li>
+      ))}
+      {!busy && !error && results.length === 0 && <li className="muted">No matches</li>}
+    </ul>
+  );
+}
+
+/** Picks one airport, station or port: a chip once chosen, a search box until then. */
+export function TerminalPicker({ kind, label, value, onChange }: { kind: TerminalKind; label: string; value: Terminal | null; onChange: (t: Terminal | null) => void }) {
+  const s = useTerminalSearch(kind);
+  const pick = (t: Terminal) => {
+    onChange(t);
+    s.clear();
   };
 
   return (
@@ -81,30 +108,17 @@ export function TerminalPicker({ kind, label, value, onChange }: { kind: Termina
           <input
             type="search"
             placeholder={PLACEHOLDER[kind]}
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
+            value={s.q}
+            onChange={(e) => s.setQ(e.target.value)}
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 e.preventDefault();
-                if (results[0]) pick(results[0].terminal);
+                if (s.results[0]) pick(s.results[0].terminal);
               }
             }}
             aria-label={label}
           />
-          {(results.length > 0 || busy || error || q.trim().length >= 2) && (
-            <ul className="results">
-              {busy && results.length === 0 && <li className="muted">Searching…</li>}
-              {error && <li className="muted">{error}</li>}
-              {results.map((r) => (
-                <li key={r.label}>
-                  <button type="button" onClick={() => pick(r.terminal)}>
-                    {flag(r.terminal.country_code)} {r.label}
-                  </button>
-                </li>
-              ))}
-              {!busy && !error && results.length === 0 && <li className="muted">No matches</li>}
-            </ul>
-          )}
+          {s.open && <SearchResults search={s} onPick={pick} />}
         </div>
       )}
     </div>
@@ -150,5 +164,100 @@ export function JourneyFields({ mode, journey }: { mode: Mode; journey: ReturnTy
       </div>
       <span className="muted small journey-hint">{hint}</span>
     </>
+  );
+}
+
+const SHORT_PLACEHOLDER: Record<TerminalKind, string> = {
+  airport: "Airport or code",
+  station: "Station or code",
+  port: "Port town or city",
+};
+
+/** One end of the journey as a ticket-like card: the big code once picked, a search box in a dashed card until then. */
+function EndCard({ kind, label, short, value, onChange }: { kind: TerminalKind; label: string; short: string; value: Terminal | null; onChange: (t: Terminal | null) => void }) {
+  const s = useTerminalSearch(kind);
+  const pick = (t: Terminal) => {
+    onChange(t);
+    s.clear();
+  };
+  if (value) {
+    return (
+      <div className="end-card" title={value.name}>
+        <span className="end-label">{short}</span>
+        <span className={value.code ? "end-code" : "end-code end-place"}>
+          {value.code ?? (
+            <>
+              {flag(value.country_code)} {value.name}
+            </>
+          )}
+        </span>
+        {value.code && (
+          <span className="end-name">
+            {flag(value.country_code)} {value.name}
+          </span>
+        )}
+        <button type="button" className="end-clear" onClick={() => onChange(null)} aria-label={`Change ${label.toLowerCase()}`}>
+          <CrossIcon />
+        </button>
+      </div>
+    );
+  }
+  return (
+    <div className="end-search">
+      <label className="end-card empty">
+        <span className="end-label">{short}</span>
+        <input
+          type="search"
+          placeholder={SHORT_PLACEHOLDER[kind]}
+          value={s.q}
+          onChange={(e) => s.setQ(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              if (s.results[0]) pick(s.results[0].terminal);
+            }
+          }}
+          aria-label={label}
+        />
+      </label>
+      {s.open && <SearchResults search={s} onPick={pick} />}
+    </div>
+  );
+}
+
+export function CrossIcon({ size = 14 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
+      <path d="M18 6 6 18M6 6l12 12" />
+    </svg>
+  );
+}
+
+const CARD_TEXT: Record<Mode, { title: string; depart: string; arrive: string }> = {
+  flight: { title: "Flights", depart: "DEPART", arrive: "ARRIVE" },
+  train: { title: "Stations", depart: "DEPART", arrive: "ARRIVE" },
+  cruise: { title: "Port", depart: "SAIL FROM", arrive: "" },
+  road: { title: "Flights", depart: "FLY OUT", arrive: "LAND AT" },
+};
+
+/** The departure and arrival as two cards with an arrow between, like the ends of a ticket. */
+export function JourneyCards({ mode, journey }: { mode: Mode; journey: ReturnType<ReturnType<typeof useJourney>> }) {
+  const ends = ENDS[mode];
+  const text = CARD_TEXT[mode];
+  return (
+    <div className="journey-cards-field">
+      <span className="field-label">{text.title}</span>
+      <div className={ends.arrive ? "journey-cards" : "journey-cards single"}>
+        <EndCard kind={ends.kind} label={ends.depart} short={text.depart} value={journey.depart} onChange={journey.setDepart} />
+        {ends.arrive && (
+          <>
+            <svg className="journey-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+            <EndCard kind={ends.kind} label={ends.arrive} short={text.arrive} value={journey.arrive} onChange={journey.setArrive} />
+          </>
+        )}
+      </div>
+    </div>
   );
 }

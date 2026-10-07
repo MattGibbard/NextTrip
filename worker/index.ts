@@ -17,7 +17,6 @@ import type { Swipe } from "../shared/shortlist";
 import type { RoundFilters } from "../shared/roundFilters";
 import type {
   Allocation,
-  Home,
   HomeEnds,
   Idea,
   IdeaDetails,
@@ -369,8 +368,8 @@ app.get("/ideas", async (c) => {
 
 app.post("/ideas", async (c) => {
   const i = ideaInput(await body(c));
-  // Travel time is always worked out from the departure point or home, never typed in.
-  const travel = estimateTravel(i.depart ?? (await loadHome(c.env.DB, c.get("family"))), i.places)?.travel_time ?? null;
+  // Travel time is always worked out from the departure point or the home airport, never typed in.
+  const travel = estimateTravel(i.depart ?? (await loadHomeEnds(c.env.DB, c.get("family"))).airport, i.places)?.travel_time ?? null;
   const row = await c.env.DB.prepare(
     `INSERT INTO ideas (title, description, cover_url, created_by, budget, trip_length, travel_time, holiday_types, depart, arrive, family_id)
      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
@@ -384,8 +383,8 @@ app.post("/ideas", async (c) => {
 app.put("/ideas/:id", async (c) => {
   const id = idParam(c);
   const i = ideaInput(await body(c));
-  // Without an estimate (no departure or home, or no located places) the old travel time stays.
-  const travel = estimateTravel(i.depart ?? (await loadHome(c.env.DB, c.get("family"))), i.places)?.travel_time ?? null;
+  // Without an estimate (no departure or home airport, or no located places) the old travel time stays.
+  const travel = estimateTravel(i.depart ?? (await loadHomeEnds(c.env.DB, c.get("family"))).airport, i.places)?.travel_time ?? null;
   const res = await c.env.DB.prepare(
     `UPDATE ideas SET title = ?, description = ?, cover_url = ?, budget = ?, trip_length = ?, travel_time = COALESCE(?, travel_time), holiday_types = ?, depart = ?, arrive = ?
      WHERE id = ? AND family_id = ? AND status != 'archived'`,
@@ -709,30 +708,6 @@ app.post("/rounds/:id/draw", async (c) => {
 });
 
 // ---------- Settings ----------
-
-async function loadHome(db: D1Database, family: number): Promise<Home> {
-  const row = await db.prepare("SELECT value FROM family_settings WHERE family_id = ? AND key = 'home'").bind(family).first<{ value: string }>();
-  try {
-    return row ? (cleanPlaces([JSON.parse(row.value)])[0] ?? null) : null;
-  } catch {
-    return null;
-  }
-}
-
-app.get("/home", async (c) => c.json(await loadHome(c.env.DB, c.get("family"))));
-
-app.put("/home", async (c) => {
-  requireOwner(c);
-  const b = await body(c);
-  const [home] = cleanPlaces([b.home]);
-  if (b.home !== null && (!home || home.lat === null || home.lon === null)) throw new HttpError(400, "Pick home from the search so it has a location");
-  await c.env.DB.prepare(
-    home ? "INSERT OR REPLACE INTO family_settings (family_id, key, value) VALUES (?, 'home', ?)" : "DELETE FROM family_settings WHERE family_id = ? AND key = 'home'",
-  )
-    .bind(c.get("family"), ...(home ? [JSON.stringify(home)] : []))
-    .run();
-  return c.json({ ok: true });
-});
 
 async function loadHomeEnds(db: D1Database, family: number): Promise<HomeEnds> {
   const { results } = await db

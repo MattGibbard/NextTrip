@@ -1,4 +1,4 @@
-import type { GeocodeResult, Home, HomeEnds, Idea, IdeaInput, Person, Round, Session, Trip, TripInput } from "../shared/types";
+import type { GeocodeResult, HomeEnds, Idea, IdeaInput, Person, Round, Session, Trip, TripInput } from "../shared/types";
 import type { RoundFilters } from "../shared/roundFilters";
 import type { TerminalSearchResult } from "../shared/terminals";
 import { forget, load } from "./storage";
@@ -70,8 +70,6 @@ export const api = {
   createRound: (r: { name?: string; points_per_person: number; filters?: RoundFilters; swipe?: boolean }) => request<{ id: number }>("POST", "/rounds", r),
   deleteRound: (id: number) => request("DELETE", `/rounds/${id}`),
   swipe: (id: number, idea_id: number, liked: boolean) => request("PUT", `/rounds/${id}/swipes`, { idea_id, liked }),
-  home: () => request<Home>("GET", "/home"),
-  setHome: (home: Home) => request("PUT", "/home", { home }),
   homeEnds: () => request<HomeEnds>("GET", "/home-ends"),
   setHomeEnds: (ends: Partial<HomeEnds>) => request("PUT", "/home-ends", ends),
   saveAllocations: (id: number, allocations: { idea_id: number; points: number }[]) =>

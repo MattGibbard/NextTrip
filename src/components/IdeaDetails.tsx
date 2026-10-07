@@ -69,7 +69,7 @@ function ChoiceRow<K extends string | number>({
   );
 }
 
-/** Editors for the practical details. Tapping a selected choice clears it. Travel time is worked out from home, so it has no editor. */
+/** Editors for the practical details. Tapping a selected choice clears it. Travel time is worked out from the departure or home airport, so it has no editor. */
 export function IdeaDetailsFields({ value, onChange }: { value: Details; onChange: (v: Details) => void }) {
   const toggleType = (k: Details["holiday_types"][number]) =>
     onChange({

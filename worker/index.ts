@@ -130,7 +130,7 @@ function personInput(b: Record<string, unknown>) {
 }
 
 // Anyone in the family without a name yet can add themselves, and this browser
-// becomes them. The organiser can also add people who aren't on NextTrip themselves.
+// becomes them. The organiser can also add people who aren't on somewhere.party themselves.
 app.post("/people", async (c) => {
   const isOwner = c.get("role") === "owner";
   if (viewerId(c) !== null && !isOwner) throw new HttpError(403, "You're already in the family on this device");
@@ -783,7 +783,7 @@ app.get("/geocode", async (c) => {
     featureType: "settlement",
   }).toString();
   const res = await fetch(url, {
-    headers: { "User-Agent": "NextTrip holiday planner (https://github.com/MattGibbard/NextTrip)" },
+    headers: { "User-Agent": "somewhere.party holiday planner (https://somewhere.party)" },
     cf: { cacheTtl: 86400, cacheEverything: true },
   }).catch(() => null);
   if (!res?.ok) throw new HttpError(409, "Place search is unavailable right now");

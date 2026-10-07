@@ -201,6 +201,9 @@ textarea:focus {
   color: var(--text);
   text-decoration: none;
 }
+.brand-tld {
+  color: var(--accent);
+}
 .topbar-right {
   margin-left: auto;
   display: flex;

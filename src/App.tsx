@@ -121,7 +121,9 @@ function Shell() {
       <header className="topbar">
         <a className="brand" href="#/trips">
           <img src="/favicon.svg" alt="" width={28} height={28} />
-          NextTrip
+          <span>
+            somewhere<span className="brand-tld">.party</span>
+          </span>
         </a>
         <nav className="tabs desktop-only">
           {TABS.map((t) => (

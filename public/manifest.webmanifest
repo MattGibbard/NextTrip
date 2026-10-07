@@ -1,6 +1,6 @@
 {
-  "name": "NextTrip",
-  "short_name": "NextTrip",
+  "name": "somewhere.party",
+  "short_name": "somewhere",
   "description": "Where we've been, and where we're going next.",
   "id": "/",
   "start_url": "/",

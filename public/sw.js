@@ -1,4 +1,4 @@
-// Keeps the app shell available so NextTrip opens quickly from the home screen.
+// Keeps the app shell available so somewhere.party opens quickly from the home screen.
 // The API and map tiles always go to the network; only the page and built assets are cached.
 const CACHE = "nexttrip-v1";
 

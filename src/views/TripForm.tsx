@@ -1,16 +1,13 @@
 import { useState } from "react";
-import type { FormEvent, ReactNode } from "react";
+import type { FormEvent } from "react";
 import type { Place, Trip, TripInput } from "../../shared/types";
 import { api } from "../api";
 import { useData } from "../data";
-import { flag } from "../countries";
-import { cssUrl } from "../format";
 import { Modal } from "../components/Modal";
-import { ModeIcon } from "../components/ModeIcon";
-import { PlaceSearch } from "../components/PlaceSearch";
-import { CrossIcon, JourneyCards, useJourney } from "../components/TerminalPicker";
+import { CoverField, MODE_HINT, ModePicker, PlacesField, SheetFoot, SheetHead, SheetPreview, SheetSection } from "../components/Sheet";
+import { JourneyCards, useJourney } from "../components/TerminalPicker";
 import { TripTicket } from "../components/TripTicket";
-import { MODES, MODE_KEYS, ideaMode, modeFlags, tripMode } from "../../shared/travelMode";
+import { ideaMode, modeFlags, tripMode } from "../../shared/travelMode";
 import type { Mode } from "../../shared/travelMode";
 import type { Terminal } from "../../shared/terminals";
 
@@ -22,27 +19,7 @@ export interface TripDraft {
   arrive?: Terminal | null;
 }
 
-const MODE_HINT: Record<Mode, string> = {
-  flight: "The map draws a dotted line from your departure airport to your arrival.",
-  train: "Your places join up in order on the map, station to station.",
-  cruise: "Your ports join up in order on the map, sailing from and back to your port.",
-  road: "Your stops join up in order on the map, after the flight out.",
-};
-
 const RATING_WORDS = ["Not rated yet", "Not for us", "It was OK", "Good", "Really good", "Loved it"];
-
-/** A small mono heading with a rule running off to the right. */
-function Section({ title, children }: { title: string; children: ReactNode }) {
-  return (
-    <section className="ts-section">
-      <div className="ts-rule">
-        <span className="mono-label">{title}</span>
-        <span />
-      </div>
-      {children}
-    </section>
-  );
-}
 
 export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; draft?: TripDraft; onClose: () => void; onDeleted?: () => void }) {
   const { me, reload, ideas, trips, isOwner } = useData();
@@ -105,30 +82,18 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
   return (
     <Modal title={heading} onClose={onClose} bare>
       <form className={`trip-sheet mode-${mode}`} onSubmit={submit}>
-        <header className="ts-head">
-          <span className="ts-grabber mobile-only" aria-hidden />
-          <div className="ts-head-row">
-            <div className="ts-titles">
-              <span className="mono-label mode-ink">{trip ? `TICKET ${ticketNo}` : `NEW TICKET · ${ticketNo}`}</span>
-              <h2>{heading}</h2>
-            </div>
-            <button type="button" className="ts-close" onClick={onClose} aria-label="Close">
-              <CrossIcon size={18} />
-            </button>
-          </div>
-        </header>
+        <SheetHead eyebrow={trip ? `TICKET ${ticketNo}` : `NEW TICKET · ${ticketNo}`} heading={heading} onClose={onClose} />
 
         <div className="ts-body">
-          <div className="ts-preview">
-            <span className="mono-label muted">HOW IT WILL LOOK</span>
+          <SheetPreview>
             <TripTicket
               preview
               passNo={passNo}
               trip={{ title, start_date: start || null, end_date: end || null, places, rating, cover_url: cover || null, depart: journey.depart, arrive: journey.arrive, ...modeFlags(mode) }}
             />
-          </div>
+          </SheetPreview>
 
-          <Section title="THE TRIP">
+          <SheetSection title="THE TRIP">
             <label className="ts-field">
               <span className="field-label">Name</span>
               <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="e.g. Italian summer" required autoFocus={!trip} />
@@ -143,57 +108,15 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
                 <input type="date" value={end} min={start || undefined} onChange={(e) => setEnd(e.target.value)} />
               </label>
             </div>
-          </Section>
+          </SheetSection>
 
-          <Section title="WHERE YOU WENT">
-            <div className="ts-field" role="radiogroup" aria-labelledby="ts-mode-label">
-              <span className="field-label" id="ts-mode-label">
-                How did you travel?
-              </span>
-              <div className="ts-modes">
-                {MODE_KEYS.map((k) => (
-                  <button type="button" key={k} role="radio" aria-checked={mode === k} className={`ts-mode mode-${k} ${mode === k ? "on" : ""}`} onClick={() => setMode(k)}>
-                    <ModeIcon mode={k} />
-                    <span>{MODES[k].short}</span>
-                  </button>
-                ))}
-              </div>
-              <span className="muted small">{MODE_HINT[mode]}</span>
-            </div>
-
-            <div className="ts-field">
-              <div className="ts-label-row">
-                <span className="field-label">Places</span>
-                <span className="muted small">{ordered ? "In the order you went" : "Where you stayed"}</span>
-              </div>
-              {places.length > 0 && (
-                <ul className="ts-places">
-                  {places.map((p, i) => (
-                    <li key={`${p.name}-${p.country_code}-${i}`}>
-                      {ordered && i > 0 && (
-                        <span className="ts-sep mode-ink" aria-hidden>
-                          →
-                        </span>
-                      )}
-                      <span className="ts-place" title={`${p.name}, ${p.country}`}>
-                        <span>
-                          {flag(p.country_code)} {p.name}
-                        </span>
-                        <button type="button" onClick={() => setPlaces(places.filter((_, j) => j !== i))} aria-label={`Remove ${p.name}`}>
-                          <CrossIcon />
-                        </button>
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-              <PlaceSearch icon onAdd={(p) => setPlaces([...places, p])} placeholder={places.length ? "Add another place…" : "Search for a city…"} />
-            </div>
-
+          <SheetSection title="WHERE YOU WENT">
+            <ModePicker label="How did you travel?" mode={mode} onChange={setMode} hint={MODE_HINT[mode]} />
+            <PlacesField places={places} onChange={setPlaces} ordered={ordered} hint={ordered ? "In the order you went" : "Where you stayed"} />
             <JourneyCards mode={mode} journey={journey} />
-          </Section>
+          </SheetSection>
 
-          <Section title="MEMORIES">
+          <SheetSection title="MEMORIES">
             <div className="ts-field" role="group" aria-labelledby="ts-rating-label">
               <span className="field-label" id="ts-rating-label">
                 Rating
@@ -222,47 +145,12 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
               <span className="field-label">Notes</span>
               <textarea rows={3} value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="Highlights, where you stayed…" />
             </label>
-            <div className="ts-field">
-              <label className="field-label" htmlFor="ts-cover">
-                Cover photo
-              </label>
-              <div className="ts-cover">
-                {cover ? (
-                  <span className="ts-thumb photo" style={{ backgroundImage: cssUrl(cover) }} aria-hidden />
-                ) : (
-                  <span className="ts-thumb" aria-hidden>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="3" y="3" width="18" height="18" rx="2" />
-                      <circle cx="9" cy="9" r="2" />
-                      <path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21" />
-                    </svg>
-                  </span>
-                )}
-                <input id="ts-cover" type="url" value={cover} onChange={(e) => setCover(e.target.value)} placeholder="Paste a photo link" />
-              </div>
-              <span className="muted small">Shows on the left of your ticket.</span>
-            </div>
-          </Section>
+            <CoverField value={cover} onChange={setCover} hint="Shows on the left of your ticket." />
+          </SheetSection>
           {error && <p className="error-text">{error}</p>}
         </div>
 
-        <footer className="ts-foot">
-          {trip && isOwner && (
-            <button type="button" className="ts-delete" onClick={remove}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6" />
-              </svg>
-              <span>Delete</span>
-            </button>
-          )}
-          <span className="spacer" />
-          <button type="button" className="btn ghost" onClick={onClose}>
-            Cancel
-          </button>
-          <button className="btn" disabled={saving}>
-            {saving ? "Saving…" : trip ? "Save changes" : "Add trip"}
-          </button>
-        </footer>
+        <SheetFoot onDelete={trip && isOwner ? remove : undefined} onClose={onClose} saving={saving} saveLabel={trip ? "Save changes" : "Add trip"} />
       </form>
     </Modal>
   );

@@ -70,7 +70,7 @@ function ChoiceRow<K extends string | number>({
 }
 
 /** Editors for the practical details. Tapping a selected choice clears it. Travel time is worked out from the departure or home airport, so it has no editor. */
-export function IdeaDetailsFields({ value, onChange }: { value: Details; onChange: (v: Details) => void }) {
+export function IdeaDetailsFields({ value, onChange, hideTypes = [] }: { value: Details; onChange: (v: Details) => void; hideTypes?: readonly string[] }) {
   const toggleType = (k: Details["holiday_types"][number]) =>
     onChange({
       ...value,
@@ -83,7 +83,7 @@ export function IdeaDetailsFields({ value, onChange }: { value: Details; onChang
       <div className="field">
         <span>Type of holiday</span>
         <div className="choice-row">
-          {HOLIDAY_TYPES.map((t) => (
+          {HOLIDAY_TYPES.filter((t) => !hideTypes.includes(t.key)).map((t) => (
             <button
               type="button"
               key={t.key}

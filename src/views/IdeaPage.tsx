@@ -8,7 +8,7 @@ import { estimateTravel, formatHours } from "../../shared/travelTime";
 import { MODES, ideaMode, ticketEnds } from "../../shared/travelMode";
 import { followsInOrder } from "../../shared/routes";
 import { Pass } from "../components/Ticket";
-import { HotelLinks } from "../components/HotelLinks";
+import { BookLinks } from "../components/BookLinks";
 import { WorldMap, terminalPins } from "../components/WorldMap";
 import { journeyLegs } from "../../shared/terminals";
 import type { Pin, Route } from "../components/WorldMap";
@@ -151,7 +151,7 @@ export function IdeaPage({ id }: { id: number }) {
         </p>
       )}
 
-      {idea.status !== "done" && <HotelLinks places={idea.places} campaign="idea_page" className="panel" />}
+      {idea.status !== "done" && <BookLinks trip={idea} campaign="idea_page" className="panel" />}
 
       <div className="pass-columns idea-columns">
         {idea.description && <p className="pass-notes area-notes">{idea.description}</p>}

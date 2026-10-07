@@ -32,3 +32,31 @@ describe("hotelPlaces", () => {
     expect(hotelPlaces(places).map((p) => p.name)).toEqual(["Banff", "Jasper", "Calgary", "Lake Louise"]);
   });
 });
+
+describe("flightLink", () => {
+  it("wraps an Aviasales route search in our Travelpayouts link", async () => {
+    const { flightLink } = await import("../shared/flights");
+    const url = new URL(flightLink("LHR", "YYC", "idea_page"));
+    expect(url.origin + url.pathname).toBe("https://tp.media/r");
+    expect(Object.fromEntries(url.searchParams)).toEqual({
+      campaign_id: "100",
+      marker: "786925",
+      p: "4114",
+      trs: "582749",
+      sub_id: "idea_page",
+      u: "https://www.aviasales.com/?params=LHRYYC",
+    });
+  });
+});
+
+describe("flightOrigin", () => {
+  it("prefers the idea's own departure airport, then the home airport", async () => {
+    const { flightOrigin } = await import("../shared/flights");
+    const air = (code: string) => ({ kind: "airport" as const, code, name: code, country_code: "GB", lat: 0, lon: 0 });
+    const station = { kind: "station" as const, code: "STP", name: "St Pancras", country_code: "GB", lat: 0, lon: 0 };
+    expect(flightOrigin(air("MAN"), air("LHR"))?.code).toBe("MAN");
+    expect(flightOrigin(null, air("LHR"))?.code).toBe("LHR");
+    expect(flightOrigin(station, air("LHR"))?.code).toBe("LHR");
+    expect(flightOrigin(null, null)).toBeNull();
+  });
+});

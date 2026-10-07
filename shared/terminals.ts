@@ -133,3 +133,15 @@ export function endsForMode(mode: Mode, depart: Terminal | null, arrive: Termina
     arrive: hasArrival && arrive?.kind === kind ? arrive : null,
   };
 }
+
+/** The listed airport or station closest to a point, as the crow flies. */
+export function nearestTerminal(kind: TerminalKind, rows: readonly TerminalRow[], lat: number, lon: number): Terminal | null {
+  const squash = Math.cos((lat * Math.PI) / 180);
+  let best: TerminalRow | null = null;
+  let bestD = Infinity;
+  for (const r of rows) {
+    const d = (r[4] - lat) ** 2 + ((r[5] - lon) * squash) ** 2;
+    if (d < bestD) [best, bestD] = [r, d];
+  }
+  return best ? rowToTerminal(kind, best) : null;
+}

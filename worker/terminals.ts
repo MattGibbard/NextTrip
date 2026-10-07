@@ -1,6 +1,6 @@
 import airportRows from "../shared/data/airports.json";
 import stationRows from "../shared/data/stations.json";
-import { CODE_PATTERN, rowToTerminal, searchTerminals } from "../shared/terminals";
+import { CODE_PATTERN, nearestTerminal, rowToTerminal, searchTerminals } from "../shared/terminals";
 import type { Terminal, TerminalKind, TerminalRow } from "../shared/terminals";
 
 const ROWS: Record<"airport" | "station", readonly TerminalRow[]> = {
@@ -20,6 +20,11 @@ function lookup(kind: "airport" | "station", code: string) {
 
 export function findTerminals(kind: "airport" | "station", q: string) {
   return searchTerminals(kind, ROWS[kind], q);
+}
+
+/** The airport closest to a place, for flight searches to ideas without an arrival airport. */
+export function nearestAirport(lat: number, lon: number) {
+  return nearestTerminal("airport", ROWS.airport, lat, lon);
 }
 
 function text(v: unknown, max: number): string | null {

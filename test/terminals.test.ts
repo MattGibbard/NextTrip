@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { endsForMode, journeyLegs, searchTerminals } from "../shared/terminals";
+import { endsForMode, journeyLegs, nearestTerminal, searchTerminals } from "../shared/terminals";
 import type { Terminal, TerminalRow } from "../shared/terminals";
 import { cleanTerminal } from "../worker/terminals";
 
@@ -95,5 +95,13 @@ describe("cleanTerminal", () => {
     });
     expect(cleanTerminal(null)).toBeNull();
     expect(cleanTerminal("not json")).toBeNull();
+  });
+});
+
+describe("nearestTerminal", () => {
+  it("finds the closest listed airport", () => {
+    expect(nearestTerminal("airport", rows, 40.85, 14.27)?.code).toBe("NAP");
+    expect(nearestTerminal("airport", rows, 51.2, -0.2)?.code).toBe("LGW");
+    expect(nearestTerminal("airport", [], 0, 0)).toBeNull();
   });
 });

@@ -83,6 +83,10 @@ function Privacy() {
           <strong>Stay22</strong> runs the "Find hotels" buttons. They're affiliate links: if you book a stay after following one, we may earn a commission, at no extra
           cost to you. We only send the place you're looking at. Once you're on Stay22 or the booking site it takes you to, their own privacy policy and cookies apply.
         </li>
+        <li>
+          <strong>Travelpayouts</strong> runs the "Find flights" buttons, which open a flight search on Aviasales. They're affiliate links too, so we may earn a
+          commission if you book. We only send the two airports. Once you're on Aviasales, its own privacy policy and cookies apply.
+        </li>
         <li>If you add a cover photo link, the picture loads from whichever site it's hosted on.</li>
       </ul>
 
@@ -135,7 +139,7 @@ function Terms() {
       <h2>The draw and travel details</h2>
       <p>
         The draw is a bit of fun to help you decide. Travel times, maps and place details are rough estimates. Check them, and anything else, before you book. We're not
-        responsible for travel plans or bookings you make. The "Find hotels" buttons are affiliate links, so we may earn a commission if you book, and the booking is
+        responsible for travel plans or bookings you make. The "Find flights" and "Find hotels" buttons are affiliate links, so we may earn a commission if you book, and the booking is
         between you and the site you book with.
       </p>
 

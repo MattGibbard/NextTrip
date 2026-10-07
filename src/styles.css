@@ -4767,26 +4767,26 @@ fieldset.field legend {
   border-radius: 50%;
 }
 
-/* ---------- Find hotels (Stay22 affiliate links) ---------- */
+/* ---------- Find flights and hotels (affiliate links) ---------- */
 
-.hotel-links h2 {
+.book-links h2 {
   margin: 0 0 0.6rem;
   color: var(--muted);
 }
-.hotel-buttons {
+.book-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
-.hotel-buttons .btn {
+.book-buttons .btn {
   min-height: 44px;
   text-decoration: none;
   white-space: normal;
   text-align: left;
 }
-.hotel-note {
+.book-note {
   margin: 0.6rem 0 0;
 }
-.hotel-links.panel {
+.book-links.panel {
   margin-top: 1rem;
 }

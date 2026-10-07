@@ -1,6 +1,6 @@
 import type { GeocodeResult, HomeEnds, Idea, IdeaInput, Person, Round, Session, Trip, TripInput } from "../shared/types";
 import type { RoundFilters } from "../shared/roundFilters";
-import type { TerminalSearchResult } from "../shared/terminals";
+import type { Terminal, TerminalSearchResult } from "../shared/terminals";
 import { forget, load } from "./storage";
 
 // Browsers that picked a person before the server kept track of it send that
@@ -82,5 +82,6 @@ export const api = {
   draw: (id: number) => request<Round>("POST", `/rounds/${id}/draw`),
 
   geocode: (q: string) => request<GeocodeResult[]>("GET", `/geocode?q=${encodeURIComponent(q)}`),
+  nearestAirport: (lat: number, lon: number) => request<Terminal | null>("GET", `/terminals/nearest?lat=${lat}&lon=${lon}`),
   terminals: (kind: "airport" | "station", q: string) => request<TerminalSearchResult[]>("GET", `/terminals?kind=${kind}&q=${encodeURIComponent(q)}`),
 };

@@ -11,7 +11,7 @@ import { estimateTravel } from "../shared/travelTime";
 import { ideaMode, tripMode } from "../shared/travelMode";
 import { endsForMode } from "../shared/terminals";
 import type { Terminal } from "../shared/terminals";
-import { cleanTerminal, findTerminals } from "./terminals";
+import { cleanTerminal, findTerminals, nearestAirport } from "./terminals";
 import { NO_FILTERS, cleanFilters, matchesFilters } from "../shared/roundFilters";
 import { buildShortlist, parseShortlist, unswiped } from "../shared/shortlist";
 import type { Swipe } from "../shared/shortlist";
@@ -748,6 +748,13 @@ app.get("/terminals", (c) => {
   const kind = c.req.query("kind");
   if (kind !== "airport" && kind !== "station") throw new HttpError(400, "Search airports or stations");
   return c.json(findTerminals(kind, cleanText(c.req.query("q"), 100) ?? ""));
+});
+
+app.get("/terminals/nearest", (c) => {
+  const lat = Number(c.req.query("lat"));
+  const lon = Number(c.req.query("lon"));
+  if (!Number.isFinite(lat) || !Number.isFinite(lon) || Math.abs(lat) > 90 || Math.abs(lon) > 180) throw new HttpError(400, "Give a latitude and longitude");
+  return c.json(nearestAirport(lat, lon));
 });
 
 app.get("/geocode", async (c) => {

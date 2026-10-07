@@ -140,7 +140,7 @@ export function HomePage() {
           <h1>Can't agree where to go next? Let the draw decide.</h1>
           <p className="lp-lead">
             somewhere🎉 keeps your family's holidays in one place: the trips you've been on, a map of where you've been, and a pool of ideas for where to go next. When it's
-            time to choose, everyone spreads their points in secret and the draw picks the winner.
+            time to decide where to go on holiday, everyone spreads their points in secret and the draw picks the winner.
           </p>
           <SignInForm id="hero-email" />
           <div className="lp-perks">
@@ -444,6 +444,23 @@ export function SignInPage({ token, onSignedIn }: { token: string; onSignedIn: (
           ) : (
             <p className="big">Signing you in…</p>
           )}
+        </div>
+      </section>
+    </Frame>
+  );
+}
+
+/** Any address that isn't a page. The server sends it with a 404 so search engines drop it. */
+export function NotFound() {
+  return (
+    <Frame>
+      <section className="intro narrow">
+        <div className="panel signin">
+          <h1 className="big">Page not found</h1>
+          <p className="muted">There's nothing at this address. If someone sent you a family link, check it was copied in full.</p>
+          <a className="btn large" href="/">
+            Go to the home page
+          </a>
         </div>
       </section>
     </Frame>

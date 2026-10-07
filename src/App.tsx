@@ -12,6 +12,9 @@ import { SettingsView } from "./views/SettingsView";
 import { IdeaPage } from "./views/IdeaPage";
 import { TripPage } from "./views/TripPage";
 import { PersonPicker } from "./components/PersonPicker";
+import { NotFound } from "./views/Welcome";
+import { isPrivatePath } from "../shared/seo";
+import { load, save } from "./storage";
 
 const TABS = [
   { id: "trips", label: "Trips", icon: "🧳" },
@@ -45,9 +48,16 @@ function entryLink(): { kind: "join" | "person" | "signin"; token: string } | nu
 }
 
 export function App() {
-  const legal = legalPage(location.pathname);
-  return legal ? <LegalView page={legal} /> : <Main />;
+  const path = location.pathname;
+  const legal = legalPage(path);
+  if (legal) return <LegalView page={legal} />;
+  if (path !== "/" && !isPrivatePath(path)) return <NotFound />;
+  return <Main />;
 }
+
+// Remembers whether this browser was signed in last time, so the home page isn't shown to people who
+// are about to land in the app. index.html reads the same key before the first paint.
+const SIGNED_IN = "signedIn";
 
 function Main() {
   const [session, setSession] = useState<Session | null>(null);
@@ -56,7 +66,9 @@ function Main() {
 
   const refresh = useCallback(async () => {
     try {
-      setSession(await api.session());
+      const s = await api.session();
+      save(SIGNED_IN, s.signed_in);
+      setSession(s);
       // The server has carried over any person this browser picked before, so the old choice can go.
       forgetLegacyPerson();
       setError(null);
@@ -73,7 +85,10 @@ function Main() {
   }, [refresh]);
 
   useEffect(() => {
-    setSignedOutHandler(() => setSession({ signed_in: false }));
+    setSignedOutHandler(() => {
+      save(SIGNED_IN, false);
+      setSession({ signed_in: false });
+    });
     if (!entry) void refresh();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -86,6 +101,9 @@ function Main() {
       <div className="banner error">
         {error} <button onClick={() => void refresh()}>Retry</button>
       </div>
+    ) : location.pathname === "/" && !load(SIGNED_IN, false) ? (
+      // The same page the server sent, so nothing jumps while we check.
+      <HomePage />
     ) : (
       <p className="muted center">Loading…</p>
     );

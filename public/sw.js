@@ -26,7 +26,8 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       fetch(req)
         .then((res) => {
-          if (res.ok) {
+          // Only the home page is kept: other pages arrive as different HTML and shouldn't stand in for it.
+          if (res.ok && url.pathname === "/") {
             const copy = res.clone();
             caches.open(CACHE).then((c) => c.put("/", copy));
           }

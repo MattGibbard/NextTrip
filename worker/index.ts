@@ -130,7 +130,7 @@ function personInput(b: Record<string, unknown>) {
 }
 
 // Anyone in the family without a name yet can add themselves, and this browser
-// becomes them. The organiser can also add people who aren't on somewhere.party themselves.
+// becomes them. The organiser can also add people who aren't on somewhere🎉 themselves.
 app.post("/people", async (c) => {
   const isOwner = c.get("role") === "owner";
   if (viewerId(c) !== null && !isOwner) throw new HttpError(403, "You're already in the family on this device");

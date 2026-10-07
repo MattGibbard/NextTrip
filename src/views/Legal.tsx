@@ -35,7 +35,7 @@ function Privacy() {
       <h1>Privacy policy</h1>
       <p className="muted small">Last updated {UPDATED}</p>
       <p>
-        somewhere.party is a small, independent website run by one person in the UK. It's built to collect as little about you as possible. This page explains what it does keep,
+        somewhere🎉 is a small, independent website run by one person in the UK. It's built to collect as little about you as possible. This page explains what it does keep,
         why, and what you can do about it.
       </p>
 
@@ -63,7 +63,7 @@ function Privacy() {
         trips and ideas, so keep it private.
       </p>
 
-      <h2>Services that help run somewhere.party</h2>
+      <h2>Services that help run somewhere🎉</h2>
       <ul>
         <li>
           <strong>Cloudflare</strong> hosts the site and its database. Like any web host it sees your IP address and keeps short-lived logs for running and securing the
@@ -94,7 +94,7 @@ function Privacy() {
         trips and ideas, or delete the whole account and everything in it from Settings. For anything else, <Contact>contact us</Contact>. You can also complain to the Information
         Commissioner's Office (ico.org.uk).
       </p>
-      <p>somewhere.party is for families planning holidays together. The organiser should be an adult, and decides who in the family gets the link.</p>
+      <p>somewhere🎉 is for families planning holidays together. The organiser should be an adult, and decides who in the family gets the link.</p>
 
       <h2>Changes</h2>
       <p>If we change what we collect, we'll update this page and the date at the top.</p>
@@ -107,11 +107,11 @@ function Terms() {
     <>
       <h1>Terms of use</h1>
       <p className="muted small">Last updated {UPDATED}</p>
-      <p>By using somewhere.party you agree to these terms. They're short, and in plain English.</p>
+      <p>By using somewhere🎉 you agree to these terms. They're short, and in plain English.</p>
 
       <h2>The service</h2>
       <p>
-        somewhere.party is a free tool for families to keep track of their holidays and pick the next one. It's run by one person as an independent project and is provided as it
+        somewhere🎉 is a free tool for families to keep track of their holidays and pick the next one. It's run by one person as an independent project and is provided as it
         is. We try to keep it running and your data safe, but we can't promise it will always be available or error free, so keep a copy of anything you can't lose.
       </p>
 
@@ -124,7 +124,7 @@ function Terms() {
 
       <h2>What you add</h2>
       <p>
-        What your family puts in somewhere.party stays yours. You give us permission to store it and show it to people with access to your family, which we need to run the service.
+        What your family puts in somewhere🎉 stays yours. You give us permission to store it and show it to people with access to your family, which we need to run the service.
         Don't add anything illegal, offensive or that you don't have the right to share, and don't try to break, overload or get into parts of the site that aren't yours.
       </p>
 
@@ -136,13 +136,13 @@ function Terms() {
 
       <h2>Ending things</h2>
       <p>
-        You can stop using somewhere.party at any time. The organiser can delete the account and all of the family's data from Settings. We may suspend families that break these terms, or close the service, and if we do we'll
+        You can stop using somewhere🎉 at any time. The organiser can delete the account and all of the family's data from Settings. We may suspend families that break these terms, or close the service, and if we do we'll
         try to give you notice so you can save your data.
       </p>
 
       <h2>Liability</h2>
       <p>
-        As far as the law allows, we're not liable for any loss from using somewhere.party. Nothing here limits rights you have that can't be excluded by law. These terms are under
+        As far as the law allows, we're not liable for any loss from using somewhere🎉. Nothing here limits rights you have that can't be excluded by law. These terms are under
         the law of England and Wales.
       </p>
 

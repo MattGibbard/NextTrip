@@ -1,4 +1,4 @@
-# somewhere.party
+# somewhere🎉
 
 A holiday planner for families, running on Cloudflare Workers with a D1 database. It's live at [somewhere.party](https://somewhere.party). The site used to be called NextTrip, which is still the name of this repo, the Worker and its D1 databases.
 
@@ -6,10 +6,10 @@ A holiday planner for families, running on Cloudflare Workers with a D1 database
 - **Places:** a world map of the countries and cities you've visited, with ideas you haven't been to yet shown in orange. Tap a country to see your trips there. It also shows how much of the world and how many continents you've covered, with lists by country, by city and by year.
 - **Ideas:** holiday ideas anyone in the family can add, each with one or more places, a budget (£ to £££), trip length, travel time and holiday types. Travel time is worked out from your home (set in Settings) as a rough direct flight, and can't be picked by hand. Each idea can have a cover photo and has its own page with all its details, a map of its places with lines between them (in order for road trips and cruises, otherwise out from the first place), its draw history and an Edit button. You can filter by budget and type.
 - **Draw:** start a round and you each get the same number of points (10 by default). You can filter a round by budget, trip length, travel time or type of holiday, so only matching ideas are in it. A round can start with a swipe to shortlist: you each swipe yes or no on every idea, and only the ones everyone likes go into the draw. Spread your points across those ideas. Each of you also gets one secret veto per round: nobody else is told, and they can still put points on that idea, but points on vetoed ideas don't count, and the vetoes are revealed with the results. Points stay hidden until everyone has locked in. Then every point is one ticket and the server picks the winner at random. There are no re-rolls, and every draw is kept in the history. Once you've been, the winning idea becomes a trip.
-- **Home screen app:** add somewhere.party to your phone's home screen and it opens full screen like an app, with its own icon. Settings shows how for your browser.
+- **Home screen app:** add somewhere🎉 to your phone's home screen and it opens full screen like an app, with its own icon. Settings shows how for your browser.
 - **Families:** one person (the organiser) signs in with an emailed link, no password. Settings has a private family link for everyone else: opening it lets them type their name, pick a colour, add ideas and trips, start and vote in draws and see results. Only the organiser can delete things, change Home settings, remove people, make a new family link (which signs out everyone who used the old one) or delete the account, which wipes the whole family after they type DELETE to confirm. Each browser remembers who you picked.
 
-The public home page (`/`) explains somewhere.party and has the sign-in form. We never store email addresses, only a SHA-256 hash of them, and sign-in links and session cookies are also stored only as hashes.
+The public home page (`/`) explains somewhere🎉 and has the sign-in form. We never store email addresses, only a SHA-256 hash of them, and sign-in links and session cookies are also stored only as hashes.
 
 ## Running locally
 

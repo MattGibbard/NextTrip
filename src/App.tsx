@@ -122,7 +122,7 @@ function Shell() {
         <a className="brand" href="#/trips">
           <img src="/favicon.svg" alt="" width={28} height={28} />
           <span>
-            somewhere<span className="brand-tld">.party</span>
+            somewhere<span className="brand-party">🎉</span>
           </span>
         </a>
         <nav className="tabs desktop-only">

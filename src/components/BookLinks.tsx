@@ -41,7 +41,7 @@ function useFlightDestination(trip: Trip): Terminal | null {
 
 /** "Find flights" and "Find hotels" buttons through our affiliate links, with the commission note beside them. */
 export function BookLinks({ trip, campaign, className = "" }: { trip: Trip; campaign: HotelCampaign; className?: string }) {
-  const { home } = useData();
+  const { home, people } = useData();
   const mode = ideaMode(trip.holiday_types);
   const flies = mode === "flight" || mode === "road";
   const from = flies ? flightOrigin(trip.depart, home) : null;
@@ -56,7 +56,7 @@ export function BookLinks({ trip, campaign, className = "" }: { trip: Trip; camp
       </h2>
       <div className="book-buttons">
         {flight && (
-          <a className="btn ghost" href={flightLink(flight.from, flight.to, campaign)} target="_blank" rel="sponsored noopener">
+          <a className="btn ghost" href={flightLink(flight.from, flight.to, people.length, campaign)} target="_blank" rel="sponsored noopener">
             ✈️ Find flights {flight.from} → {flight.to}
             <span aria-hidden>↗</span>
           </a>

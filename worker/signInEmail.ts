@@ -10,6 +10,7 @@ const C = {
   muted: "#66716c",
   border: "#dde3df",
   accent: "#0f766e",
+  board: "#1c2421",
 };
 const SANS = "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
 const MONO = "'DM Mono', ui-monospace, Menlo, Consolas, monospace";
@@ -28,10 +29,22 @@ const notch = (side: "left" | "right") => {
   return `<td width="11" style="width:11px;padding:0;line-height:0;font-size:0" valign="top"><div class="notch" style="width:10px;height:20px;background:${C.bg};border:1px solid ${C.border};${edge};border-radius:${radius}"></div></td>`;
 };
 
-export function signInEmail({ link, email, minutes }: { link: string; email: string; minutes: number }) {
+// The code as split-flap tiles, like the counters on the Been board: one dark tile per digit with a hinge line
+// across the middle, in two groups of three. Apps that drop the gradient still show plain dark tiles.
+const flaps = (code: string) => {
+  const tile = (d: string) =>
+    `<td class="flap" width="40" align="center" style="width:40px;height:56px;padding:0;background-color:${C.board};background-image:linear-gradient(to bottom,transparent 27px,rgba(0,0,0,0.55) 27px,rgba(0,0,0,0.55) 28px,transparent 28px);border-radius:7px;font-family:${MONO};font-size:30px;font-weight:500;line-height:56px;color:#ffffff">${esc(d)}</td>`;
+  const gap = (w: number) => `<td width="${w}" style="width:${w}px;padding:0;font-size:0;line-height:0">&nbsp;</td>`;
+  const cells = [...code].map((d, i) => (i === 0 ? "" : gap(i === 3 ? 14 : 4)) + tile(d)).join("");
+  return `<table role="presentation" cellpadding="0" cellspacing="0" border="0" aria-label="${esc(code.split("").join(" "))}"><tr>${cells}</tr></table>`;
+};
+
+export function signInEmail({ link, code, email, minutes }: { link: string; code: string; email: string; minutes: number }) {
   const subject = "Your somewhere🎉 sign-in link";
   const href = esc(link);
-  const preheader = `Tap to sign in. The link works once and runs out in ${minutes} minutes.`;
+  // Spaced into two groups of three so it's easy to read off and type.
+  const shownCode = `${code.slice(0, 3)} ${code.slice(3)}`;
+  const preheader = `Your code is ${shownCode}, or tap to sign in. Both work once and run out in ${minutes} minutes.`;
 
   const text = [
     "Your sign-in link is ready",
@@ -40,11 +53,14 @@ export function signInEmail({ link, email, minutes }: { link: string; email: str
     "",
     link,
     "",
-    `It works once and runs out in ${minutes} minutes.`,
+    `Or enter this code: ${shownCode}`,
+    "Type it on the somewhere🎉 page where you asked for this email. Handy if the link opens inside your email app instead of your browser.",
+    "",
+    `The link and code work once and run out in ${minutes} minutes.`,
     "",
     "Bringing everyone? Once you're in, share your family link from Settings. You each join from there.",
     "",
-    "Didn't ask for this? You can ignore this email. Nobody gets in without the link.",
+    "Didn't ask for this? You can ignore this email. Nobody gets in without the link or code.",
     "",
     "--",
     "somewhere🎉 · Where we've been, and where we're going next.",
@@ -78,6 +94,7 @@ a{color:${C.accent}}
   .muted{color:#96a29c !important}
   .code{background:#212b27 !important;color:#e7ece9 !important}
   .link{color:#2dd4bf !important}
+  .flap{background-color:#0a0e0c !important}
 }
 </style>
 </head>
@@ -111,7 +128,10 @@ a{color:${C.accent}}
 <td style="background:${C.accent};border-radius:10px">
 <a href="${href}" style="display:inline-block;padding:14px 28px;font-family:${SANS};font-size:16px;font-weight:700;line-height:20px;color:#ffffff;text-decoration:none;border-radius:10px">Sign in</a>
 </td></tr></table>
-<p class="muted" style="margin:24px 0 12px;font-size:14px;line-height:1.45;color:${C.muted}">This link works once and runs out in ${minutes} minutes. If the button doesn't work, copy this into your browser:</p>
+${label("OR ENTER THIS CODE", "margin:28px 0 8px")}
+${flaps(code)}
+<p class="muted" style="margin:10px 0 0;font-size:14px;line-height:1.45;color:${C.muted}">Type it on the somewhere🎉 page where you asked for this email. Handy if the button opens inside your email app instead of your browser.</p>
+<p class="muted" style="margin:24px 0 12px;font-size:14px;line-height:1.45;color:${C.muted}">The link and code work once and run out in ${minutes} minutes. If the button doesn't work, copy this into your browser:</p>
 <div class="code" style="background:${C.surface2};border-radius:12px;padding:12px 14px;font-family:${MONO};font-size:13px;line-height:1.4;color:${C.text};word-break:break-all"><a href="${href}" class="ink" style="color:${C.text};text-decoration:none">${href}</a></div>
 </td></tr>
 
@@ -131,7 +151,7 @@ ${label("BRINGING EVERYONE?", "margin-bottom:6px")}
 </td>
 <td class="col" width="50%" valign="top" style="width:50%;padding-left:12px">
 ${label("DIDN'T ASK FOR THIS?", "margin-bottom:6px")}
-<p class="ink" style="margin:0;font-size:14px;line-height:1.45;color:${C.text}">You can ignore this email. Nobody gets in without the link.</p>
+<p class="ink" style="margin:0;font-size:14px;line-height:1.45;color:${C.text}">You can ignore this email. Nobody gets in without the link or code.</p>
 </td>
 </tr></table>
 </td></tr>

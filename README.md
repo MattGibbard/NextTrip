@@ -9,7 +9,7 @@ A holiday planner for families, running on Cloudflare Workers with a D1 database
 - **Home screen app:** add somewhere🎉 to your phone's home screen and it opens full screen like an app, with its own icon. Settings shows how for your browser.
 - **Families:** one person (the organiser) signs in with an emailed link, no password. Settings has a private family link for everyone else: opening it lets them type their name, pick a colour, add ideas and trips, start and vote in draws and see results. Only the organiser can delete things, change Home settings, remove people, make a new family link (which signs out everyone who used the old one) or delete the account, which wipes the whole family after they type DELETE to confirm. Each browser remembers who you picked.
 
-The public home page (`/`) explains somewhere🎉 and has the sign-in form. We never store email addresses, only a SHA-256 hash of them, and sign-in links and session cookies are also stored only as hashes.
+The public home page (`/`) explains somewhere🎉 and has the sign-in form. We never store email addresses, only a SHA-256 hash of them, and sign-in links, sign-in codes and session cookies are also stored only as hashes. Each sign-in email has a link and a 6-digit code; the code is for when the link opens inside an email app's own browser.
 
 ## Running locally
 

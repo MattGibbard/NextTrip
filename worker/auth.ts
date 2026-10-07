@@ -11,6 +11,8 @@ const SESSION_DAYS: Record<Role, number> = { owner: 180, member: 365 };
 const LINK_MINUTES = 20;
 /** Sign-in emails allowed per address in a 15-minute window. */
 const LINKS_PER_WINDOW = 3;
+/** Wrong codes allowed before an email's codes stop working. */
+const CODE_TRIES = 5;
 
 /** How long a link the organiser makes for one person works for. */
 const PERSON_LINK_DAYS = 7;
@@ -90,8 +92,19 @@ async function bodyOf(c: Ctx): Promise<Record<string, unknown>> {
   }
 }
 
-async function sendSignInEmail(env: Env, to: string, link: string) {
-  const email = signInEmail({ link, email: to, minutes: LINK_MINUTES });
+/** A 6-digit code, every value equally likely. */
+function randomCode(): string {
+  const buf = new Uint32Array(1);
+  do crypto.getRandomValues(buf);
+  while (buf[0] >= 4_294_000_000); // a multiple of a million, so no code is likelier than another
+  return String(buf[0] % 1_000_000).padStart(6, "0");
+}
+
+/** The code is hashed with the email, so the same code for two people doesn't match the same row. */
+const codeHash = (emailHash: string, code: string) => sha256(`${emailHash}:${code}`);
+
+async function sendSignInEmail(env: Env, to: string, link: string, code: string) {
+  const email = signInEmail({ link, code, email: to, minutes: LINK_MINUTES });
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, "Content-Type": "application/json" },
@@ -107,6 +120,17 @@ async function sendSignInEmail(env: Env, to: string, link: string) {
     console.error("Resend failed", res?.status, await res?.text().catch(() => ""));
     throw new HttpError(503, "We couldn't send the email just now. Try again in a minute.");
   }
+}
+
+async function signInOrganiser(c: Ctx, emailHash: string) {
+  const family = await familyFor(c.env, emailHash);
+  // The organiser only has to say who they are once, not on every device.
+  const me = await c.env.DB.prepare(
+    "SELECT p.id FROM families f JOIN people p ON p.id = f.owner_person_id AND p.family_id = f.id AND p.removed = 0 WHERE f.id = ?",
+  )
+    .bind(family)
+    .first<{ id: number }>();
+  await startSession(c, family, "owner", me?.id ?? null);
 }
 
 /**
@@ -163,16 +187,16 @@ export function authRoutes(app: Hono<App>) {
       .first<{ n: number }>();
     if ((recent?.n ?? 0) >= LINKS_PER_WINDOW) throw new HttpError(429, "We've sent a few links already. Check your inbox, or try again in 15 minutes.");
     const token = randomToken(32);
+    const code = randomCode();
     await db.batch([
       db.prepare("DELETE FROM login_links WHERE expires_at <= datetime('now', '-1 day')"),
-      db.prepare(`INSERT INTO login_links (token_hash, email_hash, expires_at) VALUES (?, ?, datetime('now', '+${LINK_MINUTES} minutes'))`).bind(
-        await sha256(token),
-        emailHash,
-      ),
+      db.prepare(
+        `INSERT INTO login_links (token_hash, email_hash, code_hash, expires_at) VALUES (?, ?, ?, datetime('now', '+${LINK_MINUTES} minutes'))`,
+      ).bind(await sha256(token), emailHash, await codeHash(emailHash, code)),
     ]);
     const link = `${new URL(c.req.url).origin}/signin?token=${token}`;
-    if (c.env.RESEND_API_KEY) await sendSignInEmail(c.env, email, link);
-    return c.json(dev && !c.env.RESEND_API_KEY ? { ok: true, dev_link: link } : { ok: true });
+    if (c.env.RESEND_API_KEY) await sendSignInEmail(c.env, email, link, code);
+    return c.json(dev && !c.env.RESEND_API_KEY ? { ok: true, dev_link: link, dev_code: code } : { ok: true });
   });
 
   // The link in the email opens a page with a button that calls this, so email
@@ -185,14 +209,32 @@ export function authRoutes(app: Hono<App>) {
       .bind(await sha256(token))
       .first<{ email_hash: string }>();
     if (!row) throw new HttpError(400, "That sign-in link has expired or been used. Ask for a new one.");
-    const family = await familyFor(c.env, row.email_hash);
-    // The organiser only has to say who they are once, not on every device.
-    const me = await db.prepare(
-      "SELECT p.id FROM families f JOIN people p ON p.id = f.owner_person_id AND p.family_id = f.id AND p.removed = 0 WHERE f.id = ?",
-    )
-      .bind(family)
-      .first<{ id: number }>();
-    await startSession(c, family, "owner", me?.id ?? null);
+    await signInOrganiser(c, row.email_hash);
+    return c.json({ ok: true });
+  });
+
+  // The code from the same email, typed on the page that asked for it. This is for when the
+  // link opens in an email app's own browser and signs that in instead of the one you wanted.
+  app.post("/auth/code", async (c) => {
+    const body = await bodyOf(c);
+    const email = normaliseEmail(body.email);
+    const code = typeof body.code === "string" ? body.code.replace(/\D/g, "") : "";
+    if (!email || code.length !== 6) throw new HttpError(400, "Enter the 6-digit code from the email");
+    const db = c.env.DB;
+    const emailHash = await sha256(email);
+    const live = `email_hash = ? AND expires_at > datetime('now') AND code_hash IS NOT NULL AND tries < ${CODE_TRIES}`;
+    const row = await db.prepare(`DELETE FROM login_links WHERE ${live} AND code_hash = ? RETURNING email_hash`)
+      .bind(emailHash, await codeHash(emailHash, code))
+      .first<{ email_hash: string }>();
+    if (!row) {
+      // A wrong guess counts against every live code for this address. With only a few emails allowed
+      // every 15 minutes, that's a handful of guesses at a million possible codes.
+      await db.prepare(`UPDATE login_links SET tries = tries + 1 WHERE ${live}`).bind(emailHash).run();
+      const left = await db.prepare(`SELECT COUNT(*) AS n FROM login_links WHERE ${live}`).bind(emailHash).first<{ n: number }>();
+      if (!left?.n) throw new HttpError(400, "That code has run out or had too many tries. Ask for a new email.");
+      throw new HttpError(400, "That code isn't right. Check it against the newest email.");
+    }
+    await signInOrganiser(c, emailHash);
     return c.json({ ok: true });
   });
 

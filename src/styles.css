@@ -1745,6 +1745,14 @@ button.card:hover {
   margin: 0;
   max-width: 520px;
 }
+.lp-code-form {
+  margin: 0.4rem 0;
+}
+.lp-code-form input {
+  font-family: var(--mono, ui-monospace, monospace);
+  font-size: 20px;
+  letter-spacing: 0.12em;
+}
 
 /* Hero tickets */
 .lp-tickets {

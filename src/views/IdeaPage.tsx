@@ -75,7 +75,7 @@ export function IdeaPage({ id }: { id: number }) {
   if (!idea) {
     return (
       <section>
-        <a className="back-link" href="#/ideas">
+        <a className="back-link" href="#/next">
           ← Next
         </a>
         <p className="muted center">This idea has been deleted.</p>
@@ -98,7 +98,7 @@ export function IdeaPage({ id }: { id: number }) {
   return (
     <section className="pass-page">
       <div className="page-head">
-        <a className="back-link" href="#/ideas">
+        <a className="back-link" href="#/next">
           ← Next
         </a>
         <button className="btn" onClick={() => setEditing(true)}>
@@ -146,7 +146,7 @@ export function IdeaPage({ id }: { id: number }) {
       )}
       {trip && (
         <p className="small">
-          ✓ You went: <a href={`#/trips/${trip.id}`}>{trip.title}</a>
+          ✓ You went: <a href={`#/been/${trip.id}`}>{trip.title}</a>
         </p>
       )}
 
@@ -190,7 +190,7 @@ export function IdeaPage({ id }: { id: number }) {
         )}
       </div>
 
-      {editing && <IdeaForm idea={idea} onClose={() => setEditing(false)} onDeleted={() => (location.hash = "/ideas")} />}
+      {editing && <IdeaForm idea={idea} onClose={() => setEditing(false)} onDeleted={() => (location.hash = "/next")} />}
       {tripDraft && <TripForm draft={tripDraft} onClose={() => setTripDraft(null)} />}
     </section>
   );

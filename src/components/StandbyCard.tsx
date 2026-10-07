@@ -19,7 +19,7 @@ export function StandbyCard({ idea: i, onBeen, preview = false }: { idea: CardId
   const tag = i.status === "won" ? "🏆 WINNER" : i.status === "done" ? "✓ DONE" : "STANDBY";
   return (
     <article className={`standby-card mode-${mode}${preview ? " preview" : ""}`}>
-      <Link className="standby-link" href={preview ? undefined : `#/ideas/${i.id}`}>
+      <Link className="standby-link" href={preview ? undefined : `#/next/${i.id}`}>
         <div className="standby-photo">
           <Photo url={i.cover_url} fallback={flags || "💡"} className="fill" />
           <span className="standby-tag">

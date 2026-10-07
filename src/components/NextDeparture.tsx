@@ -35,7 +35,7 @@ export function NextDeparture({ onBeen }: { onBeen: (d: TripDraft) => void }) {
         {ends ? <RouteLine from={ends.from} to={ends.to} icon={MODES[arrival].icon} /> : <div className="departure-flags">{flags || "🏆"}</div>}
         <div className="departure-fields">
           <Field label="TRIP" className="departure-trip">
-            <a href={`#/ideas/${idea.id}`}>
+            <a href={`#/next/${idea.id}`}>
               {flags} {idea.title}
             </a>
           </Field>

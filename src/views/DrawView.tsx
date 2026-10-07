@@ -108,7 +108,7 @@ function StartRound({ lastPoints }: { lastPoints: number }) {
       </p>
       {pool.length < 2 ? (
         <p className="banner">
-          Add at least two ideas to the pool first (there {pool.length === 1 ? "is 1" : `are ${pool.length}`} now). <a href="#/ideas">Go to ideas</a>
+          Add at least two ideas to the pool first (there {pool.length === 1 ? "is 1" : `are ${pool.length}`} now). <a href="#/next">Go to Next</a>
         </p>
       ) : (
         <div className="form">

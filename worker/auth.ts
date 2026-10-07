@@ -56,6 +56,11 @@ export async function setSessionPerson(c: Ctx, person: number) {
   await c.env.DB.prepare("UPDATE sessions SET person_id = ?, legacy = 0 WHERE token_hash = ?").bind(person, await sha256(token)).run();
 }
 
+/** Remembers which person the organiser is, for when they sign in on another device. */
+export async function setOwnerPerson(c: Ctx, family: number, person: number) {
+  await c.env.DB.prepare("UPDATE families SET owner_person_id = ? WHERE id = ?").bind(person, family).run();
+}
+
 async function startSession(c: Ctx, family: number, role: Role, person: number | null = null) {
   const token = randomToken(32);
   const days = SESSION_DAYS[role];
@@ -182,7 +187,14 @@ export function authRoutes(app: Hono<App>) {
       .bind(await sha256(token))
       .first<{ email_hash: string }>();
     if (!row) throw new HttpError(400, "That sign-in link has expired or been used. Ask for a new one.");
-    await startSession(c, await familyFor(c.env, row.email_hash), "owner");
+    const family = await familyFor(c.env, row.email_hash);
+    // The organiser only has to say who they are once, not on every device.
+    const me = await db.prepare(
+      "SELECT p.id FROM families f JOIN people p ON p.id = f.owner_person_id AND p.family_id = f.id AND p.removed = 0 WHERE f.id = ?",
+    )
+      .bind(family)
+      .first<{ id: number }>();
+    await startSession(c, family, "owner", me?.id ?? null);
     return c.json({ ok: true });
   });
 

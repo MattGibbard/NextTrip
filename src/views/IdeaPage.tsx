@@ -151,7 +151,7 @@ export function IdeaPage({ id }: { id: number }) {
         </p>
       )}
 
-      {idea.status !== "done" && <BookLinks trip={idea} campaign="idea_page" className="panel" />}
+      {idea.status !== "done" && <BookLinks trip={idea} mode={ideaMode(idea.holiday_types)} campaign="idea_page" className="panel" />}
 
       <div className="pass-columns idea-columns">
         {idea.description && <p className="pass-notes area-notes">{idea.description}</p>}

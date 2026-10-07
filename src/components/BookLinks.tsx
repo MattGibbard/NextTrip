@@ -1,25 +1,25 @@
 import { useEffect, useState } from "react";
 import type { Place } from "../../shared/types";
 import type { Terminal } from "../../shared/terminals";
-import { ideaMode } from "../../shared/travelMode";
+import type { Mode } from "../../shared/travelMode";
 import { hotelLink, hotelPlaces } from "../../shared/hotels";
 import type { HotelCampaign } from "../../shared/hotels";
 import { flightLink, flightOrigin } from "../../shared/flights";
 import { api } from "../api";
 import { useData } from "../data";
 
-interface Trip {
+/** An idea or a past trip: where it went and the airports it used. */
+interface Journey {
   places: Place[];
   depart: Terminal | null;
   arrive: Terminal | null;
-  holiday_types: string[];
 }
 
 /**
- * Where the flight search lands: the idea's arrival airport, otherwise the airport nearest its
+ * Where the flight search lands: its arrival airport, otherwise the airport nearest its
  * first place, looked up on the server because the airport list is too big to ship to the browser.
  */
-function useFlightDestination(trip: Trip): Terminal | null {
+function useFlightDestination(trip: Journey): Terminal | null {
   const arrive = trip.arrive?.kind === "airport" && trip.arrive.code ? trip.arrive : null;
   const first = trip.places.find((p) => p.lat !== null && p.lon !== null);
   const [nearest, setNearest] = useState<{ key: string; airport: Terminal | null } | null>(null);
@@ -40,9 +40,20 @@ function useFlightDestination(trip: Trip): Terminal | null {
 }
 
 /** "Find flights" and "Find hotels" buttons through our affiliate links, with the commission note beside them. */
-export function BookLinks({ trip, campaign, className = "" }: { trip: Trip; campaign: HotelCampaign; className?: string }) {
+export function BookLinks({
+  trip,
+  mode,
+  campaign,
+  title = "🧳 Book it",
+  className = "",
+}: {
+  trip: Journey;
+  mode: Mode;
+  campaign: HotelCampaign;
+  title?: string;
+  className?: string;
+}) {
   const { home, people } = useData();
-  const mode = ideaMode(trip.holiday_types);
   const flies = mode === "flight" || mode === "road";
   const from = flies ? flightOrigin(trip.depart, home) : null;
   const to = useFlightDestination(trip);
@@ -52,7 +63,7 @@ export function BookLinks({ trip, campaign, className = "" }: { trip: Trip; camp
   return (
     <section className={`book-links ${className}`.trim()} aria-labelledby={`book-${campaign}`}>
       <h2 id={`book-${campaign}`} className="mono-label">
-        🧳 Book it
+        {title}
       </h2>
       <div className="book-buttons">
         {flight && (

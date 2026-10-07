@@ -83,6 +83,10 @@ function Privacy() {
           <strong>Stay22</strong> runs the "Find hotels" buttons. They're affiliate links: if you book a stay after following one, we may earn a commission, at no extra
           cost to you. We only send the place you're looking at. Once you're on Stay22 or the booking site it takes you to, their own privacy policy and cookies apply.
         </li>
+        <li>
+          <strong>Travelpayouts</strong> runs the flight affiliate programme we're joining. For now the home page loads a small script from them so they can confirm we
+          own the site. They say it collects no personal data.
+        </li>
         <li>If you add a cover photo link, the picture loads from whichever site it's hosted on.</li>
       </ul>
 

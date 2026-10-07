@@ -89,13 +89,13 @@ async function sendSignInEmail(env: Env, to: string, link: string) {
     method: "POST",
     headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, "Content-Type": "application/json" },
     body: JSON.stringify({
-      from: env.EMAIL_FROM || "NextTrip <onboarding@resend.dev>",
+      from: env.EMAIL_FROM || "somewhere.party <onboarding@resend.dev>",
       to: [to],
-      subject: "Your NextTrip sign-in link",
-      text: `Open this link to sign in to NextTrip:\n\n${link}\n\nIt works once, for the next ${LINK_MINUTES} minutes. If you didn't ask for it, you can ignore this email.`,
+      subject: "Your somewhere.party sign-in link",
+      text: `Open this link to sign in to somewhere.party:\n\n${link}\n\nIt works once, for the next ${LINK_MINUTES} minutes. If you didn't ask for it, you can ignore this email.`,
       html: `<div style="font-family:system-ui,sans-serif;font-size:16px;line-height:1.5;color:#111">
-<p>Tap the button to sign in to NextTrip.</p>
-<p><a href="${link}" style="display:inline-block;background:#2563eb;color:#fff;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:600">Sign in to NextTrip</a></p>
+<p>Tap the button to sign in to somewhere.party.</p>
+<p><a href="${link}" style="display:inline-block;background:#2563eb;color:#fff;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:600">Sign in to somewhere.party</a></p>
 <p style="color:#666;font-size:14px">It works once, for the next ${LINK_MINUTES} minutes. If you didn't ask for it, you can ignore this email.</p>
 </div>`,
     }),

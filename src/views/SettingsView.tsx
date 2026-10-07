@@ -37,7 +37,7 @@ export function SettingsView() {
       <div className="panel">
         <h2>This device</h2>
         <p>
-          You're using NextTrip as <strong>{me?.name ?? "nobody yet"}</strong>
+          You're using somewhere.party as <strong>{me?.name ?? "nobody yet"}</strong>
           {isOwner ? ", signed in as the family organiser." : ", through the family link."}
           {!isOwner && " If this isn't you, ask your family organiser for your own sign-in link."}
         </p>
@@ -96,7 +96,7 @@ function SharePanel() {
       setError("Couldn't copy. Press and hold the link to copy it instead.");
     }
   };
-  const share = () => void navigator.share?.({ title: "NextTrip", text: "Join our family's NextTrip to add holiday ideas and vote in the draw.", url: shareUrl }).catch(() => {});
+  const share = () => void navigator.share?.({ title: "somewhere.party", text: "Join our family's somewhere.party to add holiday ideas and vote in the draw.", url: shareUrl }).catch(() => {});
   const reset = async () => {
     if (!confirm("Make a new family link? The old one stops working, and everyone who used it will need the new one.")) return;
     try {
@@ -246,7 +246,7 @@ function AppearancePanel() {
   );
 }
 
-/** How to put NextTrip on the home screen, for whichever browser this is. */
+/** How to put somewhere.party on the home screen, for whichever browser this is. */
 const DELETE_WORD = "DELETE";
 
 /** Lets the organiser delete their account and everything the family has added. */
@@ -310,9 +310,9 @@ function InstallPanel() {
       <h2>Add to your home screen</h2>
       {install ? (
         <>
-          <p className="muted small">Open NextTrip like an app, full screen and without the browser bars.</p>
+          <p className="muted small">Open somewhere.party like an app, full screen and without the browser bars.</p>
           <button className="btn" onClick={() => void install()}>
-            📲 Install NextTrip
+            📲 Install somewhere.party
           </button>
         </>
       ) : isIos() ? (
@@ -377,9 +377,9 @@ function DeviceActions({ person }: { person: Person }) {
     try {
       const made = await api.personLink(person.id);
       setLink(made);
-      const text = `Here's your own link to NextTrip, ${person.name}. It works once, for ${made.days} days.`;
+      const text = `Here's your own link to somewhere.party, ${person.name}. It works once, for ${made.days} days.`;
       if (typeof navigator.share === "function") {
-        await navigator.share({ title: "NextTrip", text, url: made.url }).catch(() => {});
+        await navigator.share({ title: "somewhere.party", text, url: made.url }).catch(() => {});
       } else {
         await navigator.clipboard.writeText(made.url).then(() => setNote("Copied. Send it to them."), () => {});
       }

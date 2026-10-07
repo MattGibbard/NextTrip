@@ -6,14 +6,19 @@ export const STAY22_AID = "somewhereparty";
 /** Where the link was shown, so Stay22's reports say which button earned it. Underscores only, as Stay22 asks. */
 export type HotelCampaign = "draw_result" | "idea_page";
 
-/** A Stay22 link that searches hotels around a place, on whichever booking site Stay22 picks. */
+/**
+ * A Stay22 link that searches hotels in a place, on whichever booking site Stay22 picks.
+ * It sends the place's name and country rather than its coordinates: Booking.com searches
+ * by name reliably, but coordinates sometimes landed on the wrong city (Banff opened Munich).
+ */
 export function hotelLink(place: Place, campaign: HotelCampaign): string {
   const q = new URLSearchParams({ aid: STAY22_AID });
-  if (place.lat !== null && place.lon !== null) {
+  const address = [place.name.trim(), place.country.trim()].filter(Boolean).join(", ");
+  if (address) {
+    q.set("address", address);
+  } else if (place.lat !== null && place.lon !== null) {
     q.set("lat", String(place.lat));
     q.set("lng", String(place.lon));
-  } else {
-    q.set("address", [place.name, place.country].filter(Boolean).join(", "));
   }
   q.set("campaign", campaign);
   return `https://www.stay22.com/allez/roam?${q}`;

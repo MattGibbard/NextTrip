@@ -26,7 +26,7 @@ export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: (
   });
   const mode = ideaMode(details.holiday_types);
   const journey = useJourney(idea ?? {}, !idea)(mode);
-  // Travel time is measured from where you set off, or from home without one.
+  // Travel time is measured from where you set off, or from the home airport without one.
   const origin = journey.depart ?? home;
   const estimate = estimateTravel(origin, places);
   const [saving, setSaving] = useState(false);
@@ -78,8 +78,8 @@ export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: (
             {estimate && origin
               ? `✈️ ${travelTimeLabel(estimate.travel_time)}, about ${formatHours(estimate.hours)} from ${origin.name} (${Math.round(estimate.km).toLocaleString("en-GB")} km).`
               : origin
-                ? `Worked out from ${journey.depart ? "where you set off" : "home"} once you add a place.`
-                : "Set your home in Settings and it's worked out for you."}
+                ? `Worked out from ${journey.depart ? "where you set off" : "your home airport"} once you add a place.`
+                : "Set your home airport in Settings and it's worked out for you."}
           </p>
         </div>
         <label>

@@ -136,9 +136,6 @@ export interface GeocodeResult {
   place: Place;
 }
 
-/** Where travel times are measured from. */
-export type Home = Place | null;
-
 /** The airport and station new trips and ideas set off from unless you pick another. */
 export interface HomeEnds {
   airport: Terminal | null;

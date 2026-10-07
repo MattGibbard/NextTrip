@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
-import type { Home, HomeEnds, Idea, Person, Round, Trip } from "../shared/types";
+import type { Terminal } from "../shared/terminals";
+import type { HomeEnds, Idea, Person, Round, Trip } from "../shared/types";
 import { api } from "./api";
 
 interface Data {
@@ -16,8 +17,8 @@ interface Data {
   trips: Trip[];
   ideas: Idea[];
   rounds: Round[];
-  /** Where travel times are measured from, if it's been set. */
-  home: Home;
+  /** The home airport, which travel times and flight tickets start from when an idea or trip has no departure. */
+  home: Terminal | null;
   /** The airport and station new trips and ideas set off from. */
   homeEnds: HomeEnds;
   /** Who this browser is. Only the server changes it. */
@@ -49,19 +50,17 @@ export function DataProvider({
   const [trips, setTrips] = useState<Trip[]>([]);
   const [ideas, setIdeas] = useState<Idea[]>([]);
   const [rounds, setRounds] = useState<Round[]>([]);
-  const [home, setHome] = useState<Home>(null);
   const [homeEnds, setHomeEnds] = useState<HomeEnds>({ airport: null, station: null });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const reload = useCallback(async () => {
     try {
-      const [p, t, i, r, h, e] = await Promise.all([api.people(), api.trips(), api.ideas(), api.rounds(), api.home(), api.homeEnds()]);
+      const [p, t, i, r, e] = await Promise.all([api.people(), api.trips(), api.ideas(), api.rounds(), api.homeEnds()]);
       setPeople(p);
       setTrips(t);
       setIdeas(i);
       setRounds(r);
-      setHome(h);
       setHomeEnds(e);
       setError(null);
     } catch (e) {
@@ -87,7 +86,7 @@ export function DataProvider({
       trips,
       ideas,
       rounds,
-      home,
+      home: homeEnds.airport,
       homeEnds,
       me: people.find((p) => p.id === meId && !p.removed) ?? null,
       setMe,
@@ -96,7 +95,7 @@ export function DataProvider({
       reload,
       personName: (id) => people.find((p) => p.id === id)?.name ?? "Someone",
     }),
-    [people, isOwner, token, trips, ideas, rounds, home, homeEnds, meId, setMe, loading, error, reload],
+    [people, isOwner, token, trips, ideas, rounds, homeEnds, meId, setMe, loading, error, reload],
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

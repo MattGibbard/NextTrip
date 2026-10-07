@@ -3,7 +3,7 @@ import { Frame } from "./Welcome";
 
 // Keep these in step with what the app really does: if a change stores something new
 // or sends data to another service, update the privacy policy and this date.
-const UPDATED = "6 October 2026";
+const UPDATED = "7 October 2026";
 const CONTACT = "https://github.com/MattGibbard/NextTrip/issues";
 
 export type LegalPage = "privacy" | "terms";
@@ -50,7 +50,7 @@ function Privacy() {
         </li>
         <li>
           <strong>Your family's holiday plans.</strong> Trips, places, ideas, notes, ratings, photo links, points, vetoes, swipes and draw results that your family adds, plus
-          the home place you set for travel times.
+          the home airport and station you set.
         </li>
         <li>
           <strong>A sign-in cookie.</strong> One cookie keeps each device signed in (up to 180 days for the organiser and a year for family members). We only store a hash of

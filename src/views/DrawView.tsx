@@ -922,7 +922,7 @@ function HistoryRow({ round, hidden }: { round: Round; hidden: boolean }) {
             </span>
           </span>
           {!hidden && <span className="winner-pill mono-label">🏆 Winner</span>}
-          {!hidden && <span className="chev">{open ? "▴" : "▾"}</span>}
+          {!hidden && <span className="hs-more">{open ? "Hide ▴" : "Details ▾"}</span>}
         </span>
       </button>
       {open && (

@@ -876,6 +876,510 @@ button.card:hover {
   font-weight: 400;
 }
 
+/* ---------- Add / edit trip sheet ---------- */
+
+/* The trip sheet draws its own pinned header and footer, so the sheet itself has no padding. */
+.sheet.bare {
+  padding: 0;
+}
+.trip-sheet {
+  --pad: 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+@media (max-width: 520px) {
+  .trip-sheet {
+    --pad: 16px;
+  }
+}
+.ts-head {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 18px var(--pad) 16px;
+}
+.ts-grabber {
+  display: block;
+  width: 36px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--border);
+  margin: -10px auto 10px;
+}
+.ts-head-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.ts-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ts-head h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.ts-close {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  cursor: pointer;
+  padding: 0;
+}
+.ts-close:hover {
+  background: var(--surface-2);
+}
+.ts-body {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 20px var(--pad) 28px;
+}
+.ts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.ts-rule {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+.ts-rule span:last-child {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.ts-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.trip-sheet .field-label,
+.journey-cards-field .field-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.trip-sheet input:not([type="checkbox"]):not([type="color"]) {
+  min-height: 46px;
+  padding: 0 14px;
+}
+.trip-sheet textarea {
+  padding: 12px 14px;
+  line-height: 1.45;
+  resize: vertical;
+}
+.ts-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+/* The live ticket at the top */
+.ts-preview {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ts-preview .mono-label {
+  font-size: 0.62rem;
+}
+.ticket.preview {
+  grid-template-columns: 104px minmax(0, 1fr) 46px;
+  height: auto;
+  min-height: 112px;
+}
+.ticket.preview:hover {
+  transform: none;
+}
+.ticket.preview .ticket-body {
+  padding: 12px 14px;
+  gap: 3px;
+}
+.ticket.preview .ticket-top {
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+}
+.ticket.preview .ticket-title {
+  font-size: 1.05rem;
+  margin-top: 0;
+}
+.ticket.preview .ticket-line {
+  font-size: 0.8rem;
+}
+/* Show everything in the preview, even on a phone, so you can see what you've filled in. */
+.ticket.preview .ticket-body .desktop-only {
+  display: block !important;
+}
+.ticket.preview .ticket-top .desktop-only {
+  display: inline !important;
+}
+.ticket.preview .ticket-stub {
+  justify-content: space-between;
+  padding: 12px 0 10px;
+  font-size: 1rem;
+}
+.ticket.preview .ticket-stub > span:first-child {
+  display: none !important;
+}
+.ticket.preview .ticket-stub .stub-no {
+  display: inline !important;
+  font-size: 0.6rem;
+}
+@media (max-width: 520px) {
+  .ticket.preview {
+    grid-template-columns: 76px minmax(0, 1fr) 46px;
+  }
+}
+
+/* How did you travel? */
+.ts-modes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 2px 0;
+}
+.ts-mode {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 4px;
+  white-space: nowrap;
+}
+.ts-mode svg {
+  width: 20px;
+  height: 20px;
+  color: var(--mode-ink);
+}
+.ts-mode:hover:not(.on) {
+  border-color: var(--mode-ink);
+}
+.ts-mode.on {
+  background: var(--mode);
+  border-color: var(--mode);
+  color: #fff;
+}
+.ts-mode.on svg {
+  color: inherit;
+}
+
+/* Places, as pills joined by arrows when the order matters */
+.ts-places {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.ts-places li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+.ts-sep {
+  font: 500 0.85rem var(--mono);
+}
+.ts-place {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 36px;
+  min-width: 0;
+  padding: 0 4px 0 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.ts-place > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ts-place button {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0;
+}
+.ts-place button:hover {
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+.place-search.with-icon .search-icon {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  color: var(--muted);
+  pointer-events: none;
+}
+.trip-sheet .place-search.with-icon > input {
+  padding-left: 42px;
+}
+.trip-sheet .place-search > .link {
+  display: block;
+  margin-top: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Departure and arrival, as the two ends of a ticket */
+.journey-cards-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.journey-cards {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr);
+  align-items: center;
+  gap: 6px;
+}
+.journey-cards.single {
+  grid-template-columns: minmax(0, 1fr);
+}
+.journey-arrow {
+  justify-self: center;
+  color: var(--mode-ink);
+}
+.end-card {
+  position: relative;
+  min-height: 84px;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-weight: 400;
+}
+.end-label {
+  align-self: flex-start;
+  font: 500 0.6rem var(--mono);
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.end-code {
+  font: 500 1.6rem/1.1 var(--mono);
+  letter-spacing: -0.02em;
+  color: var(--mode-ink);
+  padding-right: 28px;
+}
+.end-code.end-place {
+  font: 700 1.05rem/1.25 Inter, system-ui, sans-serif;
+  letter-spacing: 0;
+  color: var(--text);
+  margin-top: 4px;
+}
+.end-name {
+  font-size: 0.78rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.end-clear {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0;
+  border-radius: 10px;
+}
+.end-clear:hover {
+  color: var(--text);
+}
+.end-card.empty {
+  border-style: dashed;
+  border-color: color-mix(in srgb, var(--muted) 55%, var(--border));
+  gap: 6px;
+  cursor: text;
+}
+.end-card.empty:focus-within {
+  border-style: solid;
+  border-color: var(--accent);
+}
+.trip-sheet .end-card.empty input {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  outline: none;
+}
+.end-search {
+  position: relative;
+  min-width: 0;
+}
+.end-search .results {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 4;
+  width: max-content;
+  min-width: 100%;
+  max-width: min(320px, 80vw);
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.journey-cards > .end-search:last-child .results {
+  left: auto;
+  right: 0;
+}
+.end-search .results li.muted {
+  padding: 0.5rem 0.6rem;
+  font-size: 0.9rem;
+}
+.end-search .results button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: none;
+  padding: 0.55rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.end-search .results button:hover {
+  background: var(--surface-2);
+}
+
+/* Rating, notes and cover photo */
+.ts-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ts-stars {
+  display: flex;
+  margin-left: -8px;
+}
+.ts-stars button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--border);
+  cursor: pointer;
+  padding: 0;
+}
+.ts-stars button.on {
+  color: var(--gold);
+}
+.ts-cover {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ts-thumb {
+  width: 64px;
+  height: 46px;
+  flex: none;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--mode) 16%, var(--surface));
+  color: var(--mode-ink);
+}
+.ts-thumb.photo {
+  background-position: center;
+  background-size: cover;
+}
+.ts-cover input {
+  flex: 1;
+  min-width: 0;
+}
+
+.ts-foot {
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+  margin-top: auto;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px var(--pad) calc(14px + env(safe-area-inset-bottom));
+}
+.ts-foot .btn {
+  height: 44px;
+  padding: 0 18px;
+}
+.ts-foot .btn:not(.ghost) {
+  padding: 0 20px;
+}
+.ts-delete {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  margin-left: -10px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--danger);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ts-delete:hover {
+  background: color-mix(in srgb, var(--danger) 10%, transparent);
+}
+
 /* ---------- Person picker / settings ---------- */
 
 .picker {

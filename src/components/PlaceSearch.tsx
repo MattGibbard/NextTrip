@@ -4,7 +4,7 @@ import { api } from "../api";
 import { countryOptions, flag } from "../countries";
 
 /** City search backed by OpenStreetMap, with a manual fallback. */
-export function PlaceSearch({ onAdd }: { onAdd: (p: Place) => void }) {
+export function PlaceSearch({ onAdd, placeholder = "Search for a city…", icon = false }: { onAdd: (p: Place) => void; placeholder?: string; icon?: boolean }) {
   const [q, setQ] = useState("");
   const [results, setResults] = useState<GeocodeResult[]>([]);
   const [busy, setBusy] = useState(false);
@@ -45,10 +45,16 @@ export function PlaceSearch({ onAdd }: { onAdd: (p: Place) => void }) {
   if (manual) return <ManualPlace onAdd={(p) => (pick(p), setManual(false))} onCancel={() => setManual(false)} />;
 
   return (
-    <div className="place-search">
+    <div className={icon ? "place-search with-icon" : "place-search"}>
+      {icon && (
+        <svg className="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-3.5-3.5" />
+        </svg>
+      )}
       <input
         type="search"
-        placeholder="Search for a city…"
+        placeholder={placeholder}
         value={q}
         onChange={(e) => setQ(e.target.value)}
         onKeyDown={(e) => {

@@ -4,15 +4,12 @@ import { MODES, MODE_KEYS, ideaMode, ticketEnds, tripMode } from "../../shared/t
 import type { Mode } from "../../shared/travelMode";
 import { budgetLabel, tripLengthLabel } from "../../shared/ideaDetails";
 import { useData } from "../data";
-import { flag } from "../countries";
 import { continentOf } from "../continents";
-import { nights, shortRange } from "../format";
-import { Stars } from "../components/Stars";
+import { nights } from "../format";
 import { Field, Flaps, Photo, RouteLine } from "../components/Ticket";
+import { TripTicket, flagsOf } from "../components/TripTicket";
 import { TripForm } from "./TripForm";
 import type { TripDraft } from "./TripForm";
-
-const flagsOf = (places: { country_code: string }[]) => [...new Set(places.map((p) => p.country_code))].map(flag).join(" ");
 
 export function TripsView() {
   const { trips, people } = useData();
@@ -119,42 +116,6 @@ export function TripsView() {
       {adding && <TripForm onClose={() => setAdding(false)} />}
       {draft && <TripForm draft={draft} onClose={() => setDraft(null)} />}
     </section>
-  );
-}
-
-function TripTicket({ trip, passNo }: { trip: Trip; passNo: number }) {
-  const { home } = useData();
-  const mode = tripMode(trip);
-  const m = MODES[mode];
-  const ends = ticketEnds(mode, trip, home);
-  const n = nights(trip.start_date, trip.end_date);
-  const flags = flagsOf(trip.places);
-  const ordered = mode !== "flight";
-  return (
-    <a className={`ticket mode-${mode}`} href={`#/trips/${trip.id}`}>
-      <Photo url={trip.cover_url} fallback={flags || "🧳"} className="ticket-photo" />
-      <div className="ticket-body">
-        <div className="ticket-top">
-          <span className="mode-ink">
-            {m.icon} {ends ? `${ends.from.code} → ${ends.to.code}` : m.kind}
-          </span>
-          {n && <span className="muted desktop-only">{n} NIGHTS</span>}
-        </div>
-        <div className="ticket-title">{trip.title}</div>
-        <div className="muted ticket-line">{shortRange(trip.start_date, trip.end_date) ?? "No dates yet"}</div>
-        {trip.places.length > 0 && (
-          <div className="ticket-line ellipsis desktop-only">
-            {flags} {trip.places.map((p) => p.name).join(ordered ? " → " : " · ")}
-          </div>
-        )}
-        <div className="ticket-foot">{trip.rating ? <Stars value={trip.rating} /> : null}</div>
-      </div>
-      <div className="ticket-stub">
-        <span className="desktop-only">{m.icon}</span>
-        <span className="stub-text">{m.kind}</span>
-        <span className="desktop-only stub-no">#{String(passNo).padStart(2, "0")}</span>
-      </div>
-    </a>
   );
 }
 

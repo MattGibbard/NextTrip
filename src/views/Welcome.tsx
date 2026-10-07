@@ -410,40 +410,39 @@ function SignInForm({ id }: { id: string }) {
 }
 
 /**
- * Where the emailed link lands. It takes a tap to finish, so an email app or
- * scanner that opens the link ahead of you doesn't use it up.
+ * Where the emailed link lands. It signs in straight away and opens the app.
+ * The token is only used up by the POST this page's script sends, so an email
+ * app or scanner that just fetches the link ahead of you doesn't spend it. A
+ * page opened in the background waits until it's actually on screen.
  */
 export function SignInPage({ token, onSignedIn }: { token: string; onSignedIn: () => void }) {
-  const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const go = async () => {
-    setBusy(true);
-    setError(null);
-    try {
-      await api.verifySignIn(token);
-      onSignedIn();
-    } catch (e) {
-      setError((e as Error).message);
-      setBusy(false);
-    }
-  };
+  const started = useRef(false);
+  useEffect(() => {
+    const go = () => {
+      if (started.current || document.visibilityState !== "visible") return;
+      started.current = true;
+      document.removeEventListener("visibilitychange", go);
+      api.verifySignIn(token).then(onSignedIn, (e: Error) => setError(e.message));
+    };
+    go();
+    document.addEventListener("visibilitychange", go);
+    return () => document.removeEventListener("visibilitychange", go);
+  }, [token, onSignedIn]);
   return (
     <Frame>
       <section className="intro narrow">
         <div className="panel signin">
-          <p className="big">Welcome back</p>
-          <p className="muted">Tap below to finish signing in on this device.</p>
           {error ? (
             <>
+              <p className="big">That link didn't work</p>
               <p className="error-text">{error}</p>
               <a className="btn large" href="/">
                 Get a new link
               </a>
             </>
           ) : (
-            <button className="btn large" onClick={go} disabled={busy}>
-              {busy ? "Signing in…" : "Sign in to somewhere🎉"}
-            </button>
+            <p className="big">Signing you in…</p>
           )}
         </div>
       </section>

@@ -1,16 +1,27 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import "leaflet/dist/leaflet.css";
 import "./styles.css";
 import { App } from "./App";
 import "./install";
 import "./theme";
+import { publicPage } from "../shared/seo";
 
-createRoot(document.getElementById("root")!).render(
+const root = document.getElementById("root")!;
+const app = (
   <StrictMode>
     <App />
-  </StrictMode>,
+  </StrictMode>
 );
+// Public pages arrive already rendered (scripts/prerender.mjs), so pick up where the HTML left off.
+// The page is marked on the root, so a page that doesn't match this address is drawn from scratch.
+const page = root.dataset.page;
+if (page && root.firstElementChild && page === (publicPage(location.pathname) ?? "notfound")) {
+  hydrateRoot(root, app);
+} else {
+  root.replaceChildren();
+  createRoot(root).render(app);
+}
 
 // Lets the site work as an installed app from the home screen. Skipped in dev so Vite's reloads aren't cached.
 if (import.meta.env.PROD && "serviceWorker" in navigator) {

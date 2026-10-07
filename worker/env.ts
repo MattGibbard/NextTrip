@@ -2,6 +2,8 @@ import type { Context } from "hono";
 
 export interface Env {
   DB: D1Database;
+  /** The built site in dist/client. The Worker runs first for every request and hands pages over to it. */
+  ASSETS: Fetcher;
   /** Resend API key, set as a secret. Without it no sign-in emails go out. */
   RESEND_API_KEY?: string;
   /** Who sign-in emails come from. Resend's test sender until a domain is verified. */

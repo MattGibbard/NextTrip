@@ -2,7 +2,8 @@ import { Hono } from "hono";
 import { migrate } from "./migrate";
 import { authRoutes, familyRoutes, readSession, requireOwner, setOwnerPerson, setSessionPerson } from "./auth";
 import { HttpError } from "./env";
-import type { App, Ctx } from "./env";
+import type { App, Ctx, Env } from "./env";
+import { servePage } from "./pages";
 import { countedAllocations, ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
 import { parseNominatim } from "../shared/geocode";
 import { cleanDetails } from "../shared/ideaDetails";
@@ -771,4 +772,8 @@ app.get("/geocode", async (c) => {
 
 app.all("*", (c) => c.json({ error: "Not found" }, 404));
 
-export default app;
+export default {
+  fetch(req: Request, env: Env, ctx: ExecutionContext) {
+    return new URL(req.url).pathname.startsWith("/api/") ? app.fetch(req, env, ctx) : servePage(req, env);
+  },
+} satisfies ExportedHandler<Env>;

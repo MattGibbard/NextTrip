@@ -16,7 +16,7 @@
         document.querySelector('meta[name="theme-color"]').setAttribute("content", dark ? "#18201d" : "#ffffff");
       })();
     </script>
-    <meta name="description" content="Where we've been, and where we're going next." />
+    <meta name="description" content="Can't decide where to go on holiday? somewhere🎉 lets the whole family add ideas, spread points in secret and let a fair draw pick your next trip. Free to use." />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,6 +31,15 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // The home page arrives ready-made for visitors. Someone who was signed in last time is about to
+      // land in the app instead, so clear it before the first paint rather than flash it at them.
+      try {
+        if (location.pathname === "/" && JSON.parse(localStorage.getItem("nexttrip.signedIn")) === true) {
+          document.getElementById("root").replaceChildren();
+        }
+      } catch (e) {}
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

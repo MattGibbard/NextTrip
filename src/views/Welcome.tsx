@@ -349,6 +349,7 @@ function SignInForm({ id }: { id: string }) {
   const [state, setState] = useState<"idle" | "sending" | "sent">("idle");
   const [error, setError] = useState<string | null>(null);
   const [devLink, setDevLink] = useState<string | null>(null);
+  const [devCode, setDevCode] = useState<string | null>(null);
 
   const send = async (e: FormEvent) => {
     e.preventDefault();
@@ -357,6 +358,7 @@ function SignInForm({ id }: { id: string }) {
     try {
       const res = await api.sendSignInEmail(email);
       setDevLink(res.dev_link ?? null);
+      setDevCode(res.dev_code ?? null);
       setState("sent");
     } catch (err) {
       setError((err as Error).message);
@@ -369,13 +371,15 @@ function SignInForm({ id }: { id: string }) {
       <div className="panel lp-sent" role="status">
         <p className="big">📬 Check your inbox</p>
         <p>
-          We've sent a sign-in link to <strong>{email.trim()}</strong>. It works once, for the next 20 minutes. If it isn't there, look in your junk folder.
+          We've sent a sign-in link and code to <strong>{email.trim()}</strong>. They work once, for the next 20 minutes. If it isn't there, look in your junk folder.
         </p>
         {devLink && (
           <p className="small">
             Local development: <a href={devLink}>open the sign-in link</a>
+            {devCode && <> or use code {devCode}</>}
           </p>
         )}
+        <CodeForm id={`${id}-code`} email={email} />
         <button className="link" onClick={() => setState("idle")}>
           Use a different email
         </button>
@@ -405,6 +409,53 @@ function SignInForm({ id }: { id: string }) {
       <p className="muted small">
         Already signed up? This emails you a sign-in link. By continuing you agree to our <a href="/terms">terms</a> and <a href="/privacy">privacy policy</a>.
       </p>
+    </form>
+  );
+}
+
+/**
+ * The 6-digit code from the email. Email apps often open links in their own
+ * browser, which would sign that in instead of this one, so typing the code
+ * here signs in the browser you started in.
+ */
+function CodeForm({ id, email }: { id: string; email: string }) {
+  const [code, setCode] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const submit = async (e: FormEvent) => {
+    e.preventDefault();
+    setError(null);
+    setBusy(true);
+    try {
+      await api.signInWithCode(email, code);
+      location.replace("/");
+    } catch (err) {
+      setError((err as Error).message);
+      setBusy(false);
+    }
+  };
+
+  return (
+    <form className="lp-form lp-code-form" onSubmit={submit}>
+      <label htmlFor={id}>Or enter the code from the email</label>
+      <div className="lp-form-row">
+        <input
+          id={id}
+          required
+          autoComplete="one-time-code"
+          inputMode="numeric"
+          pattern="[0-9 ]*"
+          maxLength={7}
+          placeholder="123 456"
+          value={code}
+          onChange={(e) => setCode(e.target.value)}
+        />
+        <button className="btn" disabled={busy}>
+          {busy ? "Checking…" : "Sign in"}
+        </button>
+      </div>
+      {error && <p className="error-text">{error}</p>}
     </form>
   );
 }

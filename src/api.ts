@@ -39,8 +39,9 @@ async function request<T>(method: string, path: string, body?: unknown): Promise
 
 export const api = {
   session: () => request<Session>("GET", "/auth/me"),
-  sendSignInEmail: (email: string) => request<{ ok: true; dev_link?: string }>("POST", "/auth/email", { email }),
+  sendSignInEmail: (email: string) => request<{ ok: true; dev_link?: string; dev_code?: string }>("POST", "/auth/email", { email }),
   verifySignIn: (token: string) => request("POST", "/auth/verify", { token }),
+  signInWithCode: (email: string, code: string) => request("POST", "/auth/code", { email, code }),
   join: (token: string) => request("POST", "/auth/join", { token }),
   usePersonLink: (token: string) => request("POST", "/auth/person-link", { token }),
   signOut: () => request("POST", "/auth/logout"),

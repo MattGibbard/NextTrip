@@ -29,7 +29,7 @@ async function request<T>(method: string, path: string, body?: unknown): Promise
     headers,
     body: body === undefined ? undefined : JSON.stringify(body),
   }).catch(() => {
-    throw new Error(navigator.onLine ? "Couldn't reach somewhere.party. Check your connection." : "You're offline. Connect to the internet to load your trips.");
+    throw new Error(navigator.onLine ? "Couldn't reach somewhere🎉. Check your connection." : "You're offline. Connect to the internet to load your trips.");
   });
   const data = await res.json().catch(() => ({}));
   if (res.status === 401) onSignedOut();

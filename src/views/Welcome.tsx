@@ -9,7 +9,7 @@ export function Frame({ children }: { children: ReactNode }) {
         <a className="brand" href="/">
           <img src="/favicon.svg" alt="" width={28} height={28} />
           <span>
-            somewhere<span className="brand-tld">.party</span>
+            somewhere<span className="brand-party">🎉</span>
           </span>
         </a>
       </header>
@@ -42,7 +42,7 @@ export function HomePage() {
       <section className="intro">
         <h1>Can't agree where to go next? Let the draw decide.</h1>
         <p className="lead">
-          somewhere.party keeps your family's holidays in one place: the trips you've taken, a map of everywhere you've been, and a pool of ideas for the next one. When it's time
+          somewhere🎉 keeps your family's holidays in one place: the trips you've taken, a map of everywhere you've been, and a pool of ideas for the next one. When it's time
           to choose, everyone spends their points and the draw picks the winner.
         </p>
         <SignInForm />
@@ -166,7 +166,7 @@ export function SignInPage({ token, onSignedIn }: { token: string; onSignedIn: (
             </>
           ) : (
             <button className="btn large" onClick={go} disabled={busy}>
-              {busy ? "Signing in…" : "Sign in to somewhere.party"}
+              {busy ? "Signing in…" : "Sign in to somewhere🎉"}
             </button>
           )}
         </div>
@@ -193,11 +193,11 @@ export function JoinPage({ token, onJoined }: { token: string; onJoined: () => v
               <p className="big">That link didn't work</p>
               <p className="error-text">{error}</p>
               <a className="btn ghost" href="/">
-                Go to the somewhere.party home page
+                Go to the somewhere🎉 home page
               </a>
             </>
           ) : (
-            <p className="big">Opening your family's somewhere.party…</p>
+            <p className="big">Opening your family's somewhere🎉…</p>
           )}
         </div>
       </section>
@@ -223,7 +223,7 @@ export function PersonLinkPage({ token, onJoined }: { token: string; onJoined: (
               <p className="big">That link didn't work</p>
               <p className="error-text">{error}</p>
               <a className="btn ghost" href="/">
-                Go to the somewhere.party home page
+                Go to the somewhere🎉 home page
               </a>
             </>
           ) : (

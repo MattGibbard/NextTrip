@@ -201,8 +201,8 @@ textarea:focus {
   color: var(--text);
   text-decoration: none;
 }
-.brand-tld {
-  color: var(--accent);
+.brand-party {
+  margin-left: 0.15em;
 }
 .topbar-right {
   margin-left: auto;

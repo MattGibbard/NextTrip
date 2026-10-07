@@ -191,7 +191,7 @@ export function HomePage() {
             <span className="lp-feature-icon" aria-hidden>
               🧳
             </span>
-            <h3>Trips</h3>
+            <h3>Been</h3>
             <p className="muted">Every holiday you've had, as a ticket: where, when, how long, who came and how you got there.</p>
             <div className="lp-feature-foot lp-modes">
               <span className="flight">Flight</span>
@@ -216,7 +216,7 @@ export function HomePage() {
             <span className="lp-feature-icon" aria-hidden>
               💡
             </span>
-            <h3>Ideas</h3>
+            <h3>Next</h3>
             <p className="muted">A shared pool of places to go next. Add the type of trip, the budget and the travel time so you can compare like for like.</p>
             <div className="lp-feature-foot lp-chips">
               <span>🏙️ City break</span>

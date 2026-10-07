@@ -18,7 +18,7 @@ import type { TripDraft } from "./TripForm";
 const STATUS = {
   active: "IN THE POOL",
   won: "🏆 WON A DRAW",
-  done: "✓ BEEN",
+  done: "✓ DONE",
   archived: "ARCHIVED",
 } as const;
 
@@ -76,7 +76,7 @@ export function IdeaPage({ id }: { id: number }) {
     return (
       <section>
         <a className="back-link" href="#/ideas">
-          ← Ideas
+          ← Next
         </a>
         <p className="muted center">This idea has been deleted.</p>
       </section>
@@ -99,7 +99,7 @@ export function IdeaPage({ id }: { id: number }) {
     <section className="pass-page">
       <div className="page-head">
         <a className="back-link" href="#/ideas">
-          ← Ideas
+          ← Next
         </a>
         <button className="btn" onClick={() => setEditing(true)}>
           ✏️ Edit
@@ -140,7 +140,7 @@ export function IdeaPage({ id }: { id: number }) {
         <div className="panel win-panel">
           <span className="grow">This one won a draw. Been yet?</span>
           <button className="btn small" onClick={() => setTripDraft({ title: idea.title, places: idea.places, idea_id: idea.id, depart: idea.depart, arrive: idea.arrive })}>
-            We've been! Add trip
+            We went! Add to Been
           </button>
         </div>
       )}

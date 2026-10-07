@@ -67,7 +67,7 @@ export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: (
   const setMode = (m: Mode) =>
     setDetails({ ...details, holiday_types: [...details.holiday_types.filter((t) => !MODE_TYPES.includes(t)), ...(m === "flight" ? [] : [MODE_TYPE[m]])] });
   const ordered = mode !== "flight";
-  const status = idea?.status === "won" ? "WINNER" : idea?.status === "done" ? "BEEN" : "STANDBY";
+  const status = idea?.status === "won" ? "WINNER" : idea?.status === "done" ? "DONE" : "STANDBY";
   const heading = idea ? "Edit idea" : "New holiday idea";
 
   return (

@@ -6,11 +6,12 @@ import { plural } from "../format";
 import { StandbyCard } from "../components/StandbyCard";
 import { TripForm } from "./TripForm";
 import type { TripDraft } from "./TripForm";
+import { NextDeparture } from "../components/NextDeparture";
 
 const FILTERS = [
   { id: "active", label: "In the pool" },
   { id: "won", label: "Won" },
-  { id: "done", label: "Been" },
+  { id: "done", label: "Done" },
 ] as const;
 
 export function IdeasView() {
@@ -37,13 +38,16 @@ export function IdeasView() {
     <section>
       <div className="page-head">
         <div>
-          <div className="eyebrow standby-ink desktop-only">DEPARTURES · STANDBY</div>
-          <h1 className="display">Holiday ideas</h1>
+          <div className="eyebrow standby-ink">DEPARTURES · STANDBY</div>
+          <h1 className="display">Where next?</h1>
+          <p className="muted page-sub">Places you might go. Vote on them, then let the draw pick.</p>
         </div>
         <button className="btn" onClick={() => setAdding(true)}>
           + New idea
         </button>
       </div>
+
+      <NextDeparture onBeen={setTripDraft} />
 
       <div className="ideas-controls">
       <div className="segmented">
@@ -95,7 +99,7 @@ export function IdeasView() {
               </button>
             </>
           ) : (
-            <p className="muted">{filter === "won" ? "Ideas that win a draw show up here." : "Won ideas you've turned into trips show up here."}</p>
+            <p className="muted">{filter === "won" ? "Ideas that win a draw show up here." : "Ideas you've been on show up here, and their trips are in Been."}</p>
           )}
         </div>
       )}

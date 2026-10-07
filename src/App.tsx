@@ -17,9 +17,9 @@ import { isPrivatePath } from "../shared/seo";
 import { load, save } from "./storage";
 
 const TABS = [
-  { id: "trips", label: "Trips", icon: "🧳" },
+  { id: "trips", label: "Been", icon: "🧳" },
   { id: "places", label: "Places", icon: "🗺️" },
-  { id: "ideas", label: "Ideas", icon: "💡" },
+  { id: "ideas", label: "Next", icon: "💡" },
   { id: "draw", label: "Draw", icon: "🎟️" },
 ] as const;
 

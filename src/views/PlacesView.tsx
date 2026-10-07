@@ -107,7 +107,7 @@ export function PlacesView() {
           </span>
           <label>
             <input type="checkbox" checked={showIdeas} onChange={(e) => setShowIdeas(e.target.checked)} />
-            <i className="swatch idea" /> Ideas
+            <i className="swatch idea" /> Next
           </label>
         </div>
       </div>
@@ -213,7 +213,7 @@ function CountryPanel({ code, onClose }: { code: string; onClose: () => void }) 
       )}
       {ideasHere.length > 0 && (
         <p className="small">
-          💡 Ideas here: <strong>{ideasHere.map((i) => i.title).join(", ")}</strong>
+          💡 Next ideas here: <strong>{ideasHere.map((i) => i.title).join(", ")}</strong>
         </p>
       )}
     </div>

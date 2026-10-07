@@ -74,7 +74,7 @@ export function TripPage({ id }: { id: number }) {
     return (
       <section>
         <a className="back-link" href="#/trips">
-          ← Trips
+          ← Been
         </a>
         <p className="muted center">This trip has been deleted.</p>
       </section>
@@ -95,7 +95,7 @@ export function TripPage({ id }: { id: number }) {
     <section className="pass-page">
       <div className="page-head">
         <a className="back-link" href="#/trips">
-          ← Trips
+          ← Been
         </a>
         <button className="btn" onClick={() => setEditing(true)}>
           ✏️ Edit

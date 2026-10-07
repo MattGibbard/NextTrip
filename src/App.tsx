@@ -17,18 +17,18 @@ import { isPrivatePath } from "../shared/seo";
 import { load, save } from "./storage";
 
 const TABS = [
-  { id: "trips", label: "Trips", icon: "🧳" },
+  { id: "been", label: "Been", icon: "🧳" },
   { id: "places", label: "Places", icon: "🗺️" },
-  { id: "ideas", label: "Ideas", icon: "💡" },
+  { id: "next", label: "Next", icon: "💡" },
   { id: "draw", label: "Draw", icon: "🎟️" },
 ] as const;
 
 type TabId = (typeof TABS)[number]["id"] | "settings";
 
-/** Reads routes like #/ideas or #/ideas/12. */
+/** Reads routes like #/next or #/next/12. */
 function currentRoute(): { tab: TabId; id: number | null } {
   const [first, second] = location.hash.replace(/^#\/?/, "").split("/");
-  const tab = (["trips", "places", "ideas", "draw", "settings"] as const).find((t) => t === first) ?? "trips";
+  const tab = (["been", "places", "next", "draw", "settings"] as const).find((t) => t === first) ?? "been";
   const id = Number(second);
   return { tab, id: Number.isInteger(id) && id > 0 ? id : null };
 }
@@ -138,7 +138,7 @@ function Shell() {
     <div className="app">
       <header className="topbar">
         <div className="topbar-inner">
-          <a className="brand" href="#/trips">
+          <a className="brand" href="#/been">
             somewhere<span aria-hidden>🎉</span>
           </a>
           <nav className="tabs desktop-only" aria-label="Main">
@@ -172,9 +172,9 @@ function Shell() {
           <p className="muted center">Loading…</p>
         ) : (
           <>
-            {tab === "trips" && (route.id ? <TripPage key={route.id} id={route.id} /> : <TripsView />)}
+            {tab === "been" && (route.id ? <TripPage key={route.id} id={route.id} /> : <TripsView />)}
             {tab === "places" && <PlacesView />}
-            {tab === "ideas" && (route.id ? <IdeaPage key={route.id} id={route.id} /> : <IdeasView />)}
+            {tab === "next" && (route.id ? <IdeaPage key={route.id} id={route.id} /> : <IdeasView />)}
             {tab === "draw" && <DrawView />}
             {tab === "settings" && <SettingsView />}
           </>

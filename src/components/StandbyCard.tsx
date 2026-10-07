@@ -16,10 +16,10 @@ export function StandbyCard({ idea: i, onBeen, preview = false }: { idea: CardId
   const ends = ticketEnds(mode, i, home);
   const flags = [...new Set(i.places.map((p) => p.country_code))].map(flag).join(" ");
   const Link = preview ? "div" : "a";
-  const tag = i.status === "won" ? "🏆 WINNER" : i.status === "done" ? "✓ BEEN" : "STANDBY";
+  const tag = i.status === "won" ? "🏆 WINNER" : i.status === "done" ? "✓ DONE" : "STANDBY";
   return (
     <article className={`standby-card mode-${mode}${preview ? " preview" : ""}`}>
-      <Link className="standby-link" href={preview ? undefined : `#/ideas/${i.id}`}>
+      <Link className="standby-link" href={preview ? undefined : `#/next/${i.id}`}>
         <div className="standby-photo">
           <Photo url={i.cover_url} fallback={flags || "💡"} className="fill" />
           <span className="standby-tag">
@@ -46,7 +46,7 @@ export function StandbyCard({ idea: i, onBeen, preview = false }: { idea: CardId
         <div className="card-actions">
           <span className="badge win">🏆 Winner</span>
           <button className="btn small" onClick={onBeen}>
-            We've been! Add trip
+            We went! Add to Been
           </button>
         </div>
       )}

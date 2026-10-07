@@ -21,7 +21,7 @@ export function TripTicket({ trip, passNo, preview = false }: { trip: TicketTrip
   const ordered = mode !== "flight";
   const Tag = preview ? "div" : "a";
   return (
-    <Tag className={`ticket mode-${mode}${preview ? " preview" : ""}`} href={preview ? undefined : `#/trips/${trip.id}`}>
+    <Tag className={`ticket mode-${mode}${preview ? " preview" : ""}`} href={preview ? undefined : `#/been/${trip.id}`}>
       <Photo url={trip.cover_url} fallback={flags || "🧳"} className="ticket-photo" />
       <div className="ticket-body">
         <div className="ticket-top">

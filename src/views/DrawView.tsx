@@ -108,7 +108,7 @@ function StartRound({ lastPoints }: { lastPoints: number }) {
       </p>
       {pool.length < 2 ? (
         <p className="banner">
-          Add at least two ideas to the pool first (there {pool.length === 1 ? "is 1" : `are ${pool.length}`} now). <a href="#/ideas">Go to ideas</a>
+          Add at least two ideas to the pool first (there {pool.length === 1 ? "is 1" : `are ${pool.length}`} now). <a href="#/next">Go to Next</a>
         </p>
       ) : (
         <div className="form">
@@ -605,10 +605,10 @@ function HistoryRow({ round, hidden }: { round: Round; hidden: boolean }) {
           <Breakdown round={round} />
           {winnerIdea?.status === "won" && (
             <button className="btn small" onClick={() => setDraft({ title: winnerIdea.title, places: winnerIdea.places, idea_id: winnerIdea.id })}>
-              We've been! Add as a trip
+              We went! Add to Been
             </button>
           )}
-          {winnerIdea?.status === "done" && <p className="muted small">✓ Added to your trips</p>}
+          {winnerIdea?.status === "done" && <p className="muted small">✓ Added to Been</p>}
           {isOwner && (
             <button className="link danger delete-draw" onClick={remove}>
               Delete this draw

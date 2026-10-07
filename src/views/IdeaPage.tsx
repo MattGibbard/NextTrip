@@ -18,7 +18,7 @@ import type { TripDraft } from "./TripForm";
 const STATUS = {
   active: "IN THE POOL",
   won: "🏆 WON A DRAW",
-  done: "✓ BEEN",
+  done: "✓ DONE",
   archived: "ARCHIVED",
 } as const;
 
@@ -75,8 +75,8 @@ export function IdeaPage({ id }: { id: number }) {
   if (!idea) {
     return (
       <section>
-        <a className="back-link" href="#/ideas">
-          ← Ideas
+        <a className="back-link" href="#/next">
+          ← Next
         </a>
         <p className="muted center">This idea has been deleted.</p>
       </section>
@@ -98,8 +98,8 @@ export function IdeaPage({ id }: { id: number }) {
   return (
     <section className="pass-page">
       <div className="page-head">
-        <a className="back-link" href="#/ideas">
-          ← Ideas
+        <a className="back-link" href="#/next">
+          ← Next
         </a>
         <button className="btn" onClick={() => setEditing(true)}>
           ✏️ Edit
@@ -140,13 +140,13 @@ export function IdeaPage({ id }: { id: number }) {
         <div className="panel win-panel">
           <span className="grow">This one won a draw. Been yet?</span>
           <button className="btn small" onClick={() => setTripDraft({ title: idea.title, places: idea.places, idea_id: idea.id, depart: idea.depart, arrive: idea.arrive })}>
-            We've been! Add trip
+            We went! Add to Been
           </button>
         </div>
       )}
       {trip && (
         <p className="small">
-          ✓ You went: <a href={`#/trips/${trip.id}`}>{trip.title}</a>
+          ✓ You went: <a href={`#/been/${trip.id}`}>{trip.title}</a>
         </p>
       )}
 
@@ -190,7 +190,7 @@ export function IdeaPage({ id }: { id: number }) {
         )}
       </div>
 
-      {editing && <IdeaForm idea={idea} onClose={() => setEditing(false)} onDeleted={() => (location.hash = "/ideas")} />}
+      {editing && <IdeaForm idea={idea} onClose={() => setEditing(false)} onDeleted={() => (location.hash = "/next")} />}
       {tripDraft && <TripForm draft={tripDraft} onClose={() => setTripDraft(null)} />}
     </section>
   );

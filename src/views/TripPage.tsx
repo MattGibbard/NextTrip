@@ -73,8 +73,8 @@ export function TripPage({ id }: { id: number }) {
   if (!trip) {
     return (
       <section>
-        <a className="back-link" href="#/trips">
-          ← Trips
+        <a className="back-link" href="#/been">
+          ← Been
         </a>
         <p className="muted center">This trip has been deleted.</p>
       </section>
@@ -94,8 +94,8 @@ export function TripPage({ id }: { id: number }) {
   return (
     <section className="pass-page">
       <div className="page-head">
-        <a className="back-link" href="#/trips">
-          ← Trips
+        <a className="back-link" href="#/been">
+          ← Been
         </a>
         <button className="btn" onClick={() => setEditing(true)}>
           ✏️ Edit
@@ -131,7 +131,7 @@ export function TripPage({ id }: { id: number }) {
               </span>
             )}
             {idea && (
-              <a className="detail" href={`#/ideas/${idea.id}`}>
+              <a className="detail" href={`#/next/${idea.id}`}>
                 🏆 From the idea "{idea.title}"
               </a>
             )}
@@ -156,7 +156,7 @@ export function TripPage({ id }: { id: number }) {
         )}
       </div>
 
-      {editing && <TripForm trip={trip} onClose={() => setEditing(false)} onDeleted={() => (location.hash = "/trips")} />}
+      {editing && <TripForm trip={trip} onClose={() => setEditing(false)} onDeleted={() => (location.hash = "/been")} />}
     </section>
   );
 }

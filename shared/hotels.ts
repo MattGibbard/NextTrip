@@ -3,6 +3,9 @@ import type { Place } from "./types";
 /** Our Stay22 affiliate ID. Bookings made through these links earn somewhere🎉 a commission. */
 export const STAY22_AID = "somewhereparty";
 
+/** Prices on the booking sites we link to show in pounds. Hard-coded until there's a currency setting. */
+export const CURRENCY = "GBP";
+
 /** Where the link was shown, so Stay22's reports say which button earned it. Underscores only, as Stay22 asks. */
 export type HotelCampaign = "draw_result" | "idea_page";
 
@@ -20,6 +23,7 @@ export function hotelLink(place: Place, campaign: HotelCampaign): string {
     q.set("lat", String(place.lat));
     q.set("lng", String(place.lon));
   }
+  q.set("currency", CURRENCY);
   q.set("campaign", campaign);
   return `https://www.stay22.com/allez/roam?${q}`;
 }

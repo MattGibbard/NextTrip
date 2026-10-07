@@ -1,3 +1,4 @@
+import { CURRENCY } from "./hotels";
 import type { HotelCampaign } from "./hotels";
 import type { Terminal } from "./terminals";
 
@@ -14,7 +15,7 @@ const AVIASALES = { p: "4114", campaign_id: "100" };
  */
 export function flightLink(from: string, to: string, passengers: number, campaign: HotelCampaign): string {
   const adults = Math.min(9, Math.max(1, Math.round(passengers) || 1));
-  const search = `https://www.aviasales.com/?params=${from}${to}${adults}`;
+  const search = `https://www.aviasales.com/?params=${from}${to}${adults}&currency=${CURRENCY.toLowerCase()}`;
   const q = new URLSearchParams({
     campaign_id: AVIASALES.campaign_id,
     marker: TRAVELPAYOUTS_MARKER,

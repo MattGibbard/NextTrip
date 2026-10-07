@@ -7,7 +7,6 @@ import { dateRange, plural } from "../format";
 import { WorldMap } from "../components/WorldMap";
 import { placeCode, tripMode } from "../../shared/travelMode";
 import { TripForm } from "./TripForm";
-import { ModeIcon } from "../components/ModeIcon";
 import { stampDate, stampLook, visitNumbers } from "../stamps";
 import type { Pin } from "../components/WorldMap";
 
@@ -314,10 +313,7 @@ function Stamps({ pending, onSelect, onAdd }: { pending: { code: string; name: s
                 <i className="stamp-notch right" />
               </>
             )}
-            <span className="stamp-top">
-              <ModeIcon mode={s.mode} className="stamp-icon" />
-              {s.entry}
-            </span>
+            <span className="stamp-top">{s.entry}</span>
             <span className="stamp-name">{s.name.toUpperCase()}</span>
             <span className="stamp-date">
               <span className="stamp-label">{s.look.label}</span>

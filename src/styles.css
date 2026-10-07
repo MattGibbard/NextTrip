@@ -2984,13 +2984,6 @@ a.detail {
 .stamp.trim-waves .stamp-label::after {
   content: " ∿";
 }
-/* The travel icon at the top, drawn in the stamp's ink. */
-.stamp-icon {
-  width: 1.4em;
-  height: 1.4em;
-  margin-right: 0.35em;
-  vertical-align: -0.35em;
-}
 /* Small print: visit and serial numbers. */
 .stamp-serial {
   font: 500 0.5rem var(--mono);

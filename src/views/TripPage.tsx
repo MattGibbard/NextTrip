@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import type { Place } from "../../shared/types";
 import type { Terminal } from "../../shared/terminals";
 import { MODES, placeCode, ticketEnds, tripMode } from "../../shared/travelMode";
+import { BookLinks } from "../components/BookLinks";
 import type { Mode } from "../../shared/travelMode";
 import { useData } from "../data";
 import { flag } from "../countries";
@@ -155,6 +156,8 @@ export function TripPage({ id }: { id: number }) {
           </div>
         )}
       </div>
+
+      <BookLinks trip={trip} mode={mode} campaign="been_page" title="🔁 Go again?" className="panel" />
 
       {editing && <TripForm trip={trip} onClose={() => setEditing(false)} onDeleted={() => (location.hash = "/been")} />}
     </section>

@@ -798,7 +798,7 @@ function Reveal({ round, onDone, onClose }: { round: Round; onDone: () => void; 
         </section>
       )}
 
-      {done && planIdea && <BookLinks trip={planIdea} campaign="draw_result" className="odds-card" />}
+      {done && planIdea && <BookLinks trip={planIdea} mode={ideaMode(planIdea.holiday_types)} campaign="draw_result" className="odds-card" />}
 
       <div className="reveal-actions">
         {done ? (

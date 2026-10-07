@@ -1342,6 +1342,35 @@ button.card:hover {
   min-width: 0;
 }
 
+/* Budget, trip length and type of holiday on the idea sheet */
+.trip-sheet .field {
+  gap: 8px;
+}
+.trip-sheet .field > span {
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+.trip-sheet .choice-row {
+  gap: 8px;
+}
+.trip-sheet .choice {
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 10px;
+  font-size: 0.88rem;
+}
+.trip-sheet .choice:hover:not(.on) {
+  border-color: var(--accent);
+}
+
+/* The idea card in the preview: a shorter photo, and nothing to click */
+.standby-card.preview {
+  box-shadow: var(--shadow);
+}
+.standby-card.preview .standby-photo {
+  height: 104px;
+}
+
 .ts-foot {
   position: sticky;
   bottom: 0;

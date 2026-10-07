@@ -1,13 +1,9 @@
 import { useMemo, useState } from "react";
 import { useData } from "../data";
-import { flag } from "../countries";
-import { IdeaDetailsLine } from "../components/IdeaDetails";
 import { BUDGETS, HOLIDAY_TYPES } from "../../shared/ideaDetails";
 import { IdeaForm } from "./IdeaForm";
 import { plural } from "../format";
-import type { Idea } from "../../shared/types";
-import { MODES, ideaMode, ticketEnds } from "../../shared/travelMode";
-import { Photo } from "../components/Ticket";
+import { StandbyCard } from "../components/StandbyCard";
 import { TripForm } from "./TripForm";
 import type { TripDraft } from "./TripForm";
 
@@ -113,50 +109,5 @@ export function IdeasView() {
       {adding && <IdeaForm onClose={() => setAdding(false)} />}
       {tripDraft && <TripForm draft={tripDraft} onClose={() => setTripDraft(null)} />}
     </section>
-  );
-}
-
-function StandbyCard({ idea: i, onBeen }: { idea: Idea; onBeen: () => void }) {
-  const { people, personName, home } = useData();
-  const creator = people.find((p) => p.id === i.created_by);
-  const mode = ideaMode(i.holiday_types);
-  const m = MODES[mode];
-  const ends = ticketEnds(mode, i, home);
-  const flags = [...new Set(i.places.map((p) => p.country_code))].map(flag).join(" ");
-  const tag = i.status === "won" ? "🏆 WINNER" : i.status === "done" ? "✓ BEEN" : "STANDBY";
-  return (
-    <article className={`standby-card mode-${mode}`}>
-      <a className="standby-link" href={`#/ideas/${i.id}`}>
-        <div className="standby-photo">
-          <Photo url={i.cover_url} fallback={flags || "💡"} className="fill" />
-          <span className="standby-tag">
-            {tag} · {m.icon} {ends ? `${ends.from.code} → ${ends.to.code}` : m.kind}
-          </span>
-        </div>
-        <div className="perf" aria-hidden />
-        <div className="standby-body">
-          <div className="standby-name">
-            <span className="standby-flags">{flags || "💡"}</span>
-            <h3>{i.title}</h3>
-          </div>
-          {i.places.length > 0 && <p className="small">{i.places.map((p) => p.name).join(" → ")}</p>}
-          <IdeaDetailsLine idea={i} />
-          <div className="standby-foot">
-            <span>
-              <span className="dot" style={{ background: creator?.color ?? "#999" }} /> {personName(i.created_by)}'s idea
-            </span>
-            <span className="mono-label mode-ink desktop-only">{m.kind}</span>
-          </div>
-        </div>
-      </a>
-      {i.status === "won" && (
-        <div className="card-actions">
-          <span className="badge win">🏆 Winner</span>
-          <button className="btn small" onClick={onBeen}>
-            We've been! Add trip
-          </button>
-        </div>
-      )}
-    </article>
   );
 }

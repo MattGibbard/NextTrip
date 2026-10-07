@@ -32,7 +32,7 @@ function Contact({ children }: { children: ReactNode }) {
 function Privacy() {
   return (
     <>
-      <h1>Privacy policy</h1>
+      <h1 className="display">Privacy policy</h1>
       <p className="muted small">Last updated {UPDATED}</p>
       <p>
         somewhere🎉 is a small, independent website run by one person in the UK. It's built to collect as little about you as possible. This page explains what it does keep,
@@ -105,7 +105,7 @@ function Privacy() {
 function Terms() {
   return (
     <>
-      <h1>Terms of use</h1>
+      <h1 className="display">Terms of use</h1>
       <p className="muted small">Last updated {UPDATED}</p>
       <p>By using somewhere🎉 you agree to these terms. They're short, and in plain English.</p>
 

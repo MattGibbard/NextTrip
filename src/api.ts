@@ -1,5 +1,6 @@
 import type { GeocodeResult, Home, HomeEnds, Idea, IdeaInput, Person, Round, Session, Trip, TripInput } from "../shared/types";
 import type { RoundFilters } from "../shared/roundFilters";
+import type { PhotoSuggestion } from "../shared/photos";
 import type { TerminalSearchResult } from "../shared/terminals";
 import { forget, load } from "./storage";
 
@@ -82,6 +83,8 @@ export const api = {
   unveto: (id: number) => request("DELETE", `/rounds/${id}/veto`),
   draw: (id: number) => request<Round>("POST", `/rounds/${id}/draw`),
 
+  photos: (queries: string[]) => request<PhotoSuggestion[]>("GET", `/photos?${queries.map((q) => `q=${encodeURIComponent(q)}`).join("&")}`),
+  photoUsed: (download: string) => request("POST", "/photos/used", { download }),
   geocode: (q: string) => request<GeocodeResult[]>("GET", `/geocode?q=${encodeURIComponent(q)}`),
   terminals: (kind: "airport" | "station", q: string) => request<TerminalSearchResult[]>("GET", `/terminals?kind=${kind}&q=${encodeURIComponent(q)}`),
 };

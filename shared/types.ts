@@ -2,6 +2,7 @@ import type { RoundFilters } from "./roundFilters";
 import type { Shortlist } from "./shortlist";
 import type { HolidayType, TravelTime, TripLength } from "./ideaDetails";
 import type { Terminal } from "./terminals";
+import type { PhotoCredit } from "./photos";
 
 export interface Person {
   id: number;
@@ -41,6 +42,8 @@ export interface Trip {
   notes: string | null;
   rating: number | null;
   cover_url: string | null;
+  /** Set when the cover came from the photo suggestions. */
+  cover_credit: PhotoCredit | null;
   /** Road trips draw their route city to city, in order. */
   road_trip: boolean;
   /** Cruises also draw their route port to port, in order. */
@@ -74,6 +77,8 @@ export interface Idea extends IdeaDetails {
   title: string;
   description: string | null;
   cover_url: string | null;
+  /** Set when the cover came from the photo suggestions. */
+  cover_credit: PhotoCredit | null;
   status: IdeaStatus;
   created_by: number | null;
   created_at: string;
@@ -86,6 +91,8 @@ export interface IdeaInput extends IdeaDetails {
   title: string;
   description: string | null;
   cover_url: string | null;
+  /** Set when the cover came from the photo suggestions. */
+  cover_credit: PhotoCredit | null;
   created_by: number | null;
   places: Place[];
   depart: Terminal | null;

@@ -8,6 +8,8 @@ export interface Env {
   EMAIL_FROM?: string;
   /** The organiser of family 1, which holds everything made before sign-in existed. A secret. */
   OWNER_EMAIL?: string;
+  /** Unsplash access key, set as a secret. Without it photo suggestions come from Wikimedia Commons. */
+  UNSPLASH_ACCESS_KEY?: string;
   /** "1" in local development: the sign-in link comes back in the response instead of by email. */
   DEV_LOGIN_LINKS?: string;
 }

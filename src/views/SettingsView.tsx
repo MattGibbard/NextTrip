@@ -152,9 +152,9 @@ function HomePanel() {
     setBusy(true);
     try {
       for (const i of missing) {
-        const { title, description, cover_url, created_by, places, depart, arrive, budget, trip_length, holiday_types } = i;
+        const { title, description, cover_url, cover_credit, created_by, places, depart, arrive, budget, trip_length, holiday_types } = i;
         const travel_time = estimateTravel(depart ?? home, places)!.travel_time;
-        await api.updateIdea(i.id, { title, description, cover_url, created_by, places, depart, arrive, budget, trip_length, travel_time, holiday_types });
+        await api.updateIdea(i.id, { title, description, cover_url, cover_credit, created_by, places, depart, arrive, budget, trip_length, travel_time, holiday_types });
       }
       await reload();
     } catch (e) {

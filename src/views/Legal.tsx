@@ -3,7 +3,7 @@ import { Frame } from "./Welcome";
 
 // Keep these in step with what the app really does: if a change stores something new
 // or sends data to another service, update the privacy policy and this date.
-const UPDATED = "6 October 2026";
+const UPDATED = "7 October 2026";
 const CONTACT = "https://github.com/MattGibbard/NextTrip/issues";
 
 export type LegalPage = "privacy" | "terms";
@@ -79,7 +79,11 @@ function Privacy() {
         <li>
           <strong>Google Fonts</strong> provides the lettering, so your browser fetches fonts from Google.
         </li>
-        <li>If you add a cover photo link, the picture loads from whichever site it's hosted on.</li>
+        <li>
+          <strong>Unsplash</strong> and <strong>Wikimedia Commons</strong> supply suggested cover photos. The names of the places on a trip or idea are sent to them from
+          our server to find photos, and your browser loads the pictures from them directly.
+        </li>
+        <li>If you add your own cover photo link, the picture loads from whichever site it's hosted on.</li>
       </ul>
 
       <h2>How long we keep it</h2>

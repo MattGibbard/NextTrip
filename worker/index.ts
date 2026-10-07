@@ -5,6 +5,9 @@ import { HttpError } from "./env";
 import type { App, Ctx } from "./env";
 import { countedAllocations, ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
 import { parseNominatim } from "../shared/geocode";
+import { cleanCredit, parseCredit } from "../shared/photos";
+import type { PhotoCredit } from "../shared/photos";
+import { findPhotos, markPhotoUsed } from "./photos";
 import { cleanDetails } from "../shared/ideaDetails";
 import { estimateTravel } from "../shared/travelTime";
 import { ideaMode, tripMode } from "../shared/travelMode";
@@ -227,6 +230,7 @@ function placeInserts(db: D1Database, table: "trip_places" | "idea_places", key:
 // ---------- Trips ----------
 
 const terminalJson = (t: Terminal | null) => (t ? JSON.stringify(t) : null);
+const creditJson = (c: PhotoCredit | null) => (c ? JSON.stringify(c) : null);
 
 type EndsRow = { depart: string | null; arrive: string | null };
 const parseEnds = (r: EndsRow) => ({ depart: cleanTerminal(r.depart), arrive: cleanTerminal(r.arrive) });
@@ -248,6 +252,7 @@ function tripInput(b: Record<string, unknown>): TripInput {
     notes: cleanText(b.notes, 5000),
     rating,
     cover_url: cover,
+    cover_credit: cover ? cleanCredit(b.cover_credit) : null,
     ...flags,
     ...endsForMode(tripMode(flags), cleanTerminal(b.depart), cleanTerminal(b.arrive)),
     idea_id: typeof b.idea_id === "number" ? b.idea_id : null,
@@ -258,10 +263,10 @@ function tripInput(b: Record<string, unknown>): TripInput {
 
 app.get("/trips", async (c) => {
   const [{ results }, places] = await Promise.all([
-    c.env.DB.prepare("SELECT * FROM trips WHERE family_id = ? ORDER BY COALESCE(start_date, created_at) DESC").bind(c.get("family")).all<Omit<Trip, "places" | "road_trip" | "cruise" | "rail" | "depart" | "arrive"> & { road_trip: number; cruise: number; rail: number } & EndsRow>(),
+    c.env.DB.prepare("SELECT * FROM trips WHERE family_id = ? ORDER BY COALESCE(start_date, created_at) DESC").bind(c.get("family")).all<Omit<Trip, "places" | "road_trip" | "cruise" | "rail" | "depart" | "arrive" | "cover_credit"> & { cover_credit: string | null } & { road_trip: number; cruise: number; rail: number } & EndsRow>(),
     loadPlaces(c.env.DB, c.get("family"), "trip_places", "trip_id"),
   ]);
-  return c.json(results.map((t) => ({ ...t, road_trip: !!t.road_trip, cruise: !!t.cruise, rail: !!t.rail, ...parseEnds(t), places: places.get(t.id) ?? [] })));
+  return c.json(results.map((t) => ({ ...t, road_trip: !!t.road_trip, cruise: !!t.cruise, rail: !!t.rail, ...parseEnds(t), cover_credit: parseCredit(t.cover_credit), places: places.get(t.id) ?? [] })));
 });
 
 /** The id if it's one of this family's ideas, otherwise null. */
@@ -282,10 +287,10 @@ app.post("/trips", async (c) => {
   const t = tripInput(await body(c));
   t.idea_id = await familyIdea(c, t.idea_id);
   const row = await c.env.DB.prepare(
-    `INSERT INTO trips (title, start_date, end_date, notes, rating, cover_url, road_trip, cruise, rail, depart, arrive, idea_id, created_by, family_id)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
+    `INSERT INTO trips (title, start_date, end_date, notes, rating, cover_url, cover_credit, road_trip, cruise, rail, depart, arrive, idea_id, created_by, family_id)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
   )
-    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.rail ? 1 : 0, terminalJson(t.depart), terminalJson(t.arrive), t.idea_id, await familyPerson(c, t.created_by), c.get("family"))
+    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, creditJson(t.cover_credit), t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.rail ? 1 : 0, terminalJson(t.depart), terminalJson(t.arrive), t.idea_id, await familyPerson(c, t.created_by), c.get("family"))
     .first<{ id: number }>();
   const id = row!.id;
   const stmts = placeInserts(c.env.DB, "trip_places", "trip_id", id, t.places);
@@ -299,9 +304,9 @@ app.put("/trips/:id", async (c) => {
   const id = idParam(c);
   const t = tripInput(await body(c));
   const res = await c.env.DB.prepare(
-    `UPDATE trips SET title = ?, start_date = ?, end_date = ?, notes = ?, rating = ?, cover_url = ?, road_trip = ?, cruise = ?, rail = ?, depart = ?, arrive = ? WHERE id = ? AND family_id = ?`,
+    `UPDATE trips SET title = ?, start_date = ?, end_date = ?, notes = ?, rating = ?, cover_url = ?, cover_credit = ?, road_trip = ?, cruise = ?, rail = ?, depart = ?, arrive = ? WHERE id = ? AND family_id = ?`,
   )
-    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.rail ? 1 : 0, terminalJson(t.depart), terminalJson(t.arrive), id, c.get("family"))
+    .bind(t.title, t.start_date, t.end_date, t.notes, t.rating, t.cover_url, creditJson(t.cover_credit), t.road_trip ? 1 : 0, t.cruise ? 1 : 0, t.rail ? 1 : 0, terminalJson(t.depart), terminalJson(t.arrive), id, c.get("family"))
     .run();
   if (!res.meta.changes) throw new HttpError(404, "Not found");
   await c.env.DB.batch(placeInserts(c.env.DB, "trip_places", "trip_id", id, t.places));
@@ -337,6 +342,7 @@ function ideaInput(b: Record<string, unknown>): IdeaInput {
     title,
     description: cleanText(b.description, 5000),
     cover_url: cleanUrl(b.cover_url),
+    cover_credit: cleanUrl(b.cover_url) ? cleanCredit(b.cover_credit) : null,
     created_by: typeof b.created_by === "number" ? b.created_by : null,
     places: cleanPlaces(b.places),
     ...endsForMode(ideaMode(details.holiday_types), cleanTerminal(b.depart), cleanTerminal(b.arrive)),
@@ -344,7 +350,7 @@ function ideaInput(b: Record<string, unknown>): IdeaInput {
   };
 }
 
-type IdeaRow = Omit<Idea, "places" | "holiday_types" | "depart" | "arrive"> & { holiday_types: string | null } & EndsRow;
+type IdeaRow = Omit<Idea, "places" | "holiday_types" | "depart" | "arrive" | "cover_credit"> & { holiday_types: string | null; cover_credit: string | null } & EndsRow;
 
 function parseTypes(raw: string | null): Idea["holiday_types"] {
   try {
@@ -360,7 +366,7 @@ app.get("/ideas", async (c) => {
     c.env.DB.prepare("SELECT * FROM ideas WHERE family_id = ? AND status != 'archived' ORDER BY created_at DESC").bind(c.get("family")).all<IdeaRow>(),
     loadPlaces(c.env.DB, c.get("family"), "idea_places", "idea_id"),
   ]);
-  return c.json(results.map((i) => ({ ...i, holiday_types: parseTypes(i.holiday_types), ...parseEnds(i), places: places.get(i.id) ?? [] })));
+  return c.json(results.map((i) => ({ ...i, holiday_types: parseTypes(i.holiday_types), ...parseEnds(i), cover_credit: parseCredit(i.cover_credit), places: places.get(i.id) ?? [] })));
 });
 
 app.post("/ideas", async (c) => {
@@ -368,10 +374,10 @@ app.post("/ideas", async (c) => {
   // Travel time is always worked out from the departure point or home, never typed in.
   const travel = estimateTravel(i.depart ?? (await loadHome(c.env.DB, c.get("family"))), i.places)?.travel_time ?? null;
   const row = await c.env.DB.prepare(
-    `INSERT INTO ideas (title, description, cover_url, created_by, budget, trip_length, travel_time, holiday_types, depart, arrive, family_id)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
+    `INSERT INTO ideas (title, description, cover_url, cover_credit, created_by, budget, trip_length, travel_time, holiday_types, depart, arrive, family_id)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id`,
   )
-    .bind(i.title, i.description, i.cover_url, await familyPerson(c, i.created_by), i.budget, i.trip_length, travel, JSON.stringify(i.holiday_types), terminalJson(i.depart), terminalJson(i.arrive), c.get("family"))
+    .bind(i.title, i.description, i.cover_url, creditJson(i.cover_credit), await familyPerson(c, i.created_by), i.budget, i.trip_length, travel, JSON.stringify(i.holiday_types), terminalJson(i.depart), terminalJson(i.arrive), c.get("family"))
     .first<{ id: number }>();
   await c.env.DB.batch(placeInserts(c.env.DB, "idea_places", "idea_id", row!.id, i.places));
   return c.json({ id: row!.id }, 201);
@@ -383,10 +389,10 @@ app.put("/ideas/:id", async (c) => {
   // Without an estimate (no departure or home, or no located places) the old travel time stays.
   const travel = estimateTravel(i.depart ?? (await loadHome(c.env.DB, c.get("family"))), i.places)?.travel_time ?? null;
   const res = await c.env.DB.prepare(
-    `UPDATE ideas SET title = ?, description = ?, cover_url = ?, budget = ?, trip_length = ?, travel_time = COALESCE(?, travel_time), holiday_types = ?, depart = ?, arrive = ?
+    `UPDATE ideas SET title = ?, description = ?, cover_url = ?, cover_credit = ?, budget = ?, trip_length = ?, travel_time = COALESCE(?, travel_time), holiday_types = ?, depart = ?, arrive = ?
      WHERE id = ? AND family_id = ? AND status != 'archived'`,
   )
-    .bind(i.title, i.description, i.cover_url, i.budget, i.trip_length, travel, JSON.stringify(i.holiday_types), terminalJson(i.depart), terminalJson(i.arrive), id, c.get("family"))
+    .bind(i.title, i.description, i.cover_url, creditJson(i.cover_credit), i.budget, i.trip_length, travel, JSON.stringify(i.holiday_types), terminalJson(i.depart), terminalJson(i.arrive), id, c.get("family"))
     .run();
   if (!res.meta.changes) throw new HttpError(404, "Not found");
   await c.env.DB.batch(placeInserts(c.env.DB, "idea_places", "idea_id", id, i.places));
@@ -788,6 +794,18 @@ app.get("/geocode", async (c) => {
   }).catch(() => null);
   if (!res?.ok) throw new HttpError(409, "Place search is unavailable right now");
   return c.json(parseNominatim(await res.json()));
+});
+
+// ---------- Photo suggestions ----------
+
+app.get("/photos", async (c) => {
+  const queries = c.req.queries("q") ?? [];
+  return c.json(await findPhotos(c.env, queries));
+});
+
+app.post("/photos/used", async (c) => {
+  await markPhotoUsed(c.env, (await body(c)).download);
+  return c.json({ ok: true });
 });
 
 app.all("*", (c) => c.json({ error: "Not found" }, 404));

@@ -38,6 +38,10 @@ Sign-in links are sent with [Resend](https://resend.com) (free for 3,000 emails 
 - `OWNER_EMAIL`: the organiser of family 1, which holds everything made before sign-in existed. The first sign-in with this address takes it over.
 - `EMAIL_FROM` (optional): who the emails come from, like `NextTrip <hello@yourdomain.com>`. Until you verify a domain in Resend, it uses `onboarding@resend.dev`, which can only send to the email address of your own Resend account.
 
+### Photo suggestions
+
+When you add places to a trip or idea, the form suggests a few cover photos. They come from [Unsplash](https://unsplash.com/developers) when the Worker has a key, and from Wikimedia Commons otherwise (or when Unsplash finds nothing). To use Unsplash, create a free app at unsplash.com/oauth/applications and add its **Access Key** as a secret called `UNSPLASH_ACCESS_KEY`. A new app is allowed 50 searches an hour; apply for production on the app's page to get 5,000. Each photo is credited under it, as both sites ask.
+
 You can also deploy from your machine with `npx wrangler login` followed by `npm run deploy`.
 
 ## How it's built

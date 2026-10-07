@@ -6,6 +6,8 @@ import { useData } from "../data";
 import { Modal } from "../components/Modal";
 import { PlaceSearch } from "../components/PlaceSearch";
 import { PlaceChips } from "../components/PlaceChips";
+import { PhotoPicker } from "../components/PhotoPicker";
+import type { CoverChoice } from "../components/PhotoPicker";
 import { Stars } from "../components/Stars";
 import { JourneyFields, useJourney } from "../components/TerminalPicker";
 import { MODES, MODE_KEYS, ideaMode, modeFlags, tripMode } from "../../shared/travelMode";
@@ -29,7 +31,7 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
   const [places, setPlaces] = useState<Place[]>(trip?.places ?? draft?.places ?? []);
   const [rating, setRating] = useState<number | null>(trip?.rating ?? null);
   const [notes, setNotes] = useState(trip?.notes ?? "");
-  const [cover, setCover] = useState(trip?.cover_url ?? "");
+  const [cover, setCover] = useState<CoverChoice>({ url: trip?.cover_url ?? "", credit: trip?.cover_credit ?? null, download: null });
   const [mode, setMode] = useState<Mode>(trip ? tripMode(trip) : ideaMode(fromIdea?.holiday_types ?? []));
   const journey = useJourney(trip ?? draft ?? {}, !trip)(mode);
   const [saving, setSaving] = useState(false);
@@ -44,7 +46,8 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
       places,
       rating,
       notes: notes || null,
-      cover_url: cover || null,
+      cover_url: cover.url.trim() || null,
+      cover_credit: cover.url.trim() ? cover.credit : null,
       ...modeFlags(mode),
       depart: journey.depart,
       arrive: journey.arrive,
@@ -55,6 +58,7 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
     try {
       if (trip) await api.updateTrip(trip.id, input);
       else await api.createTrip(input);
+      if (cover.download) api.photoUsed(cover.download).catch(() => {});
       await reload();
       onClose();
     } catch (err) {
@@ -113,10 +117,7 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
           Notes
           <textarea rows={3} value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="Highlights, where you stayed…" />
         </label>
-        <label>
-          Cover photo link
-          <input type="url" value={cover} onChange={(e) => setCover(e.target.value)} placeholder="https://…" />
-        </label>
+        <PhotoPicker places={places} value={cover} onChange={setCover} />
         {error && <p className="error-text">{error}</p>}
         <div className="form-actions">
           {trip && isOwner && (

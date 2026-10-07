@@ -3088,3 +3088,76 @@ a.detail {
     border-width: 6px;
   }
 }
+
+/* ---------- Cover photo picker ---------- */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.4rem;
+}
+.photo-tile {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--surface-2);
+  cursor: pointer;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition: outline-color 0.15s;
+}
+.photo-tile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo-tile.on {
+  outline-color: var(--accent);
+}
+.photo-tile.on::after {
+  content: "✓";
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.photo-tile.loading {
+  cursor: default;
+  animation: photo-pulse 1.2s ease-in-out infinite;
+}
+@keyframes photo-pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .photo-tile.loading {
+    animation: none;
+  }
+}
+.photo-hint,
+.photo-credit {
+  margin: 0;
+  font-weight: 400;
+}
+.photo-suggest {
+  align-self: flex-start;
+}
+.photo-credit a {
+  color: inherit;
+}
+.pass-page > .photo-credit {
+  margin-top: 0.4rem;
+  text-align: right;
+}

@@ -4,6 +4,7 @@ import type { Terminal } from "../../shared/terminals";
 import { MODES, placeCode, ticketEnds, tripMode } from "../../shared/travelMode";
 import type { Mode } from "../../shared/travelMode";
 import { useData } from "../data";
+import { CoverCredit } from "../components/PhotoPicker";
 import { flag } from "../countries";
 import { monthYear, nights, shortRange } from "../format";
 import { Stars } from "../components/Stars";
@@ -139,6 +140,7 @@ export function TripPage({ id }: { id: number }) {
         }
         stub={[m.icon, stubCodes || m.kind, passNo]}
       />
+      {trip.cover_url && trip.cover_credit && <CoverCredit credit={trip.cover_credit} />}
 
       <div className="pass-columns">
         <div className="pass-left">

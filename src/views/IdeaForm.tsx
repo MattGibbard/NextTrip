@@ -6,6 +6,8 @@ import { useData } from "../data";
 import { Modal } from "../components/Modal";
 import { PlaceSearch } from "../components/PlaceSearch";
 import { PlaceChips } from "../components/PlaceChips";
+import { PhotoPicker } from "../components/PhotoPicker";
+import type { CoverChoice } from "../components/PhotoPicker";
 import { IdeaDetailsFields } from "../components/IdeaDetails";
 import { JourneyFields, useJourney } from "../components/TerminalPicker";
 import { ideaMode } from "../../shared/travelMode";
@@ -16,7 +18,7 @@ export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: (
   const { me, reload, rounds, home, isOwner } = useData();
   const [title, setTitle] = useState(idea?.title ?? "");
   const [description, setDescription] = useState(idea?.description ?? "");
-  const [cover, setCover] = useState(idea?.cover_url ?? "");
+  const [cover, setCover] = useState<CoverChoice>({ url: idea?.cover_url ?? "", credit: idea?.cover_credit ?? null, download: null });
   const [places, setPlaces] = useState<Place[]>(idea?.places ?? []);
   const [details, setDetails] = useState<IdeaDetails>({
     budget: idea?.budget ?? null,
@@ -35,11 +37,12 @@ export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: (
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
-    const input = { title, description: description || null, cover_url: cover.trim() || null, places, depart: journey.depart, arrive: journey.arrive, created_by: idea?.created_by ?? me?.id ?? null, ...details };
+    const input = { title, description: description || null, cover_url: cover.url.trim() || null, cover_credit: cover.url.trim() ? cover.credit : null, places, depart: journey.depart, arrive: journey.arrive, created_by: idea?.created_by ?? me?.id ?? null, ...details };
     setSaving(true);
     try {
       if (idea) await api.updateIdea(idea.id, input);
       else await api.createIdea(input);
+      if (cover.download) api.photoUsed(cover.download).catch(() => {});
       await reload();
       onClose();
     } catch (err) {
@@ -82,10 +85,7 @@ export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: (
                 : "Set your home in Settings and it's worked out for you."}
           </p>
         </div>
-        <label>
-          Cover photo link
-          <input type="url" value={cover} onChange={(e) => setCover(e.target.value)} placeholder="https://…" />
-        </label>
+        <PhotoPicker places={places} value={cover} onChange={setCover} />
         <label>
           Notes
           <textarea rows={4} value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Why it's great, rough budget, best time to go…" />

@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { useData } from "../data";
+import { CoverCredit } from "../components/PhotoPicker";
 import { flag } from "../countries";
 import { plural } from "../format";
 import { budgetLabel, holidayType, travelTimeLabel, tripLengthLabel } from "../../shared/ideaDetails";
@@ -135,6 +136,7 @@ export function IdeaPage({ id }: { id: number }) {
         ]}
         stub={["💡", codes ? `STANDBY · ${codes}` : "STANDBY", plural(history.length, "DRAW", "DRAWS")]}
       />
+      {idea.cover_url && idea.cover_credit && <CoverCredit credit={idea.cover_credit} />}
 
       {idea.status === "won" && (
         <div className="panel win-panel">

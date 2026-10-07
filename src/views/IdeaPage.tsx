@@ -8,6 +8,7 @@ import { estimateTravel, formatHours } from "../../shared/travelTime";
 import { MODES, ideaMode, ticketEnds } from "../../shared/travelMode";
 import { followsInOrder } from "../../shared/routes";
 import { Pass } from "../components/Ticket";
+import { HotelLinks } from "../components/HotelLinks";
 import { WorldMap, terminalPins } from "../components/WorldMap";
 import { journeyLegs } from "../../shared/terminals";
 import type { Pin, Route } from "../components/WorldMap";
@@ -149,6 +150,8 @@ export function IdeaPage({ id }: { id: number }) {
           ✓ You went: <a href={`#/been/${trip.id}`}>{trip.title}</a>
         </p>
       )}
+
+      {idea.status !== "done" && <HotelLinks places={idea.places} campaign="idea_page" className="panel" />}
 
       <div className="pass-columns idea-columns">
         {idea.description && <p className="pass-notes area-notes">{idea.description}</p>}

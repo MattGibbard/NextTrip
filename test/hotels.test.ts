@@ -11,6 +11,7 @@ describe("hotelLink", () => {
     expect(url.searchParams.get("aid")).toBe("somewhereparty");
     expect(url.searchParams.get("address")).toBe("Banff, Canada");
     expect(url.searchParams.get("campaign")).toBe("draw_result");
+    expect(url.searchParams.get("currency")).toBe("GBP");
   });
 
   it("leaves the coordinates out, so they can't override the name", () => {
@@ -44,7 +45,7 @@ describe("flightLink", () => {
       p: "4114",
       trs: "582749",
       sub_id: "idea_page",
-      u: "https://www.aviasales.com/?params=LHRYYC4",
+      u: "https://www.aviasales.com/?params=LHRYYC4&currency=gbp",
     });
   });
 });

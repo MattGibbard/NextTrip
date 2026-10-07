@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { migrate } from "./migrate";
-import { authRoutes, familyRoutes, readSession, requireOwner, setSessionPerson } from "./auth";
+import { authRoutes, familyRoutes, readSession, requireOwner, setOwnerPerson, setSessionPerson } from "./auth";
 import { HttpError } from "./env";
 import type { App, Ctx } from "./env";
 import { countedAllocations, ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
@@ -141,7 +141,10 @@ app.post("/people", async (c) => {
   const row = await db.prepare("INSERT INTO people (name, color, family_id) VALUES (?, ?, ?) RETURNING id")
     .bind(name, color ?? "#2563eb", c.get("family"))
     .first<{ id: number }>();
-  if (viewerId(c) === null) await setSessionPerson(c, row!.id);
+  if (viewerId(c) === null) {
+    await setSessionPerson(c, row!.id);
+    if (isOwner) await setOwnerPerson(c, c.get("family"), row!.id);
+  }
   // A newcomer joins a shortlist still being made, so it waits for their swipes too.
   return c.json({ id: row!.id }, 201);
 });
@@ -156,6 +159,7 @@ app.post("/me", async (c) => {
     : null;
   if (!row) throw new HttpError(404, "Not found");
   await setSessionPerson(c, row.id);
+  await setOwnerPerson(c, c.get("family"), row.id);
   return c.json({ ok: true });
 });
 

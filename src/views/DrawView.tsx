@@ -13,6 +13,7 @@ import { TripForm } from "./TripForm";
 import { IdeaDetailsLine } from "../components/IdeaDetails";
 import { celebrate } from "../components/celebrate";
 import { SwipeDeck } from "../components/SwipeDeck";
+import { HotelLinks } from "../components/HotelLinks";
 import { FlapBoard, boardTimeline, useMedia } from "../components/FlapBoard";
 import type { BoardRow } from "../components/FlapBoard";
 import { RoundFilterFields, RoundFilterLine } from "../components/RoundFilters";
@@ -796,6 +797,8 @@ function Reveal({ round, onDone, onClose }: { round: Round; onDone: () => void; 
           <Breakdown round={round} />
         </section>
       )}
+
+      {done && planIdea && <HotelLinks places={planIdea.places} campaign="draw_result" className="odds-card" />}
 
       <div className="reveal-actions">
         {done ? (

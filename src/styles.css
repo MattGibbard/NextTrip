@@ -4766,3 +4766,27 @@ fieldset.field legend {
   border: 0;
   border-radius: 50%;
 }
+
+/* ---------- Find hotels (Stay22 affiliate links) ---------- */
+
+.hotel-links h2 {
+  margin: 0 0 0.6rem;
+  color: var(--muted);
+}
+.hotel-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.hotel-buttons .btn {
+  min-height: 44px;
+  text-decoration: none;
+  white-space: normal;
+  text-align: left;
+}
+.hotel-note {
+  margin: 0.6rem 0 0;
+}
+.hotel-links.panel {
+  margin-top: 1rem;
+}

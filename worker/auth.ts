@@ -2,6 +2,7 @@ import type { Hono } from "hono";
 import { deleteCookie, getCookie, setCookie } from "hono/cookie";
 import { normaliseEmail, randomToken, sha256 } from "../shared/auth";
 import { HttpError } from "./env";
+import { signInEmail } from "./signInEmail";
 import type { App, Ctx, Env, Role } from "./env";
 
 const COOKIE = "nexttrip_session";
@@ -90,19 +91,16 @@ async function bodyOf(c: Ctx): Promise<Record<string, unknown>> {
 }
 
 async function sendSignInEmail(env: Env, to: string, link: string) {
+  const email = signInEmail({ link, email: to, minutes: LINK_MINUTES });
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       from: env.EMAIL_FROM || "somewhere.party <onboarding@resend.dev>",
       to: [to],
-      subject: "Your somewhere🎉 sign-in link",
-      text: `Open this link to sign in to somewhere🎉:\n\n${link}\n\nIt works once, for the next ${LINK_MINUTES} minutes. If you didn't ask for it, you can ignore this email.`,
-      html: `<div style="font-family:system-ui,sans-serif;font-size:16px;line-height:1.5;color:#111">
-<p>Tap the button to sign in to somewhere🎉.</p>
-<p><a href="${link}" style="display:inline-block;background:#2563eb;color:#fff;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:600">Sign in to somewhere🎉</a></p>
-<p style="color:#666;font-size:14px">It works once, for the next ${LINK_MINUTES} minutes. If you didn't ask for it, you can ignore this email.</p>
-</div>`,
+      subject: email.subject,
+      html: email.html,
+      text: email.text,
     }),
   }).catch(() => null);
   if (!res?.ok) {

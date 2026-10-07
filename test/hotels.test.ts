@@ -36,7 +36,7 @@ describe("hotelPlaces", () => {
 describe("flightLink", () => {
   it("wraps an Aviasales route search in our Travelpayouts link", async () => {
     const { flightLink } = await import("../shared/flights");
-    const url = new URL(flightLink("LHR", "YYC", "idea_page"));
+    const url = new URL(flightLink("LHR", "YYC", 4, "idea_page"));
     expect(url.origin + url.pathname).toBe("https://tp.media/r");
     expect(Object.fromEntries(url.searchParams)).toEqual({
       campaign_id: "100",
@@ -44,8 +44,18 @@ describe("flightLink", () => {
       p: "4114",
       trs: "582749",
       sub_id: "idea_page",
-      u: "https://www.aviasales.com/?params=LHRYYC",
+      u: "https://www.aviasales.com/?params=LHRYYC4",
     });
+  });
+});
+
+describe("flightLink passengers", () => {
+  it("always sends between 1 and 9 passengers, because Aviasales drops a route without any", async () => {
+    const { flightLink } = await import("../shared/flights");
+    const params = (n: number) => new URL(new URL(flightLink("LHR", "YVR", n, "draw_result")).searchParams.get("u")!).searchParams.get("params");
+    expect(params(0)).toBe("LHRYVR1");
+    expect(params(2)).toBe("LHRYVR2");
+    expect(params(12)).toBe("LHRYVR9");
   });
 });
 

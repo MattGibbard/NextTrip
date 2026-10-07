@@ -9,10 +9,12 @@ const AVIASALES = { p: "4114", campaign_id: "100" };
 
 /**
  * An Aviasales search from one airport to another, through our Travelpayouts link so bookings
- * earn a commission. No dates yet: it opens the search form with the route filled in.
+ * earn a commission. No dates yet: it opens the search form with the route filled in. Aviasales
+ * ignores a route without a passenger count, so it always gets one (1 to 9, all as adults).
  */
-export function flightLink(from: string, to: string, campaign: HotelCampaign): string {
-  const search = `https://www.aviasales.com/?params=${from}${to}`;
+export function flightLink(from: string, to: string, passengers: number, campaign: HotelCampaign): string {
+  const adults = Math.min(9, Math.max(1, Math.round(passengers) || 1));
+  const search = `https://www.aviasales.com/?params=${from}${to}${adults}`;
   const q = new URLSearchParams({
     campaign_id: AVIASALES.campaign_id,
     marker: TRAVELPAYOUTS_MARKER,

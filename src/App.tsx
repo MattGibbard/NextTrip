@@ -119,29 +119,28 @@ function Shell() {
   return (
     <div className="app">
       <header className="topbar">
-        <a className="brand" href="#/trips">
-          <img src="/favicon.svg" alt="" width={28} height={28} />
-          <span>
-            somewhere<span className="brand-party">🎉</span>
-          </span>
-        </a>
-        <nav className="tabs desktop-only">
-          {TABS.map((t) => (
-            <button key={t.id} className={tab === t.id ? "active" : ""} onClick={() => go(t.id)}>
-              {t.label}
+        <div className="topbar-inner">
+          <a className="brand" href="#/trips">
+            somewhere<span aria-hidden>🎉</span>
+          </a>
+          <nav className="tabs desktop-only" aria-label="Main">
+            {TABS.map((t) => (
+              <button key={t.id} className={tab === t.id ? "active" : ""} onClick={() => go(t.id)}>
+                {t.label}
+              </button>
+            ))}
+          </nav>
+          <div className="topbar-right">
+            {me && (
+              <a className="me-chip" href="#/settings" title="You, on this device">
+                <span className="dot" style={{ background: me.color }} />
+                {me.name}
+              </a>
+            )}
+            <button className={`icon-btn ${tab === "settings" ? "active" : ""}`} onClick={() => go("settings")} aria-label="Settings">
+              ⚙️
             </button>
-          ))}
-        </nav>
-        <div className="topbar-right">
-          {me && (
-            <a className="me-chip" href="#/settings" title="You, on this device">
-              <span className="dot" style={{ background: me.color }} />
-              {me.name}
-            </a>
-          )}
-          <button className={`icon-btn ${tab === "settings" ? "active" : ""}`} onClick={() => go("settings")} aria-label="Settings">
-            ⚙️
-          </button>
+          </div>
         </div>
       </header>
 

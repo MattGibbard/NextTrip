@@ -40,7 +40,10 @@ export function DrawView() {
   return (
     <section>
       <div className="page-head">
-        <h1>Holiday draw</h1>
+        <div>
+          <div className="eyebrow desktop-only">Now boarding · The draw</div>
+          <h1 className="display">Holiday draw</h1>
+        </div>
       </div>
 
       {revealing ? (

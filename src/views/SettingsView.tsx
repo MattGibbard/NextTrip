@@ -18,7 +18,10 @@ export function SettingsView() {
   return (
     <section>
       <div className="page-head">
-        <h1>Settings</h1>
+        <div>
+          <div className="eyebrow desktop-only">Your family</div>
+          <h1 className="display">Settings</h1>
+        </div>
       </div>
       <div className="panel">
         <h2>Your family</h2>

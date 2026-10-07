@@ -2,20 +2,73 @@ import { useEffect, useRef, useState } from "react";
 import type { FormEvent, MouseEvent, ReactNode } from "react";
 import { api } from "../api";
 
+/** The page frame for signed-out pages other than the home page: the home page's header and footer around the content. */
 export function Frame({ children }: { children: ReactNode }) {
   return (
-    <div className="welcome">
-      <header className="welcome-top">
-        <a className="brand" href="/">
-          <img src="/favicon.svg" alt="" width={28} height={28} />
-          <span>
-            somewhere<span className="brand-party">🎉</span>
-          </span>
-        </a>
-      </header>
-      {children}
-      <LegalLinks />
+    <div className="lp">
+      <SiteHeader />
+      <main className="lp-wrap lp-frame">{children}</main>
+      <SiteFooter />
     </div>
+  );
+}
+
+/** The signed-out header, shared by the home page and the other public pages. */
+function SiteHeader({ sections = false }: { sections?: boolean }) {
+  return (
+    <header className="lp-top">
+      <div className="lp-wrap lp-top-inner">
+        <a className="lp-brand" href="/">
+          somewhere<span aria-hidden>🎉</span>
+        </a>
+        {sections && (
+          <nav className="lp-nav" aria-label="Main">
+            <a href="#how" onClick={jump}>
+              How it works
+            </a>
+            <a href="#features" onClick={jump}>
+              Features
+            </a>
+            <a href="#why" onClick={jump}>
+              Why use it
+            </a>
+          </nav>
+        )}
+        {sections ? (
+          <a className="btn ghost lp-top-signin" href="#signin" onClick={jump}>
+            Sign in
+          </a>
+        ) : (
+          <a className="btn ghost lp-top-signin" href="/">
+            Home
+          </a>
+        )}
+      </div>
+    </header>
+  );
+}
+
+function SiteFooter({ sections = false }: { sections?: boolean }) {
+  return (
+    <footer className="lp-foot">
+      <div className="lp-wrap lp-foot-inner">
+        <div>
+          <div className="lp-brand">
+            somewhere<span aria-hidden>🎉</span>
+          </div>
+          <div className="muted small">Where we've been, and where we're going next.</div>
+        </div>
+        <nav aria-label="Footer" className="lp-foot-links">
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          {sections && (
+            <a href="#signin" onClick={jump}>
+              Sign in
+            </a>
+          )}
+        </nav>
+      </div>
+    </footer>
   );
 }
 
@@ -78,28 +131,8 @@ const REASONS = [
 /** The public front page, with the sign-in form. */
 export function HomePage() {
   return (
-    <div className="lp">
-      <header className="lp-top">
-        <div className="lp-wrap lp-top-inner">
-          <a className="lp-brand" href="/">
-            somewhere<span aria-hidden>🎉</span>
-          </a>
-          <nav className="lp-nav" aria-label="Main">
-            <a href="#how" onClick={jump}>
-              How it works
-            </a>
-            <a href="#features" onClick={jump}>
-              Features
-            </a>
-            <a href="#why" onClick={jump}>
-              Why use it
-            </a>
-          </nav>
-          <a className="btn ghost lp-top-signin" href="#signin" onClick={jump}>
-            Sign in
-          </a>
-        </div>
-      </header>
+    <div className="lp lp-home">
+      <SiteHeader sections />
 
       <section className="lp-wrap lp-hero">
         <div className="lp-hero-text">
@@ -238,23 +271,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <footer className="lp-foot">
-        <div className="lp-wrap lp-foot-inner">
-          <div>
-            <div className="lp-brand">
-              somewhere<span aria-hidden>🎉</span>
-            </div>
-            <div className="muted small">Where we've been, and where we're going next.</div>
-          </div>
-          <nav aria-label="Footer" className="lp-foot-links">
-            <a href="/privacy">Privacy</a>
-            <a href="/terms">Terms</a>
-            <a href="#signin" onClick={jump}>
-              Sign in
-            </a>
-          </nav>
-        </div>
-      </footer>
+      <SiteFooter sections />
     </div>
   );
 }

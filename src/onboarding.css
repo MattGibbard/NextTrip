@@ -1,0 +1,589 @@
+/* ---------- Welcome steps, shown the first time someone is in ---------- */
+
+.onb {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--bg);
+  outline: none;
+}
+.onb-col {
+  box-sizing: border-box;
+  max-width: 440px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: calc(20px + env(safe-area-inset-top)) 16px calc(28px + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+}
+
+.onb-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+}
+.onb-brand {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+.onb-count {
+  color: var(--muted);
+}
+.onb-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-left: -10px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+}
+.onb-back:hover {
+  background: var(--surface-2);
+}
+.onb-progress {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 6px;
+  margin-top: 8px;
+}
+.onb-progress span {
+  height: 4px;
+  border-radius: 999px;
+  background: var(--border);
+}
+.onb-progress span.on {
+  background: var(--accent);
+}
+
+.onb-intro {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.onb-eyebrow {
+  color: var(--flight-ink);
+}
+.onb-eyebrow.standby {
+  color: var(--standby-ink);
+}
+.onb-intro h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.onb-intro h1.big {
+  font-size: 2rem;
+}
+.onb-lede {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/* The dark board: how it works on the first step, departures on the last */
+.onb-board {
+  margin-top: 20px;
+  border-radius: 16px;
+  padding: 16px 16px 8px;
+  background: var(--board);
+  color: #ffffff;
+  font-family: var(--mono);
+}
+.onb-board-head {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--board-line);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--board-muted);
+}
+.onb-board ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.onb-board li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px 0;
+}
+.onb-board li + li {
+  border-top: 1px solid var(--board-line);
+}
+.onb-board-n {
+  font-size: 0.9rem;
+  color: var(--board-muted);
+}
+.onb-board li > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.onb-board strong {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.onb-board p {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #cbd5d1;
+}
+.onb-board-now {
+  padding-top: 3px;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--board-lit);
+}
+
+.onb-bonus {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.onb-bonus-icon {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+.onb-bonus div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.onb-bonus p,
+.onb-note {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+.onb-note {
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+/* Buttons sit at the bottom of the screen, under whatever the step needed */
+.onb-actions {
+  margin-top: auto;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.onb-primary {
+  height: 50px;
+  font-size: 1rem;
+}
+.onb-skip {
+  height: 44px;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--flight-ink);
+  cursor: pointer;
+}
+.onb-skip:hover {
+  text-decoration: underline;
+}
+
+/* Fields */
+.onb-fields {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.onb-field {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.onb-fields .onb-field {
+  margin-top: 0;
+}
+.onb .field-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.onb-search {
+  position: relative;
+  display: block;
+}
+.onb-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 15px;
+  color: var(--muted);
+  pointer-events: none;
+}
+.onb .onb-search input,
+.onb .place-search > input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 0 12px 0 38px;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.onb .place-search.with-icon .search-icon {
+  left: 12px;
+  top: 15px;
+}
+.onb .place-search > .link {
+  margin-top: 6px;
+}
+.onb .onb-search input:focus,
+.onb .place-search > input:focus {
+  outline: 2px solid var(--accent);
+  border-color: transparent;
+}
+
+.onb-results {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.onb-results li.muted {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+}
+.onb-results button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 60px;
+  padding: 8px 12px;
+  font: inherit;
+  color: var(--text);
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.onb-results button:hover {
+  background: var(--surface-2);
+}
+.onb-results button.on {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.onb-code {
+  width: 52px;
+  flex-shrink: 0;
+  font: 500 1.25rem var(--mono);
+  letter-spacing: -0.02em;
+  color: var(--flight-ink);
+}
+.onb-result-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.onb-result-text strong {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.onb-result-text > span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.onb-tick {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+/* Home base: a boarding-pass strip with the picked code */
+.onb-homebase {
+  margin-top: 20px;
+  display: flex;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.onb-homebase-stub {
+  width: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  background: var(--flight);
+  color: #ffffff;
+  font: 500 0.6rem var(--mono);
+  letter-spacing: 0.14em;
+}
+.onb-homebase > div {
+  flex: 1;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--muted);
+}
+.onb-route {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.onb-route-code {
+  font: 500 2rem/1 var(--mono);
+  letter-spacing: -0.02em;
+  color: var(--flight-ink);
+}
+.onb-route-code.blank {
+  color: var(--border);
+}
+.onb-dash {
+  flex: 1;
+  border-top: 2px dashed var(--flight-line);
+}
+
+/* The first idea's details */
+.onb-set {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+.onb-set legend {
+  padding: 0;
+  margin-bottom: 8px;
+}
+.onb-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.onb-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 44px;
+  padding: 0 14px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.onb-chip:hover:not(.on) {
+  border-color: var(--accent);
+}
+.onb-chip.on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+.onb-chip.more {
+  color: var(--flight-ink);
+  border-style: dashed;
+}
+.onb-segments {
+  display: grid;
+  gap: 4px;
+  padding: 4px;
+  background: var(--surface-2);
+  border-radius: 12px;
+}
+.onb-segments button {
+  min-height: 44px;
+  padding: 0 4px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+}
+.onb-segments button.on {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+.onb-picked {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 6px 0 12px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+}
+.onb-picked > span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+.onb-picked button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+}
+.onb-preview {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--muted);
+}
+.onb-preview .standby-card {
+  color: var(--text);
+}
+
+/* The last step's board and invite */
+.onb-departures {
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.onb-departures .onb-board-head {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.onb-flaps {
+  display: flex;
+  gap: 4px;
+}
+.onb-flap {
+  width: 30px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background: var(--board-line);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.onb-flaps-label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: #cbd5d1;
+}
+.onb-board-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--board-line);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.onb-board-row .onb-board-now {
+  padding: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+}
+.onb-departures + .onb-intro {
+  margin-top: 24px;
+}
+
+.onb-invite {
+  margin-top: 20px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.onb-invite h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.onb-invite p {
+  margin: 0;
+}
+.onb-link {
+  display: flex;
+  gap: 8px;
+}
+.onb-link input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  padding: 0 12px;
+  font: 0.85rem var(--mono);
+  color: var(--text);
+  background: var(--surface-2);
+  border: 0;
+  border-radius: 10px;
+  text-overflow: ellipsis;
+}
+.onb .btn.onb-copy {
+  height: 44px;
+  color: var(--flight-ink);
+  border-color: var(--accent);
+  background: var(--surface);
+}

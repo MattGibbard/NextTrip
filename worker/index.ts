@@ -125,10 +125,10 @@ async function body(c: Ctx): Promise<Record<string, unknown>> {
 // ---------- People ----------
 
 app.get("/people", async (c) => {
-  const { results } = await c.env.DB.prepare("SELECT id, name, color, removed FROM people WHERE family_id = ? ORDER BY id")
+  const { results } = await c.env.DB.prepare("SELECT id, name, color, removed, onboarded FROM people WHERE family_id = ? ORDER BY id")
     .bind(c.get("family"))
-    .all<Omit<Person, "removed"> & { removed: number }>();
-  return c.json(results.map((p) => ({ ...p, removed: !!p.removed })));
+    .all<Omit<Person, "removed" | "onboarded"> & { removed: number; onboarded: number }>();
+  return c.json(results.map((p) => ({ ...p, removed: !!p.removed, onboarded: !!p.onboarded })));
 });
 
 function personInput(b: Record<string, unknown>) {
@@ -169,6 +169,14 @@ app.post("/me", async (c) => {
   if (!row) throw new HttpError(404, "Not found");
   await setSessionPerson(c, row.id);
   await setOwnerPerson(c, c.get("family"), row.id);
+  return c.json({ ok: true });
+});
+
+// The welcome steps are shown once to each person, the first time they're in.
+app.post("/me/onboarded", async (c) => {
+  const id = viewerId(c);
+  if (id === null) throw new HttpError(409, "Give your name first");
+  await c.env.DB.prepare("UPDATE people SET onboarded = 1 WHERE id = ? AND family_id = ?").bind(id, c.get("family")).run();
   return c.json({ ok: true });
 });
 

@@ -9,6 +9,8 @@ export interface Person {
   color: string;
   /** Taken out of the family by the organiser. Still named on past draws. */
   removed: boolean;
+  /** Has been through the welcome steps shown the first time they sign in. */
+  onboarded: boolean;
 }
 
 /** Who this browser is signed in as. */

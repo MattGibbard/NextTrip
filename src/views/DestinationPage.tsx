@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import type { Idea } from "../../shared/types";
+import type { Terminal } from "../../shared/terminals";
 import { api } from "../api";
-import { DESTINATIONS, destinationNamed, imageUrl } from "../destinations";
+import { DESTINATIONS, LONDON, bestMonths, destinationNamed, flightTime, imageUrl } from "../destinations";
 import type { Destination } from "../destinations";
 import { budgetLabel, holidayType, travelTimeLabel } from "../../shared/ideaDetails";
 import { destinationPath } from "../../shared/seo";
@@ -11,17 +12,24 @@ import { SiteFooter, SiteHeader } from "./Welcome";
  * Who's looking. Starts as a visitor, the same as the prerendered page, then checks for a signed-in
  * family once the page is up so it can offer "Add to ideas" and show their ideas alongside.
  */
-function useFamily(): { signedIn: boolean; ideas: Idea[] | null } {
-  const [state, setState] = useState<{ signedIn: boolean; ideas: Idea[] | null }>({ signedIn: false, ideas: null });
+interface Family {
+  signedIn: boolean;
+  ideas: Idea[] | null;
+  /** The family's home airport, which flight times are worked out from instead of London. */
+  airport: Terminal | null;
+}
+
+function useFamily(): Family {
+  const [state, setState] = useState<Family>({ signedIn: false, ideas: null, airport: null });
   useEffect(() => {
     let live = true;
     void api
       .session()
       .then(async (s) => {
         if (!s.signed_in || !live) return;
-        setState({ signedIn: true, ideas: null });
-        const ideas = await api.ideas();
-        if (live) setState({ signedIn: true, ideas });
+        setState({ signedIn: true, ideas: null, airport: null });
+        const [ideas, home] = await Promise.all([api.ideas(), api.homeEnds().catch(() => null)]);
+        if (live) setState({ signedIn: true, ideas, airport: home?.airport ?? null });
       })
       .catch(() => {});
     return () => {
@@ -67,7 +75,11 @@ function Label({ children }: { children: string }) {
 
 /** A destination guide, for visitors finding it in search and for signed-in families looking for ideas. */
 export function DestinationPage({ destination: d }: { destination: Destination }) {
-  const { signedIn, ideas } = useFamily();
+  const { signedIn, ideas, airport } = useFamily();
+  const from = airport?.code && airport.lat !== null ? { code: airport.code, name: airport.name, lat: airport.lat, lon: airport.lon } : LONDON;
+  const flight = flightTime(from, d);
+  const best = bestMonths(d);
+  const facts = [...(flight ? [{ label: `Flight from ${from.name}`, value: flight, highlight: true }] : []), ...d.facts];
   const onList = ideas?.find((i) => i.status === "active" && i.title.trim().toLowerCase() === d.name.toLowerCase());
   const standby = ideas?.filter((i) => i.status === "active" && i !== onList).slice(0, 3) ?? [];
   const types = d.holiday_types.map(holidayType).filter((t) => !!t);
@@ -93,13 +105,13 @@ export function DestinationPage({ destination: d }: { destination: Destination }
                 {d.country && <span>{d.country}</span>}
               </div>
               <div className="dg-ticket-body">
-                {d.from_code && d.to_code && (
+                {d.to_code && (
                   <div className="dg-route">
                     <div>
                       <Label>FROM</Label>
-                      <span className="dg-code">{d.from_code}</span>
+                      <span className="dg-code">{from.code}</span>
                     </div>
-                    <div className="dg-route-line">{d.flight_time && <span>{d.flight_time.toUpperCase()} ✈️</span>}</div>
+                    <div className="dg-route-line">{flight && <span>{flight.toUpperCase()} ✈️</span>}</div>
                     <div className="end">
                       <Label>TO</Label>
                       <span className="dg-code">{d.to_code}</span>
@@ -129,10 +141,10 @@ export function DestinationPage({ destination: d }: { destination: Destination }
                     <strong>{budgetLabel(d.budget)}</strong>
                   </div>
                 )}
-                {d.best_months && (
+                {best && (
                   <div>
                     <Label>BEST MONTHS</Label>
-                    <strong>{d.best_months}</strong>
+                    <strong>{best}</strong>
                   </div>
                 )}
               </div>
@@ -196,7 +208,7 @@ export function DestinationPage({ destination: d }: { destination: Destination }
                     </td>
                     <td>{types[0] ? `${types[0].icon} ${types[0].label}` : ""}</td>
                     <td>{budgetLabel(d.budget) ?? ""}</td>
-                    <td>{d.flight_time ? `✈️ ${d.flight_time}` : ""}</td>
+                    <td>{flight ? `✈️ ${flight}` : ""}</td>
                   </tr>
                   {standby.map((i) => {
                     const t = i.holiday_types.map(holidayType).find((x) => !!x);
@@ -218,11 +230,11 @@ export function DestinationPage({ destination: d }: { destination: Destination }
           </section>
         )}
 
-        {d.facts.length > 0 && (
+        {facts.length > 0 && (
           <section aria-labelledby="dg-facts" className="dg-section">
             <h2 id="dg-facts">{d.name} at a glance</h2>
             <dl className="dg-board">
-              {d.facts.map((f) => (
+              {facts.map((f) => (
                 <div key={f.label}>
                   <dt>{f.label.toUpperCase()}</dt>
                   <dd className={f.highlight ? "lit" : ""}>{f.value.toUpperCase()}</dd>
@@ -287,7 +299,7 @@ export function DestinationPage({ destination: d }: { destination: Destination }
 
         {d.faqs.length > 0 && (
           <section aria-labelledby="dg-faq" className="dg-section">
-            <h2 id="dg-faq">{d.name} with kids: common questions</h2>
+            <h2 id="dg-faq">{d.name}: common questions</h2>
             <div className="dg-faqs">
               {d.faqs.map((f, i) => (
                 <details key={f.question} open={i === 0}>

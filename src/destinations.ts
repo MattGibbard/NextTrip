@@ -223,7 +223,7 @@ export function destinationMeta(d: Destination): Meta {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Guides", item: `${SITE}/destinations` },
+        { "@type": "ListItem", position: 1, name: "Inspire", item: `${SITE}/destinations` },
         { "@type": "ListItem", position: 2, name: d.name, item: url },
       ],
     },

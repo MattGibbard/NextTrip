@@ -74,7 +74,7 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
                 <span aria-hidden>›</span>
               </>
             )}
-            <a href="/destinations">Guides</a>
+            <a href="/destinations">Inspire</a>
             <span aria-hidden>›</span>
             <span aria-current="page">{d.name}</span>
           </nav>
@@ -413,7 +413,7 @@ export function DestinationsIndex({ family }: { family?: Family }) {
       <main>
         <section className="lp-wrap dx-hero">
           <div className="dx-hero-text">
-            <Label>GUIDES</Label>
+            <Label>INSPIRE</Label>
             <h1>Family holiday ideas</h1>
             <p className="dg-intro">When to go, how long to stay and what to do with the kids. Find somewhere new and put it on standby for your next draw.</p>
             <div className="dx-search">

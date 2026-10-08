@@ -145,11 +145,26 @@ export function imageUrl(path: string): string {
 /** Where visitors who aren't signed in are flying from. Signed-in families see their own home airport. */
 export const LONDON = { code: "LON", name: "London", lat: 51.47, lon: -0.4543 };
 
-/** A rough flight time to a guide's place, rounded up as timetables tend to be longer than the straight line: "About 8 hrs". Null without a map position. */
-export function flightTime(from: { lat: number | null; lon: number | null }, d: Destination): string | null {
+/** Rough flying hours to a guide's place, rounded up as timetables tend to be longer than the straight line. Null without a map position. */
+export function flightHoursTo(from: { lat: number | null; lon: number | null }, d: Destination): number | null {
   if (from.lat === null || from.lon === null || d.lat === null || d.lon === null) return null;
-  const hours = Math.max(1, Math.ceil(flightHours(distanceKm({ lat: from.lat, lon: from.lon }, { lat: d.lat, lon: d.lon }))));
-  return `About ${hours} hr${hours === 1 ? "" : "s"}`;
+  return Math.max(1, Math.ceil(flightHours(distanceKm({ lat: from.lat, lon: from.lon }, { lat: d.lat, lon: d.lon }))));
+}
+
+/** The flight time as the guide says it: "About 8 hrs". */
+export function flightTime(from: { lat: number | null; lon: number | null }, d: Destination): string | null {
+  const hours = flightHoursTo(from, d);
+  return hours === null ? null : `About ${hours} hr${hours === 1 ? "" : "s"}`;
+}
+
+/** A country's flag, from its two-letter code. */
+export function countryFlag(code: string): string {
+  return /^[A-Z]{2}$/.test(code) ? String.fromCodePoint(...[...code].map((c) => 0x1f1a5 + c.charCodeAt(0))) : "";
+}
+
+/** The first sentence of a guide's introduction, for its card in the list of guides. */
+export function shortIntro(d: Destination): string {
+  return d.intro.match(/^.+?[.!?](?=\s|$)/)?.[0] ?? d.intro;
 }
 
 /** The best months to go, from the month-by-month ratings: "Apr–Jun, Sep–Oct". Runs can wrap past December. */

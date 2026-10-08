@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { DESTINATIONS, LONDON, bestMonths, destinationCountry, destinationMeta, findDestination, flightTime, ideaFromDestination, readDestination } from "../src/destinations";
+import { DESTINATIONS, LONDON, bestMonths, countryFlag, destinationCountry, destinationMeta, findDestination, flightHoursTo, flightTime, ideaFromDestination, readDestination, shortIntro } from "../src/destinations";
 import geo from "../content/destinations-geo.json";
 import { metaTags, publicPage } from "../shared/seo";
 
@@ -95,5 +95,24 @@ describe("New York", () => {
     expect(tags).toContain('"@type":"FAQPage"');
     expect(tags).toContain('"@type":"TouristDestination"');
     expect(tags).not.toContain("noindex");
+  });
+});
+
+describe("the list of all guides", () => {
+  it("shows a flag for a country code", () => {
+    expect(countryFlag("US")).toBe("🇺🇸");
+    expect(countryFlag("")).toBe("");
+  });
+
+  it("uses the first sentence of the introduction on a guide's card", () => {
+    const d = readDestination("x", { name: "X", intro: "Huge parks and pretzels. Here's what it's like." });
+    expect(shortIntro(d)).toBe("Huge parks and pretzels.");
+    expect(shortIntro(readDestination("y", { name: "Y", intro: "No full stop" }))).toBe("No full stop");
+  });
+
+  it("gives the flight in whole hours, the same as the guide", () => {
+    const ny = findDestination("new-york")!;
+    expect(flightHoursTo(LONDON, ny)).toBe(8);
+    expect(flightTime(LONDON, ny)).toBe("About 8 hrs");
   });
 });

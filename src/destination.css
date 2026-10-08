@@ -1,0 +1,593 @@
+/* ---------- Destination guides (/destinations/…), from the 2026-10 design ---------- */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.lp-top-start {
+  background: var(--accent);
+  color: var(--accent-text);
+  border: 0;
+}
+.lp-top-start:hover {
+  background: var(--accent-hover);
+}
+
+.dg h1,
+.dg h2,
+.dg h3,
+.dg p {
+  margin: 0;
+}
+.dg h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.dg-main {
+  padding-top: 24px;
+  padding-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+.dg-label,
+.dg-tag,
+.dg-ticket-head,
+.dg-route,
+.dg-board,
+.dg-month,
+.dg-similar-code,
+.dg-standby th,
+.lp-foot-label {
+  font-family: var(--mono);
+}
+.dg-label,
+.lp-foot-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.dg-btn {
+  min-height: 46px;
+  padding: 0 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Header for signed-in families: the app's tabs as links. */
+.dg-apptabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-left: auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.dg-apptabs a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 999px;
+}
+.dg-apptabs a:hover {
+  color: var(--accent);
+}
+.dg-apptabs a[aria-current="page"] {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+.dg .icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  flex: none;
+}
+@media (max-width: 560px) {
+  .dg-apptabs span {
+    display: none;
+  }
+}
+
+.dg-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.dg-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.dg-crumbs a {
+  color: var(--muted);
+}
+.dg-crumbs [aria-current] {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* The hero: a destination ticket next to the photo. */
+.dg-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: stretch;
+}
+.dg-ticket {
+  flex: 999 1 560px;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.dg-ticket-head {
+  background: var(--standby);
+  color: #fff;
+  padding: 12px 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.dg-ticket-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.dg-route {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--standby-ink);
+}
+.dg-route > div:not(.dg-route-line) {
+  display: flex;
+  flex-direction: column;
+}
+.dg-route .end {
+  text-align: right;
+}
+.dg-code {
+  font-size: clamp(2.6rem, 9vw, 4rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.dg-route-line {
+  flex: 1 1 auto;
+  min-width: 40px;
+  border-top: 2px dashed var(--standby-line);
+  text-align: center;
+}
+.dg-route-line span {
+  position: relative;
+  top: -0.75em;
+  background: var(--surface);
+  padding: 0 8px;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.dg-ticket h1 {
+  font-size: clamp(1.9rem, 4vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.dg-intro {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 60ch;
+}
+.dg-perf {
+  border-top: 2px dashed var(--border);
+  margin: 0 28px;
+}
+.dg-facts {
+  padding: 20px 28px 28px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
+}
+.dg-facts > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.dg-actions {
+  padding: 0 28px 28px;
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+}
+.dg-photo {
+  flex: 1 1 340px;
+  min-height: 420px;
+  max-height: 560px;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  object-fit: cover;
+  min-width: 0;
+  box-sizing: border-box;
+}
+.dg-photo-empty {
+  background:
+    repeating-linear-gradient(135deg, transparent 0 22px, color-mix(in srgb, var(--standby) 8%, transparent) 22px 24px),
+    var(--surface-2);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+.dg-photo-empty span {
+  font-family: var(--mono);
+  font-size: 3rem;
+  font-weight: 500;
+  color: color-mix(in srgb, var(--standby-ink) 40%, transparent);
+}
+@media (max-width: 700px) {
+  .dg-photo {
+    min-height: 220px;
+  }
+  .dg-photo-empty {
+    display: none;
+  }
+}
+
+/* Signed in: the family's other ideas. */
+.dg-standby {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: -24px;
+}
+.dg-standby-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+.dg .dg-standby h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.dg-standby-head a {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.dg-table-wrap {
+  overflow-x: auto;
+}
+.dg-standby table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.dg-standby th {
+  text-align: left;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  font-weight: 500;
+  padding: 8px 10px;
+}
+.dg-standby td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border);
+}
+.dg-standby td:first-child {
+  font-weight: 700;
+}
+.dg-standby td a {
+  color: var(--text);
+}
+.dg-standby tr.here td {
+  background: var(--accent-soft);
+  border-bottom: 0;
+  font-weight: 400;
+}
+.dg-standby tr.here td:first-child {
+  font-weight: 800;
+  border-radius: 12px 0 0 12px;
+}
+.dg-standby tr.here td:last-child {
+  border-radius: 0 12px 12px 0;
+}
+.dg-here {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.dg-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.dg-prose {
+  max-width: 70ch;
+}
+
+/* At a glance: a departures board. */
+.dg-board {
+  margin: 0;
+  background: var(--board);
+  color: #fff;
+  border-radius: 16px;
+  padding: 8px 24px;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+.dg-board > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 24px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--board-line);
+}
+.dg-board > div:last-child {
+  border-bottom: 0;
+}
+.dg-board dt {
+  color: var(--board-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  align-self: center;
+}
+.dg-board dd {
+  margin: 0;
+}
+.dg-board dd.lit {
+  color: var(--board-lit);
+}
+
+/* When to go: a month-by-month strip. */
+.dg-when-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+}
+.dg-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.dg-key span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dg-key i {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.dg-months {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(76px, 1fr));
+  gap: 8px;
+}
+.dg-months li {
+  border-radius: 12px;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.dg-month {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+}
+.dg-month-note {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.dg-months .best,
+.dg-key .best {
+  background: var(--accent);
+  color: var(--accent-text);
+  border: 1px solid var(--accent);
+}
+.dg-months .good,
+.dg-key .good {
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+}
+.dg-months .quiet,
+.dg-key .quiet {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+
+/* Things to do. */
+.dg-things {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: 16px;
+}
+.dg-thing {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.dg-thing img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+.dg-thing-body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 2px dashed var(--standby-line);
+  flex: 1;
+}
+.dg-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--standby-ink);
+}
+.dg-thing h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.dg-thing p {
+  font-size: 0.9rem;
+}
+
+/* Common questions. */
+.dg-faqs {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.dg-faqs details + details {
+  border-top: 1px solid var(--border);
+}
+.dg-faqs summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.dg-faqs summary::-webkit-details-marker {
+  display: none;
+}
+.dg-faqs summary span {
+  color: var(--accent);
+  transition: transform 0.15s;
+}
+.dg-faqs details[open] summary span {
+  transform: rotate(45deg);
+}
+.dg-faqs p {
+  padding: 0 20px 18px;
+  max-width: 75ch;
+}
+
+/* Similar places, and the list of all guides. */
+.dg-similar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+  gap: 12px;
+}
+.dg-similar-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+a.dg-similar-card:hover {
+  border-color: var(--accent);
+}
+.dg-similar-card > span:last-child {
+  display: flex;
+  flex-direction: column;
+}
+.dg-similar-code {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--standby-ink);
+}
+
+.dg-cta {
+  background: var(--accent-soft);
+  border-radius: 22px;
+  padding: 40px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+}
+.dg-cta > div {
+  flex: 999 1 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dg .dg-cta h2 {
+  font-size: 2rem;
+  line-height: 1.15;
+}
+.dg-cta p {
+  font-size: 1.1rem;
+  max-width: 60ch;
+}
+
+.dg-index-head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dg-index-head h1 {
+  font-size: clamp(1.9rem, 4vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* Footer: links to the guides on every public page. */
+.lp-foot-dest {
+  flex: 2 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lp-foot-dest-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px 16px;
+  font-size: 0.9rem;
+}

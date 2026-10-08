@@ -4,6 +4,7 @@ import { authRoutes, familyRoutes, readSession, requireOwner, setOwnerPerson, se
 import { HttpError } from "./env";
 import type { App, Ctx, Env } from "./env";
 import { servePage } from "./pages";
+import { cmsRoutes } from "./cms";
 import { countedAllocations, ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
 import { parseNominatim } from "../shared/geocode";
 import { cleanDetails } from "../shared/ideaDetails";
@@ -37,6 +38,9 @@ app.onError((err, c) => {
   console.error(err);
   return c.json({ error: "Something went wrong" }, 500);
 });
+
+// The content editor's GitHub sign-in needs no database, so it comes before the database check.
+cmsRoutes(app);
 
 let schemaReady: Promise<void> | null = null;
 

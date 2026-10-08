@@ -10,6 +10,9 @@ describe("publicPage", () => {
     expect(publicPage("/terms/")).toBe("terms");
     expect(publicPage("/f/abc")).toBeNull();
     expect(publicPage("/nope")).toBeNull();
+    expect(publicPage("/destinations")).toBe("destinations");
+    expect(publicPage("/destinations/new-york")).toBe("destination:new-york");
+    expect(publicPage("/destinations/New York")).toBeNull();
   });
 });
 
@@ -67,6 +70,11 @@ describe("servePage", () => {
     expect(asked).toEqual(["/shell"]);
     expect(res.headers.get("X-Robots-Tag")).toBe("noindex");
     expect(await res.text()).toBe("page");
+  });
+
+  it("keeps the content editor out of search", async () => {
+    const res = await servePage(new Request("https://somewhere.party/admin/"), env);
+    expect(res.headers.get("X-Robots-Tag")).toBe("noindex");
   });
 
   it("hands everything else to the built site", async () => {

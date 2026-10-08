@@ -10,6 +10,9 @@ export interface Env {
   EMAIL_FROM?: string;
   /** The organiser of family 1, which holds everything made before sign-in existed. A secret. */
   OWNER_EMAIL?: string;
+  /** The GitHub OAuth app the content editor at /admin signs in with (worker/cms.ts). Secrets. */
+  GITHUB_CLIENT_ID?: string;
+  GITHUB_CLIENT_SECRET?: string;
   /** "1" in local development: the sign-in link comes back in the response instead of by email. */
   DEV_LOGIN_LINKS?: string;
 }

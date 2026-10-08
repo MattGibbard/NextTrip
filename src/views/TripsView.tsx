@@ -8,10 +8,17 @@ import { nights } from "../format";
 import { Flaps } from "../components/Ticket";
 import { TripTicket } from "../components/TripTicket";
 import { TripForm } from "./TripForm";
+import { destinationPlace, findDestination } from "../destinations";
 
-export function TripsView() {
+/** addFrom: a destination guide's slug, when its "We've been! Add trip" brought us here. */
+export function TripsView({ addFrom = null }: { addFrom?: string | null }) {
   const { trips, people } = useData();
-  const [adding, setAdding] = useState(false);
+  const guide = addFrom ? findDestination(addFrom) : undefined;
+  const [adding, setAdding] = useState(!!guide);
+  const closeForm = () => {
+    setAdding(false);
+    if (guide) location.hash = "/been";
+  };
   const [mode, setMode] = useState<Mode | null>(null);
 
   const stats = useMemo(() => {
@@ -109,7 +116,7 @@ export function TripsView() {
         </div>
       ))}
 
-      {adding && <TripForm onClose={() => setAdding(false)} />}
+      {adding && <TripForm draft={guide && { title: guide.name, places: [destinationPlace(guide)] }} onClose={closeForm} />}
     </section>
   );
 }

@@ -13,7 +13,9 @@ import { IdeaPage } from "./views/IdeaPage";
 import { TripPage } from "./views/TripPage";
 import { PersonPicker } from "./components/PersonPicker";
 import { NotFound } from "./views/Welcome";
-import { isPrivatePath } from "../shared/seo";
+import { isPrivatePath, publicPage } from "../shared/seo";
+import { findDestination } from "./destinations";
+import { DestinationPage, DestinationsIndex } from "./views/DestinationPage";
 import { load, save } from "./storage";
 
 const TABS = [
@@ -25,12 +27,13 @@ const TABS = [
 
 type TabId = (typeof TABS)[number]["id"] | "settings";
 
-/** Reads routes like #/next or #/next/12. */
-function currentRoute(): { tab: TabId; id: number | null } {
-  const [first, second] = location.hash.replace(/^#\/?/, "").split("/");
+/** Reads routes like #/next or #/next/12, and #/next/add/new-york from a destination guide's "Add to ideas". */
+function currentRoute(): { tab: TabId; id: number | null; add: string | null } {
+  const [first, second, third] = location.hash.replace(/^#\/?/, "").split("/");
   const tab = (["been", "places", "next", "draw", "settings"] as const).find((t) => t === first) ?? "been";
   const id = Number(second);
-  return { tab, id: Number.isInteger(id) && id > 0 ? id : null };
+  const add = second === "add" && third && findDestination(third) ? third : null;
+  return { tab, id: Number.isInteger(id) && id > 0 ? id : null, add };
 }
 
 /**
@@ -51,6 +54,12 @@ export function App() {
   const path = location.pathname;
   const legal = legalPage(path);
   if (legal) return <LegalView page={legal} />;
+  const page = publicPage(path);
+  if (page === "destinations") return <DestinationsIndex />;
+  if (page?.startsWith("destination:")) {
+    const destination = findDestination(page.slice("destination:".length));
+    return destination ? <DestinationPage destination={destination} /> : <NotFound />;
+  }
   if (path !== "/" && !isPrivatePath(path)) return <NotFound />;
   return <Main />;
 }
@@ -172,9 +181,9 @@ function Shell() {
           <p className="muted center">Loading…</p>
         ) : (
           <>
-            {tab === "been" && (route.id ? <TripPage key={route.id} id={route.id} /> : <TripsView />)}
+            {tab === "been" && (route.id ? <TripPage key={route.id} id={route.id} /> : <TripsView addFrom={route.add} />)}
             {tab === "places" && <PlacesView />}
-            {tab === "next" && (route.id ? <IdeaPage key={route.id} id={route.id} /> : <IdeasView />)}
+            {tab === "next" && (route.id ? <IdeaPage key={route.id} id={route.id} /> : <IdeasView addFrom={route.add} />)}
             {tab === "draw" && <DrawView />}
             {tab === "settings" && <SettingsView />}
           </>

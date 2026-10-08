@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
-import type { Idea, IdeaDetails, Place } from "../../shared/types";
+import type { Idea, IdeaDetails, IdeaInput, Place } from "../../shared/types";
 import { api } from "../api";
 import { useData } from "../data";
 import { Modal } from "../components/Modal";
@@ -17,17 +17,19 @@ import { travelTimeLabel } from "../../shared/ideaDetails";
 const MODE_TYPE: Record<Exclude<Mode, "flight">, HolidayType> = { train: "rail", cruise: "cruise", road: "road-trip" };
 const MODE_TYPES: readonly HolidayType[] = Object.values(MODE_TYPE);
 
-export function IdeaForm({ idea, onClose, onDeleted }: { idea?: Idea; onClose: () => void; onDeleted?: () => void }) {
+/** initial: what a new idea starts with, such as a destination guide's details. */
+export function IdeaForm({ idea, initial, onClose, onDeleted }: { idea?: Idea; initial?: Partial<IdeaInput>; onClose: () => void; onDeleted?: () => void }) {
   const { me, reload, rounds, home, isOwner } = useData();
-  const [title, setTitle] = useState(idea?.title ?? "");
-  const [description, setDescription] = useState(idea?.description ?? "");
-  const [cover, setCover] = useState(idea?.cover_url ?? "");
-  const [places, setPlaces] = useState<Place[]>(idea?.places ?? []);
+  const start = idea ?? initial;
+  const [title, setTitle] = useState(start?.title ?? "");
+  const [description, setDescription] = useState(start?.description ?? "");
+  const [cover, setCover] = useState(start?.cover_url ?? "");
+  const [places, setPlaces] = useState<Place[]>(start?.places ?? []);
   const [details, setDetails] = useState<IdeaDetails>({
-    budget: idea?.budget ?? null,
-    trip_length: idea?.trip_length ?? null,
-    travel_time: idea?.travel_time ?? null,
-    holiday_types: idea?.holiday_types ?? [],
+    budget: start?.budget ?? null,
+    trip_length: start?.trip_length ?? null,
+    travel_time: start?.travel_time ?? null,
+    holiday_types: start?.holiday_types ?? [],
   });
   const mode = ideaMode(details.holiday_types);
   const journey = useJourney(idea ?? {}, !idea)(mode);

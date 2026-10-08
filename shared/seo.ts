@@ -6,11 +6,24 @@ export const SITE = "https://somewhere.party";
 /** The Worker's old address, which now sends people to the site's own domain. */
 export const OLD_HOST = "nexttrip.matt-gibbard.workers.dev";
 
-export type PublicPage = "home" | "privacy" | "terms" | "notfound";
+/** The fixed pages. */
+export type FixedPage = "home" | "privacy" | "terms" | "notfound" | "destinations";
+/** Every prerendered page: the fixed ones plus one per destination guide, as "destination:new-york". */
+export type PublicPage = FixedPage | `destination:${string}`;
 
-type Meta = { path: string; title: string; description: string; index: boolean };
+export type Meta = {
+  path: string;
+  title: string;
+  description: string;
+  index: boolean;
+  /** Share image, an absolute address. The site's own share image without one. */
+  image?: string;
+  imageAlt?: string;
+  /** schema.org data for search results. */
+  jsonLd?: unknown[];
+};
 
-export const PAGES: Record<PublicPage, Meta> = {
+export const PAGES: Record<FixedPage, Meta> = {
   home: {
     path: "/",
     title: "Decide where to go on holiday, together | somewhere🎉",
@@ -30,6 +43,13 @@ export const PAGES: Record<PublicPage, Meta> = {
     description: "The terms for using somewhere🎉, the free family holiday planner.",
     index: true,
   },
+  destinations: {
+    path: "/destinations",
+    title: "Family holiday destinations: where to go next | somewhere🎉",
+    description:
+      "Family holiday guides with when to go, how long to stay and what to do with kids. Find somewhere new and add it to your family's ideas.",
+    index: true,
+  },
   notfound: {
     path: "/404",
     title: "Page not found | somewhere🎉",
@@ -41,8 +61,15 @@ export const PAGES: Record<PublicPage, Meta> = {
 /** Which prerendered page an address shows, if any. Family links and the app itself are never prerendered. */
 export function publicPage(pathname: string): PublicPage | null {
   if (pathname === "/") return "home";
-  const m = pathname.match(/^\/(privacy|terms)\/?$/);
-  return m ? (m[1] as PublicPage) : null;
+  const m = pathname.match(/^\/(privacy|terms|destinations)\/?$/);
+  if (m) return m[1] as FixedPage;
+  const d = pathname.match(/^\/destinations\/([a-z0-9-]+)\/?$/);
+  return d ? `destination:${d[1]}` : null;
+}
+
+/** The address of a destination guide. */
+export function destinationPath(slug: string): string {
+  return `/destinations/${slug}`;
 }
 
 /** Family links, people's own links and sign-in links: real pages, but private, so kept out of search. */
@@ -54,9 +81,14 @@ function esc(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-/** The title, description, canonical address and share-preview tags for a page's <head>. */
-export function headTags(page: PublicPage): string {
+/** The title, description, canonical address and share-preview tags for a fixed page's <head>. */
+export function headTags(page: FixedPage): string {
   const m = PAGES[page];
+  return metaTags(page === "home" ? { ...m, jsonLd: [structuredData()] } : m);
+}
+
+/** The <head> tags for any page, from its details. */
+export function metaTags(m: Meta): string {
   const url = SITE + m.path;
   const tags = [
     `<title>${esc(m.title)}</title>`,
@@ -74,13 +106,20 @@ export function headTags(page: PublicPage): string {
     `<meta property="og:url" content="${url}" />`,
     `<meta property="og:title" content="${esc(m.title)}" />`,
     `<meta property="og:description" content="${esc(m.description)}" />`,
-    `<meta property="og:image" content="${SITE}/og.png" />`,
-    `<meta property="og:image:width" content="1200" />`,
-    `<meta property="og:image:height" content="630" />`,
-    `<meta property="og:image:alt" content="somewhere🎉: can't agree where to go next? Let the draw decide." />`,
-    `<meta name="twitter:card" content="summary_large_image" />`,
   );
-  if (page === "home") tags.push(`<script type="application/ld+json">${JSON.stringify(structuredData()).replace(/</g, "\\u003c")}</script>`);
+  if (m.image) {
+    tags.push(`<meta property="og:image" content="${esc(m.image)}" />`);
+    if (m.imageAlt) tags.push(`<meta property="og:image:alt" content="${esc(m.imageAlt)}" />`);
+  } else {
+    tags.push(
+      `<meta property="og:image" content="${SITE}/og.png" />`,
+      `<meta property="og:image:width" content="1200" />`,
+      `<meta property="og:image:height" content="630" />`,
+      `<meta property="og:image:alt" content="somewhere🎉: can't agree where to go next? Let the draw decide." />`,
+    );
+  }
+  tags.push(`<meta name="twitter:card" content="summary_large_image" />`);
+  for (const data of m.jsonLd ?? []) tags.push(`<script type="application/ld+json">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>`);
   return tags.join("\n    ");
 }
 

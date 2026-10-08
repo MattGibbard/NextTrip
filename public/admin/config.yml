@@ -1,0 +1,249 @@
+# Settings for the content editor at somewhere.party/admin (Sveltia CMS, https://sveltiacms.app).
+# Saving in the editor commits to the main branch, and Cloudflare redeploys the site with the change.
+# Each destination is one JSON file in content/destinations; src/destinations.ts reads them.
+
+backend:
+  name: github
+  repo: MattGibbard/NextTrip
+  branch: main
+  # GitHub sign-in runs in the site's own Worker (worker/cms.ts).
+  base_url: https://somewhere.party
+  auth_endpoint: api/cms/auth
+  commit_messages:
+    create: "Add the {{slug}} destination guide"
+    update: "Update the {{slug}} destination guide"
+    delete: "Remove the {{slug}} destination guide"
+    uploadMedia: "Upload {{path}}"
+    deleteMedia: "Delete {{path}}"
+
+site_url: https://somewhere.party
+display_url: https://somewhere.party
+
+# Photos are saved in the repository and served from /images/destinations.
+media_folder: /public/images/destinations
+public_folder: /images/destinations
+media_libraries:
+  default:
+    config:
+      # Big photos are shrunk and turned into WebP on upload so pages stay quick.
+      transformations:
+        raster_image:
+          format: webp
+          quality: 80
+          width: 1600
+
+collections:
+  - name: destinations
+    label: Destinations
+    label_singular: Destination
+    description: Family holiday guides at somewhere.party/destinations. Untick "Published" to keep one off the site.
+    folder: content/destinations
+    format: json
+    extension: json
+    create: true
+    identifier_field: name
+    slug: "{{slug}}"
+    summary: "{{name}}, {{country}}"
+    sortable_fields: [name, country]
+    preview_path: destinations/{{slug}}
+    fields:
+      - { label: Place name, name: name, widget: string, hint: "As people search for it, e.g. New York. The page address comes from this." }
+      - { label: Published, name: published, widget: boolean, default: false, hint: "Only published guides appear on the site and in the sitemap." }
+      - { label: Country, name: country, widget: string }
+      - { label: Country code, name: country_code, widget: string, pattern: ["^[A-Za-z]{2}$", "Two letters, e.g. US or FR"], hint: "Two letters, e.g. US, FR, ES." }
+      - { label: Latitude, name: lat, widget: number, value_type: float, required: false, hint: "Puts the place on the map when a family adds it. Copy it from Google Maps." }
+      - { label: Longitude, name: lon, widget: number, value_type: float, required: false }
+
+      - { label: Page heading, name: title, widget: string, hint: "e.g. Family holidays in New York. Also the page title in Google." }
+      - { label: Introduction, name: intro, widget: text, hint: "One or two sentences under the heading." }
+      - { label: Google description, name: seo_description, widget: text, pattern: ["^[\\s\\S]{50,160}$", "Aim for 50 to 160 characters"], hint: "Shown under the title in search results. About 150 characters." }
+      - { label: Main photo, name: image, widget: image, required: false, hint: "Wide and bright. Also used when the page is shared." }
+      - { label: Main photo description, name: image_alt, widget: string, required: false, hint: "What's in the photo, for people who can't see it." }
+
+      - { label: From code, name: from_code, widget: string, default: LON, hint: "Three letters on the ticket, e.g. LON." }
+      - { label: To code, name: to_code, widget: string, hint: "Three letters, e.g. NYC or ORL." }
+      - { label: Flight time, name: flight_time, widget: string, required: false, hint: "e.g. About 8 hrs" }
+      - label: Best for
+        name: holiday_types
+        widget: select
+        multiple: true
+        options:
+              - { label: "🏙️ City break", value: city }
+              - { label: "🏖️ Beach", value: beach }
+              - { label: "🥾 Nature & hiking", value: nature }
+              - { label: "🧗 Adventure", value: adventure }
+              - { label: "🏛️ Culture & history", value: culture }
+              - { label: "🍷 Food & drink", value: food }
+              - { label: "🚗 Road trip", value: road-trip }
+              - { label: "🛳️ Cruise", value: cruise }
+              - { label: "🚆 By train", value: rail }
+              - { label: "⛷️ Skiing", value: ski }
+              - { label: "🧘 Relax & spa", value: relax }
+      - { label: Nights away, name: nights, widget: string, required: false, hint: "e.g. 4 to 6" }
+      - label: Trip length
+        name: trip_length
+        widget: select
+        required: false
+        hint: Filled in when a family adds this to their ideas.
+        options:
+          - { label: Long weekend, value: weekend }
+          - { label: About a week, value: week }
+          - { label: Two weeks, value: two-weeks }
+          - { label: Three weeks+, value: longer }
+      - label: Budget
+        name: budget
+        widget: select
+        required: false
+        options:
+          - { label: "£ Cheap", value: 1 }
+          - { label: "££ Mid-range", value: 2 }
+          - { label: "£££ Splurge", value: 3 }
+      - { label: Best months, name: best_months, widget: string, required: false, hint: "e.g. Apr–Jun, Sep–Oct" }
+
+      - label: At a glance
+        name: facts
+        widget: list
+        required: false
+        summary: "{{label}}: {{value}}"
+        hint: The departures-board rows. Ideas are flight time, time difference, currency, entry and plugs.
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: Value, name: value, widget: string }
+          - { label: Highlight, name: highlight, widget: boolean, default: false, hint: "Lights the value up in teal." }
+      - { label: Note under the board, name: facts_note, widget: string, required: false }
+
+      - label: When to go
+        name: months
+        widget: object
+        hint: How good each month is, with a word or two about it.
+        fields:
+          - label: January
+            name: jan
+            widget: object
+            collapsed: true
+            summary: "{{rating}}: {{note}}"
+            fields:
+              - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
+              - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+          - label: February
+            name: feb
+            widget: object
+            collapsed: true
+            summary: "{{rating}}: {{note}}"
+            fields:
+              - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
+              - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+          - label: March
+            name: mar
+            widget: object
+            collapsed: true
+            summary: "{{rating}}: {{note}}"
+            fields:
+              - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
+              - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+          - label: April
+            name: apr
+            widget: object
+            collapsed: true
+            summary: "{{rating}}: {{note}}"
+            fields:
+              - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
+              - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+          - label: May
+            name: may
+            widget: object
+            collapsed: true
+            summary: "{{rating}}: {{note}}"
+            fields:
+              - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
+              - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+          - label: June
+            name: jun
+            widget: object
+            collapsed: true
+            summary: "{{rating}}: {{note}}"
+            fields:
+              - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
+              - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+          - label: July
+            name: jul
+            widget: object
+            collapsed: true
+            summary: "{{rating}}: {{note}}"
+            fields:
+              - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
+              - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+          - label: August
+            name: aug
+            widget: object
+            collapsed: true
+            summary: "{{rating}}: {{note}}"
+            fields:
+              - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
+              - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+          - label: September
+            name: sep
+            widget: object
+            collapsed: true
+            summary: "{{rating}}: {{note}}"
+            fields:
+              - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
+              - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+          - label: October
+            name: oct
+            widget: object
+            collapsed: true
+            summary: "{{rating}}: {{note}}"
+            fields:
+              - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
+              - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+          - label: November
+            name: nov
+            widget: object
+            collapsed: true
+            summary: "{{rating}}: {{note}}"
+            fields:
+              - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
+              - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+          - label: December
+            name: dec
+            widget: object
+            collapsed: true
+            summary: "{{rating}}: {{note}}"
+            fields:
+              - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
+              - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+      - { label: When to go text, name: when_to_go, widget: text, required: false }
+
+      - label: Things to do
+        name: things
+        widget: list
+        required: false
+        summary: "{{name}}"
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Tag, name: tag, widget: string, required: false, hint: "One word, e.g. Free, Indoors, Ticketed, Summer." }
+          - { label: Description, name: blurb, widget: text, required: false }
+          - { label: Photo, name: image, widget: image, required: false }
+          - { label: Photo description, name: image_alt, widget: string, required: false }
+
+      - label: Common questions
+        name: faqs
+        widget: list
+        required: false
+        summary: "{{question}}"
+        hint: These can show up as questions and answers in Google.
+        fields:
+          - { label: Question, name: question, widget: string }
+          - { label: Answer, name: answer, widget: text }
+
+      - label: If you like this
+        name: similar
+        widget: list
+        required: false
+        summary: "{{name}}"
+        hint: Places that link to their own guide when one is published with the same name.
+        fields:
+          - { label: Place name, name: name, widget: string }
+          - { label: Code, name: code, widget: string, hint: "Three letters, e.g. BOS." }
+          - { label: Label, name: label, widget: string, required: false, hint: "e.g. 🏙️ City break" }

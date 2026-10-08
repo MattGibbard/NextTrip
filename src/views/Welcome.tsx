@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { FormEvent, MouseEvent, ReactNode } from "react";
 import { api } from "../api";
+import { DESTINATIONS } from "../destinations";
+import { destinationPath } from "../../shared/seo";
 
 /** The page frame for signed-out pages other than the home page: the home page's header and footer around the content. */
 export function Frame({ children }: { children: ReactNode }) {
@@ -13,8 +15,27 @@ export function Frame({ children }: { children: ReactNode }) {
   );
 }
 
-/** The signed-out header, shared by the home page and the other public pages. */
-function SiteHeader({ sections = false }: { sections?: boolean }) {
+/** The signed-out header, shared by the home page and the other public pages. Destination guides get their own links. */
+export function SiteHeader({ sections = false, guide = false }: { sections?: boolean; guide?: boolean }) {
+  if (guide) {
+    return (
+      <header className="lp-top">
+        <div className="lp-wrap lp-top-inner">
+          <a className="lp-brand" href="/">
+            somewhere<span aria-hidden>🎉</span>
+          </a>
+          <nav className="lp-nav" aria-label="Main">
+            <a href="/destinations">Destinations</a>
+            <a href="/#how">How the draw works</a>
+            <a href="/#signin">Sign in</a>
+          </nav>
+          <a className="btn lp-top-signin lp-top-start" href="/#signin">
+            Start planning
+          </a>
+        </div>
+      </header>
+    );
+  }
   return (
     <header className="lp-top">
       <div className="lp-wrap lp-top-inner">
@@ -48,7 +69,7 @@ function SiteHeader({ sections = false }: { sections?: boolean }) {
   );
 }
 
-function SiteFooter({ sections = false }: { sections?: boolean }) {
+export function SiteFooter({ sections = false }: { sections?: boolean }) {
   return (
     <footer className="lp-foot">
       <div className="lp-wrap lp-foot-inner">
@@ -58,6 +79,19 @@ function SiteFooter({ sections = false }: { sections?: boolean }) {
           </div>
           <div className="muted small">Where we've been, and where we're going next.</div>
         </div>
+        {DESTINATIONS.length > 0 && (
+          <nav aria-label="Destinations" className="lp-foot-dest">
+            <span className="lp-foot-label">DESTINATIONS</span>
+            <div className="lp-foot-dest-links">
+              {DESTINATIONS.slice(0, 11).map((d) => (
+                <a key={d.slug} href={destinationPath(d.slug)}>
+                  {d.name}
+                </a>
+              ))}
+              <a href="/destinations">All destinations</a>
+            </div>
+          </nav>
+        )}
         <nav aria-label="Footer" className="lp-foot-links">
           <a href="/privacy">Privacy</a>
           <a href="/terms">Terms</a>

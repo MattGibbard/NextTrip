@@ -40,6 +40,17 @@ Sign-in links are sent with [Resend](https://resend.com) (free for 3,000 emails 
 
 You can also deploy from your machine with `npx wrangler login` followed by `npm run deploy`.
 
+### Destination guides
+
+The guides at `/destinations/…` are edited at [somewhere.party/admin](https://somewhere.party/admin/) with [Sveltia CMS](https://sveltiacms.app). Each guide is a JSON file in `content/destinations`, and photos go in `public/images/destinations`. Saving in the editor commits to `main`, so Cloudflare rebuilds the site and the guide goes live, prerendered and in the sitemap. Untick **Published** to keep a guide off the site. The editor's fields are set in `public/admin/config.yml`.
+
+Signing in to the editor needs a GitHub OAuth app, set up once:
+
+1. On GitHub, go to **Settings → Developer settings → OAuth Apps → New OAuth App**. Use `https://somewhere.party` as the homepage and `https://somewhere.party/api/cms/callback` as the callback URL.
+2. Add its client ID and a new client secret to the Worker as the **secrets** `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET`.
+
+Only people who can push to this repository can save. Until the OAuth app exists, use **Sign In with Token** on the editor's sign-in page with a GitHub token that can write to this repository's contents.
+
 ## How it's built
 
 - `worker/index.ts`: the API (Hono) under `/api/*`. Everything else is served as static assets. Every trip, idea, draw and setting belongs to a family, and every query is limited to the signed-in family.

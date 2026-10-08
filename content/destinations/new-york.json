@@ -1,0 +1,64 @@
+{
+  "name": "New York",
+  "published": true,
+  "country": "United States",
+  "country_code": "US",
+  "lat": 40.7128,
+  "lon": -74.006,
+  "title": "Family holidays in New York",
+  "intro": "Huge parks, rooftop views and a pretzel on every corner. Here's what New York is like with the family, when to go and how long to stay.",
+  "seo_description": "Planning a family holiday in New York? When to go, how many nights you need, free things to do with kids and what UK families need to know before they fly.",
+  "image": "",
+  "image_alt": "Manhattan skyline from Central Park",
+  "from_code": "LON",
+  "to_code": "NYC",
+  "flight_time": "About 8 hrs",
+  "holiday_types": ["city"],
+  "nights": "4 to 6",
+  "trip_length": "week",
+  "budget": 3,
+  "best_months": "Apr–Jun, Sep–Oct",
+  "facts": [
+    { "label": "Flight from London", "value": "About 8 hrs · direct", "highlight": true },
+    { "label": "Time difference", "value": "5 hrs behind the UK", "highlight": false },
+    { "label": "Currency", "value": "US dollar ($)", "highlight": false },
+    { "label": "Entry", "value": "ESTA for UK passports", "highlight": false },
+    { "label": "Plugs", "value": "Type A / B · 120V", "highlight": false }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": { "rating": "quiet", "note": "Cold" },
+    "feb": { "rating": "quiet", "note": "Cold" },
+    "mar": { "rating": "good", "note": "Mixed" },
+    "apr": { "rating": "best", "note": "Spring" },
+    "may": { "rating": "best", "note": "Spring" },
+    "jun": { "rating": "best", "note": "Warm" },
+    "jul": { "rating": "good", "note": "Hot, busy" },
+    "aug": { "rating": "good", "note": "Hot, busy" },
+    "sep": { "rating": "best", "note": "Warm" },
+    "oct": { "rating": "best", "note": "Autumn" },
+    "nov": { "rating": "good", "note": "Crisp" },
+    "dec": { "rating": "good", "note": "Festive" }
+  },
+  "when_to_go": "Spring and early autumn are mild and good for walking all day. Summer is hot and busy, but school holidays make it the easy choice for many families. December is cold, crowded and very festive.",
+  "things": [
+    { "tag": "Free", "name": "Central Park", "blurb": "Rowing boats, playgrounds and plenty of space to let off steam.", "image": "", "image_alt": "" },
+    { "tag": "Indoors", "name": "American Museum of Natural History", "blurb": "Dinosaur halls and a life-size blue whale. Go early on a weekday.", "image": "", "image_alt": "" },
+    { "tag": "Free", "name": "Staten Island Ferry", "blurb": "A free crossing with views of the Statue of Liberty and the skyline.", "image": "", "image_alt": "" },
+    { "tag": "Free", "name": "The High Line", "blurb": "A park built on an old railway line, raised above the West Side.", "image": "", "image_alt": "" },
+    { "tag": "Ticketed", "name": "Top of the Rock", "blurb": "An open-air deck with the Empire State Building in full view.", "image": "", "image_alt": "" },
+    { "tag": "Summer", "name": "Coney Island", "blurb": "Beach, boardwalk and fairground rides at the end of the subway line.", "image": "", "image_alt": "" }
+  ],
+  "faqs": [
+    { "question": "Is New York good for a family holiday?", "answer": "Yes, if your family enjoys walking and busy streets. The parks, museums and ferries suit all ages, and the subway makes it easy to get around without a car." },
+    { "question": "How many nights do you need?", "answer": "Four to six nights covers the big sights at a family pace. The first day often goes on jet lag, so plan something light." },
+    { "question": "Do UK families need a visa?", "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules." },
+    { "question": "When is New York cheapest?", "answer": "January to early March, outside school holidays. It's cold, but flights and hotels usually cost less." }
+  ],
+  "similar": [
+    { "name": "Boston", "code": "BOS", "label": "🏙️ City break" },
+    { "name": "Washington, D.C.", "code": "WAS", "label": "🏙️ City break" },
+    { "name": "Orlando", "code": "ORL", "label": "🎢 Theme parks" },
+    { "name": "Toronto", "code": "YTO", "label": "🏙️ City break" }
+  ]
+}

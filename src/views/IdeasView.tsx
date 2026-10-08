@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { findDestination, ideaFromDestination } from "../destinations";
 import { useData } from "../data";
 import { BUDGETS, HOLIDAY_TYPES } from "../../shared/ideaDetails";
 import { IdeaForm } from "./IdeaForm";
@@ -14,10 +15,16 @@ const FILTERS = [
   { id: "done", label: "Done" },
 ] as const;
 
-export function IdeasView() {
+/** addFrom: a destination guide's slug, when its "Add to ideas" brought us here. */
+export function IdeasView({ addFrom = null }: { addFrom?: string | null }) {
   const { ideas } = useData();
   const [filter, setFilter] = useState<(typeof FILTERS)[number]["id"]>("active");
-  const [adding, setAdding] = useState(false);
+  const guide = addFrom ? findDestination(addFrom) : undefined;
+  const [adding, setAdding] = useState(!!guide);
+  const closeForm = () => {
+    setAdding(false);
+    if (guide) location.hash = "/next";
+  };
   const [tripDraft, setTripDraft] = useState<TripDraft | null>(null);
 
   const [budget, setBudget] = useState<number | null>(null);
@@ -110,7 +117,7 @@ export function IdeasView() {
         ))}
       </div>
 
-      {adding && <IdeaForm onClose={() => setAdding(false)} />}
+      {adding && <IdeaForm initial={guide && ideaFromDestination(guide)} onClose={closeForm} />}
       {tripDraft && <TripForm draft={tripDraft} onClose={() => setTripDraft(null)} />}
     </section>
   );

@@ -1,0 +1,177 @@
+{
+  "name": "Cape Town",
+  "published": true,
+  "country": "ZA",
+  "title": "Family holidays in Cape Town",
+  "intro": "Penguins on the beach, a mountain with a cable car and a jet-lag-free flight. Here's what Cape Town is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "CPT",
+  "holiday_types": [
+    "city",
+    "beach",
+    "nature",
+    "food"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 to 2 hrs ahead of the UK",
+      "highlight": true
+    },
+    {
+      "label": "Currency",
+      "value": "South African rand (R)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type M / N / C · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Passports need two blank pages. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Cooler"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Wet"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Wet"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Wet"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Spring flowers"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Summer, busy"
+    }
+  },
+  "when_to_go": "November to March is summer, with long sunny days for beaches and the mountain, though it gets windy. Christmas and Easter are the busiest times. June to August is cooler and rainy, but whales arrive in the bays from July.",
+  "things": [
+    {
+      "name": "Boulders Beach",
+      "tag": "Ticketed",
+      "blurb": "Swim near a colony of African penguins on the way to Cape Point.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Table Mountain cableway",
+      "tag": "Ticketed",
+      "blurb": "A rotating cable car to the top. Check the wind before you go.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Two Oceans Aquarium",
+      "tag": "Indoors",
+      "blurb": "Sharks, turtles and a kelp forest at the V&A Waterfront.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kirstenbosch Garden",
+      "tag": "Ticketed",
+      "blurb": "A treetop walkway, picnics and Sunday summer concerts.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cape Point",
+      "tag": "Day trip",
+      "blurb": "Dramatic cliffs, baboons and ostriches at the tip of the peninsula.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Muizenberg Beach",
+      "tag": "Free",
+      "blurb": "Colourful beach huts and gentle waves for learning to surf.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Cape Town good for a family holiday?",
+      "answer": "Yes. Beaches, penguins, mountains and wildlife are all within an hour or two, and the time difference is small. Plan safe routes and avoid walking at night, as you would in any big city."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights lets you add the winelands or a short safari trip to the city and coast."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days without a visa. Passports need two blank pages and must be valid for 30 days after you leave. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is there jet lag?",
+      "answer": "Barely. Cape Town is only one or two hours ahead of the UK, so an overnight flight lands you ready to go."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Sydney",
+      "code": "SYD",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Mauritius",
+      "code": "MRU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Dubai",
+      "code": "DXB",
+      "label": "☀️ Winter sun"
+    },
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "name": "Berlin",
+  "published": true,
+  "country": "DE",
+  "title": "Family holidays in Berlin",
+  "intro": "Huge playgrounds, a zoo in the middle of town and history on every corner. Here's what Berlin is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "BER",
+  "holiday_types": [
+    "city",
+    "culture"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Spring"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "May to September is best, when the parks, lakes and beer gardens are at their liveliest. Winter is cold and grey, but December has some of the best Christmas markets in Europe.",
+  "things": [
+    {
+      "name": "Berlin Zoo and Aquarium",
+      "tag": "Ticketed",
+      "blurb": "One of the world's biggest zoos, right in the city centre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tempelhofer Feld",
+      "tag": "Free",
+      "blurb": "An old airport turned park. Cycle or scoot down the runways.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Berlin Wall Memorial",
+      "tag": "Free",
+      "blurb": "A stretch of the wall and a viewing tower, with history told simply.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Museum für Naturkunde",
+      "tag": "Indoors",
+      "blurb": "A giant Brachiosaurus skeleton and a real T. rex.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Deutsches Technikmuseum",
+      "tag": "Indoors",
+      "blurb": "Trains, planes and boats, with a hands-on science centre next door.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake Wannsee",
+      "tag": "Summer",
+      "blurb": "A city beach by the lake, a short S-Bahn ride from the centre.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Berlin good for a family holiday?",
+      "answer": "Yes. It's spacious and green, with playgrounds everywhere and an easy U-Bahn. Older children get a lot out of the Cold War history."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three to five nights is enough for the main sights with time for parks in between."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Is Berlin expensive?",
+      "answer": "Less than London, Paris or Amsterdam. Food is good value, and children under six travel free on public transport."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Amsterdam",
+      "code": "AMS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Copenhagen",
+      "code": "CPH",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Prague",
+      "code": "PRG",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Paris",
+      "code": "PAR",
+      "label": "🏙️ City break"
+    }
+  ]
+}

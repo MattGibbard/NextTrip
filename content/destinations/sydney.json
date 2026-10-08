@@ -1,0 +1,176 @@
+{
+  "name": "Sydney",
+  "published": true,
+  "country": "AU",
+  "title": "Family holidays in Sydney",
+  "intro": "Ferries across the harbour, koalas at the zoo and beaches all along the coast. Here's what Sydney is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "SYD",
+  "holiday_types": [
+    "city",
+    "beach",
+    "nature"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "9 to 11 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Australian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eVisitor for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type I · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The eVisitor is free to apply for online. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Spring"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Spring"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Summer, festive"
+    }
+  },
+  "when_to_go": "Spring and summer, September to March, are best for beaches and harbour days. Christmas and New Year's Eve fireworks are spectacular but busy and expensive. June to August is cool but sunny, and good for whale watching.",
+  "things": [
+    {
+      "name": "Taronga Zoo",
+      "tag": "Ticketed",
+      "blurb": "Koalas and kangaroos with harbour views. Arrive by ferry from Circular Quay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Manly ferry",
+      "tag": "Ticketed",
+      "blurb": "A cheap harbour cruise past the Opera House to a beach town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bondi to Coogee walk",
+      "tag": "Free",
+      "blurb": "A clifftop coastal path with rock pools and swimming spots.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sydney Opera House",
+      "tag": "Ticketed",
+      "blurb": "Look round outside for free or catch a family show inside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Royal Botanic Garden",
+      "tag": "Free",
+      "blurb": "Wide lawns by the water for picnics, next to the Opera House.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Mountains",
+      "tag": "Day trip",
+      "blurb": "About two hours west. Ride the steep Scenic Railway.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Sydney good for a family holiday?",
+      "answer": "Yes. Beaches, ferries and wildlife make it a great family city. The long flight is the hardest part, so a stopover on the way helps."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights, as it takes a few days to get over jet lag. Many families add the Gold Coast or Melbourne."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "British passport holders, children included, apply for a free eVisitor online before they fly. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is it safe to swim at Sydney beaches?",
+      "answer": "Yes, at patrolled beaches. Always swim between the red and yellow flags, where lifeguards are watching."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Melbourne",
+      "code": "MEL",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Cape Town",
+      "code": "CPT",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Tokyo",
+      "code": "TYO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Auckland",
+      "code": "AKL",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

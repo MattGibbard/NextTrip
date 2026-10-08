@@ -1,0 +1,175 @@
+{
+  "name": "Toronto",
+  "published": true,
+  "country": "CA",
+  "title": "Family holidays in Toronto",
+  "intro": "Lakeside islands, a tower with a glass floor and Niagara Falls a day trip away. Here's what Toronto is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "YTO",
+  "holiday_types": [
+    "city",
+    "nature"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mixed"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Chilly"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "Summer is the easy pick, with warm days, island beaches and festivals most weekends. September and October are quieter and the autumn colours are lovely. Winters are properly cold, but there's skating outdoors and plenty to do inside.",
+  "things": [
+    {
+      "name": "Toronto Islands",
+      "tag": "Summer",
+      "blurb": "A short ferry ride to beaches, bike paths and the Centreville fairground.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "CN Tower",
+      "tag": "Ticketed",
+      "blurb": "Lie on the glass floor 342 metres up, if anyone dares.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ripley's Aquarium of Canada",
+      "tag": "Indoors",
+      "blurb": "A moving walkway through a shark tunnel, right by the CN Tower.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Royal Ontario Museum",
+      "tag": "Indoors",
+      "blurb": "Dinosaurs, a bat cave and mummies under one roof.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Niagara Falls",
+      "tag": "Day trip",
+      "blurb": "About 90 minutes by car or train. The boat ride gets you soaked.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "High Park",
+      "tag": "Free",
+      "blurb": "A huge park with a free zoo, playgrounds and cherry blossom in May.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Toronto good for a family holiday?",
+      "answer": "Yes. It's clean, safe and easy to get around on the subway and streetcars, with lots for children, from the islands to the science centre."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights gives you the city at a family pace plus a day at Niagara Falls."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can you visit Niagara Falls from Toronto?",
+      "answer": "Yes, it's an easy day trip by car, coach or the GO train in summer. The falls are about 90 minutes away."
+    }
+  ],
+  "similar": [
+    {
+      "name": "New York",
+      "code": "NYC",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Montreal",
+      "code": "YMQ",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Vancouver",
+      "code": "YVR",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Boston",
+      "code": "BOS",
+      "label": "🏙️ City break"
+    }
+  ]
+}

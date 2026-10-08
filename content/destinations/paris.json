@@ -1,0 +1,182 @@
+{
+  "name": "Paris",
+  "published": true,
+  "country": "FR",
+  "title": "Family holidays in Paris",
+  "intro": "Eiffel Tower picnics, carousels and Disneyland down the line, all a train ride from London. Here's what Paris is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "PAR",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food",
+    "rail"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    },
+    {
+      "label": "By train",
+      "value": "Eurostar from London, about 2½ hrs",
+      "highlight": true
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mixed"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Spring"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, quieter city"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "Late spring and September are the sweet spot, with long light evenings and parks at their best. Summer is busy at the big sights but the city itself empties in August. December brings Christmas markets and lights.",
+  "things": [
+    {
+      "name": "Eiffel Tower",
+      "tag": "Ticketed",
+      "blurb": "Book lift tickets ahead, or picnic on the Champ de Mars underneath for free.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jardin du Luxembourg",
+      "tag": "Free",
+      "blurb": "Toy sailing boats on the pond, pony rides and a great playground.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Disneyland Paris",
+      "tag": "Day trip",
+      "blurb": "About 40 minutes on the RER train. Worth two days if you're going.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cité des Sciences",
+      "tag": "Indoors",
+      "blurb": "Hands-on science with a big play area just for young children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Seine boat trip",
+      "tag": "Ticketed",
+      "blurb": "See the sights from the river without little legs getting tired.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jardin d'Acclimatation",
+      "tag": "Ticketed",
+      "blurb": "An old-fashioned amusement park with rides, animals and water play.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Paris good for a family holiday?",
+      "answer": "Yes. The parks, carousels and museums suit all ages, and you can arrive by Eurostar with no airport in sight. The metro has a lot of stairs, so pack light."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three to five nights covers the city, or add two more for Disneyland Paris."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Is it better to go by train or plane?",
+      "answer": "The Eurostar from London St Pancras takes about two and a half hours to the middle of Paris, so for most families in the south of England it's quicker door to door."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Rome",
+      "code": "ROM",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Amsterdam",
+      "code": "AMS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Brussels",
+      "code": "BRU",
+      "label": "🚆 By train"
+    },
+    {
+      "name": "Berlin",
+      "code": "BER",
+      "label": "🏙️ City break"
+    }
+  ]
+}

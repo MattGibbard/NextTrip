@@ -1,0 +1,176 @@
+{
+  "name": "Rome",
+  "published": true,
+  "country": "IT",
+  "title": "Family holidays in Rome",
+  "intro": "Gladiators, gelato and fountains on every square. Here's what Rome is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "ROM",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hot, many closures"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "April, May, September and October are warm enough for gelato but cool enough for walking. July and August are very hot, and many Romans leave in August. Winter is mild and quiet, with shorter queues at the big sights.",
+  "things": [
+    {
+      "name": "Colosseum",
+      "tag": "Ticketed",
+      "blurb": "Book a timed ticket ahead and imagine the gladiators. Under-18s go free.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Trevi Fountain",
+      "tag": "Free",
+      "blurb": "Throw a coin over your shoulder. Go early in the morning to beat the crowds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Villa Borghese",
+      "tag": "Free",
+      "blurb": "A big park with rowing boats, bike hire and a zoo, the Bioparco.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pantheon",
+      "tag": "Ticketed",
+      "blurb": "A 2,000-year-old temple with a hole in the roof. Children go free.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vatican Museums",
+      "tag": "Indoors",
+      "blurb": "The Sistine Chapel and miles of treasures. Book ahead and keep it short with little ones.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Explora",
+      "tag": "Indoors",
+      "blurb": "A hands-on children's museum built for under-12s.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Rome good for a family holiday?",
+      "answer": "Yes. Children love the gladiator stories and the pizza, and most sights are close together. Pushchairs struggle on cobbles, so a sling helps with little ones."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three to five nights covers the Colosseum, the Vatican and a few piazzas without rushing."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "When is Rome cheapest?",
+      "answer": "November and January to early March, outside school holidays and Easter."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Florence",
+      "code": "FLR",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Paris",
+      "code": "PAR",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Barcelona",
+      "code": "BCN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Athens",
+      "code": "ATH",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

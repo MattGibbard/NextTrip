@@ -3592,64 +3592,6 @@ a.detail {
   }
 }
 
-/* Departures board of stops */
-.board {
-  background: var(--board);
-  color: #fff;
-  border-radius: 14px;
-  padding: 0.75rem 0.9rem;
-}
-.board-title {
-  color: var(--board-muted);
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--board-line);
-}
-.board-row {
-  display: grid;
-  grid-template-columns: 34px minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 0;
-  border-bottom: 1px solid var(--board-line);
-  font: 500 0.9rem var(--mono);
-}
-.board-row:last-child {
-  border-bottom: 0;
-}
-.board-headings {
-  color: var(--board-muted);
-  padding-top: 0;
-}
-.board-num {
-  color: var(--board-muted);
-}
-.board-note {
-  text-align: right;
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  color: #cbd5d1;
-}
-.board-note.lit {
-  color: var(--board-lit);
-}
-@media (min-width: 760px) {
-  .board {
-    border-radius: 16px;
-    padding: 1.1rem 1.25rem;
-  }
-  .board-row {
-    grid-template-columns: 56px minmax(0, 1fr) 110px;
-    font-size: 1.05rem;
-    padding: 0.7rem 0;
-  }
-  .board-headings {
-    font-size: 0.7rem;
-  }
-  .board-note {
-    font-size: 0.75rem;
-  }
-}
-
 /* Places in order on an idea */
 .stepper-route {
   list-style: none;

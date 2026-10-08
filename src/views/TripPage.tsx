@@ -1,14 +1,15 @@
 import { useMemo, useState } from "react";
 import type { Place } from "../../shared/types";
 import type { Terminal } from "../../shared/terminals";
-import { MODES, placeCode, ticketEnds, tripMode } from "../../shared/travelMode";
+import { MODES, ticketEnds, tripMode } from "../../shared/travelMode";
 import { BookLinks } from "../components/BookLinks";
 import type { Mode } from "../../shared/travelMode";
 import { useData } from "../data";
 import { flag } from "../countries";
-import { monthYear, nights, shortRange } from "../format";
+import { cssUrl, nights, shortRange } from "../format";
 import { Stars } from "../components/Stars";
-import { Board, Pass } from "../components/Ticket";
+import { ModeIcon } from "../components/ModeIcon";
+import { PostcardStamp, Postmark } from "../components/TripPostcard";
 import { WorldMap, terminalPins } from "../components/WorldMap";
 import { journeyLegs } from "../../shared/terminals";
 import type { Pin, Route } from "../components/WorldMap";
@@ -37,7 +38,7 @@ function boardRows(mode: Mode, places: Place[], depart: Terminal | null) {
   });
 }
 
-/** Everything about one trip, laid out as the ticket for how you travelled. */
+/** Everything about one trip, laid out as the back of its postcard. */
 export function TripPage({ id }: { id: number }) {
   const { trips, ideas, people, personName, home } = useData();
   const trip = trips.find((t) => t.id === id);
@@ -87,13 +88,13 @@ export function TripPage({ id }: { id: number }) {
   const idea = ideas.find((i) => i.id === trip.idea_id);
   const ends = ticketEnds(mode, trip, home);
   const n = nights(trip.start_date, trip.end_date);
-  // Pass numbers count up from the oldest trip; trips arrive newest first.
-  const passNo = `#${String(trips.length - trips.indexOf(trip)).padStart(2, "0")}`;
+  // Postcards count up from the oldest trip; trips arrive newest first.
+  const cardNo = `Nº ${String(trips.length - trips.indexOf(trip)).padStart(2, "0")}`;
   const flags = [...countries].map(flag).join(" ");
-  const stubCodes = (trip.places.length > 3 ? [trip.places[0], trip.places[trip.places.length - 1]] : trip.places).map((p) => placeCode(p.name)).join(" · ");
+  const year = trip.start_date?.slice(0, 4) ?? null;
 
   return (
-    <section className="pass-page">
+    <section className="pass-page postcard-page">
       <div className="page-head">
         <a className="back-link" href="#/been">
           ← Been
@@ -103,59 +104,74 @@ export function TripPage({ id }: { id: number }) {
         </button>
       </div>
 
-      <Pass
-        tone={`mode-${mode}`}
-        photo={{ url: trip.cover_url, fallback: flags || "🧳" }}
-        head={[
-          `${m.icon} ${m.kind}`,
-          <>
-            PASS {passNo}
-            {trip.start_date && <span className="desktop-only"> · {monthYear(trip.start_date).toUpperCase()}</span>}
-          </>,
-        ]}
-        route={ends && { from: ends.from, to: ends.to, icon: mode === "road" && trip.depart ? MODES.flight.icon : m.icon }}
-        title={trip.title}
-        facts={[
-          [WORDING[mode].went, shortRange(trip.start_date, trip.end_date) ?? "—"],
-          ["NIGHTS", n ?? "—"],
-          ...(people.length ? [["PASSENGERS", people.map((p) => p.name).join(" & ")] as [string, string]] : []),
-          ["RATING", trip.rating ? <Stars value={trip.rating} /> : <span className="muted">Not rated</span>],
-        ]}
-        tags={
-          <>
-            <span className="detail">
-              {m.icon} {MODES[mode].short}
-            </span>
-            {creator && (
-              <span className="detail">
-                <span className="dot" style={{ background: creator.color }} /> Added by {personName(trip.created_by)}
-              </span>
-            )}
-            {idea && (
-              <a className="detail" href={`#/next/${idea.id}`}>
-                🏆 From the idea "{idea.title}"
-              </a>
-            )}
-          </>
-        }
-        stub={[m.icon, stubCodes || m.kind, passNo]}
-      />
+      <article className={`pcb mode-${mode}`}>
+        <div className="pcb-message">
+          {trip.cover_url ? (
+            <div className="pcb-photo" style={{ backgroundImage: cssUrl(trip.cover_url) }} role="img" aria-label={`Cover photo for ${trip.title}`} />
+          ) : null}
+          <div className="pcb-route mode-ink">
+            <ModeIcon mode={mode} className="pcb-route-icon" />
+            <span>{ends ? `${ends.from.code} → ${ends.to.code}` : m.kind}</span>
+          </div>
+          <h1 className="pcb-title">{trip.title}</h1>
+          <div className="pcb-facts">
+            <span>{shortRange(trip.start_date, trip.end_date) ?? "No dates yet"}</span>
+            {n && <span className="mono-label">{n} {n === 1 ? "NIGHT" : "NIGHTS"}</span>}
+            {trip.rating ? <Stars value={trip.rating} /> : <span className="muted">Not rated</span>}
+          </div>
+          {trip.places.length > 0 && (
+            <p className="pcb-places">
+              {flags} {trip.places.map((p) => p.name).join(mode === "flight" ? " · " : " → ")}
+            </p>
+          )}
+          {trip.notes ? <p className="pcb-notes">{trip.notes}</p> : <p className="pcb-notes muted">No notes yet. Write what you remember with Edit.</p>}
+          {(creator || idea) && (
+            <div className="pass-tags">
+              {creator && (
+                <span className="detail">
+                  <span className="dot" style={{ background: creator.color }} /> Added by {personName(trip.created_by)}
+                </span>
+              )}
+              {idea && (
+                <a className="detail" href={`#/next/${idea.id}`}>
+                  🏆 From the idea "{idea.title}"
+                </a>
+              )}
+            </div>
+          )}
+        </div>
 
-      <div className="pass-columns">
-        <div className="pass-left">
-          {trip.notes && <p className="pass-notes">{trip.notes}</p>}
+        <span className="pcb-divider" aria-hidden="true" />
+
+        <div className="pcb-address">
+          <div className="pcb-address-top">
+            <span className="mono-label muted">{cardNo}</span>
+            <span className="pcb-marks">
+              <Postmark place={trip.places[0]?.name ?? ""} date={trip.start_date} className="ink" />
+              <PostcardStamp mode={mode} year={year} />
+            </span>
+          </div>
+          {pins.length > 0 && (
+            <div className="pcb-map">
+              <WorldMap visited={countries} ideas={NONE} pins={pins} routes={routes} selected={null} onSelect={() => {}} close />
+            </div>
+          )}
+          {people.length > 0 && <div className="pcb-line pcb-to">To {people.map((p) => p.name).join(" & ")}</div>}
           {trip.places.length > 0 ? (
-            <Board title={WORDING[mode].board} column={WORDING[mode].column} rows={boardRows(mode, trip.places, trip.depart)} />
+            <ol className="pcb-stops" aria-label={WORDING[mode].board.toLowerCase()}>
+              {boardRows(mode, trip.places, trip.depart).map((r, i) => (
+                <li key={i} className="pcb-line">
+                  <span className="pcb-num">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="ellipsis">{r.label}</span>
+                  <span className={`pcb-note${r.lit ? " lit" : ""}`}>{r.note}</span>
+                </li>
+              ))}
+            </ol>
           ) : (
             <p className="muted small">No places yet. Add some with Edit.</p>
           )}
         </div>
-        {pins.length > 0 && (
-          <div className="pass-map">
-            <WorldMap visited={countries} ideas={NONE} pins={pins} routes={routes} selected={null} onSelect={() => {}} close />
-          </div>
-        )}
-      </div>
+      </article>
 
       <BookLinks trip={trip} mode={mode} campaign="been_page" title="🔁 Go again?" className="panel" />
 

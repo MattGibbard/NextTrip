@@ -1,4 +1,4 @@
-/* Been: each past trip as a postcard that turns over. */
+/* Been: each past trip as the front of a postcard, and its page as the back. */
 
 .postcard-grid {
   display: grid;
@@ -17,60 +17,53 @@
   margin-bottom: 1rem;
 }
 
+/* The front: a photo in a white border */
 .postcard {
   --tilt: 0deg;
-  perspective: 1400px;
-  transition: transform 0.15s ease;
-  min-width: 0;
-}
-.postcard:not(.preview):hover {
-  transform: translateY(-2px);
-}
-.pc-card {
   position: relative;
+  display: block;
   aspect-ratio: 3 / 2;
-  transform-style: preserve-3d;
+  min-width: 0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
   transform: rotate(var(--tilt));
-  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition: transform 0.15s ease;
 }
-.postcard.flipped .pc-card {
-  transform: rotateY(180deg);
+a.postcard:hover {
+  transform: rotate(var(--tilt)) translateY(-3px);
+}
+a.postcard:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 @media (prefers-reduced-motion: reduce) {
-  .pc-card,
   .postcard {
     transition: none;
   }
 }
-.pc-front,
-.pc-back {
+.pc-front {
   position: absolute;
   inset: 0;
   box-sizing: border-box;
+  padding: 9px;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
   box-shadow: 0 8px 24px rgb(0 0 0 / 0.1);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 :root[data-theme="dark"] .pc-front,
-:root[data-theme="dark"] .pc-back {
+:root[data-theme="dark"] .pcb {
   box-shadow: 0 8px 24px rgb(0 0 0 / 0.45);
-}
-
-/* The front: a photo in a white border */
-.pc-front {
-  padding: 9px;
-  background: var(--surface);
 }
 .pc-photo {
   position: relative;
+  display: block;
   width: 100%;
   height: 100%;
   border-radius: 3px;
   overflow: hidden;
   background: var(--surface-2) center / cover no-repeat;
-  color: #fff;
 }
 .pc-photo.placeholder {
   background: var(--mode);
@@ -115,6 +108,7 @@
   align-items: center;
   justify-content: center;
   gap: 1px;
+  color: #fff;
   font-family: var(--mono);
   font-weight: 500;
   filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.35));
@@ -169,7 +163,7 @@
 .pc-greeting {
   position: absolute;
   left: 14px;
-  right: 110px;
+  right: 14px;
   bottom: 12px;
   display: flex;
   flex-direction: column;
@@ -195,240 +189,6 @@
 .pc-front-title.unnamed {
   opacity: 0.7;
 }
-.pc-turn-pill {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 5px 9px;
-  border-radius: 999px;
-  background: rgb(255 255 255 / 0.92);
-  color: #1c2421;
-  font: 500 9.5px var(--mono);
-  letter-spacing: 0.1em;
-}
-.pc-turn-icon {
-  width: 12px;
-  height: 12px;
-  flex: none;
-}
-.pc-hit {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 8px;
-  background: transparent;
-  cursor: pointer;
-}
-.pc-hit:focus-visible,
-.pc-back .btn:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
-
-/* The back: the message on the left, the address side on the right */
-.pc-back {
-  padding: 14px;
-  background: var(--paper);
-  color: var(--text);
-  transform: rotateY(180deg);
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) 1px minmax(0, 1fr);
-  gap: 14px;
-}
-.pc-message {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  min-width: 0;
-}
-.pc-route {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font: 500 11px var(--mono);
-  letter-spacing: 0.06em;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.pc-route-icon {
-  width: 14px;
-  height: 14px;
-  flex: none;
-}
-.pc-title {
-  margin: 2px 0 0;
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  line-height: 1.1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.pc-line {
-  font-size: 13px;
-  line-height: 1.35;
-}
-.pc-places {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.pc-meta {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  margin-top: 1px;
-}
-.pc-meta .mono-label {
-  font-size: 10px;
-  color: var(--muted);
-}
-.pc-actions {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.pc-actions .btn {
-  min-height: 36px;
-  padding: 0 12px;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-}
-.pc-actions .pc-back-btn {
-  padding: 0 10px;
-  background: var(--surface);
-}
-.pc-divider {
-  background: var(--border);
-}
-.pc-address {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-width: 0;
-}
-.pc-address-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 8px;
-}
-.pc-address-top .mono-label {
-  font-size: 10px;
-  color: var(--muted);
-  padding-top: 2px;
-}
-.pc-mini-stamp {
-  position: relative;
-  width: 30px;
-  height: 36px;
-  box-sizing: border-box;
-  padding: 3px;
-  background: radial-gradient(circle at 2.5px 2.5px, var(--paper) 1.3px, #fff 1.7px) -2.5px -2.5px / 5px 5px;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.18);
-  flex: none;
-}
-.pc-mini-stamp .pc-stamp-ink {
-  font-size: 7px;
-  letter-spacing: 0.06em;
-}
-.pc-mini-mark {
-  position: absolute;
-  top: 8px;
-  left: -22px;
-  width: 30px;
-  height: 30px;
-  box-sizing: border-box;
-  border: 1.2px solid var(--mode-ink);
-  border-radius: 50%;
-  opacity: 0.55;
-  transform: rotate(-12deg);
-}
-
-/* A little sketch of the route on dotted paper */
-.pc-map {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 100 / 70;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  overflow: hidden;
-  background-color: var(--surface-2);
-  background-image: radial-gradient(var(--border) 0.8px, transparent 1.1px);
-  background-size: 9px 9px;
-}
-.pc-map svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  fill: none;
-  stroke: var(--mode-ink);
-  stroke-width: 1.3;
-  stroke-dasharray: 3 2.4;
-  stroke-linecap: round;
-}
-.pc-pin {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  margin: -4px 0 0 -4px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  background: var(--mode-ink);
-  border: 2px solid var(--mode-ink);
-}
-.pc-pin.origin {
-  width: 9px;
-  height: 9px;
-  margin: -4.5px 0 0 -4.5px;
-  background: var(--paper);
-}
-.pc-pin-label {
-  position: absolute;
-  font: 500 9px var(--mono);
-  letter-spacing: 0.06em;
-  color: var(--text);
-  background: color-mix(in srgb, var(--paper) 90%, transparent);
-  padding: 1px 3px;
-  border-radius: 3px;
-  white-space: nowrap;
-}
-.pc-pin-label.right.below {
-  transform: translate(6px, 4px);
-}
-.pc-pin-label.right.above {
-  transform: translate(6px, calc(-100% - 4px));
-}
-.pc-pin-label.left.below {
-  transform: translate(calc(-100% - 6px), 4px);
-}
-.pc-pin-label.left.above {
-  transform: translate(calc(-100% - 6px), calc(-100% - 4px));
-}
-.pc-to {
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 3px;
-  font-size: 12px;
-  color: var(--muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 /* In the trip sheet, a smaller card centred in the preview box */
 .postcard.preview {
@@ -445,5 +205,177 @@
   }
   .trips-page .page-head .btn {
     min-height: 46px;
+  }
+}
+
+/* A trip's page: the back of its postcard, the message on the left and the address side on the right */
+.pcb {
+  margin-top: 0.5rem;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.1);
+  padding: 1.1rem;
+  display: grid;
+  gap: 1.1rem;
+}
+.pcb-divider {
+  border-top: 1px solid var(--border);
+}
+.pcb-message,
+.pcb-address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  min-width: 0;
+}
+.pcb-photo {
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  background: var(--surface-2) center / cover no-repeat;
+  margin-bottom: 0.2rem;
+}
+.pcb-route {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font: 500 0.8rem var(--mono);
+  letter-spacing: 0.08em;
+}
+.pcb-route-icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+.pcb-title {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.pcb-facts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.9rem;
+  color: var(--muted);
+}
+.pcb-facts .mono-label {
+  font-size: 0.72rem;
+}
+.pcb-places {
+  margin: 0;
+  font-size: 1rem;
+}
+.pcb-notes {
+  margin: 0.2rem 0 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+.pcb-address-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 64px;
+}
+.pcb-address-top .mono-label {
+  padding-top: 4px;
+}
+.pcb-marks {
+  position: relative;
+  width: 110px;
+  height: 64px;
+  flex: none;
+}
+.pcb-marks .pc-stamp {
+  top: 0;
+  right: 0;
+}
+.pc-postmark.ink {
+  top: 4px;
+  right: 30px;
+  border-color: var(--mode-ink);
+  color: var(--mode-ink);
+  opacity: 0.6;
+  filter: none;
+}
+.pcb-map .world-map {
+  height: 260px;
+  border-radius: 6px;
+}
+.pcb-line {
+  border-bottom: 1px solid var(--border);
+  padding: 0.45rem 0;
+}
+.pcb-to {
+  color: var(--muted);
+}
+.pcb-stops {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pcb-stops .pcb-line {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.6rem;
+}
+.pcb-num,
+.pcb-note {
+  font: 500 0.7rem var(--mono);
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.pcb-note.lit {
+  color: var(--mode-ink);
+}
+@media (min-width: 760px) {
+  .pcb {
+    grid-template-columns: minmax(0, 1.05fr) 1px minmax(0, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+  .pcb-divider {
+    border-top: 0;
+    border-left: 1px solid var(--border);
+  }
+  .pcb-title {
+    font-size: 2.4rem;
+  }
+  .pcb-map .world-map {
+    height: 320px;
+  }
+}
+.postcard-page .panel {
+  margin-top: 1.5rem;
+}
+.pcb .pass-tags {
+  padding: 0;
+}
+
+/* On a phone the photo is already on the front, so the back leads with the stamp in its top corner. */
+@media (max-width: 759px) {
+  .pcb {
+    position: relative;
+  }
+  .pcb-photo {
+    display: none;
+  }
+  .pcb-marks {
+    position: absolute;
+    top: 1.1rem;
+    right: 1.1rem;
+  }
+  .pcb-route,
+  .pcb-title {
+    margin-right: 118px;
+  }
+  .pcb-address-top {
+    min-height: 0;
   }
 }

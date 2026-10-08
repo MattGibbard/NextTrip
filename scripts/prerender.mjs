@@ -38,10 +38,17 @@ try {
   const base = shell.replace(/\s*<title>[^<]*<\/title>/, "").replace(/\s*<meta name="description"[^>]*>/, "");
   if (base === shell || !base.includes('<div id="root"></div>')) throw new Error("index.html doesn't look as expected");
 
+  // The public pages carry their styles in the page itself, so the browser can draw them without
+  // waiting for a second file. The private pages' shell keeps the link.
+  const cssLink = base.match(/<link rel="stylesheet" crossorigin href="(\/assets\/[^"]+\.css)">/);
+  if (!cssLink) throw new Error("index.html has no built stylesheet to inline");
+  const css = await readFile(new URL("." + cssLink[1], OUT), "utf8");
+  const inlined = base.replace(cssLink[0], () => `<style>${css.replace(/<\/style/gi, "<\\/style")}</style>`);
+
   const list = pages().map((p) => ({ ...p, updated: lastChanged(p.source) }));
   for (const { page, file, updated } of list) {
     // Replacer functions, so a "$" in the page's words isn't read as a replacement pattern.
-    const html = base
+    const html = inlined
       .replace("</head>", () => `  ${headTags(page, updated)}\n  </head>`)
       .replace('<div id="root"></div>', () => `<div id="root" data-page="${page}">${render(page)}</div>`);
     const out = new URL(file, OUT);

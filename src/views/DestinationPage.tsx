@@ -11,9 +11,10 @@ import { AppBottomNav, AppTopbar } from "../components/AppNav";
 
 /**
  * Who's looking. Starts as a visitor, the same as the prerendered page, then checks for a signed-in
- * family once the page is up so it can offer "Add to ideas" and show their ideas alongside.
+ * family once the page is up so it can offer "Add to ideas" and show their ideas alongside. Inside the
+ * signed-in app the family is already known and handed in, so nothing needs checking.
  */
-interface Family {
+export interface Family {
   signedIn: boolean;
   /** Who's using this device, for the header. */
   me: Person | null;
@@ -22,9 +23,10 @@ interface Family {
   airport: Terminal | null;
 }
 
-function useFamily(): Family {
+function useFamily(given?: Family): Family {
   const [state, setState] = useState<Family>({ signedIn: false, me: null, ideas: null, airport: null });
   useEffect(() => {
+    if (given) return;
     let live = true;
     void api
       .session()
@@ -39,8 +41,9 @@ function useFamily(): Family {
     return () => {
       live = false;
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  return state;
+  return given ?? state;
 }
 
 function Label({ children }: { children: string }) {
@@ -48,8 +51,8 @@ function Label({ children }: { children: string }) {
 }
 
 /** A destination guide, for visitors finding it in search and for signed-in families looking for ideas. */
-export function DestinationPage({ destination: d }: { destination: Destination }) {
-  const { signedIn, me, ideas, airport } = useFamily();
+export function DestinationPage({ destination: d, family }: { destination: Destination; family?: Family }) {
+  const { signedIn, me, ideas, airport } = useFamily(family);
   const from = airport?.code && airport.lat !== null ? { code: airport.code, name: airport.name, lat: airport.lat, lon: airport.lon } : LONDON;
   const flight = flightTime(from, d);
   const best = bestMonths(d);
@@ -354,8 +357,8 @@ function bestSet(d: Destination): Set<number> {
  * of holiday, a card per guide and the countries they're in. The month is the visitor's own, set once
  * the page is up so the prerendered page doesn't depend on when the site was built.
  */
-export function DestinationsIndex() {
-  const { signedIn, me, ideas, airport } = useFamily();
+export function DestinationsIndex({ family }: { family?: Family }) {
+  const { signedIn, me, ideas, airport } = useFamily(family);
   const from = airport?.code && airport.lat !== null ? { code: airport.code, name: airport.name, lat: airport.lat, lon: airport.lon } : LONDON;
   const [month, setMonth] = useState<number | null>(null);
   const [type, setType] = useState<string | null>(null);

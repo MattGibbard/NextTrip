@@ -15,9 +15,11 @@ import { PersonPicker } from "./components/PersonPicker";
 import { AppBottomNav, AppTopbar } from "./components/AppNav";
 import type { TabId } from "./components/AppNav";
 import { NotFound } from "./views/Welcome";
-import { isPrivatePath, publicPage } from "../shared/seo";
-import { findDestination } from "./destinations";
+import { PAGES, isPrivatePath, publicPage } from "../shared/seo";
+import { destinationMeta, findDestination } from "./destinations";
 import { DestinationPage, DestinationsIndex } from "./views/DestinationPage";
+import type { Family } from "./views/DestinationPage";
+import { followInPlace, isGuidePath } from "./navigate";
 import { load, save } from "./storage";
 
 /** Reads routes like #/next or #/next/12, and #/next/add/new-york from a destination guide's "Add to ideas". */
@@ -44,24 +46,57 @@ function entryLink(): { kind: "join" | "person" | "signin"; token: string } | nu
 }
 
 export function App() {
-  const path = location.pathname;
+  const [path, setPath] = useState(() => location.pathname);
+
+  useEffect(() => {
+    const onPop = () => setPath(location.pathname);
+    // Signed in, links between the app and the Guides pages switch in place. Visitors' pages load as
+    // normal, the same as search engines see them.
+    const onClick = (e: MouseEvent) => {
+      if (load(SIGNED_IN, false)) followInPlace(e);
+    };
+    window.addEventListener("popstate", onPop);
+    document.addEventListener("click", onClick);
+    return () => {
+      window.removeEventListener("popstate", onPop);
+      document.removeEventListener("click", onClick);
+    };
+  }, []);
+
+  useEffect(() => {
+    document.title = pageTitle(path);
+  }, [path]);
+
   const legal = legalPage(path);
   if (legal) return <LegalView page={legal} />;
+  // Signed-in families see the Guides inside the app, so moving between them is instant.
+  // index.html clears the visitors' version before the first paint so it doesn't flash.
+  if (isGuidePath(path) && !load(SIGNED_IN, false)) return <GuideView path={path} />;
+  if (path !== "/" && !isGuidePath(path) && !isPrivatePath(path)) return <NotFound />;
+  return <Main path={path} />;
+}
+
+/** A Guides page: the list of guides, one guide, or not found. */
+function GuideView({ path, family }: { path: string; family?: Family }) {
   const page = publicPage(path);
-  if (page === "destinations") return <DestinationsIndex />;
-  if (page?.startsWith("destination:")) {
-    const destination = findDestination(page.slice("destination:".length));
-    return destination ? <DestinationPage destination={destination} /> : <NotFound />;
-  }
-  if (path !== "/" && !isPrivatePath(path)) return <NotFound />;
-  return <Main />;
+  if (page === "destinations") return <DestinationsIndex family={family} />;
+  const destination = page?.startsWith("destination:") ? findDestination(page.slice("destination:".length)) : undefined;
+  return destination ? <DestinationPage destination={destination} family={family} /> : <NotFound />;
+}
+
+/** The tab title for an address, kept up to date as the app moves between pages in place. */
+function pageTitle(path: string): string {
+  const page = publicPage(path);
+  if (page === "destinations") return PAGES.destinations.title;
+  const destination = page?.startsWith("destination:") ? findDestination(page.slice("destination:".length)) : undefined;
+  return destination ? destinationMeta(destination).title : "somewhere🎉";
 }
 
 // Remembers whether this browser was signed in last time, so the home page isn't shown to people who
 // are about to land in the app. index.html reads the same key before the first paint.
 const SIGNED_IN = "signedIn";
 
-function Main() {
+function Main({ path }: { path: string }) {
   const [session, setSession] = useState<Session | null>(null);
   const [entry, setEntry] = useState(entryLink);
   const [error, setError] = useState<string | null>(null);
@@ -110,16 +145,16 @@ function Main() {
       <p className="muted center">Loading…</p>
     );
   }
-  if (!session.signed_in) return <HomePage />;
+  if (!session.signed_in) return isGuidePath(path) ? <GuideView path={path} /> : <HomePage />;
   return (
     <DataProvider isOwner={session.role === "owner"} shareToken={session.share_token} personId={session.person_id}>
-      <Shell />
+      <Shell path={path} />
     </DataProvider>
   );
 }
 
-function Shell() {
-  const { me, loading, error, reload } = useData();
+function Shell({ path }: { path: string }) {
+  const { me, ideas, home, loading, error, reload } = useData();
   const [route, setRoute] = useState(currentRoute);
   const tab = route.tab;
 
@@ -129,12 +164,26 @@ function Shell() {
       window.scrollTo({ top: 0 });
     };
     window.addEventListener("hashchange", onHash);
-    return () => window.removeEventListener("hashchange", onHash);
+    // Coming back from the Guides moves the address in place, which doesn't count as a hash change.
+    window.addEventListener("popstate", onHash);
+    return () => {
+      window.removeEventListener("hashchange", onHash);
+      window.removeEventListener("popstate", onHash);
+    };
   }, []);
 
   const go = (t: TabId) => {
     location.hash = `/${t}`;
   };
+
+  if (isGuidePath(path)) {
+    return (
+      <>
+        <GuideView path={path} family={{ signedIn: true, me, ideas: loading ? null : ideas, airport: home }} />
+        {!loading && !error && !me && <PersonPicker />}
+      </>
+    );
+  }
 
   return (
     <div className="app">

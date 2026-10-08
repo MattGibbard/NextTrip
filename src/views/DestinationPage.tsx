@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { Idea } from "../../shared/types";
+import type { Idea, Person } from "../../shared/types";
 import type { Terminal } from "../../shared/terminals";
 import { api } from "../api";
 import { DESTINATIONS, LONDON, bestMonths, countryFlag, destinationNamed, flightHoursTo, flightTime, imageUrl, shortIntro } from "../destinations";
@@ -7,6 +7,7 @@ import type { Destination } from "../destinations";
 import { HOLIDAY_TYPES, budgetLabel, holidayType, travelTimeLabel } from "../../shared/ideaDetails";
 import { destinationPath } from "../../shared/seo";
 import { SiteFooter, SiteHeader } from "./Welcome";
+import { AppBottomNav, AppTopbar } from "../components/AppNav";
 
 /**
  * Who's looking. Starts as a visitor, the same as the prerendered page, then checks for a signed-in
@@ -14,22 +15,25 @@ import { SiteFooter, SiteHeader } from "./Welcome";
  */
 interface Family {
   signedIn: boolean;
+  /** Who's using this device, for the header. */
+  me: Person | null;
   ideas: Idea[] | null;
   /** The family's home airport, which flight times are worked out from instead of London. */
   airport: Terminal | null;
 }
 
 function useFamily(): Family {
-  const [state, setState] = useState<Family>({ signedIn: false, ideas: null, airport: null });
+  const [state, setState] = useState<Family>({ signedIn: false, me: null, ideas: null, airport: null });
   useEffect(() => {
     let live = true;
     void api
       .session()
       .then(async (s) => {
         if (!s.signed_in || !live) return;
-        setState({ signedIn: true, ideas: null, airport: null });
-        const [ideas, home] = await Promise.all([api.ideas(), api.homeEnds().catch(() => null)]);
-        if (live) setState({ signedIn: true, ideas, airport: home?.airport ?? null });
+        setState({ signedIn: true, me: null, ideas: null, airport: null });
+        const [ideas, home, people] = await Promise.all([api.ideas(), api.homeEnds().catch(() => null), api.people().catch(() => [])]);
+        const me = people.find((p) => p.id === s.person_id && !p.removed) ?? null;
+        if (live) setState({ signedIn: true, me, ideas, airport: home?.airport ?? null });
       })
       .catch(() => {});
     return () => {
@@ -39,46 +43,13 @@ function useFamily(): Family {
   return state;
 }
 
-const APP_TABS = [
-  { id: "been", label: "Been", icon: "🧳" },
-  { id: "places", label: "Places", icon: "🗺️" },
-  { id: "next", label: "Next", icon: "💡" },
-  { id: "draw", label: "Draw", icon: "🎟️" },
-];
-
-/** The signed-in app's header, as links back into the app, with Guides as the current page. */
-function AppHeader({ index = false }: { index?: boolean }) {
-  return (
-    <header className="lp-top">
-      <div className="lp-wrap lp-top-inner">
-        <a className="lp-brand" href="/#/been">
-          somewhere<span aria-hidden>🎉</span>
-        </a>
-        <nav className="dg-apptabs" aria-label="Main">
-          {APP_TABS.map((t) => (
-            <a key={t.id} href={`/#/${t.id}`}>
-              <span aria-hidden>{t.icon}</span> {t.label}
-            </a>
-          ))}
-          <a href="/destinations" aria-current={index ? "page" : "true"}>
-            <span aria-hidden>🧭</span> Guides
-          </a>
-        </nav>
-        <a className="icon-btn" href="/#/settings" aria-label="Settings">
-          ⚙️
-        </a>
-      </div>
-    </header>
-  );
-}
-
 function Label({ children }: { children: string }) {
   return <span className="dg-label">{children}</span>;
 }
 
 /** A destination guide, for visitors finding it in search and for signed-in families looking for ideas. */
 export function DestinationPage({ destination: d }: { destination: Destination }) {
-  const { signedIn, ideas, airport } = useFamily();
+  const { signedIn, me, ideas, airport } = useFamily();
   const from = airport?.code && airport.lat !== null ? { code: airport.code, name: airport.name, lat: airport.lat, lon: airport.lon } : LONDON;
   const flight = flightTime(from, d);
   const best = bestMonths(d);
@@ -88,14 +59,18 @@ export function DestinationPage({ destination: d }: { destination: Destination }
   const types = d.holiday_types.map(holidayType).filter((t) => !!t);
 
   return (
-    <div className="lp dg">
-      {signedIn ? <AppHeader /> : <SiteHeader guide />}
+    <div className={`lp dg ${signedIn ? "dg-app" : ""}`}>
+      {signedIn ? <AppTopbar current="guides" me={me} /> : <SiteHeader guide />}
 
       <main className="lp-wrap dg-main">
         <div className="dg-top">
           <nav aria-label="Breadcrumb" className="dg-crumbs">
-            {signedIn ? <a href="/#/next">Next</a> : <a href="/">Home</a>}
-            <span aria-hidden>›</span>
+            {!signedIn && (
+              <>
+                <a href="/">Home</a>
+                <span aria-hidden>›</span>
+              </>
+            )}
             <a href="/destinations">Guides</a>
             <span aria-hidden>›</span>
             <span aria-current="page">{d.name}</span>
@@ -360,6 +335,7 @@ export function DestinationPage({ destination: d }: { destination: Destination }
       </main>
 
       <SiteFooter />
+      {signedIn && <AppBottomNav current="guides" />}
     </div>
   );
 }
@@ -379,7 +355,7 @@ function bestSet(d: Destination): Set<number> {
  * the page is up so the prerendered page doesn't depend on when the site was built.
  */
 export function DestinationsIndex() {
-  const { signedIn, ideas, airport } = useFamily();
+  const { signedIn, me, ideas, airport } = useFamily();
   const from = airport?.code && airport.lat !== null ? { code: airport.code, name: airport.name, lat: airport.lat, lon: airport.lon } : LONDON;
   const [month, setMonth] = useState<number | null>(null);
   const [type, setType] = useState<string | null>(null);
@@ -428,8 +404,8 @@ export function DestinationsIndex() {
   const filtered = !!(type || country || words);
 
   return (
-    <div className="lp dg dx">
-      {signedIn ? <AppHeader index /> : <SiteHeader guide="index" />}
+    <div className={`lp dg dx ${signedIn ? "dg-app" : ""}`}>
+      {signedIn ? <AppTopbar current="guides" me={me} /> : <SiteHeader guide="index" />}
 
       <main>
         <section className="lp-wrap dx-hero">
@@ -633,6 +609,7 @@ export function DestinationsIndex() {
       </main>
 
       <SiteFooter />
+      {signedIn && <AppBottomNav current="guides" />}
     </div>
   );
 }

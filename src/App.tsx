@@ -12,20 +12,13 @@ import { SettingsView } from "./views/SettingsView";
 import { IdeaPage } from "./views/IdeaPage";
 import { TripPage } from "./views/TripPage";
 import { PersonPicker } from "./components/PersonPicker";
+import { AppBottomNav, AppTopbar } from "./components/AppNav";
+import type { TabId } from "./components/AppNav";
 import { NotFound } from "./views/Welcome";
 import { isPrivatePath, publicPage } from "../shared/seo";
 import { findDestination } from "./destinations";
 import { DestinationPage, DestinationsIndex } from "./views/DestinationPage";
 import { load, save } from "./storage";
-
-const TABS = [
-  { id: "been", label: "Been", icon: "🧳" },
-  { id: "places", label: "Places", icon: "🗺️" },
-  { id: "next", label: "Next", icon: "💡" },
-  { id: "draw", label: "Draw", icon: "🎟️" },
-] as const;
-
-type TabId = (typeof TABS)[number]["id"] | "settings";
 
 /** Reads routes like #/next or #/next/12, and #/next/add/new-york from a destination guide's "Add to ideas". */
 function currentRoute(): { tab: TabId; id: number | null; add: string | null } {
@@ -145,32 +138,7 @@ function Shell() {
 
   return (
     <div className="app">
-      <header className="topbar">
-        <div className="topbar-inner">
-          <a className="brand" href="#/been">
-            somewhere<span aria-hidden>🎉</span>
-          </a>
-          <nav className="tabs desktop-only" aria-label="Main">
-            {TABS.map((t) => (
-              <button key={t.id} className={tab === t.id ? "active" : ""} onClick={() => go(t.id)}>
-                {t.label}
-              </button>
-            ))}
-            <a href="/destinations">Guides</a>
-          </nav>
-          <div className="topbar-right">
-            {me && (
-              <a className="me-chip" href="#/settings" title="You, on this device">
-                <span className="dot" style={{ background: me.color }} />
-                {me.name}
-              </a>
-            )}
-            <button className={`icon-btn ${tab === "settings" ? "active" : ""}`} onClick={() => go("settings")} aria-label="Settings">
-              ⚙️
-            </button>
-          </div>
-        </div>
-      </header>
+      <AppTopbar current={tab} me={me} go={go} />
 
       <main className="content">
         {error && (
@@ -191,18 +159,7 @@ function Shell() {
         )}
       </main>
 
-      <nav className="bottom-nav mobile-only">
-        {TABS.map((t) => (
-          <button key={t.id} className={tab === t.id ? "active" : ""} onClick={() => go(t.id)}>
-            <span className="icon">{t.icon}</span>
-            {t.label}
-          </button>
-        ))}
-        <a href="/destinations">
-          <span className="icon">🧭</span>
-          Guides
-        </a>
-      </nav>
+      <AppBottomNav current={tab} go={go} />
 
       {!loading && !error && !me && <PersonPicker />}
     </div>

@@ -11,6 +11,13 @@ import { countryName, flag } from "../countries";
 import { PlaceSearch } from "../components/PlaceSearch";
 import { StandbyCard } from "../components/StandbyCard";
 import { CrossIcon } from "../components/TerminalPicker";
+import { ONBOARDING } from "../site";
+
+// The words are edited at /admin (content/site/onboarding.json).
+const W = ONBOARDING.welcome;
+const A = ONBOARDING.airport;
+const I = ONBOARDING.idea;
+const D = ONBOARDING.done;
 
 type Step = "welcome" | "airport" | "idea" | "done";
 
@@ -172,34 +179,28 @@ function Intro({ eyebrow, heading, children, standby = false, big = false }: { e
   );
 }
 
-const HOW = [
-  { icon: "💡", title: "DISCOVER AND ADD IDEAS", text: "Find places you'd love to go and put them on standby. Everyone in the family can add their own." },
-  { icon: "🎟️", title: "DRAW AS A FAMILY", text: "Everyone spreads their points in secret, gets one veto, and the draw picks where you go." },
-  { icon: "✈️", title: "PLAN THE TRIP", text: "Your winner becomes your next departure, ready to plan together." },
-];
-
 function Welcome({ isOwner, onNext, onLeave }: { isOwner: boolean; onNext: () => void; onLeave?: () => void }) {
   const wide = useWide();
   const intro = (
-    <Intro eyebrow="WELCOME ABOARD" heading="Find your next holiday, together" big>
-      Here's how it works. It takes about a minute to get going.
+    <Intro eyebrow={W.eyebrow} heading={W.heading} big>
+      {W.lead}
     </Intro>
   );
   const board = (
-      <section className="onb-board" aria-label="How it works">
+      <section className="onb-board" aria-label={W.board_label}>
         <div className="onb-board-head">
-          <span>HOW IT WORKS</span>
+          <span>{W.board_label}</span>
           <span aria-hidden>STATUS</span>
         </div>
         <ol>
-          {HOW.map((h, i) => (
+          {W.steps.map((h, i) => (
             <li key={h.title}>
-              <span className="onb-board-n">0{i + 1}</span>
+              <span className="onb-board-n">{String(i + 1).padStart(2, "0")}</span>
               <div>
                 <strong>
-                  <span aria-hidden>{h.icon}</span> {h.title}
+                  {h.icon && <span aria-hidden>{h.icon}</span>} {h.title}
                 </strong>
-                <p>{h.text}</p>
+                {h.text && <p>{h.text}</p>}
               </div>
               {i === 0 && <span className="onb-board-now">NOW</span>}
             </li>
@@ -213,19 +214,19 @@ function Welcome({ isOwner, onNext, onLeave }: { isOwner: boolean; onNext: () =>
           🧳
         </span>
         <div>
-          <span className="mono-label onb-eyebrow">BONUS</span>
-          <p>Log the holidays you've already been on to fill in your map.</p>
+          <span className="mono-label onb-eyebrow">{W.bonus_label}</span>
+          <p>{W.bonus}</p>
         </div>
       </div>
   );
   const note = (
     <p className="onb-note">
-      {isOwner ? "First, two quick things: where you fly from, and one place you'd love to go." : "First, one quick thing: a place you'd love to go."}
+      {isOwner ? W.note_organiser : W.note_member}
     </p>
   );
   const start = (
     <button type="button" className="btn onb-primary" onClick={onNext}>
-      Let's get started
+      {W.button}
     </button>
   );
   const leave = onLeave && (
@@ -329,14 +330,14 @@ function Airport({ onNext, onBack }: { onNext: () => void; onBack?: () => void }
   };
 
   const intro = (
-    <Intro eyebrow="CHECK-IN" heading="Which airport do you fly from?">
-      Pick the one closest to home. We use it to work out travel time to your ideas.
+    <Intro eyebrow={A.eyebrow} heading={A.heading}>
+      {A.lead}
     </Intro>
   );
   const search = (
     <>
       <label className="onb-field">
-        <span className="field-label">Closest airport</span>
+        <span className="field-label">{A.label}</span>
         <span className="onb-search">
           <SearchIcon />
           <input
@@ -349,7 +350,7 @@ function Airport({ onNext, onBack }: { onNext: () => void; onBack?: () => void }
                 if (results[0]) setPicked(results[0]);
               }
             }}
-            placeholder="Town, airport or code"
+            placeholder={A.placeholder}
             autoComplete="off"
           />
         </span>
@@ -391,7 +392,7 @@ function Airport({ onNext, onBack }: { onNext: () => void; onBack?: () => void }
           HOME BASE
         </span>
         <div>
-          <span className="mono-label">EVERY TRIP STARTS HERE</span>
+          <span className="mono-label">{A.pass_label}</span>
           <div className="onb-route" aria-label={picked ? `Every trip starts from ${picked.name}` : "No airport picked yet"}>
             <span className={picked ? "onb-route-code" : "onb-route-code blank"}>{picked?.code ?? "???"}</span>
             <span className="onb-dash" />
@@ -416,12 +417,12 @@ function Airport({ onNext, onBack }: { onNext: () => void; onBack?: () => void }
   );
   const go = (
     <button type="button" className="btn onb-primary" onClick={() => void save()} disabled={!picked || saving}>
-      {saving ? "Saving…" : "Continue"}
+      {saving ? "Saving…" : A.button}
     </button>
   );
   const skip = (
     <button type="button" className="onb-skip" onClick={onNext}>
-      We don't fly. Skip this
+      {A.skip}
     </button>
   );
 
@@ -442,7 +443,7 @@ function Airport({ onNext, onBack }: { onNext: () => void; onBack?: () => void }
         right={
           <>
             {pass}
-            <p className="onb-panel-note">You can change this any time in Settings.</p>
+            <p className="onb-panel-note">{A.pass_note}</p>
           </>
         }
       />
@@ -506,8 +507,8 @@ function FirstIdea({ onNext, onBack }: { onNext: (p: Place | null) => void; onBa
   };
 
   const intro = (
-    <Intro eyebrow="YOUR FIRST IDEA" heading="Where would you love to go next?" standby>
-      Just one for now. Everyone can add more later.
+    <Intro eyebrow={I.eyebrow} heading={I.heading} standby>
+      {I.lead}
     </Intro>
   );
   const fields = (
@@ -568,18 +569,18 @@ function FirstIdea({ onNext, onBack }: { onNext: (p: Place | null) => void; onBa
     <div className="onb-preview">
       <span className="mono-label">PREVIEW</span>
       <StandbyCard preview idea={{ ...idea, status: "active" }} />
-      {wide && <p className="onb-panel-note">This is how it'll look in your ideas.</p>}
+      {wide && <p className="onb-panel-note">{I.preview_note}</p>}
     </div>
   );
   const errorText = error && <p className="error-text">{error}</p>;
   const add = (
     <button type="button" className="btn onb-primary" onClick={() => void save()} disabled={!place || saving}>
-      {saving ? "Saving…" : "Put it on standby"}
+      {saving ? "Saving…" : I.button}
     </button>
   );
   const later = (
     <button type="button" className="onb-skip" onClick={() => onNext(null)}>
-      I'll add one later
+      {I.skip}
     </button>
   );
 
@@ -693,23 +694,23 @@ function Done({ added, from, onClose }: { added: Place | null; from: Terminal | 
   );
   const words = (
       <div className="onb-intro">
-        <h1>You're checked in</h1>
+        <h1>{D.heading}</h1>
         <p className="onb-lede">
           {intro}
-          {invite ? "A draw needs a few ideas, so bring the rest of the family in." : "Add more any time on Next, then draw together when everyone's ready."}
+          {invite ? D.organiser_text : D.member_text}
         </p>
       </div>
   );
   const shareButton = (
     <button type="button" className="btn onb-primary" onClick={() => void share()}>
-      Share link
+      {D.share_button}
     </button>
   );
   const invitePanel = invite && (
     <section className="onb-invite" aria-labelledby="onb-invite-h">
-      {wide && <span className="mono-label onb-eyebrow">PASSENGERS</span>}
-      <h2 id="onb-invite-h">Invite your family</h2>
-      <p className="muted small">Send them this link. They don't need an email, they just pick their name and colour.</p>
+      {wide && <span className="mono-label onb-eyebrow">{D.invite_label}</span>}
+      <h2 id="onb-invite-h">{D.invite_heading}</h2>
+      <p className="muted small">{D.invite_text}</p>
       {wide && (
         <label className="field-label" htmlFor="onb-family-link">
           Family link
@@ -728,7 +729,7 @@ function Done({ added, from, onClose }: { added: Place | null; from: Terminal | 
   if (wide) {
     const toIdeas = (
       <button type="button" className={invite ? "onb-skip" : "btn onb-primary"} onClick={toNext}>
-        Go to my ideas
+        {D.ideas_button}
       </button>
     );
     return invite ? (
@@ -771,15 +772,15 @@ function Done({ added, from, onClose }: { added: Place | null; from: Terminal | 
         {invite ? (
           <>
             <button type="button" className="btn onb-primary" onClick={() => void share()}>
-              Share link
+              {D.share_button}
             </button>
             <button type="button" className="onb-skip" onClick={toNext}>
-              Go to my ideas
+              {D.ideas_button}
             </button>
           </>
         ) : (
           <button type="button" className="btn onb-primary" onClick={toNext}>
-            Go to my ideas
+            {D.ideas_button}
           </button>
         )}
       </Actions>

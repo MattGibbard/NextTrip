@@ -1,7 +1,9 @@
-// Site-wide words edited at /admin: the home page (content/site/home.json) and the announcement
-// banner (content/site/banner.json). Bundled at build time like the destination guides.
+// Site-wide words edited at /admin: the home page (content/site/home.json), the announcement
+// banner (content/site/banner.json) and the welcome steps (content/site/onboarding.json).
+// Bundled at build time like the destination guides.
 import homeFile from "../content/site/home.json";
 import bannerFile from "../content/site/banner.json";
+import onboardingFile from "../content/site/onboarding.json";
 
 const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
 const obj = (v: unknown): Record<string, unknown> => (v && typeof v === "object" && !Array.isArray(v) ? (v as Record<string, unknown>) : {});
@@ -100,3 +102,91 @@ export function bannerKey(b: Banner): string {
   for (const ch of b.text + b.link_url) h = (Math.imul(h, 31) + ch.charCodeAt(0)) | 0;
   return (h >>> 0).toString(36);
 }
+
+/** The welcome steps' words. Each part is a set of named fields, as edited at /admin. */
+const ONBOARDING_FIELDS = {
+  welcome: ["eyebrow", "heading", "lead", "board_label", "bonus_label", "bonus", "note_organiser", "note_member", "button"],
+  airport: ["eyebrow", "heading", "lead", "label", "placeholder", "pass_label", "pass_note", "button", "skip"],
+  idea: ["eyebrow", "heading", "lead", "preview_note", "button", "skip"],
+  done: ["heading", "organiser_text", "member_text", "invite_label", "invite_heading", "invite_text", "share_button", "ideas_button"],
+} as const;
+
+type Words<K extends readonly string[]> = Record<K[number], string>;
+export interface OnboardingContent {
+  welcome: Words<(typeof ONBOARDING_FIELDS)["welcome"]> & { steps: { icon: string; title: string; text: string }[] };
+  airport: Words<(typeof ONBOARDING_FIELDS)["airport"]>;
+  idea: Words<(typeof ONBOARDING_FIELDS)["idea"]>;
+  done: Words<(typeof ONBOARDING_FIELDS)["done"]>;
+}
+
+/**
+ * Reads the welcome steps' file. Unlike the home page, every field is needed on screen, so one left
+ * empty in the editor keeps the words that shipped with the site rather than leaving a gap.
+ */
+export function readOnboarding(raw: unknown, fallback: OnboardingContent = ONBOARDING_DEFAULTS): OnboardingContent {
+  const r = obj(raw);
+  const part = <P extends keyof typeof ONBOARDING_FIELDS>(p: P) => {
+    const o = obj(r[p]);
+    return Object.fromEntries(ONBOARDING_FIELDS[p].map((k) => [k, str(o[k]) || (fallback[p] as Record<string, string>)[k]])) as OnboardingContent[P];
+  };
+  const steps = list(obj(r.welcome).steps)
+    .map((s) => ({ icon: str(s.icon), title: str(s.title), text: str(s.text) }))
+    .filter((s) => s.title);
+  return {
+    welcome: { ...part("welcome"), steps: steps.length ? steps : fallback.welcome.steps },
+    airport: part("airport"),
+    idea: part("idea"),
+    done: part("done"),
+  };
+}
+
+// The words as they shipped, kept in code so an emptied field always has something to fall back on.
+const ONBOARDING_DEFAULTS: OnboardingContent = {
+  welcome: {
+    eyebrow: "WELCOME ABOARD",
+    heading: "Find your next holiday, together",
+    lead: "Here's how it works. It takes about a minute to get going.",
+    board_label: "HOW IT WORKS",
+    steps: [
+      { icon: "💡", title: "DISCOVER AND ADD IDEAS", text: "Find places you'd love to go and put them on standby. Everyone in the family can add their own." },
+      { icon: "🎟️", title: "DRAW AS A FAMILY", text: "Everyone spreads their points in secret, gets one veto, and the draw picks where you go." },
+      { icon: "✈️", title: "PLAN THE TRIP", text: "Your winner becomes your next departure, ready to plan together." },
+    ],
+    bonus_label: "BONUS",
+    bonus: "Log the holidays you've already been on to fill in your map.",
+    note_organiser: "First, two quick things: where you fly from, and one place you'd love to go.",
+    note_member: "First, one quick thing: a place you'd love to go.",
+    button: "Let's get started",
+  },
+  airport: {
+    eyebrow: "CHECK-IN",
+    heading: "Which airport do you fly from?",
+    lead: "Pick the one closest to home. We use it to work out travel time to your ideas.",
+    label: "Closest airport",
+    placeholder: "Town, airport or code",
+    pass_label: "EVERY TRIP STARTS HERE",
+    pass_note: "You can change this any time in Settings.",
+    button: "Continue",
+    skip: "We don't fly. Skip this",
+  },
+  idea: {
+    eyebrow: "YOUR FIRST IDEA",
+    heading: "Where would you love to go next?",
+    lead: "Just one for now. Everyone can add more later.",
+    preview_note: "This is how it'll look in your ideas.",
+    button: "Put it on standby",
+    skip: "I'll add one later",
+  },
+  done: {
+    heading: "You're checked in",
+    organiser_text: "A draw needs a few ideas, so bring the rest of the family in.",
+    member_text: "Add more any time on Next, then draw together when everyone's ready.",
+    invite_label: "PASSENGERS",
+    invite_heading: "Invite your family",
+    invite_text: "Send them this link. They don't need an email, they just pick their name and colour.",
+    share_button: "Share link",
+    ideas_button: "Go to my ideas",
+  },
+};
+
+export const ONBOARDING = readOnboarding(onboardingFile);

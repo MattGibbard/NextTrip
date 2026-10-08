@@ -12,10 +12,13 @@ import { SiteBanner } from "./components/SiteBanner";
 import { PAGES, headTags as fixedTags, metaTags } from "../shared/seo";
 import type { FixedPage, PublicPage } from "../shared/seo";
 
-/** Every page to write, with the file it goes in. Destination guides come from content/destinations. */
-export function pages(): { page: PublicPage; file: string; path: string; index: boolean }[] {
-  const fixed: { page: FixedPage; file: string }[] = [
-    { page: "home", file: "index.html" },
+/**
+ * Every page to write, with the file it goes in. Destination guides come from content/destinations.
+ * `source` is the content file the page's words come from, so the build can tell when it last changed.
+ */
+export function pages(): { page: PublicPage; file: string; path: string; index: boolean; source?: string }[] {
+  const fixed: { page: FixedPage; file: string; source?: string }[] = [
+    { page: "home", file: "index.html", source: "content/site/home.json" },
     { page: "privacy", file: "privacy.html" },
     { page: "terms", file: "terms.html" },
     { page: "destinations", file: "destinations.html" },
@@ -23,7 +26,7 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
   ];
   return [
     ...fixed.map((f) => ({ ...f, path: PAGES[f.page].path, index: PAGES[f.page].index })),
-    ...DESTINATIONS.map((d) => ({ page: `destination:${d.slug}` as const, file: `destinations/${d.slug}.html`, path: `/destinations/${d.slug}`, index: true })),
+    ...DESTINATIONS.map((d) => ({ page: `destination:${d.slug}` as const, file: `destinations/${d.slug}.html`, path: `/destinations/${d.slug}`, index: true, source: `content/destinations/${d.slug}.json` })),
   ];
 }
 
@@ -31,9 +34,10 @@ function destination(page: PublicPage) {
   return page.startsWith("destination:") ? DESTINATIONS.find((d) => `destination:${d.slug}` === page) : undefined;
 }
 
-export function headTags(page: PublicPage): string {
+/** The page's <head> tags. `updated` is when its words last changed, as an ISO date, if known. */
+export function headTags(page: PublicPage, updated?: string): string {
   const d = destination(page);
-  if (d) return metaTags(destinationMeta(d));
+  if (d) return metaTags(destinationMeta(d, updated));
   if (page === "home") return fixedTags("home", { title: HOME.seo_title, description: HOME.seo_description });
   return fixedTags(page as FixedPage);
 }

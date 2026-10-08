@@ -304,8 +304,10 @@ collections:
           - { label: "Yemen", value: YE }
           - { label: "Zambia", value: ZM }
           - { label: "Zimbabwe", value: ZW }
-      - { label: Page heading, name: title, widget: string, hint: "e.g. Family holidays in New York. Also the page title in Google." }
+      - { label: Page heading, name: title, widget: string, hint: "e.g. Holidays in New York." }
       - { label: Introduction, name: intro, widget: text, hint: "One or two sentences under the heading. Google also shows this under the page title in search results, cut off after about 155 characters, so put the most important part first." }
+      - { label: Google title, name: seo_title, widget: string, required: false, hint: "Optional. The page title in search results, about 50 characters. Leave empty for \"New York holiday guide: when to go and what to do\"." }
+      - { label: Google description, name: seo_description, widget: text, required: false, hint: "Optional. Shown under the title in search results, cut off after about 155 characters. Leave empty to use the introduction." }
       - { label: Main photo, name: image, widget: image, required: false, hint: "Wide and bright. Also used when the page is shared." }
       - { label: Main photo description, name: image_alt, widget: string, required: false, hint: "What's in the photo, for people who can't see it." }
 

@@ -14,7 +14,7 @@
       { "title": "Sign up and add the trips you've been on", "text": "One of you signs up with an email and shares a link with everyone else. Each holiday becomes a ticket, and your map and passport fill in as you go.", "status": "Arrived" },
       { "title": "Put your ideas on standby", "text": "Anyone in the family can add a place they'd love to go, with budget, travel time and type of trip.", "status": "On standby" },
       { "title": "Everyone spreads their points", "text": "You each share out your points in secret and get one veto. Nobody sees anyone else's until the draw.", "status": "Boarding" },
-      { "title": "The draw picks where you go", "text": "The more points an idea has, the bigger its slice of the wheel. Spin it and see which one gets a seat.", "status": "Now departing" }
+      { "title": "The draw picks where you go", "text": "Every point is a ticket, so the more points an idea has, the better its chances. The departures board counts down to the one that gets a seat.", "status": "Now departing" }
     ]
   },
   "features": {
@@ -24,7 +24,7 @@
     "been": { "title": "Been", "text": "Every holiday you've had, as a ticket: where, when, how long, who came and how you got there." },
     "places": { "title": "Places", "text": "A map of everywhere you've been and everywhere you want to go, plus a passport that collects a stamp for each country." },
     "next": { "title": "Next", "text": "A shared pool of places to go next. Add the type of trip, the budget and the travel time so you can compare like for like." },
-    "draw": { "title": "The draw", "text": "Everyone spreads their points in secret, gets one veto, and the wheel picks where you go. Past draws are kept, so you can see how each one went." }
+    "draw": { "title": "The draw", "text": "Everyone spreads their points in secret, gets one veto, and the departures board reveals where you're going. Past draws are kept, so you can see how each one went." }
   },
   "why": {
     "kicker": "Why somewhere🎉",

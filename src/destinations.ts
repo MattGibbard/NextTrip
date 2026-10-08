@@ -23,9 +23,14 @@ export interface Destination {
   /** Found from the name and country when the site builds (scripts/geocode-destinations.mjs). */
   lat: number | null;
   lon: number | null;
+  /** The page heading. */
   title: string;
-  /** Also the description Google shows. */
+  /** Also the description Google shows, unless seo_description is set. */
   intro: string;
+  /** The title in search results, if the editor set one. Otherwise searchTitle() makes one. */
+  seo_title: string;
+  /** The description in search results, if the editor set one. Otherwise the intro. */
+  seo_description: string;
   /** A path under /images/destinations, or empty. */
   image: string;
   image_alt: string;
@@ -87,8 +92,10 @@ export function readDestination(slug: string, raw: Record<string, unknown>, posi
     country_code: code,
     lat: position?.lat ?? num(raw.lat),
     lon: position?.lon ?? num(raw.lon),
-    title: str(raw.title) || `Family holidays in ${name}`,
+    title: str(raw.title) || `Holidays in ${name}`,
     intro: str(raw.intro),
+    seo_title: str(raw.seo_title),
+    seo_description: str(raw.seo_description),
     image: str(raw.image),
     image_alt: str(raw.image_alt),
     to_code: str(raw.to_code).toUpperCase(),
@@ -204,15 +211,26 @@ export function ideaFromDestination(d: Destination): Partial<IdeaInput> {
   };
 }
 
-/** Title, description, share image and search-result data for a guide's page. */
-export function destinationMeta(d: Destination): Meta {
+/**
+ * A guide's title in search results: the editor's own, or one that says what the page answers. It
+ * doesn't say who the trip is for, so it suits couples, friends and families alike.
+ */
+export function searchTitle(d: Destination): string {
+  return `${d.seo_title || `${d.name} holiday guide: when to go and what to do`} | somewhere🎉`;
+}
+
+/**
+ * Title, description, share image and search-result data for a guide's page. `updated` is when its content last changed, as an ISO date, if known.
+ */
+export function destinationMeta(d: Destination, updated?: string): Meta {
+  const description = d.seo_description || d.intro;
   const url = SITE + destinationPath(d.slug);
   const jsonLd: unknown[] = [
     {
       "@context": "https://schema.org",
       "@type": "TouristDestination",
       name: d.name,
-      description: d.intro,
+      description,
       url,
       ...(d.image ? { image: imageUrl(d.image) } : {}),
       ...(d.lat !== null && d.lon !== null ? { geo: { "@type": "GeoCoordinates", latitude: d.lat, longitude: d.lon } } : {}),
@@ -228,6 +246,16 @@ export function destinationMeta(d: Destination): Meta {
       ],
     },
   ];
+  if (updated) {
+    jsonLd.push({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      url,
+      name: d.title,
+      dateModified: updated,
+      isPartOf: { "@type": "WebSite", name: "somewhere🎉", url: `${SITE}/` },
+    });
+  }
   if (d.faqs.length) {
     jsonLd.push({
       "@context": "https://schema.org",
@@ -237,8 +265,8 @@ export function destinationMeta(d: Destination): Meta {
   }
   return {
     path: destinationPath(d.slug),
-    title: `${d.title} | somewhere🎉`,
-    description: d.intro,
+    title: searchTitle(d),
+    description,
     index: true,
     image: d.image ? imageUrl(d.image) : undefined,
     imageAlt: d.image_alt || undefined,

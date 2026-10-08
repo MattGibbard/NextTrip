@@ -1,10 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot, hydrateRoot } from "react-dom/client";
-import "leaflet/dist/leaflet.css";
 import "./styles.css";
-import "./draw.css";
 import "./destination.css";
-import "./onboarding.css";
 import { App } from "./App";
 import { SiteBanner } from "./components/SiteBanner";
 import "./install";

@@ -3,6 +3,7 @@ import type { FormEvent, MouseEvent, ReactNode } from "react";
 import { api } from "../api";
 import { DESTINATIONS } from "../destinations";
 import { destinationPath } from "../../shared/seo";
+import { HOME } from "../site";
 
 /** The page frame for signed-out pages other than the home page: the home page's header and footer around the content. */
 export function Frame({ children }: { children: ReactNode }) {
@@ -124,66 +125,37 @@ function jump(e: MouseEvent<HTMLAnchorElement>) {
   el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-const STEPS = [
-  {
-    title: "Sign up and add the trips you've been on",
-    text: "One of you signs up with an email and shares a link with everyone else. Each holiday becomes a ticket, and your map and passport fill in as you go.",
-    status: "Arrived",
-  },
-  {
-    title: "Put your ideas on standby",
-    text: "Anyone in the family can add a place they'd love to go, with budget, travel time and type of trip.",
-    status: "On standby",
-  },
-  {
-    title: "Everyone spreads their points",
-    text: "You each share out your points in secret and get one veto. Nobody sees anyone else's until the draw.",
-    status: "Boarding",
-  },
-  {
-    title: "The draw picks where you go",
-    text: "The more points an idea has, the bigger its slice of the wheel. Spin it and see which one gets a seat.",
-    status: "Now departing",
-  },
-];
-
-const REASONS = [
-  {
-    title: "Everyone gets a say",
-    text: "Points are spread in secret, so the quietest voice counts as much as the loudest. And if there's somewhere you really can't face, that's what your veto is for.",
-  },
-  {
-    title: "No more going round in circles",
-    text: "Ideas stop getting lost in the group chat. They sit on standby until the draw, and once it's spun, the decision's made and you can get on with booking.",
-  },
-  {
-    title: "Remember everywhere you've been",
-    text: "Every trip fills in your map and passport, so years of family holidays live in one place, not across old photos and half-remembered dates.",
-  },
-];
+/** Text from the editor, where **two stars** around words make them bold. */
+function Rich({ text }: { text: string }) {
+  return (
+    <>
+      {text.split(/\*\*(.+?)\*\*/g).map((part, i) => (i % 2 ? <strong key={i}>{part}</strong> : part))}
+    </>
+  );
+}
 
 /** The public front page, with the sign-in form. */
 export function HomePage() {
+  const { hero, how, features, why, signup } = HOME;
   return (
     <div className="lp lp-home">
       <SiteHeader sections />
 
       <section className="lp-wrap lp-hero">
         <div className="lp-hero-text">
-          <div className="lp-kicker">The family holiday planner</div>
-          <h1>Can't agree where to go next? Let the draw decide.</h1>
-          <p className="lp-lead">
-            somewhere🎉 keeps your family's holidays in one place: the trips you've been on, a map of where you've been, and a pool of ideas for where to go next. When it's
-            time to decide where to go on holiday, everyone spreads their points in secret and the draw picks the winner.
-          </p>
+          {hero.kicker && <div className="lp-kicker">{hero.kicker}</div>}
+          <h1>{hero.heading}</h1>
+          {hero.lead && <p className="lp-lead">{hero.lead}</p>}
           <SignInForm id="hero-email" />
-          <div className="lp-perks">
-            <span>
-              <strong>Free</strong> for the whole family
-            </span>
-            <span>One email for everyone</span>
-            <span>Share a link to invite the others</span>
-          </div>
+          {hero.perks.length > 0 && (
+            <div className="lp-perks">
+              {hero.perks.map((p) => (
+                <span key={p}>
+                  <Rich text={p} />
+                </span>
+              ))}
+            </div>
+          )}
         </div>
         <HeroTickets />
       </section>
@@ -191,8 +163,8 @@ export function HomePage() {
       <section id="how" className="lp-wrap lp-section-how">
         <div className="lp-board">
           <div className="lp-board-head">
-            <span className="lp-board-label">Departures · How it works</span>
-            <h2>From "where shall we go?" to booked, in four steps.</h2>
+            {how.label && <span className="lp-board-label">{how.label}</span>}
+            <h2>{how.heading}</h2>
           </div>
           <div className="lp-board-rows" role="list">
             <div className="lp-board-row lp-board-cols" aria-hidden>
@@ -200,14 +172,14 @@ export function HomePage() {
               <span>What happens</span>
               <span>Status</span>
             </div>
-            {STEPS.map((s, i) => (
+            {how.steps.map((s, i) => (
               <div key={s.title} className="lp-board-row" role="listitem">
                 <span className="lp-board-num">{String(i + 1).padStart(2, "0")}</span>
                 <div className="lp-board-what">
                   <strong>{s.title}</strong>
                   <span>{s.text}</span>
                 </div>
-                <span className={i === STEPS.length - 1 ? "lp-board-status lit" : "lp-board-status"}>{s.status}</span>
+                <span className={i === how.steps.length - 1 ? "lp-board-status lit" : "lp-board-status"}>{s.status}</span>
               </div>
             ))}
           </div>
@@ -216,17 +188,17 @@ export function HomePage() {
 
       <section id="features" className="lp-wrap lp-section">
         <div className="lp-heading">
-          <span className="lp-kicker">What's inside</span>
-          <h2>Everything your family's holidays need, in one place</h2>
-          <p className="lp-lead">Where you've been, where you want to go, and a fair way to choose between them.</p>
+          {features.kicker && <span className="lp-kicker">{features.kicker}</span>}
+          <h2>{features.heading}</h2>
+          {features.lead && <p className="lp-lead">{features.lead}</p>}
         </div>
         <div className="lp-features">
           <div className="panel lp-feature">
             <span className="lp-feature-icon" aria-hidden>
               🧳
             </span>
-            <h3>Been</h3>
-            <p className="muted">Every holiday you've had, as a ticket: where, when, how long, who came and how you got there.</p>
+            <h3>{features.been.title}</h3>
+            <p className="muted">{features.been.text}</p>
             <div className="lp-feature-foot lp-modes">
               <span className="flight">Flight</span>
               <span className="train">Train</span>
@@ -238,8 +210,8 @@ export function HomePage() {
             <span className="lp-feature-icon" aria-hidden>
               🗺️
             </span>
-            <h3>Places</h3>
-            <p className="muted">A map of everywhere you've been and everywhere you want to go, plus a passport that collects a stamp for each country.</p>
+            <h3>{features.places.title}</h3>
+            <p className="muted">{features.places.text}</p>
             <div className="lp-feature-foot lp-stamps" aria-hidden>
               <span className="flight round">ESP</span>
               <span className="train square">ITA</span>
@@ -250,8 +222,8 @@ export function HomePage() {
             <span className="lp-feature-icon" aria-hidden>
               💡
             </span>
-            <h3>Next</h3>
-            <p className="muted">A shared pool of places to go next. Add the type of trip, the budget and the travel time so you can compare like for like.</p>
+            <h3>{features.next.title}</h3>
+            <p className="muted">{features.next.text}</p>
             <div className="lp-feature-foot lp-chips">
               <span>🏙️ City break</span>
               <span>🏖️ Beach</span>
@@ -262,8 +234,8 @@ export function HomePage() {
             <span className="lp-feature-icon" aria-hidden>
               🎟️
             </span>
-            <h3>The draw</h3>
-            <p className="muted">Everyone spreads their points in secret, gets one veto, and the wheel picks where you go. Past draws are kept, so you can see how each one went.</p>
+            <h3>{features.draw.title}</h3>
+            <p className="muted">{features.draw.text}</p>
             <div className="lp-feature-foot lp-points" aria-hidden>
               <div>
                 <strong>23</strong>
@@ -278,11 +250,11 @@ export function HomePage() {
       <section id="why" className="lp-why">
         <div className="lp-wrap lp-section">
           <div className="lp-heading">
-            <span className="lp-kicker">Why somewhere🎉</span>
-            <h2>Picking a holiday shouldn't be the hard part</h2>
+            {why.kicker && <span className="lp-kicker">{why.kicker}</span>}
+            <h2>{why.heading}</h2>
           </div>
           <div className="lp-reasons">
-            {REASONS.map((r) => (
+            {why.reasons.map((r) => (
               <div key={r.title} className="lp-reason">
                 <h3>{r.title}</h3>
                 <p className="muted">{r.text}</p>
@@ -294,11 +266,11 @@ export function HomePage() {
 
       <section id="signin" className="lp-wrap lp-section">
         <div className="lp-cta">
-          <div className="lp-cta-strip">Now boarding · All passengers</div>
+          {signup.strip && <div className="lp-cta-strip">{signup.strip}</div>}
           <div className="lp-cta-body">
             <div className="lp-cta-text">
-              <h2>Your next holiday is somewhere🎉. Find out where.</h2>
-              <p className="lp-lead">It's free. One of you signs up with an email, then shares a link so the rest of the family can join. No one else needs an account.</p>
+              <h2>{signup.heading}</h2>
+              {signup.lead && <p className="lp-lead">{signup.lead}</p>}
             </div>
             <SignInForm id="cta-email" />
           </div>

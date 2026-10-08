@@ -82,8 +82,9 @@ function esc(s: string): string {
 }
 
 /** The title, description, canonical address and share-preview tags for a fixed page's <head>. */
-export function headTags(page: FixedPage): string {
-  const m = PAGES[page];
+export function headTags(page: FixedPage, words?: { title?: string; description?: string }): string {
+  // The home page's title and description can be changed in the editor at /admin.
+  const m = { ...PAGES[page], ...(words?.title ? { title: words.title } : {}), ...(words?.description ? { description: words.description } : {}) };
   return metaTags(page === "home" ? { ...m, jsonLd: [structuredData()] } : m);
 }
 

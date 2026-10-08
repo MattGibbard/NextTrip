@@ -7,6 +7,8 @@ import { HomePage, NotFound } from "./views/Welcome";
 import { LegalView } from "./views/Legal";
 import { DestinationPage, DestinationsIndex } from "./views/DestinationPage";
 import { DESTINATIONS, destinationMeta } from "./destinations";
+import { HOME } from "./site";
+import { SiteBanner } from "./components/SiteBanner";
 import { PAGES, headTags as fixedTags, metaTags } from "../shared/seo";
 import type { FixedPage, PublicPage } from "../shared/seo";
 
@@ -32,14 +34,25 @@ function destination(page: PublicPage) {
 export function headTags(page: PublicPage): string {
   const d = destination(page);
   if (d) return metaTags(destinationMeta(d));
+  if (page === "home") return fixedTags("home", { title: HOME.seo_title, description: HOME.seo_description });
   return fixedTags(page as FixedPage);
 }
 
+/** The page's HTML, under the announcement banner when one is on, as main.tsx draws it. */
 export function render(page: PublicPage): string {
+  return renderToString(
+    <>
+      <SiteBanner />
+      {pageBody(page)}
+    </>,
+  );
+}
+
+function pageBody(page: PublicPage) {
   const d = destination(page);
-  if (d) return renderToString(<DestinationPage destination={d} />);
-  if (page === "home") return renderToString(<HomePage />);
-  if (page === "notfound") return renderToString(<NotFound />);
-  if (page === "destinations") return renderToString(<DestinationsIndex />);
-  return renderToString(<LegalView page={page as "privacy" | "terms"} />);
+  if (d) return <DestinationPage destination={d} />;
+  if (page === "home") return <HomePage />;
+  if (page === "notfound") return <NotFound />;
+  if (page === "destinations") return <DestinationsIndex />;
+  return <LegalView page={page as "privacy" | "terms"} />;
 }

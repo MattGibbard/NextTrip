@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { HOME, bannerEnded, bannerKey, readBanner, readHome } from "../src/site";
+import { HOME, ONBOARDING, bannerEnded, bannerKey, readBanner, readHome, readOnboarding } from "../src/site";
 
 describe("home page words", () => {
   it("come from the editor's file", () => {
@@ -40,5 +40,22 @@ describe("announcement banner", () => {
     const b = readBanner({ show: true, text: "One" })!;
     expect(bannerKey(b)).toBe(bannerKey({ ...b }));
     expect(bannerKey(b)).not.toBe(bannerKey({ ...b, text: "Two" }));
+  });
+});
+
+describe("welcome steps' words", () => {
+  it("come from the editor's file", () => {
+    expect(ONBOARDING.welcome.heading).toBe("Find your next holiday, together");
+    expect(ONBOARDING.welcome.steps).toHaveLength(3);
+    expect(ONBOARDING.done.invite_heading).toBe("Invite your family");
+  });
+
+  it("keep the original words for anything left empty", () => {
+    const o = readOnboarding({ welcome: { heading: "Hello", lead: "  ", steps: [{ title: "" }] }, idea: { button: "Add it" } });
+    expect(o.welcome.heading).toBe("Hello");
+    expect(o.welcome.lead).toBe(ONBOARDING.welcome.lead);
+    expect(o.welcome.steps).toEqual(ONBOARDING.welcome.steps);
+    expect(o.idea.button).toBe("Add it");
+    expect(o.airport.skip).toBe("We don't fly. Skip this");
   });
 });

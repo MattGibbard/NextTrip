@@ -498,7 +498,7 @@ collections:
 
   - name: site
     label: Site
-    description: The home page's words and the announcement banner across the top of every page.
+    description: The home page's words, the announcement banner across the top of every page, and the welcome steps new people see when they first sign in.
     format: json
     editor:
       preview: false
@@ -581,3 +581,66 @@ collections:
               - { label: Strip label, name: strip, widget: string, required: false }
               - { label: Heading, name: heading, widget: string }
               - { label: Text, name: lead, widget: text, required: false }
+      - name: onboarding
+        label: Welcome steps
+        file: content/site/onboarding.json
+        description: What new people see the first time they sign in, and again from Settings > How it works. A field left empty goes back to the original words.
+        fields:
+          - label: 1. Welcome
+            name: welcome
+            widget: object
+            fields:
+              - { label: Small heading, name: eyebrow, widget: string, required: false }
+              - { label: Main heading, name: heading, widget: string, required: false }
+              - { label: Introduction, name: lead, widget: text, required: false }
+              - { label: Board label, name: board_label, widget: string, required: false, hint: "Across the top of the dark How it works board." }
+              - label: How it works
+                name: steps
+                widget: list
+                required: false
+                summary: "{{title}}"
+                hint: The first step is marked NOW on the board.
+                fields:
+                  - { label: Emoji, name: icon, widget: string, required: false }
+                  - { label: Title, name: title, widget: string, hint: "Shown in capitals on the board." }
+                  - { label: Description, name: text, widget: text, required: false }
+              - { label: Bonus label, name: bonus_label, widget: string, required: false }
+              - { label: Bonus text, name: bonus, widget: text, required: false }
+              - { label: Note for the organiser, name: note_organiser, widget: text, required: false, hint: "Above the button. The organiser also picks a home airport." }
+              - { label: Note for family members, name: note_member, widget: text, required: false, hint: "Above the button for people who joined with the family link. They skip the airport step." }
+              - { label: Button, name: button, widget: string, required: false }
+          - label: 2. Home airport (organiser only)
+            name: airport
+            widget: object
+            fields:
+              - { label: Small heading, name: eyebrow, widget: string, required: false }
+              - { label: Main heading, name: heading, widget: string, required: false }
+              - { label: Introduction, name: lead, widget: text, required: false }
+              - { label: Search label, name: label, widget: string, required: false }
+              - { label: Search placeholder, name: placeholder, widget: string, required: false }
+              - { label: Pass label, name: pass_label, widget: string, required: false, hint: "On the Home base pass." }
+              - { label: Note under the pass, name: pass_note, widget: string, required: false, hint: "Shown on computers and tablets." }
+              - { label: Button, name: button, widget: string, required: false }
+              - { label: Skip link, name: skip, widget: string, required: false }
+          - label: 3. First idea
+            name: idea
+            widget: object
+            fields:
+              - { label: Small heading, name: eyebrow, widget: string, required: false }
+              - { label: Main heading, name: heading, widget: string, required: false }
+              - { label: Introduction, name: lead, widget: text, required: false }
+              - { label: Note under the preview, name: preview_note, widget: string, required: false, hint: "Shown on computers and tablets." }
+              - { label: Button, name: button, widget: string, required: false }
+              - { label: Skip link, name: skip, widget: string, required: false }
+          - label: 4. You're checked in
+            name: done
+            widget: object
+            fields:
+              - { label: Main heading, name: heading, widget: string, required: false }
+              - { label: Text for the organiser, name: organiser_text, widget: text, required: false, hint: "After \"Lisbon is on standby.\", which is added for whatever idea they put in." }
+              - { label: Text for family members, name: member_text, widget: text, required: false }
+              - { label: Invite label, name: invite_label, widget: string, required: false, hint: "Small heading on the invite panel, on computers and tablets." }
+              - { label: Invite heading, name: invite_heading, widget: string, required: false }
+              - { label: Invite text, name: invite_text, widget: text, required: false }
+              - { label: Share button, name: share_button, widget: string, required: false }
+              - { label: Go to ideas button, name: ideas_button, widget: string, required: false }

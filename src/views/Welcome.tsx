@@ -27,7 +27,7 @@ export function SiteHeader({ sections = false, guide = false }: { sections?: boo
           </a>
           <nav className="lp-nav lp-nav-guide" aria-label="Main">
             <a className="lp-nav-keep" href="/destinations" aria-current={guide === "index" ? "page" : undefined}>
-              Destinations
+              Guides
             </a>
             <a href="/#how">How the draw works</a>
             <a href="/#signin">Sign in</a>
@@ -60,7 +60,7 @@ export function SiteHeader({ sections = false, guide = false }: { sections?: boo
             </>
           )}
           <a className="lp-nav-keep" href="/destinations">
-            Destinations
+            Guides
           </a>
         </nav>
         {sections ? (
@@ -88,15 +88,15 @@ export function SiteFooter({ sections = false }: { sections?: boolean }) {
           <div className="muted small">Where we've been, and where we're going next.</div>
         </div>
         {DESTINATIONS.length > 0 && (
-          <nav aria-label="Destinations" className="lp-foot-dest">
-            <span className="lp-foot-label">DESTINATIONS</span>
+          <nav aria-label="Guides" className="lp-foot-dest">
+            <span className="lp-foot-label">GUIDES</span>
             <div className="lp-foot-dest-links">
               {DESTINATIONS.slice(0, 11).map((d) => (
                 <a key={d.slug} href={destinationPath(d.slug)}>
                   {d.name}
                 </a>
               ))}
-              <a href="/destinations">All destinations</a>
+              <a href="/destinations">All guides</a>
             </div>
           </nav>
         )}

@@ -46,7 +46,7 @@ const APP_TABS = [
   { id: "draw", label: "Draw", icon: "🎟️" },
 ];
 
-/** The signed-in app's header, as links back into the app, with Destinations as the current page. */
+/** The signed-in app's header, as links back into the app, with Guides as the current page. */
 function AppHeader({ index = false }: { index?: boolean }) {
   return (
     <header className="lp-top">
@@ -61,7 +61,7 @@ function AppHeader({ index = false }: { index?: boolean }) {
             </a>
           ))}
           <a href="/destinations" aria-current={index ? "page" : "true"}>
-            <span aria-hidden>🧭</span> Destinations
+            <span aria-hidden>🧭</span> Guides
           </a>
         </nav>
         <a className="icon-btn" href="/#/settings" aria-label="Settings">
@@ -96,7 +96,7 @@ export function DestinationPage({ destination: d }: { destination: Destination }
           <nav aria-label="Breadcrumb" className="dg-crumbs">
             {signedIn ? <a href="/#/next">Next</a> : <a href="/">Home</a>}
             <span aria-hidden>›</span>
-            <a href="/destinations">Destinations</a>
+            <a href="/destinations">Guides</a>
             <span aria-hidden>›</span>
             <span aria-current="page">{d.name}</span>
           </nav>
@@ -434,7 +434,7 @@ export function DestinationsIndex() {
       <main>
         <section className="lp-wrap dx-hero">
           <div className="dx-hero-text">
-            <Label>DESTINATIONS</Label>
+            <Label>GUIDES</Label>
             <h1>Family holiday ideas</h1>
             <p className="dg-intro">When to go, how long to stay and what to do with the kids. Find somewhere new and put it on standby for your next draw.</p>
             <div className="dx-search">

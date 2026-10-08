@@ -36,8 +36,6 @@ export function TripsView({ addFrom = null }: { addFrom?: string | null }) {
     return { countries: countries.size, cities: cities.size, nights: away, continents: continents.size };
   }, [trips]);
 
-  // Trips arrive newest first, so the oldest trip is pass #01.
-  const passNo = useMemo(() => new Map(trips.map((t, i) => [t.id, trips.length - i])), [trips]);
   const modeCounts = useMemo(() => {
     const counts = Object.fromEntries(MODE_KEYS.map((k) => [k, 0])) as Record<Mode, number>;
     for (const t of trips) counts[tripMode(t)]++;
@@ -60,7 +58,7 @@ export function TripsView({ addFrom = null }: { addFrom?: string | null }) {
         <div>
           <div className="eyebrow">ARRIVALS{people.length > 0 && <span className="desktop-only"> · {people.map((p) => p.name.toUpperCase()).join(" & ")}</span>}</div>
           <h1 className="display">Where we've been</h1>
-          <p className="muted page-sub">Holidays you've had, kept as postcards. Tap one to turn it over.</p>
+          <p className="muted page-sub">Holidays you've had, kept as postcards. Tap one to see the whole trip.</p>
         </div>
         <button className="btn" onClick={() => setAdding(true)}>
           We've been! Add trip
@@ -110,7 +108,7 @@ export function TripsView({ addFrom = null }: { addFrom?: string | null }) {
           </div>
           <div className="postcard-grid">
             {list.map((t) => (
-              <TripPostcard key={t.id} trip={t} passNo={passNo.get(t.id) ?? 0} />
+              <TripPostcard key={t.id} trip={t} />
             ))}
           </div>
         </section>

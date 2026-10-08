@@ -115,24 +115,3 @@ export function Pass({ tone, photo, head, route, title, byline, facts, tags, stu
     </div>
   );
 }
-
-/** A dark departures-board list of a trip's stops. */
-export function Board({ title, column, rows }: { title: string; column: string; rows: { label: ReactNode; note: string; lit: boolean }[] }) {
-  return (
-    <div className="board">
-      <div className="board-title mono-label mobile-only">{title}</div>
-      <div className="board-row board-headings mono-label desktop-only">
-        <span>STOP</span>
-        <span>{column}</span>
-        <span className="board-note">STATUS</span>
-      </div>
-      {rows.map((r, i) => (
-        <div key={i} className="board-row">
-          <span className="board-num">{String(i + 1).padStart(2, "0")}</span>
-          <span className="ellipsis">{r.label}</span>
-          <span className={`board-note ${r.lit ? "lit" : ""}`}>{r.note}</span>
-        </div>
-      ))}
-    </div>
-  );
-}

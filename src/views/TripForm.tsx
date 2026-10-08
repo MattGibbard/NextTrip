@@ -89,8 +89,7 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
           <SheetPreview>
             <TripPostcard
               preview
-              passNo={passNo}
-              trip={{ title, start_date: start || null, end_date: end || null, places, rating, cover_url: cover || null, depart: journey.depart, arrive: journey.arrive, ...modeFlags(mode) }}
+              trip={{ title, start_date: start || null, places, cover_url: cover || null, ...modeFlags(mode) }}
             />
           </SheetPreview>
 

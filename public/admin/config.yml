@@ -34,8 +34,8 @@ media_libraries:
 
 collections:
   - name: destinations
-    label: Destinations
-    label_singular: Destination
+    label: Guides
+    label_singular: Guide
     description: Family holiday guides at somewhere.party/destinations. Untick "Published" to keep one off the site.
     folder: content/destinations
     format: json

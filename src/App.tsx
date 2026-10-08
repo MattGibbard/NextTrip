@@ -156,7 +156,7 @@ function Shell() {
                 {t.label}
               </button>
             ))}
-            <a href="/destinations">Destinations</a>
+            <a href="/destinations">Guides</a>
           </nav>
           <div className="topbar-right">
             {me && (
@@ -200,7 +200,7 @@ function Shell() {
         ))}
         <a href="/destinations">
           <span className="icon">🧭</span>
-          Destinations
+          Guides
         </a>
       </nav>
 

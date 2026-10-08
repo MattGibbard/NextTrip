@@ -10,9 +10,9 @@ backend:
   base_url: https://somewhere.party
   auth_endpoint: api/cms/auth
   commit_messages:
-    create: "Add the {{slug}} destination guide"
-    update: "Update the {{slug}} destination guide"
-    delete: "Remove the {{slug}} destination guide"
+    create: "Add {{collection}}: {{slug}}"
+    update: "Update {{collection}}: {{slug}}"
+    delete: "Remove {{collection}}: {{slug}}"
     uploadMedia: "Upload {{path}}"
     deleteMedia: "Delete {{path}}"
 
@@ -493,3 +493,89 @@ collections:
           - { label: Place name, name: name, widget: string }
           - { label: Code, name: code, widget: string, hint: "Three letters, e.g. BOS." }
           - { label: Label, name: label, widget: string, required: false, hint: "e.g. 🏙️ City break" }
+
+  - name: site
+    label: Site
+    description: The home page's words and the announcement banner across the top of every page.
+    format: json
+    editor:
+      preview: false
+    files:
+      - name: banner
+        label: Announcement banner
+        file: content/site/banner.json
+        fields:
+          - { label: Show the banner, name: show, widget: boolean, default: false, hint: "Untick to take it down." }
+          - { label: Message, name: text, widget: string, required: false, hint: "One short sentence, e.g. New: guides to New York and Orlando." }
+          - { label: Link text, name: link_text, widget: string, required: false, hint: "e.g. Take a look. Leave empty for no link." }
+          - { label: Link address, name: link_url, widget: string, required: false, hint: "A page on the site such as /destinations, or a full address starting https://" }
+          - label: Colour
+            name: style
+            widget: select
+            default: news
+            options:
+              - { label: Teal (news), value: news }
+              - { label: Dark (celebration), value: celebrate }
+              - { label: Orange (important), value: warning }
+          - { label: Last day, name: ends, widget: datetime, required: false, time_format: false, date_format: YYYY-MM-DD, format: YYYY-MM-DD, hint: "Optional. The banner hides itself after this day." }
+
+      - name: home
+        label: Home page
+        file: content/site/home.json
+        fields:
+          - { label: Google title, name: seo_title, widget: string, hint: "The page title in search results and browser tabs. About 60 characters." }
+          - { label: Google description, name: seo_description, widget: text, hint: "Shown under the title in search results, cut off after about 155 characters." }
+          - label: Top of the page
+            name: hero
+            widget: object
+            fields:
+              - { label: Small heading, name: kicker, widget: string, required: false }
+              - { label: Main heading, name: heading, widget: string }
+              - { label: Introduction, name: lead, widget: text, required: false }
+              - { label: Points under the sign-up box, name: perks, widget: list, required: false, hint: "Put **two stars** around words to make them bold." }
+          - label: How it works
+            name: how
+            widget: object
+            fields:
+              - { label: Board label, name: label, widget: string, required: false }
+              - { label: Heading, name: heading, widget: string }
+              - label: Steps
+                name: steps
+                widget: list
+                summary: "{{title}}"
+                hint: The last step's status lights up on the board.
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: text, widget: text, required: false }
+                  - { label: Status, name: status, widget: string, required: false, hint: "e.g. On standby, Boarding" }
+          - label: What's inside
+            name: features
+            widget: object
+            fields:
+              - { label: Small heading, name: kicker, widget: string, required: false }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Introduction, name: lead, widget: text, required: false }
+              - { label: Been card, name: been, widget: object, fields: [{ label: Title, name: title, widget: string }, { label: Text, name: text, widget: text }] }
+              - { label: Places card, name: places, widget: object, fields: [{ label: Title, name: title, widget: string }, { label: Text, name: text, widget: text }] }
+              - { label: Next card, name: next, widget: object, fields: [{ label: Title, name: title, widget: string }, { label: Text, name: text, widget: text }] }
+              - { label: Draw card, name: draw, widget: object, fields: [{ label: Title, name: title, widget: string }, { label: Text, name: text, widget: text }] }
+          - label: Why use it
+            name: why
+            widget: object
+            fields:
+              - { label: Small heading, name: kicker, widget: string, required: false }
+              - { label: Heading, name: heading, widget: string }
+              - label: Reasons
+                name: reasons
+                widget: list
+                summary: "{{title}}"
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
+          - label: Sign-up box at the bottom
+            name: signup
+            widget: object
+            fields:
+              - { label: Strip label, name: strip, widget: string, required: false }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Text, name: lead, widget: text, required: false }

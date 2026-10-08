@@ -52,6 +52,8 @@ The guides at `/destinations/…` are edited at [somewhere.party/admin](https://
 
 Each guide's map position is found from its place name and country when the site builds (`scripts/geocode-destinations.mjs`, using OpenStreetMap's place search) and kept in `content/destinations-geo.json`. The flight time and best months are worked out from that and the month ratings. If a published guide's place can't be found, the build stops and the live site stays as it was.
 
+The editor's **Site** section holds the home page's words (`content/site/home.json`) and the announcement banner across the top of every page (`content/site/banner.json`). Visitors can close the banner; it comes back when its message changes, and hides itself after its last day if one is set.
+
 Signing in to the editor needs a GitHub OAuth app, set up once:
 
 1. On GitHub, go to **Settings → Developer settings → OAuth Apps → New OAuth App**. Use `https://somewhere.party` as the homepage and `https://somewhere.party/api/cms/callback` as the callback URL.

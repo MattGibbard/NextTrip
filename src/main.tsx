@@ -5,6 +5,7 @@ import "./styles.css";
 import "./draw.css";
 import "./destination.css";
 import { App } from "./App";
+import { SiteBanner } from "./components/SiteBanner";
 import "./install";
 import "./theme";
 import { publicPage } from "../shared/seo";
@@ -12,6 +13,7 @@ import { publicPage } from "../shared/seo";
 const root = document.getElementById("root")!;
 const app = (
   <StrictMode>
+    <SiteBanner />
     <App />
   </StrictMode>
 );

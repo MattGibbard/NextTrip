@@ -61,38 +61,10 @@
   font-weight: 600;
 }
 
-/* Header for signed-in families: the app's tabs as links. */
-.dg-apptabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  margin-left: auto;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-.dg-apptabs a {
-  color: var(--muted);
-  text-decoration: none;
-  padding: 10px 12px;
-  border-radius: 999px;
-}
-.dg-apptabs a:hover {
-  color: var(--accent);
-}
-.dg-apptabs a[aria-current="page"] {
-  color: var(--accent);
-  background: var(--accent-soft);
-}
-.dg .icon-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  flex: none;
-}
-@media (max-width: 560px) {
-  .dg-apptabs span {
-    display: none;
+/* Signed-in families get the app's header and, on phones, its bottom bar, so leave room for it. */
+@media (max-width: 759px) {
+  .dg-app {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom));
   }
 }
 

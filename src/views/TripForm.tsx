@@ -7,7 +7,7 @@ import { Modal } from "../components/Modal";
 import { CoverPicker } from "../components/CoverPicker";
 import { MODE_HINT, ModePicker, PlacesField, SheetFoot, SheetHead, SheetPreview, SheetSection } from "../components/Sheet";
 import { JourneyCards, useJourney } from "../components/TerminalPicker";
-import { TripTicket } from "../components/TripTicket";
+import { TripPostcard } from "../components/TripPostcard";
 import { ideaMode, modeFlags, tripMode } from "../../shared/travelMode";
 import type { Mode } from "../../shared/travelMode";
 import type { Terminal } from "../../shared/terminals";
@@ -40,7 +40,7 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
   // Trips arrive newest first, so the oldest is ticket #01, as on the trips page.
   const index = trip ? trips.findIndex((t) => t.id === trip.id) : -1;
   const passNo = index >= 0 ? trips.length - index : trips.length + 1;
-  const ticketNo = `#${String(passNo).padStart(2, "0")}`;
+  const cardNo = `Nº ${String(passNo).padStart(2, "0")}`;
   const ordered = mode !== "flight";
   const heading = trip ? "Edit trip" : "Add a trip";
 
@@ -83,11 +83,11 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
   return (
     <Modal title={heading} onClose={onClose} bare>
       <form className={`trip-sheet mode-${mode}`} onSubmit={submit}>
-        <SheetHead eyebrow={trip ? `TICKET ${ticketNo}` : `NEW TICKET · ${ticketNo}`} heading={heading} onClose={onClose} />
+        <SheetHead eyebrow={trip ? `POSTCARD ${cardNo}` : `NEW POSTCARD · ${cardNo}`} heading={heading} onClose={onClose} />
 
         <div className="ts-body">
           <SheetPreview>
-            <TripTicket
+            <TripPostcard
               preview
               passNo={passNo}
               trip={{ title, start_date: start || null, end_date: end || null, places, rating, cover_url: cover || null, depart: journey.depart, arrive: journey.arrive, ...modeFlags(mode) }}

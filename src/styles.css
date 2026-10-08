@@ -1318,30 +1318,97 @@ button.card:hover {
 .ts-stars button.on {
   color: var(--gold);
 }
-.ts-cover {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* Cover photo: photos of the places to tap, and a link box for your own */
+.cover-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
 }
-.ts-thumb {
-  width: 64px;
-  height: 46px;
-  flex: none;
+.cover-tile {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  border: 0;
   border-radius: 10px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--mode) 12%, var(--surface));
+  cursor: pointer;
+}
+.cover-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.15s ease;
+}
+.cover-tile:hover:not(:disabled) img {
+  transform: scale(1.04);
+}
+.cover-tile:disabled {
+  cursor: progress;
+}
+.cover-tile.on {
+  outline: 3px solid var(--mode);
+  outline-offset: 2px;
+}
+.cover-tile:focus-visible {
+  outline: 3px solid var(--mode);
+  outline-offset: 2px;
+}
+.cover-tile.loading,
+.cover-tile.saving {
+  animation: cover-pulse 1.2s ease-in-out infinite;
+}
+@keyframes cover-pulse {
+  50% {
+    opacity: 0.55;
+  }
+}
+.cover-tick {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
   display: grid;
   place-items: center;
-  background: color-mix(in srgb, var(--mode) 16%, var(--surface));
+  background: var(--mode);
+  color: #fff;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.3);
+}
+.cover-empty {
+  margin: 0;
+  padding: 14px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  text-align: center;
+}
+.cover-picker p {
+  margin: 0;
+}
+.cover-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-height: 24px;
+}
+.cover-foot a {
+  color: inherit;
+}
+.cover-own {
+  margin-left: auto;
+  padding: 4px 0;
+  border: 0;
+  background: none;
   color: var(--mode-ink);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
 }
-.ts-thumb.photo {
-  background-position: center;
-  background-size: cover;
-}
-.ts-cover input {
-  flex: 1;
-  min-width: 0;
-}
-
 /* Budget, trip length and type of holiday on the idea sheet */
 .trip-sheet .field {
   gap: 8px;

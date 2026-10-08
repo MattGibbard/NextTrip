@@ -4,7 +4,6 @@ import type { Place } from "../../shared/types";
 import { MODES, MODE_KEYS } from "../../shared/travelMode";
 import type { Mode } from "../../shared/travelMode";
 import { flag } from "../countries";
-import { cssUrl } from "../format";
 import { ModeIcon } from "./ModeIcon";
 import { PlaceSearch } from "./PlaceSearch";
 import { CrossIcon } from "./TerminalPicker";
@@ -131,32 +130,6 @@ export function PlacesField({ places, onChange, ordered, hint }: { places: Place
         </ul>
       )}
       <PlaceSearch icon onAdd={(p) => onChange([...places, p])} placeholder={places.length ? "Add another place…" : "Search for a city…"} />
-    </div>
-  );
-}
-
-/** A photo link with a thumbnail of it, or a picture icon until there is one. */
-export function CoverField({ value, onChange, hint }: { value: string; onChange: (v: string) => void; hint: string }) {
-  return (
-    <div className="ts-field">
-      <label className="field-label" htmlFor="ts-cover">
-        Cover photo
-      </label>
-      <div className="ts-cover">
-        {value ? (
-          <span className="ts-thumb photo" style={{ backgroundImage: cssUrl(value) }} aria-hidden />
-        ) : (
-          <span className="ts-thumb" aria-hidden>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="2" />
-              <circle cx="9" cy="9" r="2" />
-              <path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21" />
-            </svg>
-          </span>
-        )}
-        <input id="ts-cover" type="url" value={value} onChange={(e) => onChange(e.target.value)} placeholder="Paste a photo link" />
-      </div>
-      <span className="muted small">{hint}</span>
     </div>
   );
 }

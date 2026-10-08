@@ -5,6 +5,8 @@ import { HttpError } from "./env";
 import type { App, Ctx, Env } from "./env";
 import { servePage } from "./pages";
 import { cmsRoutes } from "./cms";
+import { findPhotos, savePhoto, servePhoto } from "./photos";
+import { PHOTO_PATH } from "../shared/photos";
 import { countedAllocations, ideaForTicket, randomTicket, ticketRanges, validateAllocation } from "../shared/draw";
 import { parseNominatim } from "../shared/geocode";
 import { cleanDetails } from "../shared/ideaDetails";
@@ -57,6 +59,9 @@ app.use("*", async (c, next) => {
   await schemaReady;
   await next();
 });
+
+// Picked cover photos load as plain images, without a sign-in. Their keys are long and random.
+app.get("/photos/:key", (c) => servePhoto(c.env.DB, c.req.param("key")));
 
 authRoutes(app);
 
@@ -334,7 +339,7 @@ app.delete("/trips/:id", async (c) => {
 /** An http(s) link, or null. */
 function cleanUrl(v: unknown) {
   const url = cleanText(v, 1000);
-  return url && /^https?:\/\//.test(url) ? url : null;
+  return url && (/^https?:\/\//.test(url) || new RegExp(`^${PHOTO_PATH}[0-9a-f]{32}$`).test(url)) ? url : null;
 }
 
 function ideaInput(b: Record<string, unknown>): IdeaInput {
@@ -759,6 +764,13 @@ app.get("/terminals/nearest", (c) => {
   const lon = Number(c.req.query("lon"));
   if (!Number.isFinite(lat) || !Number.isFinite(lon) || Math.abs(lat) > 90 || Math.abs(lon) > 180) throw new HttpError(400, "Give a latitude and longitude");
   return c.json(nearestAirport(lat, lon));
+});
+
+app.get("/photos", async (c) => c.json(await findPhotos(c.env, c.req.queries("q") ?? [])));
+
+app.post("/photos", async (c) => {
+  const b = await c.req.json<{ id?: unknown }>().catch(() => ({}) as { id?: unknown });
+  return c.json({ url: await savePhoto(c.env, c.get("family"), b.id) });
 });
 
 app.get("/geocode", async (c) => {

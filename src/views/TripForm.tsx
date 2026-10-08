@@ -4,7 +4,8 @@ import type { Place, Trip, TripInput } from "../../shared/types";
 import { api } from "../api";
 import { useData } from "../data";
 import { Modal } from "../components/Modal";
-import { CoverField, MODE_HINT, ModePicker, PlacesField, SheetFoot, SheetHead, SheetPreview, SheetSection } from "../components/Sheet";
+import { CoverPicker } from "../components/CoverPicker";
+import { MODE_HINT, ModePicker, PlacesField, SheetFoot, SheetHead, SheetPreview, SheetSection } from "../components/Sheet";
 import { JourneyCards, useJourney } from "../components/TerminalPicker";
 import { TripTicket } from "../components/TripTicket";
 import { ideaMode, modeFlags, tripMode } from "../../shared/travelMode";
@@ -145,7 +146,7 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
               <span className="field-label">Notes</span>
               <textarea rows={3} value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="Highlights, where you stayed…" />
             </label>
-            <CoverField value={cover} onChange={setCover} hint="Shows on the left of your ticket." />
+            <CoverPicker places={places} value={cover} onChange={setCover} hint="Shows on the left of your ticket." />
           </SheetSection>
           {error && <p className="error-text">{error}</p>}
         </div>

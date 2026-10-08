@@ -4,8 +4,9 @@ import type { Idea, IdeaDetails, IdeaInput, Place } from "../../shared/types";
 import { api } from "../api";
 import { useData } from "../data";
 import { Modal } from "../components/Modal";
+import { CoverPicker } from "../components/CoverPicker";
 import { IdeaDetailsFields } from "../components/IdeaDetails";
-import { CoverField, MODE_HINT, ModePicker, PlacesField, SheetFoot, SheetHead, SheetPreview, SheetSection } from "../components/Sheet";
+import { MODE_HINT, ModePicker, PlacesField, SheetFoot, SheetHead, SheetPreview, SheetSection } from "../components/Sheet";
 import { StandbyCard } from "../components/StandbyCard";
 import { JourneyCards, useJourney } from "../components/TerminalPicker";
 import { ideaMode } from "../../shared/travelMode";
@@ -114,7 +115,7 @@ export function IdeaForm({ idea, initial, onClose, onDeleted }: { idea?: Idea; i
 
           <SheetSection title="THE DETAILS">
             <IdeaDetailsFields value={details} onChange={setDetails} hideTypes={MODE_TYPES} />
-            <CoverField value={cover} onChange={setCover} hint="Shows at the top of the idea's card." />
+            <CoverPicker places={places} value={cover} onChange={setCover} hint="Shows at the top of the idea's card." />
           </SheetSection>
           {error && <p className="error-text">{error}</p>}
         </div>

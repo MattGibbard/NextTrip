@@ -7,7 +7,8 @@ export function sqliteD1(): D1Database {
   const statement = (sql: string, params: unknown[] = []) => ({
     sql,
     params,
-    bind: (...p: unknown[]) => statement(sql, p),
+    // D1 takes an ArrayBuffer for a blob; SQLite wants bytes.
+    bind: (...p: unknown[]) => statement(sql, p.map((v) => (v instanceof ArrayBuffer ? new Uint8Array(v) : v))),
     async first<T>() {
       return (sqlite.prepare(sql).get(...(params as never[])) as T) ?? null;
     },

@@ -38,6 +38,12 @@ Sign-in links are sent with [Resend](https://resend.com) (free for 3,000 emails 
 - `OWNER_EMAIL`: the organiser of family 1, which holds everything made before sign-in existed. The first sign-in with this address takes it over.
 - `EMAIL_FROM` (optional): who the emails come from, like `somewhere.party <hello@somewhere.party>`. Until you verify a domain in Resend, it uses `onboarding@resend.dev`, which can only send to the email address of your own Resend account.
 
+### Cover photos
+
+The trip and idea sheets offer photos of their places to pick from, found on [Pixabay](https://pixabay.com/api/docs/). Add a free Pixabay API key to the Worker as the **secret** `PIXABAY_API_KEY`. Previews don't get the live Worker's secrets, so give them the key too with `npx wrangler preview base-config secret put PIXABAY_API_KEY`. Without a key the sheets just take a photo link.
+
+Pixabay's rules don't allow its photo links to be kept, so a picked photo is copied into the database (the `photos` table) and served from `/api/photos/<key>`.
+
 You can also deploy from your machine with `npx wrangler login` followed by `npm run deploy`.
 
 ### Destination guides

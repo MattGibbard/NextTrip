@@ -347,6 +347,7 @@ export function deleteFamilyStatements(db: D1Database, family: number): D1Prepar
     "DELETE FROM rounds WHERE family_id = ?1",
     "DELETE FROM trips WHERE family_id = ?1",
     "DELETE FROM ideas WHERE family_id = ?1",
+    "DELETE FROM photos WHERE family_id = ?1",
     // Sessions and person links point at people, so they go first.
     "DELETE FROM sessions WHERE family_id = ?1",
     "DELETE FROM person_links WHERE family_id = ?1",

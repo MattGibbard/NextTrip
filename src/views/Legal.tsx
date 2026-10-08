@@ -3,7 +3,7 @@ import { Frame } from "./Welcome";
 
 // Keep these in step with what the app really does: if a change stores something new
 // or sends data to another service, update the privacy policy and this date.
-const UPDATED = "7 October 2026";
+const UPDATED = "8 October 2026";
 const CONTACT = "https://github.com/MattGibbard/NextTrip/issues";
 
 export type LegalPage = "privacy" | "terms";
@@ -87,7 +87,11 @@ function Privacy() {
           <strong>Travelpayouts</strong> runs the "Find flights" buttons, which open a flight search on Aviasales. They're affiliate links too, so we may earn a
           commission if you book. We only send the two airports. Once you're on Aviasales, its own privacy policy and cookies apply.
         </li>
-        <li>If you add a cover photo link, the picture loads from whichever site it's hosted on.</li>
+        <li>
+          <strong>Pixabay</strong> provides the cover photos to pick from. We search it for the places on your trip or idea from our server, and your browser loads the
+          small previews from Pixabay directly. A photo you pick is copied to somewhere🎉, so it loads from us after that.
+        </li>
+        <li>If you add your own cover photo link, the picture loads from whichever site it's hosted on.</li>
       </ul>
 
       <h2>How long we keep it</h2>

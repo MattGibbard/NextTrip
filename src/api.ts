@@ -1,6 +1,7 @@
 import type { GeocodeResult, HomeEnds, Idea, IdeaInput, Person, Round, Session, Trip, TripInput } from "../shared/types";
 import type { RoundFilters } from "../shared/roundFilters";
 import type { Terminal, TerminalSearchResult } from "../shared/terminals";
+import type { PhotoSearch } from "../shared/photos";
 import { forget, load } from "./storage";
 
 // Browsers that picked a person before the server kept track of it send that
@@ -81,6 +82,9 @@ export const api = {
   unveto: (id: number) => request("DELETE", `/rounds/${id}/veto`),
   draw: (id: number) => request<Round>("POST", `/rounds/${id}/draw`),
 
+  photos: (queries: string[]) => request<PhotoSearch>("GET", `/photos?${queries.map((q) => `q=${encodeURIComponent(q)}`).join("&")}`),
+  /** Copies a suggested photo to somewhere🎉 and gives back the link to save as the cover. */
+  savePhoto: (id: number) => request<{ url: string }>("POST", "/photos", { id }),
   geocode: (q: string) => request<GeocodeResult[]>("GET", `/geocode?q=${encodeURIComponent(q)}`),
   nearestAirport: (lat: number, lon: number) => request<Terminal | null>("GET", `/terminals/nearest?lat=${lat}&lon=${lon}`),
   terminals: (kind: "airport" | "station", q: string) => request<TerminalSearchResult[]>("GET", `/terminals?kind=${kind}&q=${encodeURIComponent(q)}`),

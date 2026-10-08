@@ -25,7 +25,7 @@ describe("readDestination", () => {
   it("fills gaps instead of failing on a half-written guide", () => {
     const d = readDestination("somewhere", { name: "Somewhere", budget: 7, holiday_types: ["city", "moon"], months: { jan: { rating: "best", note: "Lovely" } } });
     expect(d.published).toBe(false);
-    expect(d.title).toBe("Family holidays in Somewhere");
+    expect(d.title).toBe("Holidays in Somewhere");
     expect(d.budget).toBeNull();
     expect(d.holiday_types).toEqual(["city"]);
     expect(d.months[0]).toEqual({ code: "JAN", rating: "best", note: "Lovely" });
@@ -95,6 +95,18 @@ describe("New York", () => {
     expect(tags).toContain('"@type":"FAQPage"');
     expect(tags).toContain('"@type":"TouristDestination"');
     expect(tags).not.toContain("noindex");
+  });
+
+  it("gives search results a title that suits anyone, unless the editor wrote one", () => {
+    expect(destinationMeta(readDestination("x", { name: "Lisbon" })).title).toBe("Lisbon holiday guide: when to go and what to do | somewhere🎉");
+    const own = readDestination("x", { name: "Lisbon", intro: "Hills and trams.", seo_title: "Lisbon city breaks", seo_description: "Seven hills." });
+    expect(destinationMeta(own)).toMatchObject({ title: "Lisbon city breaks | somewhere🎉", description: "Seven hills." });
+    expect(destinationMeta(readDestination("x", { name: "Lisbon", intro: "Hills and trams." })).description).toBe("Hills and trams.");
+  });
+
+  it("says when the guide last changed, when the build knows", () => {
+    expect(metaTags(destinationMeta(ny, "2026-10-08"))).toContain('"dateModified":"2026-10-08"');
+    expect(metaTags(destinationMeta(ny))).not.toContain("dateModified");
   });
 });
 

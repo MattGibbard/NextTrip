@@ -157,7 +157,7 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
             </article>
 
             {d.image ? (
-              <img className="dg-photo" src={imageUrl(d.image)} alt={d.image_alt} />
+              <img className="dg-photo" src={imageUrl(d.image)} alt={d.image_alt} fetchPriority="high" />
             ) : (
               <div className="dg-photo dg-photo-empty" aria-hidden>
                 <span>{d.to_code || d.name}</span>
@@ -414,8 +414,8 @@ export function DestinationsIndex({ family }: { family?: Family }) {
         <section className="lp-wrap dx-hero">
           <div className="dx-hero-text">
             <Label>INSPIRE</Label>
-            <h1>Family holiday ideas</h1>
-            <p className="dg-intro">When to go, how long to stay and what to do with the kids. Find somewhere new and put it on standby for your next draw.</p>
+            <h1>Holiday ideas</h1>
+            <p className="dg-intro">When to go, how long to stay and what to do when you get there. Find somewhere new and put it on standby for your next draw.</p>
             <div className="dx-search">
               <label htmlFor="dx-search">Search destinations</label>
               <input id="dx-search" type="search" placeholder="A city, region or country" value={search} onChange={(e) => setSearch(e.target.value)} />

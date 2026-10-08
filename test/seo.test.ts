@@ -39,6 +39,8 @@ describe("headTags", () => {
     const tags = headTags("home");
     expect(tags).toContain("application/ld+json");
     expect(tags).toContain("<title>Decide where to go on holiday, together | somewhere🎉</title>");
+    expect(tags).toContain('"@type":"WebSite"');
+    expect(tags).toContain('"@type":"Organization"');
   });
 
   it("keeps the 404 page out of search", () => {

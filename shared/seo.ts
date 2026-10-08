@@ -45,9 +45,9 @@ export const PAGES: Record<FixedPage, Meta> = {
   },
   destinations: {
     path: "/destinations",
-    title: "Family holiday destinations: where to go next | somewhere🎉",
+    title: "Holiday ideas and destination guides: where to go next | somewhere🎉",
     description:
-      "Family holiday guides with when to go, how long to stay and what to do with kids. Find somewhere new and add it to your family's ideas.",
+      "Holiday destination guides with when to go, how long to stay and what to do there. Find somewhere new and add it to your ideas.",
     index: true,
   },
   notfound: {
@@ -85,7 +85,7 @@ function esc(s: string): string {
 export function headTags(page: FixedPage, words?: { title?: string; description?: string }): string {
   // The home page's title and description can be changed in the editor at /admin.
   const m = { ...PAGES[page], ...(words?.title ? { title: words.title } : {}), ...(words?.description ? { description: words.description } : {}) };
-  return metaTags(page === "home" ? { ...m, jsonLd: [structuredData()] } : m);
+  return metaTags(page === "home" ? { ...m, jsonLd: structuredData(m.description) } : m);
 }
 
 /** The <head> tags for any page, from its details. */
@@ -124,16 +124,36 @@ export function metaTags(m: Meta): string {
   return tags.join("\n    ");
 }
 
-function structuredData() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "somewhere🎉",
-    alternateName: "somewhere.party",
-    url: `${SITE}/`,
-    description: PAGES.home.description,
-    applicationCategory: "TravelApplication",
-    operatingSystem: "Any",
-    offers: { "@type": "Offer", price: "0", priceCurrency: "GBP" },
-  };
+/** The homepage's schema.org data: the site itself, who runs it, and the app. */
+function structuredData(description: string): unknown[] {
+  const name = "somewhere🎉";
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name,
+      // Search results may drop the emoji, so give them the plain name too.
+      alternateName: ["somewhere.party", "somewhere"],
+      url: `${SITE}/`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name,
+      alternateName: "somewhere.party",
+      url: `${SITE}/`,
+      logo: `${SITE}/icon-512.png`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      name,
+      alternateName: "somewhere.party",
+      url: `${SITE}/`,
+      description,
+      applicationCategory: "TravelApplication",
+      operatingSystem: "Any",
+      offers: { "@type": "Offer", price: "0", priceCurrency: "GBP" },
+    },
+  ];
 }

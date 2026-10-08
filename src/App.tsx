@@ -1,39 +1,18 @@
-import { useCallback, useEffect, useState } from "react";
+import { Suspense, lazy, useCallback, useEffect, useState } from "react";
 import type { Session } from "../shared/types";
 import { api, forgetLegacyPerson, setSignedOutHandler } from "./api";
-import { DataProvider, useData } from "./data";
 import { HomePage, JoinPage, PersonLinkPage, SignInPage } from "./views/Welcome";
 import { LegalView, legalPage } from "./views/Legal";
-import { TripsView } from "./views/TripsView";
-import { PlacesView } from "./views/PlacesView";
-import { IdeasView } from "./views/IdeasView";
-import { DrawView } from "./views/DrawView";
-import { SettingsView } from "./views/SettingsView";
-import { IdeaPage } from "./views/IdeaPage";
-import { TripPage } from "./views/TripPage";
-import { Onboarding } from "./views/Onboarding";
-import { PersonPicker } from "./components/PersonPicker";
-import { AppBottomNav, AppTopbar } from "./components/AppNav";
-import type { TabId } from "./components/AppNav";
 import { NotFound } from "./views/Welcome";
 import { PAGES, isPrivatePath, publicPage } from "../shared/seo";
 import { destinationMeta, findDestination } from "./destinations";
-import { DestinationPage, DestinationsIndex } from "./views/DestinationPage";
-import type { Family } from "./views/DestinationPage";
+import { GuideView } from "./views/GuideView";
 import { followInPlace, isGuidePath } from "./navigate";
 import { load, save } from "./storage";
 
-/**
- * Reads routes like #/next or #/next/12, and #/next/add/new-york from a destination guide's "Add to ideas".
- * #/welcome replays the welcome steps from Settings.
- */
-function currentRoute(): { tab: TabId; id: number | null; add: string | null; welcome: boolean } {
-  const [first, second, third] = location.hash.replace(/^#\/?/, "").split("/");
-  const tab = (["been", "places", "next", "draw", "settings"] as const).find((t) => t === first) ?? "been";
-  const id = Number(second);
-  const add = second === "add" && third && findDestination(third) ? third : null;
-  return { tab, id: Number.isInteger(id) && id > 0 ? id : null, add, welcome: first === "welcome" };
-}
+// The signed-in app (its views, the map and the draw) loads only once someone is signed in, so the
+// public pages that visitors and search engines see stay small and quick.
+const SignedIn = lazy(() => import("./SignedIn"));
 
 /**
  * A family link (/f/…), a person's own link from the organiser (/p/…) or an
@@ -78,14 +57,6 @@ export function App() {
   if (isGuidePath(path) && !load(SIGNED_IN, false)) return <GuideView path={path} />;
   if (path !== "/" && !isGuidePath(path) && !isPrivatePath(path)) return <NotFound />;
   return <Main path={path} />;
-}
-
-/** A Guides page: the list of guides, one guide, or not found. */
-function GuideView({ path, family }: { path: string; family?: Family }) {
-  const page = publicPage(path);
-  if (page === "destinations") return <DestinationsIndex family={family} />;
-  const destination = page?.startsWith("destination:") ? findDestination(page.slice("destination:".length)) : undefined;
-  return destination ? <DestinationPage destination={destination} family={family} /> : <NotFound />;
 }
 
 /** The tab title for an address, kept up to date as the app moves between pages in place. */
@@ -151,85 +122,8 @@ function Main({ path }: { path: string }) {
   }
   if (!session.signed_in) return isGuidePath(path) ? <GuideView path={path} /> : <HomePage />;
   return (
-    <DataProvider isOwner={session.role === "owner"} shareToken={session.share_token} personId={session.person_id}>
-      <Shell path={path} />
-    </DataProvider>
-  );
-}
-
-function Shell({ path }: { path: string }) {
-  const { me, ideas, home, loading, error, reload } = useData();
-  const [route, setRoute] = useState(currentRoute);
-  // Someone new sees the welcome steps once; the server remembers when they've been through them.
-  const [welcomed, setWelcomed] = useState(false);
-  const tab = route.tab;
-
-  useEffect(() => {
-    const onHash = () => {
-      setRoute(currentRoute());
-      window.scrollTo({ top: 0 });
-    };
-    window.addEventListener("hashchange", onHash);
-    // Coming back from the Guides moves the address in place, which doesn't count as a hash change.
-    window.addEventListener("popstate", onHash);
-    return () => {
-      window.removeEventListener("hashchange", onHash);
-      window.removeEventListener("popstate", onHash);
-    };
-  }, []);
-
-  const go = (t: TabId) => {
-    location.hash = `/${t}`;
-  };
-
-  if (isGuidePath(path)) {
-    return (
-      <>
-        <GuideView path={path} family={{ signedIn: true, me, ideas: loading ? null : ideas, airport: home }} />
-        {!loading && !error && !me && <PersonPicker />}
-      </>
-    );
-  }
-
-  if (!loading && !error && me && (route.welcome || (!me.onboarded && !welcomed))) {
-    return (
-      <Onboarding
-        replay={route.welcome}
-        onClose={() => {
-          setWelcomed(true);
-          // Leaving a replay without picking somewhere to go lands back in Settings.
-          if (location.hash === "#/welcome") location.hash = "/settings";
-        }}
-      />
-    );
-  }
-
-  return (
-    <div className="app">
-      <AppTopbar current={tab} me={me} go={go} />
-
-      <main className="content">
-        {error && (
-          <div className="banner error">
-            {error} <button onClick={() => void reload()}>Retry</button>
-          </div>
-        )}
-        {loading ? (
-          <p className="muted center">Loading…</p>
-        ) : (
-          <>
-            {tab === "been" && (route.id ? <TripPage key={route.id} id={route.id} /> : <TripsView addFrom={route.add} />)}
-            {tab === "places" && <PlacesView />}
-            {tab === "next" && (route.id ? <IdeaPage key={route.id} id={route.id} /> : <IdeasView addFrom={route.add} />)}
-            {tab === "draw" && <DrawView />}
-            {tab === "settings" && <SettingsView />}
-          </>
-        )}
-      </main>
-
-      <AppBottomNav current={tab} go={go} />
-
-      {!loading && !error && !me && <PersonPicker />}
-    </div>
+    <Suspense fallback={<p className="muted center">Loading…</p>}>
+      <SignedIn session={session} path={path} />
+    </Suspense>
   );
 }

@@ -4,7 +4,7 @@ import type { Mode } from "../../shared/travelMode";
 import { budgetLabel, tripLengthLabel } from "../../shared/ideaDetails";
 import { useData } from "../data";
 import { Field, Photo, RouteLine } from "./Ticket";
-import { flagsOf } from "./TripTicket";
+import { flagsOf } from "../countries";
 import type { TripDraft } from "../views/TripForm";
 
 /** The idea that won the latest draw and hasn't been turned into a trip yet, as a boarding pass. */

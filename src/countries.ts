@@ -59,3 +59,6 @@ export function countryOptions(): { code: string; name: string }[] {
     .map(([code, name]) => ({ code, name }))
     .sort((a, b) => a.name.localeCompare(b.name));
 }
+
+/** Each country's flag once, in the order the places come: "🇫🇷 🇮🇹". */
+export const flagsOf = (places: { country_code: string }[]) => [...new Set(places.map((p) => p.country_code))].map(flag).join(" ");

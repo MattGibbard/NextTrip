@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "leaflet/dist/leaflet.css";
 import "./draw.css";
 import "./onboarding.css";
+import "./postcard.css";
 import type { Session } from "../shared/types";
 import { DataProvider, useData } from "./data";
 import { findDestination } from "./destinations";

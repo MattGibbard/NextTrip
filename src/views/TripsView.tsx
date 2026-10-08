@@ -6,7 +6,7 @@ import { useData } from "../data";
 import { continentOf } from "../continents";
 import { nights } from "../format";
 import { Flaps } from "../components/Ticket";
-import { TripTicket } from "../components/TripTicket";
+import { TripPostcard } from "../components/TripPostcard";
 import { TripForm } from "./TripForm";
 import { destinationPlace, findDestination } from "../destinations";
 
@@ -60,10 +60,10 @@ export function TripsView({ addFrom = null }: { addFrom?: string | null }) {
         <div>
           <div className="eyebrow">ARRIVALS{people.length > 0 && <span className="desktop-only"> · {people.map((p) => p.name.toUpperCase()).join(" & ")}</span>}</div>
           <h1 className="display">Where we've been</h1>
-          <p className="muted page-sub">Holidays you've had, kept as tickets.</p>
+          <p className="muted page-sub">Holidays you've had, kept as postcards. Tap one to turn it over.</p>
         </div>
         <button className="btn" onClick={() => setAdding(true)}>
-          + Add trip
+          We've been! Add trip
         </button>
       </div>
 
@@ -100,7 +100,7 @@ export function TripsView({ addFrom = null }: { addFrom?: string | null }) {
       )}
 
       {byYear.map(([year, list]) => (
-        <div key={year} className="ticket-year">
+        <section key={year} className="postcard-year" aria-label={year}>
           <div className="year-rule">
             <span className="year-label">{year}</span>
             <span className="rule" />
@@ -108,12 +108,12 @@ export function TripsView({ addFrom = null }: { addFrom?: string | null }) {
               {list.length} {list.length === 1 ? "trip" : "trips"}
             </span>
           </div>
-          <div className="ticket-grid">
+          <div className="postcard-grid">
             {list.map((t) => (
-              <TripTicket key={t.id} trip={t} passNo={passNo.get(t.id) ?? 0} />
+              <TripPostcard key={t.id} trip={t} passNo={passNo.get(t.id) ?? 0} />
             ))}
           </div>
-        </div>
+        </section>
       ))}
 
       {adding && <TripForm draft={guide && { title: guide.name, places: [destinationPlace(guide)] }} onClose={closeForm} />}

@@ -1030,53 +1030,6 @@ button.card:hover {
 .ts-preview .mono-label {
   font-size: 0.62rem;
 }
-.ticket.preview {
-  grid-template-columns: 104px minmax(0, 1fr) 46px;
-  height: auto;
-  min-height: 112px;
-}
-.ticket.preview:hover {
-  transform: none;
-}
-.ticket.preview .ticket-body {
-  padding: 12px 14px;
-  gap: 3px;
-}
-.ticket.preview .ticket-top {
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
-}
-.ticket.preview .ticket-title {
-  font-size: 1.05rem;
-  margin-top: 0;
-}
-.ticket.preview .ticket-line {
-  font-size: 0.8rem;
-}
-/* Show everything in the preview, even on a phone, so you can see what you've filled in. */
-.ticket.preview .ticket-body .desktop-only {
-  display: block !important;
-}
-.ticket.preview .ticket-top .desktop-only {
-  display: inline !important;
-}
-.ticket.preview .ticket-stub {
-  justify-content: space-between;
-  padding: 12px 0 10px;
-  font-size: 1rem;
-}
-.ticket.preview .ticket-stub > span:first-child {
-  display: none !important;
-}
-.ticket.preview .ticket-stub .stub-no {
-  display: inline !important;
-  font-size: 0.6rem;
-}
-@media (max-width: 520px) {
-  .ticket.preview {
-    grid-template-columns: 76px minmax(0, 1fr) 46px;
-  }
-}
 
 /* How did you travel? */
 .ts-modes {
@@ -3171,12 +3124,6 @@ a.detail {
 }
 
 /* Year groups */
-.ticket-year {
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  margin-bottom: 1.5rem;
-}
 .year-rule {
   display: flex;
   align-items: center;
@@ -3191,67 +3138,6 @@ a.detail {
   flex: 1;
   border-top: 1px solid var(--border);
 }
-.ticket-grid {
-  display: grid;
-  gap: 0.65rem;
-}
-@media (min-width: 900px) {
-  .ticket-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.9rem;
-  }
-}
-
-/* One trip as a ticket in the list */
-.ticket {
-  display: grid;
-  grid-template-columns: 88px minmax(0, 1fr) 34px;
-  height: 116px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  color: inherit;
-  text-decoration: none;
-  box-shadow: var(--shadow);
-  transition: transform 0.15s;
-}
-.ticket:hover {
-  transform: translateY(-2px);
-}
-.ticket-photo {
-  font-size: 1.6rem;
-}
-.ticket-body {
-  border-left: 2px dashed var(--border);
-  padding: 0.6rem 0.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  min-width: 0;
-}
-.ticket-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  font: 500 0.7rem var(--mono);
-  letter-spacing: 0.06em;
-}
-.ticket-title {
-  font-size: 1rem;
-  font-weight: 800;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.ticket-line {
-  font-size: 0.8rem;
-}
-.ticket-foot {
-  margin-top: auto;
-  font-size: 0.8rem;
-}
-.ticket-stub,
 .pass-stub {
   background: var(--mode);
   color: #fff;
@@ -3272,30 +3158,6 @@ a.detail {
   font: 500 0.7rem var(--mono);
 }
 @media (min-width: 760px) {
-  .ticket {
-    grid-template-columns: 170px minmax(0, 1fr) 52px;
-    height: 172px;
-  }
-  .ticket-body {
-    padding: 1rem 1.1rem;
-    gap: 0.25rem;
-  }
-  .ticket-top {
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
-  }
-  .ticket-title {
-    font-size: 1.2rem;
-    margin-top: 0.25rem;
-  }
-  .ticket-line {
-    font-size: 0.85rem;
-  }
-  .ticket-stub {
-    justify-content: space-between;
-    padding: 0.9rem 0;
-    font-size: 1.1rem;
-  }
   .stub-text {
     font-size: 0.7rem;
     letter-spacing: 0.16em;

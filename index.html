@@ -33,10 +33,12 @@
   <body>
     <div id="root"></div>
     <script>
-      // The home page arrives ready-made for visitors. Someone who was signed in last time is about to
-      // land in the app instead, so clear it before the first paint rather than flash it at them.
+      // The home page and the Guides arrive ready-made for visitors. Someone who was signed in last time
+      // sees them inside the app instead, so clear the visitors' version before the first paint rather
+      // than flash it at them.
       try {
-        if (location.pathname === "/" && JSON.parse(localStorage.getItem("nexttrip.signedIn")) === true) {
+        var path = location.pathname;
+        if ((path === "/" || path === "/destinations" || path.indexOf("/destinations/") === 0) && JSON.parse(localStorage.getItem("nexttrip.signedIn")) === true) {
           document.getElementById("root").replaceChildren();
         }
       } catch (e) {}

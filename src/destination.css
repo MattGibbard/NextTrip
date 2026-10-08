@@ -512,7 +512,7 @@
   max-width: 75ch;
 }
 
-/* Similar places, and the list of all guides. */
+/* Similar places. */
 .dg-similar {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
@@ -566,16 +566,464 @@ a.dg-similar-card:hover {
   max-width: 60ch;
 }
 
-.dg-index-head {
+/* ---------- All destinations (/destinations) ---------- */
+
+.lp-nav a[aria-current="page"] {
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+.dx main {
+  padding-bottom: 24px;
+}
+.dx .dg-label {
+  font-weight: 500;
+}
+.dx-hero {
+  padding-top: 48px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-end;
+}
+.dx-hero-text {
+  flex: 999 1 460px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
 }
-.dg-index-head h1 {
-  font-size: clamp(1.9rem, 4vw, 2.9rem);
+.dx-hero h1 {
+  font-size: clamp(2rem, 4.5vw, 2.9rem);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
+}
+.dx-hero .dg-intro {
+  color: var(--muted);
+  max-width: 34rem;
+}
+.dx-search {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 30rem;
+  margin-top: 8px;
+}
+.dx-search label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.dx-search input {
+  font: inherit;
+  font-size: 16px;
+  height: 48px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+/* Departures board of what's good to go this month. */
+.dx-board {
+  flex: 1 1 360px;
+  min-width: 0;
+  background: var(--board);
+  border-radius: 14px;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgb(15 118 110 / 0.25);
+  font-family: var(--mono);
+}
+.dx-board-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--board-line);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--board-muted);
+}
+.dx-board .lit {
+  color: var(--board-lit);
+}
+.dx-board ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dx-board li {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--board-line);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #cbd5d1;
+}
+.dx-board li a {
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dx-board li a:hover {
+  color: var(--board-lit);
+}
+.dx-board p {
+  margin-top: 12px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  color: var(--board-muted);
+}
+
+/* Month and holiday type filters. */
+.dx-filters {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.dx-filters > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dx-filter-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.dx-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.dx-chips button {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-height: 44px;
+  min-width: 52px;
+  padding: 0 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.dx-chips button:hover {
+  border-color: var(--accent);
+}
+.dx-chips button[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--accent-text);
+  border-color: var(--accent);
+}
+
+.dx-section {
+  padding-top: 40px;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  scroll-margin-top: 16px;
+}
+.dx .dx-section h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.dx-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+.dx-clear {
+  font: inherit;
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* A guide's card: photo, details, a perforation, then the best months like a ticket stub. */
+.dx-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: 24px 20px;
+}
+.dx-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease;
+}
+.dx-card:hover {
+  transform: translateY(-2px);
+}
+.dx-card-photo {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: 15px 15px 0 0;
+  background: var(--surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: var(--mono);
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: var(--standby-ink);
+}
+.dx-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.dx-badge {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.dx-card-body {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+.dx-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.dx-card h3 a {
+  color: var(--text);
+  text-decoration: none;
+}
+.dx-card h3 a:hover {
+  color: var(--accent);
+}
+.dx-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.dx-pills > span {
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.dx-perf {
+  position: relative;
+  height: 0;
+  border-top: 2px dashed var(--border);
+  margin: 0 14px;
+}
+.dx-perf::before,
+.dx-perf::after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg);
+}
+.dx-perf::before {
+  left: -25px;
+}
+.dx-perf::after {
+  right: -25px;
+}
+.dx-card-foot {
+  padding: 14px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.dx-best {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.dx-best span:last-child {
+  color: var(--text);
+  text-align: right;
+}
+.dx-months {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 3px;
+}
+.dx-months span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  border-radius: 5px;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+.dx-months .on {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.dx-months .now {
+  box-shadow: inset 0 0 0 1.5px var(--text);
+}
+.dx-card-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+.dx-card-actions a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.dx-card-actions .dx-standby {
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  text-decoration: none;
+}
+.dx-card-actions .dx-standby:hover {
+  border-color: var(--accent);
+}
+
+.dx-countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+  gap: 10px;
+}
+.dx-countries a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.dx-countries a:hover,
+.dx-countries a[aria-current] {
+  border-color: var(--accent);
+}
+.dx-countries a > span:first-child {
+  font-size: 1.3rem;
+}
+.dx-countries a > span:nth-child(2) {
+  flex-grow: 1;
+}
+.dx-count {
+  white-space: nowrap;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.dx-cta {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+.dx-cta > div:first-child {
+  flex: 999 1 420px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dx .dx-cta h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.dx-cta p {
+  max-width: 36rem;
+}
+.dx-cta-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--standby-ink);
+}
+.dx-cta-actions {
+  flex: 1 1 220px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.dx-cta-actions a:not(.btn) {
+  font-weight: 600;
+}
+@media (max-width: 560px) {
+  .dx-cta {
+    padding: 24px 20px;
+  }
 }
 
 /* Footer: links to the guides on every public page. */

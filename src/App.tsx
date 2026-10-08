@@ -156,6 +156,7 @@ function Shell() {
                 {t.label}
               </button>
             ))}
+            <a href="/destinations">Destinations</a>
           </nav>
           <div className="topbar-right">
             {me && (
@@ -197,6 +198,10 @@ function Shell() {
             {t.label}
           </button>
         ))}
+        <a href="/destinations">
+          <span className="icon">🧭</span>
+          Destinations
+        </a>
       </nav>
 
       {!loading && !error && !me && <PersonPicker />}

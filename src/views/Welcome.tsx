@@ -17,7 +17,7 @@ export function Frame({ children }: { children: ReactNode }) {
 }
 
 /** The signed-out header, shared by the home page and the other public pages. Destination guides get their own links. */
-export function SiteHeader({ sections = false, guide = false }: { sections?: boolean; guide?: boolean }) {
+export function SiteHeader({ sections = false, guide = false }: { sections?: boolean; guide?: boolean | "index" }) {
   if (guide) {
     return (
       <header className="lp-top">
@@ -25,8 +25,10 @@ export function SiteHeader({ sections = false, guide = false }: { sections?: boo
           <a className="lp-brand" href="/">
             somewhere<span aria-hidden>🎉</span>
           </a>
-          <nav className="lp-nav" aria-label="Main">
-            <a href="/destinations">Destinations</a>
+          <nav className="lp-nav lp-nav-guide" aria-label="Main">
+            <a className="lp-nav-keep" href="/destinations" aria-current={guide === "index" ? "page" : undefined}>
+              Destinations
+            </a>
             <a href="/#how">How the draw works</a>
             <a href="/#signin">Sign in</a>
           </nav>
@@ -43,19 +45,24 @@ export function SiteHeader({ sections = false, guide = false }: { sections?: boo
         <a className="lp-brand" href="/">
           somewhere<span aria-hidden>🎉</span>
         </a>
-        {sections && (
-          <nav className="lp-nav" aria-label="Main">
-            <a href="#how" onClick={jump}>
-              How it works
-            </a>
-            <a href="#features" onClick={jump}>
-              Features
-            </a>
-            <a href="#why" onClick={jump}>
-              Why use it
-            </a>
-          </nav>
-        )}
+        <nav className="lp-nav" aria-label="Main">
+          {sections && (
+            <>
+              <a href="#how" onClick={jump}>
+                How it works
+              </a>
+              <a href="#features" onClick={jump}>
+                Features
+              </a>
+              <a href="#why" onClick={jump}>
+                Why use it
+              </a>
+            </>
+          )}
+          <a className="lp-nav-keep" href="/destinations">
+            Destinations
+          </a>
+        </nav>
         {sections ? (
           <a className="btn ghost lp-top-signin" href="#signin" onClick={jump}>
             Sign in

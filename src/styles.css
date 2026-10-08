@@ -217,7 +217,8 @@ textarea:focus {
   gap: 0.25rem;
   margin-left: auto;
 }
-.tabs button {
+.tabs button,
+.tabs a {
   border: 0;
   background: none;
   min-height: 40px;
@@ -228,7 +229,13 @@ textarea:focus {
   font-size: 0.95rem;
   font-weight: 600;
 }
-.tabs button:hover {
+.tabs a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+.tabs button:hover,
+.tabs a:hover {
   color: var(--accent);
 }
 .tabs button.active {
@@ -287,12 +294,13 @@ textarea:focus {
   right: 0;
   z-index: 1000;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   background: var(--surface);
   border-top: 1px solid var(--border);
   padding-bottom: env(safe-area-inset-bottom);
 }
-.bottom-nav button {
+.bottom-nav button,
+.bottom-nav a {
   border: 0;
   background: none;
   padding: 0.5rem 0 0.6rem;
@@ -304,6 +312,15 @@ textarea:focus {
   font-weight: 600;
   color: var(--muted);
   cursor: pointer;
+}
+.bottom-nav a {
+  text-decoration: none;
+}
+@media (max-width: 380px) {
+  .bottom-nav button,
+  .bottom-nav a {
+    font-size: 0.68rem;
+  }
 }
 .bottom-nav .icon {
   font-size: 1.3rem;
@@ -1669,7 +1686,7 @@ button.card:hover {
   padding-bottom: 14px;
 }
 .lp-nav {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 28px;
   font-size: 0.95rem;
@@ -1689,9 +1706,22 @@ button.card:hover {
   text-decoration: none;
   font-size: 0.95rem;
 }
-@media (min-width: 760px) {
+/* On phones the header keeps just the Destinations link; the section links come back on wider screens. */
+.lp-nav a:not(.lp-nav-keep) {
+  display: none;
+}
+@media (max-width: 759px) {
   .lp-nav {
-    display: flex;
+    margin-left: auto;
+  }
+  /* The guides' header has its own "Start planning" button, so phones get just that, as before. */
+  .lp-nav-guide {
+    display: none;
+  }
+}
+@media (min-width: 760px) {
+  .lp-nav a:not(.lp-nav-keep) {
+    display: inline;
   }
 }
 .lp-kicker,

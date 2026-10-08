@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import type { Idea } from "../../shared/types";
 import type { Terminal } from "../../shared/terminals";
 import { api } from "../api";
-import { DESTINATIONS, LONDON, bestMonths, destinationNamed, flightTime, imageUrl } from "../destinations";
+import { DESTINATIONS, LONDON, bestMonths, countryFlag, destinationNamed, flightHoursTo, flightTime, imageUrl, shortIntro } from "../destinations";
 import type { Destination } from "../destinations";
-import { budgetLabel, holidayType, travelTimeLabel } from "../../shared/ideaDetails";
+import { HOLIDAY_TYPES, budgetLabel, holidayType, travelTimeLabel } from "../../shared/ideaDetails";
 import { destinationPath } from "../../shared/seo";
 import { SiteFooter, SiteHeader } from "./Welcome";
 
@@ -46,8 +46,8 @@ const APP_TABS = [
   { id: "draw", label: "Draw", icon: "🎟️" },
 ];
 
-/** The signed-in app's header, as links back into the app. */
-function AppHeader() {
+/** The signed-in app's header, as links back into the app, with Destinations as the current page. */
+function AppHeader({ index = false }: { index?: boolean }) {
   return (
     <header className="lp-top">
       <div className="lp-wrap lp-top-inner">
@@ -56,10 +56,13 @@ function AppHeader() {
         </a>
         <nav className="dg-apptabs" aria-label="Main">
           {APP_TABS.map((t) => (
-            <a key={t.id} href={`/#/${t.id}`} aria-current={t.id === "next" ? "page" : undefined}>
+            <a key={t.id} href={`/#/${t.id}`}>
               <span aria-hidden>{t.icon}</span> {t.label}
             </a>
           ))}
+          <a href="/destinations" aria-current={index ? "page" : "true"}>
+            <span aria-hidden>🧭</span> Destinations
+          </a>
         </nav>
         <a className="icon-btn" href="/#/settings" aria-label="Settings">
           ⚙️
@@ -361,33 +364,274 @@ export function DestinationPage({ destination: d }: { destination: Destination }
   );
 }
 
-/** Every guide, for browsing. */
+
+const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const shortMonth = (i: number) => MONTH_NAMES[i].slice(0, 3);
+
+/** Months a guide rates "best", by number (0 is January). */
+function bestSet(d: Destination): Set<number> {
+  return new Set(d.months.flatMap((m, i) => (m.rating === "best" ? [i] : [])));
+}
+
+/**
+ * Every guide, for browsing: a departures board of what's in season, filters for the month and kind
+ * of holiday, a card per guide and the countries they're in. The month is the visitor's own, set once
+ * the page is up so the prerendered page doesn't depend on when the site was built.
+ */
 export function DestinationsIndex() {
+  const { signedIn, ideas, airport } = useFamily();
+  const from = airport?.code && airport.lat !== null ? { code: airport.code, name: airport.name, lat: airport.lat, lon: airport.lon } : LONDON;
+  const [month, setMonth] = useState<number | null>(null);
+  const [type, setType] = useState<string | null>(null);
+  const [country, setCountry] = useState<string | null>(null);
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    setMonth(new Date().getMonth());
+    const code = new URLSearchParams(location.search).get("country")?.toUpperCase();
+    if (code && DESTINATIONS.some((d) => d.country_code === code)) setCountry(code);
+  }, []);
+
+  const best = new Map(DESTINATIONS.map((d) => [d.slug, bestSet(d)]));
+  const inSeason = (d: Destination) => month !== null && !!best.get(d.slug)?.has(month);
+  const types = HOLIDAY_TYPES.filter((t) => DESTINATIONS.some((d) => d.holiday_types.includes(t.key)));
+  const words = search.trim().toLowerCase();
+  const shown = DESTINATIONS.filter(
+    (d) =>
+      (!type || d.holiday_types.includes(type as Destination["holiday_types"][number])) &&
+      (!country || d.country_code === country) &&
+      (!words || `${d.name} ${d.country}`.toLowerCase().includes(words)),
+  );
+  const cards = [...shown.filter(inSeason), ...shown.filter((d) => !inSeason(d))];
+  const good = shown.filter(inSeason).length;
+  const board = (month === null ? DESTINATIONS : DESTINATIONS.filter(inSeason)).slice(0, 5);
+  const boardMore = (month === null ? DESTINATIONS : DESTINATIONS.filter(inSeason)).length - board.length;
+
+  const countries = [...new Set(DESTINATIONS.map((d) => d.country_code).filter(Boolean))]
+    .map((code) => ({ code, name: DESTINATIONS.find((d) => d.country_code === code)!.country, count: DESTINATIONS.filter((d) => d.country_code === code).length }))
+    .sort((a, b) => a.name.localeCompare(b.name, "en-GB"));
+
+  const pickCountry = (code: string | null) => {
+    setCountry(code);
+    const url = new URL(location.href);
+    if (code) url.searchParams.set("country", code);
+    else url.searchParams.delete("country");
+    history.replaceState(null, "", url.pathname + url.search);
+  };
+  const clear = () => {
+    setType(null);
+    setSearch("");
+    pickCountry(null);
+  };
+
+  const onList = (d: Destination) => ideas?.find((i) => i.status === "active" && i.title.trim().toLowerCase() === d.name.toLowerCase());
+  const filtered = !!(type || country || words);
+
   return (
-    <div className="lp dg">
-      <SiteHeader guide />
-      <main className="lp-wrap dg-main">
-        <div className="dg-index-head">
-          <span className="dg-label">DESTINATIONS</span>
-          <h1>Family holiday ideas</h1>
-          <p className="dg-intro">When to go, how long to stay and what to do with the kids. Find somewhere new and put it on standby for your next draw.</p>
-        </div>
-        {DESTINATIONS.length === 0 ? (
-          <p className="muted">Guides are on their way.</p>
-        ) : (
-          <div className="dg-similar dg-index">
-            {DESTINATIONS.map((d) => (
-              <a key={d.slug} className="dg-similar-card" href={destinationPath(d.slug)}>
-                <span className="dg-similar-code">{d.to_code || d.name.slice(0, 3).toUpperCase()}</span>
-                <span>
-                  <strong>{d.name}</strong>
-                  <span className="muted small">{d.country}</span>
-                </span>
-              </a>
-            ))}
+    <div className="lp dg dx">
+      {signedIn ? <AppHeader index /> : <SiteHeader guide="index" />}
+
+      <main>
+        <section className="lp-wrap dx-hero">
+          <div className="dx-hero-text">
+            <Label>DESTINATIONS</Label>
+            <h1>Family holiday ideas</h1>
+            <p className="dg-intro">When to go, how long to stay and what to do with the kids. Find somewhere new and put it on standby for your next draw.</p>
+            <div className="dx-search">
+              <label htmlFor="dx-search">Search destinations</label>
+              <input id="dx-search" type="search" placeholder="A city, region or country" value={search} onChange={(e) => setSearch(e.target.value)} />
+            </div>
           </div>
+
+          {DESTINATIONS.length > 0 && (
+            <aside className="dx-board" aria-label={month === null ? "Destination guides" : `Good to go in ${MONTH_NAMES[month]}`}>
+              <div className="dx-board-head">
+                <span className="lit">{month === null ? "DESTINATION GUIDES" : `GOOD TO GO IN ${MONTH_NAMES[month].toUpperCase()}`}</span>
+                <span>{from === LONDON ? "FROM THE UK" : `FROM ${from.code}`}</span>
+              </div>
+              <ul>
+                {board.map((d) => {
+                  const hours = flightHoursTo(from, d);
+                  return (
+                    <li key={d.slug}>
+                      <span className="lit">{d.to_code}</span>
+                      <a href={destinationPath(d.slug)}>{d.name.toUpperCase()}</a>
+                      <span>{hours !== null && `✈️ ${hours}H`}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+              <p>
+                {board.length === 0
+                  ? "Nothing's at its best this month. Pick another month to see what's in season."
+                  : boardMore > 0
+                    ? `And ${boardMore} more below.`
+                    : "Pick another month to see what else is in season."}
+              </p>
+            </aside>
+          )}
+        </section>
+
+        <section className="lp-wrap" aria-label="Filter destinations">
+          <div className="dx-filters">
+            <div>
+              <p className="dx-filter-label">When can you go?</p>
+              <div role="group" aria-label="Month" className="dx-chips">
+                {MONTH_NAMES.map((name, i) => (
+                  <button key={name} type="button" aria-pressed={month === i} aria-label={name} onClick={() => setMonth(i)}>
+                    {shortMonth(i)}
+                  </button>
+                ))}
+              </div>
+            </div>
+            {types.length > 1 && (
+              <div>
+                <p className="dx-filter-label">Holiday type</p>
+                <div role="group" aria-label="Holiday type" className="dx-chips">
+                  <button type="button" aria-pressed={!type} onClick={() => setType(null)}>
+                    All types
+                  </button>
+                  {types.map((t) => (
+                    <button key={t.key} type="button" aria-pressed={type === t.key} onClick={() => setType(t.key)}>
+                      <span aria-hidden>{t.icon}</span> {t.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+
+        <section className="lp-wrap dx-section" id="guides" aria-labelledby="dx-guides">
+          <div className="dx-section-head">
+            <h2 id="dx-guides">{country ? `Guides to ${countries.find((c) => c.code === country)?.name}` : "All destination guides"}</h2>
+            <p className="muted small">
+              {month !== null && shown.length > 0 && `${good} of ${shown.length} ${good === 1 && shown.length === 1 ? "is" : "are"} good in ${MONTH_NAMES[month]}`}
+              {filtered && (
+                <>
+                  {month !== null && shown.length > 0 && " · "}
+                  <button type="button" className="dx-clear" onClick={clear}>
+                    Show all guides
+                  </button>
+                </>
+              )}
+            </p>
+          </div>
+
+          {DESTINATIONS.length === 0 ? (
+            <p className="muted">Guides are on their way.</p>
+          ) : cards.length === 0 ? (
+            <p className="muted">No guides match that yet.</p>
+          ) : (
+            <div className="dx-grid">
+              {cards.map((d) => {
+                const months = best.get(d.slug)!;
+                const hours = flightHoursTo(from, d);
+                const t = d.holiday_types.map(holidayType).find((x) => !!x);
+                const idea = onList(d);
+                return (
+                  <article key={d.slug} className="dx-card">
+                    <div className="dx-card-photo">
+                      {d.image ? <img src={imageUrl(d.image)} alt={d.image_alt} loading="lazy" /> : <span aria-hidden>{d.to_code || d.name.slice(0, 3).toUpperCase()}</span>}
+                      {inSeason(d) && month !== null && <span className="dx-badge">Good in {shortMonth(month)}</span>}
+                    </div>
+                    <div className="dx-card-body">
+                      <Label>{`${countryFlag(d.country_code)} ${d.country.toUpperCase()}`.trim()}</Label>
+                      <h3>
+                        <a href={destinationPath(d.slug)}>{d.name}</a>
+                      </h3>
+                      {d.intro && <p className="muted small">{shortIntro(d)}</p>}
+                      <div className="dx-pills">
+                        {t && (
+                          <span>
+                            <span aria-hidden>{t.icon}</span> {t.label}
+                          </span>
+                        )}
+                        {hours !== null && <span>✈️ {hours}h</span>}
+                        {d.nights && <span>{d.nights} nights</span>}
+                        {d.budget && <span>{budgetLabel(d.budget)}</span>}
+                      </div>
+                    </div>
+                    <div className="dx-perf" aria-hidden />
+                    <div className="dx-card-foot">
+                      <div>
+                        <p className="dx-best">
+                          <span>BEST TIME</span>
+                          <span>{bestMonths(d).toUpperCase() || "ANY TIME"}</span>
+                        </p>
+                        <div className="dx-months" aria-hidden>
+                          {MONTH_NAMES.map((name, i) => (
+                            <span key={name} className={`${months.has(i) ? "on" : ""} ${month === i ? "now" : ""}`}>
+                              {name[0]}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="dx-card-actions">
+                        <a href={destinationPath(d.slug)}>Read the guide</a>
+                        {idea ? (
+                          <a className="dx-standby" href={`/#/next/${idea.id}`}>
+                            On your list
+                          </a>
+                        ) : (
+                          <a className="dx-standby" href={signedIn ? `/#/next/add/${d.slug}` : "/#signin"}>
+                            Put on standby
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          )}
+        </section>
+
+        {countries.length > 0 && (
+          <section className="lp-wrap dx-section" aria-labelledby="dx-countries">
+            <h2 id="dx-countries">Browse by country</h2>
+            <div className="dx-countries">
+              {countries.map((c) => (
+                <a
+                  key={c.code}
+                  href={`/destinations?country=${c.code}#guides`}
+                  aria-current={country === c.code ? "true" : undefined}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    pickCountry(c.code);
+                    document.getElementById("guides")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }}
+                >
+                  <span aria-hidden>{countryFlag(c.code)}</span>
+                  <span>{c.name}</span>
+                  <span className="dx-count">
+                    {c.count} {c.count === 1 ? "GUIDE" : "GUIDES"}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {!signedIn && (
+          <section className="lp-wrap dx-section">
+            <div className="dx-cta">
+              <div>
+                <span className="dx-cta-label">🎟️ IDEAS ON STANDBY</span>
+                <h2>Found somewhere you like?</h2>
+                <p className="muted">Put it on standby with the rest of your family's ideas. Everyone spreads their points in secret, gets one veto, and the draw picks where you go.</p>
+              </div>
+              <div className="dx-cta-actions">
+                <a className="btn dg-btn" href="/#signin">
+                  Start planning
+                </a>
+                <a href="/#how">How the draw works</a>
+              </div>
+            </div>
+          </section>
         )}
       </main>
+
       <SiteFooter />
     </div>
   );

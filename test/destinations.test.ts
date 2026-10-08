@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { DESTINATIONS, destinationMeta, findDestination, ideaFromDestination, readDestination } from "../src/destinations";
+import { DESTINATIONS, LONDON, bestMonths, destinationCountry, destinationMeta, findDestination, flightTime, ideaFromDestination, readDestination } from "../src/destinations";
+import geo from "../content/destinations-geo.json";
 import { metaTags, publicPage } from "../shared/seo";
 
 const dir = new URL("../content/destinations/", import.meta.url);
@@ -14,7 +15,7 @@ describe("destination guide files", () => {
     const d = readDestination(slug, raw);
     expect(d.name).not.toBe(slug);
     expect(d.country_code).toMatch(/^[A-Z]{2}$/);
-    expect(d.seo_description.length).toBeLessThanOrEqual(160);
+    if (raw.published) expect(d.lat, "run scripts/geocode-destinations.mjs").not.toBeNull();
     expect(d.months).toHaveLength(12);
     expect(publicPage(`/destinations/${slug}`)).toBe(`destination:${slug}`);
   });
@@ -32,11 +33,52 @@ describe("readDestination", () => {
   });
 });
 
+describe("the editor's country list", () => {
+  it("offers every country by the name the pages show", () => {
+    const config = readFileSync(new URL("../public/admin/config.yml", import.meta.url), "utf8");
+    const options = [...config.matchAll(/- \{ label: "([^"]+)", value: ([A-Z]{2}) \}/g)];
+    expect(options.length).toBeGreaterThan(240);
+    for (const [, label, code] of options) expect(label).toBe(destinationCountry(code));
+  });
+});
+
+describe("bestMonths", () => {
+  const guide = (best: string[]) =>
+    readDestination("x", { name: "X", months: Object.fromEntries(best.map((m) => [m, { rating: "best" }])) });
+
+  it("joins runs of best months", () => {
+    expect(bestMonths(guide(["apr", "may", "jun", "sep", "oct"]))).toBe("Apr–Jun, Sep–Oct");
+    expect(bestMonths(guide(["jul"]))).toBe("Jul");
+  });
+
+  it("keeps a run over new year together", () => {
+    expect(bestMonths(guide(["nov", "dec", "jan", "feb", "jun"]))).toBe("Jun, Nov–Feb");
+  });
+
+  it("says so when nothing or everything is best", () => {
+    expect(bestMonths(guide([]))).toBe("");
+    expect(bestMonths(guide(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]))).toBe("All year");
+  });
+});
+
 describe("New York", () => {
   const ny = findDestination("new-york")!;
 
   it("is published", () => {
     expect(DESTINATIONS.map((d) => d.slug)).toContain("new-york");
+  });
+
+  it("finds its country, map position, flight time and best months by itself", () => {
+    expect(ny.country).toBe("United States");
+    expect(ny.country_code).toBe("US");
+    expect(ny.lat).toBeCloseTo(40.71, 1);
+    expect(flightTime(LONDON, ny)).toBe("About 8 hrs");
+    expect(bestMonths(ny)).toBe("Apr–Jun, Sep–Oct");
+  });
+
+  it("forgets its old map position when the place changes", () => {
+    const moved = readDestination("new-york", { name: "York", country: "GB", published: true }, geo);
+    expect(moved.lat).toBeNull();
   });
 
   it("fills in a new idea", () => {

@@ -55,6 +55,8 @@ export const api = {
   removePerson: (id: number) => request("DELETE", `/people/${id}`),
   /** Organiser only: which of the family they are on this device. */
   setMe: (id: number) => request("POST", "/me", { person_id: id }),
+  /** The welcome steps are done for whoever this browser is. */
+  finishOnboarding: () => request("POST", "/me/onboarded"),
   personLink: (id: number) => request<{ url: string; days: number }>("POST", `/family/people/${id}/link`),
   signOutPerson: (id: number) => request("POST", `/family/people/${id}/sign-out`),
 

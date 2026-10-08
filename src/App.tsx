@@ -11,6 +11,7 @@ import { DrawView } from "./views/DrawView";
 import { SettingsView } from "./views/SettingsView";
 import { IdeaPage } from "./views/IdeaPage";
 import { TripPage } from "./views/TripPage";
+import { Onboarding } from "./views/Onboarding";
 import { PersonPicker } from "./components/PersonPicker";
 import { AppBottomNav, AppTopbar } from "./components/AppNav";
 import type { TabId } from "./components/AppNav";
@@ -22,13 +23,16 @@ import type { Family } from "./views/DestinationPage";
 import { followInPlace, isGuidePath } from "./navigate";
 import { load, save } from "./storage";
 
-/** Reads routes like #/next or #/next/12, and #/next/add/new-york from a destination guide's "Add to ideas". */
-function currentRoute(): { tab: TabId; id: number | null; add: string | null } {
+/**
+ * Reads routes like #/next or #/next/12, and #/next/add/new-york from a destination guide's "Add to ideas".
+ * #/welcome replays the welcome steps from Settings.
+ */
+function currentRoute(): { tab: TabId; id: number | null; add: string | null; welcome: boolean } {
   const [first, second, third] = location.hash.replace(/^#\/?/, "").split("/");
   const tab = (["been", "places", "next", "draw", "settings"] as const).find((t) => t === first) ?? "been";
   const id = Number(second);
   const add = second === "add" && third && findDestination(third) ? third : null;
-  return { tab, id: Number.isInteger(id) && id > 0 ? id : null, add };
+  return { tab, id: Number.isInteger(id) && id > 0 ? id : null, add, welcome: first === "welcome" };
 }
 
 /**
@@ -156,6 +160,8 @@ function Main({ path }: { path: string }) {
 function Shell({ path }: { path: string }) {
   const { me, ideas, home, loading, error, reload } = useData();
   const [route, setRoute] = useState(currentRoute);
+  // Someone new sees the welcome steps once; the server remembers when they've been through them.
+  const [welcomed, setWelcomed] = useState(false);
   const tab = route.tab;
 
   useEffect(() => {
@@ -182,6 +188,19 @@ function Shell({ path }: { path: string }) {
         <GuideView path={path} family={{ signedIn: true, me, ideas: loading ? null : ideas, airport: home }} />
         {!loading && !error && !me && <PersonPicker />}
       </>
+    );
+  }
+
+  if (!loading && !error && me && (route.welcome || (!me.onboarded && !welcomed))) {
+    return (
+      <Onboarding
+        replay={route.welcome}
+        onClose={() => {
+          setWelcomed(true);
+          // Leaving a replay without picking somewhere to go lands back in Settings.
+          if (location.hash === "#/welcome") location.hash = "/settings";
+        }}
+      />
     );
   }
 

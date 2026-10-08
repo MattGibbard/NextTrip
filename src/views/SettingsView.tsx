@@ -16,7 +16,7 @@ import { LegalLinks } from "./Welcome";
 
 const COLOUR_NAMES = ["Blue", "Pink", "Green", "Orange", "Purple", "Sea blue", "Mustard", "Red"];
 
-type SectionId = "family" | "invite" | "travel" | "device" | "account";
+type SectionId = "family" | "invite" | "travel" | "device" | "welcome" | "account";
 
 /** Scrolls to a settings section without touching the hash, which the app uses for its tabs. */
 function scrollToSection(id: SectionId) {
@@ -30,6 +30,7 @@ export function SettingsView() {
     ...(isOwner && shareUrl ? [{ id: "invite" as const, label: "Invite people" }] : []),
     ...(isOwner ? [{ id: "travel" as const, label: "Travel" }] : []),
     { id: "device", label: "This device" },
+    { id: "welcome", label: "How it works" },
     ...(isOwner ? [{ id: "account" as const, label: "Delete account", danger: true }] : []),
   ];
   const [current, setCurrent] = useState<SectionId>("family");
@@ -83,6 +84,7 @@ export function SettingsView() {
           {isOwner && shareUrl && <InviteSection />}
           {isOwner && <TravelSection />}
           <DeviceSection />
+          <WelcomeSection />
           {isOwner && <DeleteAccountSection />}
           <LegalLinks />
         </div>
@@ -576,6 +578,27 @@ function DeviceSection() {
         </div>
       </div>
     </Card>
+  );
+}
+
+/** Replays the welcome steps everyone sees the first time they're in. */
+function WelcomeSection() {
+  const { isOwner } = useData();
+  return (
+    <Card
+      id="welcome"
+      title="How it works"
+      intro={
+        isOwner
+          ? "Go back through the welcome steps: how the draw works, your home airport, a first idea and your family link."
+          : "Go back through the welcome steps: how the draw works and adding an idea."
+      }
+      action={
+        <button type="button" className="btn ghost raised" onClick={() => (location.hash = "/welcome")}>
+          Show me again
+        </button>
+      }
+    />
   );
 }
 

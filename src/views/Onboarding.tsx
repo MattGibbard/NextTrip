@@ -14,6 +14,20 @@ import { CrossIcon } from "../components/TerminalPicker";
 
 type Step = "welcome" | "airport" | "idea" | "done";
 
+/** Wider than a phone, the steps sit in a two-panel card under a header bar instead of filling the screen. */
+const WIDE = "(min-width: 760px)";
+
+function useWide() {
+  const [wide, setWide] = useState(() => window.matchMedia(WIDE).matches);
+  useEffect(() => {
+    const mq = window.matchMedia(WIDE);
+    const onChange = () => setWide(mq.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+  return wide;
+}
+
 /**
  * The welcome steps shown the first time someone is in, and again from Settings.
  * The organiser also sets the home airport and gets the family link to send; everyone adds a first idea.
@@ -39,11 +53,47 @@ export function Onboarding({ replay = false, onClose }: { replay?: boolean; onCl
   }, [step]);
 
   const n = steps.indexOf(step);
+  const wide = useWide();
+  const onBack = n > 0 ? back : undefined;
+  const body =
+    step === "done" ? (
+      <Done added={added} from={home} onClose={onClose} />
+    ) : step === "welcome" ? (
+      <Welcome isOwner={isOwner} onNext={next} onLeave={replay ? onClose : undefined} />
+    ) : step === "airport" ? (
+      <Airport onNext={next} onBack={onBack} />
+    ) : (
+      <FirstIdea onNext={(p) => (setAdded(p), next())} onBack={onBack} />
+    );
+
+  if (wide) {
+    return (
+      <div className="onb onb-wide" ref={top} tabIndex={-1}>
+        <header className="onb-head">
+          <div className="onb-head-inner">
+            <Brand />
+            {step !== "done" && (
+              <div className="onb-head-steps">
+                <span className="mono-label onb-count">
+                  STEP {n + 1} OF {steps.length}
+                </span>
+                <Progress steps={steps} n={n} />
+              </div>
+            )}
+          </div>
+        </header>
+        <main className="onb-stage">
+          <div className="onb-card">{body}</div>
+        </main>
+      </div>
+    );
+  }
+
   return (
     <div className="onb" ref={top} tabIndex={-1}>
       <div className="onb-col">
         {step === "done" ? (
-          <Done added={added} from={home} onClose={onClose} />
+          body
         ) : (
           <>
             <div className="onb-top">
@@ -60,17 +110,46 @@ export function Onboarding({ replay = false, onClose }: { replay?: boolean; onCl
                 STEP {n + 1} OF {steps.length}
               </span>
             </div>
-            <div className="onb-progress" aria-hidden>
-              {steps.map((s, i) => (
-                <span key={s} className={i <= n ? "on" : undefined} />
-              ))}
-            </div>
-            {step === "welcome" && <Welcome isOwner={isOwner} onNext={next} onLeave={replay ? onClose : undefined} />}
-            {step === "airport" && <Airport onNext={next} />}
-            {step === "idea" && <FirstIdea onNext={(p) => (setAdded(p), next())} />}
+            <Progress steps={steps} n={n} />
+            {body}
           </>
         )}
       </div>
+    </div>
+  );
+}
+
+function Progress({ steps, n }: { steps: Step[]; n: number }) {
+  return (
+    <div className="onb-progress" aria-hidden>
+      {steps.map((s, i) => (
+        <span key={s} className={i <= n ? "on" : undefined} />
+      ))}
+    </div>
+  );
+}
+
+/** The wide layout's two panels: the words and fields on the left, the board, pass or card on the right. */
+function Split({ left, right, panel = true }: { left: ReactNode; right: ReactNode; panel?: boolean }) {
+  return (
+    <>
+      <div className="onb-left">{left}</div>
+      <div className={panel ? "onb-right onb-panel" : "onb-right"}>{right}</div>
+    </>
+  );
+}
+
+/** The wide layout's buttons in one row: Back on the left, the skip link and the main button on the right. */
+function Row({ onBack, children }: { onBack?: () => void; children: ReactNode }) {
+  return (
+    <div className="onb-row">
+      {onBack && (
+        <button type="button" className="onb-skip" onClick={onBack}>
+          Back
+        </button>
+      )}
+      <span className="onb-row-gap" />
+      {children}
     </div>
   );
 }
@@ -100,12 +179,13 @@ const HOW = [
 ];
 
 function Welcome({ isOwner, onNext, onLeave }: { isOwner: boolean; onNext: () => void; onLeave?: () => void }) {
-  return (
-    <>
-      <Intro eyebrow="WELCOME ABOARD" heading="Find your next holiday, together" big>
-        Here's how it works. It takes about a minute to get going.
-      </Intro>
-
+  const wide = useWide();
+  const intro = (
+    <Intro eyebrow="WELCOME ABOARD" heading="Find your next holiday, together" big>
+      Here's how it works. It takes about a minute to get going.
+    </Intro>
+  );
+  const board = (
       <section className="onb-board" aria-label="How it works">
         <div className="onb-board-head">
           <span>HOW IT WORKS</span>
@@ -126,7 +206,8 @@ function Welcome({ isOwner, onNext, onLeave }: { isOwner: boolean; onNext: () =>
           ))}
         </ol>
       </section>
-
+  );
+  const bonus = (
       <div className="onb-bonus">
         <span className="onb-bonus-icon" aria-hidden>
           🧳
@@ -136,19 +217,52 @@ function Welcome({ isOwner, onNext, onLeave }: { isOwner: boolean; onNext: () =>
           <p>Log the holidays you've already been on to fill in your map.</p>
         </div>
       </div>
-      <p className="onb-note">
-        {isOwner ? "First, two quick things: where you fly from, and one place you'd love to go." : "First, one quick thing: a place you'd love to go."}
-      </p>
+  );
+  const note = (
+    <p className="onb-note">
+      {isOwner ? "First, two quick things: where you fly from, and one place you'd love to go." : "First, one quick thing: a place you'd love to go."}
+    </p>
+  );
+  const start = (
+    <button type="button" className="btn onb-primary" onClick={onNext}>
+      Let's get started
+    </button>
+  );
+  const leave = onLeave && (
+    <button type="button" className="onb-skip" onClick={onLeave}>
+      Back to Settings
+    </button>
+  );
 
+  if (wide) {
+    return (
+      <Split
+        panel={false}
+        left={
+          <>
+            {intro}
+            {bonus}
+            <span className="onb-fill" />
+            {note}
+            <div className="onb-row">
+              {start}
+              {leave}
+            </div>
+          </>
+        }
+        right={board}
+      />
+    );
+  }
+  return (
+    <>
+      {intro}
+      {board}
+      {bonus}
+      {note}
       <Actions>
-        <button type="button" className="btn onb-primary" onClick={onNext}>
-          Let's get started
-        </button>
-        {onLeave && (
-          <button type="button" className="onb-skip" onClick={onLeave}>
-            Back to Settings
-          </button>
-        )}
+        {start}
+        {leave}
       </Actions>
     </>
   );
@@ -159,7 +273,8 @@ function Actions({ children }: { children: ReactNode }) {
 }
 
 /** The organiser's home airport: a search with a short list of matches, and a boarding-pass strip showing the pick. */
-function Airport({ onNext }: { onNext: () => void }) {
+function Airport({ onNext, onBack }: { onNext: () => void; onBack?: () => void }) {
+  const wide = useWide();
   const { home, reload } = useData();
   const [picked, setPicked] = useState<Terminal | null>(home);
   const [q, setQ] = useState("");
@@ -181,7 +296,8 @@ function Airport({ onNext }: { onNext: () => void }) {
       try {
         const r = await api.terminals("airport", term);
         if (mine === seq.current) {
-          setResults(r.slice(0, 5).map((x) => x.terminal));
+          // Short enough on a wide screen that the buttons stay in view.
+          setResults(r.slice(0, wide ? 3 : 5).map((x) => x.terminal));
           setError(null);
         }
       } catch (e) {
@@ -191,7 +307,7 @@ function Airport({ onNext }: { onNext: () => void }) {
       }
     }, 150);
     return () => clearTimeout(t);
-  }, [q]);
+  }, [q, wide]);
 
   // With nothing searched yet, the current pick shows as the one row, ticked.
   const rows = results.length > 0 ? results : picked && q.trim().length < 2 ? [picked] : [];
@@ -212,12 +328,13 @@ function Airport({ onNext }: { onNext: () => void }) {
     }
   };
 
-  return (
+  const intro = (
+    <Intro eyebrow="CHECK-IN" heading="Which airport do you fly from?">
+      Pick the one closest to home. We use it to work out travel time to your ideas.
+    </Intro>
+  );
+  const search = (
     <>
-      <Intro eyebrow="CHECK-IN" heading="Which airport do you fly from?">
-        Pick the one closest to home. We use it to work out travel time to your ideas.
-      </Intro>
-
       <label className="onb-field">
         <span className="field-label">Closest airport</span>
         <span className="onb-search">
@@ -266,7 +383,9 @@ function Airport({ onNext }: { onNext: () => void }) {
         </ul>
       )}
       {error && <p className="error-text">{error}</p>}
-
+    </>
+  );
+  const pass = (
       <div className="onb-homebase">
         <span className="onb-homebase-stub" aria-hidden>
           HOME BASE
@@ -280,16 +399,63 @@ function Airport({ onNext }: { onNext: () => void }) {
             <span className="onb-dash" />
             <span className="onb-route-code blank">???</span>
           </div>
+          {wide && (
+            <div className="onb-pass-ends">
+              <div>
+                <span className="mono-label">FROM</span>
+                <strong>{picked?.name ?? "Your airport"}</strong>
+              </div>
+              <div>
+                <span className="mono-label">TO</span>
+                <strong className="muted">Your next idea</strong>
+              </div>
+            </div>
+          )}
         </div>
       </div>
+  );
+  const go = (
+    <button type="button" className="btn onb-primary" onClick={() => void save()} disabled={!picked || saving}>
+      {saving ? "Saving…" : "Continue"}
+    </button>
+  );
+  const skip = (
+    <button type="button" className="onb-skip" onClick={onNext}>
+      We don't fly. Skip this
+    </button>
+  );
 
+  if (wide) {
+    return (
+      <Split
+        left={
+          <>
+            {intro}
+            {search}
+            <span className="onb-fill" />
+            <Row onBack={onBack}>
+              {skip}
+              {go}
+            </Row>
+          </>
+        }
+        right={
+          <>
+            {pass}
+            <p className="onb-panel-note">You can change this any time in Settings.</p>
+          </>
+        }
+      />
+    );
+  }
+  return (
+    <>
+      {intro}
+      {search}
+      {pass}
       <Actions>
-        <button type="button" className="btn onb-primary" onClick={() => void save()} disabled={!picked || saving}>
-          {saving ? "Saving…" : "Continue"}
-        </button>
-        <button type="button" className="onb-skip" onClick={onNext}>
-          We don't fly. Skip this
-        </button>
+        {go}
+        {skip}
       </Actions>
     </>
   );
@@ -309,7 +475,8 @@ const FIRST_TYPES: readonly HolidayType[] = ["city", "beach", "nature"];
 const SHORT_LENGTH: Record<TripLength, string> = { weekend: "Weekend", week: "A week", "two-weeks": "2 weeks", longer: "3 weeks+" };
 
 /** One place to start the Next list with, and a few details, previewed as its standby card. */
-function FirstIdea({ onNext }: { onNext: (p: Place | null) => void }) {
+function FirstIdea({ onNext, onBack }: { onNext: (p: Place | null) => void; onBack?: () => void }) {
+  const wide = useWide();
   const { me, home, reload } = useData();
   const [place, setPlace] = useState<Place | null>(null);
   const [details, setDetails] = useState<IdeaDetails>({ budget: null, trip_length: null, travel_time: null, holiday_types: [] });
@@ -338,12 +505,12 @@ function FirstIdea({ onNext }: { onNext: (p: Place | null) => void }) {
     }
   };
 
-  return (
-    <>
-      <Intro eyebrow="YOUR FIRST IDEA" heading="Where would you love to go next?" standby>
-        Just one for now. Everyone can add more later.
-      </Intro>
-
+  const intro = (
+    <Intro eyebrow="YOUR FIRST IDEA" heading="Where would you love to go next?" standby>
+      Just one for now. Everyone can add more later.
+    </Intro>
+  );
+  const fields = (
       <div className="onb-fields">
         <div className="onb-field">
           <span className="field-label" id="onb-place">
@@ -396,20 +563,54 @@ function FirstIdea({ onNext }: { onNext: (p: Place | null) => void }) {
           onChange={(k) => setDetails({ ...details, budget: k })}
         />
       </div>
+  );
+  const preview = (
+    <div className="onb-preview">
+      <span className="mono-label">PREVIEW</span>
+      <StandbyCard preview idea={{ ...idea, status: "active" }} />
+      {wide && <p className="onb-panel-note">This is how it'll look in your ideas.</p>}
+    </div>
+  );
+  const errorText = error && <p className="error-text">{error}</p>;
+  const add = (
+    <button type="button" className="btn onb-primary" onClick={() => void save()} disabled={!place || saving}>
+      {saving ? "Saving…" : "Put it on standby"}
+    </button>
+  );
+  const later = (
+    <button type="button" className="onb-skip" onClick={() => onNext(null)}>
+      I'll add one later
+    </button>
+  );
 
-      <div className="onb-preview">
-        <span className="mono-label">PREVIEW</span>
-        <StandbyCard preview idea={{ ...idea, status: "active" }} />
-      </div>
-      {error && <p className="error-text">{error}</p>}
-
+  if (wide) {
+    return (
+      <Split
+        left={
+          <>
+            {intro}
+            {fields}
+            <span className="onb-fill" />
+            {errorText}
+            <Row onBack={onBack}>
+              {later}
+              {add}
+            </Row>
+          </>
+        }
+        right={preview}
+      />
+    );
+  }
+  return (
+    <>
+      {intro}
+      {fields}
+      {preview}
+      {errorText}
       <Actions>
-        <button type="button" className="btn onb-primary" onClick={() => void save()} disabled={!place || saving}>
-          {saving ? "Saving…" : "Put it on standby"}
-        </button>
-        <button type="button" className="onb-skip" onClick={() => onNext(null)}>
-          I'll add one later
-        </button>
+        {add}
+        {later}
       </Actions>
     </>
   );
@@ -433,6 +634,7 @@ function Segments<K extends string | number>({ legend, options, value, onChange 
 
 /** The end: a departures board with the family's standby count, and for the organiser, the family link to send. */
 function Done({ added, from, onClose }: { added: Place | null; from: Terminal | null; onClose: () => void }) {
+  const wide = useWide();
   const { ideas, isOwner, shareUrl } = useData();
   const standby = ideas.filter((i) => i.status === "active");
   const count = String(Math.min(standby.length, 99)).padStart(2, "0");
@@ -469,12 +671,7 @@ function Done({ added, from, onClose }: { added: Place | null; from: Terminal | 
       : "";
   const invite = isOwner && shareUrl;
 
-  return (
-    <>
-      <div className="onb-top">
-        <Brand />
-      </div>
-
+  const board = (
       <section className="onb-board onb-departures" aria-label={`${standby.length} ${standby.length === 1 ? "idea" : "ideas"} on standby`}>
         <div className="onb-board-head">
           <span>DEPARTURES</span>
@@ -493,7 +690,8 @@ function Done({ added, from, onClose }: { added: Place | null; from: Terminal | 
           <span className="onb-board-now">{shown ? "BOARDING SOON" : "OPEN FOR CHECK-IN"}</span>
         </div>
       </section>
-
+  );
+  const words = (
       <div className="onb-intro">
         <h1>You're checked in</h1>
         <p className="onb-lede">
@@ -501,20 +699,74 @@ function Done({ added, from, onClose }: { added: Place | null; from: Terminal | 
           {invite ? "A draw needs a few ideas, so bring the rest of the family in." : "Add more any time on Next, then draw together when everyone's ready."}
         </p>
       </div>
-
-      {invite && (
-        <section className="onb-invite" aria-labelledby="onb-invite-h">
-          <h2 id="onb-invite-h">Invite your family</h2>
-          <p className="muted small">Send them this link. They don't need an email, they just pick their name and colour.</p>
-          <div className="onb-link">
-            <input readOnly value={shareUrl.replace(/^https?:\/\//, "")} onFocus={(e) => e.target.select()} aria-label="Your family link" />
-            <button type="button" className="btn ghost onb-copy" onClick={() => void copy()}>
-              {copied ? "Copied" : "Copy"}
-            </button>
-          </div>
-        </section>
+  );
+  const shareButton = (
+    <button type="button" className="btn onb-primary" onClick={() => void share()}>
+      Share link
+    </button>
+  );
+  const invitePanel = invite && (
+    <section className="onb-invite" aria-labelledby="onb-invite-h">
+      {wide && <span className="mono-label onb-eyebrow">PASSENGERS</span>}
+      <h2 id="onb-invite-h">Invite your family</h2>
+      <p className="muted small">Send them this link. They don't need an email, they just pick their name and colour.</p>
+      {wide && (
+        <label className="field-label" htmlFor="onb-family-link">
+          Family link
+        </label>
       )}
+      <div className="onb-link">
+        <input id="onb-family-link" readOnly value={shareUrl.replace(/^https?:\/\//, "")} onFocus={(e) => e.target.select()} aria-label="Your family link" />
+        <button type="button" className="btn ghost onb-copy" onClick={() => void copy()}>
+          {copied ? "Copied" : "Copy"}
+        </button>
+      </div>
+      {wide && shareButton}
+    </section>
+  );
 
+  if (wide) {
+    const toIdeas = (
+      <button type="button" className={invite ? "onb-skip" : "btn onb-primary"} onClick={toNext}>
+        Go to my ideas
+      </button>
+    );
+    return invite ? (
+      <Split
+        panel={false}
+        left={
+          <>
+            {board}
+            {words}
+            <span className="onb-fill" />
+            <div className="onb-row">{toIdeas}</div>
+          </>
+        }
+        right={invitePanel}
+      />
+    ) : (
+      <Split
+        panel={false}
+        left={
+          <>
+            {words}
+            <span className="onb-fill" />
+            <div className="onb-row">{toIdeas}</div>
+          </>
+        }
+        right={board}
+      />
+    );
+  }
+
+  return (
+    <>
+      <div className="onb-top">
+        <Brand />
+      </div>
+      {board}
+      {words}
+      {invitePanel}
       <Actions>
         {invite ? (
           <>

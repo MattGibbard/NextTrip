@@ -587,3 +587,270 @@
   border-color: var(--accent);
   background: var(--surface);
 }
+
+/* ---------- Wider than a phone: a header bar, then the step as a two-panel card ---------- */
+
+.onb-wide {
+  display: flex;
+  flex-direction: column;
+}
+.onb-head {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.onb-head-inner {
+  max-width: 1120px;
+  height: 64px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.onb-head-steps {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.onb-head .onb-progress {
+  width: 160px;
+  margin: 0;
+  gap: 4px;
+}
+.onb-stage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
+.onb-card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 980px;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 40px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.08);
+}
+.onb-left {
+  flex: 1 1 380px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.onb-right {
+  flex: 1 1 360px;
+  min-width: 0;
+}
+.onb-panel {
+  box-sizing: border-box;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+.onb-panel-note {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--muted);
+  text-align: center;
+}
+.onb-fill {
+  flex: 1;
+  min-height: 16px;
+}
+.onb-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+.onb-row-gap {
+  flex: 1;
+}
+.onb-wide .onb-primary {
+  padding: 0 32px;
+}
+.onb-wide .onb-skip {
+  padding: 0 4px;
+}
+
+/* Words and fields */
+.onb-wide .onb-intro {
+  margin-top: 0;
+}
+.onb-wide .onb-intro h1 {
+  font-size: 2rem;
+}
+.onb-wide .onb-intro h1.big {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+.onb-wide .onb-intro h1.big + .onb-lede,
+.onb-wide .onb-departures + .onb-intro .onb-lede {
+  font-size: 1.1rem;
+}
+.onb-wide .onb-field,
+.onb-wide .onb-results {
+  margin-top: 8px;
+}
+.onb-wide .onb-fields {
+  margin-top: 8px;
+}
+.onb-wide .onb-bonus {
+  margin-top: 12px;
+  background: var(--bg);
+}
+.onb-wide .onb-bonus p {
+  font-size: 0.9rem;
+}
+.onb-wide .onb-note {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* How it works, as the right-hand panel */
+.onb-wide .onb-board {
+  margin: 0;
+  padding: 20px 22px 10px;
+}
+.onb-wide .onb-board-head {
+  padding-bottom: 12px;
+}
+.onb-wide .onb-board li {
+  gap: 14px;
+  padding: 18px 0;
+}
+.onb-wide .onb-board-n,
+.onb-wide .onb-board strong {
+  font-size: 1.05rem;
+}
+.onb-wide .onb-board li > div {
+  gap: 6px;
+}
+.onb-wide .onb-board p {
+  font-size: 0.9rem;
+}
+
+/* The home base pass, bigger and with where it goes from and to */
+.onb-wide .onb-homebase {
+  margin: 0;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgb(15 118 110 / 0.25);
+}
+.onb-wide .onb-homebase-stub {
+  width: 52px;
+  font-size: 0.7rem;
+}
+.onb-wide .onb-homebase > div {
+  min-width: 0;
+  padding: 22px 24px;
+  gap: 14px;
+}
+.onb-wide .onb-route-code {
+  font-size: 3rem;
+}
+.onb-wide .onb-dash {
+  min-width: 16px;
+}
+.onb-pass-ends {
+  display: flex;
+  gap: 24px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+.onb-pass-ends > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.onb-pass-ends strong {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.onb-pass-ends strong.muted {
+  color: var(--muted);
+}
+
+/* The idea card preview */
+.onb-wide .onb-preview {
+  margin: 0;
+  gap: 12px;
+}
+.onb-wide .onb-preview .standby-card {
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.1);
+}
+
+/* The last step: a bigger board, and the invite as the right-hand panel */
+.onb-wide .onb-departures {
+  padding: 20px 22px;
+  gap: 14px;
+}
+.onb-wide .onb-flaps {
+  gap: 6px;
+}
+.onb-wide .onb-flap {
+  width: 46px;
+  height: 64px;
+  border-radius: 8px;
+  font-size: 2.25rem;
+}
+.onb-wide .onb-flaps-label {
+  padding-left: 14px;
+  font-size: 1rem;
+}
+.onb-wide .onb-board-row,
+.onb-wide .onb-board-row .onb-board-now {
+  font-size: 1.05rem;
+}
+.onb-wide .onb-departures + .onb-intro {
+  margin-top: 8px;
+}
+.onb-wide .onb-departures + .onb-intro h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+.onb-wide .onb-invite {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 28px;
+  gap: 14px;
+  justify-content: center;
+  background: var(--paper);
+  box-shadow: none;
+  border-radius: 16px;
+}
+.onb-wide .onb-invite h2 {
+  font-size: 1.375rem;
+}
+.onb-wide .onb-invite p {
+  font-size: 0.95rem;
+}
+.onb-wide .onb-link input {
+  height: 48px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.onb-wide .onb .btn.onb-copy,
+.onb-wide .btn.onb-copy {
+  height: 48px;
+}
+.onb-wide .onb-invite .onb-primary {
+  margin-top: 6px;
+}

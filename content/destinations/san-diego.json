@@ -1,0 +1,175 @@
+{
+  "name": "San Diego",
+  "published": true,
+  "country": "US",
+  "title": "Family holidays in San Diego",
+  "intro": "Sunny beaches, a famous zoo and Legoland up the road. Here's what San Diego is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "SAN",
+  "holiday_types": [
+    "city",
+    "beach"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "May Gray"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "June Gloom"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warmest sea"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild"
+    }
+  },
+  "when_to_go": "San Diego is mild all year, so there's no bad time to go. Mornings in May and June are often cloudy by the coast. July to October brings the warmest sea and sunniest days, and September is quieter once US schools go back.",
+  "things": [
+    {
+      "name": "San Diego Zoo",
+      "tag": "Ticketed",
+      "blurb": "Pandas, koalas and an aerial tram over Balboa Park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Legoland California",
+      "tag": "Day trip",
+      "blurb": "About 40 minutes north in Carlsbad. Best for under-12s.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "La Jolla Cove",
+      "tag": "Free",
+      "blurb": "Sea lions and seals lazing on the rocks. Look, don't touch.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Balboa Park",
+      "tag": "Free",
+      "blurb": "Gardens, playgrounds and museums. Many museums are free for children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "USS Midway Museum",
+      "tag": "Ticketed",
+      "blurb": "Climb into the cockpits on an aircraft carrier.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mission Beach",
+      "tag": "Free",
+      "blurb": "A long beach, a boardwalk and the old wooden Giant Dipper roller coaster.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is San Diego good for a family holiday?",
+      "answer": "Yes. It mixes a beach holiday with big-name attractions, and the weather is reliable. You'll want a hire car to get between them."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Seven to ten nights covers the zoo, Legoland and plenty of beach days. Many families combine it with Los Angeles."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "San Diego Zoo or Safari Park?",
+      "answer": "The zoo is in the city and easier with little ones. The Safari Park is 45 minutes inland and better for big animals roaming open land."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Los Angeles",
+      "code": "LAX",
+      "label": "🎢 Theme parks"
+    },
+    {
+      "name": "Austin",
+      "code": "AUS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Orlando",
+      "code": "ORL",
+      "label": "🎢 Theme parks"
+    },
+    {
+      "name": "Sydney",
+      "code": "SYD",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

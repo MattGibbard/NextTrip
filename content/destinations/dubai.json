@@ -1,0 +1,176 @@
+{
+  "name": "Dubai",
+  "published": true,
+  "country": "AE",
+  "title": "Family holidays in Dubai",
+  "intro": "Winter sun, water parks and the tallest building in the world. Here's what Dubai is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "DXB",
+  "holiday_types": [
+    "city",
+    "beach",
+    "relax"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3 to 4 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "UAE dirham (AED)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa needed in advance",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": true
+    }
+  ],
+  "facts_note": "Rules on medicines are strict. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Warm, busy"
+    }
+  },
+  "when_to_go": "November to March is the season, with warm sunny days that suit beaches and outdoor sights. Summer is extremely hot, so everything moves indoors, but hotels are much cheaper. Ramadan moves each year and brings shorter opening hours, so check the dates.",
+  "things": [
+    {
+      "name": "Burj Khalifa",
+      "tag": "Ticketed",
+      "blurb": "The world's tallest building. Go up near sunset and book ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dubai Aquarium",
+      "tag": "Indoors",
+      "blurb": "A huge tank inside Dubai Mall that you can see for free.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Aquaventure Waterpark",
+      "tag": "Ticketed",
+      "blurb": "Record-breaking slides at Atlantis on the Palm.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Abra across Dubai Creek",
+      "tag": "Cheap",
+      "blurb": "A dirham each. Hop on a wooden water taxi to the old souks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Desert safari",
+      "tag": "Ticketed",
+      "blurb": "Dune drives, camel rides and dinner under the stars. Pick a family-friendly tour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kite Beach",
+      "tag": "Free",
+      "blurb": "A clean public beach with play areas and a view of the Burj Al Arab.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Dubai good for a family holiday?",
+      "answer": "Yes, especially for winter sun. Hotels are built for families, it's very safe, and the flight is about seven hours with little jet lag."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights mixes beach days with the big sights. It also works well as a stopover on the way to Asia or Australia."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders get a free visit visa on arrival. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "What should we wear?",
+      "answer": "Beachwear is fine at the beach and pool. Cover shoulders and knees in malls, the old town and religious sites."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Abu Dhabi",
+      "code": "AUH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Oman",
+      "code": "MCT",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Cape Town",
+      "code": "CPT",
+      "label": "☀️ Winter sun"
+    },
+    {
+      "name": "Tokyo",
+      "code": "TYO",
+      "label": "🏙️ City break"
+    }
+  ]
+}

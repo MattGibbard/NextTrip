@@ -1,7 +1,57 @@
 {
+  "austin": {
+    "query": "Austin|US",
+    "lat": 30.2711,
+    "lon": -97.7437
+  },
+  "berlin": {
+    "query": "Berlin|DE",
+    "lat": 52.517,
+    "lon": 13.3889
+  },
+  "cape-town": {
+    "query": "Cape Town|ZA",
+    "lat": -33.9288,
+    "lon": 18.4172
+  },
+  "dubai": {
+    "query": "Dubai|AE",
+    "lat": 25.2653,
+    "lon": 55.2925
+  },
   "new-york": {
     "query": "New York|US",
     "lat": 40.7127,
     "lon": -74.006
+  },
+  "paris": {
+    "query": "Paris|FR",
+    "lat": 48.8535,
+    "lon": 2.3484
+  },
+  "rome": {
+    "query": "Rome|IT",
+    "lat": 41.8933,
+    "lon": 12.4829
+  },
+  "san-diego": {
+    "query": "San Diego|US",
+    "lat": 32.7174,
+    "lon": -117.1628
+  },
+  "sydney": {
+    "query": "Sydney|AU",
+    "lat": -33.8698,
+    "lon": 151.2083
+  },
+  "tokyo": {
+    "query": "Tokyo|JP",
+    "lat": 35.6769,
+    "lon": 139.7639
+  },
+  "toronto": {
+    "query": "Toronto|CA",
+    "lat": 43.6535,
+    "lon": -79.3839
   }
 }

@@ -1,0 +1,176 @@
+{
+  "name": "Tokyo",
+  "published": true,
+  "country": "JP",
+  "title": "Family holidays in Tokyo",
+  "intro": "Bullet trains, robots and the friendliest city you'll ever visit with children. Here's what Tokyo is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "TYO",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 to 9 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Japanese yen (¥)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 100V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK plugs need an adapter. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cold, clear"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cold, clear"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Blossom"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Blossom"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, humid"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, humid"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Typhoons"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Autumn colour"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Crisp"
+    }
+  },
+  "when_to_go": "Late March and early April bring the cherry blossom and the biggest crowds. October and November are mild with autumn leaves and fewer people. Summer is hot and humid, but there are festivals and fireworks, and winter is cold, dry and sunny.",
+  "things": [
+    {
+      "name": "teamLab Planets",
+      "tag": "Ticketed",
+      "blurb": "Walk barefoot through water and light. Book ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ghibli Museum",
+      "tag": "Ticketed",
+      "blurb": "A dreamy museum for Totoro fans. Tickets go on sale monthly and sell out fast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Senso-ji Temple",
+      "tag": "Free",
+      "blurb": "Tokyo's oldest temple, with snack stalls all the way up to it.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Shibuya Crossing",
+      "tag": "Free",
+      "blurb": "Watch the world's busiest crossing from above, then join in.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ueno Park and Zoo",
+      "tag": "Ticketed",
+      "blurb": "Giant pandas, museums and boats on the pond in one big park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tokyo Disneyland & DisneySea",
+      "tag": "Day trip",
+      "blurb": "Two parks by the bay. DisneySea is one of the best in the world.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Tokyo good for a family holiday?",
+      "answer": "Very. It's safe, spotless and easy on public transport, and children love the food, trains and gadgets. Big stations are busy, so use a pushchair-friendly route or a sling."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Seven to ten nights covers Tokyo and a day trip or two. Many families add Kyoto by bullet train."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days without a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is Tokyo expensive?",
+      "answer": "Less than you might think. The yen has been weak against the pound, and food from convenience stores and noodle shops is cheap and good."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kyoto",
+      "code": "UKY",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Seoul",
+      "code": "SEL",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Singapore",
+      "code": "SIN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Sydney",
+      "code": "SYD",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "name": "Austin",
+  "published": true,
+  "country": "US",
+  "title": "Family holidays in Austin",
+  "intro": "Spring-fed pools, barbecue and a million bats at sunset. Here's what Austin is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "AUS",
+  "holiday_types": [
+    "city",
+    "food",
+    "nature"
+  ],
+  "nights": "4 to 6",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Busy (SXSW)"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild"
+    }
+  },
+  "when_to_go": "Spring and autumn are perfect, with warm days and wildflowers in April. July and August are very hot, so plan pool time and indoor afternoons. Hotel prices jump during big events like SXSW in March and the Formula 1 race in autumn.",
+  "things": [
+    {
+      "name": "Barton Springs Pool",
+      "tag": "Ticketed",
+      "blurb": "A huge natural pool fed by springs that stays around 20°C all year.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Congress Avenue Bridge bats",
+      "tag": "Free",
+      "blurb": "Up to 1.5 million bats fly out at dusk, March to October.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Thinkery",
+      "tag": "Indoors",
+      "blurb": "A hands-on children's museum for under-11s.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zilker Park",
+      "tag": "Free",
+      "blurb": "Wide lawns, a miniature train and kayaks on Lady Bird Lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bullock Texas State History Museum",
+      "tag": "Indoors",
+      "blurb": "Texas history with a shipwreck and an IMAX cinema.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hamilton Pool",
+      "tag": "Summer",
+      "blurb": "A swimming hole under a collapsed cave. Book well ahead.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Austin good for a family holiday?",
+      "answer": "Yes, especially for families who like the outdoors and good food. It's relaxed and friendly, though you'll want a car to get around."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four to six nights, or pair it with San Antonio, about 90 minutes away, for a Texas road trip."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is there a direct flight from the UK?",
+      "answer": "Yes, British Airways flies direct from London Heathrow, so it's easier than many US cities to reach."
+    }
+  ],
+  "similar": [
+    {
+      "name": "San Diego",
+      "code": "SAN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Nashville",
+      "code": "BNA",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "New Orleans",
+      "code": "MSY",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "New York",
+      "code": "NYC",
+      "label": "🏙️ City break"
+    }
+  ]
+}

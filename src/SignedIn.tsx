@@ -3,7 +3,7 @@ import "leaflet/dist/leaflet.css";
 import "./draw.css";
 import "./onboarding.css";
 import "./postcard.css";
-import type { Session } from "../shared/types";
+import type { Person, Session } from "../shared/types";
 import { DataProvider, useData } from "./data";
 import { findDestination } from "./destinations";
 import { TripsView } from "./views/TripsView";
@@ -20,7 +20,7 @@ import { AppBottomNav, AppTopbar } from "./components/AppNav";
 import type { TabId } from "./components/AppNav";
 import { isGuidePath } from "./navigate";
 import { LAST_ME, PageSkeleton } from "./components/AppSkeleton";
-import { save } from "./storage";
+import { load, save } from "./storage";
 
 // The signed-in app. App.tsx loads this on its own, once someone is signed in, so visitors to the
 // public pages never download it.
@@ -100,7 +100,8 @@ function Shell({ path }: { path: string }) {
 
   return (
     <div className="app">
-      <AppTopbar current={tab} me={me} go={go} />
+      {/* Until the family's things arrive, keep showing who you were last time so the name doesn't blink out. */}
+      <AppTopbar current={tab} me={me ?? (loading ? load<Pick<Person, "name" | "color"> | null>(LAST_ME, null) : null)} go={go} />
 
       <main className="content">
         {error && (

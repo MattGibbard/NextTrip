@@ -4,7 +4,9 @@
   "country": "US",
   "title": "Holidays in Boston",
   "intro": "Follow a red line through history, see whales off the coast and catch a ball game. Here's what Boston is like with the family and when to go.",
-  "image": "",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/boston-4150928_1280.webp",
   "image_alt": "",
   "to_code": "BOS",
   "holiday_types": [

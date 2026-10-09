@@ -352,10 +352,21 @@ function bestSet(d: Destination): Set<number> {
   return new Set(d.months.flatMap((m, i) => (m.rating === "best" ? [i] : [])));
 }
 
+/** A copy of the list in a random order (Fisher-Yates). */
+function shuffled<T>(items: readonly T[]): T[] {
+  const out = [...items];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
 /**
  * Every guide, for browsing: a departures board of what's in season, filters for the month and kind
  * of holiday, a card per guide and the countries they're in. The month is the visitor's own, set once
- * the page is up so the prerendered page doesn't depend on when the site was built.
+ * the page is up so the prerendered page doesn't depend on when the site was built. The order is
+ * shuffled then too, so each visit leads with different places while the prerendered page stays A to Z.
  */
 export function DestinationsIndex({ family }: { family?: Family }) {
   const { signedIn, me, ideas, airport } = useFamily(family);
@@ -364,9 +375,11 @@ export function DestinationsIndex({ family }: { family?: Family }) {
   const [type, setType] = useState<string | null>(null);
   const [country, setCountry] = useState<string | null>(null);
   const [search, setSearch] = useState("");
+  const [order, setOrder] = useState(DESTINATIONS);
 
   useEffect(() => {
     setMonth(new Date().getMonth());
+    setOrder(shuffled(DESTINATIONS));
     const code = new URLSearchParams(location.search).get("country")?.toUpperCase();
     if (code && DESTINATIONS.some((d) => d.country_code === code)) setCountry(code);
   }, []);
@@ -375,7 +388,7 @@ export function DestinationsIndex({ family }: { family?: Family }) {
   const inSeason = (d: Destination) => month !== null && !!best.get(d.slug)?.has(month);
   const types = HOLIDAY_TYPES.filter((t) => DESTINATIONS.some((d) => d.holiday_types.includes(t.key)));
   const words = search.trim().toLowerCase();
-  const shown = DESTINATIONS.filter(
+  const shown = order.filter(
     (d) =>
       (!type || d.holiday_types.includes(type as Destination["holiday_types"][number])) &&
       (!country || d.country_code === country) &&
@@ -383,8 +396,9 @@ export function DestinationsIndex({ family }: { family?: Family }) {
   );
   const cards = [...shown.filter(inSeason), ...shown.filter((d) => !inSeason(d))];
   const good = shown.filter(inSeason).length;
-  const board = (month === null ? DESTINATIONS : DESTINATIONS.filter(inSeason)).slice(0, 5);
-  const boardMore = (month === null ? DESTINATIONS : DESTINATIONS.filter(inSeason)).length - board.length;
+  const boardAll = month === null ? order : order.filter(inSeason);
+  const board = boardAll.slice(0, 5);
+  const boardMore = boardAll.length - board.length;
 
   const countries = [...new Set(DESTINATIONS.map((d) => d.country_code).filter(Boolean))]
     .map((code) => ({ code, name: DESTINATIONS.find((d) => d.country_code === code)!.country, count: DESTINATIONS.filter((d) => d.country_code === code).length }))

@@ -1,0 +1,176 @@
+{
+  "name": "San Francisco",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in San Francisco",
+  "intro": "Cable cars, the Golden Gate Bridge and sea lions on the pier. Here's what San Francisco is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "SFO",
+  "holiday_types": [
+    "city",
+    "nature",
+    "food"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Foggy mornings"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Cool, foggy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Cool, foggy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warmest"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rainy"
+    }
+  },
+  "when_to_go": "September and October are the warmest, sunniest months. Summer is surprisingly cool and foggy, so pack jumpers. Winter is mild but brings most of the year's rain.",
+  "things": [
+    {
+      "name": "Golden Gate Bridge",
+      "tag": "Free",
+      "blurb": "Hire bikes and ride across to Sausalito, then take the ferry back.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cable cars",
+      "tag": "Ticketed",
+      "blurb": "Hang on as they climb the city's steep hills.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alcatraz",
+      "tag": "Ticketed",
+      "blurb": "A boat to the old island prison. Book weeks ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Exploratorium",
+      "tag": "Indoors",
+      "blurb": "Hundreds of hands-on science exhibits on the waterfront.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "California Academy of Sciences",
+      "tag": "Indoors",
+      "blurb": "A rainforest, aquarium and planetarium in one building.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pier 39 sea lions",
+      "tag": "Free",
+      "blurb": "Hundreds of noisy sea lions lounging on the docks.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is San Francisco good for a family holiday?",
+      "answer": "Yes. It's compact, full of hands-on museums, and the views are amazing. Some downtown streets are rough, so plan routes and stay in areas like Fisherman's Wharf or the Marina."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights, often as part of a California road trip with Yosemite or the coast."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can you see redwoods nearby?",
+      "answer": "Yes, Muir Woods is about 40 minutes north. You need to book parking or a shuttle ahead."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Los Angeles",
+      "code": "LAX",
+      "label": "🎢 Theme parks"
+    },
+    {
+      "name": "Vancouver",
+      "code": "YVR",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Boston",
+      "code": "BOS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "San Diego",
+      "code": "SAN",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

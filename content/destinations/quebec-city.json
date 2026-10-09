@@ -1,0 +1,176 @@
+{
+  "name": "Quebec City",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Quebec City",
+  "intro": "A walled old town, a castle hotel and a waterfall taller than Niagara. Here's what Quebec City is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "YQB",
+  "holiday_types": [
+    "city",
+    "culture",
+    "nature"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Quebec City is French-speaking, but English is widely understood in the old town. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Snowy"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Winter Carnival"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Thaw"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Festivals"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas market"
+    }
+  },
+  "when_to_go": "Summer and early autumn are warm, with street performers and festivals. February's Winter Carnival has ice palaces, snow slides and canoe races on the frozen river, so wrap up well. December has a German-style Christmas market.",
+  "things": [
+    {
+      "name": "Old Quebec",
+      "tag": "Free",
+      "blurb": "The only walled city north of Mexico, with cobbled lanes and murals.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dufferin Terrace",
+      "tag": "Free",
+      "blurb": "A boardwalk below the Château Frontenac. In winter there's a fast toboggan run.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Montmorency Falls",
+      "tag": "Ticketed",
+      "blurb": "A waterfall taller than Niagara, with a cable car, a suspension bridge and a zip line.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Plains of Abraham",
+      "tag": "Free",
+      "blurb": "A huge park where a famous battle was fought, now for picnics and sledging.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Village Vacances Valcartier",
+      "tag": "Ticketed",
+      "blurb": "Snow tubing in winter and a big water park in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Day trip",
+      "blurb": "Belugas and humpbacks at Tadoussac, from June to October. A long but rewarding day.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Quebec City good for a family holiday?",
+      "answer": "Yes. It's small, safe and full of history, and it feels like a trip to Europe. Steep streets and stairs link the upper and lower town, so there's a funicular to help."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights, as part of a trip with Montreal."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is the Winter Carnival good for children?",
+      "answer": "Yes, it's one of the biggest winter festivals in the world, with snow slides, sleigh rides and a giant snowman mascot called Bonhomme. Temperatures can drop below -20°C."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Montreal",
+      "code": "YMQ",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Boston",
+      "code": "BOS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Halifax",
+      "code": "YHZ",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Rovaniemi",
+      "code": "RVN",
+      "label": "🧗 Adventure"
+    }
+  ]
+}

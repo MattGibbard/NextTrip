@@ -1,0 +1,176 @@
+{
+  "name": "New Orleans",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in New Orleans",
+  "intro": "Jazz on every corner, a paddle steamer on the Mississippi and beignets for breakfast. Here's what New Orleans is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "MSY",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mardi Gras, busy"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Festivals"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, humid"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very humid"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "March, April, October and November are warm and dry, with lots of festivals. Mardi Gras in February or March is spectacular, with family-friendly parades away from the French Quarter. Summer is hot and sticky, and hurricane season peaks from August to October.",
+  "things": [
+    {
+      "name": "French Quarter",
+      "tag": "Free",
+      "blurb": "Street musicians, balconies and Jackson Square by day. Bourbon Street isn't for children at night.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Café du Monde",
+      "tag": "Ticketed",
+      "blurb": "Hot beignets covered in icing sugar, open almost round the clock.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Steamboat Natchez",
+      "tag": "Ticketed",
+      "blurb": "A paddle steamer cruise on the Mississippi with live jazz.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Swamp tour",
+      "tag": "Ticketed",
+      "blurb": "A boat through the bayou to spot alligators.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Audubon Zoo",
+      "tag": "Ticketed",
+      "blurb": "Rare white alligators and a Louisiana swamp area.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "City Park",
+      "tag": "Ticketed",
+      "blurb": "Old oak trees, Storyland playground and a vintage carousel.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is New Orleans good for a family holiday?",
+      "answer": "Yes, for families who love music and food. Daytime is very family-friendly, while some areas get rowdy late at night."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights, or combine it with Nashville or Memphis on a music road trip."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is Mardi Gras OK for children?",
+      "answer": "Yes, on the parade routes uptown along St. Charles Avenue, where families bring ladders and catch beads. Avoid the French Quarter at night."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Austin",
+      "code": "AUS",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Miami",
+      "code": "MIA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Chicago",
+      "code": "CHI",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Nashville",
+      "code": "BNA",
+      "label": "🎶 Music"
+    }
+  ]
+}

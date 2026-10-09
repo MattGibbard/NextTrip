@@ -9,10 +9,20 @@
     "lat": 30.2711,
     "lon": -97.7437
   },
+  "azores": {
+    "query": "Azores|PT",
+    "lat": 37.7412,
+    "lon": -25.6756
+  },
   "bali": {
     "query": "Bali|ID",
     "lat": -8.3405,
     "lon": 115.092
+  },
+  "banff": {
+    "query": "Banff|CA",
+    "lat": 51.1784,
+    "lon": -115.5708
   },
   "bangkok": {
     "query": "Bangkok|TH",
@@ -34,6 +44,16 @@
     "lat": 52.517,
     "lon": 13.3889
   },
+  "borneo": {
+    "query": "Borneo|MY",
+    "lat": 5.9804,
+    "lon": 116.0735
+  },
+  "boston": {
+    "query": "Boston|US",
+    "lat": 42.3555,
+    "lon": -71.0565
+  },
   "cancun": {
     "query": "Cancún|MX",
     "lat": 21.1617,
@@ -48,6 +68,11 @@
     "query": "Chamonix|FR",
     "lat": 45.9237,
     "lon": 6.8694
+  },
+  "chicago": {
+    "query": "Chicago|US",
+    "lat": 41.8756,
+    "lon": -87.6244
   },
   "copenhagen": {
     "query": "Copenhagen|DK",
@@ -64,6 +89,11 @@
     "lat": 35.3088,
     "lon": 24.4633
   },
+  "cusco": {
+    "query": "Cusco|PE",
+    "lat": -13.5226,
+    "lon": -71.9673
+  },
   "dubai": {
     "query": "Dubai|AE",
     "lat": 25.2653,
@@ -74,6 +104,26 @@
     "lat": 42.6403,
     "lon": 18.1083
   },
+  "faroe-islands": {
+    "query": "Faroe Islands|FO",
+    "lat": 62.0107,
+    "lon": -6.7741
+  },
+  "galapagos": {
+    "query": "Galápagos Islands|EC",
+    "lat": -0.9538,
+    "lon": -90.9656
+  },
+  "grand-canyon": {
+    "query": "Grand Canyon|US",
+    "lat": 36.0544,
+    "lon": -112.1401
+  },
+  "halifax": {
+    "query": "Halifax|CA",
+    "lat": 44.6476,
+    "lon": -63.5728
+  },
   "hoi-an": {
     "query": "Hoi An|VN",
     "lat": 15.8801,
@@ -83,6 +133,11 @@
     "query": "Interlaken|CH",
     "lat": 46.6863,
     "lon": 7.8632
+  },
+  "jordan": {
+    "query": "Jordan|JO",
+    "lat": 31.95,
+    "lon": 35.93
   },
   "kotor": {
     "query": "Kotor|ME",
@@ -109,6 +164,16 @@
     "lat": 46.05,
     "lon": 14.5069
   },
+  "lofoten": {
+    "query": "Lofoten|NO",
+    "lat": 68.15,
+    "lon": 13.95
+  },
+  "los-angeles": {
+    "query": "Los Angeles|US",
+    "lat": 34.0537,
+    "lon": -118.2428
+  },
   "maasai-mara": {
     "query": "Maasai Mara|KE",
     "lat": -1.4931,
@@ -134,6 +199,11 @@
     "lat": 31.6258,
     "lon": -7.9892
   },
+  "maui": {
+    "query": "Maui|US",
+    "lat": 20.7984,
+    "lon": -156.3319
+  },
   "mauritius": {
     "query": "Mauritius|MU",
     "lat": -20.2759,
@@ -143,6 +213,31 @@
     "query": "Mexico City|MX",
     "lat": 19.4326,
     "lon": -99.1332
+  },
+  "miami": {
+    "query": "Miami|US",
+    "lat": 25.7742,
+    "lon": -80.1936
+  },
+  "montreal": {
+    "query": "Montreal|CA",
+    "lat": 45.5031,
+    "lon": -73.5698
+  },
+  "namibia": {
+    "query": "Namibia|NA",
+    "lat": -22.5609,
+    "lon": 17.0658
+  },
+  "nepal": {
+    "query": "Nepal|NP",
+    "lat": 27.7172,
+    "lon": 85.324
+  },
+  "new-orleans": {
+    "query": "New Orleans|US",
+    "lat": 29.9759,
+    "lon": -90.0782
   },
   "new-york": {
     "query": "New York|US",
@@ -174,6 +269,11 @@
     "lat": 50.0875,
     "lon": 14.4213
   },
+  "quebec-city": {
+    "query": "Quebec City|CA",
+    "lat": 46.8139,
+    "lon": -71.208
+  },
   "queenstown": {
     "query": "Queenstown|NZ",
     "lat": -45.0322,
@@ -198,6 +298,11 @@
     "query": "San Diego|US",
     "lat": 32.7174,
     "lon": -117.1628
+  },
+  "san-francisco": {
+    "query": "San Francisco|US",
+    "lat": 37.7793,
+    "lon": -122.4193
   },
   "seoul": {
     "query": "Seoul|KR",
@@ -234,6 +339,11 @@
     "lat": 43.6535,
     "lon": -79.3839
   },
+  "torres-del-paine": {
+    "query": "Torres del Paine|CL",
+    "lat": -50.9423,
+    "lon": -73.4068
+  },
   "tromso": {
     "query": "Tromsø|NO",
     "lat": 69.6496,
@@ -253,5 +363,20 @@
     "query": "Vienna|AT",
     "lat": 48.2084,
     "lon": 16.3725
+  },
+  "washington-dc": {
+    "query": "Washington, D.C.|US",
+    "lat": 38.8951,
+    "lon": -77.0364
+  },
+  "whistler": {
+    "query": "Whistler|CA",
+    "lat": 50.1163,
+    "lon": -122.9574
+  },
+  "yellowstone": {
+    "query": "Yellowstone|US",
+    "lat": 44.428,
+    "lon": -110.5885
   }
 }

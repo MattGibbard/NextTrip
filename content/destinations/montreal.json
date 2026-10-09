@@ -1,0 +1,176 @@
+{
+  "name": "Montreal",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Montreal",
+  "intro": "A taste of France in North America, with festivals, bagels and a mountain in the middle. Here's what Montreal is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "YMQ",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Montreal is French-speaking, though most people speak English too. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Freezing"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Freezing"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Thaw"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Festivals"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Festivals"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Snowy, festive"
+    }
+  },
+  "when_to_go": "June to October is best, with summer festivals almost every weekend and autumn colours on Mount Royal. Winter is very cold, but there's outdoor skating and a snow festival. Spring is a slushy in-between time.",
+  "things": [
+    {
+      "name": "Old Montreal and the Old Port",
+      "tag": "Free",
+      "blurb": "Cobbled streets, a big Ferris wheel and a zip line over the harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Biodôme",
+      "tag": "Ticketed",
+      "blurb": "Walk through four climates, from rainforest to the Antarctic with penguins.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Royal",
+      "tag": "Free",
+      "blurb": "A big park on a hill with a lookout over the city and a lake for skating in winter.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "La Ronde",
+      "tag": "Ticketed",
+      "blurb": "An amusement park on an island, with fireworks competitions in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jean-Talon Market",
+      "tag": "Free",
+      "blurb": "Fruit, maple treats and cheese at one of North America's biggest markets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Montreal Botanical Garden",
+      "tag": "Ticketed",
+      "blurb": "Huge gardens, an insectarium and lantern displays in autumn.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Montreal good for a family holiday?",
+      "answer": "Yes. It's friendly, safe and feels European, with good parks, museums and food. The underground city helps in bad weather."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights, often combined with Quebec City, about three hours away, or Toronto."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Do you need to speak French?",
+      "answer": "No. Most people in Montreal switch happily to English, but a 'bonjour' goes down well."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Quebec City",
+      "code": "YQB",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Toronto",
+      "code": "YTO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Boston",
+      "code": "BOS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Paris",
+      "code": "PAR",
+      "label": "🏙️ City break"
+    }
+  ]
+}

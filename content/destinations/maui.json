@@ -1,0 +1,176 @@
+{
+  "name": "Maui",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Maui",
+  "intro": "Humpback whales, a volcano sunrise and snorkelling with turtles in Hawaii. Here's what Maui is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "OGG",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "adventure"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "10 to 11 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Whales"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Whales"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Whales"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Summer, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Summer, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Whales, busy"
+    }
+  },
+  "when_to_go": "Maui is warm all year. December to March is humpback whale season, and April, May, September and October are quieter and good value. The north coast gets more winter waves, so families swim on the south and west coasts.",
+  "things": [
+    {
+      "name": "Whale watching",
+      "tag": "Ticketed",
+      "blurb": "Thousands of humpbacks visit from December to April. You can often see them from the beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Haleakalā",
+      "tag": "Ticketed",
+      "blurb": "Watch the sunrise above the clouds from the summit of a volcano. Book a sunrise slot.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Molokini snorkelling",
+      "tag": "Ticketed",
+      "blurb": "A boat to a sunken crater with clear water and tropical fish.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Road to Hana",
+      "tag": "Day trip",
+      "blurb": "A winding coast road past waterfalls and black sand beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Maui Ocean Center",
+      "tag": "Indoors",
+      "blurb": "A great aquarium with a walk-through shark tunnel.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kā'anapali Beach",
+      "tag": "Free",
+      "blurb": "A long golden beach with turtles off Black Rock.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Maui good for a family holiday?",
+      "answer": "Yes, it's one of Hawaii's best islands for families, with calm beaches, wildlife and lots of space. Respect the community in Lahaina, which is still rebuilding after the 2023 wildfire."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights, as it's a long way. Many families split their time with Oahu or a stop in California."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Los Angeles or San Francisco, then about five and a half hours on to Maui. A night in California on the way helps with jet lag."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Los Angeles",
+      "code": "LAX",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Galápagos Islands",
+      "code": "GPS",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

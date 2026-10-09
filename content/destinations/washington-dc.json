@@ -1,0 +1,175 @@
+{
+  "name": "Washington, D.C.",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Washington, D.C.",
+  "intro": "Rockets, dinosaurs and giant monuments, with nearly every museum free. Here's what Washington, D.C. is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "WAS",
+  "holiday_types": [
+    "city",
+    "culture"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Cherry blossom"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, humid"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, humid"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Crisp"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "Spring brings cherry blossom around the Tidal Basin in late March and early April, and autumn is mild and clear. Summer is hot and humid, so plan museum afternoons. Winter is cold but quieter.",
+  "things": [
+    {
+      "name": "National Air and Space Museum",
+      "tag": "Free",
+      "blurb": "Real spacecraft and the Wright brothers' plane. Book a free timed pass.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Natural History Museum",
+      "tag": "Free",
+      "blurb": "Dinosaur hall, a giant squid and the Hope Diamond.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "National Mall",
+      "tag": "Free",
+      "blurb": "Walk from the Capitol to the Lincoln Memorial past the Washington Monument.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Smithsonian's National Zoo",
+      "tag": "Free",
+      "blurb": "Giant pandas, big cats and a lot of walking, all free.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "International Spy Museum",
+      "tag": "Ticketed",
+      "blurb": "Take on an undercover mission as you go round.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Capitol tour",
+      "tag": "Free",
+      "blurb": "Book ahead to see inside the home of Congress.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Washington, D.C. good for a family holiday?",
+      "answer": "Yes. The Smithsonian museums are world-class and free, the metro is easy, and there's lots of green space between the monuments."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights covers the main museums and monuments at a family pace."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can you combine it with New York?",
+      "answer": "Yes, the train between them takes about three to three and a half hours."
+    }
+  ],
+  "similar": [
+    {
+      "name": "New York",
+      "code": "NYC",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Boston",
+      "code": "BOS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Chicago",
+      "code": "CHI",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Toronto",
+      "code": "YTO",
+      "label": "🏙️ City break"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "name": "Azores",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in Azores",
+  "intro": "Whales, crater lakes and hot springs on green volcanic Atlantic islands. Here's what the Azores are like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "PDL",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, rainy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, rainy"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild, rainy"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Blue whales"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Blue whales"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hydrangeas"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rainy"
+    }
+  },
+  "when_to_go": "June to September is warmest, with hydrangeas lining the roads and calm seas for boat trips. April and May are the best months for blue whales. Winter is mild but wet and windy. The weather changes fast all year, so pack a raincoat.",
+  "things": [
+    {
+      "name": "Whale watching",
+      "tag": "Ticketed",
+      "blurb": "Sperm whales live here all year, and dolphins are seen on almost every trip.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sete Cidades",
+      "tag": "Free",
+      "blurb": "Twin blue and green lakes inside a huge volcanic crater.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Terra Nostra pool",
+      "tag": "Ticketed",
+      "blurb": "Swim in a warm, orange, iron-rich pool in a botanical garden in Furnas.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Furnas cozido",
+      "tag": "Ticketed",
+      "blurb": "A stew cooked for hours underground by volcanic heat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gorreana tea plantation",
+      "tag": "Free",
+      "blurb": "Europe's oldest tea plantation, with free tastings.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Canyoning",
+      "tag": "Ticketed",
+      "blurb": "Slide and jump down waterfalls with a guide. Usually for children aged ten and over.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are the Azores good for a family holiday?",
+      "answer": "Yes, for active families who like nature. It's safe, uncrowded and good value. It isn't a beach-lounging holiday, as most beaches are black sand and the sea is cool."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week on São Miguel, the biggest island, or ten days to add a second island."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, the Azores are part of Portugal, so British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "There are direct flights from London in summer, about four hours, or fly via Lisbon or Porto."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Faroe Islands",
+      "code": "FAE",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Reykjavik",
+      "code": "REK",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Tenerife",
+      "code": "TFS",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

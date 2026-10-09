@@ -1,0 +1,176 @@
+{
+  "name": "Grand Canyon",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Grand Canyon",
+  "intro": "A mile-deep canyon, sunsets that turn the rock red and Route 66 nearby. Here's what the Grand Canyon is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "LAS",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 to 8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "National parks charge an entry fee per vehicle, or buy an annual pass. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, snow"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, storms"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, storms"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold, snow"
+    }
+  },
+  "when_to_go": "April, May, September and October are best for walking the rim. Summer is busy, with afternoon thunderstorms and real heat inside the canyon. Winter is cold with snow on the rim, but very quiet. The South Rim is open all year.",
+  "things": [
+    {
+      "name": "Rim Trail",
+      "tag": "Free",
+      "blurb": "A mostly flat path along the South Rim, with shuttle buses between viewpoints.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sunset at Hopi Point",
+      "tag": "Free",
+      "blurb": "Watch the canyon change colour as the sun goes down.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Junior Ranger",
+      "tag": "Free",
+      "blurb": "Activity books and badges from the rangers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Canyon Railway",
+      "tag": "Ticketed",
+      "blurb": "A vintage train from Williams with a cowboy show on the way.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Helicopter flight",
+      "tag": "Ticketed",
+      "blurb": "Fly over the edge and into the canyon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bright Angel Trail",
+      "tag": "Free",
+      "blurb": "Walk a short way down for a different view. Never try to reach the river and back in a day.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Grand Canyon good for a family holiday?",
+      "answer": "Yes, as a stop on a south-west road trip. Keep children well back from edges, as many viewpoints have no railings."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights is plenty for the South Rim, as part of a trip with Las Vegas, Zion or Route 66."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Las Vegas or Phoenix and drive about four hours, or take the train from Williams."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Yellowstone",
+      "code": "BZN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Los Angeles",
+      "code": "LAX",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Namibia",
+      "code": "WDH",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Jordan",
+      "code": "AMM",
+      "label": "🧗 Adventure"
+    }
+  ]
+}

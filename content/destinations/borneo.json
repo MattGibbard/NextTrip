@@ -1,0 +1,176 @@
+{
+  "name": "Borneo",
+  "published": true,
+  "country": "MY",
+  "title": "Holidays in Borneo",
+  "intro": "Orangutans, pygmy elephants and rainforest river cruises, with islands to finish. Here's what Borneo is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "BKI",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "beach"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 to 8 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Malaysian ringgit (RM)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": true
+    }
+  ],
+  "facts_note": "Fill in the Malaysia Digital Arrival Card online before you land. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Drier"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Drier"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Drier"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Drier"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Drier"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Drier, busy"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rainy"
+    }
+  },
+  "when_to_go": "March to September is drier and best for wildlife, river trips and the islands. November to January is the wettest time, though rain usually comes in short, heavy bursts. It's hot and humid all year.",
+  "things": [
+    {
+      "name": "Sepilok Orangutan Centre",
+      "tag": "Ticketed",
+      "blurb": "Watch rescued orangutans at feeding time, next to a sun bear sanctuary.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kinabatangan River",
+      "tag": "Ticketed",
+      "blurb": "Boat trips to see proboscis monkeys, hornbills and maybe pygmy elephants.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kinabalu Park",
+      "tag": "Ticketed",
+      "blurb": "Cool mountain trails, giant pitcher plants and a canopy walk below Mount Kinabalu.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tunku Abdul Rahman islands",
+      "tag": "Ticketed",
+      "blurb": "A short boat from Kota Kinabalu to snorkelling beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Danum Valley",
+      "tag": "Ticketed",
+      "blurb": "Deep rainforest lodges with night walks and a treetop walkway.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kota Kinabalu night market",
+      "tag": "Free",
+      "blurb": "Grilled fish, satay and tropical fruit by the waterfront.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Borneo good for a family holiday?",
+      "answer": "Yes, for families who want real jungle wildlife. Malaysian Borneo is easy to get around, English is widely spoken, and the lodges welcome children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights covers Sepilok, the Kinabatangan River and a few beach days."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit Malaysia for a holiday without a visa, but must fill in the digital arrival card. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly via Kuala Lumpur or Singapore to Kota Kinabalu in Sabah, the main gateway for wildlife."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Costa Rica",
+      "code": "SJO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Singapore",
+      "code": "SIN",
+      "label": "🏙️ City break"
+    }
+  ]
+}

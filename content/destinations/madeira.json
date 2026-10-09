@@ -1,0 +1,176 @@
+{
+  "name": "Madeira",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in Madeira",
+  "intro": "Spring weather all year, toboggans down the streets and cliff walks along old water channels. Here's what Madeira is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "FNC",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "relax"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same time as the UK",
+      "highlight": true
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild, flowers"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Flower festival"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warmest sea"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "New Year fireworks"
+    }
+  },
+  "when_to_go": "Madeira is mild all year, so it's a good bet for winter sun without a long flight. Spring is full of flowers, and September has the warmest sea. New Year's Eve brings one of the biggest firework displays in the world.",
+  "things": [
+    {
+      "name": "Monte toboggan",
+      "tag": "Ticketed",
+      "blurb": "Slide down the hill in a wicker sledge steered by two men in straw hats.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Funchal cable car",
+      "tag": "Ticketed",
+      "blurb": "Ride up from the seafront to the gardens in Monte.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Levada walks",
+      "tag": "Free",
+      "blurb": "Flat paths along old water channels. Levada do Rei is a good family one.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Porto Moniz pools",
+      "tag": "Ticketed",
+      "blurb": "Natural swimming pools in the volcanic rock, filled by the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale and dolphin trip",
+      "tag": "Ticketed",
+      "blurb": "Dolphins are seen on most trips, and whales at many times of year.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pico do Arieiro",
+      "tag": "Free",
+      "blurb": "Drive up to 1,800 metres and look down on the clouds.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Madeira good for a family holiday?",
+      "answer": "Yes, for families who like being outdoors. It's safe and easy, with walks, boat trips and pools. It has few sandy beaches, so pick a hotel with a good pool."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week gives you time for walks, a boat trip and a lazy day or two. Hiring a car makes the island much easier to explore."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, Madeira is part of Portugal, so British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Is the flight into Madeira safe?",
+      "answer": "Yes. The airport's short runway and winds make landings feel dramatic, and flights are sometimes diverted in strong winds, but pilots train specially for it."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tenerife",
+      "code": "TFS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "The Azores",
+      "code": "PDL",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Porto",
+      "code": "OPO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Malta",
+      "code": "MLA",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

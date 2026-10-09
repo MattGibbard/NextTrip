@@ -1,0 +1,176 @@
+{
+  "name": "Valencia",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Valencia",
+  "intro": "City beaches, a giant Gulliver to climb and the home of paella. Here's what Valencia is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "VLC",
+  "holiday_types": [
+    "city",
+    "beach",
+    "food"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Fallas, busy"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Beach weather"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild"
+    }
+  },
+  "when_to_go": "May, June and September are perfect, with warm sea and fewer crowds than midsummer. July and August are hot but the beach is right there. In mid-March the Fallas festival fills the streets with giant figures, fireworks and very loud firecrackers.",
+  "things": [
+    {
+      "name": "Oceanogràfic",
+      "tag": "Ticketed",
+      "blurb": "Europe's biggest aquarium, with sharks, belugas and a dolphin show.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Turia Gardens",
+      "tag": "Free",
+      "blurb": "A park in an old riverbed, with bike paths and the giant Gulliver playground to climb.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "City of Arts and Sciences",
+      "tag": "Ticketed",
+      "blurb": "Futuristic buildings with a hands-on science museum and an IMAX cinema.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Malvarrosa Beach",
+      "tag": "Free",
+      "blurb": "A wide sandy city beach with a long promenade, a tram ride from the centre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bioparc",
+      "tag": "Ticketed",
+      "blurb": "A zoo built like the African savannah, with no visible fences.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Albufera",
+      "tag": "Day trip",
+      "blurb": "Take a boat on the lagoon and eat paella where it was invented.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Valencia good for a family holiday?",
+      "answer": "Yes. It's a city break and a beach holiday in one, it's flatter and calmer than Barcelona, and there's a lot for children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four nights covers the city, and a week lets you add plenty of beach days."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "What is Fallas?",
+      "answer": "A festival in mid-March when huge papier-mâché figures fill the streets, then get burned on the last night. It's spectacular but noisy and busy, and hotels book up early."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Barcelona",
+      "code": "BCN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Porto",
+      "code": "OPO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Seville",
+      "code": "SVQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    }
+  ]
+}

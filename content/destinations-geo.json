@@ -14,10 +14,45 @@
     "lat": -33.9288,
     "lon": 18.4172
   },
+  "copenhagen": {
+    "query": "Copenhagen|DK",
+    "lat": 55.6867,
+    "lon": 12.5701
+  },
   "dubai": {
     "query": "Dubai|AE",
     "lat": 25.2653,
     "lon": 55.2925
+  },
+  "hoi-an": {
+    "query": "Hoi An|VN",
+    "lat": 15.8801,
+    "lon": 108.338
+  },
+  "kotor": {
+    "query": "Kotor|ME",
+    "lat": 42.4247,
+    "lon": 18.7712
+  },
+  "ljubljana": {
+    "query": "Ljubljana|SI",
+    "lat": 46.05,
+    "lon": 14.5069
+  },
+  "madeira": {
+    "query": "Madeira|PT",
+    "lat": 32.7607,
+    "lon": -16.9595
+  },
+  "marrakech": {
+    "query": "Marrakech|MA",
+    "lat": 31.6258,
+    "lon": -7.9892
+  },
+  "mexico-city": {
+    "query": "Mexico City|MX",
+    "lat": 19.4326,
+    "lon": -99.1332
   },
   "new-york": {
     "query": "New York|US",
@@ -29,6 +64,11 @@
     "lat": 48.8535,
     "lon": 2.3484
   },
+  "porto": {
+    "query": "Porto|PT",
+    "lat": 41.15,
+    "lon": -8.6103
+  },
   "rome": {
     "query": "Rome|IT",
     "lat": 41.8933,
@@ -38,6 +78,11 @@
     "query": "San Diego|US",
     "lat": 32.7174,
     "lon": -117.1628
+  },
+  "seoul": {
+    "query": "Seoul|KR",
+    "lat": 37.5667,
+    "lon": 126.9783
   },
   "sydney": {
     "query": "Sydney|AU",
@@ -53,5 +98,10 @@
     "query": "Toronto|CA",
     "lat": 43.6535,
     "lon": -79.3839
+  },
+  "valencia": {
+    "query": "Valencia|ES",
+    "lat": 39.4698,
+    "lon": -0.3763
   }
 }

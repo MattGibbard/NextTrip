@@ -1,0 +1,176 @@
+{
+  "name": "Ljubljana",
+  "published": true,
+  "country": "SI",
+  "title": "Holidays in Ljubljana",
+  "intro": "A green, car-free old town, a castle on the hill and Lake Bled less than an hour away. Here's what Ljubljana is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "LJU",
+  "holiday_types": [
+    "city",
+    "nature",
+    "adventure"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Foggy"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "May to September is best for lakes, rivers and mountain walks. July and August are warm and lively but Bled gets busy. December has fairy lights and Christmas markets along the river.",
+  "things": [
+    {
+      "name": "Ljubljana Castle",
+      "tag": "Ticketed",
+      "blurb": "Ride the funicular up for views of the Alps and a castle puppet museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake Bled",
+      "tag": "Day trip",
+      "blurb": "About 45 minutes away. Row or take a wooden pletna boat to the island church.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Postojna Cave",
+      "tag": "Day trip",
+      "blurb": "A little train runs deep into huge caves, home to the 'baby dragon' olm.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tivoli Park",
+      "tag": "Free",
+      "blurb": "A big park with playgrounds and woodland trails, right next to the centre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "River boat trip",
+      "tag": "Ticketed",
+      "blurb": "A gentle cruise down the Ljubljanica under the old town's bridges.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "House of Experiments",
+      "tag": "Indoors",
+      "blurb": "A small hands-on science centre that's perfect for a rainy hour.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Ljubljana good for a family holiday?",
+      "answer": "Yes. The old town is small, safe and car-free, and lakes, caves and mountains are close by. It's a great base for exploring Slovenia."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four nights for the city with day trips to Bled and Postojna, or a week if you want to add the mountains or the coast."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "Not for the city or Bled, which you can reach by bus. A car makes the caves, mountains and the Soča valley much easier."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Vienna",
+      "code": "VIE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Salzburg",
+      "code": "SZG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Zagreb",
+      "code": "ZAG",
+      "label": "🏙️ City break"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "name": "Marrakech",
+  "published": true,
+  "country": "MA",
+  "title": "Holidays in Marrakech",
+  "intro": "Snake charmers, rooftop pools and the Atlas Mountains on the horizon, a short flight from the UK. Here's what Marrakech is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "RAK",
+  "holiday_types": [
+    "culture",
+    "food",
+    "adventure"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "0 to 1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Moroccan dirham (MAD)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Dirhams can only be bought in Morocco. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cool nights"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cool nights"
+    }
+  },
+  "when_to_go": "Spring and autumn are best, with warm sunny days and comfortable evenings. July and August are very hot, so pick a riad with a pool. Winter days are sunny but nights are cold, and there may be snow on the mountains. Ramadan moves each year and changes opening hours.",
+  "things": [
+    {
+      "name": "Jemaa el-Fnaa",
+      "tag": "Free",
+      "blurb": "The main square fills with storytellers, acrobats and food stalls as the sun sets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jardin Majorelle",
+      "tag": "Ticketed",
+      "blurb": "A blue and yellow garden full of cactuses. Book a timed ticket.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The souks",
+      "tag": "Free",
+      "blurb": "A maze of stalls selling lamps, slippers and spices. Agree a price before you buy.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Agafay Desert",
+      "tag": "Day trip",
+      "blurb": "A stony desert about 40 minutes away for camel rides and quad bikes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Atlas Mountains",
+      "tag": "Day trip",
+      "blurb": "Walk to waterfalls in the Ourika Valley or Imlil, with lunch in a Berber village.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Le Jardin Secret",
+      "tag": "Ticketed",
+      "blurb": "A peaceful garden in the medina with a tower to climb.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Marrakech good for a family holiday?",
+      "answer": "Yes, for families who like something different. It's colourful and exciting, but the medina is busy and noisy, so a riad or hotel with a pool gives everyone a break."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights covers the city and a day in the mountains or desert. Some families add a few days on the coast at Essaouira."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days without a visa. Passports must be valid for your whole stay. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "What should we wear?",
+      "answer": "Loose clothes that cover shoulders and knees are best in the medina and are cooler in the heat. Swimwear is fine at hotel pools."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Dubai",
+      "code": "DXB",
+      "label": "☀️ Winter sun"
+    },
+    {
+      "name": "Valencia",
+      "code": "VLC",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Seville",
+      "code": "SVQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Tenerife",
+      "code": "TFS",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

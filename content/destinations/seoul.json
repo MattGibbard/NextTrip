@@ -1,0 +1,176 @@
+{
+  "name": "Seoul",
+  "published": true,
+  "country": "KR",
+  "title": "Holidays in Seoul",
+  "intro": "Palaces, K-pop and street food on every corner, with mountains right in the city. Here's what Seoul is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "SEL",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "6 to 8",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 to 9 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "South Korean won (₩)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You may need a K-ETA travel permit, applied for online. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Freezing"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Blossom"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Monsoon"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hot, humid"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Crisp"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cold, festive"
+    }
+  },
+  "when_to_go": "April and May bring cherry blossom and warm days, and October has clear skies and autumn leaves on the hills. July and August are hot, humid and rainy. Winter is very cold but dry and sunny, with ice rinks and winter lights.",
+  "things": [
+    {
+      "name": "Gyeongbokgung Palace",
+      "tag": "Ticketed",
+      "blurb": "The grandest palace, with a changing of the guard. Free if you wear hanbok, which you can hire nearby.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lotte World",
+      "tag": "Indoors",
+      "blurb": "A huge indoor theme park with an ice rink, so it works whatever the weather.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Han River parks",
+      "tag": "Free",
+      "blurb": "Hire bikes, picnic by the water and watch the Banpo Bridge fountain light up at night.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "N Seoul Tower",
+      "tag": "Ticketed",
+      "blurb": "Ride the cable car up Namsan for views over the whole city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bukchon Hanok Village",
+      "tag": "Free",
+      "blurb": "Lanes of traditional wooden houses between two palaces. People live here, so keep it quiet.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gwangjang Market",
+      "tag": "Free",
+      "blurb": "Seoul's oldest market. Try mung bean pancakes and gimbap at the food stalls.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Seoul good for a family holiday?",
+      "answer": "Yes. It's very safe and clean, the subway is easy, and children love the food, the gadgets and the palaces. Teenagers who like K-pop will be in heaven."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Six to eight nights gives you the city and a day trip, such as the DMZ for older children or the beach city of Busan by fast train."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days without a visa, but you may need a K-ETA travel permit, applied for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is Seoul expensive?",
+      "answer": "Hotels can be pricey, but food and public transport are good value, and many parks and palaces are free or cheap."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tokyo",
+      "code": "TYO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Taipei",
+      "code": "TPE",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Hong Kong",
+      "code": "HKG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Singapore",
+      "code": "SIN",
+      "label": "🏙️ City break"
+    }
+  ]
+}

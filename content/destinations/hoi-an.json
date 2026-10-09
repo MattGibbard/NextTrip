@@ -1,0 +1,176 @@
+{
+  "name": "Hoi An",
+  "published": true,
+  "country": "VN",
+  "title": "Holidays in Hoi An",
+  "intro": "Lantern-lit streets, basket boats and a beach just down the road. Here's what Hoi An is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "DAD",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "two-weeks",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Vietnamese dong (₫)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 45 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Rains start"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Rainy, floods"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy, floods"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rainy"
+    }
+  },
+  "when_to_go": "February to April is the sweet spot, warm and dry with calm sea. May to August is hot but sunny and good for the beach. October and November are the rainy season, when the old town sometimes floods.",
+  "things": [
+    {
+      "name": "Ancient Town",
+      "tag": "Ticketed",
+      "blurb": "Lantern-lit lanes, old merchant houses and the Japanese Covered Bridge. Magical after dark.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Basket boats",
+      "tag": "Ticketed",
+      "blurb": "Spin round in a round bamboo boat in the coconut palm waterways.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "An Bang Beach",
+      "tag": "Free",
+      "blurb": "A sandy beach about 10 minutes away by bike or taxi.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lantern-making class",
+      "tag": "Ticketed",
+      "blurb": "Make your own silk lantern to take home.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cycling the rice fields",
+      "tag": "Free",
+      "blurb": "Flat lanes past paddy fields and water buffalo. Most hotels lend bikes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ba Na Hills",
+      "tag": "Day trip",
+      "blurb": "A long cable car to the Golden Bridge held up by giant stone hands.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Hoi An good for a family holiday?",
+      "answer": "Yes. It's small, friendly and easy, with a beach close by and good food everywhere. Traffic is the main hazard, so hold hands when crossing roads."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Seven to ten nights mixes the old town with beach days. Many families combine it with Hanoi or Ho Chi Minh City on a two or three week trip."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 45 days without a visa. Your passport must be valid for six months. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Da Nang, usually with one stop, then it's about 45 minutes by car."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bangkok",
+      "code": "BKK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Tokyo",
+      "code": "TYO",
+      "label": "🏙️ City break"
+    }
+  ]
+}

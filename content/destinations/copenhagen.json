@@ -1,0 +1,176 @@
+{
+  "name": "Copenhagen",
+  "published": true,
+  "country": "DK",
+  "title": "Holidays in Copenhagen",
+  "intro": "Old-fashioned fairground rides, harbour swims and the home of Lego next door. Here's what Copenhagen is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "CPH",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Danish krone (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E / F / K · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, dark"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, dark"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Long days"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Halloween at Tivoli"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "May to August has long light evenings, harbour swimming and Tivoli in full swing. Tivoli also opens for Halloween and Christmas, which are lovely with children. January to March is cold, dark and quiet.",
+  "things": [
+    {
+      "name": "Tivoli Gardens",
+      "tag": "Ticketed",
+      "blurb": "A fairy-tale amusement park from 1843, open in summer, at Halloween and at Christmas.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Den Blå Planet",
+      "tag": "Indoors",
+      "blurb": "Northern Europe's biggest aquarium, with a shark tunnel and sea otters.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Harbour baths",
+      "tag": "Free",
+      "blurb": "Swim in clean harbour water at Islands Brygge in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Canal boat tour",
+      "tag": "Ticketed",
+      "blurb": "See Nyhavn's coloured houses and the Little Mermaid from the water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Experimentarium",
+      "tag": "Indoors",
+      "blurb": "A hands-on science centre that keeps all ages busy for hours.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "CopenHill",
+      "tag": "Ticketed",
+      "blurb": "A dry ski slope and climbing wall on top of a power station.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Copenhagen good for a family holiday?",
+      "answer": "Yes. It's small, safe and flat, with playgrounds everywhere and some of the best family attractions in Europe. Hiring a cargo bike is a fun way to get around."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights is plenty for the city. Add a few days if you want to visit Legoland in Billund, about three hours away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Is Copenhagen expensive?",
+      "answer": "Yes, eating out costs more than in the UK. A Copenhagen Card covers transport and most attractions, and up to two children under 12 travel free with each adult."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Berlin",
+      "code": "BER",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Stockholm",
+      "code": "STO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Amsterdam",
+      "code": "AMS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Oslo",
+      "code": "OSL",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

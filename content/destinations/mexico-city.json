@@ -1,0 +1,176 @@
+{
+  "name": "Mexico City",
+  "published": true,
+  "country": "MX",
+  "title": "Holidays in Mexico City",
+  "intro": "Pyramids, colourful boats and some of the best food on earth. Here's what Mexico City is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "MEX",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Mexican peso ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 127V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The city is 2,240 metres up, so take the first day gently. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Dry, cool nights"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Dry"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, dry"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, dry"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warmest"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Afternoon rain"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Afternoon rain"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Afternoon rain"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Afternoon rain"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Dry again"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Day of the Dead"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "March, April, October and November are dry and warm. The Day of the Dead at the start of November is colourful and family-friendly. June to September brings short afternoon downpours, but mornings are usually fine. Evenings can be cool all year because the city is so high.",
+  "things": [
+    {
+      "name": "Teotihuacan",
+      "tag": "Day trip",
+      "blurb": "Climb the huge Pyramid of the Sun, about an hour from the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Xochimilco",
+      "tag": "Ticketed",
+      "blurb": "Float along canals in a brightly painted trajinera boat, with music and snacks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chapultepec Park",
+      "tag": "Free",
+      "blurb": "A giant park with a castle, a lake, a zoo and lots of museums.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "National Museum of Anthropology",
+      "tag": "Indoors",
+      "blurb": "The Aztec Sun Stone and life-size Maya temples.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Papalote Children's Museum",
+      "tag": "Indoors",
+      "blurb": "A big hands-on museum with a planetarium and a dome cinema.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Frida Kahlo Museum",
+      "tag": "Ticketed",
+      "blurb": "The bright blue house where the artist lived. Tickets sell out, so book ahead.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Mexico City good for a family holiday?",
+      "answer": "Yes. It's friendly and full of things for children, from pyramids to parks and museums. Stay in a calmer area such as Roma, Condesa or Polanco, and use registered taxis or ride apps."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights covers the city and Teotihuacan. Many families add a beach week on the Caribbean coast or in Oaxaca."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders don't need a visa for a holiday. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "What about the altitude?",
+      "answer": "At 2,240 metres, some people get headaches or tire quickly at first. Drink plenty of water and plan an easy first day."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Oaxaca",
+      "code": "OAX",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Cancún",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Austin",
+      "code": "AUS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "New York",
+      "code": "NYC",
+      "label": "🏙️ City break"
+    }
+  ]
+}

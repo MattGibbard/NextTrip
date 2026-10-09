@@ -1,0 +1,176 @@
+{
+  "name": "Paphos",
+  "published": true,
+  "country": "CY",
+  "title": "Holidays in Paphos",
+  "intro": "Sunshine almost all year, Roman mosaics and the beach where Aphrodite was born. Here's what Paphos is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "PFO",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "relax"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": true
+    }
+  ],
+  "facts_note": "Cyprus drives on the left, like the UK. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild"
+    }
+  },
+  "when_to_go": "April to June and September to October are best, sunny and hot without the peak heat. July and August are very hot. Winters are mild and sunny enough for walks and sightseeing, though too cool for most to swim.",
+  "things": [
+    {
+      "name": "Paphos Archaeological Park",
+      "tag": "Ticketed",
+      "blurb": "Roman villas with amazing floor mosaics, by the harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Aphrodite's Rock",
+      "tag": "Free",
+      "blurb": "The legendary birthplace of Aphrodite, on a pebbly beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Avakas Gorge",
+      "tag": "Free",
+      "blurb": "A short, shady walk between towering rock walls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Lagoon boat trip",
+      "tag": "Ticketed",
+      "blurb": "Snorkel in clear turquoise water off the Akamas peninsula.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Coral Bay",
+      "tag": "Free",
+      "blurb": "A sandy beach with shallow water, popular with families.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paphos Zoo",
+      "tag": "Ticketed",
+      "blurb": "A good-sized zoo with bird shows, 20 minutes north of town.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Paphos good for a family holiday?",
+      "answer": "Yes. It feels familiar for British families, with English widely spoken, UK plugs and driving on the left, plus lots of family hotels."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week mixes beach days with a boat trip and a day in the Troodos mountains."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "How long is the flight?",
+      "answer": "About four and a half to five hours from the UK."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Tenerife",
+      "code": "TFS",
+      "label": "☀️ Winter sun"
+    },
+    {
+      "name": "Dubrovnik",
+      "code": "DBV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Malta",
+      "code": "MLA",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

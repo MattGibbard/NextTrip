@@ -1,0 +1,176 @@
+{
+  "name": "Vienna",
+  "published": true,
+  "country": "AT",
+  "title": "Holidays in Vienna",
+  "intro": "A giant Ferris wheel, the world's oldest zoo and cake in grand cafés. Here's what Vienna is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "VIE",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Christmas markets"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "May, June and September are warm and green, with outdoor swimming on the Danube. From mid-November the city is full of Christmas markets. January and February are cold but quiet.",
+  "things": [
+    {
+      "name": "Prater",
+      "tag": "Free",
+      "blurb": "A funfair park with the famous Giant Ferris Wheel. Entry is free and you pay per ride.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Schönbrunn Zoo",
+      "tag": "Ticketed",
+      "blurb": "The world's oldest zoo, in the grounds of a palace, with pandas and polar bears.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Natural History Museum",
+      "tag": "Indoors",
+      "blurb": "Dinosaurs, meteorites and a huge collection of stuffed animals.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Haus der Musik",
+      "tag": "Indoors",
+      "blurb": "Conduct a virtual orchestra and play with sound.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Danube Island",
+      "tag": "Free",
+      "blurb": "A long island for cycling, picnics and swimming in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spanish Riding School",
+      "tag": "Ticketed",
+      "blurb": "Watch the white Lipizzaner horses at their morning training.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Vienna good for a family holiday?",
+      "answer": "Yes. It's clean, safe and easy to get around, with parks and museums for all ages. Children under six ride public transport free."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights covers the city at a gentle pace."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Is Vienna expensive?",
+      "answer": "About the same as a big UK city. Many parks and the Prater are free, and lunch menus are good value."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kraków",
+      "code": "KRK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Ljubljana",
+      "code": "LJU",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Berlin",
+      "code": "BER",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Salzburg",
+      "code": "SZG",
+      "label": "⛷️ Skiing"
+    }
+  ]
+}

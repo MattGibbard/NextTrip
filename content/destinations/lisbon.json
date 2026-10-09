@@ -1,0 +1,176 @@
+{
+  "name": "Lisbon",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in Lisbon",
+  "intro": "Yellow trams, custard tarts and beaches a train ride away, with no time difference. Here's what Lisbon is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "LIS",
+  "holiday_types": [
+    "city",
+    "beach",
+    "food"
+  ],
+  "nights": "4 to 6",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same time as the UK",
+      "highlight": true
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, rainy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, rainy"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Festivals"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "April to June and September to October are warm and bright without the summer crowds. July and August are hot and busy, though the beaches are close. Winter is mild but wet, and cheap. In June the streets fill with sardine grills and street parties for the Santos Populares.",
+  "things": [
+    {
+      "name": "Oceanário de Lisboa",
+      "tag": "Indoors",
+      "blurb": "One of Europe's best aquariums, built around a huge central tank with sharks and sunfish.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tram 28",
+      "tag": "Ticketed",
+      "blurb": "A rattling yellow tram up through the old Alfama district. Ride early to get a seat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Belém",
+      "tag": "Free",
+      "blurb": "The riverside monuments, a big park, and the original custard tarts at Pastéis de Belém.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "São Jorge Castle",
+      "tag": "Ticketed",
+      "blurb": "Castle walls to walk, peacocks in the gardens and views over the whole city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sintra",
+      "tag": "Day trip",
+      "blurb": "Fairy-tale palaces in the forest, 40 minutes by train. Pena Palace is the favourite.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cascais",
+      "tag": "Day trip",
+      "blurb": "A seaside town with sandy beaches, about 40 minutes along the coast by train.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Lisbon good for a family holiday?",
+      "answer": "Yes. It's friendly, safe and good value, and you can mix city days with the beach. The hills are steep, so a sling works better than a pushchair for little ones."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four to six nights covers the city, Sintra and a beach day at Cascais."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Lisbon or Porto?",
+      "answer": "Lisbon is bigger, with more for children and beaches nearby. Porto is smaller and cosier. They're three hours apart by train, so you can do both."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Porto",
+      "code": "OPO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Valencia",
+      "code": "VLC",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Seville",
+      "code": "SVQ",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

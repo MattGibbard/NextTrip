@@ -1,0 +1,175 @@
+{
+  "name": "Dubrovnik",
+  "published": true,
+  "country": "HR",
+  "title": "Holidays in Dubrovnik",
+  "intro": "Walk the old city walls, swim off the rocks and kayak to a sea cave. Here's what Dubrovnik is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "DBV",
+  "holiday_types": [
+    "beach",
+    "culture"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, rainy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, rainy"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Beach weather"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, crowded"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, crowded"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Quiet"
+    }
+  },
+  "when_to_go": "May, June and September have warm sea and fewer crowds. July and August are hot, and the old town fills up when cruise ships are in. Winter is quiet and many places close.",
+  "things": [
+    {
+      "name": "City walls",
+      "tag": "Ticketed",
+      "blurb": "A 2 km walk round the top of the walls. Go first thing to beat the heat and crowds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cable car",
+      "tag": "Ticketed",
+      "blurb": "Up Mount Srđ for views over the old town and islands.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lokrum",
+      "tag": "Ticketed",
+      "blurb": "A short ferry to a wooded island with peacocks, rock pools and a small salt lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sea kayaking",
+      "tag": "Ticketed",
+      "blurb": "Paddle around the walls to a hidden beach. Good for children who can swim.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Banje Beach",
+      "tag": "Free",
+      "blurb": "The nearest beach to the old town, with views of the walls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Game of Thrones spots",
+      "tag": "Free",
+      "blurb": "Fans can find King's Landing all round the old town.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Dubrovnik good for a family holiday?",
+      "answer": "Yes. The old town is car-free and magical, and the sea is clear and calm. There are lots of steps, so leave the pushchair at home."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four nights covers the city, and a week lets you add islands or a trip to Montenegro."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Is Dubrovnik expensive?",
+      "answer": "Inside the walls, yes. Staying in Lapad or Cavtat and eating away from the old town is much cheaper."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Split",
+      "code": "SPU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Ljubljana",
+      "code": "LJU",
+      "label": "🏙️ City break"
+    }
+  ]
+}

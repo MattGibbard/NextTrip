@@ -1,0 +1,176 @@
+{
+  "name": "Vancouver",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Vancouver",
+  "intro": "Forest, beaches and mountains in one city, with whales off the coast. Here's what Vancouver is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "YVR",
+  "holiday_types": [
+    "city",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Blossom"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Snow on the mountains"
+    }
+  },
+  "when_to_go": "June to September is dry and sunny, perfect for beaches, bikes and whale watching. Winter is mild but rainy in the city, with skiing on the mountains just above it. Spring brings cherry blossom.",
+  "things": [
+    {
+      "name": "Stanley Park",
+      "tag": "Free",
+      "blurb": "Cycle the seawall round a huge forest park with beaches and totem poles.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Capilano Suspension Bridge",
+      "tag": "Ticketed",
+      "blurb": "A swaying bridge over a canyon, plus treetop walkways.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grouse Mountain",
+      "tag": "Ticketed",
+      "blurb": "A gondola up to rescued grizzly bears, lumberjack shows and snow in winter.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Granville Island",
+      "tag": "Free",
+      "blurb": "A food market and a whole Kids Market full of toy shops.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vancouver Aquarium",
+      "tag": "Ticketed",
+      "blurb": "Sea otters, jellyfish and Pacific sea life in Stanley Park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Ticketed",
+      "blurb": "Look for orcas and humpbacks from April to October.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Vancouver good for a family holiday?",
+      "answer": "Yes. It's safe, easy-going and full of outdoor fun, and it's a good start to a road trip in the Rockies or Vancouver Island."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights for the city, or two weeks with the Rockies or Whistler."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is there a direct flight?",
+      "answer": "Yes, from London Heathrow in about nine and a half hours."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Toronto",
+      "code": "YTO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Queenstown",
+      "code": "ZQN",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Reykjavik",
+      "code": "REK",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "San Diego",
+      "code": "SAN",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

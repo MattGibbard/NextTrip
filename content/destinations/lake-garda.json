@@ -1,0 +1,176 @@
+{
+  "name": "Lake Garda",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Lake Garda",
+  "intro": "Lake beaches, ferries between pretty towns and Italy's biggest theme park. Here's what Lake Garda is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "VRN",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "relax"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, closed"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, closed"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Waking up"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Closed"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "May, June and September are perfect, with warm days and room on the beaches. July and August are hot and lively. Many hotels, ferries and attractions close from November to March.",
+  "things": [
+    {
+      "name": "Gardaland",
+      "tag": "Ticketed",
+      "blurb": "Italy's biggest theme park, with rides for all ages and an aquarium next door.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake ferries",
+      "tag": "Ticketed",
+      "blurb": "Hop between lakeside towns by boat. A day pass makes it easy.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sirmione",
+      "tag": "Ticketed",
+      "blurb": "A castle surrounded by water, Roman ruins and the best gelato on the lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monte Baldo cable car",
+      "tag": "Ticketed",
+      "blurb": "A rotating cable car from Malcesine to mountain meadows high above the lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake beaches",
+      "tag": "Free",
+      "blurb": "Pebbly beaches with clear water and gentle shelving, good for little swimmers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Verona",
+      "tag": "Day trip",
+      "blurb": "A Roman arena and Juliet's balcony, about 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Lake Garda good for a family holiday?",
+      "answer": "Yes. It's an easy mix of swimming, theme parks and mountains, with lots of campsites and family hotels. There are no waves, which suits young children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week is typical. Pick a base in the south for theme parks or in the north for mountains and watersports."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "It helps, but the ferries and buses link the main towns. Verona airport is about 30 minutes from the south of the lake."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Ljubljana",
+      "code": "LJU",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Rome",
+      "code": "ROM",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Dubrovnik",
+      "code": "DBV",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

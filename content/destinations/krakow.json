@@ -1,0 +1,176 @@
+{
+  "name": "Kraków",
+  "published": true,
+  "country": "PL",
+  "title": "Holidays in Kraków",
+  "intro": "A castle with a fire-breathing dragon, an underground salt mine and great value. Here's what Kraków is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "KRK",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Polish złoty (zł)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas market"
+    }
+  },
+  "when_to_go": "May to September is warm and lively, with outdoor cafés on the main square. December brings one of Europe's best-value Christmas markets. January and February are very cold.",
+  "things": [
+    {
+      "name": "Wawel Castle",
+      "tag": "Free",
+      "blurb": "Walk the grounds for free, then find the dragon statue that breathes real fire.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Main Market Square",
+      "tag": "Free",
+      "blurb": "One of Europe's biggest squares, with horse-drawn carriages and a trumpet call every hour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wieliczka Salt Mine",
+      "tag": "Day trip",
+      "blurb": "Underground chambers and chapels carved from salt, 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Energylandia",
+      "tag": "Ticketed",
+      "blurb": "Poland's biggest theme park, about an hour away, with rides for all ages.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kazimierz",
+      "tag": "Free",
+      "blurb": "The old Jewish quarter, with street food, markets and cafés.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vistula river cruise",
+      "tag": "Ticketed",
+      "blurb": "A gentle hour on the river below the castle.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Kraków good for a family holiday?",
+      "answer": "Yes. It's compact, safe and very good value, with a lot to see in a small area. The dragon legend is a hit with younger children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights covers the city and a trip to the salt mine."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Should we visit Auschwitz with children?",
+      "answer": "The memorial is about 90 minutes away. It isn't recommended for under-14s, so most families with younger children leave it out or have one adult go alone."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Vienna",
+      "code": "VIE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Prague",
+      "code": "PRG",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Berlin",
+      "code": "BER",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Ljubljana",
+      "code": "LJU",
+      "label": "🏙️ City break"
+    }
+  ]
+}

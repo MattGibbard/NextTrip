@@ -1,0 +1,175 @@
+{
+  "name": "Maasai Mara",
+  "published": true,
+  "country": "KE",
+  "title": "Holidays in Maasai Mara",
+  "intro": "Lions, elephants and the great migration on game drives across the savannah. Here's what a Maasai Mara safari is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "NBO",
+  "holiday_types": [
+    "adventure",
+    "nature"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 to 3 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Kenyan shilling (KSh)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": true
+    }
+  ],
+  "facts_note": "Ask your GP or a travel clinic about malaria tablets and jabs. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, calving"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Long rains"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Long rains"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Drying out"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Migration"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Migration"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Migration"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Migration"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Short rains"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Green"
+    }
+  },
+  "when_to_go": "July to October is the great migration, when huge herds of wildebeest cross the rivers. January and February are dry with good game viewing. April and May are the long rains, when some camps close.",
+  "things": [
+    {
+      "name": "Game drives",
+      "tag": "Ticketed",
+      "blurb": "Morning and evening drives for lions, cheetahs, elephants and giraffes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "River crossings",
+      "tag": "Ticketed",
+      "blurb": "Watch wildebeest brave the Mara River, July to October.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hot-air balloon",
+      "tag": "Ticketed",
+      "blurb": "Float over the plains at sunrise. Usually for children aged seven and over.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Maasai village",
+      "tag": "Ticketed",
+      "blurb": "Meet a Maasai community and learn about their way of life.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bush breakfast",
+      "tag": "Ticketed",
+      "blurb": "Breakfast out on the plains in the middle of a game drive.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nairobi elephant orphanage",
+      "tag": "Day trip",
+      "blurb": "Watch baby elephants at feeding time at the Sheldrick Trust, before or after the safari.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a safari good for a family holiday?",
+      "answer": "Yes, it's unforgettable. Pick a family-friendly camp, as some have minimum ages, and private vehicles let you go at your children's pace."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights in the Mara, often with a few days on the beach at Diani or a night in Nairobi."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders, children included, need an eTA, applied for online before travel. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How do you get to the Mara?",
+      "answer": "Fly to Nairobi, then take a small plane to an airstrip near your camp, about 45 minutes. Driving takes five to six hours."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cape Town",
+      "code": "CPT",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🦁 Safari"
+    },
+    {
+      "name": "Costa Rica",
+      "code": "SJO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Mauritius",
+      "code": "MRU",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "name": "Bangkok",
+  "published": true,
+  "country": "TH",
+  "title": "Holidays in Bangkok",
+  "intro": "Golden temples, river boats and night markets, the classic start to a Thailand trip. Here's what Bangkok is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "BKK",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "two-weeks",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Thai baht (฿)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B / C · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Fill in the Thailand Digital Arrival Card online before you land. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Very hot, Songkran"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot, rains start"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Rainy"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Rainy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Rainy"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Wettest"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Rainy"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, warm"
+    }
+  },
+  "when_to_go": "November to February is the coolest and driest time. March to May is very hot, and mid-April brings Songkran, a huge citywide water fight. June to October is rainy, but showers are usually short and prices lower.",
+  "things": [
+    {
+      "name": "Grand Palace",
+      "tag": "Ticketed",
+      "blurb": "Glittering temples and the Emerald Buddha. Cover shoulders and knees.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wat Arun",
+      "tag": "Ticketed",
+      "blurb": "The Temple of Dawn, decorated with china, just across the river.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "River boat",
+      "tag": "Ticketed",
+      "blurb": "The orange-flag Chao Phraya boats are a cheap, breezy way to see the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lumphini Park",
+      "tag": "Free",
+      "blurb": "Paddle boats and big monitor lizards wandering about.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chatuchak Market",
+      "tag": "Free",
+      "blurb": "A huge weekend market with thousands of stalls and lots of snacks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "SEA LIFE Bangkok",
+      "tag": "Indoors",
+      "blurb": "A big aquarium in a shopping mall, good for a hot afternoon.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Bangkok good for a family holiday?",
+      "answer": "Yes, as part of a Thailand trip. Children are welcomed everywhere, and the food is great. Use the Skytrain and river boats to avoid the traffic."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights, then head to the islands or Chiang Mai for the rest of a two-week trip."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for a holiday without a visa, but must fill in the digital arrival card online. Check GOV.UK for the current rules, as Thailand has been reviewing them."
+    },
+    {
+      "question": "Is the street food safe for children?",
+      "answer": "Generally, yes. Pick busy stalls where food is cooked fresh in front of you, and drink bottled water."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Singapore",
+      "code": "SIN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Hoi An",
+      "code": "DAD",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Tokyo",
+      "code": "TYO",
+      "label": "🏙️ City break"
+    }
+  ]
+}

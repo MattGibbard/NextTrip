@@ -1,0 +1,176 @@
+{
+  "name": "Prague",
+  "published": true,
+  "country": "CZ",
+  "title": "Holidays in Prague",
+  "intro": "A hilltop castle, a medieval clock that puts on a show and great-value food. Here's what Prague is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "PRG",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Czech koruna (Kč)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "May, June and September are warm without the summer crowds. July and August are busy on the bridge and in the old town. December brings Christmas markets with roasting chestnuts and a big tree in the Old Town Square.",
+  "things": [
+    {
+      "name": "Prague Castle",
+      "tag": "Ticketed",
+      "blurb": "The world's biggest castle complex. The grounds are free, and you can watch the changing of the guard.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Charles Bridge",
+      "tag": "Free",
+      "blurb": "A stone bridge lined with statues. Go early before the crowds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Astronomical Clock",
+      "tag": "Free",
+      "blurb": "Figures pop out to put on a show every hour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Petřín Hill",
+      "tag": "Ticketed",
+      "blurb": "A funicular up to a mini Eiffel Tower and a mirror maze.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Prague Zoo",
+      "tag": "Ticketed",
+      "blurb": "One of the best zoos in Europe, with a chairlift and gorillas.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paddle boats",
+      "tag": "Ticketed",
+      "blurb": "Hire a boat on the river from Slovanský island.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Prague good for a family holiday?",
+      "answer": "Yes. The old town is compact and storybook-pretty, the trams are easy, and food is good value. Cobbles make pushchairs hard work."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights covers the main sights at a family pace."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Do you need Czech money?",
+      "answer": "Yes, the Czech Republic uses the koruna, not the euro. Cards work almost everywhere. Avoid the high-street exchange booths."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kraków",
+      "code": "KRK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Vienna",
+      "code": "VIE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Berlin",
+      "code": "BER",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Budapest",
+      "code": "BUD",
+      "label": "🏙️ City break"
+    }
+  ]
+}

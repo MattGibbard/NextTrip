@@ -1,0 +1,176 @@
+{
+  "name": "Reykjavik",
+  "published": true,
+  "country": "IS",
+  "title": "Holidays in Reykjavik",
+  "intro": "Geysers, waterfalls, whales and the northern lights, a three-hour flight away. Here's what Reykjavik and Iceland are like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "REK",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "city"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "0 to 1 hr behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Icelandic króna (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Iceland follows Europe's border rules. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Northern lights"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Northern lights"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Northern lights"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Changeable"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Light nights"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Midnight sun"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Midnight sun"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Northern lights"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Northern lights"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Dark, stormy"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "June to August has almost endless daylight, puffins and the best weather for touring. September to March is the season for northern lights, with short days and snow. Weather changes fast at any time of year, so pack layers.",
+  "things": [
+    {
+      "name": "Golden Circle",
+      "tag": "Day trip",
+      "blurb": "A loop to an erupting geyser, the huge Gullfoss waterfall and the rift between two continents.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Lagoon",
+      "tag": "Ticketed",
+      "blurb": "A milky blue geothermal pool near the airport. Under-2s can't go in, and booking is essential.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Ticketed",
+      "blurb": "Boats leave from the old harbour, with puffins on summer trips too.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Perlan",
+      "tag": "Indoors",
+      "blurb": "A man-made ice cave, a planetarium and a viewing deck over the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hallgrímskirkja",
+      "tag": "Ticketed",
+      "blurb": "Ride up the tower of the rocket-shaped church for views over the colourful roofs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Northern lights tour",
+      "tag": "Ticketed",
+      "blurb": "A guide drives you away from the city lights. Runs September to March.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Iceland good for a family holiday?",
+      "answer": "Yes, for families who love the outdoors. It's very safe, and the landscapes feel like another planet. It's expensive, so self-catering helps."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights covers Reykjavik, the Golden Circle and the south coast waterfalls."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit Iceland for up to 90 days in any 180 without a visa. New European entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Will we see the northern lights?",
+      "answer": "Possibly, between September and March, on clear dark nights. Nothing is guaranteed, so plan a few nights and treat a sighting as a bonus."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tromsø",
+      "code": "TOS",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Rovaniemi",
+      "code": "RVN",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Copenhagen",
+      "code": "CPH",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Vancouver",
+      "code": "YVR",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

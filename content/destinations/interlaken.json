@@ -1,0 +1,177 @@
+{
+  "name": "Interlaken",
+  "published": true,
+  "country": "CH",
+  "title": "Holidays in Interlaken",
+  "intro": "Mountain trains, glacier views and turquoise lakes in the heart of the Swiss Alps. Here's what Interlaken is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "ZRH",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "rail",
+    "ski"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Swiss franc (CHF)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / J · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Switzerland follows Europe's border rules. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Skiing"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Skiing"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring skiing"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Between seasons"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Clear days"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Between seasons"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Snowy, festive"
+    }
+  },
+  "when_to_go": "June to September is best for hiking, lake swims and the mountain railways. December to March brings skiing in Grindelwald and Wengen nearby. April and November are quiet, with some lifts closed for maintenance.",
+  "things": [
+    {
+      "name": "Jungfraujoch",
+      "tag": "Ticketed",
+      "blurb": "A train up to Europe's highest station, with an ice palace and snow all year. Pricey but unforgettable.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grindelwald First",
+      "tag": "Ticketed",
+      "blurb": "A cliff walk, then come down by mountain cart, scooter bike or zip line.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lauterbrunnen",
+      "tag": "Free",
+      "blurb": "A valley of 72 waterfalls. Trümmelbach Falls inside the mountain is worth the ticket.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake Brienz boat",
+      "tag": "Ticketed",
+      "blurb": "A paddle steamer across a lake so blue it looks unreal.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Harder Kulm",
+      "tag": "Ticketed",
+      "blurb": "A funicular up to a viewing platform over both lakes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake beaches",
+      "tag": "Free",
+      "blurb": "Free lidos and lake swimming spots in summer.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Interlaken good for a family holiday?",
+      "answer": "Yes. The scenery is spectacular, the trains make it easy without a car, and there are adventures for all ages. Switzerland is expensive, so self-catering saves a lot."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights for a mix of mountain days and lake days."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit Switzerland for up to 90 days in any 180 without a visa. New European entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Can you get there by train?",
+      "answer": "Yes, via Paris on the Eurostar and a TGV to Basel, then on to Interlaken, in about nine hours."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Chamonix",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Ljubljana",
+      "code": "LJU",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Tromsø",
+      "code": "TOS",
+      "label": "🧗 Adventure"
+    }
+  ]
+}

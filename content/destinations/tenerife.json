@@ -1,0 +1,176 @@
+{
+  "name": "Tenerife",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Tenerife",
+  "intro": "Winter sun, a volcano with a cable car and some of Europe's best water parks. Here's what Tenerife is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "TFS",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "relax"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same time as the UK",
+      "highlight": true
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Winter sun"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Winter sun"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Easter, busy"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Winter sun"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Winter sun"
+    }
+  },
+  "when_to_go": "Tenerife is warm all year, which makes it a favourite for winter sun and February half term. Summer is hot and busy with school holidays. The south is sunnier and drier than the green north.",
+  "things": [
+    {
+      "name": "Mount Teide cable car",
+      "tag": "Ticketed",
+      "blurb": "Ride up Spain's highest mountain to a moonscape of old lava. Book ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Siam Park",
+      "tag": "Ticketed",
+      "blurb": "A Thai-themed water park often voted the best in the world.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale and dolphin trip",
+      "tag": "Ticketed",
+      "blurb": "Pilot whales live off the south coast all year and are seen on most trips.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Loro Parque",
+      "tag": "Ticketed",
+      "blurb": "A big animal park in Puerto de la Cruz, with penguins and parrots.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Playa de las Teresitas",
+      "tag": "Free",
+      "blurb": "A long golden beach in the north with calm water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Teno and Masca",
+      "tag": "Free",
+      "blurb": "Hairpin mountain roads, cliffs and a tiny village in the north-west.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Tenerife good for a family holiday?",
+      "answer": "Yes. It's an easy, warm, four-and-a-half-hour flight, with plenty of family hotels, water parks and calm beaches."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week is typical. Hiring a car for a day or two lets you see Teide and the north."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, Tenerife is part of Spain, so British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "North or south?",
+      "answer": "The south has the sunniest weather and most family resorts. The north is greener and more traditional, with more cloud."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Paphos",
+      "code": "PFO",
+      "label": "☀️ Winter sun"
+    },
+    {
+      "name": "Marrakech",
+      "code": "RAK",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Lanzarote",
+      "code": "ACE",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

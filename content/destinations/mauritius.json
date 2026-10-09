@@ -1,0 +1,176 @@
+{
+  "name": "Mauritius",
+  "published": true,
+  "country": "MU",
+  "title": "Holidays in Mauritius",
+  "intro": "Lagoon beaches, giant tortoises and rainbow-coloured sand in the Indian Ocean. Here's what Mauritius is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "MRU",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "nature"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3 to 4 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Mauritian rupee (Rs)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Mauritius drives on the left, like the UK. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Hot, cyclone risk"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cyclone risk"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Cooler"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Cooler, windy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Cooler, windy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, dry"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, dry"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Hot"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Hot, festive"
+    }
+  },
+  "when_to_go": "April to May and September to December are ideal, warm and fairly dry. June to August is the cooler winter, still in the mid-20s but breezier. January to March is hot and humid, with a chance of cyclones.",
+  "things": [
+    {
+      "name": "Casela Nature Park",
+      "tag": "Ticketed",
+      "blurb": "Walk with giant tortoises and see big cats, with zip lines for older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chamarel",
+      "tag": "Ticketed",
+      "blurb": "Seven Coloured Earth dunes and a tall waterfall in the south-west.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Black River Gorges",
+      "tag": "Free",
+      "blurb": "Rainforest walks with viewpoints and rare birds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Île aux Cerfs",
+      "tag": "Ticketed",
+      "blurb": "A boat to an island with calm, shallow lagoon beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Glass-bottom boat",
+      "tag": "Ticketed",
+      "blurb": "See the reef and fish without getting wet. Good for little ones.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Le Morne",
+      "tag": "Free",
+      "blurb": "A beautiful lagoon beach under a dramatic mountain.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Mauritius good for a family holiday?",
+      "answer": "Yes. Lagoons protected by reefs make the sea calm and shallow, and many resorts have great kids clubs. English is widely spoken."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights, as the flight is about twelve hours."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for a holiday without a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Which coast is best?",
+      "answer": "The north and west are sunnier and calmer in winter. The east is breezier but cooler in summer. The south is wilder and less built-up."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Maldives",
+      "code": "MLE",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Cape Town",
+      "code": "CPT",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

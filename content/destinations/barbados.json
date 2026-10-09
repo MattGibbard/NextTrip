@@ -1,0 +1,176 @@
+{
+  "name": "Barbados",
+  "published": true,
+  "country": "BB",
+  "title": "Holidays in Barbados",
+  "intro": "Calm Caribbean beaches, swimming with turtles and fish fries on a Friday night. Here's what Barbados is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "BGI",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "food"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 to 5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Barbados dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 115V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Barbados drives on the left, like the UK. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Rainy spells"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Rainy spells"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Festive, busy"
+    }
+  },
+  "when_to_go": "December to April is dry and sunny, with Christmas and Easter the busiest and dearest. Summer is hot with short showers and lower prices. Hurricane season runs June to November, though Barbados is usually south of the main storm track.",
+  "things": [
+    {
+      "name": "Swim with turtles",
+      "tag": "Ticketed",
+      "blurb": "Catamaran trips stop off the west coast to snorkel with sea turtles.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Harrison's Cave",
+      "tag": "Ticketed",
+      "blurb": "A tram ride through a cave of stalactites and underground streams.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Oistins Fish Fry",
+      "tag": "Free",
+      "blurb": "Grilled fish, music and dancing on Friday nights. Pay only for what you eat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Barbados Wildlife Reserve",
+      "tag": "Ticketed",
+      "blurb": "Green monkeys, tortoises and deer roaming freely.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "West coast beaches",
+      "tag": "Free",
+      "blurb": "Calm, clear water at Mullins and Carlisle Bay, good for little swimmers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bathsheba",
+      "tag": "Free",
+      "blurb": "Dramatic rocks and surf on the wild east coast. Look, don't swim.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Barbados good for a family holiday?",
+      "answer": "Yes. It's friendly, safe and English-speaking, with calm beaches on the west and south coasts and a direct flight from the UK."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights, to make the long flight worthwhile and leave time to relax."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit without a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Which coast is best for families?",
+      "answer": "The west coast has the calmest water. The south coast is livelier and better value. The east coast is beautiful but too rough for swimming."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cancún",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Mauritius",
+      "code": "MRU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Maldives",
+      "code": "MLE",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Antigua",
+      "code": "ANU",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "name": "Amsterdam",
+  "published": true,
+  "country": "NL",
+  "title": "Holidays in Amsterdam",
+  "intro": "Canal boats, bike rides and pancakes, with a direct train from London. Here's what Amsterdam is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "AMS",
+  "holiday_types": [
+    "city",
+    "culture",
+    "rail"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    },
+    {
+      "label": "By train",
+      "value": "Eurostar from London, about 4 hrs",
+      "highlight": true
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Tulips"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Spring"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive lights"
+    }
+  },
+  "when_to_go": "April and May bring the tulips, and summer has long evenings for canal trips and parks. Winter is cold and grey, but December has light festivals and ice rinks. King's Day on 27 April turns the city orange and very busy.",
+  "things": [
+    {
+      "name": "NEMO Science Museum",
+      "tag": "Indoors",
+      "blurb": "A big green ship-shaped building packed with hands-on science, and a rooftop to play on.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Canal boat trip",
+      "tag": "Ticketed",
+      "blurb": "The easiest way to see the city, gliding past narrow houses and houseboats.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vondelpark",
+      "tag": "Free",
+      "blurb": "The city's big park, with playgrounds, ponds and pancake cafés.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Artis Zoo",
+      "tag": "Ticketed",
+      "blurb": "A leafy old zoo in the city centre, with an aquarium and planetarium.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Keukenhof",
+      "tag": "Day trip",
+      "blurb": "Millions of tulips, open only from late March to mid-May.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Anne Frank House",
+      "tag": "Ticketed",
+      "blurb": "Best for children aged 10 and over. Tickets go on sale weeks ahead and sell out.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Amsterdam good for a family holiday?",
+      "answer": "Yes. It's compact and flat, with parks, museums and canals. Watch out for bikes, which come fast and quietly, and stick to the family-friendly areas away from the centre at night."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights is enough for the city, with a day trip to the tulips or the windmills at Zaanse Schans."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Can you get there by train?",
+      "answer": "Yes, the Eurostar runs direct from London St Pancras to Amsterdam in about four hours."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Copenhagen",
+      "code": "CPH",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Berlin",
+      "code": "BER",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Paris",
+      "code": "PAR",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Brussels",
+      "code": "BRU",
+      "label": "🚆 By train"
+    }
+  ]
+}

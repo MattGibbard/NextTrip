@@ -1,0 +1,177 @@
+{
+  "name": "Sri Lanka",
+  "published": true,
+  "country": "LK",
+  "title": "Holidays in Sri Lanka",
+  "intro": "Leopards, elephants, a famous train ride and golden beaches on one small island. Here's what Sri Lanka is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "CMB",
+  "holiday_types": [
+    "nature",
+    "beach",
+    "culture",
+    "adventure"
+  ],
+  "nights": "12 to 14",
+  "trip_length": "two-weeks",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4½ to 5½ hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Sri Lankan rupee (Rs)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ETA, applied for online",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type D / G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry south & west"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry south & west"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry south & west"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Monsoon south-west"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "East coast dry"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "East coast dry"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "East coast dry"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "East coast dry"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry south & west"
+    }
+  },
+  "when_to_go": "December to March is best for the south and west coasts and the hill country. May to September is the time for the east coast, while the south-west has its monsoon. October and November are wet across much of the island.",
+  "things": [
+    {
+      "name": "Yala National Park",
+      "tag": "Ticketed",
+      "blurb": "Jeep safaris with one of the world's best chances of seeing a leopard.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sigiriya",
+      "tag": "Ticketed",
+      "blurb": "Climb about 1,200 steps up an ancient rock fortress. Go early, before the heat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kandy to Ella train",
+      "tag": "Ticketed",
+      "blurb": "A slow, famous ride through tea plantations. Book seats ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Galle Fort",
+      "tag": "Free",
+      "blurb": "A walled old town by the sea, with cafés and ramparts to walk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Udawalawe",
+      "tag": "Ticketed",
+      "blurb": "Herds of elephants on a jeep safari, almost guaranteed.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Ticketed",
+      "blurb": "Blue whales off Mirissa, from November to April.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Sri Lanka good for a family holiday?",
+      "answer": "Yes. It's friendly and good value, and you can see wildlife, hills and beaches in two weeks. Hiring a car and driver is the easiest way to get around."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Twelve to fourteen nights covers the Cultural Triangle, the hill country, a safari and the beach."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "British passport holders need an ETA, applied for online before you travel. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Which beaches are best for children?",
+      "answer": "Sheltered bays such as Unawatuna and Hiriketiya on the south coast in winter, and Pasikudah on the east coast in summer. Many beaches have strong currents, so check before swimming."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Maldives",
+      "code": "MLE",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Hoi An",
+      "code": "DAD",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Maasai Mara",
+      "code": "NBO",
+      "label": "🦁 Safari"
+    }
+  ]
+}

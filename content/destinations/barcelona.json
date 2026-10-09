@@ -1,0 +1,177 @@
+{
+  "name": "Barcelona",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Barcelona",
+  "intro": "Gaudí's fairy-tale buildings, a city beach and tapas for dinner. Here's what Barcelona is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "BCN",
+  "holiday_types": [
+    "city",
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Beach weather"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "May, June and September are ideal, warm enough for the beach but not too crowded. July and August are hot and very busy. Winter is mild and quieter, and good for sightseeing.",
+  "things": [
+    {
+      "name": "Sagrada Família",
+      "tag": "Ticketed",
+      "blurb": "Gaudí's giant unfinished church. Book timed tickets well ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Park Güell",
+      "tag": "Ticketed",
+      "blurb": "Mosaic lizards, gingerbread houses and views over the city. Book ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Barceloneta Beach",
+      "tag": "Free",
+      "blurb": "A sandy city beach with a long promenade and ice cream everywhere.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "CosmoCaixa",
+      "tag": "Indoors",
+      "blurb": "A great science museum with a flooded rainforest inside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Montjuïc",
+      "tag": "Free",
+      "blurb": "Gardens, a castle and a cable car. The Magic Fountain shows run on some evenings.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tibidabo",
+      "tag": "Ticketed",
+      "blurb": "An old-fashioned amusement park on top of the mountain.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Barcelona good for a family holiday?",
+      "answer": "Yes. It's a city break and a beach holiday in one, with lots for children. Watch your bags, as pickpockets work the busy areas and the metro."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three to five nights covers the big sights with time on the beach."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Is there a tourist tax?",
+      "answer": "Yes, hotels add a nightly tax per adult. Under-16s don't pay it."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Valencia",
+      "code": "VLC",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Rome",
+      "code": "ROM",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Mallorca",
+      "code": "PMI",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

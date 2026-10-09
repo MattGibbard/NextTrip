@@ -1,0 +1,176 @@
+{
+  "name": "Kotor",
+  "published": true,
+  "country": "ME",
+  "title": "Holidays in Kotor",
+  "intro": "A walled old town full of cats, a fjord-like bay and beaches nearby. Here's what Kotor and Montenegro are like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "TIV",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "nature"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Montenegro isn't in the EU but uses the euro. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Beach weather"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Quiet"
+    }
+  },
+  "when_to_go": "May, June and September are ideal, with warm sea and fewer cruise ships in the bay. July and August are hot and the old town gets crowded in the middle of the day. Winter is wet and many beach places close.",
+  "things": [
+    {
+      "name": "Kotor Old Town",
+      "tag": "Free",
+      "blurb": "Car-free lanes, squares and lots of friendly cats. Explore early or late to miss the cruise crowds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "San Giovanni Fortress",
+      "tag": "Ticketed",
+      "blurb": "About 1,350 steps up the town walls. Go early before it gets hot.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Our Lady of the Rocks",
+      "tag": "Ticketed",
+      "blurb": "A short boat from Perast to a church on a man-made island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Cave",
+      "tag": "Ticketed",
+      "blurb": "A boat trip to a sea cave where the water glows bright blue. Bring swimsuits.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lovćen National Park",
+      "tag": "Day trip",
+      "blurb": "Drive the hairpin road for huge views over the bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Budva beaches",
+      "tag": "Free",
+      "blurb": "Sandy beaches and an old town, about 30 minutes down the coast.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Kotor good for a family holiday?",
+      "answer": "Yes. Montenegro is good value and the bay is calm and sheltered, which suits young swimmers. Most beaches are pebbly, so pack water shoes."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights mixes the old towns, a boat trip and beach days."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days without a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Which airport is closest?",
+      "answer": "Tivat is about 15 minutes away. Dubrovnik in Croatia is about two hours away, with a border crossing, and often has more flights."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Dubrovnik",
+      "code": "DBV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Ljubljana",
+      "code": "LJU",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Corfu",
+      "code": "CFU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Split",
+      "code": "SPU",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

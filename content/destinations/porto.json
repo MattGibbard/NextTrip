@@ -1,0 +1,176 @@
+{
+  "name": "Porto",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in Porto",
+  "intro": "Riverside boats, a bookshop like Hogwarts and custard tarts for breakfast. Here's what Porto is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "OPO",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same time as the UK",
+      "highlight": true
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "São João festival"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "April to June and September are warm and sunny without the summer crowds. July and August are busy but pleasant, and the Atlantic stays chilly for swimming. Winter is mild but wet. On the night of 23 June the São João festival fills the city with fireworks and squeaky hammers.",
+  "things": [
+    {
+      "name": "Six bridges boat trip",
+      "tag": "Ticketed",
+      "blurb": "A short cruise on the Douro under all six of Porto's bridges.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Livraria Lello",
+      "tag": "Ticketed",
+      "blurb": "A beautiful bookshop with a twisting red staircase. Book a timed ticket.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Crystal Palace Gardens",
+      "tag": "Free",
+      "blurb": "Peacocks, fountains and the best view over the river.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "World of Discoveries",
+      "tag": "Indoors",
+      "blurb": "An interactive museum with a boat ride through the age of exploration.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tram 1 to Foz",
+      "tag": "Ticketed",
+      "blurb": "A vintage tram along the river to the beaches and rock pools.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gaia cable car",
+      "tag": "Ticketed",
+      "blurb": "A short ride over the riverside port cellars with views back to the old town.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Porto good for a family holiday?",
+      "answer": "Yes, for families who don't mind hills. It's compact, friendly and good value, and there's no time difference to deal with. Pushchairs struggle on the steep cobbles, so bring a sling for little ones."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three to five nights covers the city and a beach afternoon. A day in the Douro Valley is worth adding for older children."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Can you swim in the sea at Porto?",
+      "answer": "Yes, at the beaches in Foz and Matosinhos, but the Atlantic is cold even in August. Lifeguards watch the main beaches in summer."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Valencia",
+      "code": "VLC",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Seville",
+      "code": "SVQ",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

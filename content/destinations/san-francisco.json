@@ -4,7 +4,9 @@
   "country": "US",
   "title": "Holidays in San Francisco",
   "intro": "Cable cars, the Golden Gate Bridge and sea lions on the pier. Here's what San Francisco is like with the family, when to go and how long to stay.",
-  "image": "",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/golden-gate-bridge-4271364_1280.webp",
   "image_alt": "",
   "to_code": "SFO",
   "holiday_types": [

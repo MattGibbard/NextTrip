@@ -8,11 +8,20 @@ import { PAGES, isPrivatePath, publicPage } from "../shared/seo";
 import { destinationMeta, findDestination } from "./destinations";
 import { GuideView } from "./views/GuideView";
 import { followInPlace, isGuidePath } from "./navigate";
-import { load, save } from "./storage";
+import { forget, load, save } from "./storage";
+import { AppSkeleton, LAST_ME } from "./components/AppSkeleton";
+
+// Remembers whether this browser was signed in last time, so the home page isn't shown to people who
+// are about to land in the app. index.html reads the same key before the first paint.
+const SIGNED_IN = "signedIn";
 
 // The signed-in app (its views, the map and the draw) loads only once someone is signed in, so the
 // public pages that visitors and search engines see stay small and quick.
-const SignedIn = lazy(() => import("./SignedIn"));
+const loadSignedIn = () => import("./SignedIn");
+const SignedIn = lazy(loadSignedIn);
+// Someone who was signed in last time is almost certainly still signed in, so start fetching the app
+// now, alongside the check with the server, rather than waiting for its answer.
+if (load(SIGNED_IN, false)) void loadSignedIn();
 
 /**
  * A family link (/f/…), a person's own link from the organiser (/p/…) or an
@@ -67,9 +76,6 @@ function pageTitle(path: string): string {
   return destination ? destinationMeta(destination).title : "somewhere🎉";
 }
 
-// Remembers whether this browser was signed in last time, so the home page isn't shown to people who
-// are about to land in the app. index.html reads the same key before the first paint.
-const SIGNED_IN = "signedIn";
 
 function Main({ path }: { path: string }) {
   const [session, setSession] = useState<Session | null>(null);
@@ -80,6 +86,7 @@ function Main({ path }: { path: string }) {
     try {
       const s = await api.session();
       save(SIGNED_IN, s.signed_in);
+      if (!s.signed_in) forget(LAST_ME);
       setSession(s);
       // The server has carried over any person this browser picked before, so the old choice can go.
       forgetLegacyPerson();
@@ -99,6 +106,7 @@ function Main({ path }: { path: string }) {
   useEffect(() => {
     setSignedOutHandler(() => {
       save(SIGNED_IN, false);
+      forget(LAST_ME);
       setSession({ signed_in: false });
     });
     if (!entry) void refresh();
@@ -117,12 +125,12 @@ function Main({ path }: { path: string }) {
       // The same page the server sent, so nothing jumps while we check.
       <HomePage />
     ) : (
-      <p className="muted center">Loading…</p>
+      <AppSkeleton guide={isGuidePath(path)} />
     );
   }
   if (!session.signed_in) return isGuidePath(path) ? <GuideView path={path} /> : <HomePage />;
   return (
-    <Suspense fallback={<p className="muted center">Loading…</p>}>
+    <Suspense fallback={<AppSkeleton guide={isGuidePath(path)} />}>
       <SignedIn session={session} path={path} />
     </Suspense>
   );

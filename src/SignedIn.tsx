@@ -19,6 +19,8 @@ import { PersonPicker } from "./components/PersonPicker";
 import { AppBottomNav, AppTopbar } from "./components/AppNav";
 import type { TabId } from "./components/AppNav";
 import { isGuidePath } from "./navigate";
+import { LAST_ME, PageSkeleton } from "./components/AppSkeleton";
+import { save } from "./storage";
 
 // The signed-in app. App.tsx loads this on its own, once someone is signed in, so visitors to the
 // public pages never download it.
@@ -50,6 +52,11 @@ function Shell({ path }: { path: string }) {
   // Someone new sees the welcome steps once; the server remembers when they've been through them.
   const [welcomed, setWelcomed] = useState(false);
   const tab = route.tab;
+
+  // Remembered so the header shows who you are straight away next time, while the app loads.
+  useEffect(() => {
+    if (me) save(LAST_ME, { name: me.name, color: me.color });
+  }, [me]);
 
   useEffect(() => {
     const onHash = () => {
@@ -102,7 +109,7 @@ function Shell({ path }: { path: string }) {
           </div>
         )}
         {loading ? (
-          <p className="muted center">Loading…</p>
+          <PageSkeleton />
         ) : (
           <>
             {tab === "been" && (route.id ? <TripPage key={route.id} id={route.id} /> : <TripsView addFrom={route.add} />)}

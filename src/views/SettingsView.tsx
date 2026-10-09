@@ -6,6 +6,8 @@ import { api } from "../api";
 import { useData } from "../data";
 import { isInstalled, isIos, useInstallPrompt } from "../install";
 import { TerminalPicker } from "../components/TerminalPicker";
+import { LAST_ME } from "../components/AppSkeleton";
+import { forget } from "../storage";
 import type { Terminal, TerminalKind } from "../../shared/terminals";
 import { estimateTravel } from "../../shared/travelTime";
 import { flag } from "../countries";
@@ -519,6 +521,7 @@ function DeviceSection() {
       : "Leave on this device? You'll need the family link to get back in.";
     if (!confirm(msg)) return;
     await api.signOut().catch(() => {});
+    forget(LAST_ME);
     location.href = "/";
   };
 

@@ -1,0 +1,176 @@
+{
+  "name": "Jordan",
+  "published": true,
+  "country": "JO",
+  "title": "Holidays in Jordan",
+  "intro": "Petra's rose-red city, a night under the stars in Wadi Rum and floating in the Dead Sea. Here's what Jordan is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "AMM",
+  "holiday_types": [
+    "adventure",
+    "culture",
+    "nature"
+  ],
+  "nights": "7 to 8",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 to 3 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Jordanian dinar (JD)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Visa needed, via the Jordan Pass",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / D / F / G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The Jordan Pass covers the visa and Petra entry. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold nights"
+    }
+  },
+  "when_to_go": "March to May and October to November are best, warm by day and cool at night. Summer is very hot in Petra and the desert. Winter can be cold and wet, with snow possible in the hills, though Aqaba stays warm.",
+  "things": [
+    {
+      "name": "Petra",
+      "tag": "Ticketed",
+      "blurb": "Walk through a narrow gorge to the Treasury. Climb 800 steps to the Monastery if legs allow.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wadi Rum",
+      "tag": "Ticketed",
+      "blurb": "Jeep rides through red desert and a night in a Bedouin camp.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dead Sea",
+      "tag": "Ticketed",
+      "blurb": "Float in water so salty you can't sink. Keep it out of eyes and cuts.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Aqaba",
+      "tag": "Ticketed",
+      "blurb": "Snorkel coral reefs in the Red Sea, close to the beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wadi Mujib",
+      "tag": "Ticketed",
+      "blurb": "Wade up a canyon river. Open roughly April to October, with age limits.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jerash",
+      "tag": "Ticketed",
+      "blurb": "One of the best-kept Roman cities anywhere, with chariot shows.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Jordan good for a family holiday?",
+      "answer": "Yes, for families who like adventure and history. Jordanians are very welcoming to children. Check the latest GOV.UK travel advice before booking, as it covers the wider region."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Seven or eight nights covers Petra, Wadi Rum, the Dead Sea and a beach day in Aqaba."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Yes. Most visitors buy the Jordan Pass online before travel, which includes the visa and entry to Petra and other sites. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How much walking is there at Petra?",
+      "answer": "A lot. It's about four kilometres to the Treasury and back, and much more to explore. Donkeys and carts can help tired legs."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Marrakech",
+      "code": "RAK",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Dubai",
+      "code": "DXB",
+      "label": "☀️ Winter sun"
+    },
+    {
+      "name": "Cusco",
+      "code": "CUZ",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Namibia",
+      "code": "WDH",
+      "label": "🧗 Adventure"
+    }
+  ]
+}

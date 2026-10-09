@@ -1,0 +1,177 @@
+{
+  "name": "Banff",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Banff",
+  "intro": "Turquoise lakes, glaciers and elk wandering through town in the Canadian Rockies. Here's what Banff is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "YYC",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip",
+    "ski"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need a Parks Canada pass to stop in the national parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Skiing"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Skiing"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Skiing"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Between seasons"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Lakes still frozen"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer, busy"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Autumn"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Between seasons"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Skiing, festive"
+    }
+  },
+  "when_to_go": "Late June to September is when the lakes thaw to their famous blue and all the trails open, with July and August busiest. December to March is ski season, with frozen lakes for skating. May and October are quiet and the lakes are often still icy.",
+  "things": [
+    {
+      "name": "Lake Louise",
+      "tag": "Free",
+      "blurb": "A turquoise lake below a glacier. Hire a canoe, and use the park shuttle as parking fills early.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Moraine Lake",
+      "tag": "Ticketed",
+      "blurb": "Reached by shuttle or tour bus only, from June to October. Book ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Banff Gondola",
+      "tag": "Ticketed",
+      "blurb": "Up Sulphur Mountain for views along the Bow Valley.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Johnston Canyon",
+      "tag": "Free",
+      "blurb": "A walkway clinging to canyon walls, leading to waterfalls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Banff Upper Hot Springs",
+      "tag": "Ticketed",
+      "blurb": "A warm outdoor pool with mountain views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Icefields Parkway",
+      "tag": "Day trip",
+      "blurb": "One of the world's great drives, to the Columbia Icefield and glacier walks.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Banff good for a family holiday?",
+      "answer": "Yes. The scenery is incredible, the walks come in every length, and wildlife spotting keeps children busy. Carry bear spray on trails and keep your distance from animals."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights, often with Jasper and a drive on to Vancouver."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Calgary, then it's about an hour and a half by car. There are direct flights from London."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Whistler",
+      "code": "YVR",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Vancouver",
+      "code": "YVR",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Yellowstone",
+      "code": "BZN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

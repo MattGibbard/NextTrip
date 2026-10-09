@@ -1,0 +1,175 @@
+{
+  "name": "Boston",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Boston",
+  "intro": "Follow a red line through history, see whales off the coast and catch a ball game. Here's what Boston is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "BOS",
+  "holiday_types": [
+    "city",
+    "culture"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Crisp"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "May, June, September and October are best, and October brings New England's famous autumn colours. Summer is warm and lively. Winter is cold and snowy.",
+  "things": [
+    {
+      "name": "Freedom Trail",
+      "tag": "Free",
+      "blurb": "Follow the red line on the pavement past 16 historic sites.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Boston Tea Party Ships",
+      "tag": "Ticketed",
+      "blurb": "Throw tea into the harbour like the colonists did.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "New England Aquarium",
+      "tag": "Ticketed",
+      "blurb": "A giant ocean tank, penguins and sea turtles.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Museum of Science",
+      "tag": "Indoors",
+      "blurb": "A big hands-on museum with a lightning show.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Swan boats",
+      "tag": "Ticketed",
+      "blurb": "A gentle pedal boat ride in the Public Garden, from spring to late summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Ticketed",
+      "blurb": "Boats leave the harbour from spring to autumn to see humpbacks.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Boston good for a family holiday?",
+      "answer": "Yes. It's walkable, historic and feels a bit British, which makes it an easy first US city. Children love the tea party and the swan boats."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights, or add Cape Cod or a New England road trip."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is there a direct flight?",
+      "answer": "Yes, from London Heathrow in about seven hours."
+    }
+  ],
+  "similar": [
+    {
+      "name": "New York",
+      "code": "NYC",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Washington, D.C.",
+      "code": "WAS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Quebec City",
+      "code": "YQB",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Halifax",
+      "code": "YHZ",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

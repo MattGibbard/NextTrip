@@ -1,0 +1,175 @@
+{
+  "name": "Lofoten",
+  "published": true,
+  "country": "NO",
+  "title": "Holidays in Lofoten",
+  "intro": "Jagged peaks rising from the sea, red huts and the midnight sun. Here's what the Lofoten Islands are like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "BOO",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Norwegian krone (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Norway follows Europe's border rules. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Dark"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Snow, lights"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Snow, lights"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Changeable"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Light nights"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Midnight sun"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Midnight sun"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Northern lights"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Stormy"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Dark"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Dark"
+    }
+  },
+  "when_to_go": "June to August has round-the-clock daylight and the best weather for hiking and kayaking. February and March bring snowy peaks and northern lights with returning daylight. Late autumn and early winter are dark and stormy.",
+  "things": [
+    {
+      "name": "Beaches at Haukland and Uttakleiv",
+      "tag": "Free",
+      "blurb": "White sand and turquoise water under mountains. The sea is cold, but paddling is fun.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sea kayaking",
+      "tag": "Ticketed",
+      "blurb": "Paddle between islands and fishing villages with a guide.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lofotr Viking Museum",
+      "tag": "Ticketed",
+      "blurb": "A rebuilt Viking chieftain's longhouse with boats to row.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sea eagle safari",
+      "tag": "Ticketed",
+      "blurb": "A boat trip into the narrow Trollfjord to watch eagles dive.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nusfjord",
+      "tag": "Ticketed",
+      "blurb": "One of Norway's oldest fishing villages, with red huts on stilts.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mountain hikes",
+      "tag": "Free",
+      "blurb": "Short climbs with huge views. Ryten and Offersøykammen suit older children.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Lofoten good for a family holiday?",
+      "answer": "Yes, for outdoorsy families. It's safe and spectacular, with beaches, boats and hikes. Staying in a rorbu, a red fisherman's cabin, is half the fun."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights, with a hire car to explore."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit Norway for up to 90 days in any 180 without a visa. New European entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly via Oslo to Bodø, then take the ferry or a short flight to the islands. Some families drive up and over the bridges from Narvik."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tromsø",
+      "code": "TOS",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Faroe Islands",
+      "code": "FAE",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Reykjavik",
+      "code": "REK",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Torres del Paine",
+      "code": "PUQ",
+      "label": "🧗 Adventure"
+    }
+  ]
+}

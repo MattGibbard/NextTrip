@@ -1,0 +1,176 @@
+{
+  "name": "Chicago",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Chicago",
+  "intro": "A shiny giant bean, Sue the T. rex and a glass ledge 103 floors up. Here's what Chicago is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "CHI",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Freezing"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Freezing"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "June to September is best, with lake beaches, festivals and outdoor concerts. Winter is bitterly cold and windy, though December has festive lights and ice skating.",
+  "things": [
+    {
+      "name": "Millennium Park",
+      "tag": "Free",
+      "blurb": "See yourself in the Bean and splash in the Crown Fountain in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Field Museum",
+      "tag": "Ticketed",
+      "blurb": "Sue, one of the most complete T. rex skeletons ever found.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Museum of Science and Industry",
+      "tag": "Ticketed",
+      "blurb": "Climb inside a real German U-boat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lincoln Park Zoo",
+      "tag": "Free",
+      "blurb": "One of the last free zoos in the US.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Architecture river cruise",
+      "tag": "Ticketed",
+      "blurb": "A boat tour between the skyscrapers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Navy Pier",
+      "tag": "Free",
+      "blurb": "A giant Ferris wheel, a children's museum and fireworks in summer.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Chicago good for a family holiday?",
+      "answer": "Yes, especially in summer. The museums are excellent, the lakefront has beaches and bike paths, and it's less hectic than New York."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights covers the museums, the lakefront and a deep-dish pizza or two."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can you swim in Lake Michigan?",
+      "answer": "Yes, at the city beaches in summer, when lifeguards are on duty. The water stays cool."
+    }
+  ],
+  "similar": [
+    {
+      "name": "New York",
+      "code": "NYC",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Toronto",
+      "code": "YTO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Boston",
+      "code": "BOS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "New Orleans",
+      "code": "MSY",
+      "label": "🍷 Food & drink"
+    }
+  ]
+}

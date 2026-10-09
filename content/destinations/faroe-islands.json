@@ -1,0 +1,175 @@
+{
+  "name": "Faroe Islands",
+  "published": true,
+  "country": "FO",
+  "title": "Holidays in Faroe Islands",
+  "intro": "Waterfalls falling into the sea, puffins and grass-roofed villages. Here's what the Faroe Islands are like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "FAE",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "4 to 6",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same time as the UK",
+      "highlight": true
+    },
+    {
+      "label": "Currency",
+      "value": "Faroese krone (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E / F / K · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Danish krone are used too. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Dark, stormy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Dark, stormy"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Windy"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Changeable"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Puffins arrive"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Stormy"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Dark"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Dark"
+    }
+  },
+  "when_to_go": "June to August is the time to go, with long days, puffins and the calmest weather. May and September are quieter but more changeable. Winter is dark and stormy, and many boat trips don't run.",
+  "things": [
+    {
+      "name": "Múlafossur",
+      "tag": "Free",
+      "blurb": "A waterfall that drops straight into the ocean below a tiny village.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mykines",
+      "tag": "Ticketed",
+      "blurb": "A boat trip to an island of puffins, from May to August. Book ahead, as it fills up.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vestmanna sea cliffs",
+      "tag": "Ticketed",
+      "blurb": "A boat ride into caves and past towering bird cliffs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sørvágsvatn",
+      "tag": "Ticketed",
+      "blurb": "A walk to a lake that seems to float above the sea. Landowners charge a small fee.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tórshavn",
+      "tag": "Free",
+      "blurb": "A tiny capital with grass-roofed government buildings on the harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Saksun",
+      "tag": "Ticketed",
+      "blurb": "A turf-roofed church by a tidal lagoon in a deep green valley.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are the Faroe Islands good for a family holiday?",
+      "answer": "Yes, for families who love wild places and don't mind the weather. Roads and tunnels link most islands, and it's very safe."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four to six nights, with a hire car."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit without a visa. The Faroes aren't in the EU, so the EU's new entry checks don't apply. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Atlantic Airways flies from Edinburgh in summer, in about an hour and a quarter, or go via Copenhagen."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lofoten",
+      "code": "BOO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Reykjavik",
+      "code": "REK",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Azores",
+      "code": "PDL",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Tromsø",
+      "code": "TOS",
+      "label": "🧗 Adventure"
+    }
+  ]
+}

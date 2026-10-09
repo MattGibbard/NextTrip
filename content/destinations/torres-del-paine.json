@@ -1,0 +1,175 @@
+{
+  "name": "Torres del Paine",
+  "published": true,
+  "country": "CL",
+  "title": "Holidays in Torres del Paine",
+  "intro": "Granite towers, blue glaciers and pumas in Patagonia, near the end of the world. Here's what Torres del Paine is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "PUQ",
+  "holiday_types": [
+    "adventure",
+    "nature"
+  ],
+  "nights": "4 to 6",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3 to 4 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Chilean peso ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / L · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Park tickets and campsites must be booked ahead. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Summer, windy"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Summer, windy"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Autumn"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Autumn colour"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Winter"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Winter"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Winter"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Long days"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Summer, windy"
+    }
+  },
+  "when_to_go": "November to March is summer, with long days but strong winds. April brings autumn colours and fewer people. Winter is cold and quiet, but clear and still, and a good time to track pumas.",
+  "things": [
+    {
+      "name": "Grey Glacier boat",
+      "tag": "Ticketed",
+      "blurb": "Sail up close to the face of a huge blue glacier.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lago Pehoé catamaran",
+      "tag": "Ticketed",
+      "blurb": "A boat across a turquoise lake below the Paine horns.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mirador Cóndor",
+      "tag": "Free",
+      "blurb": "A short, steep climb to views of lakes and mountains, with condors overhead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Base of the Towers",
+      "tag": "Free",
+      "blurb": "A full-day hike to the famous granite towers. For fit older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Puma tracking",
+      "tag": "Ticketed",
+      "blurb": "Go out with a tracker for a chance to see a wild puma.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Horse riding",
+      "tag": "Ticketed",
+      "blurb": "Ride across the steppe with local gauchos.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Patagonia good for a family holiday?",
+      "answer": "Yes, for active families with children who enjoy walking. Lodges and boat trips make it doable without camping, and the scenery is jaw-dropping."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four to six nights in the park, as part of a two or three week trip to Chile or Argentina."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit Chile for a holiday without a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Santiago, then on to Punta Arenas or Puerto Natales. The park is about two hours by road from Puerto Natales."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Queenstown",
+      "code": "ZQN",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Lofoten",
+      "code": "BOO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Namibia",
+      "code": "WDH",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Banff",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

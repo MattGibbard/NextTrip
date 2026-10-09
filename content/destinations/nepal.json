@@ -1,0 +1,176 @@
+{
+  "name": "Nepal",
+  "published": true,
+  "country": "NP",
+  "title": "Holidays in Nepal",
+  "intro": "Himalayan sunrises, a family-sized trek and rhinos in the jungle. Here's what Nepal is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "KTM",
+  "holiday_types": [
+    "adventure",
+    "nature",
+    "culture"
+  ],
+  "nights": "12 to 14",
+  "trip_length": "two-weeks",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4¾ to 5¾ hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Nepalese rupee (Rs)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Visa on arrival (paid)",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / D / M · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cold, clear"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cold, clear"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Spring, blossom"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring, blossom"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot, hazy"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Monsoon"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Monsoon"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Monsoon"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Clearing"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Clear, festivals"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Clear"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cold, clear"
+    }
+  },
+  "when_to_go": "October and November are the best months, with clear mountain views after the monsoon and big festivals. March and April are warm with rhododendrons in bloom. June to August is the monsoon, with cloud, rain and leeches on trails.",
+  "things": [
+    {
+      "name": "Pokhara",
+      "tag": "Free",
+      "blurb": "A lakeside town with rowing boats and Himalayan peaks behind.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Poon Hill trek",
+      "tag": "Ticketed",
+      "blurb": "A four-day trek with tea houses and a famous sunrise. Possible for fit children from about eight.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chitwan National Park",
+      "tag": "Ticketed",
+      "blurb": "Jeep and canoe safaris to see rhinos, crocodiles and maybe a tiger.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Swayambhunath",
+      "tag": "Ticketed",
+      "blurb": "The monkey temple on a hill above Kathmandu, covered in prayer flags.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sarangkot",
+      "tag": "Free",
+      "blurb": "Sunrise over the Annapurnas, with tandem paragliding for older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mountain flight",
+      "tag": "Ticketed",
+      "blurb": "An early flight past Everest for those who won't trek.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Nepal good for a family holiday?",
+      "answer": "Yes, for adventurous families. Nepalis are very welcoming, and a short trek, a jungle safari and lakeside Pokhara make a great mix. Kathmandu is busy and dusty, so keep city time short."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Twelve to fourteen nights for Kathmandu, a short trek near Pokhara and Chitwan."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Yes, British passport holders can get a visa on arrival or apply online beforehand. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can children trek in Nepal?",
+      "answer": "Yes, on lower routes like Poon Hill with a guide and porters. Avoid high-altitude treks with young children, and talk to your GP before you go."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Cusco",
+      "code": "CUZ",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Borneo",
+      "code": "BKI",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

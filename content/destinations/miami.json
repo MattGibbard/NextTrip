@@ -1,0 +1,176 @@
+{
+  "name": "Miami",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Miami",
+  "intro": "Turquoise sea, airboats in the Everglades and Cuban food in Little Havana. Here's what Miami is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "MIA",
+  "holiday_types": [
+    "beach",
+    "city",
+    "food"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Warm, dry"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm, dry"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, dry"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, storms"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, storms"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, storms"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Hurricane risk"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Warm, busy"
+    }
+  },
+  "when_to_go": "November to April is warm, dry and sunny, which makes it a winter sun favourite. Summer is hot and humid with afternoon storms. Hurricane season runs from June to November, peaking in September.",
+  "things": [
+    {
+      "name": "South Beach",
+      "tag": "Free",
+      "blurb": "Wide white sand, lifeguard huts and pastel art deco hotels.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Everglades airboat",
+      "tag": "Day trip",
+      "blurb": "Skim across the grasslands looking for alligators, about an hour away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Frost Science Museum",
+      "tag": "Ticketed",
+      "blurb": "An aquarium you can look up into, plus a planetarium.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zoo Miami",
+      "tag": "Ticketed",
+      "blurb": "A big open zoo where the animals suit the heat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Crandon Park",
+      "tag": "Free",
+      "blurb": "A calmer family beach on Key Biscayne. You pay to park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Little Havana",
+      "tag": "Free",
+      "blurb": "Cuban music, domino players and great sandwiches.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Miami good for a family holiday?",
+      "answer": "Yes, as a beach and city mix, or as the start of a Florida Keys road trip. South Beach is lively at night, so families often prefer Key Biscayne or Sunny Isles."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights, or add Orlando or the Keys for two weeks."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can you drive to the Florida Keys?",
+      "answer": "Yes, the Overseas Highway runs over the sea to Key West, about four hours each way. It's best with a night or two on the way."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Orlando",
+      "code": "ORL",
+      "label": "🎢 Theme parks"
+    },
+    {
+      "name": "Cancún",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "New Orleans",
+      "code": "MSY",
+      "label": "🍷 Food & drink"
+    }
+  ]
+}

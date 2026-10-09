@@ -1,0 +1,177 @@
+{
+  "name": "Halifax",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Halifax",
+  "intro": "Lighthouses, lobster rolls and the world's highest tides on Canada's Atlantic coast. Here's what Halifax and Nova Scotia are like with the family.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "YHZ",
+  "holiday_types": [
+    "city",
+    "nature",
+    "food",
+    "road-trip"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold"
+    }
+  },
+  "when_to_go": "June to October is best, with warm days, festivals and whale watching. Late September and October bring bright autumn colours. Winters are cold and snowy, and some sights close.",
+  "things": [
+    {
+      "name": "Halifax waterfront",
+      "tag": "Free",
+      "blurb": "A long boardwalk with ice cream, boats and a ferry across the harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Maritime Museum of the Atlantic",
+      "tag": "Ticketed",
+      "blurb": "Titanic objects and stories, as Halifax was where many victims were brought.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Halifax Citadel",
+      "tag": "Ticketed",
+      "blurb": "A star-shaped fort with soldiers in kilts and a noon cannon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Peggy's Cove",
+      "tag": "Day trip",
+      "blurb": "A famous lighthouse on granite rocks. Stay off the dark, wet rocks near the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bay of Fundy",
+      "tag": "Day trip",
+      "blurb": "The world's highest tides. Walk on the sea floor at low tide, then watch it fill.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Ticketed",
+      "blurb": "Humpbacks and minke whales off the coast from June to October.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Halifax good for a family holiday?",
+      "answer": "Yes, especially for a relaxed coastal road trip. It's friendly, easy-going and the closest bit of Canada to the UK."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights for Halifax and a loop round Nova Scotia's coast."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How long is the flight?",
+      "answer": "About six hours from London, so it's one of the quickest ways to get to North America."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Quebec City",
+      "code": "YQB",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Boston",
+      "code": "BOS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Faroe Islands",
+      "code": "FAE",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Montreal",
+      "code": "YMQ",
+      "label": "🍷 Food & drink"
+    }
+  ]
+}

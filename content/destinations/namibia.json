@@ -1,0 +1,176 @@
+{
+  "name": "Namibia",
+  "published": true,
+  "country": "NA",
+  "title": "Holidays in Namibia",
+  "intro": "Climb giant red dunes, spot rhinos at waterholes and sandboard by the sea. Here's what a Namibia road trip is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "WDH",
+  "holiday_types": [
+    "adventure",
+    "nature",
+    "road-trip"
+  ],
+  "nights": "12 to 16",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 to 2 hrs ahead of the UK",
+      "highlight": true
+    },
+    {
+      "label": "Currency",
+      "value": "Namibian dollar (N$)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Visa needed",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type D / M · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Apply for an e-visa before you travel. Ask your GP about malaria tablets for the north. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Hot, rains"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Green"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Dry, cool nights"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Dry, cool nights"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Hot, dry"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Hot"
+    }
+  },
+  "when_to_go": "May to October is the dry season, best for game viewing at Etosha's waterholes, with cold nights in the desert. November to April is hot with some rain, green and quieter. School summer holidays are popular, so book lodges early.",
+  "things": [
+    {
+      "name": "Sossusvlei",
+      "tag": "Ticketed",
+      "blurb": "Climb some of the world's tallest sand dunes and see the dead trees of Deadvlei.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Etosha National Park",
+      "tag": "Ticketed",
+      "blurb": "Self-drive safari to waterholes busy with elephants, lions and rhinos.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Swakopmund",
+      "tag": "Ticketed",
+      "blurb": "Sandboarding, quad bikes and a dolphin cruise in a seaside desert town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cape Cross",
+      "tag": "Ticketed",
+      "blurb": "Tens of thousands of fur seals on the Skeleton Coast. It's noisy and smelly.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stargazing",
+      "tag": "Free",
+      "blurb": "Some of the darkest skies on earth. The Milky Way is bright overhead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Waterhole lodges",
+      "tag": "Ticketed",
+      "blurb": "Many lodges overlook floodlit waterholes, so you can watch animals after dinner.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Namibia good for a family holiday?",
+      "answer": "Yes, for a self-drive adventure. Roads are quiet and lodges welcome families, but the distances are long, so it suits children who travel well."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Twelve to sixteen nights for a loop taking in the dunes, the coast and Etosha."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Yes, British passport holders now need a visa, which you can apply for online before travel. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Do you need a 4x4?",
+      "answer": "Many roads are gravel, so a 4x4 or high-clearance vehicle is wise. Drive slowly, and never at night because of animals."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Maasai Mara",
+      "code": "NBO",
+      "label": "🦁 Safari"
+    },
+    {
+      "name": "Cape Town",
+      "code": "CPT",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Jordan",
+      "code": "AMM",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Grand Canyon",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

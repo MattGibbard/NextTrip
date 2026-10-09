@@ -1,0 +1,175 @@
+{
+  "name": "Los Angeles",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Los Angeles",
+  "intro": "Disneyland, movie studios and miles of beaches in the sunshine. Here's what Los Angeles is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "LAX",
+  "holiday_types": [
+    "city",
+    "beach"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "may": {
+      "rating": "good",
+      "note": "May Gray"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "June Gloom"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Hot"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild"
+    }
+  },
+  "when_to_go": "LA is warm and dry most of the year. Mornings by the coast are often grey in May and June. July to October is sunniest and warmest for the beach, and September is quieter once US schools go back.",
+  "things": [
+    {
+      "name": "Disneyland Resort",
+      "tag": "Day trip",
+      "blurb": "The original Disney park and California Adventure, in Anaheim. Allow two days.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Universal Studios Hollywood",
+      "tag": "Ticketed",
+      "blurb": "Theme park rides plus a tram tour of real film sets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Griffith Observatory",
+      "tag": "Free",
+      "blurb": "Telescopes, space exhibits and the best view of the Hollywood sign.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Santa Monica Pier",
+      "tag": "Free",
+      "blurb": "A seaside pier with a Ferris wheel and roller coaster. Rides are paid.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "California Science Center",
+      "tag": "Free",
+      "blurb": "See the Space Shuttle Endeavour up close. A small fee to see the shuttle at busy times.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "La Brea Tar Pits",
+      "tag": "Ticketed",
+      "blurb": "Bubbling tar pits where mammoths and sabre-toothed cats were found.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Los Angeles good for a family holiday?",
+      "answer": "Yes, with a car and a plan. The theme parks, beaches and museums are excellent, but the city is spread out and traffic is heavy, so stay near what you want to do."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Seven to ten nights, or combine it with San Diego and the coast road for a two-week trip."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Where should we stay?",
+      "answer": "Santa Monica for the beach, Anaheim for Disneyland, or near Universal City for the studios."
+    }
+  ],
+  "similar": [
+    {
+      "name": "San Diego",
+      "code": "SAN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "San Francisco",
+      "code": "SFO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Orlando",
+      "code": "ORL",
+      "label": "🎢 Theme parks"
+    },
+    {
+      "name": "Maui",
+      "code": "OGG",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

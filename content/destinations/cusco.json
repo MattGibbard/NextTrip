@@ -1,0 +1,176 @@
+{
+  "name": "Cusco",
+  "published": true,
+  "country": "PE",
+  "title": "Holidays in Cusco",
+  "intro": "Gateway to Machu Picchu, with llamas, Inca walls and the Sacred Valley. Here's what Cusco and Peru are like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "CUZ",
+  "holiday_types": [
+    "adventure",
+    "culture",
+    "nature"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 to 6 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Peruvian sol (S/)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / C · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Cusco is 3,400 metres up, so take the first days slowly. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Rainy, Inca Trail shut"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Drying out"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Dry, festivals"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Dry, busy"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Dry, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rainy"
+    }
+  },
+  "when_to_go": "May to September is the dry season, with sunny days and cold nights, and July and August are busiest. December to March is the rainy season, and the Inca Trail closes in February. Book Machu Picchu tickets and trains well ahead in any month.",
+  "things": [
+    {
+      "name": "Machu Picchu",
+      "tag": "Ticketed",
+      "blurb": "The famous Inca city in the clouds. Take the train from Ollantaytambo and book timed tickets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sacred Valley",
+      "tag": "Day trip",
+      "blurb": "Markets, Inca terraces and a gentler altitude to start your trip.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Maras and Moray",
+      "tag": "Ticketed",
+      "blurb": "Thousands of salt pans down a hillside and giant circular Inca terraces.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sacsayhuamán",
+      "tag": "Ticketed",
+      "blurb": "Huge stone walls above the city, with a natural rock slide to play on.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "San Pedro Market",
+      "tag": "Free",
+      "blurb": "Fruit juices, bread shaped like faces and baby llama photo opportunities.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rainbow Mountain",
+      "tag": "Day trip",
+      "blurb": "Striped mountains at 5,000 metres, for fit older children only.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Peru good for a family holiday?",
+      "answer": "Yes, for adventurous families with children around eight and over. Altitude, long journeys and early starts make it hard work for little ones."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights covers Lima, the Sacred Valley, Cusco and Machu Picchu, with time to adjust to the altitude."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for a holiday without a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "What about altitude sickness?",
+      "answer": "Many people get headaches or breathlessness at first. Start in the lower Sacred Valley, drink plenty, rest, and talk to your GP before travelling with young children."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Galápagos Islands",
+      "code": "GPS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Costa Rica",
+      "code": "SJO",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Mexico City",
+      "code": "MEX",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Jordan",
+      "code": "AMM",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

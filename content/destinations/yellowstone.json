@@ -1,0 +1,176 @@
+{
+  "name": "Yellowstone",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Yellowstone",
+  "intro": "Erupting geysers, rainbow hot springs and herds of bison by the road. Here's what Yellowstone is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "BZN",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "4 to 6",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "National parks charge an entry fee per vehicle, or buy an annual pass. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowcoach only"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowcoach only"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Snowcoach only"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Roads closed"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Roads open, baby animals"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer, busy"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Quieter"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cold, closing"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Roads closed"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Snowcoach only"
+    }
+  },
+  "when_to_go": "June to September is when all roads and lodges are open, with July and August busiest. Late May has baby bison, and September is quieter with wildlife on the move. From November to April most roads close to cars.",
+  "things": [
+    {
+      "name": "Old Faithful",
+      "tag": "Free",
+      "blurb": "The famous geyser erupts roughly every 90 minutes. Times are posted at the visitor centre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Prismatic Spring",
+      "tag": "Free",
+      "blurb": "A huge hot spring in rings of orange, yellow and blue. See it from the overlook trail.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lamar Valley",
+      "tag": "Free",
+      "blurb": "Bison, elk and maybe wolves or bears. Bring binoculars at dawn or dusk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Canyon of the Yellowstone",
+      "tag": "Free",
+      "blurb": "A yellow canyon with a thundering waterfall.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Junior Ranger",
+      "tag": "Free",
+      "blurb": "Children complete activities to earn a badge from a ranger.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Teton",
+      "tag": "Day trip",
+      "blurb": "Jagged mountains and lakes just to the south.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Yellowstone good for a family holiday?",
+      "answer": "Yes, it's like a giant outdoor science lesson. Stay on boardwalks, as the hot springs can kill, and keep well back from bison."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four to six nights in or near the park, as part of a wider road trip."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Where should we stay?",
+      "answer": "Park lodges book up a year ahead. Towns near the gates, like West Yellowstone and Gardiner, have more choice."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Grand Canyon",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Banff",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Torres del Paine",
+      "code": "PUQ",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Reykjavik",
+      "code": "REK",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

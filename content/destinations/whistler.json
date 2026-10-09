@@ -1,0 +1,176 @@
+{
+  "name": "Whistler",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Whistler",
+  "intro": "Big snowy slopes in winter, lakes and bike trails in summer, two hours from Vancouver. Here's what Whistler is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "YVR",
+  "holiday_types": [
+    "ski",
+    "adventure",
+    "nature"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Skiing"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Skiing"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Skiing"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring skiing"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Between seasons"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Early summer"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Before the snow"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Skiing, festive"
+    }
+  },
+  "when_to_go": "December to March is ski season, with lots of snow and a long season. July and August are warm, with lake swimming, mountain biking and gondola rides. October and November are wet and quiet.",
+  "things": [
+    {
+      "name": "Skiing and snowboarding",
+      "tag": "Ticketed",
+      "blurb": "One of North America's biggest ski areas, with great ski schools for children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Peak 2 Peak Gondola",
+      "tag": "Ticketed",
+      "blurb": "A record-breaking gondola between Whistler and Blackcomb mountains.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lost Lake",
+      "tag": "Free",
+      "blurb": "A forest lake with a beach and floating docks, an easy walk from the village.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Valley Trail",
+      "tag": "Free",
+      "blurb": "A paved bike path linking lakes, parks and the village.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ziplining",
+      "tag": "Ticketed",
+      "blurb": "Fly between the mountains on long zip lines.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sea to Sky Gondola",
+      "tag": "Day trip",
+      "blurb": "A gondola and suspension bridge above Howe Sound, on the drive up from Vancouver.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Whistler good for a family holiday?",
+      "answer": "Yes, in winter or summer. The village is car-free, and the ski schools and summer camps are excellent. It's expensive, so self-catering helps."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week for skiing, or three to five nights in summer as part of a British Columbia trip."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Vancouver, then it's about two hours up the Sea to Sky Highway, by car or shuttle bus."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Banff",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Vancouver",
+      "code": "YVR",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Chamonix",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Queenstown",
+      "code": "ZQN",
+      "label": "🧗 Adventure"
+    }
+  ]
+}

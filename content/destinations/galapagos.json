@@ -1,0 +1,176 @@
+{
+  "name": "Galápagos Islands",
+  "published": true,
+  "country": "EC",
+  "title": "Holidays in Galápagos Islands",
+  "intro": "Swim with sea lions, walk past giant tortoises and spot blue-footed boobies. Here's what the Galápagos are like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "GPS",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "beach"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Visitors pay a national park fee and buy a transit card on the way in. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Warm, calm"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm, calm"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, calm"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, calm"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Cooler, choppier"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Cooler, choppier"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Cooler, choppier"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Choppiest"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cooler"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cooler"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Warm"
+    }
+  },
+  "when_to_go": "The Galápagos are good all year. December to May is warmer, with calmer seas, which suits children who get seasick. June to November is cooler and choppier, but the sea is full of life.",
+  "things": [
+    {
+      "name": "Charles Darwin Research Station",
+      "tag": "Free",
+      "blurb": "Meet giant tortoises and learn how they're being saved.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Snorkel with sea lions",
+      "tag": "Free",
+      "blurb": "Playful sea lions swim right up to you at beaches like Concha de Perla.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tortuga Bay",
+      "tag": "Free",
+      "blurb": "A long walk to a white beach full of marine iguanas, with a calm bay to swim in.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "El Chato reserve",
+      "tag": "Ticketed",
+      "blurb": "Wild giant tortoises roaming the highlands, and lava tunnels to walk through.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kicker Rock",
+      "tag": "Ticketed",
+      "blurb": "Snorkel round a towering rock with turtles, rays and maybe sharks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Island hopping",
+      "tag": "Ticketed",
+      "blurb": "Day boats or a small cruise to see different islands and wildlife.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are the Galápagos good for a family holiday?",
+      "answer": "Yes, it's a wildlife trip like no other, and the animals are unafraid of people. It's expensive and far, so most families pair it with mainland Ecuador."
+    },
+    {
+      "question": "Cruise or island-hopping?",
+      "answer": "Staying on the islands and taking day trips is cheaper and easier with young children. Small cruises reach more remote islands and suit older children."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit Ecuador without a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Quito or Guayaquil in Ecuador, then take a two-hour flight out to the islands."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Costa Rica",
+      "code": "SJO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Cusco",
+      "code": "CUZ",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Borneo",
+      "code": "BKI",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Maldives",
+      "code": "MLE",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

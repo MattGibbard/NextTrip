@@ -1,0 +1,176 @@
+{
+  "name": "Malta",
+  "published": true,
+  "country": "MT",
+  "title": "Holidays in Malta",
+  "intro": "Sunny, English-speaking islands with clear water, old forts and Popeye's village. Here's what Malta is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "MLA",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "relax"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": true
+    }
+  ],
+  "facts_note": "Malta drives on the left, like the UK. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Beach weather"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild"
+    }
+  },
+  "when_to_go": "April to June and September to October are the sweet spot, warm with a calm sea. July and August are hot and busy. Winter is mild and sunny enough for sightseeing, though too cool for most to swim.",
+  "things": [
+    {
+      "name": "Valletta",
+      "tag": "Free",
+      "blurb": "A tiny walled capital. Watch the noon cannon fire at the Saluting Battery.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Popeye Village",
+      "tag": "Ticketed",
+      "blurb": "The film set from the 1980 movie, now a colourful play village by the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Lagoon, Comino",
+      "tag": "Ticketed",
+      "blurb": "Bright turquoise water a boat ride away. Go early or late to avoid crowds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Grotto",
+      "tag": "Ticketed",
+      "blurb": "A small boat trip into sea caves that glow blue.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mdina",
+      "tag": "Free",
+      "blurb": "A silent walled city on a hill, with honey-coloured streets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Golden Bay",
+      "tag": "Free",
+      "blurb": "One of Malta's few big sandy beaches, with shallow water.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Malta good for a family holiday?",
+      "answer": "Yes. It's small, safe and easy, English is an official language, and the flight is about three hours. Many beaches are rocky, so pack water shoes."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week covers Malta's sights, beach days and a trip to Gozo or Comino."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Malta or Gozo?",
+      "answer": "Malta has more hotels, sights and buses. Gozo is quieter and greener, and only a 25-minute ferry away, so many families stay on Malta and day-trip to Gozo."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Paphos",
+      "code": "PFO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Tenerife",
+      "code": "TFS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Sicily",
+      "code": "CTA",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

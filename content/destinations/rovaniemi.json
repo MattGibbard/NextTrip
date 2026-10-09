@@ -1,0 +1,175 @@
+{
+  "name": "Rovaniemi",
+  "published": true,
+  "country": "FI",
+  "title": "Holidays in Rovaniemi",
+  "intro": "Meet Santa on the Arctic Circle, ride with huskies and sleep under the northern lights. Here's what Rovaniemi in Lapland is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "RVN",
+  "holiday_types": [
+    "adventure",
+    "nature"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Snow, lights"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Snow, lights"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Snow, sunnier"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring snow"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Thaw"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Midnight sun"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Midnight sun"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn colours"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Before the snow"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Christmas starts"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas, busy"
+    }
+  },
+  "when_to_go": "December is the magical, busiest and dearest time to meet Santa. January to March is quieter, with deep snow, longer days and good northern lights. In summer the sun never sets and Santa's village is still open.",
+  "things": [
+    {
+      "name": "Santa Claus Village",
+      "tag": "Free",
+      "blurb": "Cross the Arctic Circle line and meet Santa in his office. Visiting is free, and photos cost extra.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "SantaPark",
+      "tag": "Ticketed",
+      "blurb": "An underground Christmas park with an elf school and gingerbread baking.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Husky safari",
+      "tag": "Ticketed",
+      "blurb": "Ride through snowy forest behind a team of excited dogs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Reindeer sleigh ride",
+      "tag": "Ticketed",
+      "blurb": "A gentle, quiet ride that suits younger children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Arktikum",
+      "tag": "Indoors",
+      "blurb": "A museum about Arctic life, with a long glass corridor to the river.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ranua Wildlife Park",
+      "tag": "Day trip",
+      "blurb": "Polar bears, lynx and wolverines, about an hour away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Rovaniemi good for a family holiday?",
+      "answer": "Yes, especially for children who still believe in Santa. Everything is set up for families, and tour companies lend snowsuits."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights, or a day trip on a direct flight if you're short of time. Longer stays give better odds of seeing the northern lights."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "How cold does it get?",
+      "answer": "Usually -10°C to -20°C in winter, and sometimes colder. Layers, thermals and good boots are essential."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tromsø",
+      "code": "TOS",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Reykjavik",
+      "code": "REK",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Chamonix",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Copenhagen",
+      "code": "CPH",
+      "label": "🏙️ City break"
+    }
+  ]
+}

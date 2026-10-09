@@ -1,0 +1,175 @@
+{
+  "name": "Tromsø",
+  "published": true,
+  "country": "NO",
+  "title": "Holidays in Tromsø",
+  "intro": "Husky sledding, reindeer and the northern lights, high in the Arctic Circle. Here's what Tromsø is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "TOS",
+  "holiday_types": [
+    "adventure",
+    "nature"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Norwegian krone (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Norway follows Europe's border rules. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Northern lights"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Snow, lights"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Snow, longer days"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring snow"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Thaw"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Midnight sun"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Midnight sun"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Northern lights"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Polar night"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Polar night"
+    }
+  },
+  "when_to_go": "January to March has snow for husky sledding and dark skies for the northern lights, with daylight coming back by February. From late November to mid-January the sun doesn't rise at all. In summer the sun never sets, which is great for hiking and fjord trips.",
+  "things": [
+    {
+      "name": "Northern lights chase",
+      "tag": "Ticketed",
+      "blurb": "Guides drive out to wherever the skies are clearest. Most tours have hot drinks and a campfire.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Husky sledding",
+      "tag": "Ticketed",
+      "blurb": "Ride in a sled pulled by a team of dogs, then meet the puppies.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Reindeer and Sámi camp",
+      "tag": "Ticketed",
+      "blurb": "Feed reindeer and hear stories in a lavvu tent from the Sámi people.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fjellheisen cable car",
+      "tag": "Ticketed",
+      "blurb": "Up the mountain for huge views over the island city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Polaria",
+      "tag": "Indoors",
+      "blurb": "An Arctic aquarium with bearded seals, in a building shaped like ice floes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Arctic Cathedral",
+      "tag": "Ticketed",
+      "blurb": "A striking white church with candlelit concerts in winter.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Tromsø good for a family holiday?",
+      "answer": "Yes, for a once-in-a-lifetime winter trip. Most activities suit children from around four, though check age limits on longer night tours."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights gives you several chances to see the northern lights and time for a husky and a reindeer trip."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit Norway for up to 90 days in any 180 without a visa. New European entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "How cold is it?",
+      "answer": "Usually around -5°C in winter, milder than you might expect thanks to the Gulf Stream. Tour companies lend thermal suits and boots."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Reykjavik",
+      "code": "REK",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Rovaniemi",
+      "code": "RVN",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Oslo",
+      "code": "OSL",
+      "label": "🏙️ City break"
+    }
+  ]
+}

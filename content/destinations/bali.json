@@ -1,0 +1,176 @@
+{
+  "name": "Bali",
+  "published": true,
+  "country": "ID",
+  "title": "Holidays in Bali",
+  "intro": "Temples, rice terraces, monkeys and warm sea, at very good value. Here's what Bali is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "DPS",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "relax"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 to 8 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Indonesian rupiah (Rp)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Visa on arrival (paid)",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Bali also charges a tourist levy, paid online. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Dry, busy"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Dry, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rainy, busy"
+    }
+  },
+  "when_to_go": "April to October is the dry season, with July and August busiest. November to March is the wet season, with heavy afternoon rain and high humidity, but it's still warm and cheaper outside Christmas.",
+  "things": [
+    {
+      "name": "Ubud Monkey Forest",
+      "tag": "Ticketed",
+      "blurb": "Temples in the jungle full of cheeky monkeys. Keep hats and snacks out of reach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tegallalang rice terraces",
+      "tag": "Ticketed",
+      "blurb": "Green terraces to walk through, with jungle swings for older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Waterbom Bali",
+      "tag": "Ticketed",
+      "blurb": "A top water park in Kuta with slides for all ages.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sanur Beach",
+      "tag": "Free",
+      "blurb": "Calm water inside a reef and a long beachside path, great for families.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Uluwatu Temple",
+      "tag": "Ticketed",
+      "blurb": "A clifftop temple with a fire dance at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nusa Penida",
+      "tag": "Day trip",
+      "blurb": "Snorkel with manta rays and see dramatic cliffs by boat.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Bali good for a family holiday?",
+      "answer": "Yes. It's warm, welcoming and good value, with villas that have private pools. Traffic is slow, so don't try to see too much from one base."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights, split between Ubud for culture and Sanur or Nusa Dua for the beach."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Yes, British passport holders need a visa on arrival, which you can buy online before you fly or at the airport, plus a tourist levy. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Which area is best for children?",
+      "answer": "Sanur and Nusa Dua have the calmest beaches. Seminyak and Kuta are busier, with big waves and nightlife."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Hoi An",
+      "code": "DAD",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Singapore",
+      "code": "SIN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bangkok",
+      "code": "BKK",
+      "label": "🍷 Food & drink"
+    }
+  ]
+}

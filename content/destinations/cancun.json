@@ -1,0 +1,176 @@
+{
+  "name": "Cancún",
+  "published": true,
+  "country": "MX",
+  "title": "Holidays in Cancún",
+  "intro": "Caribbean beaches, Maya pyramids and swimming in underground caves. Here's what Cancún and the Riviera Maya are like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "CUN",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "adventure"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 to 6 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Mexican peso ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 127V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Seaweed can wash up from spring to autumn. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Hot"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Rainy, seaweed"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, seaweed"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, seaweed"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricanes"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Hurricanes"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drier"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, busy"
+    }
+  },
+  "when_to_go": "December to April is dry, sunny and the most popular time. Summer is hot and humid, and sargassum seaweed can cover some beaches. Hurricane season runs from June to November, with the highest risk in September and October.",
+  "things": [
+    {
+      "name": "Chichén Itzá",
+      "tag": "Day trip",
+      "blurb": "A huge Maya pyramid and ball court, about two and a half hours away. Go early.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cenotes",
+      "tag": "Ticketed",
+      "blurb": "Swim in clear water in natural sinkholes and caves. Life jackets are usually provided.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Xcaret",
+      "tag": "Ticketed",
+      "blurb": "A big nature park with underground rivers, animals and an evening show.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Isla Mujeres",
+      "tag": "Ticketed",
+      "blurb": "A short ferry to a laid-back island with calm, shallow beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tulum ruins",
+      "tag": "Ticketed",
+      "blurb": "Maya ruins on a cliff above a turquoise beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Playa Delfines",
+      "tag": "Free",
+      "blurb": "A public beach with soft white sand and big waves, so swim carefully.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Cancún good for a family holiday?",
+      "answer": "Yes. There are lots of all-inclusive family resorts, calm beaches, and amazing day trips to ruins and cenotes. Stick to the tourist areas and use official taxis."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights, as it's a long flight. That gives time for beach days and a few trips."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders don't need a visa for a holiday. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Where should we stay?",
+      "answer": "Cancún's hotel zone is busy and lively. Playa del Carmen and the Riviera Maya to the south are calmer, with easier access to cenotes and Tulum."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Mexico City",
+      "code": "MEX",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Orlando",
+      "code": "ORL",
+      "label": "🎢 Theme parks"
+    },
+    {
+      "name": "Costa Rica",
+      "code": "SJO",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

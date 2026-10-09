@@ -1,0 +1,175 @@
+{
+  "name": "Singapore",
+  "published": true,
+  "country": "SG",
+  "title": "Holidays in Singapore",
+  "intro": "Glowing supertrees, a night safari and cheap amazing street food in a spotless city. Here's what Singapore is like with the family and when to go.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "SIN",
+  "holiday_types": [
+    "city",
+    "food"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 to 8 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Singapore dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": true
+    }
+  ],
+  "facts_note": "Fill in the SG Arrival Card online in the three days before you land. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Drier"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Drier"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Drier"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "National Day"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive, showers"
+    }
+  },
+  "when_to_go": "Singapore is hot and humid all year, with short tropical downpours. February to April and July to August tend to be a little drier. Chinese New Year in January or February brings lanterns and parades.",
+  "things": [
+    {
+      "name": "Gardens by the Bay",
+      "tag": "Free",
+      "blurb": "Giant supertrees with a free light show each evening. The domes are ticketed.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Night Safari",
+      "tag": "Ticketed",
+      "blurb": "A tram ride through a zoo after dark to see animals when they're awake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Singapore Zoo",
+      "tag": "Ticketed",
+      "blurb": "Open enclosures, orangutans and a big water play area.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sentosa",
+      "tag": "Ticketed",
+      "blurb": "An island of beaches, Universal Studios and cable cars.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hawker centres",
+      "tag": "Free",
+      "blurb": "Food courts with dishes for a few pounds. Lau Pa Sat and Maxwell are good starts.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jewel Changi",
+      "tag": "Free",
+      "blurb": "The world's tallest indoor waterfall, at the airport.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Singapore good for a family holiday?",
+      "answer": "Yes. It's very safe, clean and easy, with world-class zoos and gardens. Plan indoor or water play for the hottest part of the day."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three to five nights, often as a stopover on the way to Bali, Australia or Malaysia."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit without a visa, but must fill in the SG Arrival Card online before landing. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is Singapore expensive?",
+      "answer": "Hotels and attractions are pricey, but hawker food and public transport are cheap."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bangkok",
+      "code": "BKK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Dubai",
+      "code": "DXB",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Tokyo",
+      "code": "TYO",
+      "label": "🏙️ City break"
+    }
+  ]
+}

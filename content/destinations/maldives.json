@@ -1,0 +1,175 @@
+{
+  "name": "Maldives",
+  "published": true,
+  "country": "MV",
+  "title": "Holidays in Maldives",
+  "intro": "Overwater villas, white sand and reefs full of turtles right off the beach. Here's what the Maldives are like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "MLE",
+  "holiday_types": [
+    "beach",
+    "relax"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 to 5 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Rufiyaa; resorts use US dollars",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Free visa on arrival",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Mostly Type G · 230V",
+      "highlight": true
+    }
+  ],
+  "facts_note": "You'll need a hotel booking and a return flight to enter. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, sunny"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, sunny"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Hot, calm"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Rains start"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drier"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, busy"
+    }
+  },
+  "when_to_go": "December to April is dry and sunny, with the calmest seas, and is the most expensive. May to November brings more showers and wind but much lower prices, and it's still warm. Easter and Christmas book up early.",
+  "things": [
+    {
+      "name": "House reef snorkelling",
+      "tag": "Free",
+      "blurb": "Many resorts have reefs a few steps from the beach, with turtles and reef sharks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dolphin cruise",
+      "tag": "Ticketed",
+      "blurb": "Sunset boat trips often meet big pods of spinner dolphins.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sandbank picnic",
+      "tag": "Ticketed",
+      "blurb": "A boat to a tiny strip of sand in the middle of the ocean.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale shark trip",
+      "tag": "Ticketed",
+      "blurb": "South Ari atoll is one of the best places in the world to see them.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kids clubs",
+      "tag": "Free",
+      "blurb": "Most family resorts include one, with crab hunts and coconut painting.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Malé",
+      "tag": "Day trip",
+      "blurb": "The busy little capital, with a fish market and a big mosque.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are the Maldives good for a family holiday?",
+      "answer": "Yes, at the right resort. Choose one with a kids club, a shallow lagoon and beach villas, as overwater villas often have age limits."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Seven to ten nights. Some families pair it with Sri Lanka or Dubai."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders get a free 30-day visa on arrival, but need a hotel booking and onward ticket and must fill in a traveller declaration online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How do you get to the resort?",
+      "answer": "By speedboat, seaplane or a short domestic flight from Malé airport, depending on how far away it is. Seaplanes only fly in daylight."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Mauritius",
+      "code": "MRU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Dubai",
+      "code": "DXB",
+      "label": "☀️ Winter sun"
+    }
+  ]
+}

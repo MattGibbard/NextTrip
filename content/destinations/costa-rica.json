@@ -1,0 +1,176 @@
+{
+  "name": "Costa Rica",
+  "published": true,
+  "country": "CR",
+  "title": "Holidays in Costa Rica",
+  "intro": "Sloths, volcanoes, zip lines through the rainforest and two coasts of beaches. Here's what Costa Rica is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "SJO",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "beach"
+  ],
+  "nights": "12 to 14",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Costa Rican colón (₡)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "US dollars are widely taken. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Dry, hot"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Green season"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Green season"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Drier spell"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Green season"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Wettest"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Wettest"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drying out"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, busy"
+    }
+  },
+  "when_to_go": "December to April is the dry season and the most popular time. May to November is the green season, with afternoon rain, lush forests and lower prices. July often has a drier spell, and turtles nest on the Caribbean coast from July to October.",
+  "things": [
+    {
+      "name": "Arenal Volcano",
+      "tag": "Ticketed",
+      "blurb": "A perfect cone volcano with hot springs, hanging bridges and waterfalls nearby.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monteverde cloud forest",
+      "tag": "Ticketed",
+      "blurb": "Walk the hanging bridges through the treetops and look for quetzals.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Manuel Antonio",
+      "tag": "Ticketed",
+      "blurb": "Sloths, monkeys and a beach in one small national park. Book ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zip lining",
+      "tag": "Ticketed",
+      "blurb": "Fly over the forest canopy. Most companies take children from about five.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tortuguero",
+      "tag": "Day trip",
+      "blurb": "Canals in the jungle and turtle nesting beaches on the Caribbean coast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Night walk",
+      "tag": "Ticketed",
+      "blurb": "A guide with a torch finds frogs, tarantulas and sleeping birds.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Costa Rica good for a family holiday?",
+      "answer": "Yes. It's safe, friendly and made for nature-loving children. Expect a lot of time on the road between areas, so don't try to see everything."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Twelve to fourteen nights covers two or three areas, such as Arenal, Monteverde and a beach."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for a holiday without a visa. Your passport must be valid for your whole stay. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "British Airways flies direct from Gatwick to San José. Most other routes stop in the US."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cancún",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Maasai Mara",
+      "code": "NBO",
+      "label": "🦁 Safari"
+    },
+    {
+      "name": "Queenstown",
+      "code": "ZQN",
+      "label": "🧗 Adventure"
+    }
+  ]
+}

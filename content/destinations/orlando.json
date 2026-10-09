@@ -1,0 +1,175 @@
+{
+  "name": "Orlando",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Orlando",
+  "intro": "Disney, Universal and a real rocket launch site, all under the Florida sun. Here's what Orlando is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "ORL",
+  "holiday_types": [
+    "adventure",
+    "beach"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, Easter busy"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, storms"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane season"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Halloween"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive, busy"
+    }
+  },
+  "when_to_go": "March to May and November are warm, with lower prices outside school holidays. Summer is hot and humid, with afternoon thunderstorms and big queues. Hurricane season runs from June to November, peaking in September.",
+  "things": [
+    {
+      "name": "Walt Disney World",
+      "tag": "Ticketed",
+      "blurb": "Four theme parks and two water parks. Pick two or three parks rather than trying to do them all.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Universal Orlando",
+      "tag": "Ticketed",
+      "blurb": "Harry Potter, Super Nintendo World and big thrill rides across three parks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kennedy Space Center",
+      "tag": "Day trip",
+      "blurb": "See real rockets and the Space Shuttle Atlantis, about an hour away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gatorland",
+      "tag": "Ticketed",
+      "blurb": "Alligators, a zip line over them, and a gentler break from the big parks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Disney Springs",
+      "tag": "Free",
+      "blurb": "Shops, restaurants and evening entertainment with no park ticket needed.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gulf coast beaches",
+      "tag": "Day trip",
+      "blurb": "White sand at Clearwater, about two hours away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Orlando good for a family holiday?",
+      "answer": "Yes, it's built for families. Plan which parks you'll do and book rides and restaurants ahead, as the big parks are busy most of the year."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights, to fit the parks in with rest days. Many families finish with a few days on the beach."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "It helps a lot. Disney has its own buses, but a car makes Universal, the coast and shopping much easier."
+    }
+  ],
+  "similar": [
+    {
+      "name": "San Diego",
+      "code": "SAN",
+      "label": "🎢 Theme parks"
+    },
+    {
+      "name": "Cancún",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "New York",
+      "code": "NYC",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

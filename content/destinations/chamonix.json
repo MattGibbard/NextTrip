@@ -1,0 +1,176 @@
+{
+  "name": "Chamonix",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Chamonix",
+  "intro": "Skiing under Mont Blanc in winter, cable cars and glaciers in summer. Here's what Chamonix is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "GVA",
+  "holiday_types": [
+    "ski",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Fly to Geneva, about an hour away by road. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Skiing"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Skiing, half term"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Skiing"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring skiing"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Between seasons"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Early summer"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Quieter"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Between seasons"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Before the snow"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Skiing, festive"
+    }
+  },
+  "when_to_go": "January to March is ski season, with February half term the busiest. July and August are great for walking, cable cars and glacier views. May, October and November are quiet, with many lifts closed.",
+  "things": [
+    {
+      "name": "Aiguille du Midi",
+      "tag": "Ticketed",
+      "blurb": "A cable car to 3,842 metres and a glass box over the drop. Not for under-3s because of the altitude.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Montenvers and Mer de Glace",
+      "tag": "Ticketed",
+      "blurb": "A rack railway to France's biggest glacier, with an ice cave to walk into.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Les Houches",
+      "tag": "Ticketed",
+      "blurb": "Gentle slopes and good ski schools that suit beginners and children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lac Blanc",
+      "tag": "Free",
+      "blurb": "A classic summer hike to a lake reflecting Mont Blanc. Best for older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Planards summer luge",
+      "tag": "Ticketed",
+      "blurb": "A fast toboggan run, plus a fun park at the edge of town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Merlet animal park",
+      "tag": "Ticketed",
+      "blurb": "Marmots, ibex and chamois with mountain views.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Chamonix good for a family holiday?",
+      "answer": "Yes, in winter or summer. It's a real town as well as a resort, with lots to do off the slopes. Some of the skiing is steep, so beginners usually use Les Houches or Le Tour."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week for a ski holiday, or four to seven nights in summer."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Can you get there by train?",
+      "answer": "Yes, via Paris on the Eurostar and TGV, then a local train up the valley, in around nine to ten hours."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Rovaniemi",
+      "code": "RVN",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Innsbruck",
+      "code": "INN",
+      "label": "⛷️ Skiing"
+    }
+  ]
+}

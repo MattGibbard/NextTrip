@@ -1,0 +1,176 @@
+{
+  "name": "Queenstown",
+  "published": true,
+  "country": "NZ",
+  "title": "Holidays in Queenstown",
+  "intro": "Jet boats, a luge with a lake view and Milford Sound up the road. Here's what Queenstown is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "ZQN",
+  "holiday_types": [
+    "adventure",
+    "nature",
+    "ski"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "longer",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "11 to 13 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "New Zealand dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "NZeTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type I · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The NZeTA comes with a visitor levy, both paid online. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Autumn colour"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Skiing starts"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Skiing"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Skiing"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Summer"
+    }
+  },
+  "when_to_go": "December to March is summer, with long days for lakes and hiking. June to September is ski season on four nearby mountains. April's autumn colours are lovely and quieter.",
+  "things": [
+    {
+      "name": "Skyline gondola and luge",
+      "tag": "Ticketed",
+      "blurb": "Ride up, then race down on a luge track. Children always want one more go.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Shotover Jet",
+      "tag": "Ticketed",
+      "blurb": "A fast jet boat spinning through a narrow canyon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Milford Sound",
+      "tag": "Day trip",
+      "blurb": "Fiords and waterfalls on a cruise. A long day by road, or fly.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "TSS Earnslaw",
+      "tag": "Ticketed",
+      "blurb": "A 100-year-old steamship across the lake to a sheep farm.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kiwi Birdlife Park",
+      "tag": "Ticketed",
+      "blurb": "See real kiwis in a nocturnal house.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Queenstown Gardens",
+      "tag": "Free",
+      "blurb": "Lakeside gardens with a playground and frisbee golf.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Queenstown good for a family holiday?",
+      "answer": "Yes, as part of a New Zealand trip. It's packed with activities, and many suit younger children. The thrill rides have height limits."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights, within a New Zealand trip of three weeks or more."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders need an NZeTA, applied for online, and pay a visitor levy. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly via Auckland, Sydney or Melbourne. The whole journey takes around 30 hours, so a stopover helps."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Sydney",
+      "code": "SYD",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Vancouver",
+      "code": "YVR",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Costa Rica",
+      "code": "SJO",
+      "label": "🧗 Adventure"
+    }
+  ]
+}

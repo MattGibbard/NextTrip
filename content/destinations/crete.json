@@ -1,0 +1,176 @@
+{
+  "name": "Crete",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Crete",
+  "intro": "Pink sand beaches, a palace from the legend of the Minotaur and long sunny days. Here's what Crete is like with the family, when to go and how long to stay.",
+  "image": "",
+  "image_alt": "",
+  "to_code": "HER",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "7 to 14",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, rainy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, rainy"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Easter"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Quiet"
+    }
+  },
+  "when_to_go": "May, June, September and October are best, hot enough for the beach but kinder for exploring. July and August are very hot, windy and busy. Many resorts close from November to March.",
+  "things": [
+    {
+      "name": "Knossos",
+      "tag": "Ticketed",
+      "blurb": "The palace of King Minos, where the Minotaur legend began. Go early before it gets hot.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Elafonissi",
+      "tag": "Free",
+      "blurb": "A lagoon with pink-tinged sand and shallow water, great for little ones.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Balos Lagoon",
+      "tag": "Ticketed",
+      "blurb": "Turquoise water and white sand, easiest to reach by boat from Kissamos.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chania old harbour",
+      "tag": "Free",
+      "blurb": "A Venetian harbour with a lighthouse, tavernas and an evening stroll.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "CretAquarium",
+      "tag": "Indoors",
+      "blurb": "A good aquarium near Heraklion for a break from the sun.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Samaria Gorge",
+      "tag": "Ticketed",
+      "blurb": "A 16 km hike down a dramatic gorge, for older children. Open roughly May to October.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Crete good for a family holiday?",
+      "answer": "Yes. It's big enough for beaches, history and mountains, and Greek tavernas are welcoming to children. You'll want a car to explore."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week covers one area well. Two weeks lets you see both the east and the west of the island."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Where should we stay?",
+      "answer": "Chania in the west has the best beaches and old town. The area around Heraklion and Hersonissos has big family resorts and water parks."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Paphos",
+      "code": "PFO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Dubrovnik",
+      "code": "DBV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Corfu",
+      "code": "CFU",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

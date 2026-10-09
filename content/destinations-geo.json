@@ -1,53 +1,143 @@
 {
+  "amsterdam": {
+    "query": "Amsterdam|NL",
+    "lat": 52.3731,
+    "lon": 4.8925
+  },
   "austin": {
     "query": "Austin|US",
     "lat": 30.2711,
     "lon": -97.7437
+  },
+  "bali": {
+    "query": "Bali|ID",
+    "lat": -8.3405,
+    "lon": 115.092
+  },
+  "bangkok": {
+    "query": "Bangkok|TH",
+    "lat": 13.7525,
+    "lon": 100.4935
+  },
+  "barbados": {
+    "query": "Barbados|BB",
+    "lat": 13.15,
+    "lon": -59.525
+  },
+  "barcelona": {
+    "query": "Barcelona|ES",
+    "lat": 41.3829,
+    "lon": 2.1774
   },
   "berlin": {
     "query": "Berlin|DE",
     "lat": 52.517,
     "lon": 13.3889
   },
+  "cancun": {
+    "query": "Cancún|MX",
+    "lat": 21.1617,
+    "lon": -86.851
+  },
   "cape-town": {
     "query": "Cape Town|ZA",
     "lat": -33.9288,
     "lon": 18.4172
+  },
+  "chamonix": {
+    "query": "Chamonix|FR",
+    "lat": 45.9237,
+    "lon": 6.8694
   },
   "copenhagen": {
     "query": "Copenhagen|DK",
     "lat": 55.6867,
     "lon": 12.5701
   },
+  "costa-rica": {
+    "query": "Costa Rica|CR",
+    "lat": 9.7489,
+    "lon": -83.7534
+  },
+  "crete": {
+    "query": "Crete|GR",
+    "lat": 35.3088,
+    "lon": 24.4633
+  },
   "dubai": {
     "query": "Dubai|AE",
     "lat": 25.2653,
     "lon": 55.2925
+  },
+  "dubrovnik": {
+    "query": "Dubrovnik|HR",
+    "lat": 42.6403,
+    "lon": 18.1083
   },
   "hoi-an": {
     "query": "Hoi An|VN",
     "lat": 15.8801,
     "lon": 108.338
   },
+  "interlaken": {
+    "query": "Interlaken|CH",
+    "lat": 46.6863,
+    "lon": 7.8632
+  },
   "kotor": {
     "query": "Kotor|ME",
     "lat": 42.4247,
     "lon": 18.7712
+  },
+  "krakow": {
+    "query": "Kraków|PL",
+    "lat": 50.0619,
+    "lon": 19.9369
+  },
+  "lake-garda": {
+    "query": "Lake Garda|IT",
+    "lat": 45.6328,
+    "lon": 10.6771
+  },
+  "lisbon": {
+    "query": "Lisbon|PT",
+    "lat": 38.7078,
+    "lon": -9.1366
   },
   "ljubljana": {
     "query": "Ljubljana|SI",
     "lat": 46.05,
     "lon": 14.5069
   },
+  "maasai-mara": {
+    "query": "Maasai Mara|KE",
+    "lat": -1.4931,
+    "lon": 35.1439
+  },
   "madeira": {
     "query": "Madeira|PT",
     "lat": 32.7607,
     "lon": -16.9595
   },
+  "maldives": {
+    "query": "Maldives|MV",
+    "lat": 4.1755,
+    "lon": 73.5093
+  },
+  "malta": {
+    "query": "Malta|MT",
+    "lat": 35.8885,
+    "lon": 14.4477
+  },
   "marrakech": {
     "query": "Marrakech|MA",
     "lat": 31.6258,
     "lon": -7.9892
+  },
+  "mauritius": {
+    "query": "Mauritius|MU",
+    "lat": -20.2759,
+    "lon": 57.5704
   },
   "mexico-city": {
     "query": "Mexico City|MX",
@@ -59,6 +149,16 @@
     "lat": 40.7127,
     "lon": -74.006
   },
+  "orlando": {
+    "query": "Orlando|US",
+    "lat": 28.5421,
+    "lon": -81.379
+  },
+  "paphos": {
+    "query": "Paphos|CY",
+    "lat": 34.7754,
+    "lon": 32.4218
+  },
   "paris": {
     "query": "Paris|FR",
     "lat": 48.8535,
@@ -69,10 +169,30 @@
     "lat": 41.15,
     "lon": -8.6103
   },
+  "prague": {
+    "query": "Prague|CZ",
+    "lat": 50.0875,
+    "lon": 14.4213
+  },
+  "queenstown": {
+    "query": "Queenstown|NZ",
+    "lat": -45.0322,
+    "lon": 168.6625
+  },
+  "reykjavik": {
+    "query": "Reykjavik|IS",
+    "lat": 64.1466,
+    "lon": -21.9426
+  },
   "rome": {
     "query": "Rome|IT",
     "lat": 41.8933,
     "lon": 12.4829
+  },
+  "rovaniemi": {
+    "query": "Rovaniemi|FI",
+    "lat": 66.5028,
+    "lon": 25.7285
   },
   "san-diego": {
     "query": "San Diego|US",
@@ -84,10 +204,25 @@
     "lat": 37.5667,
     "lon": 126.9783
   },
+  "singapore": {
+    "query": "Singapore|SG",
+    "lat": 1.2899,
+    "lon": 103.8519
+  },
+  "sri-lanka": {
+    "query": "Sri Lanka|LK",
+    "lat": 7.8731,
+    "lon": 80.7718
+  },
   "sydney": {
     "query": "Sydney|AU",
     "lat": -33.8698,
     "lon": 151.2083
+  },
+  "tenerife": {
+    "query": "Tenerife|ES",
+    "lat": 28.2936,
+    "lon": -16.6214
   },
   "tokyo": {
     "query": "Tokyo|JP",
@@ -99,9 +234,24 @@
     "lat": 43.6535,
     "lon": -79.3839
   },
+  "tromso": {
+    "query": "Tromsø|NO",
+    "lat": 69.6496,
+    "lon": 18.956
+  },
   "valencia": {
     "query": "Valencia|ES",
     "lat": 39.4698,
     "lon": -0.3763
+  },
+  "vancouver": {
+    "query": "Vancouver|CA",
+    "lat": 49.2609,
+    "lon": -123.1139
+  },
+  "vienna": {
+    "query": "Vienna|AT",
+    "lat": 48.2084,
+    "lon": 16.3725
   }
 }

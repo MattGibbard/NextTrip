@@ -37,7 +37,7 @@ function GuidesTab({ current, children }: { current: Current; children: ReactNod
 }
 
 /** The signed-in header, the same in the app and on the Guides pages. */
-export function AppTopbar({ current, me, go }: { current: Current; me: Person | null; go?: (t: TabId) => void }) {
+export function AppTopbar({ current, me, go }: { current: Current; me: Pick<Person, "name" | "color"> | null; go?: (t: TabId) => void }) {
   return (
     <header className="topbar">
       <div className="topbar-inner">

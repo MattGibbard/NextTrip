@@ -4702,3 +4702,56 @@ fieldset.field legend {
 .book-links.panel {
   margin-top: 1rem;
 }
+
+/* ---------- Loading placeholders ---------- */
+/* Grey shapes where a page is about to appear (src/components/AppSkeleton.tsx). */
+
+.skeleton {
+  --sk: color-mix(in srgb, var(--text) 8%, transparent);
+}
+.sk-bar,
+.sk-card {
+  background: var(--sk);
+  border-radius: 6px;
+  animation: sk-pulse 1.4s ease-in-out infinite;
+}
+.sk-eyebrow {
+  width: 7rem;
+  height: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.sk-title {
+  width: min(18rem, 70%);
+  height: 2rem;
+  margin-bottom: 0.6rem;
+}
+.sk-sub {
+  width: min(26rem, 90%);
+  height: 0.9rem;
+  margin-bottom: 1.75rem;
+}
+.sk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: 1.5rem 1.6rem;
+}
+.sk-card {
+  aspect-ratio: 3 / 2;
+  border-radius: 8px;
+}
+@media (min-width: 760px) {
+  .sk-title {
+    height: 2.5rem;
+  }
+}
+@keyframes sk-pulse {
+  50% {
+    opacity: 0.55;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sk-bar,
+  .sk-card {
+    animation: none;
+  }
+}

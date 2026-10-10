@@ -262,7 +262,8 @@ export function drawShareCard(canvas: HTMLCanvasElement, shapes: CountryShapes |
   const H = f.h;
   canvas.width = W * scale;
   canvas.height = H * scale;
-  const ctx = canvas.getContext("2d")!;
+  // Drawn in memory rather than on the graphics card, which some browsers left blank.
+  const ctx = canvas.getContext("2d", { willReadFrequently: true })!;
   ctx.setTransform(scale, 0, 0, scale, 0, 0);
   const been = o.been === "auto" ? t.been : o.been;
   const idea = o.idea === "auto" ? t.idea : o.idea;

@@ -189,7 +189,8 @@
   justify-content: center;
   min-height: 400px;
 }
-.share-stage canvas {
+.share-stage img,
+.share-placeholder {
   display: block;
   width: auto;
   height: auto;
@@ -199,8 +200,12 @@
   box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
   transition: opacity 0.2s;
 }
-.share-stage canvas.loading {
+.share-stage img.loading {
   opacity: 0.6;
+}
+.share-placeholder {
+  width: 360px;
+  background: var(--surface);
 }
 
 .share-note {
@@ -384,7 +389,8 @@
   .share-stage {
     min-height: 0;
   }
-  .share-stage canvas {
+  .share-stage img,
+  .share-placeholder {
     /* Leaves room for the size buttons and the line under the picture. */
     max-height: min(640px, calc(100dvh - var(--share-top) - 13rem));
   }
@@ -434,7 +440,8 @@
     padding: 1rem;
     min-height: 0;
   }
-  .share-stage canvas {
+  .share-stage img,
+  .share-placeholder {
     max-height: 56vh;
   }
   .share-settings {

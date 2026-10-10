@@ -114,7 +114,20 @@ export function PlacesView() {
 
       {visited.length > 0 && (
         <div className="places-share">
-          <a className="btn ghost small" href="#/places/share">
+          <div className="places-share-text">
+            <div className="places-share-label">
+              <i aria-hidden="true" />
+              NOW BOARDING · SHARE YOUR MAP
+            </div>
+            <div className="places-share-tiles" role="img" aria-label="#WhereWeveBeen">
+              {[..."#WHEREWEVEBEEN"].map((c, i) => (
+                <span key={i} aria-hidden="true">
+                  {c}
+                </span>
+              ))}
+            </div>
+          </div>
+          <a className="btn bright" href="#/places/share">
             Share your map
           </a>
         </div>

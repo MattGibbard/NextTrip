@@ -132,11 +132,37 @@ export function ShareMapView() {
   const format = FORMATS[settings.format];
   const size = `1080 × ${format.h * 2}`;
 
+  // The browser can drop a canvas's drawing (to free graphics memory, or while the tab is hidden),
+  // leaving a blank picture until the page is reloaded. Then draw again, on a new canvas if need be.
+  const [redraws, setRedraws] = useState(0);
+  const [canvasKey, setCanvasKey] = useState(0);
   useEffect(() => {
-    if (canvas.current) drawShareCard(canvas.current, shapes, data, options);
+    const el = canvas.current;
+    if (!el) return;
+    const again = () => setRedraws((n) => n + 1);
+    const onVisible = () => {
+      if (document.visibilityState === "visible") again();
+    };
+    el.addEventListener("contextrestored", again);
+    document.addEventListener("visibilitychange", onVisible);
+    return () => {
+      el.removeEventListener("contextrestored", again);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
+  }, [canvasKey]);
+
+  useEffect(() => {
+    const el = canvas.current;
+    if (!el) return;
+    const ctx = el.getContext("2d");
+    if (!ctx || ctx.isContextLost?.()) {
+      if (canvasKey < 3) setCanvasKey((k) => k + 1);
+      return;
+    }
+    drawShareCard(el, shapes, data, options);
     // options is rebuilt each render from these.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [shapes, data, settings, autoSubtitle]);
+  }, [shapes, data, settings, autoSubtitle, redraws, canvasKey]);
 
   const set = <K extends keyof Settings>(key: K, value: Settings[K]) => setSettings((s) => ({ ...s, [key]: value }));
 
@@ -225,7 +251,7 @@ export function ShareMapView() {
             ))}
           </div>
           <div className="share-stage">
-            <canvas ref={canvas} role="img" aria-label={describeCard(data, options)} className={ready ? "" : "loading"} />
+            <canvas key={canvasKey} ref={canvas} role="img" aria-label={describeCard(data, options)} className={ready ? "" : "loading"} />
           </div>
           <p className="share-note center desktop-only">
             Exports at {size} px for {format.where}

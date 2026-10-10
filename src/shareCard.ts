@@ -30,7 +30,6 @@ export interface ShareOptions {
   stats: Record<StatKey, boolean>;
   statStyle: "simple" | "board";
   brandPos: "top" | "bottom";
-  showUrl: boolean;
   title: string;
   subtitle: string;
 }
@@ -321,14 +320,14 @@ export function drawShareCard(canvas: HTMLCanvasElement, shapes: CountryShapes |
   const tileH = Math.round(f.num * 1.25);
   const numH = board ? tileH : f.num;
   const statsH = stats.length ? 15 + rows * (numH + 8 + 12) + (rows - 1) * 14 : 0;
-  const showFooter = o.brandPos === "bottom" || o.showUrl;
-  const footH = showFooter ? (o.brandPos === "bottom" ? 26 : 16) : 0;
+  // The somewhere.party address is always along the bottom, with the wordmark when it's down there too.
+  const footH = o.brandPos === "bottom" ? 26 : 16;
   const showLegend = o.showIdeas && data.places.some((p) => p.kind === "idea") && (o.pinStyle !== "none" || o.shade === "both");
   const legendH = showLegend ? 15 : 0;
 
   let bottom = H - f.pad;
   const footY = bottom - footH;
-  if (showFooter) bottom = footY - f.gap;
+  bottom = footY - f.gap;
   const statsY = bottom - statsH;
   if (stats.length) bottom = statsY - f.gap;
   const legendY = bottom - legendH;
@@ -396,20 +395,16 @@ export function drawShareCard(canvas: HTMLCanvasElement, shapes: CountryShapes |
     });
   }
 
-  if (showFooter) {
-    const fy = footY + footH / 2;
-    if (o.brandPos === "bottom") {
-      ctx.font = `800 22px ${SANS}`;
-      ctx.fillStyle = t.text;
-      ctx.textAlign = "left";
-      ctx.fillText("somewhere🎉", f.pad, fy);
-    }
-    if (o.showUrl) {
-      ctx.font = `500 12px ${MONO}`;
-      ctx.fillStyle = t.muted;
-      spaced(ctx, "somewhere.party", W - f.pad, fy, 0.7, "right");
-    }
+  const fy = footY + footH / 2;
+  if (o.brandPos === "bottom") {
+    ctx.font = `800 22px ${SANS}`;
+    ctx.fillStyle = t.text;
+    ctx.textAlign = "left";
+    ctx.fillText("somewhere🎉", f.pad, fy);
   }
+  ctx.font = `500 12px ${MONO}`;
+  ctx.fillStyle = t.muted;
+  spaced(ctx, "somewhere.party", W - f.pad, fy, 0.7, "right");
 }
 
 /** Miller projection's height for a latitude, in the same units as degrees of longitude. */

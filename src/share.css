@@ -1,0 +1,361 @@
+/* Share your map: make a picture of the family's map to post. */
+
+.places-share {
+  display: flex;
+  justify-content: flex-end;
+  margin: -0.25rem 0 1rem;
+}
+
+.share-page .back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.9rem;
+}
+.share-head {
+  margin: 0.25rem 0 1.5rem;
+}
+.share-head p {
+  margin: 0.4rem 0 0;
+  max-width: 40rem;
+  font-size: 1.05rem;
+}
+
+.share-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+.share-preview {
+  flex: 999 1 560px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.share-settings {
+  flex: 1 1 340px;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.share-formats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.4rem;
+}
+.share-formats button {
+  min-height: 56px;
+  padding: 0.6rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.share-formats button[aria-pressed="true"] {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+  background: var(--accent-soft);
+}
+.share-format-top {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+.share-format-top strong {
+  font-size: 0.95rem;
+}
+.share-format-top .mono {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.share-formats button[aria-pressed="true"] .mono {
+  color: var(--accent);
+}
+.share-format-where {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.share-stage {
+  padding: 2rem 1rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+.share-stage canvas {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 640px;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+  transition: opacity 0.2s;
+}
+.share-stage canvas.loading {
+  opacity: 0.6;
+}
+
+.share-note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.share-sections {
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.share-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.share-section h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.share-reset {
+  align-self: flex-start;
+}
+
+.share-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.share-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.share-choice .segmented {
+  display: grid;
+  margin: 0;
+}
+.share-choice .segmented button {
+  min-height: 40px;
+  padding: 0 0.4rem;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.share-themes {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.4rem;
+}
+.share-themes button {
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.3rem;
+}
+.share-themes button[aria-pressed="true"] {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+.share-themes button > span:last-child {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.share-theme-chip {
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid rgb(0 0 0 / 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.share-theme-chip i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.share-colours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.share-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.share-swatches button {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  border: 3px solid var(--surface);
+  box-shadow: 0 0 0 1px var(--border);
+  cursor: pointer;
+}
+.share-swatches button[aria-pressed="true"] {
+  box-shadow: 0 0 0 2px var(--text);
+}
+
+.share-check {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.share-check input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--accent);
+}
+.share-stat-checks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 0.75rem;
+}
+
+.share-aside-foot {
+  margin-top: auto;
+  padding: 1rem 1.1rem;
+  border-top: 1px solid var(--border);
+  position: sticky;
+  bottom: 0;
+  background: var(--surface);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.share-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.share-buttons {
+  display: flex;
+  gap: 0.6rem;
+}
+.share-buttons .btn {
+  min-height: 48px;
+  font-size: 1rem;
+}
+.share-buttons .btn:first-child {
+  flex: 1 1 auto;
+}
+
+@media (min-width: 760px) {
+  .share-head .display {
+    margin: 0;
+  }
+}
+
+/* Phones: size pills, then the picture, then one group of settings at a time. */
+@media (max-width: 759px) {
+  .share-head {
+    margin-bottom: 1rem;
+  }
+  .share-head p {
+    font-size: 0.95rem;
+  }
+  .share-formats {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.4rem;
+    scrollbar-width: none;
+  }
+  .share-formats button {
+    flex: none;
+    min-height: 40px;
+    padding: 0 0.9rem;
+    border-radius: 999px;
+    flex-direction: row;
+    align-items: center;
+  }
+  .share-formats button[aria-pressed="true"] {
+    background: var(--accent);
+    color: var(--accent-text);
+    box-shadow: none;
+  }
+  .share-formats button[aria-pressed="true"] .mono {
+    color: inherit;
+  }
+  .share-format-where {
+    display: none;
+  }
+  .share-format-top {
+    gap: 0.35rem;
+  }
+  .share-stage {
+    padding: 1rem;
+    min-height: 0;
+  }
+  .share-stage canvas {
+    max-height: 56vh;
+  }
+  .share-settings {
+    background: none;
+    border: 0;
+    box-shadow: none;
+  }
+  .share-tabs {
+    margin: 0 0 0.25rem;
+  }
+  .share-tabs button {
+    padding: 0.5rem 0.2rem;
+  }
+  .share-sections {
+    padding: 0.5rem 0 0;
+  }
+  .share-section {
+    display: none;
+  }
+  .share-section.current {
+    display: flex;
+  }
+  .share-section h2 {
+    display: none;
+  }
+  .share-themes button > span:last-child {
+    font-size: 0.7rem;
+  }
+  .share-theme-chip {
+    height: 32px;
+  }
+}

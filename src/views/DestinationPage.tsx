@@ -337,7 +337,7 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
         )}
       </main>
 
-      <SiteFooter />
+      <SiteFooter signedIn={signedIn} />
       {signedIn && <AppBottomNav current="guides" />}
     </div>
   );
@@ -625,7 +625,7 @@ export function DestinationsIndex({ family }: { family?: Family }) {
         )}
       </main>
 
-      <SiteFooter />
+      <SiteFooter signedIn={signedIn} />
       {signedIn && <AppBottomNav current="guides" />}
     </div>
   );

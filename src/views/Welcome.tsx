@@ -4,6 +4,7 @@ import { api } from "../api";
 import { DESTINATIONS } from "../destinations";
 import { destinationPath } from "../../shared/seo";
 import { HOME } from "../site";
+import { flag } from "../countries";
 
 /** The page frame for signed-out pages other than the home page: the home page's header and footer around the content. */
 export function Frame({ children }: { children: ReactNode }) {
@@ -83,6 +84,31 @@ const SOCIAL_LINKS = [
   { name: "TikTok", href: "https://www.tiktok.com/@somewhereparty" },
   { name: "Pinterest", href: "https://pinterest.com/somewhereparty" },
 ];
+const INSTAGRAM = SOCIAL_LINKS[0].href;
+
+/** Line icons for the social links, drawn in the text colour. */
+const SOCIAL_ICONS: Record<string, ReactNode> = {
+  Instagram: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" />
+    </>
+  ),
+  TikTok: (
+    <>
+      <path d="M14 3v11.5a4 4 0 1 1-4-4" />
+      <path d="M14 3c.4 2.9 2.4 4.8 5.5 5" />
+    </>
+  ),
+  Pinterest: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M10.8 21l2.1-8.4" />
+      <path d="M9.3 13.6c-.6-.7-.9-1.6-.9-2.6 0-2.4 1.9-4.1 4.2-4.1 2.2 0 3.8 1.4 3.8 3.5 0 2.4-1.3 4.2-3.1 4.2-.9 0-1.6-.6-1.4-1.5" />
+    </>
+  ),
+};
 
 function SocialLinks() {
   return (
@@ -96,44 +122,128 @@ function SocialLinks() {
   );
 }
 
-export function SiteFooter({ sections = false }: { sections?: boolean }) {
+/** A copy of the list in a random order (Fisher-Yates). */
+function shuffled<T>(items: readonly T[]): T[] {
+  const out = [...items];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
+/**
+ * The footer on every public page. The guides it links to are picked at random once the page is up,
+ * from the guides bundled into the site, so the prerendered page stays the same and nothing is fetched.
+ * The "Start planning" banner is for people who aren't signed in.
+ */
+export function SiteFooter({ sections = false, signedIn = false }: { sections?: boolean; signedIn?: boolean }) {
+  const [picks, setPicks] = useState(() => DESTINATIONS.slice(0, 3));
+  useEffect(() => setPicks(shuffled(DESTINATIONS).slice(0, 3)), []);
+  // On the home page the section links scroll; elsewhere they go to the home page.
+  const home = (id: string) => (sections ? { href: `#${id}`, onClick: jump } : { href: `/#${id}` });
+
   return (
     <footer className="lp-foot">
       <div className="lp-wrap lp-foot-inner">
-        <div>
-          <div className="lp-brand">
-            somewhere<span aria-hidden>🎉</span>
-          </div>
-          <div className="muted small">Where we've been, and where we're going next.</div>
-        </div>
-        {DESTINATIONS.length > 0 && (
-          <nav aria-label="Inspire" className="lp-foot-dest">
-            <span className="lp-foot-label">INSPIRE</span>
-            <div className="lp-foot-dest-links">
-              {DESTINATIONS.slice(0, 11).map((d) => (
-                <a key={d.slug} href={destinationPath(d.slug)}>
-                  {d.name}
-                </a>
-              ))}
-              <a href="/destinations">All guides</a>
+        {!signedIn && (
+          <section aria-label="Start planning" className="lp-foot-board">
+            <div className="lp-foot-board-text">
+              <div className="lp-foot-board-head">
+                <span>NEXT DEPARTURE</span>
+                <span className="lp-foot-board-lit">● NOW BOARDING</span>
+              </div>
+              <p className="lp-foot-board-title">Your next holiday is somewhere.</p>
+              <p className="lp-foot-board-sub">Pool your ideas, spread your points in secret, and let the draw pick where you go.</p>
             </div>
-          </nav>
-        )}
-        <nav aria-label="Follow us" className="lp-foot-follow">
-          <span className="lp-foot-label">FOLLOW US</span>
-          <div className="lp-foot-follow-links">
-            <SocialLinks />
-          </div>
-        </nav>
-        <nav aria-label="Footer" className="lp-foot-links">
-          <a href="/privacy">Privacy</a>
-          <a href="/terms">Terms</a>
-          {sections && (
-            <a href="#signin" onClick={jump}>
-              Sign in
+            <a className="lp-foot-board-btn" {...home("signin")}>
+              Start planning <span className="lp-foot-board-free">FREE</span>
             </a>
+          </section>
+        )}
+
+        <div className="lp-foot-cols">
+          <div className="lp-foot-about">
+            <a className="lp-brand" href="/" aria-label="somewhere.party home">
+              somewhere<span aria-hidden>🎉</span>
+            </a>
+            <p className="lp-foot-tagline">Where we've been, and where we're going next.</p>
+            <p className="lp-foot-note">Free for the whole family. One of you signs in with your email, then shares a link with everyone else.</p>
+            <ul className="lp-foot-social" aria-label="Follow somewhere.party">
+              {SOCIAL_LINKS.map((s) => (
+                <li key={s.name}>
+                  <a href={s.href} target="_blank" rel="noopener me" aria-label={`somewhere.party on ${s.name}`}>
+                    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      {SOCIAL_ICONS[s.name]}
+                    </svg>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <nav aria-label="About" className="lp-foot-col">
+            <h2 className="lp-foot-label">ABOUT</h2>
+            <ul>
+              <li>
+                <a {...home("how")}>How it works</a>
+              </li>
+              <li>
+                <a {...home("features")}>Features</a>
+              </li>
+              <li>
+                <a {...home("why")}>Why use it</a>
+              </li>
+            </ul>
+          </nav>
+
+          {DESTINATIONS.length > 0 && (
+            <nav aria-label="Destinations" className="lp-foot-col">
+              <h2 className="lp-foot-label">DESTINATIONS</h2>
+              <ul>
+                {picks.map((d) => (
+                  <li key={d.slug}>
+                    <a href={destinationPath(d.slug)}>
+                      <span aria-hidden>{flag(d.country_code)}</span> {d.name}
+                    </a>
+                  </li>
+                ))}
+                <li>
+                  <a className="lp-foot-all" href="/destinations">
+                    All destinations →
+                  </a>
+                </li>
+              </ul>
+            </nav>
           )}
-        </nav>
+
+          <nav aria-label="The small print" className="lp-foot-col">
+            <h2 className="lp-foot-label">SMALL PRINT</h2>
+            <ul>
+              <li>
+                <a {...home("signin")}>Sign in</a>
+              </li>
+              <li>
+                <a href="/privacy">Privacy policy</a>
+              </li>
+              <li>
+                <a href="/terms">Terms of use</a>
+              </li>
+              <li>
+                <a href={INSTAGRAM} target="_blank" rel="noopener me">
+                  Contact us
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div className="lp-foot-tear" aria-hidden="true" />
+
+      <div className="lp-wrap lp-foot-base">
+        <p>© {new Date().getFullYear()} somewhere.party</p>
+        <p className="lp-foot-label">ADMIT ONE FAMILY · ANY DESTINATION</p>
       </div>
     </footer>
   );

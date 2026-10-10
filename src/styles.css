@@ -2319,28 +2319,198 @@ button.card:hover {
   }
 }
 
+/* Footer on every public page: a "next departure" banner, four columns and a tear-off stub. */
 .lp-foot {
+  background: var(--surface);
   border-top: 1px solid var(--border);
 }
+.lp-foot p,
+.lp-foot h2 {
+  margin: 0;
+}
+.lp-foot h2 {
+  font-weight: 500;
+}
 .lp-foot-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+.lp-foot-board {
+  background: var(--board);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 2rem;
+}
+.lp-foot-board-text {
+  flex: 1 1 320px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.lp-foot-board-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--board-muted);
+}
+.lp-foot-board-lit {
+  color: var(--board-lit);
+}
+.lp-foot-board-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+.lp-foot-board-sub {
+  font-size: 0.95rem;
+  color: #cbd5d1;
+}
+.lp-foot-board-btn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 0.75rem 1.1rem;
+  border-radius: 10px;
+  background: var(--board-lit);
+  color: #052e2a;
+  font-weight: 700;
+  text-decoration: none;
+}
+.lp-foot-board-btn:hover {
+  background: #5eead4;
+}
+.lp-foot-board-free {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  background: #052e2a;
+  color: var(--board-lit);
+}
+.lp-foot-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 2.5rem;
+}
+.lp-foot-about {
+  flex: 2 1 280px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.lp-foot .lp-brand {
+  align-self: flex-start;
+  font-size: 1.6rem;
+}
+.lp-foot-tagline {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 30ch;
+}
+.lp-foot-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  max-width: 38ch;
+}
+.lp-foot-social {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  display: flex;
+  gap: 0.6rem;
+}
+.lp-foot-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+.lp-foot-social a:hover {
+  background: var(--surface-2);
+}
+.lp-foot-col {
+  flex: 1 1 140px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.lp-foot-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+.lp-foot-col a {
+  color: var(--text);
+  text-decoration: none;
+}
+.lp-foot-col a:hover {
+  text-decoration: underline;
+}
+.lp-foot-col a.lp-foot-all {
+  color: var(--accent);
+  font-weight: 600;
+}
+/* The tear-off line, with notches punched in the page colour. */
+.lp-foot-tear {
+  position: relative;
+  height: 20px;
+  overflow: hidden;
+}
+.lp-foot-tear::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 9px;
+  border-top: 2px dashed var(--border);
+}
+.lp-foot-tear::after {
+  content: "";
+  position: absolute;
+  inset: 0 -10px;
+  background:
+    radial-gradient(circle at 10px 10px, var(--bg) 9px, var(--border) 9.5px, transparent 10px) left / 20px 20px no-repeat,
+    radial-gradient(circle at 10px 10px, var(--bg) 9px, var(--border) 9.5px, transparent 10px) right / 20px 20px no-repeat;
+}
+.lp-foot-base {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
-  padding-top: 28px;
-  padding-bottom: 40px;
-}
-.lp-foot .lp-brand {
-  font-size: 1.1rem;
-}
-.lp-foot-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 0.4rem 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 1.5rem;
   font-size: 0.85rem;
-}
-.lp-foot-links a {
   color: var(--muted);
 }
 

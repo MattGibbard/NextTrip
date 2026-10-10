@@ -1015,6 +1015,19 @@ a.dg-similar-card:hover {
   font-size: 0.9rem;
 }
 
+/* Footer: our social accounts. */
+.lp-foot-follow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lp-foot-follow-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-size: 0.9rem;
+}
+
 /* ---------- Announcement banner (content/site/banner.json) ---------- */
 
 .site-banner {

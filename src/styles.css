@@ -2299,6 +2299,117 @@ button.card:hover {
   flex-direction: column;
   gap: 12px;
 }
+/* Creators: the featured creators on the home page, and the /creators page */
+.lp-creators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+  gap: 16px;
+}
+.lp-creator {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.lp-creator-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.lp-creator-photo {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+.lp-creator-who {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.lp-creator-who a {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+.lp-creator blockquote {
+  margin: 0;
+  color: var(--muted);
+}
+.lp-creators-more {
+  font-weight: 700;
+  color: var(--accent);
+}
+.lp-creators-ig {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+}
+.lp-creators-btn {
+  padding: 0.8rem 1.2rem;
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+.lp-creators-how {
+  padding-top: 80px;
+}
+.lp-creators-terms {
+  max-width: 800px;
+}
+.lp-accordion {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.lp-accordion details + details {
+  border-top: 1px solid var(--border);
+}
+.lp-accordion summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.lp-accordion summary::-webkit-details-marker {
+  display: none;
+}
+.lp-accordion summary span {
+  color: var(--accent);
+  transition: transform 0.15s;
+}
+.lp-accordion details[open] summary span {
+  transform: rotate(45deg);
+}
+.lp-accordion summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+.lp-accordion p {
+  margin: 0;
+  padding: 0 20px 18px;
+  max-width: 75ch;
+  line-height: 1.6;
+}
 @media (max-width: 480px) {
   .lp-wrap {
     padding-left: 16px;

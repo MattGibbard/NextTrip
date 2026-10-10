@@ -1,9 +1,12 @@
 // Site-wide words edited at /admin: the home page (content/site/home.json), the announcement
-// banner (content/site/banner.json) and the welcome steps (content/site/onboarding.json).
+// banner (content/site/banner.json), the welcome steps (content/site/onboarding.json), the creators
+// page (content/site/creators.json) and the creators featured on the home page (content/site/featured-creators.json).
 // Bundled at build time like the destination guides.
 import homeFile from "../content/site/home.json";
 import bannerFile from "../content/site/banner.json";
 import onboardingFile from "../content/site/onboarding.json";
+import creatorsFile from "../content/site/creators.json";
+import featuredFile from "../content/site/featured-creators.json";
 
 const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
 const obj = (v: unknown): Record<string, unknown> => (v && typeof v === "object" && !Array.isArray(v) ? (v as Record<string, unknown>) : {});
@@ -190,3 +193,91 @@ const ONBOARDING_DEFAULTS: OnboardingContent = {
 };
 
 export const ONBOARDING = readOnboarding(onboardingFile);
+
+/** The creators page at /creators: who we'd like to work with, how, and the terms. */
+export interface CreatorsContent {
+  seo_title: string;
+  seo_description: string;
+  hero: { kicker: string; heading: string; lead: string; button: string };
+  look_for: { kicker: string; heading: string; reasons: { title: string; text: string }[] };
+  how: { label: string; heading: string; steps: { title: string; text: string; status: string }[] };
+  cta: { strip: string; heading: string; lead: string; button: string };
+  terms: { heading: string; lead: string; updated: string; items: { title: string; text: string }[] };
+}
+
+/** Reads the creators page file. Like the home page, a field left empty just drops out. */
+export function readCreators(raw: unknown): CreatorsContent {
+  const r = obj(raw);
+  const hero = obj(r.hero);
+  const look = obj(r.look_for);
+  const how = obj(r.how);
+  const cta = obj(r.cta);
+  const terms = obj(r.terms);
+  return {
+    seo_title: str(r.seo_title),
+    seo_description: str(r.seo_description),
+    hero: { kicker: str(hero.kicker), heading: str(hero.heading), lead: str(hero.lead), button: str(hero.button) || "Message us on Instagram" },
+    look_for: {
+      kicker: str(look.kicker),
+      heading: str(look.heading),
+      reasons: list(look.reasons).map((x) => ({ title: str(x.title), text: str(x.text) })).filter((x) => x.title),
+    },
+    how: {
+      label: str(how.label),
+      heading: str(how.heading),
+      steps: list(how.steps).map((s) => ({ title: str(s.title), text: str(s.text), status: str(s.status) })).filter((s) => s.title),
+    },
+    cta: { strip: str(cta.strip), heading: str(cta.heading), lead: str(cta.lead), button: str(cta.button) || "Message us on Instagram" },
+    terms: {
+      heading: str(terms.heading),
+      lead: str(terms.lead),
+      updated: str(terms.updated),
+      items: list(terms.items).map((x) => ({ title: str(x.title), text: str(x.text) })).filter((x) => x.title && x.text),
+    },
+  };
+}
+
+export const CREATORS = readCreators(creatorsFile);
+
+export interface FeaturedCreator {
+  name: string;
+  /** Instagram handle, without the @. */
+  handle: string;
+  /** Where their name links to: a post or profile, or their Instagram profile when none is given. */
+  url: string;
+  /** A photo uploaded in the editor, as a path on the site. */
+  photo: string;
+  quote: string;
+}
+
+export interface FeaturedCreators {
+  kicker: string;
+  heading: string;
+  link_text: string;
+  creators: FeaturedCreator[];
+}
+
+/** Reads the featured creators. Anyone switched off, or without a name and handle, is left out. */
+export function readFeatured(raw: unknown): FeaturedCreators {
+  const r = obj(raw);
+  const creators = list(r.creators)
+    .filter((c) => c.show !== false)
+    .map((c) => {
+      const handle = str(c.handle).replace(/^@/, "");
+      const url = str(c.url);
+      const photo = str(c.photo);
+      return {
+        name: str(c.name),
+        handle: /^[A-Za-z0-9._]{1,30}$/.test(handle) ? handle : "",
+        // Only web addresses, never anything a browser would run.
+        url: /^https:\/\//i.test(url) ? url : "",
+        photo: /^\/images\//.test(photo) ? photo : "",
+        quote: str(c.quote),
+      };
+    })
+    .filter((c) => c.name && c.handle)
+    .map((c) => ({ ...c, url: c.url || `https://instagram.com/${c.handle}` }));
+  return { kicker: str(r.kicker), heading: str(r.heading), link_text: str(r.link_text), creators };
+}
+
+export const FEATURED = readFeatured(featuredFile);

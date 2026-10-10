@@ -7,7 +7,8 @@ import { HomePage, NotFound } from "./views/Welcome";
 import { LegalView } from "./views/Legal";
 import { DestinationPage, DestinationsIndex } from "./views/DestinationPage";
 import { DESTINATIONS, destinationMeta, readDestination } from "./destinations";
-import { HOME } from "./site";
+import { CREATORS, HOME } from "./site";
+import { CreatorsPage } from "./views/Creators";
 import { SiteBanner } from "./components/SiteBanner";
 import { PAGES, headTags as fixedTags, metaTags } from "../shared/seo";
 import type { FixedPage, PublicPage } from "../shared/seo";
@@ -22,6 +23,7 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
     { page: "privacy", file: "privacy.html" },
     { page: "terms", file: "terms.html" },
     { page: "destinations", file: "destinations.html" },
+    { page: "creators", file: "creators.html", source: "content/site/creators.json" },
     { page: "notfound", file: "404.html" },
   ];
   return [
@@ -44,6 +46,7 @@ export function headTags(page: PublicPage, updated?: string): string {
   const d = destination(page);
   if (d) return metaTags(destinationMeta(d, updated));
   if (page === "home") return fixedTags("home", { title: HOME.seo_title, description: HOME.seo_description });
+  if (page === "creators") return fixedTags("creators", { title: CREATORS.seo_title, description: CREATORS.seo_description });
   return fixedTags(page as FixedPage);
 }
 
@@ -63,5 +66,6 @@ function pageBody(page: PublicPage) {
   if (page === "home") return <HomePage />;
   if (page === "notfound") return <NotFound />;
   if (page === "destinations") return <DestinationsIndex />;
+  if (page === "creators") return <CreatorsPage />;
   return <LegalView page={page as "privacy" | "terms"} />;
 }

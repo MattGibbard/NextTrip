@@ -3,7 +3,7 @@ import type { FormEvent, MouseEvent, ReactNode } from "react";
 import { api } from "../api";
 import { DESTINATIONS } from "../destinations";
 import { destinationPath } from "../../shared/seo";
-import { HOME } from "../site";
+import { FEATURED, HOME } from "../site";
 import { flag } from "../countries";
 
 /** The page frame for signed-out pages other than the home page: the home page's header and footer around the content. */
@@ -84,7 +84,7 @@ const SOCIAL_LINKS = [
   { name: "TikTok", href: "https://www.tiktok.com/@somewhereparty" },
   { name: "Pinterest", href: "https://pinterest.com/somewhereparty" },
 ];
-const INSTAGRAM = SOCIAL_LINKS[0].href;
+export const INSTAGRAM = SOCIAL_LINKS[0].href;
 
 /** Line icons for the social links, drawn in the text colour. */
 const SOCIAL_ICONS: Record<string, ReactNode> = {
@@ -109,6 +109,56 @@ const SOCIAL_ICONS: Record<string, ReactNode> = {
     </>
   ),
 };
+
+/** The Instagram glyph, drawn in the text colour. */
+export function InstagramIcon({ size = 20 }: { size?: number }) {
+  return (
+    <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      {SOCIAL_ICONS.Instagram}
+    </svg>
+  );
+}
+
+/** Creators who endorse us, edited at /admin. Nothing shows until the first one is added. */
+export function FeaturedCreators({ more = true }: { more?: boolean }) {
+  const { kicker, heading, link_text, creators } = FEATURED;
+  if (!creators.length) return null;
+  return (
+    <section id="creators" className="lp-wrap lp-section">
+      <div className="lp-heading">
+        {kicker && <span className="lp-kicker">{kicker}</span>}
+        {heading && <h2>{heading}</h2>}
+      </div>
+      <ul className="lp-creators">
+        {creators.map((c) => (
+          <li key={c.handle} className="lp-creator">
+            <div className="lp-creator-head">
+              {c.photo ? (
+                <img className="lp-creator-photo" src={c.photo} alt="" width="56" height="56" loading="lazy" />
+              ) : (
+                <span className="lp-creator-photo" aria-hidden>
+                  {c.name.charAt(0).toUpperCase()}
+                </span>
+              )}
+              <div className="lp-creator-who">
+                <strong>{c.name}</strong>
+                <a href={c.url} target="_blank" rel="noopener">
+                  @{c.handle}
+                </a>
+              </div>
+            </div>
+            {c.quote && <blockquote>{c.quote}</blockquote>}
+          </li>
+        ))}
+      </ul>
+      {more && link_text && (
+        <a className="lp-creators-more" href="/creators">
+          {link_text} →
+        </a>
+      )}
+    </section>
+  );
+}
 
 function SocialLinks() {
   return (
@@ -193,6 +243,9 @@ export function SiteFooter({ sections = false, signedIn = false }: { sections?: 
               </li>
               <li>
                 <a {...home("why")}>Why use it</a>
+              </li>
+              <li>
+                <a href="/creators">Creators</a>
               </li>
             </ul>
           </nav>
@@ -406,6 +459,8 @@ export function HomePage() {
           </div>
         </div>
       </section>
+
+      <FeaturedCreators />
 
       <section id="signin" className="lp-wrap lp-section">
         <div className="lp-cta">

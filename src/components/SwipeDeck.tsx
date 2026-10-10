@@ -35,7 +35,7 @@ export function SwipeDeck({ round }: { round: Round }) {
       setDx(0);
       api
         .swipe(round.id, card.id, liked)
-        .then(() => (remaining.length === 1 ? reload() : undefined))
+        .then(() => (remaining.length === 1 ? reload(["rounds"]) : undefined))
         .catch((e: Error) => setError(e.message));
     }, 220);
   };

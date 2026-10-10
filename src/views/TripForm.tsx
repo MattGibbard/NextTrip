@@ -64,7 +64,8 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
     try {
       if (trip) await api.updateTrip(trip.id, input);
       else await api.createTrip(input);
-      await reload();
+      // A trip made from a drawn idea marks the idea as done.
+      await reload(["trips", "ideas"]);
       onClose();
     } catch (err) {
       setError((err as Error).message);
@@ -75,7 +76,7 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
   const remove = async () => {
     if (!trip || !confirm(`Delete "${trip.title}"?`)) return;
     await api.deleteTrip(trip.id);
-    await reload();
+    await reload(["trips", "ideas"]);
     onClose();
     onDeleted?.();
   };

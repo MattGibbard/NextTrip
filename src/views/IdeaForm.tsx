@@ -48,7 +48,8 @@ export function IdeaForm({ idea, initial, onClose, onDeleted }: { idea?: Idea; i
     try {
       if (idea) await api.updateIdea(idea.id, input);
       else await api.createIdea(input);
-      await reload();
+      // Rounds show ideas' names, and an edit can change which ideas are in one.
+      await reload(["ideas", "rounds"]);
       onClose();
     } catch (err) {
       setError((err as Error).message);
@@ -61,7 +62,7 @@ export function IdeaForm({ idea, initial, onClose, onDeleted }: { idea?: Idea; i
     const warn = openRound ? " Any points on it in the current round go back to whoever spent them." : "";
     if (!confirm(`Delete "${idea.title}"?${warn}`)) return;
     await api.deleteIdea(idea.id);
-    await reload();
+    await reload(["ideas", "rounds"]);
     onClose();
     onDeleted?.();
   };

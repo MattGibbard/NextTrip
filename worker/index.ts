@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { migrate } from "./migrate";
-import { authRoutes, familyRoutes, readSession, requireOwner, setOwnerPerson, setSessionPerson } from "./auth";
+import { authRoutes, familyRoutes, readSession, requireOwner, sessionJson, setOwnerPerson, setSessionPerson } from "./auth";
 import { HttpError } from "./env";
 import type { App, Ctx, Env } from "./env";
 import { servePage } from "./pages";
@@ -21,6 +21,9 @@ import type { Swipe } from "../shared/shortlist";
 import type { RoundFilters } from "../shared/roundFilters";
 import type {
   Allocation,
+  Bootstrap,
+  FamilyData,
+  FamilyPart,
   HomeEnds,
   Idea,
   IdeaDetails,
@@ -64,6 +67,16 @@ app.use("*", async (c, next) => {
 app.get("/photos/:key", (c) => servePhoto(c.env.DB, c.req.param("key")));
 
 authRoutes(app);
+
+// What the signed-in app needs to open, in one request: who this browser is and the family's things.
+// The app also uses it to refresh, with ?only=rounds,ideas to fetch just the lists that changed.
+app.get("/bootstrap", async (c) => {
+  const session = await readSession(c);
+  if (!session) return c.json({ session: { signed_in: false }, data: null } satisfies Bootstrap);
+  const asked = (c.req.query("only") ?? "").split(",").filter((p): p is FamilyPart => (FAMILY_PARTS as readonly string[]).includes(p));
+  const data = await loadFamily(c.env.DB, session.family, session.person, asked.length ? asked : FAMILY_PARTS);
+  return c.json({ session: sessionJson(session), data } satisfies Bootstrap);
+});
 
 // Everything below needs a signed-in family. Which family member this browser
 // is comes from its session, so nobody can act or vote as someone else.
@@ -124,12 +137,7 @@ async function body(c: Ctx): Promise<Record<string, unknown>> {
 
 // ---------- People ----------
 
-app.get("/people", async (c) => {
-  const { results } = await c.env.DB.prepare("SELECT id, name, color, removed, onboarded FROM people WHERE family_id = ? ORDER BY id")
-    .bind(c.get("family"))
-    .all<Omit<Person, "removed" | "onboarded"> & { removed: number; onboarded: number }>();
-  return c.json(results.map((p) => ({ ...p, removed: !!p.removed, onboarded: !!p.onboarded })));
-});
+app.get("/people", async (c) => c.json((await loadFamily(c.env.DB, c.get("family"), viewerId(c), ["people"])).people));
 
 function personInput(b: Record<string, unknown>) {
   const name = cleanText(b.name, 40);
@@ -216,24 +224,6 @@ app.delete("/people/:id", async (c) => {
 
 // ---------- Places helpers ----------
 
-async function loadPlaces(db: D1Database, family: number, table: "trip_places" | "idea_places", key: "trip_id" | "idea_id") {
-  const parent = table === "trip_places" ? "trips" : "ideas";
-  const { results } = await db
-    .prepare(
-      `SELECT ${key} AS owner, name, country, country_code, lat, lon FROM ${table}
-       WHERE ${key} IN (SELECT id FROM ${parent} WHERE family_id = ?) ORDER BY ${key}, position`,
-    )
-    .bind(family)
-    .all<Place & { owner: number }>();
-  const byOwner = new Map<number, Place[]>();
-  for (const { owner, ...place } of results) {
-    const list = byOwner.get(owner) ?? [];
-    list.push(place);
-    byOwner.set(owner, list);
-  }
-  return byOwner;
-}
-
 function placeInserts(db: D1Database, table: "trip_places" | "idea_places", key: string, ownerId: number, places: Place[]) {
   return [
     db.prepare(`DELETE FROM ${table} WHERE ${key} = ?`).bind(ownerId),
@@ -277,13 +267,7 @@ function tripInput(b: Record<string, unknown>): TripInput {
   };
 }
 
-app.get("/trips", async (c) => {
-  const [{ results }, places] = await Promise.all([
-    c.env.DB.prepare("SELECT * FROM trips WHERE family_id = ? ORDER BY COALESCE(start_date, created_at) DESC").bind(c.get("family")).all<Omit<Trip, "places" | "road_trip" | "cruise" | "rail" | "depart" | "arrive"> & { road_trip: number; cruise: number; rail: number } & EndsRow>(),
-    loadPlaces(c.env.DB, c.get("family"), "trip_places", "trip_id"),
-  ]);
-  return c.json(results.map((t) => ({ ...t, road_trip: !!t.road_trip, cruise: !!t.cruise, rail: !!t.rail, ...parseEnds(t), places: places.get(t.id) ?? [] })));
-});
+app.get("/trips", async (c) => c.json((await loadFamily(c.env.DB, c.get("family"), viewerId(c), ["trips"])).trips));
 
 /** The id if it's one of this family's ideas, otherwise null. */
 async function familyIdea(c: Ctx, id: number | null) {
@@ -376,13 +360,7 @@ function parseTypes(raw: string | null): Idea["holiday_types"] {
   }
 }
 
-app.get("/ideas", async (c) => {
-  const [{ results }, places] = await Promise.all([
-    c.env.DB.prepare("SELECT * FROM ideas WHERE family_id = ? AND status != 'archived' ORDER BY created_at DESC").bind(c.get("family")).all<IdeaRow>(),
-    loadPlaces(c.env.DB, c.get("family"), "idea_places", "idea_id"),
-  ]);
-  return c.json(results.map((i) => ({ ...i, holiday_types: parseTypes(i.holiday_types), ...parseEnds(i), places: places.get(i.id) ?? [] })));
-});
+app.get("/ideas", async (c) => c.json((await loadFamily(c.env.DB, c.get("family"), viewerId(c), ["ideas"])).ideas));
 
 app.post("/ideas", async (c) => {
   const i = ideaInput(await body(c));
@@ -458,51 +436,8 @@ async function activePeople(db: D1Database, family: number) {
 }
 
 async function loadRounds(db: D1Database, family: number, viewer: number | null, onlyId?: number): Promise<Round[]> {
-  const where = onlyId === undefined ? "" : "AND id = ?";
-  const roundsQ = db.prepare(`SELECT * FROM rounds WHERE family_id = ? ${where} ORDER BY id DESC`);
-  const { results: rounds } = await (onlyId === undefined ? roundsQ.bind(family) : roundsQ.bind(family, onlyId)).all<RoundRow>();
-  if (rounds.length === 0) return [];
-  const mine = "round_id IN (SELECT id FROM rounds WHERE family_id = ?)";
-  const [allocs, locks, vetoes, ideas, swipes, people] = await Promise.all([
-    db.prepare(`SELECT round_id, person_id, idea_id, points FROM allocations WHERE ${mine}`).bind(family).all<Allocation & { round_id: number }>(),
-    db.prepare(`SELECT round_id, person_id FROM round_locks WHERE ${mine}`).bind(family).all<{ round_id: number; person_id: number }>(),
-    db.prepare(`SELECT round_id, person_id, idea_id FROM round_vetoes WHERE ${mine}`).bind(family).all<{ round_id: number; person_id: number; idea_id: number }>(),
-    db.prepare("SELECT id, title, status FROM ideas WHERE family_id = ?").bind(family).all<{ id: number; title: string; status: IdeaStatus }>(),
-    db.prepare(`SELECT round_id, person_id, idea_id, liked FROM round_swipes WHERE ${mine}`).bind(family).all<SwipeRow>(),
-    activePeople(db, family),
-  ]);
-  const ideaById = new Map(ideas.results.map((i) => [i.id, i]));
-  // Who is still swiping only matters for an open round that's still building its shortlist.
-  const building = rounds.find((r) => r.status === "open" && r.swipe && !r.shortlist);
-  const pool = building ? await matchingIdeaIds(db, family, cleanFilters(building.filters)) : [];
-  return rounds.map((r) => {
-    const roundSwipes = swipes.results.filter((s) => s.round_id === r.id).map(toSwipe);
-    const all = allocs.results.filter((a) => a.round_id === r.id);
-    // Points stay secret until the draw: before it you only see your own.
-    const visible = r.status === "drawn" ? all : all.filter((a) => a.person_id === viewer);
-    const ideaIds = new Set(visible.map((a) => a.idea_id));
-    if (r.winner_idea_id !== null) ideaIds.add(r.winner_idea_id);
-    // Vetoes are secret too: before the draw you only see your own.
-    const roundVetoes = vetoes.results
-      .filter((v) => v.round_id === r.id && (r.status === "drawn" || v.person_id === viewer))
-      .map(({ person_id, idea_id }) => ({ person_id, idea_id }));
-    for (const v of roundVetoes) ideaIds.add(v.idea_id);
-    return {
-      ...r,
-      filters: cleanFilters(r.filters),
-      swipe: !!r.swipe,
-      shortlist: parseShortlist(r.shortlist),
-      my_swipes: roundSwipes.filter((x) => x.person_id === viewer).map(({ idea_id, liked }) => ({ idea_id, liked })),
-      swiping: r === building ? people.filter((id) => unswiped(id, pool, roundSwipes).length > 0) : [],
-      locked: locks.results.filter((l) => l.round_id === r.id).map((l) => l.person_id),
-      vetoes: roundVetoes,
-      allocations: visible.map(({ person_id, idea_id, points }) => ({ person_id, idea_id, points })),
-      ideas: [...ideaIds].flatMap((id) => {
-        const i = ideaById.get(id);
-        return i ? [i] : [];
-      }),
-    };
-  });
+  const rounds = (await loadFamily(db, family, viewer, ["rounds"])).rounds!;
+  return onlyId === undefined ? rounds : rounds.filter((r) => r.id === onlyId);
 }
 
 async function openRound(c: Ctx) {
@@ -517,10 +452,17 @@ async function openRound(c: Ctx) {
 /** Active ideas that fit a round's filters. */
 async function matchingIdeaIds(db: D1Database, family: number, filters: RoundFilters) {
   const { results } = await db
-    .prepare("SELECT id, budget, trip_length, travel_time, holiday_types FROM ideas WHERE family_id = ? AND status = 'active'")
+    .prepare("SELECT id, status, budget, trip_length, travel_time, holiday_types FROM ideas WHERE family_id = ? AND status = 'active'")
     .bind(family)
-    .all<Omit<IdeaDetails, "holiday_types"> & { id: number; holiday_types: string | null }>();
-  return results.filter((i) => matchesFilters({ ...i, holiday_types: parseTypes(i.holiday_types) }, filters)).map((i) => i.id);
+    .all<MatchRow>();
+  return matchingIds(results, filters);
+}
+
+type MatchRow = Omit<IdeaDetails, "holiday_types"> & { id: number; status: IdeaStatus; holiday_types: string | null };
+
+/** The active ideas among these that fit a round's filters. */
+function matchingIds(ideas: MatchRow[], filters: RoundFilters) {
+  return ideas.filter((i) => i.status === "active" && matchesFilters({ ...i, holiday_types: parseTypes(i.holiday_types) }, filters)).map((i) => i.id);
 }
 
 /**
@@ -725,15 +667,147 @@ app.post("/rounds/:id/draw", async (c) => {
   return c.json(round);
 });
 
+// ---------- Loading a family's things ----------
+
+const FAMILY_PARTS = ["people", "trips", "ideas", "rounds", "home_ends"] as const satisfies readonly FamilyPart[];
+
+type PersonRow = Omit<Person, "removed" | "onboarded"> & { removed: number; onboarded: number };
+type TripRow = Omit<Trip, "places" | "road_trip" | "cruise" | "rail" | "depart" | "arrive"> & { road_trip: number; cruise: number; rail: number } & EndsRow;
+type PlaceRow = Place & { owner: number };
+
+const placesSql = (table: "trip_places" | "idea_places", key: "trip_id" | "idea_id", parent: "trips" | "ideas") =>
+  `SELECT ${key} AS owner, name, country, country_code, lat, lon FROM ${table}
+   WHERE ${key} IN (SELECT id FROM ${parent} WHERE family_id = ?) ORDER BY ${key}, position`;
+
+function byOwner(rows: PlaceRow[]) {
+  const map = new Map<number, Place[]>();
+  for (const { owner, ...place } of rows) {
+    const list = map.get(owner) ?? [];
+    list.push(place);
+    map.set(owner, list);
+  }
+  return map;
+}
+
+/**
+ * The lists the app shows, or just some of them. Every read goes in one batch, so however many
+ * lists are asked for it's a single trip to the database. Each query takes the family as its only value.
+ */
+async function loadFamily(db: D1Database, family: number, viewer: number | null, parts: readonly FamilyPart[]): Promise<Partial<FamilyData>> {
+  const want = new Set(parts);
+  const rounds = want.has("rounds");
+  const mine = "round_id IN (SELECT id FROM rounds WHERE family_id = ?)";
+  const sql = {
+    // Rounds need the people (who's still swiping) and every idea, archived ones too (past draws).
+    people: want.has("people") || rounds ? "SELECT id, name, color, removed, onboarded FROM people WHERE family_id = ? ORDER BY id" : null,
+    trips: want.has("trips") ? "SELECT * FROM trips WHERE family_id = ? ORDER BY COALESCE(start_date, created_at) DESC" : null,
+    tripPlaces: want.has("trips") ? placesSql("trip_places", "trip_id", "trips") : null,
+    ideas: want.has("ideas") || rounds ? "SELECT * FROM ideas WHERE family_id = ? ORDER BY created_at DESC" : null,
+    ideaPlaces: want.has("ideas") ? placesSql("idea_places", "idea_id", "ideas") : null,
+    rounds: rounds ? "SELECT * FROM rounds WHERE family_id = ? ORDER BY id DESC" : null,
+    allocations: rounds ? `SELECT round_id, person_id, idea_id, points FROM allocations WHERE ${mine}` : null,
+    locks: rounds ? `SELECT round_id, person_id FROM round_locks WHERE ${mine}` : null,
+    vetoes: rounds ? `SELECT round_id, person_id, idea_id FROM round_vetoes WHERE ${mine}` : null,
+    swipes: rounds ? `SELECT round_id, person_id, idea_id, liked FROM round_swipes WHERE ${mine}` : null,
+    homeEnds: want.has("home_ends") ? "SELECT key, value FROM family_settings WHERE family_id = ? AND key IN ('home_airport', 'home_station')" : null,
+  };
+  const keys = (Object.keys(sql) as (keyof typeof sql)[]).filter((k) => sql[k] !== null);
+  const results = await db.batch(keys.map((k) => db.prepare(sql[k]!).bind(family)));
+  const rows = <T>(k: keyof typeof sql) => (results[keys.indexOf(k)]?.results ?? []) as T[];
+
+  const out: Partial<FamilyData> = {};
+  const people = rows<PersonRow>("people").map((p) => ({ ...p, removed: !!p.removed, onboarded: !!p.onboarded }));
+  if (want.has("people")) out.people = people;
+  if (want.has("trips")) {
+    const places = byOwner(rows<PlaceRow>("tripPlaces"));
+    out.trips = rows<TripRow>("trips").map((t) => ({ ...t, road_trip: !!t.road_trip, cruise: !!t.cruise, rail: !!t.rail, ...parseEnds(t), places: places.get(t.id) ?? [] }));
+  }
+  const ideas = rows<IdeaRow>("ideas");
+  if (want.has("ideas")) {
+    const places = byOwner(rows<PlaceRow>("ideaPlaces"));
+    out.ideas = ideas
+      .filter((i) => i.status !== "archived")
+      .map((i) => ({ ...i, holiday_types: parseTypes(i.holiday_types), ...parseEnds(i), places: places.get(i.id) ?? [] }));
+  }
+  if (rounds) {
+    out.rounds = buildRounds({
+      rounds: rows<RoundRow>("rounds"),
+      allocations: rows<Allocation & { round_id: number }>("allocations"),
+      locks: rows<{ round_id: number; person_id: number }>("locks"),
+      vetoes: rows<{ round_id: number; person_id: number; idea_id: number }>("vetoes"),
+      swipes: rows<SwipeRow>("swipes"),
+      ideas,
+      people: people.filter((p) => !p.removed).map((p) => p.id),
+      viewer,
+    });
+  }
+  if (want.has("home_ends")) out.home_ends = homeEndsFrom(rows<{ key: string; value: string }>("homeEnds"));
+  return out;
+}
+
+function buildRounds({
+  rounds,
+  allocations,
+  locks,
+  vetoes,
+  swipes,
+  ideas,
+  people,
+  viewer,
+}: {
+  rounds: RoundRow[];
+  allocations: (Allocation & { round_id: number })[];
+  locks: { round_id: number; person_id: number }[];
+  vetoes: { round_id: number; person_id: number; idea_id: number }[];
+  swipes: SwipeRow[];
+  ideas: IdeaRow[];
+  /** Everyone who takes part in draws. */
+  people: number[];
+  viewer: number | null;
+}): Round[] {
+  const ideaById = new Map(ideas.map((i) => [i.id, { id: i.id, title: i.title, status: i.status }]));
+  // Who is still swiping only matters for an open round that's still building its shortlist.
+  const building = rounds.find((r) => r.status === "open" && r.swipe && !r.shortlist);
+  const pool = building ? matchingIds(ideas, cleanFilters(building.filters)) : [];
+  return rounds.map((r) => {
+    const roundSwipes = swipes.filter((s) => s.round_id === r.id).map(toSwipe);
+    const all = allocations.filter((a) => a.round_id === r.id);
+    // Points stay secret until the draw: before it you only see your own.
+    const visible = r.status === "drawn" ? all : all.filter((a) => a.person_id === viewer);
+    const ideaIds = new Set(visible.map((a) => a.idea_id));
+    if (r.winner_idea_id !== null) ideaIds.add(r.winner_idea_id);
+    // Vetoes are secret too: before the draw you only see your own.
+    const roundVetoes = vetoes
+      .filter((v) => v.round_id === r.id && (r.status === "drawn" || v.person_id === viewer))
+      .map(({ person_id, idea_id }) => ({ person_id, idea_id }));
+    for (const v of roundVetoes) ideaIds.add(v.idea_id);
+    return {
+      ...r,
+      filters: cleanFilters(r.filters),
+      swipe: !!r.swipe,
+      shortlist: parseShortlist(r.shortlist),
+      my_swipes: roundSwipes.filter((x) => x.person_id === viewer).map(({ idea_id, liked }) => ({ idea_id, liked })),
+      swiping: r === building ? people.filter((id) => unswiped(id, pool, roundSwipes).length > 0) : [],
+      locked: locks.filter((l) => l.round_id === r.id).map((l) => l.person_id),
+      vetoes: roundVetoes,
+      allocations: visible.map(({ person_id, idea_id, points }) => ({ person_id, idea_id, points })),
+      ideas: [...ideaIds].flatMap((id) => {
+        const i = ideaById.get(id);
+        return i ? [i] : [];
+      }),
+    };
+  });
+}
+
 // ---------- Settings ----------
 
 async function loadHomeEnds(db: D1Database, family: number): Promise<HomeEnds> {
-  const { results } = await db
-    .prepare("SELECT key, value FROM family_settings WHERE family_id = ? AND key IN ('home_airport', 'home_station')")
-    .bind(family)
-    .all<{ key: string; value: string }>();
+  return (await loadFamily(db, family, null, ["home_ends"])).home_ends!;
+}
+
+function homeEndsFrom(rows: { key: string; value: string }[]): HomeEnds {
   const get = (key: string, kind: string) => {
-    const t = cleanTerminal(results.find((r) => r.key === key)?.value ?? null);
+    const t = cleanTerminal(rows.find((r) => r.key === key)?.value ?? null);
     return t?.kind === kind ? t : null;
   };
   return { airport: get("home_airport", "airport"), station: get("home_station", "station") };
@@ -803,8 +877,24 @@ app.get("/geocode", async (c) => {
 
 app.all("*", (c) => c.json({ error: "Not found" }, 404));
 
+/**
+ * Picked cover photos never change, so each one is kept in Cloudflare's cache near whoever looked at it,
+ * and the next family member to see it there gets it without a trip to the database.
+ */
+async function cachedPhoto(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+  // The cache isn't there in tests, or on the workers.dev address.
+  const cache = typeof caches === "undefined" ? null : caches.default;
+  const hit = await cache?.match(req).catch(() => undefined);
+  if (hit) return hit;
+  const res = await app.fetch(req, env, ctx);
+  if (cache && res.status === 200) ctx.waitUntil(cache.put(req, res.clone()).catch(() => {}));
+  return res;
+}
+
 export default {
   fetch(req: Request, env: Env, ctx: ExecutionContext) {
-    return new URL(req.url).pathname.startsWith("/api/") ? app.fetch(req, env, ctx) : servePage(req, env);
+    const path = new URL(req.url).pathname;
+    if (req.method === "GET" && path.startsWith(PHOTO_PATH)) return cachedPhoto(req, env, ctx);
+    return path.startsWith("/api/") ? app.fetch(req, env, ctx) : servePage(req, env);
   },
 } satisfies ExportedHandler<Env>;

@@ -1,4 +1,4 @@
-import type { GeocodeResult, HomeEnds, Idea, IdeaInput, Person, Round, Session, Trip, TripInput } from "../shared/types";
+import type { Bootstrap, FamilyPart, GeocodeResult, HomeEnds, Idea, IdeaInput, Person, Round, Session, Trip, TripInput } from "../shared/types";
 import type { RoundFilters } from "../shared/roundFilters";
 import type { Terminal, TerminalSearchResult } from "../shared/terminals";
 import type { PhotoSearch } from "../shared/photos";
@@ -21,6 +21,11 @@ export function setSignedOutHandler(fn: () => void) {
   onSignedOut = fn;
 }
 
+/** For when a request that works signed out finds this browser isn't signed in any more. */
+export function signedOut() {
+  onSignedOut();
+}
+
 async function request<T>(method: string, path: string, body?: unknown): Promise<T> {
   const headers: Record<string, string> = {};
   if (body !== undefined) headers["Content-Type"] = "application/json";
@@ -40,6 +45,8 @@ async function request<T>(method: string, path: string, body?: unknown): Promise
 
 export const api = {
   session: () => request<Session>("GET", "/auth/me"),
+  /** Who this browser is and the family's things in one go, or only the lists named. */
+  bootstrap: (only?: FamilyPart[]) => request<Bootstrap>("GET", `/bootstrap${only?.length ? `?only=${only.join(",")}` : ""}`),
   sendSignInEmail: (email: string) => request<{ ok: true; dev_link?: string; dev_code?: string }>("POST", "/auth/email", { email }),
   verifySignIn: (token: string) => request("POST", "/auth/verify", { token }),
   signInWithCode: (email: string, code: string) => request("POST", "/auth/code", { email, code }),

@@ -321,7 +321,7 @@ function Airport({ onNext, onBack }: { onNext: () => void; onBack?: () => void }
     setError(null);
     try {
       await api.setHomeEnds({ airport: picked });
-      await reload();
+      await reload(["home_ends"]);
       onNext();
     } catch (e) {
       setError((e as Error).message);
@@ -498,7 +498,7 @@ function FirstIdea({ onNext, onBack }: { onNext: (p: Place | null) => void; onBa
     setError(null);
     try {
       await api.createIdea({ ...idea, description: null });
-      await reload();
+      await reload(["ideas"]);
       onNext(place);
     } catch (e) {
       setError((e as Error).message);

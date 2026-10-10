@@ -1,8 +1,10 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import type { Terminal } from "../shared/terminals";
-import type { HomeEnds, Idea, Person, Round, Trip } from "../shared/types";
-import { api } from "./api";
+import type { FamilyData, FamilyPart, HomeEnds, Idea, Person, Round, Trip } from "../shared/types";
+import { api, forgetLegacyPerson, signedOut } from "./api";
+import { rememberFamily } from "./lastFamily";
+import type { SignedInSession } from "./lastFamily";
 
 interface Data {
   /** Everyone in the family who takes part. */
@@ -27,7 +29,8 @@ interface Data {
   setMe: (id: number) => void;
   loading: boolean;
   error: string | null;
-  reload: () => Promise<void>;
+  /** Fetches the family's things again: everything, or only the lists a change touched. */
+  reload: (only?: FamilyPart[]) => Promise<void>;
   personName: (id: number | null) => string;
 }
 
@@ -35,33 +38,46 @@ const DataContext = createContext<Data | null>(null);
 
 export function DataProvider({
   children,
-  isOwner,
-  shareToken,
-  personId,
+  session,
+  initial,
+  stale,
 }: {
   children: ReactNode;
-  isOwner: boolean;
-  shareToken: string | null;
-  personId: number | null;
+  session: SignedInSession;
+  /** The family's things if they're already here: fresh from the server, or remembered from last time. */
+  initial: FamilyData | null;
+  /** The things given were remembered from last time, so fetch the latest straight away. */
+  stale: boolean;
 }) {
-  const [token, setShareToken] = useState(shareToken);
-  const [meId, setMeId] = useState<number | null>(personId);
-  const [people, setPeople] = useState<Person[]>([]);
-  const [trips, setTrips] = useState<Trip[]>([]);
-  const [ideas, setIdeas] = useState<Idea[]>([]);
-  const [rounds, setRounds] = useState<Round[]>([]);
-  const [homeEnds, setHomeEnds] = useState<HomeEnds>({ airport: null, station: null });
-  const [loading, setLoading] = useState(true);
+  const [isOwner, setIsOwner] = useState(session.role === "owner");
+  const [token, setShareToken] = useState(session.share_token);
+  const [meId, setMeId] = useState<number | null>(session.person_id);
+  const [people, setPeople] = useState<Person[]>(initial?.people ?? []);
+  const [trips, setTrips] = useState<Trip[]>(initial?.trips ?? []);
+  const [ideas, setIdeas] = useState<Idea[]>(initial?.ideas ?? []);
+  const [rounds, setRounds] = useState<Round[]>(initial?.rounds ?? []);
+  const [homeEnds, setHomeEnds] = useState<HomeEnds>(initial?.home_ends ?? { airport: null, station: null });
+  const [loading, setLoading] = useState(!initial);
   const [error, setError] = useState<string | null>(null);
+  // Whether what's shown has come from the server, rather than being remembered from last time.
+  const [synced, setSynced] = useState(!!initial && !stale);
 
-  const reload = useCallback(async () => {
+  const reload = useCallback(async (only?: FamilyPart[]) => {
     try {
-      const [p, t, i, r, e] = await Promise.all([api.people(), api.trips(), api.ideas(), api.rounds(), api.homeEnds()]);
-      setPeople(p);
-      setTrips(t);
-      setIdeas(i);
-      setRounds(r);
-      setHomeEnds(e);
+      const { session: s, data } = await api.bootstrap(only);
+      if (!s.signed_in || !data) {
+        signedOut();
+        return;
+      }
+      forgetLegacyPerson();
+      setIsOwner(s.role === "owner");
+      setShareToken(s.share_token);
+      if (data.people) setPeople(data.people);
+      if (data.trips) setTrips(data.trips);
+      if (data.ideas) setIdeas(data.ideas);
+      if (data.rounds) setRounds(data.rounds);
+      if (data.home_ends) setHomeEnds(data.home_ends);
+      setSynced(true);
       setError(null);
     } catch (e) {
       setError((e as Error).message);
@@ -70,9 +86,23 @@ export function DataProvider({
     }
   }, []);
 
+  // Fetch on the way in unless the server's latest came with the session, and again when this browser
+  // becomes someone, since what you can see of a round depends on who you are.
+  const mounted = useRef(false);
   useEffect(() => {
-    void reload();
+    if (mounted.current || !initial || stale) void reload();
+    mounted.current = true;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reload, meId]);
+
+  // Kept for next time, so the app opens with these straight away.
+  useEffect(() => {
+    if (!synced) return;
+    rememberFamily({
+      session: { signed_in: true, role: isOwner ? "owner" : "member", share_token: token, person_id: meId },
+      data: { people, trips, ideas, rounds, home_ends: homeEnds },
+    });
+  }, [synced, isOwner, token, meId, people, trips, ideas, rounds, homeEnds]);
 
   const setMe = useCallback((id: number) => setMeId(id), []);
 

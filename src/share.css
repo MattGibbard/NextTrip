@@ -1,9 +1,94 @@
 /* Share your map: make a picture of the family's map to post. */
 
+/* A departures-board bar under the Places map, leading to Share your map. */
 .places-share {
+  margin: 1rem 0;
+  padding: 22px 28px;
+  border-radius: 16px;
+  background: var(--board);
+  box-shadow: 0 8px 30px rgb(0 0 0 / 0.18);
   display: flex;
-  justify-content: flex-end;
-  margin: -0.25rem 0 1rem;
+  align-items: center;
+  gap: 28px;
+}
+.places-share-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.places-share-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 500 11px var(--mono);
+  letter-spacing: 0.14em;
+  color: var(--board-muted);
+}
+.places-share-label i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--board-lit);
+}
+.places-share-tiles {
+  display: flex;
+  gap: 4px;
+  font: 500 22px var(--mono);
+  color: #ffffff;
+}
+.places-share-tiles span {
+  width: 30px;
+  height: 40px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--board-line);
+  border-radius: 5px;
+}
+.places-share-tiles span:first-child {
+  color: var(--board-lit);
+}
+.places-share .btn {
+  min-height: 48px;
+  padding: 0 22px;
+  font-size: 15px;
+}
+
+@media (max-width: 759px) {
+  .places-share {
+    margin-top: 0.75rem;
+    padding: 18px;
+    border-radius: 14px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+  .places-share-label {
+    font-size: 10px;
+    gap: 8px;
+  }
+  .places-share-label i {
+    width: 7px;
+    height: 7px;
+  }
+  .places-share-tiles {
+    gap: 3px;
+    font-size: 15px;
+  }
+  .places-share-tiles span {
+    /* Narrow phones shrink the tiles so all fourteen fit. */
+    flex: 0 1 20px;
+    width: auto;
+    min-width: 0;
+    height: 30px;
+    border-radius: 4px;
+  }
+  .places-share .btn {
+    width: 100%;
+  }
 }
 
 .share-page .back-link {

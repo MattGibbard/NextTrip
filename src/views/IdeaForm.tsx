@@ -33,7 +33,7 @@ export function IdeaForm({ idea, initial, onClose, onDeleted }: { idea?: Idea; i
     holiday_types: start?.holiday_types ?? [],
   });
   const mode = ideaMode(details.holiday_types);
-  const journey = useJourney(idea ?? {}, !idea)(mode);
+  const journey = useJourney(start ?? {}, !idea)(mode);
   // Travel time is measured from where you set off, or from the home airport without one.
   const origin = journey.depart ?? home;
   const estimate = estimateTravel(origin, places);

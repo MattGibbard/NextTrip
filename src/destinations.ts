@@ -5,10 +5,13 @@ import { HOLIDAY_TYPES, TRIP_LENGTHS, BUDGETS } from "../shared/ideaDetails";
 import { distanceKm, flightHours } from "../shared/travelTime";
 import { countryName } from "./countries";
 import geo from "../content/destinations-geo.json";
+import airports from "../content/destination-airports.json";
 import type { HolidayType, TripLength } from "../shared/ideaDetails";
 import { SITE, destinationPath } from "../shared/seo";
 import type { Meta } from "../shared/seo";
 import type { IdeaInput, Place } from "../shared/types";
+import { rowToTerminal } from "../shared/terminals";
+import type { Terminal, TerminalRow } from "../shared/terminals";
 
 export const MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"] as const;
 export type MonthRating = "best" | "good" | "quiet";
@@ -34,7 +37,10 @@ export interface Destination {
   /** A path under /images/destinations, or empty. */
   image: string;
   image_alt: string;
+  /** The airport families fly into. Shown on the page's ticket, and fills in a new idea or trip's arrival. */
   to_code: string;
+  /** to_code's airport, if it's one we know (scripts/destination-airports.mjs). */
+  airport: Terminal | null;
   holiday_types: HolidayType[];
   nights: string;
   trip_length: TripLength | null;
@@ -77,6 +83,11 @@ export function destinationCountry(code: string): string {
 
 type Geo = Record<string, { query: string; lat: number; lon: number } | undefined>;
 
+function guideAirport(code: string): Terminal | null {
+  const row = (airports as Record<string, TerminalRow | undefined>)[code];
+  return row ? rowToTerminal("airport", row) : null;
+}
+
 /** Turns a file from the editor into a guide, filling gaps rather than breaking the build over a missing field. */
 export function readDestination(slug: string, raw: Record<string, unknown>, positions: Geo = geo): Destination {
   const name = str(raw.name) || slug;
@@ -99,6 +110,7 @@ export function readDestination(slug: string, raw: Record<string, unknown>, posi
     image: str(raw.image),
     image_alt: str(raw.image_alt),
     to_code: str(raw.to_code).toUpperCase(),
+    airport: guideAirport(str(raw.to_code).toUpperCase()),
     holiday_types: (Array.isArray(raw.holiday_types) ? raw.holiday_types : []).filter((t): t is HolidayType =>
       HOLIDAY_TYPES.some((x) => x.key === t),
     ),
@@ -208,6 +220,7 @@ export function ideaFromDestination(d: Destination): Partial<IdeaInput> {
     budget: d.budget,
     trip_length: d.trip_length,
     holiday_types: d.holiday_types,
+    arrive: d.airport,
   };
 }
 

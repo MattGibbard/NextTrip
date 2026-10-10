@@ -114,7 +114,7 @@ export function TripsView({ addFrom = null }: { addFrom?: string | null }) {
         </section>
       ))}
 
-      {adding && <TripForm draft={guide && { title: guide.name, places: [destinationPlace(guide)] }} onClose={closeForm} />}
+      {adding && <TripForm draft={guide && { title: guide.name, places: [destinationPlace(guide)], arrive: guide.airport }} onClose={closeForm} />}
     </section>
   );
 }

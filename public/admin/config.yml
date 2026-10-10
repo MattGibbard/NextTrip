@@ -311,7 +311,7 @@ collections:
       - { label: Main photo, name: image, widget: image, required: false, hint: "Wide and bright. Also used when the page is shared." }
       - { label: Main photo description, name: image_alt, widget: string, required: false, hint: "What's in the photo, for people who can't see it." }
 
-      - { label: To code, name: to_code, widget: string, hint: "Three letters, e.g. NYC or ORL." }
+      - { label: To code, name: to_code, widget: string, hint: "The airport families fly into, e.g. JFK or MCO (not a city code like NYC). It fills in the arrival when someone puts this guide on standby." }
       - label: Best for
         name: holiday_types
         widget: select

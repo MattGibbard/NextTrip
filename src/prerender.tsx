@@ -6,7 +6,7 @@ import { renderToString } from "react-dom/server";
 import { HomePage, NotFound } from "./views/Welcome";
 import { LegalView } from "./views/Legal";
 import { DestinationPage, DestinationsIndex } from "./views/DestinationPage";
-import { DESTINATIONS, destinationMeta } from "./destinations";
+import { DESTINATIONS, destinationMeta, readDestination } from "./destinations";
 import { HOME } from "./site";
 import { SiteBanner } from "./components/SiteBanner";
 import { PAGES, headTags as fixedTags, metaTags } from "../shared/seo";
@@ -30,8 +30,13 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
   ];
 }
 
+// Every guide in full. The browser loads them one at a time (loadDestination); this file never reaches it.
+const guides = import.meta.glob<Record<string, unknown>>("/content/destinations/*.json", { eager: true, import: "default" });
+
 function destination(page: PublicPage) {
-  return page.startsWith("destination:") ? DESTINATIONS.find((d) => `destination:${d.slug}` === page) : undefined;
+  const slug = page.startsWith("destination:") ? page.slice("destination:".length) : "";
+  const raw = DESTINATIONS.some((d) => d.slug === slug) ? guides[`/content/destinations/${slug}.json`] : undefined;
+  return raw ? readDestination(slug, raw) : undefined;
 }
 
 /** The page's <head> tags. `updated` is when its words last changed, as an ISO date, if known. */

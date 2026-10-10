@@ -5,6 +5,7 @@ import { execFileSync } from "node:child_process";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { createServer } from "vite";
 import react from "@vitejs/plugin-react";
+import { destinationCards } from "./destination-cards.mjs";
 
 const OUT = new URL("../dist/client/", import.meta.url);
 const shell = await readFile(new URL("index.html", OUT), "utf8");
@@ -26,7 +27,7 @@ function lastChanged(file) {
 
 const vite = await createServer({
   configFile: false,
-  plugins: [react()],
+  plugins: [react(), destinationCards()],
   appType: "custom",
   logLevel: "error",
   server: { middlewareMode: true, hmr: false },

@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Idea, Person } from "../../shared/types";
 import type { Terminal } from "../../shared/terminals";
 import { api } from "../api";
 import { DESTINATIONS, LONDON, bestMonths, countryFlag, destinationNamed, flightHoursTo, flightTime, imageUrl, shortIntro } from "../destinations";
-import type { Destination } from "../destinations";
+import type { Destination, DestinationCard } from "../destinations";
 import { HOLIDAY_TYPES, budgetLabel, holidayType, travelTimeLabel } from "../../shared/ideaDetails";
 import { destinationPath } from "../../shared/seo";
 import { SiteFooter, SiteHeader } from "./Welcome";
@@ -348,7 +348,7 @@ const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "Ju
 const shortMonth = (i: number) => MONTH_NAMES[i].slice(0, 3);
 
 /** Months a guide rates "best", by number (0 is January). */
-function bestSet(d: Destination): Set<number> {
+function bestSet(d: DestinationCard): Set<number> {
   return new Set(d.months.flatMap((m, i) => (m.rating === "best" ? [i] : [])));
 }
 
@@ -362,11 +362,15 @@ function shuffled<T>(items: readonly T[]): T[] {
   return out;
 }
 
+/** How many guide cards show at first, and how many more each "Show more guides" adds. Even rows of 2, 3 or 4. */
+const BATCH = 24;
+
 /**
  * Every guide, for browsing: a departures board of what's in season, filters for the month and kind
  * of holiday, a card per guide and the countries they're in. The month is the visitor's own, set once
  * the page is up so the prerendered page doesn't depend on when the site was built. The order is
  * shuffled then too, so each visit leads with different places while the prerendered page stays A to Z.
+ * Cards come in batches, and changing the month, a filter or the search starts again from the first.
  */
 export function DestinationsIndex({ family }: { family?: Family }) {
   const { signedIn, me, ideas, airport } = useFamily(family);
@@ -385,7 +389,7 @@ export function DestinationsIndex({ family }: { family?: Family }) {
   }, []);
 
   const best = new Map(DESTINATIONS.map((d) => [d.slug, bestSet(d)]));
-  const inSeason = (d: Destination) => month !== null && !!best.get(d.slug)?.has(month);
+  const inSeason = (d: DestinationCard) => month !== null && !!best.get(d.slug)?.has(month);
   const types = HOLIDAY_TYPES.filter((t) => DESTINATIONS.some((d) => d.holiday_types.includes(t.key)));
   const words = search.trim().toLowerCase();
   const shown = order.filter(
@@ -395,6 +399,21 @@ export function DestinationsIndex({ family }: { family?: Family }) {
       (!words || `${d.name} ${d.country}`.toLowerCase().includes(words)),
   );
   const cards = [...shown.filter(inSeason), ...shown.filter((d) => !inSeason(d))];
+  const view = `${month}|${type}|${country}|${words}`;
+  const [batches, setBatches] = useState({ view, count: BATCH });
+  const showing = batches.view === view ? batches.count : BATCH;
+  const grid = useRef<HTMLDivElement>(null);
+  const firstNew = useRef<number | null>(null);
+  const showMore = () => {
+    firstNew.current = showing;
+    setBatches({ view, count: showing + BATCH });
+  };
+  // Move to the first new card, so keyboard and screen reader users carry on from where the list grew.
+  useEffect(() => {
+    if (firstNew.current === null) return;
+    grid.current?.querySelectorAll<HTMLAnchorElement>(".dx-card h3 a")[firstNew.current]?.focus();
+    firstNew.current = null;
+  }, [showing]);
   const good = shown.filter(inSeason).length;
   const boardAll = month === null ? order : order.filter(inSeason);
   const board = boardAll.slice(0, 5);
@@ -417,7 +436,7 @@ export function DestinationsIndex({ family }: { family?: Family }) {
     pickCountry(null);
   };
 
-  const onList = (d: Destination) => ideas?.find((i) => i.status === "active" && i.title.trim().toLowerCase() === d.name.toLowerCase());
+  const onList = (d: DestinationCard) => ideas?.find((i) => i.status === "active" && i.title.trim().toLowerCase() === d.name.toLowerCase());
   const filtered = !!(type || country || words);
 
   return (
@@ -516,8 +535,8 @@ export function DestinationsIndex({ family }: { family?: Family }) {
           ) : cards.length === 0 ? (
             <p className="muted">No guides match that yet.</p>
           ) : (
-            <div className="dx-grid">
-              {cards.map((d) => {
+            <div className="dx-grid" ref={grid}>
+              {cards.slice(0, showing).map((d) => {
                 const months = best.get(d.slug)!;
                 const hours = flightHoursTo(from, d);
                 const t = d.holiday_types.map(holidayType).find((x) => !!x);
@@ -576,6 +595,16 @@ export function DestinationsIndex({ family }: { family?: Family }) {
                   </article>
                 );
               })}
+            </div>
+          )}
+          {cards.length > showing && (
+            <div className="dx-more">
+              <p className="muted small">
+                Showing {showing} of {cards.length} guides
+              </p>
+              <button type="button" className="btn ghost" onClick={showMore}>
+                Show more guides
+              </button>
             </div>
           )}
         </section>

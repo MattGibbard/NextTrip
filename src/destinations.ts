@@ -1,6 +1,7 @@
 // Destination guides. Each one is a JSON file in content/destinations, written in the editor at
 // /admin (public/admin/config.yml says which fields it has). They're bundled at build time, so the
-// guides are prerendered like the other public pages and need no database or API.
+// guides are prerendered like the other public pages and need no database or API. The site carries a
+// short card for every guide; a guide's full text is its own small file, loaded on its page.
 import { HOLIDAY_TYPES, TRIP_LENGTHS, BUDGETS } from "../shared/ideaDetails";
 import { distanceKm, flightHours } from "../shared/travelTime";
 import { countryName } from "./countries";
@@ -53,6 +54,9 @@ export interface Destination {
   faqs: { question: string; answer: string }[];
   similar: { name: string; code: string; label: string }[];
 }
+
+/** What the list of guides knows about each one: everything but the guide's own words further down its page. Months have their ratings but not their notes. */
+export type DestinationCard = Omit<Destination, "facts" | "facts_note" | "when_to_go" | "things" | "faqs" | "similar">;
 
 const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
 const num = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? v : null);
@@ -139,20 +143,41 @@ export function readDestination(slug: string, raw: Record<string, unknown>, posi
   };
 }
 
-const files = import.meta.glob<Record<string, unknown>>("/content/destinations/*.json", { eager: true, import: "default" });
+const slugOf = (path: string) => path.replace(/^.*\/|\.json(\?.*)?$/g, "");
 
-/** Every published guide, A to Z. Unpublished ones stay in the editor and off the site. */
-export const DESTINATIONS: Destination[] = Object.entries(files)
-  .map(([path, raw]) => readDestination(path.replace(/^.*\/|\.json$/g, ""), raw))
+// Only the card fields of each file (scripts/destination-cards.mjs), so this stays small as guides are added.
+const cards = import.meta.glob<Record<string, unknown>>("/content/destinations/*.json", { eager: true, query: "?card", import: "default" });
+// Each full guide is its own file, fetched when its page opens.
+const guides = import.meta.glob<Record<string, unknown>>("/content/destinations/*.json", { import: "default" });
+
+/** Every published guide's card, A to Z. Unpublished ones stay in the editor and off the site. */
+export const DESTINATIONS: DestinationCard[] = Object.entries(cards)
+  .map(([path, raw]) => readDestination(slugOf(path), raw))
   .filter((d) => d.published)
   .sort((a, b) => a.name.localeCompare(b.name, "en-GB"));
 
-export function findDestination(slug: string): Destination | undefined {
+export function findDestination(slug: string): DestinationCard | undefined {
   return DESTINATIONS.find((d) => d.slug === slug);
 }
 
+const loaded = new Map<string, Destination>();
+
+/** A published guide in full, once loadDestination() has fetched it. */
+export function loadedDestination(slug: string): Destination | undefined {
+  return loaded.get(slug);
+}
+
+/** Fetches a published guide in full. Undefined when there's no such guide. */
+export async function loadDestination(slug: string): Promise<Destination | undefined> {
+  const load = findDestination(slug) && guides[`/content/destinations/${slug}.json`];
+  if (!load) return undefined;
+  const d = loaded.get(slug) ?? readDestination(slug, await load());
+  loaded.set(slug, d);
+  return d;
+}
+
 /** The guide for a place name, so "If you like…" can link to guides that exist. */
-export function destinationNamed(name: string): Destination | undefined {
+export function destinationNamed(name: string): DestinationCard | undefined {
   const key = name.toLowerCase();
   return DESTINATIONS.find((d) => d.name.toLowerCase() === key);
 }
@@ -165,13 +190,13 @@ export function imageUrl(path: string): string {
 export const LONDON = { code: "LON", name: "London", lat: 51.47, lon: -0.4543 };
 
 /** Rough flying hours to a guide's place, rounded up as timetables tend to be longer than the straight line. Null without a map position. */
-export function flightHoursTo(from: { lat: number | null; lon: number | null }, d: Destination): number | null {
+export function flightHoursTo(from: { lat: number | null; lon: number | null }, d: DestinationCard): number | null {
   if (from.lat === null || from.lon === null || d.lat === null || d.lon === null) return null;
   return Math.max(1, Math.ceil(flightHours(distanceKm({ lat: from.lat, lon: from.lon }, { lat: d.lat, lon: d.lon }))));
 }
 
 /** The flight time as the guide says it: "About 8 hrs". */
-export function flightTime(from: { lat: number | null; lon: number | null }, d: Destination): string | null {
+export function flightTime(from: { lat: number | null; lon: number | null }, d: DestinationCard): string | null {
   const hours = flightHoursTo(from, d);
   return hours === null ? null : `About ${hours} hr${hours === 1 ? "" : "s"}`;
 }
@@ -182,12 +207,12 @@ export function countryFlag(code: string): string {
 }
 
 /** The first sentence of a guide's introduction, for its card in the list of guides. */
-export function shortIntro(d: Destination): string {
+export function shortIntro(d: DestinationCard): string {
   return d.intro.match(/^.+?[.!?](?=\s|$)/)?.[0] ?? d.intro;
 }
 
 /** The best months to go, from the month-by-month ratings: "Apr–Jun, Sep–Oct". Runs can wrap past December. */
-export function bestMonths(d: Destination): string {
+export function bestMonths(d: DestinationCard): string {
   const best = d.months.map((m) => m.rating === "best");
   if (!best.some(Boolean)) return "";
   if (best.every(Boolean)) return "All year";
@@ -207,12 +232,12 @@ export function bestMonths(d: Destination): string {
 }
 
 /** The place a guide is about, as the idea and trip forms want it. */
-export function destinationPlace(d: Destination): Place {
+export function destinationPlace(d: DestinationCard): Place {
   return { name: d.name, country: d.country, country_code: d.country_code, lat: d.lat, lon: d.lon };
 }
 
 /** What "Add to ideas" fills the new idea form with. Everything stays editable there. */
-export function ideaFromDestination(d: Destination): Partial<IdeaInput> {
+export function ideaFromDestination(d: DestinationCard): Partial<IdeaInput> {
   return {
     title: d.name,
     places: [destinationPlace(d)],
@@ -228,7 +253,7 @@ export function ideaFromDestination(d: Destination): Partial<IdeaInput> {
  * A guide's title in search results: the editor's own, or one that says what the page answers. It
  * doesn't say who the trip is for, so it suits couples, friends and families alike.
  */
-export function searchTitle(d: Destination): string {
+export function searchTitle(d: DestinationCard): string {
   return `${d.seo_title || `${d.name} holiday guide: when to go and what to do`} | somewhere🎉`;
 }
 

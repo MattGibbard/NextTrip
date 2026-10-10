@@ -7,6 +7,7 @@ import { SiteBanner } from "./components/SiteBanner";
 import "./install";
 import "./theme";
 import { publicPage } from "../shared/seo";
+import { loadDestination } from "./destinations";
 
 const root = document.getElementById("root")!;
 const app = (
@@ -17,13 +18,20 @@ const app = (
 );
 // Public pages arrive already rendered (scripts/prerender.mjs), so pick up where the HTML left off.
 // The page is marked on the root, so a page that doesn't match this address is drawn from scratch.
-const page = root.dataset.page;
-if (page && root.firstElementChild && page === (publicPage(location.pathname) ?? "notfound")) {
-  hydrateRoot(root, app);
-} else {
-  root.replaceChildren();
-  createRoot(root).render(app);
+function start() {
+  const page = root.dataset.page;
+  if (page && root.firstElementChild && page === (publicPage(location.pathname) ?? "notfound")) {
+    hydrateRoot(root, app);
+  } else {
+    root.replaceChildren();
+    createRoot(root).render(app);
+  }
 }
+// A guide's full text is its own file. Fetch it before starting, so the page picks up from the HTML
+// as it is rather than flashing empty while it arrives.
+const opening = publicPage(location.pathname);
+if (opening?.startsWith("destination:")) void loadDestination(opening.slice("destination:".length)).catch(() => {}).finally(start);
+else start();
 
 // Lets the site work as an installed app from the home screen. Skipped in dev so Vite's reloads aren't cached.
 if (import.meta.env.PROD && "serviceWorker" in navigator) {

@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { DESTINATIONS, LONDON, bestMonths, countryFlag, destinationCountry, destinationMeta, findDestination, flightHoursTo, flightTime, ideaFromDestination, readDestination, shortIntro } from "../src/destinations";
+import { DESTINATIONS, LONDON, bestMonths, countryFlag, destinationCountry, destinationMeta, findDestination, flightHoursTo, loadDestination, loadedDestination, flightTime, ideaFromDestination, readDestination, shortIntro } from "../src/destinations";
 import geo from "../content/destinations-geo.json";
 import { metaTags, publicPage } from "../shared/seo";
 
@@ -62,6 +62,24 @@ describe("bestMonths", () => {
   });
 });
 
+describe("guide cards", () => {
+  it("carry what the list of guides needs but not each guide's full text", () => {
+    const card = findDestination("new-york")! as unknown as Record<string, unknown>;
+    expect(card.name).toBe("New York");
+    expect(card.things).toEqual([]);
+    expect(card.faqs).toEqual([]);
+    expect(findDestination("new-york")!.months.every((m) => !m.note)).toBe(true);
+  });
+
+  it("load the full guide when asked, and only for published guides", async () => {
+    const ny = await loadDestination("new-york");
+    expect(ny?.things.length).toBeGreaterThan(0);
+    expect(ny?.months.some((m) => m.note)).toBe(true);
+    expect(loadedDestination("new-york")).toBe(ny);
+    expect(await loadDestination("nowhere")).toBeUndefined();
+  });
+});
+
 describe("New York", () => {
   const ny = findDestination("new-york")!;
 
@@ -91,8 +109,8 @@ describe("New York", () => {
     expect(idea.arrive).toMatchObject({ kind: "airport", code: "JFK", country_code: "US" });
   });
 
-  it("gives search engines a canonical address and question-and-answer data", () => {
-    const tags = metaTags(destinationMeta(ny));
+  it("gives search engines a canonical address and question-and-answer data", async () => {
+    const tags = metaTags(destinationMeta((await loadDestination("new-york"))!));
     expect(tags).toContain('<link rel="canonical" href="https://somewhere.party/destinations/new-york" />');
     expect(tags).toContain('"@type":"FAQPage"');
     expect(tags).toContain('"@type":"TouristDestination"');

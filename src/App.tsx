@@ -5,7 +5,7 @@ import { HomePage, JoinPage, PersonLinkPage, SignInPage } from "./views/Welcome"
 import { LegalView, legalPage } from "./views/Legal";
 import { NotFound } from "./views/Welcome";
 import { PAGES, isPrivatePath, publicPage } from "../shared/seo";
-import { destinationMeta, findDestination } from "./destinations";
+import { findDestination, searchTitle } from "./destinations";
 import { GuideView } from "./views/GuideView";
 import { followInPlace, isGuidePath } from "./navigate";
 import { load, save } from "./storage";
@@ -70,7 +70,7 @@ function pageTitle(path: string): string {
   const page = publicPage(path);
   if (page === "destinations") return PAGES.destinations.title;
   const destination = page?.startsWith("destination:") ? findDestination(page.slice("destination:".length)) : undefined;
-  return destination ? destinationMeta(destination).title : "somewhere🎉";
+  return destination ? searchTitle(destination) : "somewhere🎉";
 }
 
 

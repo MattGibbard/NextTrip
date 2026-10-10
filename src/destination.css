@@ -739,6 +739,18 @@ a.dg-similar-card:hover {
   text-decoration: underline;
 }
 
+/* Below the cards when there are more to show. */
+.dx-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+.dx-more p {
+  margin: 0;
+}
+
 /* A guide's card: photo, details, a perforation, then the best months like a ticket stub. */
 .dx-grid {
   display: grid;

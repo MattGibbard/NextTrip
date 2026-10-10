@@ -9,6 +9,7 @@ import type { CountryShapes } from "../countryShapes";
 import { load, save } from "../storage";
 import {
   BEEN_SWATCHES,
+  CARD_WIDTH,
   FORMATS,
   IDEA_SWATCHES,
   THEMES,
@@ -68,7 +69,6 @@ export function ShareMapView() {
   const [shapes, setShapes] = useState<CountryShapes | null>(null);
   const [saved, setSaved] = useState<"saving" | "done" | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const canvas = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -132,44 +132,42 @@ export function ShareMapView() {
   const format = FORMATS[settings.format];
   const size = `1080 × ${format.h * 2}`;
 
-  // The browser can drop a canvas's drawing (to free graphics memory, or while the tab is hidden),
-  // leaving a blank picture until the page is reloaded. Then draw again, on a new canvas if need be.
-  const [redraws, setRedraws] = useState(0);
-  const [canvasKey, setCanvasKey] = useState(0);
+  // Each change draws the picture on a fresh canvas, kept for saving, and the preview shows it as an
+  // image. Firefox could leave a canvas on the page blank after arriving from Places, and a canvas
+  // that's never shown can't be dropped or left unpainted that way.
+  const picture = useRef<HTMLCanvasElement | null>(null);
+  const [preview, setPreview] = useState<string | null>(null);
+  const previewUrl = useRef<string | null>(null);
   useEffect(() => {
-    const el = canvas.current;
-    if (!el) return;
-    const again = () => setRedraws((n) => n + 1);
-    const onVisible = () => {
-      if (document.visibilityState === "visible") again();
-    };
-    el.addEventListener("contextrestored", again);
-    document.addEventListener("visibilitychange", onVisible);
-    return () => {
-      el.removeEventListener("contextrestored", again);
-      document.removeEventListener("visibilitychange", onVisible);
-    };
-  }, [canvasKey]);
-
-  useEffect(() => {
-    const el = canvas.current;
-    if (!el) return;
-    const ctx = el.getContext("2d");
-    if (!ctx || ctx.isContextLost?.()) {
-      if (canvasKey < 3) setCanvasKey((k) => k + 1);
-      return;
-    }
+    let current = true;
+    const el = document.createElement("canvas");
     drawShareCard(el, shapes, data, options);
+    picture.current = el;
+    el.toBlob((b) => {
+      if (!current || !b) return;
+      if (previewUrl.current) URL.revokeObjectURL(previewUrl.current);
+      previewUrl.current = URL.createObjectURL(b);
+      setPreview(previewUrl.current);
+    }, "image/png");
+    return () => {
+      current = false;
+    };
     // options is rebuilt each render from these.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [shapes, data, settings, autoSubtitle, redraws, canvasKey]);
+  }, [shapes, data, settings, autoSubtitle]);
+  useEffect(
+    () => () => {
+      if (previewUrl.current) URL.revokeObjectURL(previewUrl.current);
+    },
+    [],
+  );
 
   const set = <K extends keyof Settings>(key: K, value: Settings[K]) => setSettings((s) => ({ ...s, [key]: value }));
 
   const fileName = `somewhere-party-map-${settings.format}.png`;
   const toFile = () =>
     new Promise<File>((resolve, reject) =>
-      canvas.current?.toBlob((b) => (b ? resolve(new File([b], fileName, { type: "image/png" })) : reject(new Error("Couldn’t make the picture."))), "image/png"),
+      picture.current?.toBlob((b) => (b ? resolve(new File([b], fileName, { type: "image/png" })) : reject(new Error("Couldn’t make the picture."))), "image/png"),
     );
 
   const download = async () => {
@@ -251,7 +249,11 @@ export function ShareMapView() {
             ))}
           </div>
           <div className="share-stage">
-            <canvas key={canvasKey} ref={canvas} role="img" aria-label={describeCard(data, options)} className={ready ? "" : "loading"} />
+            {preview ? (
+              <img src={preview} alt={describeCard(data, options)} width={CARD_WIDTH} height={format.h} className={ready ? "" : "loading"} />
+            ) : (
+              <div className="share-placeholder" style={{ aspectRatio: `${CARD_WIDTH} / ${format.h}` }} />
+            )}
           </div>
           <p className="share-note center desktop-only">
             Exports at {size} px for {format.where}

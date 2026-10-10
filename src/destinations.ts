@@ -84,7 +84,7 @@ export function destinationCountry(code: string): string {
 type Geo = Record<string, { query: string; lat: number; lon: number } | undefined>;
 
 function guideAirport(code: string): Terminal | null {
-  const row = (airports as Record<string, TerminalRow | undefined>)[code];
+  const row = (airports as unknown as Record<string, TerminalRow | undefined>)[code];
   return row ? rowToTerminal("airport", row) : null;
 }
 

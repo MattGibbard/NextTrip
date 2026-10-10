@@ -8,8 +8,8 @@
     "preview": "npm run build && vite preview",
     "test": "vitest run",
     "typecheck": "tsc -b",
-    "db:migrate:local": "wrangler d1 migrations apply nexttrip --local",
-    "db:migrate:remote": "wrangler d1 migrations apply nexttrip --remote",
+    "db:migrate:local": "wrangler d1 migrations apply somewhereparty --local",
+    "db:migrate:remote": "wrangler d1 migrations apply somewhereparty --remote",
     "deploy": "npm run build && wrangler deploy",
     "cf-typegen": "wrangler types"
   },

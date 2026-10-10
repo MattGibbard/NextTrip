@@ -28,7 +28,7 @@ The simplest route is Cloudflare's Git integration, which deploys on every push.
 1. In the Cloudflare dashboard go to **Workers & Pages → Create → Import a repository** and pick this repo.
 2. Set the **production branch** to `main` and the **deploy command** to `npm run deploy` (leave the build command empty). If the production branch isn't `main`, merges build but never reach the live site.
 3. For pull request previews, set the **non-production branch deploy command** to `npx wrangler preview`. Previews use the `previews` block in `wrangler.jsonc`, which gives them their own `nexttrip-preview` D1 database, so nothing done in a preview touches the live data. Create that database once under **Storage & databases → D1** and put its ID in `previews.d1_databases`. All previews share it, and sign-in links show on the page instead of being emailed, so previews need no secrets.
-4. Deploy. On the first deploy, Wrangler creates the `nexttrip` D1 database automatically. The Worker applies any new files in `migrations/` itself on its first request, so there's no separate migration step.
+4. Deploy. On the first deploy, Wrangler creates the `somewhereparty` D1 database automatically if it doesn't exist yet (create it yourself first with `npx wrangler d1 create somewhereparty --location=weur` to pick its region, which can't be changed later). The Worker applies any new files in `migrations/` itself on its first request, so there's no separate migration step.
 
 ### Sign-in emails
 

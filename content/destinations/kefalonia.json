@@ -1,0 +1,177 @@
+{
+  "name": "Kefalonia",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Kefalonia",
+  "intro": "Turquoise coves, loggerhead turtles and mountain roads on Greece's largest Ionian island. Here's what Kefalonia is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "EFL",
+  "holiday_types": [
+    "beach",
+    "nature"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, closed"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, closed"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busiest"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Season ends"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rainy"
+    }
+  },
+  "when_to_go": "June and September are best, with warm seas and quieter beaches. July and August are hot and busy. Most hotels and tavernas close from November to April.",
+  "things": [
+    {
+      "name": "Myrtos Beach",
+      "tag": "Free",
+      "blurb": "A famous white-pebble beach below steep cliffs. The sea shelves quickly, so keep little ones close.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Melissani Cave",
+      "tag": "Ticketed",
+      "blurb": "A short boat ride on an underground lake lit by sunlight through a collapsed roof. Best around midday.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Drogarati Cave",
+      "tag": "Ticketed",
+      "blurb": "A cool cave full of stalactites, a short walk in from the road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Argostoli harbour",
+      "tag": "Free",
+      "blurb": "Loggerhead turtles often surface by the waterfront near the fishing boats in the morning.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Assos",
+      "tag": "Free",
+      "blurb": "A tiny village on a narrow neck of land, with a small beach and a ruined castle above.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Ainos National Park",
+      "tag": "Outdoors",
+      "blurb": "Drive up through fir forest for cooler air and big views over the island.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Kefalonia good for a family holiday?",
+      "answer": "Yes, for families who like beaches and scenery. It's green and relaxed, with plenty of shallow sandy bays such as Skala and Lourdas. Beaches like Myrtos are pebbly and get deep quickly."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week is enough to settle in one area and explore. Ten days lets you see more of the island, which is bigger than it looks."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are direct flights from several UK airports in summer, taking about three and a half hours. In winter you'll need to fly via Athens."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "Yes, ideally. Buses are limited and the island is spread out. Roads are winding, so allow extra time and bring travel sickness tablets."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Naxos",
+      "code": "JNX",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Menorca",
+      "code": "MAH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Paphos",
+      "code": "PFO",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

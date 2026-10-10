@@ -1,0 +1,178 @@
+{
+  "name": "Istria",
+  "published": true,
+  "country": "HR",
+  "title": "Holidays in Istria",
+  "intro": "Venetian harbour towns, truffle hill villages and clear swimming spots on Croatia's northern tip. Here's what Istria is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "PUY",
+  "holiday_types": [
+    "beach",
+    "food",
+    "road-trip"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busiest"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Truffle season"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool"
+    }
+  },
+  "when_to_go": "June and September are best, with warm seas and quieter towns. July and August are hot and busy. October is truffle season inland, though it's too cool for most to swim.",
+  "things": [
+    {
+      "name": "Pula Arena",
+      "tag": "Ticketed",
+      "blurb": "A huge Roman amphitheatre in the middle of Pula, with tunnels underneath to explore.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rovinj",
+      "tag": "Free",
+      "blurb": "A harbour town of pastel houses climbing to a hilltop church, with swimming rocks nearby.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Brijuni National Park",
+      "tag": "Tour",
+      "blurb": "A boat from Fažana to islands with a little safari park, dinosaur footprints and a tourist train.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Motovun",
+      "tag": "Free",
+      "blurb": "A walled hilltop town above truffle woods. Try a truffle pasta or ice cream.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cape Kamenjak",
+      "tag": "Outdoors",
+      "blurb": "A wild, protected headland with rocky coves and low cliffs at Istria's southern tip. There's a car fee in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lim Bay",
+      "tag": "Tour",
+      "blurb": "Boat trips run up a long, narrow sea inlet, with a pirate cave and mussel farms along the way.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Istria good for a family holiday?",
+      "answer": "Yes. It mixes beaches, Roman sights and pretty towns, and distances are short. Most swimming is from rocks or pebbles, so water shoes help."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week works well, with a base on the coast and day trips inland. Add a few nights to combine it with Ljubljana or Plitvice."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are direct flights to Pula from the UK in summer, taking about two and a half hours. You can also fly to Trieste, Rijeka or Ljubljana and drive. British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "It's the easiest way to reach the hill towns and quieter coves. Buses link the main coastal towns."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Dubrovnik",
+      "code": "DBV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Plitvice Lakes",
+      "code": "ZAG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Ljubljana",
+      "code": "LJU",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🍷 Food & drink"
+    }
+  ]
+}

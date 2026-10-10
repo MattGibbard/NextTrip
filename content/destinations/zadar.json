@@ -1,0 +1,178 @@
+{
+  "name": "Zadar",
+  "published": true,
+  "country": "HR",
+  "title": "Holidays in Zadar",
+  "intro": "Sunsets over a singing sea organ, Roman ruins and boat trips to empty islands. Here's what Zadar is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "ZAD",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "nature"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sunny"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Quiet"
+    }
+  },
+  "when_to_go": "June and September are hot and sunny, with warm sea and fewer crowds than high summer. July and August are the hottest and busiest months. Many boat trips and seasonal restaurants slow down from November to March.",
+  "things": [
+    {
+      "name": "Sea Organ",
+      "tag": "Free",
+      "blurb": "Pipes under the seafront steps play music as the waves roll in. Children love sitting and listening.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Greeting to the Sun",
+      "tag": "Free",
+      "blurb": "A big glass circle on the seafront that lights up in colours after sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Roman Forum",
+      "tag": "Free",
+      "blurb": "Roman ruins in the middle of town, next to the round St Donatus' Church.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Krka National Park",
+      "tag": "Ticketed",
+      "blurb": "Wooden walkways past waterfalls and pools, about an hour's drive away. Swimming is no longer allowed.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kornati islands boat trip",
+      "tag": "Tour",
+      "blurb": "A day on a boat among bare, empty islands, with swimming stops in clear water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paklenica National Park",
+      "tag": "Outdoors",
+      "blurb": "Walk into a dramatic limestone canyon, with easy trails for families near the entrance.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Zadar good for a family holiday?",
+      "answer": "Yes. It's relaxed and less crowded than Dubrovnik or Split, with a walkable old town, sea swimming and great day trips."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week gives you time for beach days plus trips to Krka, the islands and Paklenica."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are direct flights to Zadar from several UK airports, mostly in the summer season. Croatia is in the EU, so British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Are there sandy beaches near Zadar?",
+      "answer": "Most beaches in town are pebbles or rocks, so bring water shoes. Queen's Beach near Nin, about half an hour away, is sandy and shallow, which suits small children."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Dubrovnik",
+      "code": "DBV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Malta",
+      "code": "MLA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

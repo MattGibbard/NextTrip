@@ -1,0 +1,178 @@
+{
+  "name": "Okinawa",
+  "published": true,
+  "country": "JP",
+  "title": "Holidays in Okinawa",
+  "intro": "Coral reefs, white beaches and whale sharks in Japan's warm southern islands. Here's what Okinawa is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "OKA",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "culture"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 to 9 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Japanese yen (¥)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 100V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK plugs need an adapter. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, windy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Warming up"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Rainy season"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Rainy, then hot"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Hot, sunny"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Typhoon risk"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Typhoon risk"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool"
+    }
+  },
+  "when_to_go": "April and October are warm and settled, and July is hot and sunny once the rainy season ends. The rainy season runs from about mid-May to late June. Typhoons are most likely from July to September, so travel insurance matters. Winters are mild but too cool for most swimmers.",
+  "things": [
+    {
+      "name": "Okinawa Churaumi Aquarium",
+      "tag": "Ticketed",
+      "blurb": "A giant tank with whale sharks and manta rays, plus free dolphin shows in the park outside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Emerald Beach",
+      "tag": "Free",
+      "blurb": "A sheltered, lifeguarded beach in Ocean Expo Park, next to the aquarium.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kerama Islands",
+      "tag": "Tour",
+      "blurb": "A fast ferry from Naha to clear water, sea turtles and some of Japan's best snorkelling.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Shurijo Castle",
+      "tag": "Ticketed",
+      "blurb": "The red palace of the old Ryukyu kings. The main hall is being rebuilt after a 2019 fire.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kokusai-dori",
+      "tag": "Free",
+      "blurb": "Naha's busy main street of shops, snacks and purple sweet potato everything.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Okinawa World",
+      "tag": "Rainy day",
+      "blurb": "A long limestone cave walk, plus craft workshops and a traditional village.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Okinawa good for a family holiday?",
+      "answer": "Yes. It's safe, clean and easy, with calm beaches, great snorkelling and the aquarium. It feels more like a tropical island than the rest of Japan."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week on the main island, or ten days to add a smaller island like Zamami or Ishigaki."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are no direct flights. Fly to Tokyo or Osaka and connect, which takes about two and a half hours. Seoul, Taipei and Hong Kong also have flights."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "It helps outside Naha, as buses are slow. Japan drives on the left, but you'll need an International Driving Permit from the Post Office as well as your licence."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kanazawa",
+      "code": "KMQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Tokyo",
+      "code": "HND",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Maui",
+      "code": "OGG",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

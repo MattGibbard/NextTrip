@@ -1,0 +1,178 @@
+{
+  "name": "Ninh Binh",
+  "published": true,
+  "country": "VN",
+  "title": "Holidays in Ninh Binh",
+  "intro": "Rowing boats glide through caves under limestone peaks and green rice fields. Here's what Ninh Binh is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "HAN",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "culture"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Vietnamese dong (₫)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 45 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, drizzly"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Tet, cool"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Golden rice"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, harvest"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Hot, wet"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Wet, storms"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot, showers"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Dry, mild"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cool"
+    }
+  },
+  "when_to_go": "April, May, October and November are warm and mostly dry. The rice turns gold in late May and early June. July and August are hot and wet, with a risk of storms. Winter is cool and often grey.",
+  "things": [
+    {
+      "name": "Trang An",
+      "tag": "Ticketed",
+      "blurb": "A two to three hour rowing boat trip through river caves and past temples. Life jackets are provided.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tam Coc",
+      "tag": "Ticketed",
+      "blurb": "A shorter boat ride through rice fields and three low caves. Rowers often paddle with their feet.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hang Mua",
+      "tag": "Ticketed",
+      "blurb": "Climb about 500 steps to a dragon statue and the best view in the valley. Go early, before the heat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bai Dinh Pagoda",
+      "tag": "Free",
+      "blurb": "A vast temple complex with long corridors of stone statues. Electric carts take you from the car park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cuc Phuong National Park",
+      "tag": "Ticketed",
+      "blurb": "Vietnam's oldest national park, with forest trails and a rescue centre for rare monkeys.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cycling the valleys",
+      "tag": "Outdoors",
+      "blurb": "Hire bikes from your homestay and ride flat lanes past rice paddies, goats and karst peaks.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Ninh Binh good for a family holiday?",
+      "answer": "Yes, for a few days. The boat trips are easy and memorable, homestays are cheap and friendly, and the cycling is flat. Bring hats and plenty of water, as there's little shade on the boats."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights. Many families go on from here to Ha Long Bay or Hoi An."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Hanoi, with direct flights from London or via a Gulf or Asian hub. Ninh Binh is about two hours south by car, bus or train."
+    },
+    {
+      "question": "When is it cheapest?",
+      "answer": "Outside Tet, the Lunar New Year in January or February, and Vietnamese summer holidays. Weekdays are calmer than weekends."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Hoi An",
+      "code": "DAD",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Luang Prabang",
+      "code": "LPQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Borneo",
+      "code": "BKI",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Nepal",
+      "code": "KTM",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "name": "Lombok",
+  "published": true,
+  "country": "ID",
+  "title": "Holidays in Lombok",
+  "intro": "Quiet surf beaches, jungle waterfalls and car-free islands next door to Bali. Here's what Lombok is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "LOP",
+  "holiday_types": [
+    "beach",
+    "adventure",
+    "nature"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 to 8 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Indonesian rupiah (Rp)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Visa on arrival (paid)",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The Gili Islands charge a small visitor fee. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Wet season"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Wet season"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Wet, easing"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Drying out"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Dry, green"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Dry, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rains start"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Wet season"
+    }
+  },
+  "when_to_go": "The dry season runs from May to October, with June to September the most reliable. It is hot and humid all year. The wet season, from November to March, brings heavy afternoon downpours and rougher seas for boat crossings. Mount Rinjani usually closes to trekkers in the wettest months.",
+  "things": [
+    {
+      "name": "Gili Air",
+      "tag": "Outdoors",
+      "blurb": "A small car-free island with sandy beaches, bikes, pony carts and snorkelling with turtles.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Selong Belanak",
+      "tag": "Free",
+      "blurb": "A wide, sheltered bay near Kuta with gentle waves, good for first surf lessons.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tiu Kelep waterfall",
+      "tag": "Ticketed",
+      "blurb": "A jungle walk with a local guide to tall falls you can swim beneath.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sade village",
+      "tag": "Tour",
+      "blurb": "A traditional Sasak village with thatched houses and weaving.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pink Beach",
+      "tag": "Outdoors",
+      "blurb": "A remote beach in the south-east with pinkish sand and clear water for snorkelling.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Rinjani",
+      "tag": "Tour",
+      "blurb": "Indonesia's second-highest volcano. The full trek is for fit teens, but shorter walks start from Senaru.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Lombok good for a family holiday?",
+      "answer": "Yes, for families who want Bali's landscapes without the crowds. It is quieter and less developed, so plan days out with a driver and choose a hotel with a pool."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week to ten days. Split it between the south coast around Kuta and a few nights on Gili Air."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are no direct flights. Fly via Singapore, Kuala Lumpur or Bali to Lombok airport. British passport holders can get a paid visa on arrival or apply online in advance."
+    },
+    {
+      "question": "Is the sea safe for swimming?",
+      "answer": "Sheltered bays like Selong Belanak and the Gili beaches are best. Some south coast beaches have strong currents and reef close to shore, so check locally and use reef shoes."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Koh Lanta",
+      "code": "KBV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Penang",
+      "code": "PEN",
+      "label": "🍷 Food & drink"
+    }
+  ]
+}

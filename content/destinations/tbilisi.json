@@ -1,0 +1,178 @@
+{
+  "name": "Tbilisi",
+  "published": true,
+  "country": "GE",
+  "title": "Holidays in Tbilisi",
+  "intro": "Cable cars, sulphur baths and cheese-filled bread in an old Caucasus capital. Here's what Tbilisi is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "TBS",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Georgian lari (₾)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa needed",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "GOV.UK advises against travel to some regions of Georgia, so check the latest travel advice before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Grape harvest"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold"
+    }
+  },
+  "when_to_go": "May, June, September and October are warm and pleasant for walking the old town. July and August are hot, so plan sightseeing for mornings and evenings. Winter is cold but quiet and cheap.",
+  "things": [
+    {
+      "name": "Narikala Fortress",
+      "tag": "Free",
+      "blurb": "Ride the cable car up from Rike Park to the old fortress walls and the Mother of Georgia statue.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mtatsminda Park",
+      "tag": "Ticketed",
+      "blurb": "An amusement park on the hill above the city, reached by funicular, with rides and big views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bridge of Peace",
+      "tag": "Free",
+      "blurb": "A glass footbridge over the river, lit up at night, next to Rike Park's play areas.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Abanotubani sulphur baths",
+      "tag": "Ticketed",
+      "blurb": "Hire a private room with a warm sulphur pool, a good choice for families.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Georgian National Museum",
+      "tag": "Indoors",
+      "blurb": "Gold treasures, ancient skulls and Georgian history on Rustaveli Avenue.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dry Bridge Market",
+      "tag": "Free",
+      "blurb": "A flea market full of old coins, Soviet badges, toys and paintings.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Tbilisi good for a family holiday?",
+      "answer": "Yes, for curious families. It's good value and friendly, with cable cars, a hilltop fun park and easy food like khachapuri, a cheese-filled bread. Hills and uneven pavements make pushchairs hard work."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights covers the city, with time for a day trip to Mtskheta or the mountains."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Most routes change in Istanbul or another European hub. British passport holders don't need a visa and can stay for up to a year."
+    },
+    {
+      "question": "Is Tbilisi safe?",
+      "answer": "Tbilisi is generally safe for visitors. The traffic is the biggest risk, so use crossings and underpasses and keep a close hold of small children near roads."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kraków",
+      "code": "KRK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Jordan",
+      "code": "AMM",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Cappadocia",
+      "code": "NAV",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Marrakech",
+      "code": "RAK",
+      "label": "🍷 Food & drink"
+    }
+  ]
+}

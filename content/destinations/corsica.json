@@ -1,0 +1,178 @@
+{
+  "name": "Corsica",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Corsica",
+  "intro": "Mountains that drop straight into clear sea, hilltop villages and beaches that feel more Caribbean than French. Here's what Corsica is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "AJA",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Roads are narrow and winding, so drives take longer than the map suggests.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snow on peaks"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Very quiet"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild, showers"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring walks"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Maquis in bloom"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Busiest"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea, calmer"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Chestnut season"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Closed resorts"
+    }
+  },
+  "when_to_go": "June and September are the sweet spot, with warm sea and fewer crowds. July and August are hot and busy, especially in the south. Spring is lovely for walking but the sea is still cold.",
+  "things": [
+    {
+      "name": "Palombaggia Beach",
+      "tag": "Free",
+      "blurb": "Pale sand, pine trees and shallow turquoise water near Porto-Vecchio.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bonifacio",
+      "tag": "Free",
+      "blurb": "A white clifftop old town above the sea. Boat trips run along the cliffs and into sea caves.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Scandola boat trip",
+      "tag": "Tour",
+      "blurb": "Boats from Porto or Calvi visit red cliffs and coves you can only reach by sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Restonica Valley",
+      "tag": "Free",
+      "blurb": "A mountain valley near Corte with walks up to glacial lakes and cool river pools.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Calvi citadel",
+      "tag": "Free",
+      "blurb": "A walled old town above a long sandy bay, with easy beach days below.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lavezzi Islands",
+      "tag": "Tour",
+      "blurb": "Granite islands off Bonifacio with clear water for snorkelling.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Corsica good for a family holiday?",
+      "answer": "Yes. The beaches are among the best in the Mediterranean, and there are easy walks and boat trips. A car makes life much easier."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week covers one region well. Ten nights lets you split your stay between the south and the north west."
+    },
+    {
+      "question": "Which airport should you fly into?",
+      "answer": "Ajaccio, Bastia, Calvi and Figari all have flights, mostly in summer. Figari is closest to the southern beaches, Calvi to the north west."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "Mostly, yes. Buses are limited and the best beaches and villages are spread out. Allow extra time on mountain roads."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Menorca",
+      "code": "MAH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Kefalonia",
+      "code": "EFL",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Puglia",
+      "code": "BRI",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Asturias",
+      "code": "OVD",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

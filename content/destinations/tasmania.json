@@ -1,0 +1,178 @@
+{
+  "name": "Tasmania",
+  "published": true,
+  "country": "AU",
+  "title": "Holidays in Tasmania",
+  "intro": "Wombats, wild beaches and empty mountain trails on an island the size of Ireland. Here's what Tasmania is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "HBA",
+  "holiday_types": [
+    "road-trip",
+    "nature",
+    "food"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "9 to 11 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Australian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eVisitor for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type I · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The eVisitor is free to apply for online. You also need a parks pass for the national parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Warming up"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Summer"
+    }
+  },
+  "when_to_go": "December to March is warm, with long days for walking and the beach. April brings autumn colour and calm weather. Winter is cold and wet, with snow in the mountains. The weather changes fast all year, so pack layers.",
+  "things": [
+    {
+      "name": "Cradle Mountain",
+      "tag": "Ticketed",
+      "blurb": "Walk the flat circuit around Dove Lake and look for wombats at dusk. A shuttle bus runs from the visitor centre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wineglass Bay",
+      "tag": "Ticketed",
+      "blurb": "A short, steep climb in Freycinet National Park to a lookout over a curved white beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bonorong Wildlife Sanctuary",
+      "tag": "Ticketed",
+      "blurb": "A rescue centre near Hobart where you can see Tasmanian devils and hand-feed kangaroos.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Port Arthur Historic Site",
+      "tag": "Ticketed",
+      "blurb": "A former convict prison with ruins, a harbour cruise and a playing card that links you to a real convict.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Salamanca Market",
+      "tag": "Free",
+      "blurb": "Hobart's big Saturday market of food, crafts and buskers, next to the harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "MONA",
+      "tag": "Ticketed",
+      "blurb": "A strange underground art museum reached by ferry. Some rooms are for adults, so check before you go.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Tasmania good for a family holiday?",
+      "answer": "Yes, for families who like the outdoors. There's lots of wildlife, short walks, empty beaches and good food. Distances are bigger than they look, so plan short driving days."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights for a loop around the island. A week covers Hobart and the east coast."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Hobart via Sydney or Melbourne. The Spirit of Tasmania car ferry also sails overnight from Geelong to Devonport."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "Yes. Buses are limited, so hire a car. Australia drives on the left, like the UK, and wildlife is common on the roads at dusk."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Queenstown",
+      "code": "ZQN",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Sydney",
+      "code": "SYD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Tofino",
+      "code": "YAZ",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Faroe Islands",
+      "code": "FAE",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

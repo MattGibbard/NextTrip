@@ -1,0 +1,178 @@
+{
+  "name": "Brașov",
+  "published": true,
+  "country": "RO",
+  "title": "Holidays in Brașov",
+  "intro": "Medieval squares, a bear sanctuary and Dracula's castle in the Carpathian Mountains. Here's what Brașov is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "OTP",
+  "holiday_types": [
+    "city",
+    "nature",
+    "culture"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Romanian leu (lei)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Snow, skiing"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Snow, skiing"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Thaw"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Green"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas market"
+    }
+  },
+  "when_to_go": "May, June and September are mild and green, good for castles and mountain walks. July and August are warm but busier. Winter is cold and snowy, with skiing at nearby Poiana Brașov and a Christmas market in the main square.",
+  "things": [
+    {
+      "name": "Bran Castle",
+      "tag": "Ticketed",
+      "blurb": "The castle linked to the Dracula story, with narrow stairs and secret passages.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Libearty Bear Sanctuary",
+      "tag": "Tour",
+      "blurb": "Rescued brown bears roam large forest enclosures near Zărnești. Visits are guided.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tâmpa cable car",
+      "tag": "Ticketed",
+      "blurb": "Ride up the mountain above the old town to the big Brașov sign and the views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Black Church",
+      "tag": "Indoors",
+      "blurb": "A huge Gothic church with a famous collection of old Turkish rugs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Râșnov Citadel",
+      "tag": "Ticketed",
+      "blurb": "A hilltop fortress with walls and towers to explore, a short drive from Brașov.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rope Street",
+      "tag": "Free",
+      "blurb": "One of the narrowest streets in Europe, a short walk from the main square, Piața Sfatului.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Brașov good for a family holiday?",
+      "answer": "Yes. The old town is compact and pretty, castles are close by and prices are low. It works in summer for walks and in winter for snow."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights covers the old town, Bran, Râșnov and the bear sanctuary."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Bucharest, about three hours, then take the train or drive for around three hours. British passport holders don't need a visa for short stays."
+    },
+    {
+      "question": "Will we see wild bears?",
+      "answer": "Brown bears live in the forests around Brașov and sometimes come close to town. Never approach or feed them. The bear sanctuary is the safe way to see them."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kraków",
+      "code": "KRK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Prague",
+      "code": "PRG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Ljubljana",
+      "code": "LJU",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Tbilisi",
+      "code": "TBS",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

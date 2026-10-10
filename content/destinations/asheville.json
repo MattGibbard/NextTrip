@@ -1,0 +1,178 @@
+{
+  "name": "Asheville",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Asheville",
+  "intro": "A mountain town of craft breweries, music and the grand Biltmore house. Here's what Asheville is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "AVL",
+  "holiday_types": [
+    "nature",
+    "road-trip",
+    "food"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Some roads and trails are still being repaired after the 2024 floods, so check before you go. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring blooms"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, storms"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, storms"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "May, June and October are the best months. October brings bright autumn colour in the mountains, but it's busy. July and August are warm and humid, with afternoon thunderstorms, though it's cooler higher up. In winter, parts of the Blue Ridge Parkway close for ice and snow.",
+  "things": [
+    {
+      "name": "Biltmore Estate",
+      "tag": "Ticketed",
+      "blurb": "America's largest house, with huge gardens, a farmyard for children and bikes to hire on the grounds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Ridge Parkway",
+      "tag": "Free",
+      "blurb": "A slow, winding mountain road with viewpoints and short walks. Sections close in bad weather.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Mitchell State Park",
+      "tag": "Free",
+      "blurb": "Drive almost to the top of the highest peak in the eastern US and walk the last short stretch.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Western North Carolina Nature Center",
+      "tag": "Ticketed",
+      "blurb": "A small zoo of local animals, including red wolves, otters and black bears.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "North Carolina Arboretum",
+      "tag": "Ticketed",
+      "blurb": "Gardens, easy trails and a bonsai collection, with a parking fee rather than a ticket.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Downtown Asheville",
+      "tag": "Free",
+      "blurb": "Art deco streets, buskers, bookshops and ice cream, all easy to walk.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Asheville good for a family holiday?",
+      "answer": "Yes, as part of a road trip. There's plenty of easy hiking, waterfalls and the Biltmore, and the food scene is good. Much of the nightlife is breweries, so plan days around the outdoors."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three to five nights, often paired with the Great Smoky Mountains or Charleston."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are no direct flights. Fly to Charlotte or Atlanta, then drive two to three and a half hours or connect to Asheville's airport."
+    },
+    {
+      "question": "Did the 2024 floods affect Asheville?",
+      "answer": "Yes. Hurricane Helene caused serious damage in 2024. Most of the city and the Biltmore have reopened, but some trails, roads and riverside areas are still being repaired, so check before you travel."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Yellowstone",
+      "code": "BZN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "New Orleans",
+      "code": "MSY",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Washington, D.C.",
+      "code": "IAD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Acadia National Park",
+      "code": "BHB",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

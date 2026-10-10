@@ -1,0 +1,178 @@
+{
+  "name": "Hallstatt",
+  "published": true,
+  "country": "AT",
+  "title": "Holidays in Hallstatt",
+  "intro": "A painted lakeside village under the Alps, with salt-mine slides and ice caves. Here's what Hallstatt is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "SZG",
+  "holiday_types": [
+    "nature",
+    "culture",
+    "adventure"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, snowy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, snowy"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Thawing"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Fresh, green"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild, calmer"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colours"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Advent"
+    }
+  },
+  "when_to_go": "June and September are warm enough for the lake and hiking, with fewer coach groups than high summer. July and August are lovely but the village gets very crowded in the middle of the day. Some caves and cable cars only open from spring to autumn, so check before you go in winter.",
+  "things": [
+    {
+      "name": "Hallstatt Salt Mine",
+      "tag": "Tour",
+      "blurb": "Ride the funicular up, then whizz down the wooden miners' slides deep inside the mountain.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Skywalk viewing platform",
+      "tag": "Outdoors",
+      "blurb": "A platform hanging out over the cliff at the top of the funicular, with views down to the lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dachstein Giant Ice Cave",
+      "tag": "Tour",
+      "blurb": "Take the cable car from Obertraun to a cave full of frozen waterfalls. Bring warm layers, even in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "5fingers",
+      "tag": "Outdoors",
+      "blurb": "A viewing platform shaped like a hand, sticking out over a huge drop on the Krippenstein.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Boat hire on Lake Hallstatt",
+      "tag": "Ticketed",
+      "blurb": "Hire an electric or rowing boat for the best view of the village from the water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gosausee",
+      "tag": "Free",
+      "blurb": "A flat walk round a clear lake with the Dachstein glacier behind it, about half an hour's drive away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Hallstatt good for a family holiday?",
+      "answer": "Yes, especially for families who like the outdoors. The salt mine, ice caves and lakes are great for children. Stay overnight to enjoy it once the day-trippers leave."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three to five nights covers the salt mine, the ice caves and a lake day. Stay longer to explore the wider Salzkammergut."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Salzburg, then drive about an hour and a half. You can also go by train to Hallstatt station and take the little ferry across the lake."
+    },
+    {
+      "question": "Is Hallstatt too crowded?",
+      "answer": "It can be in summer, when coach groups arrive in the middle of the day. Early mornings and evenings are much calmer, and nearby villages like Obertraun make a quieter base."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Annecy",
+      "code": "GVA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Vienna",
+      "code": "VIE",
+      "label": "🏙️ City break"
+    }
+  ]
+}

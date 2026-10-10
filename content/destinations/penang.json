@@ -1,0 +1,178 @@
+{
+  "name": "Penang",
+  "published": true,
+  "country": "MY",
+  "title": "Holidays in Penang",
+  "intro": "Street art, clan houses and some of Asia's best street food in George Town. Here's what Penang is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "PEN",
+  "holiday_types": [
+    "food",
+    "city",
+    "culture"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 to 8 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Malaysian ringgit (RM)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Fill in the Malaysia Digital Arrival Card online before you land. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, sunny"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, humid"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, humid"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Wet"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Wettest"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Wet"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Drier"
+    }
+  },
+  "when_to_go": "December to February is the driest and most comfortable time. It's hot and humid all year, with short tropical downpours most afternoons. September to November is the wettest stretch. Chinese New Year, in January or February, is lively but busy.",
+  "things": [
+    {
+      "name": "George Town street art",
+      "tag": "Free",
+      "blurb": "Hunt for the famous murals and iron cartoons around the old town. Children love the scavenger hunt.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Penang Hill",
+      "tag": "Ticketed",
+      "blurb": "A funicular railway climbs to cooler air, forest walks and views over the island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kek Lok Si Temple",
+      "tag": "Free",
+      "blurb": "A huge hillside temple with a tall pagoda, a giant statue of Kuan Yin and a pond of turtles.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Entopia",
+      "tag": "Rainy day",
+      "blurb": "A butterfly garden and indoor insect centre with lots of hands-on displays.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "ESCAPE Penang",
+      "tag": "Ticketed",
+      "blurb": "An outdoor adventure park with ziplines, rope courses and one of the world's longest water slides.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Penang National Park",
+      "tag": "Outdoors",
+      "blurb": "Jungle trails and quiet beaches in the north-west, with boats to Monkey Beach.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Penang good for a family holiday?",
+      "answer": "Yes. It's easy, safe and English is widely spoken. The food is cheap and varied, and there are beaches at Batu Ferringhi when the city gets too hot. Pavements in George Town are uneven, so a sling beats a pushchair."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights gives time for George Town, Penang Hill and a few beach days. Add Langkawi or Kuala Lumpur for a longer trip."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are no direct flights. Fly via Singapore, Kuala Lumpur, Doha or Dubai. British passport holders don't need a visa for short stays."
+    },
+    {
+      "question": "Where should families eat?",
+      "answer": "Hawker centres and street stalls are cheap and safe at busy spots. Try char kway teow, satay and cendol, a shaved ice pudding. Gurney Drive and New Lane are good for an evening graze."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Singapore",
+      "code": "SIN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Borneo",
+      "code": "BKI",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Hoi An",
+      "code": "DAD",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Bangkok",
+      "code": "BKK",
+      "label": "🍷 Food & drink"
+    }
+  ]
+}

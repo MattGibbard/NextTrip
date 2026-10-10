@@ -1,0 +1,178 @@
+{
+  "name": "Tofino",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Tofino",
+  "intro": "Surf beaches, ancient rainforest and bears foraging on the shore at low tide. Here's what Tofino is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "YAZ",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "beach"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need a Parks Canada pass to stop in Pacific Rim National Park Reserve. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Storm season"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Stormy"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Grey whales"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Grey whales"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warmer"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Driest"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Calm, warm"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Rains return"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Stormy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Storm season"
+    }
+  },
+  "when_to_go": "July to September is driest and warmest, and the best time for boat trips. Grey whales pass in March and April. From October to February it's very wet, and big winter storms draw people to watch the waves. The sea is cold all year, so surfers wear wetsuits.",
+  "things": [
+    {
+      "name": "Long Beach",
+      "tag": "Outdoors",
+      "blurb": "A huge sandy beach in Pacific Rim National Park, with rock pools and gentle waves for beginners.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Surf lessons",
+      "tag": "Ticketed",
+      "blurb": "Several schools teach children and adults, with wetsuits included.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bear watching",
+      "tag": "Tour",
+      "blurb": "A boat trip into quiet inlets to watch black bears turn over rocks on the shore.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Tour",
+      "blurb": "Look for grey and humpback whales, sea otters and sea lions.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rainforest Trail",
+      "tag": "Outdoors",
+      "blurb": "Two short boardwalk loops through giant old cedars and hemlocks in the national park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hot Springs Cove",
+      "tag": "Tour",
+      "blurb": "A boat or floatplane ride, then a boardwalk to natural hot pools by the sea.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Tofino good for a family holiday?",
+      "answer": "Yes, for outdoorsy families. There are easy beaches, short trails and lots of wildlife. It's not a warm beach holiday, as the sea is cold and rain is common even in summer."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights, usually as part of a longer trip around Vancouver Island or British Columbia."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly direct to Vancouver, then take the ferry to Vancouver Island and drive about three hours across the island. Small planes also fly to Tofino from Vancouver."
+    },
+    {
+      "question": "Is it expensive?",
+      "answer": "Yes, especially in summer. Book accommodation early, and look at Ucluelet, just down the coast, for cheaper stays."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Vancouver",
+      "code": "YVR",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Whistler",
+      "code": "YVR",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Banff",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Tasmania",
+      "code": "HBA",
+      "label": "🚗 Road trip"
+    }
+  ]
+}

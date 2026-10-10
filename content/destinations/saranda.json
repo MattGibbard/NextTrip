@@ -1,0 +1,177 @@
+{
+  "name": "Saranda",
+  "published": true,
+  "country": "AL",
+  "title": "Holidays in Saranda",
+  "intro": "A palm-lined seafront, Roman ruins and clear blue water looking across to Corfu. Here's what Saranda is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "TIA",
+  "holiday_types": [
+    "beach",
+    "culture"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Albanian lek (L)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busiest"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool"
+    }
+  },
+  "when_to_go": "June and September are best, with warm seas and fewer crowds. July and August are hot, and Ksamil's beaches get very busy. Spring and autumn are good for Butrint and day trips.",
+  "things": [
+    {
+      "name": "Butrint National Park",
+      "tag": "Ticketed",
+      "blurb": "Greek, Roman and Venetian ruins in woodland by a lagoon, with plenty of space to explore.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ksamil",
+      "tag": "Outdoors",
+      "blurb": "Small white beaches and islets you can swim or paddle out to. Sunbeds are usually paid.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Eye",
+      "tag": "Outdoors",
+      "blurb": "A deep spring of startling blue water in the woods, a short walk from the car park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lëkurësi Castle",
+      "tag": "Free",
+      "blurb": "A hilltop castle above town, best at sunset for the view over Saranda and Corfu.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Saranda promenade",
+      "tag": "Free",
+      "blurb": "A long seafront walk lined with cafés, busy with families in the evening.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gjirokastër",
+      "tag": "Tour",
+      "blurb": "A stone-roofed old town with a huge castle, about an hour and a half inland.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Saranda good for a family holiday?",
+      "answer": "Yes, for good-value beach holidays with some history. Food and stays cost much less than nearby Greece. Some beaches are pebbly and the town is busy in summer."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week gives time for the beaches, Butrint, the Blue Eye and a day in Gjirokastër."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Many families fly to Corfu and take the ferry across, which takes from about 30 minutes. You can also fly to Tirana, around four to five hours away by road. British passport holders don't need a visa for short stays."
+    },
+    {
+      "question": "Is Albania safe for families?",
+      "answer": "Most visits are trouble-free. Driving is the biggest worry, as roads can be poor and local driving is fast, so take care or use a driver."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Kefalonia",
+      "code": "EFL",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lake Ohrid",
+      "code": "OHD",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

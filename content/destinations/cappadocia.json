@@ -1,0 +1,178 @@
+{
+  "name": "Cappadocia",
+  "published": true,
+  "country": "TR",
+  "title": "Holidays in Cappadocia",
+  "intro": "Hundreds of hot-air balloons drift over fairy chimneys and cave houses at dawn. Here's what Cappadocia is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "NAV",
+  "holiday_types": [
+    "adventure",
+    "nature",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Turkish lira (₺)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check the latest travel advice and entry rules for Turkey on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold"
+    }
+  },
+  "when_to_go": "May, June, September and October bring warm days, cool nights and the calmest air for balloon flights. July and August are hot in the middle of the day. Winter can bring snow, which looks lovely but cancels more balloon flights.",
+  "things": [
+    {
+      "name": "Hot-air balloon flight",
+      "tag": "Tour",
+      "blurb": "Float over the valleys at sunrise. Most companies take children from about six years old.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Göreme Open-Air Museum",
+      "tag": "Ticketed",
+      "blurb": "Rock-cut churches with painted walls, carved out by monks centuries ago.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Derinkuyu Underground City",
+      "tag": "Ticketed",
+      "blurb": "Tunnels and rooms many levels deep where people once hid. Not for anyone who dislikes tight spaces.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rose Valley",
+      "tag": "Free",
+      "blurb": "An easy walk among pink rock and cave churches, best near sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Uçhisar Castle",
+      "tag": "Ticketed",
+      "blurb": "A tall rock riddled with rooms. Climb to the top for the best view in Cappadocia.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pottery in Avanos",
+      "tag": "Indoors",
+      "blurb": "Watch potters at the wheel and have a go yourselves in this riverside town.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Cappadocia good for a family holiday?",
+      "answer": "Yes. Children love the cave hotels, underground cities and the balloons at dawn. Watching the balloons from the ground is free and nearly as magical."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights gives you spare mornings in case a balloon flight is cancelled by wind."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Istanbul, then take a short domestic flight to Nevşehir or Kayseri and transfer to Göreme. British passport holders don't need a visa for short stays."
+    },
+    {
+      "question": "Can children go on a balloon flight?",
+      "answer": "Most operators take children from about six, and some have a height limit so children can see over the basket. Book for your first morning so there's time to rebook if it's cancelled."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Jordan",
+      "code": "AMM",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Kaş",
+      "code": "DLM",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Tbilisi",
+      "code": "TBS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Marrakech",
+      "code": "RAK",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

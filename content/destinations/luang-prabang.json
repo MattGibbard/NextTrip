@@ -1,0 +1,178 @@
+{
+  "name": "Luang Prabang",
+  "published": true,
+  "country": "LA",
+  "title": "Holidays in Luang Prabang",
+  "intro": "Saffron-robed monks, golden temples and turquoise waterfall pools where two rivers meet. Here's what Luang Prabang is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "LPQ",
+  "holiday_types": [
+    "culture",
+    "nature",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Lao kip (₭)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Visa on arrival or eVisa",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B / C / E / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Bring US dollars to pay for a visa on arrival. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Cool, dry"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Hot, hazy"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Hot, New Year"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Rains start"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Rainy, green"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Wettest"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Rains ease"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Dry, fresh"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Cool, dry"
+    }
+  },
+  "when_to_go": "November to February is dry, sunny and comfortable, with cool mornings. March and April are hot, and smoke from farm burning can make the air hazy. The rainy season runs from May to October. It's green and quiet then, but the waterfalls can turn muddy.",
+  "things": [
+    {
+      "name": "Kuang Si Falls",
+      "tag": "Ticketed",
+      "blurb": "Tiers of milky blue pools in the forest, with shallow spots for paddling and a bear rescue centre by the entrance.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Morning alms giving",
+      "tag": "Free",
+      "blurb": "Monks walk the streets at dawn to collect rice. Watch quietly from across the road and don't use flash.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Night market",
+      "tag": "Free",
+      "blurb": "A long, calm market of crafts and snacks on the main street every evening, easy with a pushchair.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Phousi",
+      "tag": "Ticketed",
+      "blurb": "Climb a few hundred steps to a small temple for sunset views over the town and the Mekong.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Royal Palace Museum",
+      "tag": "Indoors",
+      "blurb": "The old king's palace, with a golden temple in the grounds. Shoulders and knees must be covered.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pak Ou Caves",
+      "tag": "Tour",
+      "blurb": "A slow boat up the Mekong to two caves filled with thousands of small Buddha statues.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Luang Prabang good for a family holiday?",
+      "answer": "Yes, for curious children who are happy with a gentle pace. The town is small, safe and walkable, and the waterfalls are a big hit. There isn't much in the way of parks or play areas, so mix temples with swims."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights covers the town, Kuang Si Falls and a river trip. It works well as part of a longer trip to Thailand or Vietnam."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are no direct flights. Fly via Bangkok, Hanoi or Singapore. The fast train from Vientiane takes about two hours."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Yes. British passport holders can get a visa on arrival at the airport or apply for an eVisa before travelling. Passports need at least six months left."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Hoi An",
+      "code": "DAD",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Ninh Binh",
+      "code": "HAN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Bangkok",
+      "code": "BKK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

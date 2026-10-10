@@ -1,0 +1,178 @@
+{
+  "name": "Syracuse",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Syracuse",
+  "intro": "A Greek theatre, an island old town and sandy beaches on Sicily's south-east coast. Here's what Syracuse is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "CTA",
+  "holiday_types": [
+    "culture",
+    "beach",
+    "food"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sea warming"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild"
+    }
+  },
+  "when_to_go": "May, June, September and October are warm with a pleasant sea for swimming. July and August are very hot and the beaches are busy. Winter is mild but some beach places close.",
+  "things": [
+    {
+      "name": "Ortigia",
+      "tag": "Free",
+      "blurb": "The island old town, with lanes, a lovely cathedral square and a freshwater spring full of papyrus.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Neapolis Archaeological Park",
+      "tag": "Ticketed",
+      "blurb": "A huge Greek theatre and the Ear of Dionysius, a cave where whispers echo.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ortigia market",
+      "tag": "Free",
+      "blurb": "A morning street market with fish, fruit and stalls for sandwich fillings.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fontane Bianche",
+      "tag": "Free",
+      "blurb": "A sandy beach with shallow, clear water south of the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vendicari Nature Reserve",
+      "tag": "Outdoors",
+      "blurb": "Wild beaches, flamingos on the lagoons and an old tuna fishery.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Etna day trip",
+      "tag": "Tour",
+      "blurb": "Walk on old craters on Europe's biggest active volcano.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Syracuse good for a family holiday?",
+      "answer": "Yes. It mixes Greek ruins, easy beaches and great food, and Ortigia is small enough to walk. Midsummer afternoons are very hot, so plan a long break."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights gives time for Ortigia, the Greek theatre, a few beach days and Etna."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Catania, about three hours, then it's around an hour to Syracuse by car or bus. British passport holders don't need a visa for short stays."
+    },
+    {
+      "question": "Where can families swim?",
+      "answer": "Ortigia has rocky swimming spots with ladders. For sand and shallow water, head south to Fontane Bianche or Arenella."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Malta",
+      "code": "MLA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Rome",
+      "code": "FCO",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Paphos",
+      "code": "PFO",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

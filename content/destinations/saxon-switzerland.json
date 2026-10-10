@@ -1,0 +1,177 @@
+{
+  "name": "Saxon Switzerland",
+  "published": true,
+  "country": "DE",
+  "title": "Holidays in Saxon Switzerland",
+  "intro": "Sandstone towers, wooden ladders and castle ruins high above the River Elbe. Here's what Saxon Switzerland is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "DRS",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Fresh and green"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Golden light"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "May, June and September are best for walking, with mild days and fewer people on the trails. July and August are warm but the famous viewpoints get busy, so start early. December is cold, but Dresden's Christmas markets are close by.",
+  "things": [
+    {
+      "name": "Bastei Bridge",
+      "tag": "Free",
+      "blurb": "A stone bridge between rock towers with huge views down to the Elbe. Go early or late to avoid the crowds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Königstein Fortress",
+      "tag": "Ticketed",
+      "blurb": "A vast hilltop fortress with walls to walk, cannons and a deep well. There's a lift up from the car park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paddle steamer on the Elbe",
+      "tag": "Ticketed",
+      "blurb": "Historic paddle steamers run between Dresden and the national park, an easy way to rest little legs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kirnitzschtal tram",
+      "tag": "Ticketed",
+      "blurb": "A small old tram from Bad Schandau up the valley to the Lichtenhain Waterfall.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Schrammsteine viewpoint",
+      "tag": "Outdoors",
+      "blurb": "A classic hike with metal ladders and steps to a rocky ridge. Best for confident older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Toskana Therme Bad Schandau",
+      "tag": "Rainy day",
+      "blurb": "Warm saltwater pools by the river, good for a wet afternoon.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Saxon Switzerland good for a family holiday?",
+      "answer": "Yes, for families who like walking. There are short, well-marked trails to big viewpoints, plus castles, boats and a tram. Some routes have ladders and drops, so pick trails to suit your children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights gives time for the main viewpoints, a fortress and a boat trip, with a day in Dresden."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Dresden, Berlin or Prague, then take the train. The S-Bahn from Dresden reaches Bad Schandau in under an hour. British passport holders don't need a visa for short stays."
+    },
+    {
+      "question": "Is the hiking safe for children?",
+      "answer": "The main paths are well kept, but some have steep steps, ladders and unfenced edges. Hold hands near drops and leave the iron ladder routes until children are older."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Prague",
+      "code": "PRG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Berlin",
+      "code": "BER",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Hallstatt",
+      "code": "SZG",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

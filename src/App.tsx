@@ -3,9 +3,11 @@ import type { FamilyData, Session } from "../shared/types";
 import { api, forgetLegacyPerson, setSignedOutHandler } from "./api";
 import { HomePage, JoinPage, PersonLinkPage, SignInPage } from "./views/Welcome";
 import { LegalView, legalPage } from "./views/Legal";
+import { CreatorsPage } from "./views/Creators";
 import { NotFound } from "./views/Welcome";
 import { PAGES, isPrivatePath, publicPage } from "../shared/seo";
 import { findDestination, searchTitle } from "./destinations";
+import { CREATORS } from "./site";
 import { GuideView } from "./views/GuideView";
 import { followInPlace, isGuidePath } from "./navigate";
 import { load, save } from "./storage";
@@ -58,6 +60,7 @@ export function App() {
 
   const legal = legalPage(path);
   if (legal) return <LegalView page={legal} />;
+  if (publicPage(path) === "creators") return <CreatorsPage />;
   // Signed-in families see the Guides inside the app, so moving between them is instant.
   // index.html clears the visitors' version before the first paint so it doesn't flash.
   if (isGuidePath(path) && !load(SIGNED_IN, false)) return <GuideView path={path} />;
@@ -69,6 +72,7 @@ export function App() {
 function pageTitle(path: string): string {
   const page = publicPage(path);
   if (page === "destinations") return PAGES.destinations.title;
+  if (page === "creators") return CREATORS.seo_title || PAGES.creators.title;
   const destination = page?.startsWith("destination:") ? findDestination(page.slice("destination:".length)) : undefined;
   return destination ? searchTitle(destination) : "somewhere🎉";
 }

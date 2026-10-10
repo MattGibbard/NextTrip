@@ -498,7 +498,7 @@ collections:
 
   - name: site
     label: Site
-    description: The home page's words, the announcement banner across the top of every page, and the welcome steps new people see when they first sign in.
+    description: The home page's words, the announcement banner across the top of every page, the creators page and the creators featured on the home page, and the welcome steps new people see when they first sign in.
     format: json
     editor:
       preview: false
@@ -581,6 +581,95 @@ collections:
               - { label: Strip label, name: strip, widget: string, required: false }
               - { label: Heading, name: heading, widget: string }
               - { label: Text, name: lead, widget: text, required: false }
+      - name: featured_creators
+        label: Featured creators (home page)
+        file: content/site/featured-creators.json
+        description: Creators who endorse us, shown on the home page above the sign-up box and on the creators page. The section stays hidden until at least one creator is added and switched on.
+        fields:
+          - { label: Small heading, name: kicker, widget: string, required: false }
+          - { label: Heading, name: heading, widget: string, required: false }
+          - { label: Link to the creators page, name: link_text, widget: string, required: false, hint: "Under the cards on the home page. Leave empty for no link." }
+          - label: Creators
+            name: creators
+            widget: list
+            required: false
+            summary: "{{name}} (@{{handle}})"
+            fields:
+              - { label: Show on the site, name: show, widget: boolean, default: true, hint: "Untick to take them down without losing their details." }
+              - { label: Name, name: name, widget: string }
+              - { label: Instagram handle, name: handle, widget: string, hint: "Without the @, e.g. somewhereparty" }
+              - { label: Link, name: url, widget: string, required: false, hint: "Optional. A post about us, starting https://. Leave empty to link to their Instagram profile." }
+              - { label: Photo, name: photo, widget: image, required: false, media_folder: /public/images/creators, public_folder: /images/creators, hint: "Square works best. Leave empty to show their first initial." }
+              - { label: Quote, name: quote, widget: text, required: false, hint: "A sentence or two about somewhere🎉, in their words." }
+
+      - name: creators
+        label: Creators page
+        file: content/site/creators.json
+        description: The page at somewhere.party/creators for social media creators. It's linked from the footer and the sitemap, not the main menu.
+        fields:
+          - { label: Google title, name: seo_title, widget: string, hint: "The page title in search results and browser tabs. About 60 characters." }
+          - { label: Google description, name: seo_description, widget: text, hint: "Shown under the title in search results, cut off after about 155 characters." }
+          - label: Top of the page
+            name: hero
+            widget: object
+            fields:
+              - { label: Small heading, name: kicker, widget: string, required: false }
+              - { label: Main heading, name: heading, widget: string }
+              - { label: Introduction, name: lead, widget: text, required: false }
+              - { label: Instagram button, name: button, widget: string, required: false, hint: "Links to our Instagram profile." }
+          - label: Who we're looking for
+            name: look_for
+            widget: object
+            fields:
+              - { label: Small heading, name: kicker, widget: string, required: false }
+              - { label: Heading, name: heading, widget: string, required: false }
+              - label: Reasons
+                name: reasons
+                widget: list
+                required: false
+                summary: "{{title}}"
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
+          - label: How it works
+            name: how
+            widget: object
+            fields:
+              - { label: Board label, name: label, widget: string, required: false }
+              - { label: Heading, name: heading, widget: string }
+              - label: Steps
+                name: steps
+                widget: list
+                summary: "{{title}}"
+                hint: The last step's status lights up on the board.
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: text, widget: text, required: false }
+                  - { label: Status, name: status, widget: string, required: false, hint: "e.g. Boarding, Final call" }
+          - label: Call to action
+            name: cta
+            widget: object
+            fields:
+              - { label: Strip label, name: strip, widget: string, required: false }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Text, name: lead, widget: text, required: false }
+              - { label: Instagram button, name: button, widget: string, required: false }
+          - label: Terms and conditions
+            name: terms
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string, required: false }
+              - { label: Introduction, name: lead, widget: text, required: false }
+              - { label: Last updated, name: updated, widget: string, required: false, hint: "e.g. 10 October 2026. Change it whenever the terms change." }
+              - label: Sections
+                name: items
+                widget: list
+                summary: "{{title}}"
+                hint: Each section opens and closes on the page. Leave a blank line between paragraphs.
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
+
       - name: onboarding
         label: Welcome steps
         file: content/site/onboarding.json

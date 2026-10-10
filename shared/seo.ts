@@ -7,7 +7,7 @@ export const SITE = "https://somewhere.party";
 export const OLD_HOST = "nexttrip.matt-gibbard.workers.dev";
 
 /** The fixed pages. */
-export type FixedPage = "home" | "privacy" | "terms" | "notfound" | "destinations";
+export type FixedPage = "home" | "privacy" | "terms" | "notfound" | "destinations" | "creators";
 /** Every prerendered page: the fixed ones plus one per destination guide, as "destination:new-york". */
 export type PublicPage = FixedPage | `destination:${string}`;
 
@@ -50,6 +50,12 @@ export const PAGES: Record<FixedPage, Meta> = {
       "Holiday destination guides with when to go, how long to stay and what to do there. Find somewhere new and add it to your ideas.",
     index: true,
   },
+  creators: {
+    path: "/creators",
+    title: "Work with us: creators | somewhere🎉",
+    description: "Do you make travel or family content and love somewhere🎉? Message us on Instagram to be featured on our home page.",
+    index: true,
+  },
   notfound: {
     path: "/404",
     title: "Page not found | somewhere🎉",
@@ -61,7 +67,7 @@ export const PAGES: Record<FixedPage, Meta> = {
 /** Which prerendered page an address shows, if any. Family links and the app itself are never prerendered. */
 export function publicPage(pathname: string): PublicPage | null {
   if (pathname === "/") return "home";
-  const m = pathname.match(/^\/(privacy|terms|destinations)\/?$/);
+  const m = pathname.match(/^\/(privacy|terms|destinations|creators)\/?$/);
   if (m) return m[1] as FixedPage;
   const d = pathname.match(/^\/destinations\/([a-z0-9-]+)\/?$/);
   return d ? `destination:${d[1]}` : null;
@@ -83,7 +89,7 @@ function esc(s: string): string {
 
 /** The title, description, canonical address and share-preview tags for a fixed page's <head>. */
 export function headTags(page: FixedPage, words?: { title?: string; description?: string }): string {
-  // The home page's title and description can be changed in the editor at /admin.
+  // The home and creators pages' titles and descriptions can be changed in the editor at /admin.
   const m = { ...PAGES[page], ...(words?.title ? { title: words.title } : {}), ...(words?.description ? { description: words.description } : {}) };
   return metaTags(page === "home" ? { ...m, jsonLd: structuredData(m.description) } : m);
 }

@@ -1,0 +1,70 @@
+{
+  "seo_title": "Work with us: creators | somewhere🎉",
+  "seo_description": "Do you make travel or family content and love somewhere🎉? Message us on Instagram to be featured on our home page as a creator who plans with us.",
+  "hero": {
+    "kicker": "Creators · Now boarding",
+    "heading": "Share the fun, and get featured on our home page.",
+    "lead": "We're a small, free family holiday planner, and we'd love to grow with creators who get what we're about: fair, fun decisions and holidays everyone's excited for. If you use somewhere🎉 or want to tell your followers about it, we'd like to feature you on our home page.",
+    "button": "Message us on Instagram"
+  },
+  "look_for": {
+    "kicker": "Who we'd love to hear from",
+    "heading": "Like-minded creators who want to have fun",
+    "reasons": [
+      { "title": "You actually use it", "text": "You've planned a holiday with somewhere🎉, or you're about to. Real draws, real arguments about Lisbon versus Lapland, real trips." },
+      { "title": "Your audience plans holidays", "text": "Families, couples, friends who travel together, travel lovers. Any size of account is welcome, from a few hundred followers to a few hundred thousand." },
+      { "title": "You keep it fun and friendly", "text": "Your content is warm, honest and suitable for families. No hard sell needed: just show how you decide where to go next." }
+    ]
+  },
+  "how": {
+    "label": "Departures · How it works",
+    "heading": "From your feed to our home page, in four steps.",
+    "steps": [
+      { "title": "Plan a trip with somewhere🎉", "text": "Sign up free, add your ideas and run a draw with your family or travel crew.", "status": "Checked in" },
+      { "title": "Share it with your followers", "text": "Post, reel or story: however you like to tell the story of how you picked your next holiday.", "status": "Boarding" },
+      { "title": "Send us a DM on Instagram", "text": "Message @somewhereparty with your handle and a link to your post, and tell us a little about you.", "status": "Final call" },
+      { "title": "Get featured on our home page", "text": "If it's a good fit, we'll add you, your photo and a few words about us to the home page.", "status": "Now departing" }
+    ]
+  },
+  "cta": {
+    "strip": "Final call · Creators",
+    "heading": "Fancy coming aboard?",
+    "lead": "Send us a message on Instagram and we'll take it from there. It's free, there's no contract to sign, and you can ask to be taken off the page at any time.",
+    "button": "Message us on Instagram"
+  },
+  "terms": {
+    "heading": "The small print",
+    "lead": "The terms for being featured as a creator. They sit alongside our terms of use and privacy policy.",
+    "updated": "10 October 2026",
+    "items": [
+      {
+        "title": "Who can take part",
+        "text": "You need to be 18 or over and to have used somewhere🎉 or genuinely want to recommend it. There's no minimum number of followers. Your content needs to be suitable for families: nothing offensive, misleading or unlawful."
+      },
+      {
+        "title": "Being featured",
+        "text": "We choose who's featured, and we may say no without giving a reason. Sending us a message doesn't guarantee a place on the page.\n\nWe can remove a feature at any time, for any reason, without notice. Being featured is the only benefit: there's no payment, free extras or other reward unless we've agreed it with you in writing first."
+      },
+      {
+        "title": "Using your name, photo and words",
+        "text": "By taking part you give us permission, free of charge, to show your name, handle, profile photo, a short quote and links to your posts on somewhere.party and on our own social media accounts while you're featured. You confirm you have the right to let us use them.\n\nYou can ask us to take your feature down at any time by messaging us on Instagram. We'll remove it from the site as soon as we reasonably can, usually within 7 days. Posts we've already shared on social media may stay up."
+      },
+      {
+        "title": "Posting about us",
+        "text": "Say what you really think, and keep what you say about somewhere🎉 accurate. Where UK advertising rules (from the ASA and CMA) or the platform's own rules need it, label your posts clearly, for example with #ad or #gifted. You're responsible for your own posts and for following those rules."
+      },
+      {
+        "title": "Our relationship",
+        "text": "Being featured doesn't make you our employee, partner or agent. You can't speak for somewhere🎉, make promises on our behalf or suggest we've endorsed anything other than your feature on our page."
+      },
+      {
+        "title": "Changes and ending",
+        "text": "We may change these terms, or end the creator programme, at any time. The latest version is always on this page, with the date it was last updated."
+      },
+      {
+        "title": "Liability and law",
+        "text": "As far as the law allows, we're not liable for any loss from taking part. Nothing here limits rights you have that can't be excluded by law. Our terms of use also apply, and these terms are under the law of England and Wales."
+      }
+    ]
+  }
+}

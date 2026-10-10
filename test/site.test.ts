@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { HOME, ONBOARDING, bannerEnded, bannerKey, readBanner, readHome, readOnboarding } from "../src/site";
+import { CREATORS, HOME, ONBOARDING, bannerEnded, bannerKey, readBanner, readCreators, readFeatured, readHome, readOnboarding } from "../src/site";
 
 describe("home page words", () => {
   it("come from the editor's file", () => {
@@ -57,5 +57,47 @@ describe("welcome steps' words", () => {
     expect(o.welcome.steps).toEqual(ONBOARDING.welcome.steps);
     expect(o.idea.button).toBe("Add it");
     expect(o.airport.skip).toBe("We don't fly. Skip this");
+  });
+});
+
+describe("creators page", () => {
+  it("comes from the editor's file, terms included", () => {
+    expect(CREATORS.hero.heading).toContain("get featured");
+    expect(CREATORS.how.steps).toHaveLength(4);
+    expect(CREATORS.terms.items.map((t) => t.title)).toContain("Using your name, photo and words");
+  });
+
+  it("keeps a button label when the editor empties it", () => {
+    expect(readCreators({}).hero.button).toBe("Message us on Instagram");
+    expect(readCreators({ terms: { items: [{ title: "Only a title" }] } }).terms.items).toEqual([]);
+  });
+});
+
+describe("featured creators", () => {
+  it("shows nobody until someone is added", () => {
+    expect(readFeatured({ creators: [] }).creators).toEqual([]);
+  });
+
+  it("needs a name and a real handle, and leaves out anyone switched off", () => {
+    const f = readFeatured({
+      creators: [
+        { name: "Sam", handle: "@sam.travels" },
+        { name: "Off", handle: "off", show: false },
+        { name: "", handle: "noname" },
+        { name: "Bad", handle: "not a handle" },
+      ],
+    });
+    expect(f.creators).toEqual([{ name: "Sam", handle: "sam.travels", url: "https://instagram.com/sam.travels", photo: "", quote: "" }]);
+  });
+
+  it("only links to https addresses and only shows photos uploaded to the site", () => {
+    const [c] = readFeatured({
+      creators: [{ name: "Sam", handle: "sam", url: "javascript:alert(1)", photo: "https://example.com/x.jpg" }],
+    }).creators;
+    expect(c.url).toBe("https://instagram.com/sam");
+    expect(c.photo).toBe("");
+    const [d] = readFeatured({ creators: [{ name: "Sam", handle: "sam", url: "https://instagram.com/p/abc", photo: "/images/creators/sam.webp" }] }).creators;
+    expect(d.url).toBe("https://instagram.com/p/abc");
+    expect(d.photo).toBe("/images/creators/sam.webp");
   });
 });

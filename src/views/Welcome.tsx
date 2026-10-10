@@ -77,6 +77,25 @@ export function SiteHeader({ sections = false, guide = false }: { sections?: boo
   );
 }
 
+/** Our social accounts, linked from the footer on public pages and from Settings. */
+const SOCIAL_LINKS = [
+  { name: "Instagram", href: "https://instagram.com/somewhereparty" },
+  { name: "TikTok", href: "https://www.tiktok.com/@somewhereparty" },
+  { name: "Pinterest", href: "https://pinterest.com/somewhereparty" },
+];
+
+function SocialLinks() {
+  return (
+    <>
+      {SOCIAL_LINKS.map((s) => (
+        <a key={s.name} href={s.href} target="_blank" rel="noopener me">
+          {s.name}
+        </a>
+      ))}
+    </>
+  );
+}
+
 export function SiteFooter({ sections = false }: { sections?: boolean }) {
   return (
     <footer className="lp-foot">
@@ -100,6 +119,12 @@ export function SiteFooter({ sections = false }: { sections?: boolean }) {
             </div>
           </nav>
         )}
+        <nav aria-label="Follow us" className="lp-foot-follow">
+          <span className="lp-foot-label">FOLLOW US</span>
+          <div className="lp-foot-follow-links">
+            <SocialLinks />
+          </div>
+        </nav>
         <nav aria-label="Footer" className="lp-foot-links">
           <a href="/privacy">Privacy</a>
           <a href="/terms">Terms</a>
@@ -117,6 +142,7 @@ export function SiteFooter({ sections = false }: { sections?: boolean }) {
 export function LegalLinks() {
   return (
     <footer className="legal-links muted small">
+      <SocialLinks />
       <a href="/privacy">Privacy</a>
       <a href="/terms">Terms</a>
     </footer>

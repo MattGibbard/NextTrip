@@ -3,7 +3,8 @@ import "leaflet/dist/leaflet.css";
 import "./draw.css";
 import "./onboarding.css";
 import "./postcard.css";
-import type { Person, Session } from "../shared/types";
+import type { FamilyData, Person } from "../shared/types";
+import type { SignedInSession } from "./lastFamily";
 import { DataProvider, useData } from "./data";
 import { findDestination } from "./destinations";
 import { TripsView } from "./views/TripsView";
@@ -26,9 +27,9 @@ import { load, save } from "./storage";
 // public pages never download it.
 
 /** The signed-in app for a family member. */
-export default function SignedIn({ session, path }: { session: Session & { signed_in: true }; path: string }) {
+export default function SignedIn({ session, path, initial, stale }: { session: SignedInSession; path: string; initial: FamilyData | null; stale: boolean }) {
   return (
-    <DataProvider isOwner={session.role === "owner"} shareToken={session.share_token} personId={session.person_id}>
+    <DataProvider session={session} initial={initial} stale={stale}>
       <Shell path={path} />
     </DataProvider>
   );

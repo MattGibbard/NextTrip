@@ -1,5 +1,5 @@
 import { Suspense, lazy, useCallback, useEffect, useState } from "react";
-import type { Session } from "../shared/types";
+import type { FamilyData, Session } from "../shared/types";
 import { api, forgetLegacyPerson, setSignedOutHandler } from "./api";
 import { HomePage, JoinPage, PersonLinkPage, SignInPage } from "./views/Welcome";
 import { LegalView, legalPage } from "./views/Legal";
@@ -8,12 +8,9 @@ import { PAGES, isPrivatePath, publicPage } from "../shared/seo";
 import { destinationMeta, findDestination } from "./destinations";
 import { GuideView } from "./views/GuideView";
 import { followInPlace, isGuidePath } from "./navigate";
-import { forget, load, save } from "./storage";
-import { AppSkeleton, LAST_ME } from "./components/AppSkeleton";
-
-// Remembers whether this browser was signed in last time, so the home page isn't shown to people who
-// are about to land in the app. index.html reads the same key before the first paint.
-const SIGNED_IN = "signedIn";
+import { load, save } from "./storage";
+import { AppSkeleton } from "./components/AppSkeleton";
+import { SIGNED_IN, forgetFamily, forgetFamilyData, lastFamily } from "./lastFamily";
 
 // The signed-in app (its views, the map and the draw) loads only once someone is signed in, so the
 // public pages that visitors and search engines see stay small and quick.
@@ -78,16 +75,22 @@ function pageTitle(path: string): string {
 
 
 function Main({ path }: { path: string }) {
-  const [session, setSession] = useState<Session | null>(null);
   const [entry, setEntry] = useState(entryLink);
+  // Signed in last time: open straight away with the family's things as they were, and let the app
+  // fetch the latest itself. A sign-in link may be for someone else, so it never uses them.
+  const [last] = useState(() => (entry || !load(SIGNED_IN, false) ? null : lastFamily()));
+  const [session, setSession] = useState<Session | null>(last?.session ?? null);
+  // The family's things, when they came from the server along with the session.
+  const [fresh, setFresh] = useState<FamilyData | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const refresh = useCallback(async () => {
     try {
-      const s = await api.session();
-      save(SIGNED_IN, s.signed_in);
-      if (!s.signed_in) forget(LAST_ME);
-      setSession(s);
+      const b = await api.bootstrap();
+      save(SIGNED_IN, b.session.signed_in);
+      if (!b.session.signed_in) forgetFamily();
+      setFresh(b.session.signed_in ? (b.data as FamilyData) : null);
+      setSession(b.session);
       // The server has carried over any person this browser picked before, so the old choice can go.
       forgetLegacyPerson();
       setError(null);
@@ -105,11 +108,11 @@ function Main({ path }: { path: string }) {
 
   useEffect(() => {
     setSignedOutHandler(() => {
-      save(SIGNED_IN, false);
-      forget(LAST_ME);
+      forgetFamily();
       setSession({ signed_in: false });
     });
-    if (!entry) void refresh();
+    if (entry) forgetFamilyData();
+    else if (!last) void refresh();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -131,7 +134,7 @@ function Main({ path }: { path: string }) {
   if (!session.signed_in) return isGuidePath(path) ? <GuideView path={path} /> : <HomePage />;
   return (
     <Suspense fallback={<AppSkeleton guide={isGuidePath(path)} />}>
-      <SignedIn session={session} path={path} />
+      <SignedIn session={session} path={path} initial={fresh ?? last?.data ?? null} stale={!fresh} />
     </Suspense>
   );
 }

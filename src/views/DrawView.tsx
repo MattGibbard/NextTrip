@@ -55,10 +55,18 @@ export function DrawView() {
   const [revealing, setRevealing] = useState<Round | null>(null);
 
   // Keep the lock-in status fresh while a round is open, so everyone else's progress shows up.
+  // Trips are left out, and nothing is fetched while the app is in the background; coming back catches up at once.
   useEffect(() => {
     if (!open) return;
-    const t = setInterval(() => void reload(), 8000);
-    return () => clearInterval(t);
+    const refresh = () => {
+      if (document.visibilityState === "visible") void reload(["rounds", "ideas", "people"]);
+    };
+    const t = setInterval(refresh, 8000);
+    document.addEventListener("visibilitychange", refresh);
+    return () => {
+      clearInterval(t);
+      document.removeEventListener("visibilitychange", refresh);
+    };
   }, [open, reload]);
 
   const markSeen = (id: number) => {
@@ -118,7 +126,7 @@ function StartRound({ lastPoints, roundNo }: { lastPoints: number; roundNo: numb
   const start = async () => {
     try {
       await api.createRound({ name: name.trim() || undefined, points_per_person: points, filters, swipe });
-      await reload();
+      await reload(["rounds"]);
     } catch (e) {
       setError((e as Error).message);
     }
@@ -287,7 +295,8 @@ function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => vo
     try {
       const result = await api.draw(round.id);
       onDrawn(result);
-      await reload();
+      // The winner's status changes too.
+      await reload(["rounds", "ideas"]);
     } catch (e) {
       setError((e as Error).message);
       setDrawing(false);
@@ -297,7 +306,7 @@ function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => vo
   const cancel = async () => {
     if (!confirm(`Cancel ${round.name}? Everyone's points for it will be cleared.`)) return;
     await api.deleteRound(round.id);
-    await reload();
+    await reload(["rounds"]);
   };
 
   return (
@@ -364,7 +373,7 @@ function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => vo
             {drawing ? "Drawing…" : "🎟️ Draw the winner"}
           </button>
           {iLocked && (
-            <button className="link" onClick={() => void api.unlock(round.id).then(reload)}>
+            <button className="link" onClick={() => void api.unlock(round.id).then(() => reload(["rounds"]))}>
               Change my points
             </button>
           )}
@@ -414,7 +423,7 @@ function MyLockedPoints({ round }: { round: Round }) {
           {myVeto && <li className="pill veto">🚫 {titleOf(myVeto.idea_id)}</li>}
         </ul>
       </div>
-      <button className="btn ghost" onClick={() => void api.unlock(round.id).then(reload)}>
+      <button className="btn ghost" onClick={() => void api.unlock(round.id).then(() => reload(["rounds"]))}>
         Change my points
       </button>
     </section>
@@ -481,7 +490,7 @@ function Allocator({ round }: { round: Round }) {
     try {
       await api.veto(round.id, idea.id);
       setPoints({ ...points, [idea.id]: 0 });
-      await reload();
+      await reload(["rounds"]);
     } catch (e) {
       setError((e as Error).message);
     }
@@ -490,7 +499,7 @@ function Allocator({ round }: { round: Round }) {
   const undoVeto = async () => {
     try {
       await api.unveto(round.id);
-      await reload();
+      await reload(["rounds"]);
     } catch (e) {
       setError((e as Error).message);
     }
@@ -500,7 +509,7 @@ function Allocator({ round }: { round: Round }) {
     try {
       await api.saveAllocations(round.id, live.filter((a) => a.points > 0));
       await api.lock(round.id);
-      await reload();
+      await reload(["rounds"]);
     } catch (e) {
       setError((e as Error).message);
     }
@@ -897,7 +906,8 @@ function HistoryRow({ round, hidden }: { round: Round; hidden: boolean }) {
     const back = winnerIdea?.status === "won" ? ` ${winnerIdea.title} goes back into the pool.` : "";
     if (!confirm(`Delete ${round.name} and everyone's points for it?${back}`)) return;
     await api.deleteRound(round.id);
-    await reload();
+    // Its winner may go back into the pool.
+    await reload(["rounds", "ideas"]);
   };
   const winner = round.ideas.find((i) => i.id === round.winner_idea_id);
   const winnerIdea: Idea | undefined = ideas.find((i) => i.id === round.winner_idea_id);

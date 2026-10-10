@@ -6,8 +6,7 @@ import { api } from "../api";
 import { useData } from "../data";
 import { isInstalled, isIos, useInstallPrompt } from "../install";
 import { TerminalPicker } from "../components/TerminalPicker";
-import { LAST_ME } from "../components/AppSkeleton";
-import { forget } from "../storage";
+import { forgetFamily } from "../lastFamily";
 import type { Terminal, TerminalKind } from "../../shared/terminals";
 import { estimateTravel } from "../../shared/travelTime";
 import { flag } from "../countries";
@@ -162,7 +161,7 @@ function PersonCard({ person, isMe, canEdit, canManage }: { person: Person; isMe
     setError(null);
     try {
       await api.updatePerson(person.id, { name: name.trim(), color });
-      await reload();
+      await reload(["people"]);
       setEditing(false);
     } catch (e) {
       setError((e as Error).message);
@@ -209,7 +208,8 @@ function PersonCard({ person, isMe, canEdit, canManage }: { person: Person; isMe
     if (!confirm(`Remove ${person.name} from the family? They'll still show on past draws, and any points they've put in the open round are cleared.`)) return;
     try {
       await api.removePerson(person.id);
-      await reload();
+      // Their points in the open round are cleared.
+      await reload(["people", "rounds"]);
     } catch (e) {
       setError((e as Error).message);
     }
@@ -414,7 +414,7 @@ function TravelSection() {
     setError(null);
     try {
       await api.setHomeEnds({ [kind]: t });
-      await reload();
+      await reload(["home_ends"]);
     } catch (e) {
       setError((e as Error).message);
     }
@@ -428,7 +428,7 @@ function TravelSection() {
         const travel_time = estimateTravel(depart ?? home, places)!.travel_time;
         await api.updateIdea(i.id, { title, description, cover_url, created_by, places, depart, arrive, budget, trip_length, travel_time, holiday_types });
       }
-      await reload();
+      await reload(["ideas"]);
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -521,7 +521,7 @@ function DeviceSection() {
       : "Leave on this device? You'll need the family link to get back in.";
     if (!confirm(msg)) return;
     await api.signOut().catch(() => {});
-    forget(LAST_ME);
+    forgetFamily();
     location.href = "/";
   };
 
@@ -619,6 +619,7 @@ function DeleteAccountSection() {
     setError(null);
     try {
       await api.deleteAccount(typed.trim());
+      forgetFamily();
       location.href = "/";
     } catch (e) {
       setError((e as Error).message);

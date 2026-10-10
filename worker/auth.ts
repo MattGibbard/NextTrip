@@ -4,6 +4,7 @@ import { normaliseEmail, randomToken, sha256 } from "../shared/auth";
 import { HttpError } from "./env";
 import { signInEmail } from "./signInEmail";
 import type { App, Ctx, Env, Role } from "./env";
+import type { Session } from "../shared/types";
 
 const COOKIE = "nexttrip_session";
 const SESSION_DAYS: Record<Role, number> = { owner: 180, member: 365 };
@@ -22,6 +23,13 @@ export interface SessionInfo {
   role: Role;
   /** Who this browser is. Set by the server, never by the browser. */
   person: number | null;
+  /** The family link's secret part, for the organiser only. */
+  share: string | null;
+}
+
+/** What the app is told about this browser's sign-in. */
+export function sessionJson(s: SessionInfo | null): Session {
+  return s ? { signed_in: true, role: s.role, share_token: s.share, person_id: s.person } : { signed_in: false };
 }
 
 export async function readSession(c: Ctx): Promise<SessionInfo | null> {
@@ -30,12 +38,13 @@ export async function readSession(c: Ctx): Promise<SessionInfo | null> {
   const db = c.env.DB;
   const hash = await sha256(token);
   const row = await db.prepare(
-    `SELECT s.family_id, s.role, s.legacy, p.id AS person_id FROM sessions s
+    `SELECT s.family_id, s.role, s.legacy, p.id AS person_id, f.share_token FROM sessions s
+     JOIN families f ON f.id = s.family_id
      LEFT JOIN people p ON p.id = s.person_id AND p.family_id = s.family_id AND p.removed = 0
      WHERE s.token_hash = ? AND s.expires_at > datetime('now')`,
   )
     .bind(hash)
-    .first<{ family_id: number; role: Role; legacy: number; person_id: number | null }>();
+    .first<{ family_id: number; role: Role; legacy: number; person_id: number | null; share_token: string }>();
   if (!row) return null;
   let person = row.person_id;
   // A browser signed in before people were tied to sessions keeps whoever it had picked.
@@ -49,7 +58,7 @@ export async function readSession(c: Ctx): Promise<SessionInfo | null> {
       person = picked.id;
     }
   }
-  return { family: row.family_id, role: row.role, person };
+  return { family: row.family_id, role: row.role, person, share: row.role === "owner" ? row.share_token : null };
 }
 
 /** Ties this browser's session to a person. */
@@ -167,12 +176,7 @@ async function familyFor(env: Env, emailHash: string): Promise<number> {
 
 export function authRoutes(app: Hono<App>) {
   app.get("/auth/me", async (c) => {
-    const s = await readSession(c);
-    if (!s) return c.json({ signed_in: false });
-    const share = s.role === "owner"
-      ? (await c.env.DB.prepare("SELECT share_token FROM families WHERE id = ?").bind(s.family).first<{ share_token: string }>())?.share_token ?? null
-      : null;
-    return c.json({ signed_in: true, role: s.role, share_token: share, person_id: s.person });
+    return c.json(sessionJson(await readSession(c)));
   });
 
   app.post("/auth/email", async (c) => {

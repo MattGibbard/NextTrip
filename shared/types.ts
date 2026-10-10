@@ -143,3 +143,21 @@ export interface HomeEnds {
   airport: Terminal | null;
   station: Terminal | null;
 }
+
+/** Everything the signed-in app shows for a family. */
+export interface FamilyData {
+  people: Person[];
+  trips: Trip[];
+  ideas: Idea[];
+  rounds: Round[];
+  home_ends: HomeEnds;
+}
+
+/** One of the lists in FamilyData, for refreshing only what changed. */
+export type FamilyPart = keyof FamilyData;
+
+/** Who this browser is and, when signed in, the family's things (all of them, or the parts asked for), in one request. */
+export interface Bootstrap {
+  session: Session;
+  data: Partial<FamilyData> | null;
+}

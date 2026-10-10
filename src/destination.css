@@ -1001,33 +1001,6 @@ a.dg-similar-card:hover {
   }
 }
 
-/* Footer: links to the guides on every public page. */
-.lp-foot-dest {
-  flex: 2 1 320px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.lp-foot-dest-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 8px 16px;
-  font-size: 0.9rem;
-}
-
-/* Footer: our social accounts. */
-.lp-foot-follow {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.lp-foot-follow-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 16px;
-  font-size: 0.9rem;
-}
-
 /* ---------- Announcement banner (content/site/banner.json) ---------- */
 
 .site-banner {

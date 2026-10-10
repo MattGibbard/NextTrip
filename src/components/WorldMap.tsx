@@ -1,11 +1,9 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
-import { feature } from "topojson-client";
-import type { FeatureCollection, Geometry } from "geojson";
-import type { GeometryCollection, Topology } from "topojson-specification";
 import { alpha2FromNumeric, numericCode } from "../countries";
 import { greatCircle, routeLegs } from "../../shared/routes";
 import type { Terminal } from "../../shared/terminals";
+import { loadCountries } from "../countryShapes";
 
 export interface Pin {
   lat: number;
@@ -29,17 +27,6 @@ export interface Route {
   colorVar?: string;
   /** Dotted legs to and from the places, such as the flight out. */
   journey?: [[number, number], [number, number]][];
-}
-
-let countriesPromise: Promise<FeatureCollection<Geometry, { name: string }>> | null = null;
-
-function loadCountries() {
-  // The 50m map includes small countries (Malta, Singapore…) and is loaded only when a map is shown.
-  countriesPromise ??= import("world-atlas/countries-50m.json").then((m) => {
-    const topo = m.default as unknown as Topology<{ countries: GeometryCollection<{ name: string }> }>;
-    return feature(topo, topo.objects.countries) as FeatureCollection<Geometry, { name: string }>;
-  });
-  return countriesPromise;
 }
 
 function cssVar(name: string) {

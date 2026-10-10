@@ -3,12 +3,14 @@ import "leaflet/dist/leaflet.css";
 import "./draw.css";
 import "./onboarding.css";
 import "./postcard.css";
+import "./share.css";
 import type { FamilyData, Person } from "../shared/types";
 import type { SignedInSession } from "./lastFamily";
 import { DataProvider, useData } from "./data";
 import { findDestination } from "./destinations";
 import { TripsView } from "./views/TripsView";
 import { PlacesView } from "./views/PlacesView";
+import { ShareMapView } from "./views/ShareMapView";
 import { IdeasView } from "./views/IdeasView";
 import { DrawView } from "./views/DrawView";
 import { SettingsView } from "./views/SettingsView";
@@ -37,14 +39,14 @@ export default function SignedIn({ session, path, initial, stale }: { session: S
 
 /**
  * Reads routes like #/next or #/next/12, and #/next/add/new-york from a destination guide's "Add to ideas".
- * #/welcome replays the welcome steps from Settings.
+ * #/welcome replays the welcome steps from Settings. #/places/share makes a picture of the map to post.
  */
-function currentRoute(): { tab: TabId; id: number | null; add: string | null; welcome: boolean } {
+function currentRoute(): { tab: TabId; id: number | null; add: string | null; welcome: boolean; share: boolean } {
   const [first, second, third] = location.hash.replace(/^#\/?/, "").split("/");
   const tab = (["been", "places", "next", "draw", "settings"] as const).find((t) => t === first) ?? "been";
   const id = Number(second);
   const add = second === "add" && third && findDestination(third) ? third : null;
-  return { tab, id: Number.isInteger(id) && id > 0 ? id : null, add, welcome: first === "welcome" };
+  return { tab, id: Number.isInteger(id) && id > 0 ? id : null, add, welcome: first === "welcome", share: tab === "places" && second === "share" };
 }
 
 function Shell({ path }: { path: string }) {
@@ -115,7 +117,7 @@ function Shell({ path }: { path: string }) {
         ) : (
           <>
             {tab === "been" && (route.id ? <TripPage key={route.id} id={route.id} /> : <TripsView addFrom={route.add} />)}
-            {tab === "places" && <PlacesView />}
+            {tab === "places" && (route.share ? <ShareMapView /> : <PlacesView />)}
             {tab === "next" && (route.id ? <IdeaPage key={route.id} id={route.id} /> : <IdeasView addFrom={route.add} />)}
             {tab === "draw" && <DrawView />}
             {tab === "settings" && <SettingsView />}

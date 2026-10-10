@@ -112,6 +112,14 @@ export function PlacesView() {
         </div>
       </div>
 
+      {visited.length > 0 && (
+        <div className="places-share">
+          <a className="btn ghost small" href="#/places/share">
+            Share your map
+          </a>
+        </div>
+      )}
+
       {selected ? (
         <CountryPanel code={selected} onClose={() => setSelected(null)} />
       ) : (

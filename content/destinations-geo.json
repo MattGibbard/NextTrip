@@ -139,6 +139,11 @@
     "lat": 55.6867,
     "lon": 12.5701
   },
+  "corsica": {
+    "query": "Corsica|FR",
+    "lat": 42.15,
+    "lon": 9.1
+  },
   "costa-rica": {
     "query": "Costa Rica|CR",
     "lat": 9.7489,
@@ -228,11 +233,6 @@
     "query": "Interlaken|CH",
     "lat": 46.6863,
     "lon": 7.8632
-  },
-  "isles-of-scilly": {
-    "query": "Isles of Scilly|GB",
-    "lat": 49.9361,
-    "lon": -6.3228
   },
   "istria": {
     "query": "Istria|HR",

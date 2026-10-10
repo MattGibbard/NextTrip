@@ -1,0 +1,177 @@
+{
+  "name": "Bergen",
+  "published": true,
+  "country": "NO",
+  "title": "Holidays in Bergen",
+  "intro": "Wooden wharf houses, a funicular up the mountain and fjords on the doorstep. Here's what Bergen is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "BGO",
+  "holiday_types": [
+    "city",
+    "nature"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Norwegian krone (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Norway is part of the new European entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Dark, wet"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Wet"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Long days"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Midsummer"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Dark, wet"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Gingerbread town"
+    }
+  },
+  "when_to_go": "May to July has the longest days and the best chance of dry weather. August and September are still good for fjord trips. Bergen is one of Europe's rainiest cities, so pack waterproofs whenever you go. In December the city builds a huge gingerbread town.",
+  "things": [
+    {
+      "name": "Bryggen",
+      "tag": "Free",
+      "blurb": "The old wooden wharf houses, with narrow alleys to explore behind the colourful fronts.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fløibanen funicular",
+      "tag": "Ticketed",
+      "blurb": "Ride up Mount Fløyen for city views, then find the playground, troll statues and forest trails.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fish Market",
+      "tag": "Free",
+      "blurb": "Look at the fish and crabs by the harbour, and try fish cakes or shrimp for lunch.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bergen Aquarium",
+      "tag": "Indoors",
+      "blurb": "Penguins, sea lions and Norwegian sea life, with feeding times through the day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "VilVite",
+      "tag": "Rainy day",
+      "blurb": "A hands-on science centre with experiments, games and a big bike loop.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fjord cruise to Mostraumen",
+      "tag": "Tour",
+      "blurb": "A boat trip into a narrow fjord with steep cliffs and waterfalls, short enough for children.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Bergen good for a family holiday?",
+      "answer": "Yes. It's compact, safe and easy to walk, with mountains, boats and a good aquarium. It is expensive, so self-catering helps."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights covers the city, Mount Fløyen and a fjord cruise. Add a few more if you want to explore the fjords further."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are direct flights from London and some other UK airports, taking under two hours. British passport holders don't need a visa for short stays."
+    },
+    {
+      "question": "Does it really rain that much?",
+      "answer": "Yes, Bergen gets rain on many days of the year. Bring waterproofs and wellies, and save the aquarium and VilVite for the wettest days."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lofoten",
+      "code": "BOO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Tromsø",
+      "code": "TOS",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Copenhagen",
+      "code": "CPH",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Faroe Islands",
+      "code": "FAE",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "name": "Bacalar",
+  "published": true,
+  "country": "MX",
+  "title": "Holidays in Bacalar",
+  "intro": "A calm freshwater lagoon in seven shades of blue, edged by mangroves and jungle. Here's what Bacalar is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "CUN",
+  "holiday_types": [
+    "nature",
+    "relax",
+    "adventure"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 to 6 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Mexican peso ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 127V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Chetumal airport is about 40 minutes away, or it's around four hours by road from Cancún. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Sunny"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Very hot"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Rains start"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, showers"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, showers"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drier"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, warm"
+    }
+  },
+  "when_to_go": "December to March is dry and sunny, the best time for paddling and swimming. April and May get very hot. June to November is the rainy season, with the biggest hurricane risk in September and October. Summer showers are often short, but the lagoon looks its best on clear days.",
+  "things": [
+    {
+      "name": "Lagoon boat trip",
+      "tag": "Tour",
+      "blurb": "A slow boat or sailing trip to the Pirates' Channel and the white-sand shallows, with swim stops.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paddleboarding at sunrise",
+      "tag": "Outdoors",
+      "blurb": "The water is flat and shallow in places, so it's a good spot for children to try a board or kayak.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cenote Azul",
+      "tag": "Ticketed",
+      "blurb": "A very deep, round sinkhole on the lagoon's edge, with a restaurant and swimming for confident swimmers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Los Rápidos",
+      "tag": "Ticketed",
+      "blurb": "A gentle current at the south end of the lagoon carries you along with a life jacket. Stromatolites grow here, so don't stand on them.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fuerte de San Felipe",
+      "tag": "Ticketed",
+      "blurb": "A small star-shaped fort above the lagoon, with a museum about pirates and the town's history.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chacchoben",
+      "tag": "Ticketed",
+      "blurb": "Maya temples in the forest, under an hour's drive north, and far quieter than the ruins near Cancún.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Bacalar good for a family holiday?",
+      "answer": "Yes, for families who like water and a slow pace. The lagoon has no waves and is shallow near the shore, though some docks drop into deep water. It's a small town, not a resort, so there are no big kids' clubs."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four to seven nights is plenty. Many families add it to a Cancún or Tulum trip."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Cancún, then drive about four hours south or take an ADO bus. Chetumal airport is closer but has flights from Mexico City, not the UK."
+    },
+    {
+      "question": "Is the lagoon safe for swimming?",
+      "answer": "Yes, the water is calm and fresh. Use reef-safe sun cream or a rash vest, and keep off the stromatolites, which are ancient living rocks."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cancún",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Costa Rica",
+      "code": "SJO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Ambergris Caye",
+      "code": "SPR",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Oaxaca",
+      "code": "OAX",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

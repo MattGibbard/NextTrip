@@ -1,0 +1,178 @@
+{
+  "name": "Milos",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Milos",
+  "intro": "White moon-like rocks, sea caves reached by boat and dozens of quiet beaches. Here's what Milos is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "MLO",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Quiet"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Quiet"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Cool sea"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, windy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Quiet"
+    }
+  },
+  "when_to_go": "June and September have warm sea, calmer winds and fewer visitors. July and August are hot and busy, and the meltemi wind can stop boat trips. Most hotels, boat trips and tavernas close from November to April.",
+  "things": [
+    {
+      "name": "Sarakiniko",
+      "tag": "Free",
+      "blurb": "Smooth white volcanic rocks that look like the moon. There's no shade, so go early or late.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kleftiko boat trip",
+      "tag": "Tour",
+      "blurb": "A day on a boat to sea caves and rock arches that you can only reach from the water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Klima",
+      "tag": "Free",
+      "blurb": "A fishing village where brightly painted boathouses sit right on the water's edge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Plaka and the Kastro",
+      "tag": "Free",
+      "blurb": "Climb from the hilltop village of Plaka to the old castle for a big sunset view.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Catacombs of Milos",
+      "tag": "Ticketed",
+      "blurb": "Early Christian tunnels cut into the hillside, short enough for younger visitors.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Milos Mining Museum",
+      "tag": "Indoors",
+      "blurb": "A small museum in Adamas about the island's volcanic rocks and minerals.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Milos good for a family holiday?",
+      "answer": "Yes, for families who like swimming, snorkelling and boat trips. It's quieter than Mykonos or Santorini. Some beaches have steep paths or no facilities, so choose carefully with small children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week is about right for beaches, a Kleftiko boat trip and the villages."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Athens, then take a ferry from Piraeus, which takes from about three hours on a fast boat, or a short flight to Milos. Greece is in the EU, so British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Do you need a car on Milos?",
+      "answer": "Yes, it helps a lot. Buses are limited and some beaches are down dirt tracks, so hire a car or a small 4x4."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Naxos",
+      "code": "JNX",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Gozo",
+      "code": "MLA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Menorca",
+      "code": "MAH",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

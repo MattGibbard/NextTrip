@@ -1,0 +1,178 @@
+{
+  "name": "Gdańsk",
+  "published": true,
+  "country": "PL",
+  "title": "Holidays in Gdańsk",
+  "intro": "Tall painted merchant houses, amber shops and Baltic beaches a short train ride away. Here's what Gdańsk is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "GDN",
+  "holiday_types": [
+    "city",
+    "culture",
+    "beach"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Polish złoty (zł)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Beach weather"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "St Dominic's Fair"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cool"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas market"
+    }
+  },
+  "when_to_go": "June to August is warmest and the best time for the beaches at Sopot. St Dominic's Fair fills the old town with stalls from late July into August. Winter is cold and grey, but December has a Christmas market.",
+  "things": [
+    {
+      "name": "Long Market and Neptune's Fountain",
+      "tag": "Free",
+      "blurb": "The main street of the old town, lined with tall painted houses. Lovely in the evening.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gdańsk Crane",
+      "tag": "Ticketed",
+      "blurb": "A huge medieval wooden crane on the river, part of the National Maritime Museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Museum of the Second World War",
+      "tag": "Indoors",
+      "blurb": "A big, powerful museum, best for older children, with a section designed for younger ones.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hevelianum",
+      "tag": "Rainy day",
+      "blurb": "A hands-on science centre in an old fort on a hill above the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sopot",
+      "tag": "Outdoors",
+      "blurb": "A seaside town with a long wooden pier and sandy beaches, a short train ride from Gdańsk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Malbork Castle",
+      "tag": "Ticketed",
+      "blurb": "An enormous red-brick castle of the Teutonic Knights, an easy day trip by train.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Gdańsk good for a family holiday?",
+      "answer": "Yes. It's good value, safe and easy to walk, and you can mix city sights with beach days in summer. The Baltic is cool for swimming but fine on hot days."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights covers the old town, a beach day in Sopot and a trip to Malbork Castle."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are direct flights from many UK airports, taking about two hours. Poland is in the EU, so British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Is Gdańsk cheap?",
+      "answer": "It's cheaper than most Western European cities for food, transport and attractions. Flights can be very cheap outside school holidays."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kraków",
+      "code": "KRK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Tallinn",
+      "code": "TLL",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Copenhagen",
+      "code": "CPH",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Berlin",
+      "code": "BER",
+      "label": "🏙️ City break"
+    }
+  ]
+}

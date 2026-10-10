@@ -1,0 +1,177 @@
+{
+  "name": "Annecy",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Annecy",
+  "intro": "A clear Alpine lake, canal-lined old town and mountains made for paragliding and cycling. Here's what Annecy is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "GVA",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Lake swimming"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas market"
+    }
+  },
+  "when_to_go": "June to September is warm enough to swim in the lake, which is one of the cleanest in Europe. July and August are busiest, so book early. Spring and autumn are quieter and good for cycling, and December brings a Christmas market.",
+  "things": [
+    {
+      "name": "Old town and Palais de l'Isle",
+      "tag": "Free",
+      "blurb": "Canals, flower boxes and a little island prison shaped like a ship's prow. The museum inside is ticketed.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake cycle path",
+      "tag": "Free",
+      "blurb": "A flat, traffic-free path runs along the west shore. Hire bikes with child seats or trailers in town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake cruise",
+      "tag": "Tour",
+      "blurb": "Boats run round the lake from Annecy, with stops at villages on the shore.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gorges du Fier",
+      "tag": "Ticketed",
+      "blurb": "A walkway clings to the side of a deep, narrow gorge just outside town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Château de Menthon-Saint-Bernard",
+      "tag": "Ticketed",
+      "blurb": "A fairytale castle with turrets above the lake, still lived in by the same family.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tandem paragliding",
+      "tag": "Ticketed",
+      "blurb": "Fly from Col de la Forclaz with an instructor and land by the lake. Age and weight limits apply.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Annecy good for a family holiday?",
+      "answer": "Yes, especially in summer. Lake beaches, bike paths and boat trips keep children busy, and the old town is compact. It's not cheap, so camping and self-catering help."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five nights to a week lets you mix lake days with walks, a boat trip and a day out to Chamonix."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Geneva, about 45 minutes away by road, with buses and shuttles too. You can also take the train via Paris. British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Can you swim in the lake?",
+      "answer": "Yes. There are several beaches round the lake, some free and some paid, and the water warms up nicely by July."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Chamonix",
+      "code": "GVA",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Ljubljana",
+      "code": "LJU",
+      "label": "🏙️ City break"
+    }
+  ]
+}

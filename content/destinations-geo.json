@@ -1,8 +1,38 @@
 {
+  "acadia": {
+    "query": "Acadia National Park|US",
+    "lat": 44.3386,
+    "lon": -68.2733
+  },
+  "alentejo": {
+    "query": "Alentejo|PT",
+    "lat": 38.5714,
+    "lon": -7.9087
+  },
+  "ambergris-caye": {
+    "query": "Ambergris Caye|BZ",
+    "lat": 18,
+    "lon": -87.95
+  },
   "amsterdam": {
     "query": "Amsterdam|NL",
     "lat": 52.3731,
     "lon": 4.8925
+  },
+  "annecy": {
+    "query": "Annecy|FR",
+    "lat": 45.8992,
+    "lon": 6.1294
+  },
+  "asheville": {
+    "query": "Asheville|US",
+    "lat": 35.5951,
+    "lon": -82.5515
+  },
+  "asturias": {
+    "query": "Asturias|ES",
+    "lat": 43.2928,
+    "lon": -5.993
   },
   "austin": {
     "query": "Austin|US",
@@ -13,6 +43,11 @@
     "query": "Azores|PT",
     "lat": 37.7412,
     "lon": -25.6756
+  },
+  "bacalar": {
+    "query": "Bacalar|MX",
+    "lat": 18.6807,
+    "lon": -88.3922
   },
   "bali": {
     "query": "Bali|ID",
@@ -39,6 +74,11 @@
     "lat": 41.3829,
     "lon": 2.1774
   },
+  "bergen": {
+    "query": "Bergen|NO",
+    "lat": 60.3913,
+    "lon": 5.3221
+  },
   "berlin": {
     "query": "Berlin|DE",
     "lat": 52.517,
@@ -54,6 +94,11 @@
     "lat": 42.3555,
     "lon": -71.0565
   },
+  "brasov": {
+    "query": "Brașov|RO",
+    "lat": 45.6427,
+    "lon": 25.5887
+  },
   "cancun": {
     "query": "Cancún|MX",
     "lat": 21.1617,
@@ -63,6 +108,21 @@
     "query": "Cape Town|ZA",
     "lat": -33.9288,
     "lon": 18.4172
+  },
+  "cape-verde": {
+    "query": "Cape Verde|CV",
+    "lat": 16.75,
+    "lon": -22.95
+  },
+  "cappadocia": {
+    "query": "Cappadocia|TR",
+    "lat": 38.6431,
+    "lon": 34.8289
+  },
+  "cartagena": {
+    "query": "Cartagena|CO",
+    "lat": 10.391,
+    "lon": -75.4794
   },
   "chamonix": {
     "query": "Chamonix|FR",
@@ -94,6 +154,16 @@
     "lat": -13.5226,
     "lon": -71.9673
   },
+  "dominica": {
+    "query": "Dominica|DM",
+    "lat": 15.415,
+    "lon": -61.371
+  },
+  "dordogne": {
+    "query": "Dordogne|FR",
+    "lat": 45.1047,
+    "lon": 0.7417
+  },
   "dubai": {
     "query": "Dubai|AE",
     "lat": 25.2653,
@@ -114,15 +184,40 @@
     "lat": -0.9538,
     "lon": -90.9656
   },
+  "gdansk": {
+    "query": "Gdańsk|PL",
+    "lat": 54.352,
+    "lon": 18.6466
+  },
+  "ghent": {
+    "query": "Ghent|BE",
+    "lat": 51.0543,
+    "lon": 3.7174
+  },
+  "gozo": {
+    "query": "Gozo|MT",
+    "lat": 36.0443,
+    "lon": 14.2512
+  },
   "grand-canyon": {
     "query": "Grand Canyon|US",
     "lat": 36.0544,
     "lon": -112.1401
   },
+  "grenada": {
+    "query": "Grenada|GD",
+    "lat": 12.1165,
+    "lon": -61.679
+  },
   "halifax": {
     "query": "Halifax|CA",
     "lat": 44.6476,
     "lon": -63.5728
+  },
+  "hallstatt": {
+    "query": "Hallstatt|AT",
+    "lat": 47.5622,
+    "lon": 13.6493
   },
   "hoi-an": {
     "query": "Hoi An|VN",
@@ -134,10 +229,45 @@
     "lat": 46.6863,
     "lon": 7.8632
   },
+  "isles-of-scilly": {
+    "query": "Isles of Scilly|GB",
+    "lat": 49.9361,
+    "lon": -6.3228
+  },
+  "istria": {
+    "query": "Istria|HR",
+    "lat": 45.25,
+    "lon": 13.9
+  },
   "jordan": {
     "query": "Jordan|JO",
     "lat": 31.95,
     "lon": 35.93
+  },
+  "kanazawa": {
+    "query": "Kanazawa|JP",
+    "lat": 36.5613,
+    "lon": 136.6562
+  },
+  "kas": {
+    "query": "Kaş|TR",
+    "lat": 36.2018,
+    "lon": 29.6377
+  },
+  "kefalonia": {
+    "query": "Kefalonia|GR",
+    "lat": 38.1754,
+    "lon": 20.5692
+  },
+  "kerala": {
+    "query": "Kerala|IN",
+    "lat": 10.1632,
+    "lon": 76.6413
+  },
+  "koh-lanta": {
+    "query": "Koh Lanta|TH",
+    "lat": 7.5833,
+    "lon": 99.05
   },
   "kotor": {
     "query": "Kotor|ME",
@@ -154,6 +284,11 @@
     "lat": 45.6328,
     "lon": 10.6771
   },
+  "lake-ohrid": {
+    "query": "Lake Ohrid|MK",
+    "lat": 41,
+    "lon": 20.75
+  },
   "lisbon": {
     "query": "Lisbon|PT",
     "lat": 38.7078,
@@ -169,10 +304,20 @@
     "lat": 68.15,
     "lon": 13.95
   },
+  "lombok": {
+    "query": "Lombok|ID",
+    "lat": -8.651,
+    "lon": 116.3249
+  },
   "los-angeles": {
     "query": "Los Angeles|US",
     "lat": 34.0537,
     "lon": -118.2428
+  },
+  "luang-prabang": {
+    "query": "Luang Prabang|LA",
+    "lat": 19.8856,
+    "lon": 102.1347
   },
   "maasai-mara": {
     "query": "Maasai Mara|KE",
@@ -199,6 +344,11 @@
     "lat": 31.6258,
     "lon": -7.9892
   },
+  "matera": {
+    "query": "Matera|IT",
+    "lat": 40.6664,
+    "lon": 16.6043
+  },
   "maui": {
     "query": "Maui|US",
     "lat": 20.7984,
@@ -208,6 +358,11 @@
     "query": "Mauritius|MU",
     "lat": -20.2759,
     "lon": 57.5704
+  },
+  "menorca": {
+    "query": "Menorca|ES",
+    "lat": 39.9496,
+    "lon": 4.1105
   },
   "mexico-city": {
     "query": "Mexico City|MX",
@@ -219,6 +374,11 @@
     "lat": 25.7742,
     "lon": -80.1936
   },
+  "milos": {
+    "query": "Milos|GR",
+    "lat": 36.697,
+    "lon": 24.4235
+  },
   "montreal": {
     "query": "Montreal|CA",
     "lat": 45.5031,
@@ -228,6 +388,11 @@
     "query": "Namibia|NA",
     "lat": -22.5609,
     "lon": 17.0658
+  },
+  "naxos": {
+    "query": "Naxos|GR",
+    "lat": 37.0617,
+    "lon": 25.4719
   },
   "nepal": {
     "query": "Nepal|NP",
@@ -244,6 +409,26 @@
     "lat": 40.7127,
     "lon": -74.006
   },
+  "ninh-binh": {
+    "query": "Ninh Binh|VN",
+    "lat": 20.2539,
+    "lon": 105.975
+  },
+  "oaxaca": {
+    "query": "Oaxaca|MX",
+    "lat": 17.0732,
+    "lon": -96.7266
+  },
+  "okinawa": {
+    "query": "Okinawa|JP",
+    "lat": 26.2124,
+    "lon": 127.6809
+  },
+  "oman": {
+    "query": "Oman|OM",
+    "lat": 21.4735,
+    "lon": 55.9754
+  },
   "orlando": {
     "query": "Orlando|US",
     "lat": 28.5421,
@@ -259,6 +444,16 @@
     "lat": 48.8535,
     "lon": 2.3484
   },
+  "penang": {
+    "query": "Penang|MY",
+    "lat": 5.4141,
+    "lon": 100.3288
+  },
+  "plitvice-lakes": {
+    "query": "Plitvice Lakes|HR",
+    "lat": 44.8654,
+    "lon": 15.582
+  },
   "porto": {
     "query": "Porto|PT",
     "lat": 41.15,
@@ -268,6 +463,11 @@
     "query": "Prague|CZ",
     "lat": 50.0875,
     "lon": 14.4213
+  },
+  "puglia": {
+    "query": "Puglia|IT",
+    "lat": 41.0086,
+    "lon": 16.5128
   },
   "quebec-city": {
     "query": "Quebec City|CA",
@@ -289,6 +489,11 @@
     "lat": 41.8933,
     "lon": 12.4829
   },
+  "ronda": {
+    "query": "Ronda|ES",
+    "lat": 36.7423,
+    "lon": -5.1671
+  },
   "rovaniemi": {
     "query": "Rovaniemi|FI",
     "lat": 66.5028,
@@ -303,6 +508,16 @@
     "query": "San Francisco|US",
     "lat": 37.7793,
     "lon": -122.4193
+  },
+  "saranda": {
+    "query": "Saranda|AL",
+    "lat": 39.8756,
+    "lon": 20.0053
+  },
+  "saxon-switzerland": {
+    "query": "Saxon Switzerland|DE",
+    "lat": 50.9175,
+    "lon": 14.1531
   },
   "seoul": {
     "query": "Seoul|KR",
@@ -324,10 +539,35 @@
     "lat": -33.8698,
     "lon": 151.2083
   },
+  "syracuse": {
+    "query": "Syracuse|IT",
+    "lat": 37.0755,
+    "lon": 15.2866
+  },
+  "tallinn": {
+    "query": "Tallinn|EE",
+    "lat": 59.437,
+    "lon": 24.7536
+  },
+  "tasmania": {
+    "query": "Tasmania|AU",
+    "lat": -42.0409,
+    "lon": 146.8087
+  },
+  "tbilisi": {
+    "query": "Tbilisi|GE",
+    "lat": 41.7151,
+    "lon": 44.8271
+  },
   "tenerife": {
     "query": "Tenerife|ES",
     "lat": 28.2936,
     "lon": -16.6214
+  },
+  "tofino": {
+    "query": "Tofino|CA",
+    "lat": 49.153,
+    "lon": -125.9066
   },
   "tokyo": {
     "query": "Tokyo|JP",
@@ -378,5 +618,15 @@
     "query": "Yellowstone|US",
     "lat": 44.428,
     "lon": -110.5885
+  },
+  "zadar": {
+    "query": "Zadar|HR",
+    "lat": 44.1194,
+    "lon": 15.2314
+  },
+  "zanzibar": {
+    "query": "Zanzibar|TZ",
+    "lat": -6.1659,
+    "lon": 39.2026
   }
 }

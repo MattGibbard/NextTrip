@@ -1,0 +1,178 @@
+{
+  "name": "Acadia National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Acadia National Park",
+  "intro": "Granite peaks, lobster shacks and rocky shores on the coast of Maine. Here's what Acadia National Park is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "BHB",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an annual pass. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy, roads shut"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy, roads shut"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Roads reopen"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Quiet, cool"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Long days"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Fewer crowds"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold, closing"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Snowy"
+    }
+  },
+  "when_to_go": "July and August are warmest and busiest, with the free Island Explorer bus running. September and early October are calmer, and the autumn colour usually peaks in early to mid October. From December to mid April most of the Park Loop Road is closed and many places in Bar Harbor shut. Pack layers, as the coast can be foggy and cool even in summer.",
+  "things": [
+    {
+      "name": "Cadillac Mountain",
+      "tag": "Outdoors",
+      "blurb": "The highest point on the coast, with huge views. In peak season you need to book a vehicle reservation to drive up.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Carriage roads",
+      "tag": "Free",
+      "blurb": "Car-free gravel paths and old stone bridges that are ideal for family bike rides. Bikes can be hired in Bar Harbor.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jordan Pond House",
+      "tag": "Ticketed",
+      "blurb": "Tea and popovers on the lawn, with an easy flat walk around the pond afterwards.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sand Beach and Thunder Hole",
+      "tag": "Free",
+      "blurb": "A sandy cove for paddling in very cold water, then a short walk to where waves boom into a rock inlet.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Junior Ranger programme",
+      "tag": "Free",
+      "blurb": "Children complete an activity booklet and get a badge from a park ranger.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bass Harbor Head Light",
+      "tag": "Free",
+      "blurb": "A pretty lighthouse on the quieter west side of Mount Desert Island, best near sunset.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Acadia National Park good for a family holiday?",
+      "answer": "Yes. It is compact, the walks range from flat lakeside loops to rung-and-ladder scrambles, and the carriage roads are great for bikes. Bar Harbor makes an easy base with plenty of places to eat."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights covers the main sights. Make it a week as part of a New England road trip, perhaps with a few nights in Boston."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Boston, then drive about five hours up the coast. Bar Harbor and Bangor have small airports with connections from Boston. British passport holders need an ESTA."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "It helps, but in summer and early autumn the free Island Explorer bus links Bar Harbor, the campgrounds and the main trailheads, which saves hunting for parking."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Halifax",
+      "code": "YHZ",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Boston",
+      "code": "BOS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Yellowstone",
+      "code": "BZN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Tofino",
+      "code": "YAZ",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "name": "Kerala",
+  "published": true,
+  "country": "IN",
+  "title": "Holidays in Kerala",
+  "intro": "Houseboats on palm-lined backwaters, tea hills and spice markets in southern India. Here's what Kerala is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "COK",
+  "holiday_types": [
+    "culture",
+    "nature",
+    "food"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4½ to 5½ hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Indian rupee (₹)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eVisa needed",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / D / M · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Ask your GP or a travel clinic about jabs before you go. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Getting hot"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Hot, humid"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Monsoon"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Monsoon"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Monsoon, Onam"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Rains easing"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Some rain"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, busy"
+    }
+  },
+  "when_to_go": "December to February is the best time, warm and dry with green countryside. March and April get very hot and humid. The south-west monsoon brings heavy rain from June to September, and more rain falls in October and November. The hills around Munnar stay cooler all year.",
+  "things": [
+    {
+      "name": "Backwater houseboat",
+      "tag": "Tour",
+      "blurb": "Spend a night on a kettuvallam rice boat near Alleppey, watching village life drift by.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fort Kochi",
+      "tag": "Free",
+      "blurb": "Walk past Chinese fishing nets, old churches and spice warehouses in the historic port.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kathakali show",
+      "tag": "Ticketed",
+      "blurb": "A colourful dance-drama with elaborate make-up. Arrive early to watch the performers get ready.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Munnar tea estates",
+      "tag": "Outdoors",
+      "blurb": "Cool hills covered in tea bushes, with a tea museum and easy walks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Periyar Tiger Reserve",
+      "tag": "Tour",
+      "blurb": "Boat trips and guided walks in Thekkady to spot elephants, bison and birds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Varkala",
+      "tag": "Free",
+      "blurb": "A clifftop town above a sandy beach, good for a few days of rest at the end of a trip.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Kerala good for a family holiday?",
+      "answer": "Yes. It is one of the gentlest introductions to India, with calm backwaters, cooler hills and beaches. Food can be mild or spicy, and hotels are used to cooking for children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights. A classic route is Kochi, Munnar, Thekkady, a night on a houseboat, then a beach to finish."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Most families fly to Kochi via the Gulf, changing in Dubai, Doha or Abu Dhabi. British passport holders need an Indian eVisa, applied for online before travel."
+    },
+    {
+      "question": "How do you get around?",
+      "answer": "Most families hire a car and driver for the trip, which is good value and avoids driving on busy roads. Trains are an option for longer hops."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Penang",
+      "code": "PEN",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Hoi An",
+      "code": "DAD",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

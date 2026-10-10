@@ -1,0 +1,178 @@
+{
+  "name": "Asturias",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Asturias",
+  "intro": "Green mountains, cider houses and sandy coves on Spain's cool, rainy northern coast. Here's what Asturias is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "OVD",
+  "holiday_types": [
+    "nature",
+    "beach",
+    "food"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, wet"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, wet"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild, wet"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Green"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rainy"
+    }
+  },
+  "when_to_go": "June to September is warm but rarely too hot, which suits walking and the beach. August is busiest, as Spanish families escape the heat here. It rains all year, so pack waterproofs.",
+  "things": [
+    {
+      "name": "Lakes of Covadonga",
+      "tag": "Free",
+      "blurb": "Two mountain lakes in the Picos de Europa. In summer the road is closed to cars, so take the park bus.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ruta del Cares",
+      "tag": "Free",
+      "blurb": "A famous path cut into a deep gorge. Walk a short way in from Poncebos and turn back when little legs tire.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Playa de Gulpiyuri",
+      "tag": "Free",
+      "blurb": "A tiny beach in a field, filled by the sea through underground tunnels.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cudillero",
+      "tag": "Free",
+      "blurb": "A fishing village of brightly painted houses stacked around a small harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jurassic Museum of Asturias",
+      "tag": "Rainy day",
+      "blurb": "Dinosaur skeletons and models on the 'dinosaur coast', where real footprints can be found on the beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sella canoe trip",
+      "tag": "Ticketed",
+      "blurb": "Paddle down the gentle River Sella from Arriondas, with a bus back. Popular with families in summer.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Asturias good for a family holiday?",
+      "answer": "Yes, for families who like the outdoors and don't need guaranteed sun. It's green, uncrowded outside August, and the beaches are big and sandy. The Atlantic is cool and can have strong waves."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week lets you split time between the coast and the Picos de Europa. Many families combine it with Cantabria next door."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Asturias Airport has some direct flights from the UK, or fly to Bilbao or Santander and drive west. Brittany Ferries also sail from Portsmouth and Plymouth to Santander."
+    },
+    {
+      "question": "Is the sea safe for swimming?",
+      "answer": "Choose beaches with lifeguards and follow the flags. Sheltered bays and river beaches are calmer for young children."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Azores",
+      "code": "PDL",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Porto",
+      "code": "OPO",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Annecy",
+      "code": "GVA",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

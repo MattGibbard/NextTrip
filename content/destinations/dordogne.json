@@ -1,0 +1,178 @@
+{
+  "name": "Dordogne",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Dordogne",
+  "intro": "Castles on cliffs, canoes on a slow green river and prehistoric cave paintings. Here's what the Dordogne is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "EGC",
+  "holiday_types": [
+    "nature",
+    "culture",
+    "food"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool, some closures"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, green"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busiest"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, calmer"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colours"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold"
+    }
+  },
+  "when_to_go": "June and September are warm, with fewer people on the river and in the villages. July and August are hot and lively, with markets and festivals, but the castles and canoe launches get busy. Some sights and campsites close or cut their hours from November to March.",
+  "things": [
+    {
+      "name": "Lascaux IV",
+      "tag": "Indoors",
+      "blurb": "A full-size copy of the famous Ice Age cave paintings at Montignac, with hands-on displays children enjoy.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Canoeing the Dordogne",
+      "tag": "Ticketed",
+      "blurb": "Hire a canoe for a gentle paddle past castles and cliff villages, with a minibus back to the start.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Château de Castelnaud",
+      "tag": "Ticketed",
+      "blurb": "A cliff-top castle full of medieval weapons, with working catapult demonstrations in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jardins de Marqueyssac",
+      "tag": "Ticketed",
+      "blurb": "Clipped hedge gardens high above the river, with play areas and big views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sarlat market",
+      "tag": "Free",
+      "blurb": "Sarlat's medieval streets fill with stalls on Wednesday and Saturday mornings. Good for picnic shopping.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gouffre de Padirac",
+      "tag": "Rainy day",
+      "blurb": "A huge cave just over the border in the Lot, where you take a boat along an underground river.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Dordogne good for a family holiday?",
+      "answer": "Yes. There's lots to do outdoors, from canoeing and swimming to castles and caves, and the food markets are fun. Most families stay in a gîte or campsite with a pool."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week gives you time for a canoe trip, a couple of castles and a cave. Ten days lets you slow down and enjoy the pool."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Bergerac airport has direct flights from several UK airports, mostly in summer. Many families take their car on a ferry to France and drive down instead."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "Yes, really. The villages, castles and caves are spread out and buses are rare, so hire a car or bring your own."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Annecy",
+      "code": "GVA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Alentejo",
+      "code": "LIS",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Asturias",
+      "code": "OVD",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

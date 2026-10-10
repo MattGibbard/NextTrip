@@ -1,0 +1,177 @@
+{
+  "name": "Kaş",
+  "published": true,
+  "country": "TR",
+  "title": "Holidays in Kaş",
+  "intro": "Turquoise coves, ancient ruins in town and boat trips over a sunken city. Here's what Kaş is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "DLM",
+  "holiday_types": [
+    "beach",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Turkish lira (₺)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check the latest travel advice and entry rules for Turkey on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, wet"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Wet"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cooler"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rainy"
+    }
+  },
+  "when_to_go": "June, September and October are hot without being too much, and the sea is warm. July and August are very hot, so plan a long lunch in the shade. Winter is mild but wet, and many places close.",
+  "things": [
+    {
+      "name": "Kekova boat trip",
+      "tag": "Tour",
+      "blurb": "Glide over the sunken ruins of an ancient city and stop for swims in clear bays.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kaputaş Beach",
+      "tag": "Free",
+      "blurb": "A small sandy cove with bright blue water between the cliffs. There are lots of steps down from the road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Antiphellos Theatre",
+      "tag": "Free",
+      "blurb": "An ancient Greek theatre in town, facing the sea. Good for sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Patara Beach",
+      "tag": "Ticketed",
+      "blurb": "A huge sandy beach with dunes, Roman ruins and nesting sea turtles.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Saklıkent Gorge",
+      "tag": "Ticketed",
+      "blurb": "Wade up a narrow canyon in icy river water. Bring water shoes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Snorkelling and diving",
+      "tag": "Ticketed",
+      "blurb": "Clear, calm water full of fish. Dive centres run taster sessions for older children.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Kaş good for a family holiday?",
+      "answer": "Yes, for families who like swimming, boats and a relaxed small town. Most of the coast is rocky, so it suits confident swimmers better than toddlers who want sand."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week gives time for boat trips, a couple of beach days and Patara or Saklıkent. Stay ten nights to slow down."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Dalaman or Antalya, about four hours from the UK, then drive or transfer for two to three hours. British passport holders don't need a visa for short stays."
+    },
+    {
+      "question": "Where can children swim?",
+      "answer": "Hotels and beach clubs have swimming platforms and ladders into deep water. For sand, head to Kaputaş or Patara. Water shoes help on the rocks."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Paphos",
+      "code": "PFO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Cappadocia",
+      "code": "NAV",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Dubrovnik",
+      "code": "DBV",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

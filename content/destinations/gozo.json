@@ -1,0 +1,178 @@
+{
+  "name": "Gozo",
+  "published": true,
+  "country": "MT",
+  "title": "Holidays in Gozo",
+  "intro": "Malta's smaller, greener sister island, with salt pans, sea caves and sleepy villages. Here's what Gozo is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "MLA",
+  "holiday_types": [
+    "relax",
+    "nature",
+    "beach"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, windy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring flowers"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool"
+    }
+  },
+  "when_to_go": "May, June, September and October are warm without being too hot. July and August are hot and Maltese families come over at weekends. Winter is mild but can be windy, and some boat trips stop.",
+  "things": [
+    {
+      "name": "Ramla Bay",
+      "tag": "Free",
+      "blurb": "A wide red-sand beach with gentle water, one of the few sandy beaches on the island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cittadella",
+      "tag": "Free",
+      "blurb": "The walled citadel above Victoria, with views across the whole island from its ramparts.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ġgantija Temples",
+      "tag": "Ticketed",
+      "blurb": "Stone temples older than Stonehenge and the pyramids, with a small museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Xwejni salt pans",
+      "tag": "Free",
+      "blurb": "A grid of rock-cut salt pans by the sea, still worked by local families in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dwejra Inland Sea",
+      "tag": "Ticketed",
+      "blurb": "Small boats take you through a tunnel in the cliff out to the open sea and the caves beyond.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Comino Blue Lagoon",
+      "tag": "Tour",
+      "blurb": "Take a boat to the clear, shallow lagoon on Comino. Go early or late, as it's very busy at midday.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Gozo good for a family holiday?",
+      "answer": "Yes, for a slower holiday. It's safe and quiet, English is widely spoken and they drive on the left. Most swimming is from rocks, so pack water shoes."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five nights to a week is plenty. Many families combine a few nights on Gozo with a few on Malta."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Malta, about three hours from the UK. Then drive or take a bus to Ċirkewwa for the short car ferry, or take the fast ferry from Valletta."
+    },
+    {
+      "question": "Is the sea good for swimming?",
+      "answer": "Yes, it's clear and calm in summer. Ramla Bay and San Blas are sandy, and Hondoq ir-Rummien has a small beach. Elsewhere you swim from rocks and ladders."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Malta",
+      "code": "MLA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Menorca",
+      "code": "MAH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Paphos",
+      "code": "PFO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "name": "Alentejo",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in Alentejo",
+  "intro": "Cork oaks, whitewashed hill towns and long, empty Atlantic beaches. Here's what Alentejo is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "LIS",
+  "holiday_types": [
+    "road-trip",
+    "beach",
+    "food"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, wet"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Wildflowers"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Wildflowers"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot inland"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot inland"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool"
+    }
+  },
+  "when_to_go": "April to June and September are warm, green and good for both beaches and hill towns. July and August are very hot inland, so stay on the coast where the Atlantic breeze keeps it cooler. Winter is mild but wetter.",
+  "things": [
+    {
+      "name": "Vila Nova de Milfontes",
+      "tag": "Free",
+      "blurb": "A seaside town where calm river beaches sit next to wild Atlantic ones, great for small children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monsaraz",
+      "tag": "Free",
+      "blurb": "A tiny walled village on a hilltop with a castle and views over a huge lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dark Sky Alqueva stargazing",
+      "tag": "Tour",
+      "blurb": "Some of Europe's darkest skies, with guided night-time sessions and telescopes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chapel of Bones, Évora",
+      "tag": "Ticketed",
+      "blurb": "A chapel lined with human bones in a lovely old city. It may spook younger children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Marvão Castle",
+      "tag": "Ticketed",
+      "blurb": "A castle on a crag with walls you can walk around and views into Spain.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fishermen's Trail",
+      "tag": "Outdoors",
+      "blurb": "Short sections of this clifftop path are easy for children, with beaches along the way.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Alentejo good for a family holiday?",
+      "answer": "Yes, if you want space and quiet. Beaches are uncrowded, food is simple and good, and prices are lower than the Algarve. The Atlantic is cool and can be rough, so pick sheltered or river beaches."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week works well, split between the coast and an inland town like Évora. Ten nights lets you slow down."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Lisbon, about two and a half hours, then hire a car. The coast is around two hours' drive south. British passport holders don't need a visa for short stays."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "Yes. Towns are spread out and buses are infrequent, so a hire car is the easiest way to get around."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Porto",
+      "code": "OPO",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Valencia",
+      "code": "VLC",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

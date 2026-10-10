@@ -1,0 +1,178 @@
+{
+  "name": "Oaxaca",
+  "published": true,
+  "country": "MX",
+  "title": "Holidays in Oaxaca",
+  "intro": "Painted wooden animals, hot chocolate and mountain-top ruins in southern Mexico's colourful old city. Here's what Oaxaca is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "OAX",
+  "holiday_types": [
+    "culture",
+    "food",
+    "city"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Mexican peso ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 127V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check the latest travel advice and entry rules for Mexico on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Rainy season"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Guelaguetza festival"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Drying out"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Day of the Dead"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Festive, dry"
+    }
+  },
+  "when_to_go": "November to March is dry and sunny, with warm days and cool nights. Day of the Dead in late October and early November is spectacular but busy, so book early. The rainy season runs from about June to September, though July brings the Guelaguetza dance festival.",
+  "things": [
+    {
+      "name": "Monte Albán",
+      "tag": "Ticketed",
+      "blurb": "Ancient Zapotec pyramids and plazas on a flattened mountain top above the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hierve el Agua",
+      "tag": "Ticketed",
+      "blurb": "Rock formations that look like frozen waterfalls, with natural pools to swim in.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mercado 20 de Noviembre",
+      "tag": "Free",
+      "blurb": "A busy market where you can try hot chocolate, tlayudas and grasshoppers if you're brave.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ethnobotanical Garden",
+      "tag": "Tour",
+      "blurb": "A cactus garden beside the Santo Domingo church, visited on a guided tour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Árbol del Tule",
+      "tag": "Ticketed",
+      "blurb": "One of the widest trees in the world, in a small town just outside the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alebrije workshops",
+      "tag": "Indoors",
+      "blurb": "Watch families carve and paint bright wooden animals in San Martín Tilcajete.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Oaxaca good for a family holiday?",
+      "answer": "Yes, for curious families who like food and markets. The old city is walkable and friendly, and day trips to ruins and villages are easy to arrange."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights covers the city and a few day trips. Add a few days on the Pacific coast for beaches."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are no direct flights. Fly to Mexico City, about 12 hours, then take a short flight to Oaxaca. British passport holders don't need a visa for short stays."
+    },
+    {
+      "question": "Is Oaxaca safe?",
+      "answer": "Oaxaca city is generally considered safe for visitors, but take the usual care with bags at night. Check GOV.UK for the latest advice on the wider state."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Mexico City",
+      "code": "MEX",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Cusco",
+      "code": "CUZ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Cancún",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Costa Rica",
+      "code": "SJO",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

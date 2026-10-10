@@ -1,0 +1,177 @@
+{
+  "name": "Ambergris Caye",
+  "published": true,
+  "country": "BZ",
+  "title": "Holidays in Ambergris Caye",
+  "intro": "Golf carts, reef snorkelling and nurse sharks off a laid-back Caribbean island. Here's what Ambergris Caye is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "BZE",
+  "holiday_types": [
+    "beach",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Belize dollar (BZ$)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B / G · 110V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "US dollars are widely taken. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Dry, breezy"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, sunny"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Dry, hot"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Rains start"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, showers"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, showers"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive, breezy"
+    }
+  },
+  "when_to_go": "February to April is the dry season, with calm seas for reef trips. December and January are pleasant but can bring cool fronts and choppy water. The hurricane season runs from June to November, with September and October the riskiest. Seaweed can wash up from spring to autumn.",
+  "things": [
+    {
+      "name": "Hol Chan Marine Reserve",
+      "tag": "Tour",
+      "blurb": "Snorkel among turtles, rays and reef fish on a boat trip from San Pedro.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Shark Ray Alley",
+      "tag": "Tour",
+      "blurb": "Usually part of the Hol Chan trip, where gentle nurse sharks and stingrays gather around the boats.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Golf cart around the island",
+      "tag": "Outdoors",
+      "blurb": "Golf carts are the main way to get about, and older teens with a licence can drive the family.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Secret Beach",
+      "tag": "Free",
+      "blurb": "A calm, shallow lagoon-side beach on the west coast, with bars and loungers in the water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Great Blue Hole flight",
+      "tag": "Tour",
+      "blurb": "A short sightseeing flight over the famous round sinkhole and the barrier reef.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lamanai Maya ruins",
+      "tag": "Tour",
+      "blurb": "A day trip to the mainland by boat and road to climb temples in the jungle, with howler monkeys overhead.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Ambergris Caye good for a family holiday?",
+      "answer": "Yes, for families who like snorkelling and a relaxed pace. Beaches are narrow and often have seagrass, so most swimming is from piers or on boat trips. It suits children who can already swim confidently."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week is enough for the reef and a day on the mainland. Ten days lets you add the jungle in western Belize."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are no direct flights. Fly to Belize City via the US, then take a 15-minute hop or a water taxi to San Pedro. British passport holders don't need a visa for a holiday."
+    },
+    {
+      "question": "Is the sea safe for swimming?",
+      "answer": "The barrier reef breaks the waves, so the water inside it is usually calm. Boat traffic runs close to shore, so swim in marked areas or off piers."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bacalar",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Cancún",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Costa Rica",
+      "code": "SJO",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

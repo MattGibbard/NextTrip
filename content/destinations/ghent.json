@@ -1,0 +1,178 @@
+{
+  "name": "Ghent",
+  "published": true,
+  "country": "BE",
+  "title": "Holidays in Ghent",
+  "intro": "Canals, a real moated castle and chips by the water, without the Bruges crowds. Here's what Ghent is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "BRU",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Gentse Feesten"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cool"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas market"
+    }
+  },
+  "when_to_go": "May, June and September are mild and good for walking and boat trips. The Gentse Feesten festival fills the city for ten days in July, which is fun but busy. December has a Christmas market, and it can rain at any time of year.",
+  "things": [
+    {
+      "name": "Gravensteen",
+      "tag": "Ticketed",
+      "blurb": "A real medieval castle with a moat and battlements to climb. The audio tour is funny and suits older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Canal boat trip",
+      "tag": "Tour",
+      "blurb": "A short boat ride is the easiest way to see the old merchant houses with tired legs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Belfry of Ghent",
+      "tag": "Ticketed",
+      "blurb": "Take the lift up the medieval bell tower for views over the rooftops.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "St Bavo's Cathedral",
+      "tag": "Ticketed",
+      "blurb": "The cathedral is home to the Ghent Altarpiece, one of the most famous paintings in Europe.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Graslei and Korenlei",
+      "tag": "Free",
+      "blurb": "The two old quays face each other across the water. Lovely for an ice cream or chips.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "STAM",
+      "tag": "Rainy day",
+      "blurb": "The city museum has a giant aerial photo of Ghent on the floor that children can walk across.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Ghent good for a family holiday?",
+      "answer": "Yes, for a short break. The centre is compact and mostly car-free, and the castle and boats keep children busy. It's quieter and more relaxed than Bruges."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights is enough for the castle, a boat trip and plenty of waffles. Add a night for a day trip to Bruges."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Take the Eurostar to Brussels, then a train to Gent-Sint-Pieters, which takes about half an hour. You can also drive via the Channel Tunnel or a ferry to Calais or Dunkirk."
+    },
+    {
+      "question": "Is Ghent easy to get around?",
+      "answer": "Yes. The old centre is small and mostly traffic-free, and trams run from the main station into town. Cobbles can be bumpy for pushchairs."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Amsterdam",
+      "code": "AMS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Paris",
+      "code": "CDG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Copenhagen",
+      "code": "CPH",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Prague",
+      "code": "PRG",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

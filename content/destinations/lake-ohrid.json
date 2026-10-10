@@ -1,0 +1,177 @@
+{
+  "name": "Lake Ohrid",
+  "published": true,
+  "country": "MK",
+  "title": "Holidays in Lake Ohrid",
+  "intro": "A deep, clear lake ringed by mountains, with old stone churches above the water. Here's what Lake Ohrid is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "OHD",
+  "holiday_types": [
+    "nature",
+    "culture"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Macedonian denar (ден)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm lake"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Hot"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm lake"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold"
+    }
+  },
+  "when_to_go": "June to September is warm enough to swim in the lake. July and August are hottest and busiest, with the Ohrid Summer Festival. Spring and autumn are good for walking and sightseeing, but many lakeside cafés are quiet in winter.",
+  "things": [
+    {
+      "name": "Church of St John at Kaneo",
+      "tag": "Ticketed",
+      "blurb": "A small church on a cliff above the lake, reached by a lakeside boardwalk from the old town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Samuel's Fortress",
+      "tag": "Ticketed",
+      "blurb": "Walk the walls of a hilltop fortress with views over the town and lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bay of Bones",
+      "tag": "Ticketed",
+      "blurb": "A rebuilt prehistoric village on stilts over the water, with a small museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "St Naum Monastery",
+      "tag": "Free",
+      "blurb": "A monastery at the south end of the lake, with rowing boat trips on the clear springs nearby.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Galičica National Park",
+      "tag": "Outdoors",
+      "blurb": "Drive up into the mountains between Lake Ohrid and Lake Prespa for big views and short walks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ohrid old town",
+      "tag": "Free",
+      "blurb": "Steep lanes, an ancient theatre and a pebbly town beach to cool off after.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Lake Ohrid good for a family holiday?",
+      "answer": "Yes, for a relaxed and good-value holiday. The lake is calm, clear and safe for swimming, and there's history around every corner. The old town is hilly, so a sling beats a pushchair."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five nights to a week is enough for the town, a boat trip and a day at St Naum."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Ohrid's small airport has some flights from London, often only in summer. Otherwise fly to Skopje, around three hours away by road. British passport holders don't need a visa for short stays."
+    },
+    {
+      "question": "Can you swim in the lake?",
+      "answer": "Yes. The water is very clear and warm enough from late June to September. Beaches are mostly pebbly, so water shoes help."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Saranda",
+      "code": "TIA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Ljubljana",
+      "code": "LJU",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🧘 Relax & spa"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "name": "Cartagena",
+  "published": true,
+  "country": "CO",
+  "title": "Holidays in Cartagena",
+  "intro": "Colourful colonial streets, old city walls and island boat trips on Colombia's Caribbean coast. Here's what Cartagena is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "CTG",
+  "holiday_types": [
+    "city",
+    "culture",
+    "beach"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 to 6 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Colombian peso ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 110V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You fill in a free Check-MIG form online shortly before you fly. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, breezy"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, breezy"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Showers start"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, humid"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Wettest"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, festive"
+    }
+  },
+  "when_to_go": "December to March is driest, with a sea breeze that takes the edge off the heat. It is hot all year, so plan sightseeing for mornings and evenings. September to November brings the heaviest rain, usually in short downpours. Christmas, New Year and Easter are busy with Colombian holidaymakers.",
+  "things": [
+    {
+      "name": "Walled city",
+      "tag": "Free",
+      "blurb": "Wander the old town's balconied streets and walk along the top of the city walls at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Castillo San Felipe de Barajas",
+      "tag": "Ticketed",
+      "blurb": "A huge Spanish fort with tunnels that children love to explore.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rosario Islands",
+      "tag": "Tour",
+      "blurb": "A boat trip to clear water and coral reefs for snorkelling and swimming.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Getsemaní",
+      "tag": "Free",
+      "blurb": "A lively neighbourhood of street art, flags and evening food stalls in Plaza de la Trinidad.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Palace of the Inquisition",
+      "tag": "Indoors",
+      "blurb": "A history museum in a grand colonial building on Plaza de Bolívar.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Totumo mud volcano",
+      "tag": "Tour",
+      "blurb": "Climb into a small volcano and float in warm, thick mud, then wash off in a lagoon.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Cartagena good for a family holiday?",
+      "answer": "Yes, for families with older children who enjoy history, food and heat. The old town is compact and walkable, and it is easy to add beach days on the nearby islands."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights covers the city and a boat trip. Make it a week to add a few nights on a quieter island or beach."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are no direct flights. Most families fly via Madrid, Bogotá or a US hub. British passport holders don't need a visa for a holiday but must fill in the Check-MIG form online."
+    },
+    {
+      "question": "Is Cartagena safe for families?",
+      "answer": "The old town and main tourist areas are busy and generally safe, but take normal city care. Use registered taxis or ride apps, keep phones out of sight and read GOV.UK advice before you go."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Oaxaca",
+      "code": "OAX",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Cusco",
+      "code": "CUZ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Mexico City",
+      "code": "MEX",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Cancún",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

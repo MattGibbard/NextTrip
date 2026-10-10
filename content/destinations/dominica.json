@@ -1,0 +1,177 @@
+{
+  "name": "Dominica",
+  "published": true,
+  "country": "DM",
+  "title": "Holidays in Dominica",
+  "intro": "Waterfalls, hot springs and resident sperm whales on the Caribbean's wildest island. Here's what Dominica is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "DOM",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 to 5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "East Caribbean dollar (EC$)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type D / G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Dry season starts"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, whales"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Dry, whales"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Rains start"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, showers"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Wet"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Drier"
+    }
+  },
+  "when_to_go": "February to April is driest, the trails are less muddy and whale sightings are good. Dominica is a rainforest island, so expect showers at any time of year. The hurricane season runs from June to November, with August to October the riskiest.",
+  "things": [
+    {
+      "name": "Trafalgar Falls",
+      "tag": "Ticketed",
+      "blurb": "Twin waterfalls a short walk from the car park, with warm springs nearby to sit in.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Champagne Reef",
+      "tag": "Ticketed",
+      "blurb": "Snorkel through streams of warm volcanic bubbles rising from the seabed.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Tour",
+      "blurb": "Sperm whales live off the west coast all year, so sightings are common.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Titou Gorge",
+      "tag": "Ticketed",
+      "blurb": "Swim through a narrow, shaded gorge to a small waterfall. Good for confident swimmers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Emerald Pool",
+      "tag": "Ticketed",
+      "blurb": "An easy rainforest trail to a waterfall and green pool, suitable for younger children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kalinago Territory",
+      "tag": "Tour",
+      "blurb": "Meet the Kalinago people, the island's first inhabitants, and see traditional crafts and canoe building.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Dominica good for a family holiday?",
+      "answer": "Yes, for active families who love nature more than beaches. The hiking, river swims and whale trips are excellent. There are few sandy beaches and no big resorts, and the roads are steep and twisty."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week covers the main falls, reefs and a whale trip. Ten days lets you slow down or add a longer hike."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are no direct flights. Most families fly to Antigua or Barbados and connect on a short regional flight, or take the ferry from Guadeloupe or Martinique. British passport holders don't need a visa."
+    },
+    {
+      "question": "Can children do the Boiling Lake hike?",
+      "answer": "It is a tough full-day hike over steep, muddy ground and needs a guide. It suits fit teenagers, but younger children will be happier at Trafalgar Falls or the Emerald Pool."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Grenada",
+      "code": "GND",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Costa Rica",
+      "code": "SJO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Azores",
+      "code": "PDL",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

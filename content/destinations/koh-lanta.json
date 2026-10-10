@@ -1,0 +1,178 @@
+{
+  "name": "Koh Lanta",
+  "published": true,
+  "country": "TH",
+  "title": "Holidays in Koh Lanta",
+  "intro": "Long, quiet beaches, coral islands and sunsets over the Andaman Sea. Here's what Koh Lanta is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "KBV",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "nature"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Thai baht (฿)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B / C · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Fill in the Thailand Digital Arrival Card online before you land. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, sunny"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Hot, calm"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Rains start"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Monsoon"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Monsoon"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Monsoon"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Wettest"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Monsoon"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drying out"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, sunny"
+    }
+  },
+  "when_to_go": "December to March is dry, sunny and calm, the best time for swimming and boat trips. April is very hot. From May to October the monsoon brings rain and rough seas, many resorts close and island trips stop. November is the start of the season and quieter than Christmas.",
+  "things": [
+    {
+      "name": "Long Beach",
+      "tag": "Free",
+      "blurb": "Also called Phra Ae, a long stretch of soft sand with gentle water, beach bars and easy-going resorts.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Koh Rok snorkelling",
+      "tag": "Tour",
+      "blurb": "A speedboat trip to two islands with clear water, coral and lots of fish. Only runs in the dry season.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mu Koh Lanta National Park",
+      "tag": "Ticketed",
+      "blurb": "A rocky headland at the southern tip with a lighthouse, a short jungle trail and monkeys. Keep food out of sight.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lanta Old Town",
+      "tag": "Free",
+      "blurb": "Wooden stilt houses and seafood restaurants on the quieter east coast, with views of limestone islands.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lanta Animal Welfare",
+      "tag": "Free",
+      "blurb": "A rescue centre for dogs and cats that runs tours. Older children can walk a dog.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mangrove kayaking",
+      "tag": "Tour",
+      "blurb": "Paddle through calm mangrove channels and look for monitor lizards and monkeys.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Koh Lanta good for a family holiday?",
+      "answer": "Yes. It's calmer than Phuket or Phi Phi, with long beaches, family-friendly resorts and little nightlife. Bring a rash vest, as the sun is strong."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights for a proper beach holiday, or a week if you're combining it with Bangkok."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Krabi via Bangkok or another hub, then take a minivan or taxi with two short car ferries. Allow two and a half to three hours. Boats from Krabi and Phuket run in the dry season."
+    },
+    {
+      "question": "How do you get around the island?",
+      "answer": "Tuk-tuks are easy to find, and many families hire a car or a driver for the day. Scooters are common, but roads can be steep and helmets aren't always offered."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lombok",
+      "code": "LOP",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Penang",
+      "code": "PEN",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Maldives",
+      "code": "MLE",
+      "label": "🧘 Relax & spa"
+    }
+  ]
+}

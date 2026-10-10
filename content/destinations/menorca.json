@@ -1,0 +1,178 @@
+{
+  "name": "Menorca",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Menorca",
+  "intro": "Calm turquoise coves, pine woods and pretty harbour towns on the quieter Balearic island. Here's what Menorca is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "MAH",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "nature"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, closed"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, closed"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busiest"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Season ends"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool"
+    }
+  },
+  "when_to_go": "June and September have warm seas and fewer people in the coves. July and August are hot and busy, and beach car parks fill early. Many hotels close from November to April.",
+  "things": [
+    {
+      "name": "Cala Macarella",
+      "tag": "Free",
+      "blurb": "A sheltered white-sand cove with clear water. In summer, take the bus or arrive early, as car access is limited.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ciutadella",
+      "tag": "Free",
+      "blurb": "The old capital, with a little harbour, narrow streets and plenty of ice cream.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mahón harbour boat trip",
+      "tag": "Tour",
+      "blurb": "Glass-bottomed boats tour one of the longest natural harbours in the Mediterranean.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Camí de Cavalls",
+      "tag": "Free",
+      "blurb": "A footpath right round the island. Short sections between coves make easy family walks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monte Toro",
+      "tag": "Free",
+      "blurb": "Drive up the island's highest hill for views over the whole of Menorca.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Naveta des Tudons",
+      "tag": "Ticketed",
+      "blurb": "A Bronze Age stone tomb shaped like an upturned boat, a quick stop near Ciutadella.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Menorca good for a family holiday?",
+      "answer": "Yes. It's calmer than Majorca or Ibiza, with lots of shallow, sheltered beaches and family resorts. Son Bou and Cala Galdana are good for young children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week suits most families. Ten days gives time to try beaches on both the north and south coasts."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are direct flights from many UK airports from spring to autumn, taking about two and a half hours. British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "It helps, but buses link Mahón, Ciutadella and the main resorts in summer, with shuttle buses to some of the busiest coves."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kefalonia",
+      "code": "EFL",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Gozo",
+      "code": "MLA",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Barcelona",
+      "code": "BCN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Tenerife",
+      "code": "TFS",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

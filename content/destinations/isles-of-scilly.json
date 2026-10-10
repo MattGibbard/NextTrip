@@ -1,0 +1,178 @@
+{
+  "name": "Isles of Scilly",
+  "published": true,
+  "country": "GB",
+  "title": "Holidays in Isles of Scilly",
+  "intro": "White sand, clear water and tiny islands you hop between by boat. Here's what the Isles of Scilly are like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "ISC",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "relax"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Pound sterling (£)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No passport needed",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Flights and the Scillonian ferry don't run every day all year, so check timetables before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "No ferry"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "No ferry"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Windy"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring flowers"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Wildflowers"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Puffins, warm"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Birdwatchers"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Stormy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Very quiet"
+    }
+  },
+  "when_to_go": "May to July is lovely, with long days and puffins nesting until about mid-July. September is calmer and the sea is at its warmest. The ferry stops for the winter, and many places close.",
+  "things": [
+    {
+      "name": "Tresco Abbey Garden",
+      "tag": "Ticketed",
+      "blurb": "A sub-tropical garden full of palms and odd plants, plus ship figureheads in Valhalla.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Puffin boat trip",
+      "tag": "Tour",
+      "blurb": "Boats from St Mary's take you past puffins, seals and seabirds. Puffins are around from about April to July.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Seal snorkelling",
+      "tag": "Tour",
+      "blurb": "Snorkel with friendly grey seals off the Eastern Isles. A wetsuit is provided.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Great Bay, St Martin's",
+      "tag": "Free",
+      "blurb": "A long white beach with clear, shallow water, often almost empty.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Inter-island boats",
+      "tag": "Ticketed",
+      "blurb": "Daily boats link the islands, so you can try a new beach every day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Porthcressa Beach",
+      "tag": "Free",
+      "blurb": "A sheltered beach in Hugh Town with rock pools and a play area nearby.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are the Isles of Scilly good for a family holiday?",
+      "answer": "Yes. It's safe, car-free and full of quiet beaches and boat trips. The sea is cold and the weather can turn, so it's best for outdoorsy families."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights lets you visit three or four islands without rushing."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Take the Scillonian ferry from Penzance, around three hours, or fly with Skybus from Land's End or Newquay. The ferry doesn't run in winter. You don't need a passport."
+    },
+    {
+      "question": "How do you get around?",
+      "answer": "On foot and by boat. The islands are small, visitors can't bring cars, and boats leave St Mary's quay every morning for the other islands."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Faroe Islands",
+      "code": "FAE",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Azores",
+      "code": "PDL",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Menorca",
+      "code": "MAH",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "name": "Naxos",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Naxos",
+  "intro": "Long sandy beaches, shallow warm water and a giant marble doorway at sunset. Here's what Naxos is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "JNX",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Quiet"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Quiet"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Cool sea"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, windy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Quiet"
+    }
+  },
+  "when_to_go": "June and September have warm sea and fewer crowds. July and August are hot and busy, and the strong meltemi wind can make some beaches choppy. Many hotels and tavernas close from November to April.",
+  "things": [
+    {
+      "name": "Portara",
+      "tag": "Free",
+      "blurb": "A huge marble temple doorway on an islet by the harbour. Walk over the causeway at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Agios Georgios beach",
+      "tag": "Free",
+      "blurb": "A sandy beach right next to Naxos Town, with shallow water that suits small children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Plaka beach",
+      "tag": "Free",
+      "blurb": "Miles of golden sand on the west coast, with plenty of space even in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mikri Vigla",
+      "tag": "Ticketed",
+      "blurb": "A windsurf and kitesurf spot with lessons for older children and teenagers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Zas",
+      "tag": "Outdoors",
+      "blurb": "The highest mountain in the Cyclades. A half-day walk for older children, with views over the islands.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kouros of Melanes",
+      "tag": "Free",
+      "blurb": "A giant ancient marble statue lying unfinished in a farmer's garden in the hills.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Naxos good for a family holiday?",
+      "answer": "Yes. It has some of the best sandy beaches in Greece with shallow water, good food and a relaxed feel. It's bigger and greener than many Cycladic islands, with lots to explore."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week is about right for beaches and a few days out. Ten days lets you add another island by ferry."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Most families fly to Athens, then take a ferry from Piraeus or Rafina, or a short flight to Naxos. Greece is in the EU, so British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Do you need a car on Naxos?",
+      "answer": "Buses link Naxos Town with the main west coast beaches, which is enough for a beach holiday. Hire a car for a few days to explore the mountain villages."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Milos",
+      "code": "MLO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Kefalonia",
+      "code": "EFL",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Paphos",
+      "code": "PFO",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

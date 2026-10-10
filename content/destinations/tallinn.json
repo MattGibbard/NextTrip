@@ -1,0 +1,177 @@
+{
+  "name": "Tallinn",
+  "published": true,
+  "country": "EE",
+  "title": "Holidays in Tallinn",
+  "intro": "Medieval towers, cobbled lanes and a real submarine inside a seaplane hangar. Here's what Tallinn is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "TLL",
+  "holiday_types": [
+    "city",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, dark"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Cool"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warmest"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cool"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Dark"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas market"
+    }
+  },
+  "when_to_go": "June to August is warmest, with very long light evenings. December has a Christmas market in the Town Hall Square and the Old Town looks pretty in the snow. The rest of winter is cold and dark, but the museums are good on chilly days.",
+  "things": [
+    {
+      "name": "Tallinn Old Town",
+      "tag": "Free",
+      "blurb": "Walk the cobbled lanes and city walls, then climb up to the Toompea viewing platforms for rooftop views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kiek in de Kök",
+      "tag": "Ticketed",
+      "blurb": "A cannon tower on the old walls with secret tunnels under the bastions to explore.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Seaplane Harbour",
+      "tag": "Indoors",
+      "blurb": "A maritime museum in giant old hangars, where you can climb inside a real submarine.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Estonian Open Air Museum",
+      "tag": "Ticketed",
+      "blurb": "Old farmhouses, windmills and a village school in the woods by the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kadriorg Park",
+      "tag": "Free",
+      "blurb": "A big palace park with ponds, swans and a good playground.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "PROTO Invention Factory",
+      "tag": "Rainy day",
+      "blurb": "Hands-on old inventions and virtual reality rides in a converted factory.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Tallinn good for a family holiday?",
+      "answer": "Yes, for a short break. The Old Town is small, safe and easy to walk, and there are good museums for children. Prices are lower than in most Western European capitals."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights covers the Old Town, the Seaplane Harbour and a park or two. Add a night for a day trip to Helsinki."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Direct flights from London take about three hours. The airport is only a short tram or taxi ride from the centre."
+    },
+    {
+      "question": "Can you visit Helsinki from Tallinn?",
+      "answer": "Yes, fast ferries cross to Helsinki in about two hours, so a day trip is easy. Book ahead in summer."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kraków",
+      "code": "KRK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Gdańsk",
+      "code": "GDN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Copenhagen",
+      "code": "CPH",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Prague",
+      "code": "PRG",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

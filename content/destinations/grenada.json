@@ -1,0 +1,178 @@
+{
+  "name": "Grenada",
+  "published": true,
+  "country": "GD",
+  "title": "Holidays in Grenada",
+  "intro": "Spice farms, chocolate estates and a long white beach on the Caribbean's Spice Isle. Here's what Grenada is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "GND",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "food"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 to 5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "East Caribbean dollar (EC$)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Grenada drives on the left, like the UK. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Dry, hot"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Turtles nesting"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Rains start"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Showers"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hot, wet"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "January to April is dry and sunny with a steady breeze. From April to July turtles nest on the north-east beaches. The hurricane season runs from June to November. Grenada is near the southern edge of the hurricane belt, but storms do still hit, so August to October is the riskiest time.",
+  "things": [
+    {
+      "name": "Grand Anse Beach",
+      "tag": "Free",
+      "blurb": "A long curve of soft sand with calm water, close to most hotels.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Underwater Sculpture Park",
+      "tag": "Tour",
+      "blurb": "Snorkel or take a glass-bottom boat over statues on the seabed at Molinere Bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Etang National Park",
+      "tag": "Ticketed",
+      "blurb": "A crater lake in the rainforest, with short trails and mona monkeys near the road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Belmont Estate",
+      "tag": "Tour",
+      "blurb": "A working cocoa and spice estate where children can see chocolate being made from the bean.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Annandale Falls",
+      "tag": "Ticketed",
+      "blurb": "A short, easy walk to a small waterfall and swimming pool in the hills.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fort George",
+      "tag": "Ticketed",
+      "blurb": "Old fort with views over the pretty harbour of St George's, the capital.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Grenada good for a family holiday?",
+      "answer": "Yes. It is friendly and relaxed, with calm beaches, easy waterfalls and spice farms to visit. It is less developed than some Caribbean islands, so it feels low-key."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week works well for beach time and a couple of day trips. Ten days gives time to visit the smaller island of Carriacou."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are flights from London, around nine hours, though some stop at another Caribbean island on the way. British passport holders don't need a visa."
+    },
+    {
+      "question": "When is the cheapest time to go?",
+      "answer": "Prices drop after Easter and stay lower through the summer. May and June are a good value compromise before the riskiest part of the hurricane season."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Dominica",
+      "code": "DOM",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Mauritius",
+      "code": "MRU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Ambergris Caye",
+      "code": "BZE",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

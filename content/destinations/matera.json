@@ -1,0 +1,177 @@
+{
+  "name": "Matera",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Matera",
+  "intro": "Whole neighbourhoods of cave houses carved into a gorge, glowing with lights at night. Here's what Matera is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "BRI",
+  "holiday_types": [
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive"
+    }
+  },
+  "when_to_go": "April, May, September and October are warm enough for exploring but cool enough for all the steps. July and August are very hot, so explore early and late. Winter is cold and quiet, but the Sassi look magical at Christmas.",
+  "things": [
+    {
+      "name": "Sassi di Matera",
+      "tag": "Free",
+      "blurb": "Wander the two old cave districts, Sasso Caveoso and Sasso Barisano. Expect lots of steps.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Casa Grotta di Vico Solitario",
+      "tag": "Ticketed",
+      "blurb": "A furnished cave house showing how families and their animals once lived together.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Palombaro Lungo",
+      "tag": "Tour",
+      "blurb": "A huge underground water tank under the main square, seen from walkways.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Santa Maria de Idris",
+      "tag": "Ticketed",
+      "blurb": "A small church carved into a rock pinnacle, with old frescoes inside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Belvedere di Murgia Timone",
+      "tag": "Outdoors",
+      "blurb": "Walk across the gorge for the best view back to the town, past cave churches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alberobello",
+      "tag": "Free",
+      "blurb": "A town of white cone-roofed trulli houses, about an hour's drive away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Matera good for a family holiday?",
+      "answer": "Yes, for a short stay, especially as part of a trip to Puglia. Children love the caves and sleeping in a cave hotel. It isn't a beach place, though."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights is enough to explore the Sassi and walk across the gorge."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Bari, then drive about an hour, or take a local train. Italy is in the EU, so British passport holders can visit for up to 90 days in any 180 without a visa. New EU entry checks are being brought in, so check GOV.UK before you travel."
+    },
+    {
+      "question": "Can you visit Matera with a pushchair?",
+      "answer": "Not easily. The Sassi are full of steep steps and uneven paths, so bring a baby carrier for little ones."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Puglia",
+      "code": "BRI",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Rome",
+      "code": "FCO",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Syracuse",
+      "code": "CTA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Malta",
+      "code": "MLA",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

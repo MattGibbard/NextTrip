@@ -1,0 +1,178 @@
+{
+  "name": "Puglia",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Puglia",
+  "intro": "Whitewashed hill towns, cone-roofed trulli and long sandy beaches on Italy's heel. Here's what Puglia is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "BRI",
+  "holiday_types": [
+    "beach",
+    "food",
+    "culture"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Beach season"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, very busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool"
+    }
+  },
+  "when_to_go": "June and September are best, with warm seas and fewer crowds. July is hot, and in August Italian families fill the beaches and prices rise. Spring is lovely for exploring the towns, but the sea is still cool.",
+  "things": [
+    {
+      "name": "Alberobello",
+      "tag": "Free",
+      "blurb": "Wander streets of white trulli houses with pointed stone roofs. Some are shops you can step inside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grotte di Castellana",
+      "tag": "Ticketed",
+      "blurb": "Guided tours lead deep into huge caves full of stalactites. Bring a jumper, as it's cool underground.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zoosafari Fasanolandia",
+      "tag": "Ticketed",
+      "blurb": "Drive through a safari park, then spend the afternoon on the funfair rides next door.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Polignano a Mare",
+      "tag": "Free",
+      "blurb": "A clifftop town above a tiny pebble cove. Go early in summer, as the beach fills fast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Torre dell'Orso",
+      "tag": "Outdoors",
+      "blurb": "A long sandy beach with shallow water and two sea stacks just offshore.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lecce",
+      "tag": "Free",
+      "blurb": "A honey-coloured baroque old town that's flat and easy to explore with a pushchair.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Puglia good for a family holiday?",
+      "answer": "Yes. The beaches are sandy and shallow in many places, the food is simple and child-friendly, and the towns are relaxed. A car makes it much easier."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week lets you mix beach days with Alberobello, the caves and a couple of towns. Ten days lets you add the Salento in the far south."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are direct flights to Bari and Brindisi from several UK airports, taking under three hours. British passport holders don't need a visa for short stays, but check GOV.UK for the new EU entry checks."
+    },
+    {
+      "question": "Do you need a car in Puglia?",
+      "answer": "It helps a lot. Trains link the main towns, but many beaches, masserie farm stays and villages are only easy to reach by car."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kefalonia",
+      "code": "EFL",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Menorca",
+      "code": "MAH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Malta",
+      "code": "MLA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Rome",
+      "code": "FCO",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

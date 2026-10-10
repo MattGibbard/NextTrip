@@ -1,0 +1,178 @@
+{
+  "name": "Oman",
+  "published": true,
+  "country": "OM",
+  "title": "Holidays in Oman",
+  "intro": "Desert dunes, turquoise wadis and turtle beaches, with forts and souks in between. Here's what Oman is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "MCT",
+  "holiday_types": [
+    "adventure",
+    "culture",
+    "road-trip"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3 to 4 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Omani rial (OMR)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 14 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Dress modestly away from the beach, covering shoulders and knees. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Warm, sunny"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm, sunny"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hot"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Hot, cooling"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Warm, sunny"
+    }
+  },
+  "when_to_go": "November to March is the time to go, with warm days and cool desert nights. From May to September it is very hot across most of the country. The exception is Salalah in the south, which is green and misty in the summer monsoon. Turtles nest at Ras al Jinz all year, with most activity in summer.",
+  "things": [
+    {
+      "name": "Sultan Qaboos Grand Mosque",
+      "tag": "Free",
+      "blurb": "A huge, beautiful mosque in Muscat. Open to visitors on most mornings, with modest dress required for everyone.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wadi Shab",
+      "tag": "Outdoors",
+      "blurb": "Take a short boat ride, walk up the gorge and swim through pools into a cave with a waterfall.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wahiba Sands",
+      "tag": "Tour",
+      "blurb": "Stay in a desert camp, ride over the dunes and watch the stars.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nizwa Fort and souk",
+      "tag": "Ticketed",
+      "blurb": "A great round fort to climb, next to a souk with a lively Friday livestock market.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ras al Jinz Turtle Reserve",
+      "tag": "Tour",
+      "blurb": "Guided night or dawn visits to watch green turtles nesting and hatchlings heading to sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bimmah Sinkhole",
+      "tag": "Free",
+      "blurb": "A turquoise pool in a limestone crater by the coast road, with steps down for a swim.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Oman good for a family holiday?",
+      "answer": "Yes. It is safe, welcoming and easy to drive, with real adventure such as wadi swims and desert camps. It is quieter and more traditional than Dubai."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week covers Muscat, the wadis, the desert and Nizwa. Ten days lets you add beach time or the mountains."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are direct flights from London to Muscat, around seven hours. British passport holders can visit for up to 14 days without a visa."
+    },
+    {
+      "question": "Do you need a 4x4?",
+      "answer": "Main roads are excellent and fine in a normal car. You need a 4x4 for the mountains and dunes, though most desert camps will collect you from the edge of the sand."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Jordan",
+      "code": "AMM",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Dubai",
+      "code": "DXB",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Marrakech",
+      "code": "RAK",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Namibia",
+      "code": "WDH",
+      "label": "🚗 Road trip"
+    }
+  ]
+}

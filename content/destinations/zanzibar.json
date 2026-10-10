@@ -1,0 +1,178 @@
+{
+  "name": "Zanzibar",
+  "published": true,
+  "country": "TZ",
+  "title": "Holidays in Zanzibar",
+  "intro": "Spice-scented Stone Town alleys, giant tortoises and white beaches on the Indian Ocean. Here's what Zanzibar is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "ZNZ",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "relax"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 to 3 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Tanzanian shilling (TSh)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eVisa needed",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type D / G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Zanzibar also charges a compulsory travel insurance fee for visitors. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Hot, dry"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Hot, dry"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Hot, humid"
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Long rains"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Dry, breezy"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Dry, breezy"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Dry, sunny"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Dry, sunny"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Short rains"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Hot, festive"
+    }
+  },
+  "when_to_go": "June to September is dry and breezy, and it pairs well with a mainland safari. January and February are hot and mostly dry too. The long rains fall from March to May, with April the wettest month, and there are short rains in November. On the east coast the tide goes out a long way, so pick your beach with care.",
+  "things": [
+    {
+      "name": "Stone Town",
+      "tag": "Free",
+      "blurb": "Get lost in the old town's narrow lanes, carved doors and markets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Prison Island",
+      "tag": "Tour",
+      "blurb": "A short boat ride to meet giant tortoises, some more than a hundred years old.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jozani Forest",
+      "tag": "Ticketed",
+      "blurb": "Walk among rare red colobus monkeys, found only on Zanzibar.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spice farm tour",
+      "tag": "Tour",
+      "blurb": "Smell, taste and touch cloves, cinnamon and vanilla on a working farm.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mnemba Atoll",
+      "tag": "Tour",
+      "blurb": "Snorkel among reef fish and look out for dolphins on the way.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Forodhani Gardens night market",
+      "tag": "Free",
+      "blurb": "Seafront food stalls each evening, with Zanzibar pizza and fresh sugar cane juice.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Zanzibar good for a family holiday?",
+      "answer": "Yes, especially as a beach finish after a safari. The beaches are beautiful and Stone Town is fascinating. Check whether your beach has big tides, as on the east coast the sea can disappear for hours."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week, with a couple of nights in Stone Town and the rest on the beach. Add four or five nights on safari on the mainland if you can."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "There are no direct flights. Most families change in the Gulf, Istanbul or Nairobi. British passport holders need a Tanzanian visa, best applied for online before travel."
+    },
+    {
+      "question": "Which beach is best for children?",
+      "answer": "Nungwi and Kendwa in the north are best for swimming, as the tide changes much less there. East coast beaches are quieter, with rock pools at low tide."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Maasai Mara",
+      "code": "NBO",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Mauritius",
+      "code": "MRU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Maldives",
+      "code": "MLE",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

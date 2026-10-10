@@ -1,0 +1,178 @@
+{
+  "name": "Kanazawa",
+  "published": true,
+  "country": "JP",
+  "title": "Holidays in Kanazawa",
+  "intro": "Samurai streets, gold-leaf ice cream and one of Japan's most beautiful gardens. Here's what Kanazawa is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "to_code": "KMQ",
+  "holiday_types": [
+    "culture",
+    "food",
+    "city"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 to 9 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Japanese yen (¥)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 100V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK plugs need an adapter. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, snowy"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, snowy"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Cherry blossom"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Rainy season"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, humid"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, humid"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Autumn colour"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold, wet"
+    }
+  },
+  "when_to_go": "April and May bring cherry blossom and mild days, and October and November have crisp weather and autumn colour. June is the rainy season, and July and August are hot and sticky. Winter is grey, wet and often snowy, though the snow on the gardens is lovely.",
+  "things": [
+    {
+      "name": "Kenroku-en",
+      "tag": "Ticketed",
+      "blurb": "A huge landscape garden with ponds, stone lanterns and bridges, one of Japan's top three.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kanazawa Castle Park",
+      "tag": "Free",
+      "blurb": "Wide lawns, white walls and rebuilt gates next to Kenroku-en, with plenty of space to run about.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "21st Century Museum of Contemporary Art",
+      "tag": "Ticketed",
+      "blurb": "Playful modern art, including a swimming pool you can stand underneath. Some areas are free.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Omicho Market",
+      "tag": "Free",
+      "blurb": "A covered market packed with seafood, fruit and snack stalls. Go for lunch and try a bowl of rice topped with fish.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Higashi Chaya",
+      "tag": "Free",
+      "blurb": "Old wooden teahouses on lantern-lit streets. Look out for ice cream topped with gold leaf.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gold leaf workshop",
+      "tag": "Indoors",
+      "blurb": "Kanazawa makes almost all of Japan's gold leaf. Children can decorate a chopstick or a box to take home.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Kanazawa good for a family holiday?",
+      "answer": "Yes, as part of a Japan trip. It's compact, very safe and calmer than Kyoto, and children like the samurai houses and the gold. It works best for school-age children who enjoy wandering."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights covers the garden, the market and the old districts."
+    },
+    {
+      "question": "How do you get there from the UK?",
+      "answer": "Fly to Tokyo, then take the bullet train, which takes about two and a half to three hours. Komatsu airport has domestic flights. A rail pass may save money if you're touring."
+    },
+    {
+      "question": "Is it easy to get around?",
+      "answer": "Yes. Most sights are within walking distance or a short bus ride, and loop buses run from the station."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tokyo",
+      "code": "HND",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Okinawa",
+      "code": "OKA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Seoul",
+      "code": "ICN",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Kraków",
+      "code": "KRK",
+      "label": "🏛️ Culture & history"
+    }
+  ]
+}

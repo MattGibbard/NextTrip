@@ -343,7 +343,7 @@ export function ShareMapView() {
                 options={[
                   ["none", "None"],
                   ["names", "Names"],
-                  ["flags", "Names + flags"],
+                  ["flags", "With flags"],
                 ]}
               />
             </SettingsSection>

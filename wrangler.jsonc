@@ -6,7 +6,7 @@
   "compatibility_flags": ["nodejs_compat"],
   "observability": { "enabled": true },
   // Lets Workers Builds run `wrangler preview` for pull requests. Previews don't inherit bindings,
-  // so they name their own database here: nexttrip-preview, kept apart from the live nexttrip
+  // so they name their own database here: nexttrip-preview, kept apart from the live
   // database so nothing done in a preview touches real data. The Worker creates its tables on
   // first use. Sign-in links show on the page instead of being emailed, so previews need no
   // Resend key; anyone with a preview link can sign in, but only ever sees test data.
@@ -27,10 +27,12 @@
     "not_found_handling": "404-page",
     "run_worker_first": true
   },
+  // The live database, created in Western Europe (--location=weur). Location is fixed when a D1
+  // database is created, so moving it means a new database plus an export and import.
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "nexttrip",
+      "database_name": "somewhereparty",
       "migrations_dir": "migrations"
     }
   ]

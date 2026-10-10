@@ -4,14 +4,14 @@
   "hero": {
     "kicker": "Creators · Now boarding",
     "heading": "Share the fun, and get featured on our home page.",
-    "lead": "We're a small, free family holiday planner, and we'd love to grow with creators who get what we're about: fair, fun decisions and holidays everyone's excited for. If you use somewhere🎉 or want to tell your followers about it, we'd like to feature you on our home page.",
+    "lead": "We're a small, free family holiday planner, and we'd love to grow with creators who get what we're about: fair, fun decisions and holidays everyone's excited for. Whether you plan your trips with somewhere🎉 or simply recommend it to your followers, we'd like to feature you on our home page.",
     "button": "Message us on Instagram"
   },
   "look_for": {
     "kicker": "Who we'd love to hear from",
     "heading": "Like-minded creators who want to have fun",
     "reasons": [
-      { "title": "You actually use it", "text": "You've planned a holiday with somewhere🎉, or you're about to. Real draws, real arguments about Lisbon versus Lapland, real trips." },
+      { "title": "You like what we're doing", "text": "You plan your trips with somewhere🎉, or you just think it's a good idea and want to tell people about it. Either is great." },
       { "title": "Your audience plans holidays", "text": "Families, couples, friends who travel together, travel lovers. Any size of account is welcome, from a few hundred followers to a few hundred thousand." },
       { "title": "You keep it fun and friendly", "text": "Your content is warm, honest and suitable for families. No hard sell needed: just show how you decide where to go next." }
     ]
@@ -20,8 +20,8 @@
     "label": "Departures · How it works",
     "heading": "From your feed to our home page, in four steps.",
     "steps": [
-      { "title": "Plan a trip with somewhere🎉", "text": "Sign up free, add your ideas and run a draw with your family or travel crew.", "status": "Checked in" },
-      { "title": "Share it with your followers", "text": "Post, reel or story: however you like to tell the story of how you picked your next holiday.", "status": "Boarding" },
+      { "title": "Get to know somewhere🎉", "text": "Have a look around, or sign up free and run a draw with your family or travel crew. Using it isn't required.", "status": "Checked in" },
+      { "title": "Share it with your followers", "text": "Post, reel or story: however you like to recommend us, or show how you picked your next holiday.", "status": "Boarding" },
       { "title": "Send us a DM on Instagram", "text": "Message @somewhereparty with your handle and a link to your post, and tell us a little about you.", "status": "Final call" },
       { "title": "Get featured on our home page", "text": "If it's a good fit, we'll add you, your photo and a few words about us to the home page.", "status": "Now departing" }
     ]
@@ -39,7 +39,7 @@
     "items": [
       {
         "title": "Who can take part",
-        "text": "You need to be 18 or over and to have used somewhere🎉 or genuinely want to recommend it. There's no minimum number of followers. Your content needs to be suitable for families: nothing offensive, misleading or unlawful."
+        "text": "You need to be 18 or over and to recommend somewhere🎉 on your account. You don't have to use it yourself. There's no minimum number of followers. Your content needs to be suitable for families: nothing offensive, misleading or unlawful."
       },
       {
         "title": "Being featured",
@@ -51,7 +51,7 @@
       },
       {
         "title": "Posting about us",
-        "text": "Say what you really think, and keep what you say about somewhere🎉 accurate. Where UK advertising rules (from the ASA and CMA) or the platform's own rules need it, label your posts clearly, for example with #ad or #gifted. You're responsible for your own posts and for following those rules."
+        "text": "Say what you really think, and keep what you say about somewhere🎉 accurate. Don't say you've used it if you haven't. Where UK advertising rules (from the ASA and CMA) or the platform's own rules need it, label your posts clearly, for example with #ad or #gifted. You're responsible for your own posts and for following those rules."
       },
       {
         "title": "Our relationship",

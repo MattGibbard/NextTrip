@@ -19,7 +19,7 @@ import {
 } from "../shareCard";
 import type { Format, ShareData, ShareOptions, SharePlace, StatKey, ThemeId } from "../shareCard";
 
-/** Everything you can change except the words, remembered by this browser for next time. */
+/** Everything you can change. All but the words are remembered by this browser for next time. */
 type Settings = Omit<ShareOptions, "title" | "subtitle"> & {
   /** Your own title and line under it, or null to use the ones worked out from your trips. */
   title: string | null;
@@ -41,7 +41,6 @@ const DEFAULTS: Settings = {
   stats: { countries: true, percent: true, continents: true, trips: false },
   statStyle: "simple",
   brandPos: "bottom",
-  showUrl: true,
   title: null,
   subtitle: null,
 };
@@ -60,7 +59,11 @@ const SECTIONS: [Section, string][] = [
 /** Make a picture of the family's map to post on Instagram, TikTok or Pinterest. */
 export function ShareMapView() {
   const { trips, ideas } = useData();
-  const [settings, setSettings] = useState<Settings>(() => ({ ...DEFAULTS, ...load<Partial<Settings>>(SETTINGS_KEY, {}) }));
+  const [settings, setSettings] = useState<Settings>(() => {
+    // Older saves included the words and an option to hide the address: leave those out.
+    const { title: _t, subtitle: _s, showUrl: _u, ...stored } = load<Partial<Settings> & { showUrl?: boolean }>(SETTINGS_KEY, {});
+    return { ...DEFAULTS, ...stored };
+  });
   const [section, setSection] = useState<Section>("look");
   const [shapes, setShapes] = useState<CountryShapes | null>(null);
   const [saved, setSaved] = useState<"saving" | "done" | null>(null);
@@ -77,7 +80,11 @@ export function ShareMapView() {
     };
   }, []);
 
-  useEffect(() => save(SETTINGS_KEY, settings), [settings]);
+  useEffect(() => {
+    // Your own title and line under it are for this picture only, so they're not saved.
+    const { title: _t, subtitle: _s, ...rest } = settings;
+    save(SETTINGS_KEY, rest);
+  }, [settings]);
 
   const data = useMemo<ShareData>(() => {
     const visitedSummary = summarise(trips.map((t) => t.places));
@@ -385,11 +392,7 @@ export function ShareMapView() {
                   ["bottom", "Bottom"],
                 ]}
               />
-              <label className="share-check">
-                <input type="checkbox" checked={settings.showUrl} onChange={(e) => set("showUrl", e.target.checked)} />
-                Show the somewhere.party address
-              </label>
-              <p className="share-note">The somewhere🎉 wordmark is always on the picture.</p>
+              <p className="share-note">The somewhere🎉 wordmark and somewhere.party address are always on the picture.</p>
             </SettingsSection>
           </div>
 

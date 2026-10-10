@@ -79,7 +79,22 @@ export function PlacesView() {
 
   return (
     <section className="places-page">
-      <h1 className="display mobile-only">Places</h1>
+      <div className="page-head places-head">
+        <div>
+          <div className="eyebrow">PASSPORT · YOUR MAP</div>
+          <h1 className="display">Places</h1>
+        </div>
+        {visited.length > 0 && (
+          <a className="btn outline" href="#/places/share">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" />
+            </svg>
+            <span>
+              Share<span className="desktop-only"> your</span> map
+            </span>
+          </a>
+        )}
+      </div>
 
       <div className="map-wrap places-map" ref={mapRef}>
         <WorldMap visited={visitedCodes} ideas={ideaCodes} pins={pins} selected={selected} onSelect={select} />
@@ -111,14 +126,6 @@ export function PlacesView() {
           </label>
         </div>
       </div>
-
-      {visited.length > 0 && (
-        <div className="places-share">
-          <a className="btn ghost small" href="#/places/share">
-            Share your map
-          </a>
-        </div>
-      )}
 
       {selected ? (
         <CountryPanel code={selected} onClose={() => setSelected(null)} />

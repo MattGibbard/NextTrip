@@ -1,9 +1,21 @@
 /* Share your map: make a picture of the family's map to post. */
 
-.places-share {
-  display: flex;
-  justify-content: flex-end;
-  margin: -0.25rem 0 1rem;
+.places-head .display {
+  margin: 0;
+}
+.places-head .eyebrow {
+  white-space: nowrap;
+}
+.btn.outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  min-height: 44px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.btn.outline:hover:not(:disabled) {
+  background: var(--accent-soft);
 }
 
 .share-page .back-link {

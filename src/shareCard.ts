@@ -128,7 +128,7 @@ export async function loadShareFonts() {
 }
 
 export function areaLabel(area: Area, continent: string | null) {
-  return area === "world" ? "World" : area === "fit" ? "Fit to my places" : (continent ?? "Continent");
+  return area === "world" ? "World" : area === "fit" ? "Best fit" : (continent ?? "Continent");
 }
 
 /** The places that go on the picture with these options. */
@@ -182,10 +182,10 @@ function wrap(ctx: CanvasRenderingContext2D, text: string, maxW: number, maxLine
 }
 
 /** Draws text with extra space between letters, one character at a time (ASCII labels only). */
-function spaced(ctx: CanvasRenderingContext2D, text: string, x: number, y: number, spacing: number, align: "left" | "right" = "left") {
+function spaced(ctx: CanvasRenderingContext2D, text: string, x: number, y: number, spacing: number, align: "left" | "center" | "right" = "left") {
   const chars = [...text];
   const width = chars.reduce((w, c) => w + ctx.measureText(c).width, 0) + spacing * Math.max(0, chars.length - 1);
-  let cx = align === "right" ? x - width : x;
+  let cx = align === "right" ? x - width : align === "center" ? x - width / 2 : x;
   ctx.textAlign = "left";
   for (const c of chars) {
     ctx.fillText(c, cx, y);
@@ -201,10 +201,40 @@ function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: numbe
 }
 
 function ringsOf(g: Geometry): Position[][] {
-  if (g.type === "Polygon") return g.coordinates;
-  if (g.type === "MultiPolygon") return g.coordinates.flat();
+  if (g.type === "Polygon") return g.coordinates.flatMap(acrossDateLine);
+  if (g.type === "MultiPolygon") return g.coordinates.flat().flatMap(acrossDateLine);
   if (g.type === "GeometryCollection") return g.geometries.flatMap(ringsOf);
   return [];
+}
+
+/**
+ * Russia, Fiji and Antarctica cross the 180° line, where longitude jumps from 180 to -180. Drawn as is,
+ * that jump becomes a line straight across the map and leaves gaps in the land. Instead the ring is
+ * kept continuous past 180°, closed along the pole if it goes all the way round (Antarctica), and
+ * drawn again one world to the left or right so both sides of the map get their part.
+ */
+function acrossDateLine(ring: Position[]): Position[][] {
+  let shift = 0;
+  let crossed = false;
+  const out: Position[] = ring.map(([lon, lat], i) => {
+    if (i) {
+      const d = lon - ring[i - 1][0];
+      if (d > 180) shift -= 360;
+      else if (d < -180) shift += 360;
+      if (d > 180 || d < -180) crossed = true;
+    }
+    return [lon + shift, lat];
+  });
+  if (!crossed) return [ring];
+  if (shift) {
+    // Goes all the way round a pole: finish the shape along it.
+    const pole = out.reduce((sum, [, lat]) => sum + lat, 0) < 0 ? -90 : 90;
+    out.push([out[out.length - 1][0], pole], [out[0][0], pole]);
+  }
+  const lons = out.map(([lon]) => lon);
+  const lo = Math.min(...lons);
+  const hi = Math.max(...lons);
+  return [-360, 0, 360].filter((k) => lo + k < 180 && hi + k > -180).map((k) => out.map(([lon, lat]) => [lon + k, lat]));
 }
 
 /** A pattern of small dots, used for the dotted map style. */
@@ -330,13 +360,18 @@ export function drawShareCard(canvas: HTMLCanvasElement, shapes: CountryShapes |
     ctx.fillStyle = t.rule;
     ctx.fillRect(f.pad, statsY, inner, 1);
     const colW = (inner - 12 * (cols - 1)) / cols;
+    // Each stat is centred in its column, and a short last row is centred under the one above.
     stats.forEach(([, value, label], i) => {
-      const cx = f.pad + (i % cols) * (colW + 12);
-      const cy = statsY + 15 + Math.floor(i / cols) * (numH + 8 + 12 + 14);
+      const row = Math.floor(i / cols);
+      const inRow = Math.min(cols, stats.length - row * cols);
+      const rowX = f.pad + (inner - (inRow * colW + 12 * (inRow - 1))) / 2;
+      const cx = rowX + (i % cols) * (colW + 12) + colW / 2;
+      const cy = statsY + 15 + row * (numH + 8 + 12 + 14);
       if (board) {
         ctx.font = `500 ${Math.round(f.num * 0.8)}px ${MONO}`;
+        const tilesX = cx - ([...value].length * (tileW + 3) - 3) / 2;
         [...value].forEach((c, j) => {
-          const tx = cx + j * (tileW + 3);
+          const tx = tilesX + j * (tileW + 3);
           ctx.fillStyle = t.tile;
           roundRect(ctx, tx + 0.5, cy + 0.5, tileW - 1, tileH - 1, 5);
           ctx.fill();
@@ -352,12 +387,12 @@ export function drawShareCard(canvas: HTMLCanvasElement, shapes: CountryShapes |
       } else {
         ctx.font = `500 ${f.num}px ${MONO}`;
         ctx.fillStyle = t.num;
-        ctx.textAlign = "left";
+        ctx.textAlign = "center";
         ctx.fillText(value, cx, cy + f.num / 2);
       }
       ctx.font = `500 10px ${MONO}`;
       ctx.fillStyle = t.muted;
-      spaced(ctx, label.toUpperCase(), cx, cy + numH + 8 + 6, 1.4);
+      spaced(ctx, label.toUpperCase(), cx, cy + numH + 8 + 6, 1.4, "center");
     });
   }
 
@@ -377,6 +412,12 @@ export function drawShareCard(canvas: HTMLCanvasElement, shapes: CountryShapes |
   }
 }
 
+/** Miller projection's height for a latitude, in the same units as degrees of longitude. */
+function miller(lat: number) {
+  const phi = (Math.max(-89.9, Math.min(89.9, lat)) * Math.PI) / 180;
+  return ((1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * phi))) * 180) / Math.PI;
+}
+
 function drawMap(
   ctx: CanvasRenderingContext2D,
   shapes: CountryShapes,
@@ -389,15 +430,18 @@ function drawMap(
   scale: number,
 ) {
   const [west, south, east, north] = viewBox(data, o);
-  // Equirectangular, squashed sideways to suit the middle of the view, so Europe doesn't look stretched.
-  const mid = o.area === "world" ? 0 : (((south + north) / 2) * Math.PI) / 180;
-  const c = Math.cos(mid);
+  // The whole world uses the Miller projection, the familiar wall-map shape, which is taller than a
+  // flat grid without stretching anything. Smaller areas are a flat grid squashed sideways to suit the
+  // middle of the view, so Europe doesn't look stretched.
+  const world = o.area === "world";
+  const yOf = world ? miller : (lat: number) => lat;
+  const c = world ? 1 : Math.cos((((south + north) / 2) * Math.PI) / 180);
   const vbW = (east - west) * c;
-  const vbH = north - south;
+  const vbH = yOf(north) - yOf(south);
   const s = Math.min(rect.w / vbW, rect.h / vbH);
   const ox = rect.x + (rect.w - vbW * s) / 2 - west * c * s;
-  const oy = rect.y + (rect.h - vbH * s) / 2 + north * s;
-  const px = (lon: number, lat: number): [number, number] => [ox + lon * c * s, oy - lat * s];
+  const oy = rect.y + (rect.h - vbH * s) / 2 + yOf(north) * s;
+  const px = (lon: number, lat: number): [number, number] => [ox + lon * c * s, oy - yOf(lat) * s];
 
   ctx.save();
   ctx.beginPath();

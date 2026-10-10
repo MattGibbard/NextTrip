@@ -286,6 +286,29 @@
   }
 }
 
+/* Picture beside the settings: the picture stays in view while you scroll through the settings. */
+@media (min-width: 960px) {
+  .share-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+  }
+  .share-preview {
+    position: sticky;
+    top: calc(var(--share-top) + env(safe-area-inset-top));
+  }
+  .share-stage {
+    min-height: 0;
+  }
+  .share-stage canvas {
+    /* Leaves room for the size buttons and the line under the picture. */
+    max-height: min(640px, calc(100dvh - var(--share-top) - 13rem));
+  }
+}
+.share-page {
+  /* The site header's height plus a little breathing room. */
+  --share-top: 88px;
+}
+
 /* Phones: size pills, then the picture, then one group of settings at a time. */
 @media (max-width: 759px) {
   .share-head {

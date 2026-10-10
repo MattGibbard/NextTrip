@@ -16,6 +16,7 @@ describe("destination guide files", () => {
     expect(d.name).not.toBe(slug);
     expect(d.country_code).toMatch(/^[A-Z]{2}$/);
     if (raw.published) expect(d.lat, "run scripts/geocode-destinations.mjs").not.toBeNull();
+    if (raw.published) expect(d.airport?.code, "To code should be an airport; run scripts/destination-airports.mjs").toBe(d.to_code);
     expect(d.months).toHaveLength(12);
     expect(publicPage(`/destinations/${slug}`)).toBe(`destination:${slug}`);
   });
@@ -87,6 +88,7 @@ describe("New York", () => {
     expect(idea.places?.[0]).toMatchObject({ name: "New York", country_code: "US" });
     expect(idea.holiday_types).toEqual(["city"]);
     expect(idea.budget).toBe(3);
+    expect(idea.arrive).toMatchObject({ kind: "airport", code: "JFK", country_code: "US" });
   });
 
   it("gives search engines a canonical address and question-and-answer data", () => {

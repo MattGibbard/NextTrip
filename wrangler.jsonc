@@ -33,6 +33,7 @@
     {
       "binding": "DB",
       "database_name": "somewhereparty",
+      "database_id": "decb43ed-04f3-4784-896e-c4e6bace3f06",
       "migrations_dir": "migrations"
     }
   ]

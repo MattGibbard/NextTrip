@@ -124,6 +124,18 @@ export function HomePage() {
               <span className="lp-veto">1 veto</span>
             </div>
           </div>
+          <div className="panel lp-feature">
+            <span className="lp-feature-icon" aria-hidden>
+              🧾
+            </span>
+            <h3>{features.plan.title}</h3>
+            <p className="muted">{features.plan.text}</p>
+            <div className="lp-feature-foot lp-chips">
+              <span>📅 Itinerary</span>
+              <span>💷 Costs</span>
+              <span>🎒 Packing</span>
+            </div>
+          </div>
         </div>
       </section>
 

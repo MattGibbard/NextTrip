@@ -148,8 +148,10 @@
 .plan-tabs {
   display: flex;
   gap: 0.25rem;
-  border-bottom: 1px solid var(--border);
+  /* The line under the tabs is a shadow, so nothing pokes out below and a swipe can't scroll them up and down. */
+  box-shadow: inset 0 -1px 0 var(--border);
   overflow-x: auto;
+  overflow-y: hidden;
   scrollbar-width: none;
 }
 .plan-tabs a {
@@ -162,7 +164,6 @@
   text-decoration: none;
   white-space: nowrap;
   border-bottom: 3px solid transparent;
-  margin-bottom: -1px;
 }
 .plan-tabs a:hover {
   color: var(--text);
@@ -727,17 +728,18 @@ a.plan-board-row:hover {
   color: var(--flight);
   background: #fff;
 }
-/* The side can be a pale colour or a photo, so the second button keeps the pass colour on a see-through white. */
+/* The side can be a pale colour or a photo, so the second button is the pass colour, solid, to read on either. */
 .departure-been.ghosted {
-  background: rgb(255 255 255 / 0.55);
-  color: var(--flight);
-  border: 1px solid rgb(255 255 255 / 0.9);
+  background: var(--flight);
+  color: #fff;
 }
+/* On a phone the buttons sit on the pass itself: Plan in white, Been as an outline, one above the other so the words fit. */
 .departure-phone-actions {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 0.5rem;
 }
 .departure-phone-actions .departure-been {
-  border: 0;
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgb(255 255 255 / 0.85);
 }

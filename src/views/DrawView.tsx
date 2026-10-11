@@ -852,7 +852,7 @@ function Reveal({ round, onDone, onClose }: { round: Round; onDone: () => void; 
               Done
             </button>
             {planIdea && (
-              <a className="btn bright" href={`#/next/${planIdea.id}`}>
+              <a className="btn bright" href={`#/next/${planIdea.id}/plan`}>
                 Start planning
               </a>
             )}

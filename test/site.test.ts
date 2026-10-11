@@ -4,8 +4,9 @@ import { CREATORS, HOME, ONBOARDING, bannerEnded, bannerKey, readBanner, readCre
 describe("home page words", () => {
   it("come from the editor's file", () => {
     expect(HOME.hero.heading).toBe("Can't agree where to go next? Let the draw decide.");
-    expect(HOME.how.steps).toHaveLength(4);
+    expect(HOME.how.steps).toHaveLength(5);
     expect(HOME.features.draw.title).toBe("The draw");
+    expect(HOME.features.plan.title).toBe("Trip plan");
   });
 
   it("drop empty entries rather than breaking", () => {

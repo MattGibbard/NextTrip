@@ -63,8 +63,8 @@ Only people who can push to this repository can save. Until the OAuth app exists
 
 ## How it's built
 
-- `worker/index.ts`: the API (Hono) under `/api/*`. Everything else is served as static assets. Every trip, idea, draw and setting belongs to a family, and every query is limited to the signed-in family.
+- `worker/index.ts`: the API (Hono) under `/api/*`, with its routes in `people.ts`, `trips.ts`, `ideas.ts`, `rounds.ts` (draws), `homeEnds.ts` and `search.ts`, and shared reads in `data.ts`. Everything else is served as static assets. Every trip, idea, draw and setting belongs to a family, and every query is limited to the signed-in family.
 - `worker/auth.ts`: email sign-in, family links and sessions (an HttpOnly cookie).
 - `shared/`: types plus the draw logic (`draw.ts`), shared by the API and the UI.
-- `src/`: the React app (Vite). The map uses Leaflet with OpenStreetMap tiles (no API key needed), and city search goes through the Worker to OpenStreetMap's Nominatim.
+- `src/`: the React app (Vite). Its main styles are split by area under `src/styles/`, in the order `src/styles.css` lists them. The map uses Leaflet with OpenStreetMap tiles (no API key needed), and city search goes through the Worker to OpenStreetMap's Nominatim.
 - `migrations/`: the D1 schema. The Worker applies these automatically, tracked in the same `d1_migrations` table that `wrangler d1 migrations apply` uses.

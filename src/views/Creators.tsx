@@ -1,5 +1,5 @@
 import { CREATORS } from "../site";
-import { FeaturedCreators, INSTAGRAM, InstagramIcon, SiteFooter, SiteHeader } from "./Welcome";
+import { FeaturedCreators, INSTAGRAM, InstagramIcon, SiteFooter, SiteHeader } from "../components/SiteFrame";
 
 /**
  * The page at /creators for social media creators: why and how to work with us, and the terms for

@@ -1,0 +1,201 @@
+/* ---------- Layout ---------- */
+
+.app {
+  min-height: 100dvh;
+  padding-bottom: calc(72px + env(safe-area-inset-bottom));
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-top: env(safe-area-inset-top);
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+/* Same width, gutter and height as the home page's header, so signed in and signed out look like one site. */
+.topbar-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+}
+.brand,
+.lp-brand {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.topbar-right {
+  margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+.tabs button,
+.tabs a {
+  border: 0;
+  background: none;
+  min-height: 40px;
+  padding: 0 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.tabs a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+.tabs button:hover,
+.tabs a:hover {
+  color: var(--accent);
+}
+.tabs button.active,
+.tabs a.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.me-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 0 14px;
+  cursor: pointer;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.icon-btn {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 1.15rem;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  line-height: 1;
+}
+a.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  flex: none;
+}
+.icon-btn.active,
+.icon-btn:hover {
+  background: var(--surface-2);
+}
+
+.content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.5rem 16px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.bottom-nav button,
+.bottom-nav a {
+  border: 0;
+  background: none;
+  padding: 0.5rem 0 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+}
+.bottom-nav a {
+  text-decoration: none;
+}
+@media (max-width: 380px) {
+  .bottom-nav button,
+  .bottom-nav a {
+    font-size: 0.68rem;
+  }
+}
+.bottom-nav .icon {
+  font-size: 1.3rem;
+  filter: grayscale(1);
+  opacity: 0.7;
+}
+.bottom-nav button.active,
+.bottom-nav a.active {
+  color: var(--accent);
+}
+.bottom-nav button.active .icon,
+.bottom-nav a.active .icon {
+  filter: none;
+  opacity: 1;
+}
+
+@media (min-width: 760px) {
+  .mobile-only {
+    display: none !important;
+  }
+  .app {
+    padding-bottom: 2rem;
+  }
+  .content {
+    padding: 2.5rem 24px;
+  }
+  .topbar-inner {
+    padding: 14px 24px;
+  }
+}
+@media (max-width: 759px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+.page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}

@@ -6,7 +6,7 @@ import { DESTINATIONS, LONDON, bestMonths, countryFlag, destinationNamed, flight
 import type { Destination, DestinationCard } from "../destinations";
 import { HOLIDAY_TYPES, budgetLabel, holidayType, travelTimeLabel } from "../../shared/ideaDetails";
 import { destinationPath } from "../../shared/seo";
-import { SiteFooter, SiteHeader } from "./Welcome";
+import { SiteFooter, SiteHeader } from "../components/SiteFrame";
 import { HUBS, countryHub, hubGuides, typeHub } from "../hubs";
 import { AppBottomNav, AppTopbar } from "../components/AppNav";
 

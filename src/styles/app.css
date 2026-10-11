@@ -1,0 +1,404 @@
+/* ---------- Draw ---------- */
+
+.round-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.stepper button {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1;
+}
+.stepper button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.stepper .value {
+  min-width: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.draw-ready {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reveal {
+  text-align: center;
+}
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+.breakdown {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  text-align: left;
+}
+.breakdown th,
+.breakdown td {
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+.breakdown th {
+  color: var(--muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.breakdown .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.breakdown tr.winner td {
+  font-weight: 700;
+  background: color-mix(in srgb, var(--gold) 12%, transparent);
+}
+
+.history {
+  margin-top: 1.5rem;
+}
+.history h2 {
+  margin-bottom: 0.6rem;
+}
+.history-row {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+.history-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  border: 0;
+  background: none;
+  text-align: left;
+  padding: 0.75rem 0.9rem;
+  cursor: pointer;
+}
+.history-head:disabled {
+  cursor: default;
+}
+
+.chev {
+  color: var(--muted);
+}
+.history-body {
+  padding: 0 0.9rem 0.9rem;
+}
+
+/* Leaflet tooltips follow the theme */
+.leaflet-tooltip {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+.leaflet-container {
+  font: inherit;
+}
+
+[data-theme="dark"] .world-map .leaflet-tile-pane {
+  filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);
+}
+
+/* ---------- Idea details + vetoes ---------- */
+
+.details-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.35rem;
+}
+.detail {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: 0.12rem 0.5rem;
+  white-space: nowrap;
+}
+.choice-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.choice {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.choice.small {
+  padding: 0.25rem 0.65rem;
+  font-size: 0.8rem;
+}
+.choice.on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+.filter-row {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.9rem;
+  scrollbar-width: none;
+}
+.filter-row .choice {
+  flex-shrink: 0;
+}
+
+/* ---------- Places extras ---------- */
+
+.stats .meter {
+  display: block;
+  height: 4px;
+  margin-top: 0.4rem;
+  border-radius: 99px;
+  background: linear-gradient(to right, var(--accent) var(--pct), var(--surface-2) var(--pct));
+}
+.list-row.clickable {
+  cursor: pointer;
+}
+.list-row.clickable:hover {
+  background: var(--surface-2);
+}
+.hint {
+  margin: -0.4rem 0 1rem;
+}
+.country-panel h2 {
+  font-size: 1.25rem;
+}
+.detail.new {
+  border: 0;
+  cursor: pointer;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.timeline {
+  position: relative;
+  padding-left: 1.4rem;
+  border-left: 2px solid var(--border);
+  margin-left: 0.5rem;
+}
+.timeline-year {
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+.timeline-dot {
+  position: absolute;
+  left: calc(-1.4rem - 7px);
+  top: 0.3rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+}
+.timeline-trips {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: grid;
+  gap: 0.3rem;
+}
+.map-wrap {
+  scroll-margin-top: 70px;
+}
+.delete-draw {
+  display: block;
+  margin-top: 0.6rem;
+}
+
+/* ---------- Round filters ---------- */
+
+.round-filters {
+  align-items: center;
+}
+.round-filters .detail {
+  white-space: normal;
+}
+
+/* ---------- Idea page ---------- */
+
+.back-link {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+.hero {
+  height: clamp(160px, 38vw, 300px);
+  border-radius: var(--radius);
+  background: var(--surface-2) center / cover no-repeat;
+  margin-bottom: 1rem;
+}
+.hero.placeholder {
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  background: linear-gradient(135deg, var(--accent-soft), var(--surface-2));
+}
+
+.win-panel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+@media (min-width: 700px) {
+  .facts {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.facts div {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.75rem;
+}
+.facts dt {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.facts dd {
+  margin: 0.2rem 0 0;
+  font-weight: 600;
+}
+
+.stops {
+  padding-left: 1.4rem;
+  margin: 0 0 1rem;
+}
+.stops li {
+  margin: 0.3rem 0;
+}
+.breakdown tr.vetoed td {
+  color: var(--muted);
+}
+
+/* ---------- Swipe to shortlist ---------- */
+
+.swipe {
+  margin-top: 1rem;
+}
+.swipe-stack {
+  position: relative;
+  height: 400px;
+  margin: 0.75rem auto;
+  max-width: 360px;
+}
+.swipe-card {
+  position: absolute;
+  inset: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+  overflow: hidden;
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+}
+.swipe-card .cover {
+  height: 190px;
+}
+.swipe-card.behind {
+  transform: scale(0.95) translateY(10px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+.swipe-card.animate {
+  transition: transform 0.22s ease;
+}
+.swipe-stamp {
+  position: absolute;
+  top: 1rem;
+  padding: 0.2rem 0.6rem;
+  border: 3px solid;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  background: var(--surface);
+}
+.swipe-stamp.yes {
+  left: 1rem;
+  color: #16a34a;
+  transform: rotate(-12deg);
+}
+.swipe-stamp.no {
+  right: 1rem;
+  color: var(--danger);
+  transform: rotate(12deg);
+}
+.swipe-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.swipe-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 1.6rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+}
+.swipe-btn.no {
+  color: var(--danger);
+}
+.swipe-btn.yes {
+  color: #e11d48;
+}
+.swipe-done {
+  text-align: center;
+  padding: 1.5rem 0 0.5rem;
+}
+
+/* ---------- Trip page ---------- */
+
+a.detail {
+  color: inherit;
+  text-decoration: none;
+}
+.plain-link {
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { INFO, safeUrl } from "../infoPages";
 import type { InfoPage as Page } from "../../shared/seo";
-import { InstagramIcon, SiteFooter, SiteHeader } from "./Welcome";
+import { InstagramIcon, SiteFooter, SiteHeader } from "../components/SiteFrame";
 
 /**
  * About, FAQ, Contact, How we make money and the how-to-decide guide: one layout, words edited at

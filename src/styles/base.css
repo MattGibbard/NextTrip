@@ -1,0 +1,173 @@
+:root {
+  --bg: #f6f7f5;
+  --surface: #ffffff;
+  --surface-2: #eef2ef;
+  --text: #1c2421;
+  --muted: #66716c;
+  --border: #dde3df;
+  --accent: #0f766e;
+  --accent-hover: #0d6560;
+  --accent-soft: #d5efeb;
+  --accent-text: #ffffff;
+  --danger: #c2410c;
+  --gold: #d97706;
+  --map-visited: #0f766e;
+  --map-idea: #ea580c;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.05), 0 4px 16px rgb(0 0 0 / 0.05);
+  --radius: 14px;
+  --mono: "DM Mono", ui-monospace, Menlo, monospace;
+  /* Ticket colours, one per way of travelling. Stubs keep the strong colour in both themes; "ink" is for text. */
+  --flight: #0f766e;
+  --train: #7c3aed;
+  --cruise: #2563eb;
+  --road: #b45309;
+  --standby: #c2410c;
+  --flight-ink: #0f766e;
+  --train-ink: #7c3aed;
+  --cruise-ink: #2563eb;
+  --road-ink: #b45309;
+  --standby-ink: #c2410c;
+  --flight-line: #99f6e4;
+  --train-line: #c4b5fd;
+  --cruise-line: #93c5fd;
+  --road-line: #fcd34d;
+  --standby-line: #fdba74;
+  --board: #1c2421;
+  --board-line: #2c3833;
+  --board-muted: #96a29c;
+  --board-lit: #2dd4bf;
+  --paper: #fbfaf6;
+  color-scheme: light;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Dark colours follow data-theme, which src/theme.ts sets from the device or the choice in Settings. */
+:root[data-theme="dark"] {
+  --bg: #0f1412;
+  --surface: #18201d;
+  --surface-2: #212b27;
+  --text: #e7ece9;
+  --muted: #96a29c;
+  --border: #2c3833;
+  --accent: #2dd4bf;
+  --accent-hover: #5eead4;
+  --accent-soft: #123b36;
+  --accent-text: #052e2a;
+  --danger: #fb923c;
+  --gold: #fbbf24;
+  --map-visited: #2dd4bf;
+  --map-idea: #fb923c;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+  --flight-ink: #2dd4bf;
+  --train-ink: #a78bfa;
+  --cruise-ink: #60a5fa;
+  --road-ink: #f59e0b;
+  --standby-ink: #fb923c;
+  --flight-line: #115e59;
+  --train-line: #5b21b6;
+  --cruise-line: #1e40af;
+  --road-line: #92400e;
+  --standby-line: #9a3412;
+  --board: #0a0e0c;
+  --board-line: #26302c;
+  --paper: #141a17;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  min-height: 100dvh;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.15rem;
+}
+h3 {
+  font-size: 1rem;
+}
+p {
+  margin: 0.4rem 0;
+  line-height: 1.45;
+}
+a {
+  color: var(--accent);
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+input:not([type="checkbox"]):not([type="color"]),
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  font-size: 16px; /* stops iOS zooming into fields */
+}
+/* iOS Safari draws date fields wider than their box unless the native look is turned off. */
+input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 0;
+  min-height: 2.75rem;
+  display: block;
+}
+input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+  border-color: transparent;
+}
+
+.muted {
+  color: var(--muted);
+}
+.small {
+  font-size: 0.85rem;
+}
+.center {
+  text-align: center;
+}
+.grow {
+  flex: 1;
+  min-width: 0;
+}
+.spacer {
+  flex: 1;
+}
+.big {
+  font-size: 1.3rem;
+  font-weight: 700;
+}

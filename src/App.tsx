@@ -1,12 +1,13 @@
 import { Suspense, lazy, useCallback, useEffect, useState } from "react";
 import type { FamilyData, Session } from "../shared/types";
 import { api, forgetLegacyPerson, setSignedOutHandler } from "./api";
-import { HomePage, JoinPage, PersonLinkPage, SignInPage } from "./views/Welcome";
+import { HomePage } from "./views/HomePage";
+import { JoinPage, PersonLinkPage, SignInPage } from "./views/LinkPages";
 import { LegalView, legalPage } from "./views/Legal";
 import { CreatorsPage } from "./views/Creators";
 import { InfoPage } from "./views/InfoPage";
 import { infoTitle } from "./infoPages";
-import { NotFound } from "./views/Welcome";
+import { NotFound } from "./views/NotFound";
 import { PAGES, infoPage, isPrivatePath, publicPage } from "../shared/seo";
 import { findDestination, searchTitle } from "./destinations";
 import { findHub, hubSearchTitle } from "./hubs";

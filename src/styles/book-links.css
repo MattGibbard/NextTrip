@@ -1,0 +1,23 @@
+/* ---------- Find flights and hotels (affiliate links) ---------- */
+
+.book-links h2 {
+  margin: 0 0 0.6rem;
+  color: var(--muted);
+}
+.book-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.book-buttons .btn {
+  min-height: 44px;
+  text-decoration: none;
+  white-space: normal;
+  text-align: left;
+}
+.book-note {
+  margin: 0.6rem 0 0;
+}
+.book-links.panel {
+  margin-top: 1rem;
+}

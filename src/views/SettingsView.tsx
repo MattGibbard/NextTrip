@@ -13,7 +13,7 @@ import { flag } from "../countries";
 import { plural } from "../format";
 import { setThemeChoice, themeChoice } from "../theme";
 import type { ThemeChoice } from "../theme";
-import { LegalLinks } from "./Welcome";
+import { LegalLinks } from "../components/SiteFrame";
 
 const COLOUR_NAMES = ["Blue", "Pink", "Green", "Orange", "Purple", "Sea blue", "Mustard", "Red"];
 

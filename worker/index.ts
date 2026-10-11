@@ -1,4 +1,6 @@
 import { Hono } from "hono";
+import { csrf } from "hono/csrf";
+import { HTTPException } from "hono/http-exception";
 import { migrate } from "./migrate";
 import { authRoutes, familyRoutes, readSession, sessionJson } from "./auth";
 import { HttpError } from "./env";
@@ -20,9 +22,15 @@ const app = new Hono<App>().basePath("/api");
 
 app.onError((err, c) => {
   if (err instanceof HttpError) return c.json({ error: err.message }, err.status);
+  // Hono's own refusals, like the cross-site form check below.
+  if (err instanceof HTTPException) return err.getResponse();
   console.error(err);
   return c.json({ error: "Something went wrong" }, 500);
 });
+
+// Another site can't make a visitor's browser post a form here, say to sign them out or into
+// someone else's family. The app's own requests send JSON, which this doesn't look at.
+app.use("*", csrf());
 
 // The content editor's GitHub sign-in needs no database, so it comes before the database check.
 cmsRoutes(app);
@@ -93,10 +101,32 @@ async function cachedPhoto(req: Request, env: Env, ctx: ExecutionContext): Promi
   return res;
 }
 
+/**
+ * Sent with everything: HTTPS only from now on, no other site showing these pages in a frame
+ * (where it could trick a click), no guessing file types, and only the site's address in links out.
+ */
+export const SECURITY_HEADERS: Record<string, string> = {
+  "Strict-Transport-Security": "max-age=31536000",
+  "X-Frame-Options": "SAMEORIGIN",
+  "Content-Security-Policy": "frame-ancestors 'self'",
+  "X-Content-Type-Options": "nosniff",
+  "Referrer-Policy": "strict-origin-when-cross-origin",
+};
+
+async function route(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+  const path = new URL(req.url).pathname;
+  if (req.method === "GET" && path.startsWith(PHOTO_PATH)) return cachedPhoto(req, env, ctx);
+  return path.startsWith("/api/") ? app.fetch(req, env, ctx) : servePage(req, env);
+}
+
 export default {
-  fetch(req: Request, env: Env, ctx: ExecutionContext) {
-    const path = new URL(req.url).pathname;
-    if (req.method === "GET" && path.startsWith(PHOTO_PATH)) return cachedPhoto(req, env, ctx);
-    return path.startsWith("/api/") ? app.fetch(req, env, ctx) : servePage(req, env);
+  async fetch(req: Request, env: Env, ctx: ExecutionContext) {
+    const res = await route(req, env, ctx);
+    // Built files and redirects come with headers that can't be changed, so copy them first.
+    const out = new Response(res.body, res);
+    for (const [name, value] of Object.entries(SECURITY_HEADERS)) {
+      if (!out.headers.has(name)) out.headers.set(name, value);
+    }
+    return out;
   },
 } satisfies ExportedHandler<Env>;

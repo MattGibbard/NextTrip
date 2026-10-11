@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { FormEvent } from "react";
 import { api } from "../api";
 import { HOME } from "../site";
+import { turnstileToken, warmTurnstile } from "../turnstile";
 import { FeaturedCreators, SiteFooter, SiteHeader } from "../components/SiteFrame";
 
 /** Text from the editor, where **two stars** around words make them bold. */
@@ -237,13 +238,14 @@ function SignInForm({ id }: { id: string }) {
   const [error, setError] = useState<string | null>(null);
   const [devLink, setDevLink] = useState<string | null>(null);
   const [devCode, setDevCode] = useState<string | null>(null);
+  const botBox = useRef<HTMLDivElement>(null);
 
   const send = async (e: FormEvent) => {
     e.preventDefault();
     setError(null);
     setState("sending");
     try {
-      const res = await api.sendSignInEmail(email);
+      const res = await api.sendSignInEmail(email, await turnstileToken(botBox.current!));
       setDevLink(res.dev_link ?? null);
       setDevCode(res.dev_code ?? null);
       setState("sent");
@@ -287,11 +289,13 @@ function SignInForm({ id }: { id: string }) {
           placeholder="you@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          onFocus={warmTurnstile}
         />
         <button className="btn" disabled={state === "sending"}>
           {state === "sending" ? "Sending…" : "Create your trips"}
         </button>
       </div>
+      <div ref={botBox} className="lp-bot-check" />
       {error && <p className="error-text">{error}</p>}
       <p className="muted small">
         Already signed up? This emails you a sign-in link. By continuing you agree to our <a href="/terms">terms</a> and <a href="/privacy">privacy policy</a>.

@@ -257,6 +257,10 @@
     flex-grow: 0;
   }
 }
+/* Cloudflare's bot check. Empty unless Cloudflare wants a visitor to tick its box. */
+.lp-bot-check:empty {
+  display: none;
+}
 .lp-sent {
   display: flex;
   flex-direction: column;

@@ -8,7 +8,14 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
   <body>
-    <!-- The content editor (Sveltia CMS). Its settings are in config.yml next to this file. -->
-    <script src="https://unpkg.com/@sveltia/cms@0.231.0/dist/sveltia-cms.js"></script>
+    <!-- The content editor (Sveltia CMS). Its settings are in config.yml next to this file.
+         The integrity hash means the browser only runs this exact file, since the page gets a GitHub sign-in
+         that can change the site. Updating the version means a new hash: `npm pack @sveltia/cms@<version>`,
+         then `openssl dgst -sha384 -binary package/dist/sveltia-cms.js | openssl base64 -A`. -->
+    <script
+      src="https://unpkg.com/@sveltia/cms@0.231.0/dist/sveltia-cms.js"
+      integrity="sha384-CDqPKMOyWBx0moN+f5XwjURyMigoIE3owP1zp7KvVDJcC9xMVPI6VrB6GJrJQPlK"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

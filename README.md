@@ -38,6 +38,15 @@ Sign-in links are sent with [Resend](https://resend.com) (free for 3,000 emails 
 - `OWNER_EMAIL`: the organiser of family 1, which holds everything made before sign-in existed. The first sign-in with this address takes it over.
 - `EMAIL_FROM` (optional): who the emails come from, like `somewhere.party <hello@somewhere.party>`. Until you verify a domain in Resend, it uses `onboarding@resend.dev`, which can only send to the email address of your own Resend account.
 
+### Bot check on sign-in
+
+The sign-in form runs [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/) so scripts can't send sign-in emails to lots of addresses and use up the day's Resend allowance. To switch it on:
+
+1. In the Cloudflare dashboard, open **Turnstile → Add widget**. Add the hostname `somewhere.party` and pick the **Invisible** widget mode.
+2. Add its **site key** and **secret key** to the Worker as the **secrets** `TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY`.
+
+The check only runs once both are set, so previews and local development sign in without it.
+
 ### Cover photos
 
 The trip and idea sheets offer photos of their places to pick from, found on [Pixabay](https://pixabay.com/api/docs/). Add a free Pixabay API key to the Worker as the **secret** `PIXABAY_API_KEY`. Previews don't get the live Worker's secrets, so give them the key too with `npx wrangler preview base-config secret put PIXABAY_API_KEY`. Without a key the sheets just take a photo link.

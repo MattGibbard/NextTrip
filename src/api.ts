@@ -48,7 +48,10 @@ export const api = {
   session: () => request<Session>("GET", "/auth/me"),
   /** Who this browser is and the family's things in one go, or only the lists named. */
   bootstrap: (only?: FamilyPart[]) => request<Bootstrap>("GET", `/bootstrap${only?.length ? `?only=${only.join(",")}` : ""}`),
-  sendSignInEmail: (email: string) => request<{ ok: true; dev_link?: string; dev_code?: string }>("POST", "/auth/email", { email }),
+  /** The sign-in form's bot check key, or null when the check is off. */
+  turnstileKey: () => request<{ site_key: string | null }>("GET", "/auth/turnstile"),
+  sendSignInEmail: (email: string, turnstile?: string) =>
+    request<{ ok: true; dev_link?: string; dev_code?: string }>("POST", "/auth/email", { email, turnstile }),
   verifySignIn: (token: string) => request("POST", "/auth/verify", { token }),
   signInWithCode: (email: string, code: string) => request("POST", "/auth/code", { email, code }),
   join: (token: string) => request("POST", "/auth/join", { token }),

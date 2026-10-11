@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { balances, costTotals, dayDate, dayStatus, daysUntil, formatMoney, parseAmount, planDays, settleUp } from "../shared/plan";
+import { balances, costTotals, dayDate, dayStatus, daysUntil, formatMoney, guessCategory, parseAmount, planDays, settleUp } from "../shared/plan";
 import type { PlanCost, PlanItem, PlanSettlement } from "../shared/plan";
 
 const cost = (amount: number, paid_by: number | null, status: PlanCost["status"] = "booked", category: PlanCost["category"] = "travel"): PlanCost => ({
@@ -103,4 +103,14 @@ it("says whether a day is booked", () => {
   expect(dayStatus([item(1, "booked"), item(1, "booked")])).toBe("booked");
   expect(dayStatus([item(1, "booked"), item(1, "plan")])).toBe("plan");
   expect(dayStatus([item(1, "booked"), item(1, "to_book")])).toBe("to_book");
+});
+
+describe("guessCategory", () => {
+  it("files booked things under the right kind of cost", () => {
+    expect(guessCategory("Flights to Vancouver")).toBe("travel");
+    expect(guessCategory("Car hire at the airport")).toBe("travel");
+    expect(guessCategory("Fairmont hotel, 2 nights")).toBe("stays");
+    expect(guessCategory("Dinner at Araxi")).toBe("food");
+    expect(guessCategory("Peak 2 Peak gondola")).toBe("activities");
+  });
 });

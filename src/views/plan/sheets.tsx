@@ -4,7 +4,7 @@ import type { FormEvent, ReactNode } from "react";
 import { Modal } from "../../components/Modal";
 import { api } from "../../api";
 import { useData } from "../../data";
-import { COST_CATEGORIES, COST_CATEGORY_LABEL, ITEM_STATUSES, ITEM_STATUS_LABEL, MAX_DAYS, dayDate, parseAmount } from "../../../shared/plan";
+import { COST_CATEGORIES, COST_CATEGORY_LABEL, ITEM_STATUSES, ITEM_STATUS_LABEL, MAX_DAYS, dayDate, guessCategory, parseAmount } from "../../../shared/plan";
 import type { CostCategory, CostStatus, ItemStatus, PlanCost, PlanItem, PlanTodo } from "../../../shared/plan";
 import type { TripDates } from "../../../shared/tripDates";
 import type { PlanCtx } from "./context";
@@ -101,21 +101,36 @@ function useSave(ctx: PlanCtx) {
   return { error, setError, save };
 }
 
-export function ItemSheet({ ctx, item, day, onClose }: { ctx: PlanCtx; item: PlanItem | null; day: number; onClose: () => void }) {
+export function ItemSheet({ ctx, item, day, booking, onClose }: { ctx: PlanCtx; item: PlanItem | null; day: number; /** Opened to mark it booked. */ booking?: boolean; onClose: () => void }) {
   const [d, setDay] = useState(item?.day ?? day);
   const [time, setTime] = useState(item?.time ?? "");
   const [title, setTitle] = useState(item?.title ?? "");
   const [notes, setNotes] = useState(item?.notes ?? "");
-  const [status, setStatus] = useState<ItemStatus>(item?.status ?? "plan");
-  const { error, save } = useSave(ctx);
+  const [status, setStatus] = useState<ItemStatus>(booking ? "booked" : (item?.status ?? "plan"));
+  // When something becomes booked, what it cost can go straight onto the Costs tab.
+  const [amount, setAmount] = useState("");
+  const [paidBy, setPaidBy] = useState<number | null>(ctx.me?.id ?? null);
+  const { error, setError, save } = useSave(ctx);
   const id = ctx.idea.id;
+  const nowBooked = status === "booked" && item?.status !== "booked";
+  const submit = async () => {
+    const minor = nowBooked && amount.trim() ? parseAmount(amount) : null;
+    if (nowBooked && amount.trim() && minor === null) {
+      setError("Enter what it cost, like 960 or 12.50, or leave it empty");
+      return false;
+    }
+    return save(async () => {
+      await api.savePlanItem(id, item?.id ?? null, { day: d, time: time.trim() || null, title, notes: notes.trim() || null, status });
+      if (minor !== null) await api.saveCost(id, null, { title, amount: minor, category: guessCategory(title), status: "booked", day: d, paid_by: paidBy });
+    });
+  };
   return (
     <SheetForm
-      title={item ? "Edit this" : "Add to a day"}
+      title={booking ? "Mark as booked" : item ? "Edit this" : "Add to a day"}
       saveLabel={item ? "Save" : "Add"}
       onClose={onClose}
       error={error}
-      onSubmit={() => save(() => api.savePlanItem(id, item?.id ?? null, { day: d, time: time.trim() || null, title, notes: notes.trim() || null, status }))}
+      onSubmit={submit}
       onDelete={item ? () => save(() => api.deletePlanItem(id, item.id)) : undefined}
     >
       <label>
@@ -133,6 +148,21 @@ export function ItemSheet({ ctx, item, day, onClose }: { ctx: PlanCtx; item: Pla
         <span>Status</span>
         <Choices options={ITEM_STATUSES} labels={ITEM_STATUS_LABEL} value={status} onChange={setStatus} />
       </div>
+      {nowBooked && (
+        <>
+          <label>
+            What did it cost? ({ctx.currency})
+            <input className="plan-amount" value={amount} onChange={(e) => setAmount(e.target.value)} inputMode="decimal" placeholder="Optional" />
+            <span className="muted small">We'll add it to your costs.</span>
+          </label>
+          {amount.trim() && (
+            <div className="field">
+              <span>Who paid?</span>
+              <PersonChoice people={ctx.people} value={paidBy} onChange={setPaidBy} none="Not paid yet" />
+            </div>
+          )}
+        </>
+      )}
       <label>
         Notes
         <textarea rows={2} value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="Booking reference, where to meet, what to bring…" maxLength={2000} />

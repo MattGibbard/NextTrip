@@ -2,12 +2,15 @@
 // packing for each person and what's still to book.
 import { useState } from "react";
 import { api } from "../../api";
+import { BookLinks } from "../../components/BookLinks";
+import { ideaMode } from "../../../shared/travelMode";
+import { stayDates } from "../../../shared/tripDates";
 import { costTotals, dayDate, dayStatus, balances, settleUp } from "../../../shared/plan";
-import type { PlanTodo } from "../../../shared/plan";
+import type { PlanItem, PlanTodo } from "../../../shared/plan";
 import { planHref, pad2, shortDate, todayIso } from "./context";
 import type { PlanCtx } from "./context";
 import { Avatar, Bar, Tick } from "./bits";
-import { BudgetSheet, TodoSheet } from "./sheets";
+import { BudgetSheet, ItemSheet, TodoSheet } from "./sheets";
 import { packingGroups } from "./PlanPacking";
 
 const BOARD_NOTE = { booked: "BOOKED", to_book: "TO BOOK", plan: "PLANNED", free: "FREE" } as const;
@@ -17,6 +20,7 @@ export function PlanOverview({ ctx }: { ctx: PlanCtx }) {
   const { plan, idea } = ctx;
   const [todo, setTodo] = useState<PlanTodo | "new" | null>(null);
   const [budgeting, setBudgeting] = useState(false);
+  const [booking, setBooking] = useState<PlanItem | null>(null);
 
   const days = Array.from({ length: ctx.days }, (_, i) => i + 1);
   const toBook = plan.items.filter((i) => i.status === "to_book");
@@ -60,6 +64,16 @@ export function PlanOverview({ ctx }: { ctx: PlanCtx }) {
       </div>
 
       <aside className="plan-side">
+        {idea.status === "won" && (
+          <BookLinks
+            trip={idea}
+            mode={ideaMode(idea.holiday_types)}
+            campaign="trip_plan"
+            className="panel plan-book"
+            dates={stayDates(ctx.dates, idea.trip_length)}
+            before={<p className="muted small">For {ctx.people.length === 1 ? "1 person" : `all ${ctx.people.length} of you`}{ctx.dates ? ", on your trip dates" : ""}.</p>}
+          />
+        )}
         <BudgetPanel ctx={ctx} onBudget={() => setBudgeting(true)} />
         <PackingPanel ctx={ctx} />
         <section className="panel">
@@ -78,7 +92,9 @@ export function PlanOverview({ ctx }: { ctx: PlanCtx }) {
                     <br />
                     <span className="mono-label muted">DAY {pad2(i.day)}</span>
                   </span>
-                  <span className="plan-status to_book">TO BOOK</span>
+                  <button type="button" className="btn small ghost" onClick={() => setBooking(i)}>
+                    Booked ✓
+                  </button>
                 </li>
               ))}
             </ul>
@@ -89,6 +105,7 @@ export function PlanOverview({ ctx }: { ctx: PlanCtx }) {
 
       {todo && <TodoSheet ctx={ctx} todo={todo === "new" ? null : todo} onClose={() => setTodo(null)} />}
       {budgeting && <BudgetSheet ctx={ctx} onClose={() => setBudgeting(false)} />}
+      {booking && <ItemSheet ctx={ctx} item={booking} day={booking.day} booking onClose={() => setBooking(null)} />}
     </div>
   );
 }

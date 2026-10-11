@@ -813,7 +813,7 @@ collections:
               - { label: Main heading, name: heading, widget: string }
               - { label: Introduction, name: lead, widget: text, required: false, hint: "Put **two stars** around words to make them bold, and [words](/faq) to make a link." }
               - { label: Button text, name: button_label, widget: string, required: false, hint: "Leave empty for no button." }
-              - { label: Button link, name: button_url, widget: string, required: false, hint: "A page on the site such as /faq, or a full address starting https://" }
+              - { label: Button link, name: button_url, widget: string, required: false, hint: "A page on the site such as /faq, a full address starting https://, or an email address as mailto:hello@somewhere.party" }
           - label: Sections
             name: sections
             widget: list

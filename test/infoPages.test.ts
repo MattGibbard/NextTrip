@@ -35,6 +35,7 @@ describe("content pages", () => {
     expect(html).toContain('<a href="/faq">the FAQ</a>');
     expect(html).toContain("<ul><li>one</li>");
     expect(html).not.toContain("javascript");
+    expect(renderToString(createElement(RichText, { text: "[Email us](mailto:hello@somewhere.party)" }))).toContain('href="mailto:hello@somewhere.party"');
   });
 
   it("give search engines the questions and the guide", () => {

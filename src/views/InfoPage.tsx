@@ -119,6 +119,7 @@ function HeroButton({ label, url }: { label: string; url: string }) {
         {instagram && <InstagramIcon />} {label}
       </a>
       {instagram && <span className="muted small">@somewhereparty</span>}
+      {url.startsWith("mailto:") && <span className="muted small">{url.slice("mailto:".length)}</span>}
     </div>
   );
 }

@@ -79,7 +79,9 @@ export function BookLinks({
           </a>
         ))}
       </div>
-      <p className="muted small book-note">We may earn a small commission if you book, at no extra cost to you.</p>
+      <p className="muted small book-note">
+        We may earn a small commission if you book, at no extra cost to you. <a href="/how-we-make-money">How we make money</a>
+      </p>
     </section>
   );
 }

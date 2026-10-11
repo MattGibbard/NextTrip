@@ -7,7 +7,25 @@ export const SITE = "https://somewhere.party";
 export const OLD_HOST = "nexttrip.matt-gibbard.workers.dev";
 
 /** The fixed pages. */
-export type FixedPage = "home" | "privacy" | "terms" | "notfound" | "destinations" | "creators";
+export type FixedPage = "home" | "privacy" | "terms" | "notfound" | "destinations" | "creators" | InfoPage;
+/** The plain content pages, whose words are edited at /admin (content/pages). */
+export type InfoPage = "about" | "faq" | "contact" | "money" | "decide";
+
+/** Each content page's address and the content file its words are in. */
+export const INFO_PAGES: Record<InfoPage, { path: string; file: string }> = {
+  about: { path: "/about", file: "about" },
+  faq: { path: "/faq", file: "faq" },
+  contact: { path: "/contact", file: "contact" },
+  money: { path: "/how-we-make-money", file: "how-we-make-money" },
+  decide: { path: "/how-to-decide-where-to-go-on-holiday", file: "how-to-decide" },
+};
+
+/** Which content page an address is, if any. */
+export function infoPage(pathname: string): InfoPage | null {
+  const clean = pathname.replace(/(.)\/$/, "$1");
+  const hit = (Object.keys(INFO_PAGES) as InfoPage[]).find((k) => INFO_PAGES[k].path === clean);
+  return hit ?? null;
+}
 /** Every prerendered page: the fixed ones plus one per destination guide, as "destination:new-york". */
 export type PublicPage = FixedPage | `destination:${string}`;
 
@@ -56,6 +74,36 @@ export const PAGES: Record<FixedPage, Meta> = {
     description: "Do you make travel or family content and love somewhere🎉? Message us on Instagram to be featured on our home page.",
     index: true,
   },
+  about: {
+    path: INFO_PAGES.about.path,
+    title: "About us | somewhere🎉",
+    description: "Why we built somewhere🎉, the free family holiday planner, and how we run it.",
+    index: true,
+  },
+  faq: {
+    path: INFO_PAGES.faq.path,
+    title: "FAQ | somewhere🎉",
+    description: "Answers to common questions about somewhere🎉, the free family holiday planner.",
+    index: true,
+  },
+  contact: {
+    path: INFO_PAGES.contact.path,
+    title: "Contact us | somewhere🎉",
+    description: "Get in touch with somewhere🎉 by message on Instagram.",
+    index: true,
+  },
+  money: {
+    path: INFO_PAGES.money.path,
+    title: "How we make money | somewhere🎉",
+    description: "somewhere🎉 is free. Here's how it pays its way.",
+    index: true,
+  },
+  decide: {
+    path: INFO_PAGES.decide.path,
+    title: "How to decide where to go on holiday | somewhere🎉",
+    description: "A simple, fair way to decide where to go on holiday as a family or group.",
+    index: true,
+  },
   notfound: {
     path: "/404",
     title: "Page not found | somewhere🎉",
@@ -69,6 +117,8 @@ export function publicPage(pathname: string): PublicPage | null {
   if (pathname === "/") return "home";
   const m = pathname.match(/^\/(privacy|terms|destinations|creators)\/?$/);
   if (m) return m[1] as FixedPage;
+  const info = infoPage(pathname);
+  if (info) return info;
   const d = pathname.match(/^\/destinations\/([a-z0-9-]+)\/?$/);
   return d ? `destination:${d[1]}` : null;
 }
@@ -88,9 +138,14 @@ function esc(s: string): string {
 }
 
 /** The title, description, canonical address and share-preview tags for a fixed page's <head>. */
-export function headTags(page: FixedPage, words?: { title?: string; description?: string }): string {
+export function headTags(page: FixedPage, words?: { title?: string; description?: string; jsonLd?: unknown[] }): string {
   // The home and creators pages' titles and descriptions can be changed in the editor at /admin.
-  const m = { ...PAGES[page], ...(words?.title ? { title: words.title } : {}), ...(words?.description ? { description: words.description } : {}) };
+  const m = {
+    ...PAGES[page],
+    ...(words?.title ? { title: words.title } : {}),
+    ...(words?.description ? { description: words.description } : {}),
+    ...(words?.jsonLd ? { jsonLd: words.jsonLd } : {}),
+  };
   return metaTags(page === "home" ? { ...m, jsonLd: structuredData(m.description) } : m);
 }
 

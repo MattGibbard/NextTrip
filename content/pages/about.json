@@ -1,0 +1,38 @@
+{
+  "seo_title": "About us | somewhere🎉",
+  "seo_description": "Why we built somewhere🎉, the free family holiday planner that helps you decide where to go on holiday together, and how we run it.",
+  "hero": {
+    "kicker": "About",
+    "heading": "We built the holiday planner we wanted for our own family",
+    "lead": "somewhere🎉 is a small, independent website made in the UK, to take the arguing out of choosing where to go next.",
+    "button_label": "",
+    "button_url": ""
+  },
+  "sections": [
+    {
+      "heading": "Why it exists",
+      "text": "Every family knows the conversation. Someone asks \"where shall we go this year?\", everyone has an idea, and weeks later you're still going round in circles. The ideas get lost in the group chat, and the decision ends up with whoever shouts loudest or does the booking.\n\nWe wanted a way to choose that felt fair to everyone, including the quietest person in the room. So we built one: everyone adds their ideas, spreads their points in secret, gets one veto, and a draw picks where you go."
+    },
+    {
+      "heading": "More than one decision",
+      "text": "Somewhere along the way it became a home for our holidays too. Each trip you've been on becomes a postcard, your map fills in, and your passport collects a stamp for every country. Years of family holidays end up in one place, not scattered across old photos and half-remembered dates."
+    },
+    {
+      "heading": "How we run it",
+      "text": "- **Free for the whole family.** No subscription and no ads. We make a little from affiliate links when you book, and [how we make money](/how-we-make-money) explains exactly how.\n- **Private by default.** Only people with your family link see your trips and ideas. We don't use tracking or analytics, and we never sell your data. Our [privacy policy](/privacy) has the details.\n- **Everyone gets a say.** Only one person needs an email address. Everyone else joins with a link, children included.\n- **Independent.** somewhere🎉 is run by one person in the UK, not a travel company, so the draw never favours anywhere."
+    },
+    {
+      "heading": "Say hello",
+      "text": "We'd love to hear how your family uses it, what you'd change and where the draw sent you. [Message us on Instagram](https://instagram.com/somewhereparty), or read the [FAQ](/faq)."
+    }
+  ],
+  "board": {
+    "label": "",
+    "heading": "",
+    "steps": []
+  },
+  "faqs": {
+    "heading": "",
+    "items": []
+  }
+}

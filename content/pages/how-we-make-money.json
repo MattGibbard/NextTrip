@@ -1,0 +1,42 @@
+{
+  "seo_title": "How we make money | somewhere🎉",
+  "seo_description": "somewhere🎉 is free. Here's how it pays its way: affiliate links for flights and hotels, at no extra cost to you, and never ads or selling your data.",
+  "hero": {
+    "kicker": "Being open",
+    "heading": "How we make money",
+    "lead": "somewhere🎉 is free for the whole family. Here's how it pays for itself, in plain English.",
+    "button_label": "",
+    "button_url": ""
+  },
+  "sections": [
+    {
+      "heading": "Affiliate links",
+      "text": "On a draw result, an idea or a trip you've been on, you'll see **Find flights** and **Find hotels** buttons. These are affiliate links. If you follow one and then book, the company you book with may pay us a small commission.\n\n- **It doesn't cost you anything extra.** You pay the same price as you would going to the site directly.\n- **Hotels** are searched through Stay22, which compares places to stay across booking sites.\n- **Flights** are searched through Travelpayouts, on Aviasales.\n\nWe say so next to the buttons, and the links are marked as sponsored for search engines."
+    },
+    {
+      "heading": "What we send them",
+      "text": "Only what's needed for the search: the place you're looking at for hotels, or the two airports and number of passengers for flights. We don't send your name, your email or anything about your family. Once you're on their site, their own privacy policy and cookies apply."
+    },
+    {
+      "heading": "It never decides where you go",
+      "text": "Commission plays no part in the draw. The draw only counts the points your family gives each idea, and every point is one ticket.\n\nOur [destination guides](/destinations) are chosen and written to help you decide, not because a place pays more. You never have to use our links. Book however you like and somewhere🎉 works just the same."
+    },
+    {
+      "heading": "What we don't do",
+      "text": "- No ads\n- No tracking or analytics scripts\n- No selling or sharing your data for marketing\n- No paid placements in the guides or the draw\n\nCreators we feature aren't paid to recommend us, unless we've agreed it in writing and they label it as an ad. See the [creators page](/creators)."
+    },
+    {
+      "heading": "Questions?",
+      "text": "Read our [privacy policy](/privacy) and [terms](/terms), or [message us on Instagram](https://instagram.com/somewhereparty)."
+    }
+  ],
+  "board": {
+    "label": "",
+    "heading": "",
+    "steps": []
+  },
+  "faqs": {
+    "heading": "",
+    "items": []
+  }
+}

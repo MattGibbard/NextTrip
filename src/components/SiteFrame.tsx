@@ -85,6 +85,8 @@ const SOCIAL_LINKS = [
   { name: "Pinterest", href: "https://pinterest.com/somewhereparty" },
 ];
 export const INSTAGRAM = SOCIAL_LINKS[0].href;
+/** Where people get in touch. Every "Contact us" link goes here. */
+export const CONTACT_EMAIL = "hello@somewhere.party";
 
 /** Line icons for the social links, drawn in the text colour. */
 const SOCIAL_ICONS: Record<string, ReactNode> = {
@@ -295,9 +297,7 @@ export function SiteFooter({ sections = false, signedIn = false }: { sections?: 
                 <a href="/how-we-make-money">How we make money</a>
               </li>
               <li>
-                <a href={INSTAGRAM} target="_blank" rel="noopener me">
-                  Contact us
-                </a>
+                <a href={`mailto:${CONTACT_EMAIL}`}>Contact us</a>
               </li>
             </ul>
           </nav>

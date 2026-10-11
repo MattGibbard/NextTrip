@@ -23,9 +23,9 @@ export interface InfoContent {
   faqs: { heading: string; items: { question: string; answer: string }[] };
 }
 
-/** Only the site's own pages and web addresses, never anything a browser would run. */
+/** Only the site's own pages, web addresses and email addresses, never anything a browser would run. */
 export function safeUrl(url: string): string {
-  return /^(https:\/\/|\/(?!\/))/i.test(url) ? url : "";
+  return /^(https:\/\/|\/(?!\/)|mailto:[^\s@]+@[^\s@]+$)/i.test(url) ? url : "";
 }
 
 /** Reads a content page's file. Like the home page, a field left empty in the editor just drops out. */

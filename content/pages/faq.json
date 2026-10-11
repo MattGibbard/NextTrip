@@ -4,7 +4,7 @@
   "hero": {
     "kicker": "Help",
     "heading": "Questions and answers",
-    "lead": "Everything families usually ask before they start. Can't find your answer? [Message us on Instagram](https://instagram.com/somewhereparty).",
+    "lead": "Everything families usually ask before they start. Can't find your answer? [Email us](mailto:hello@somewhere.party).",
     "button_label": "",
     "button_url": ""
   },
@@ -75,7 +75,7 @@
       },
       {
         "question": "How do I get in touch?",
-        "answer": "[Message us on Instagram](https://instagram.com/somewhereparty) at @somewhereparty. We read everything."
+        "answer": "Email us at [hello@somewhere.party](mailto:hello@somewhere.party). We read everything."
       }
     ]
   }

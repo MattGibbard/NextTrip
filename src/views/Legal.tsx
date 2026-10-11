@@ -3,7 +3,7 @@ import { Frame, INSTAGRAM } from "./Welcome";
 
 // Keep these in step with what the app really does: if a change stores something new
 // or sends data to another service, update the privacy policy and this date.
-const UPDATED = "8 October 2026";
+const UPDATED = "11 October 2026";
 // Until there's an email address on the domain, people get in touch on Instagram.
 const CONTACT = INSTAGRAM;
 
@@ -69,6 +69,10 @@ function Privacy() {
         <li>
           <strong>Cloudflare</strong> hosts the site and its database. Like any web host it sees your IP address and keeps short-lived logs for running and securing the
           service.
+        </li>
+        <li>
+          <strong>Cloudflare Web Analytics</strong> counts visits so we can see which pages are popular and where visitors come from. It uses no cookies, doesn't
+          track you across other sites and doesn't build a profile of you. We only see totals, such as page views, referring sites, countries and device types.
         </li>
         <li>
           <strong>Resend</strong> sends the sign-in emails, so it receives the organiser's email address for that purpose.

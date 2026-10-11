@@ -130,10 +130,22 @@ export function HomePage() {
             </span>
             <h3>{features.plan.title}</h3>
             <p className="muted">{features.plan.text}</p>
-            <div className="lp-feature-foot lp-chips">
-              <span>📅 Itinerary</span>
-              <span>💷 Costs</span>
-              <span>🎒 Packing</span>
+            <div className="lp-feature-foot lp-plan" aria-hidden>
+              <span className="lp-plan-label">Departs in</span>
+              <div className="lp-plan-count">
+                <span className="lp-flaps">
+                  <span>3</span>
+                  <span>0</span>
+                  <span>7</span>
+                </span>
+                <span className="lp-plan-label">days</span>
+              </div>
+              <div className="lp-plan-bar">
+                <span />
+              </div>
+              <div className="lp-plan-money">
+                <strong>£2,800</strong> of £6,000 budget
+              </div>
             </div>
           </div>
         </div>

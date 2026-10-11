@@ -428,7 +428,7 @@ export function GuideCard({ d, from, month, best, idea, signedIn }: { d: Destina
             </a>
           ) : (
             <a className="dx-standby" href={signedIn ? `/#/next/add/${d.slug}` : "/#signin"}>
-              Put on standby
+              I want to go
             </a>
           )}
         </div>

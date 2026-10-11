@@ -195,3 +195,14 @@ export function dayStatus(items: PlanItem[]): "free" | ItemStatus {
   if (items.some((i) => i.status === "to_book")) return "to_book";
   return items.every((i) => i.status === "booked") ? "booked" : "plan";
 }
+
+const CATEGORY_WORDS: [CostCategory, RegExp][] = [
+  ["travel", /\b(flights?|fly|flying|plane|airport|trains?|rail|ferry|ferries|car hire|hire car|rental car|transfers?|taxi|uber|bus|coach|parking|cruise|eurostar)\b/i],
+  ["stays", /\b(hotels?|hostel|apartment|airbnb|villa|cabin|lodge|resort|campsite|camping|b&b|guesthouse|chalet|room)\b/i],
+  ["food", /\b(dinner|lunch|breakfast|brunch|restaurant|meal|cafe|café|food|picnic)\b/i],
+];
+
+/** A guess at what kind of cost a booked thing is, from its name: flights are travel, a hotel is a stay. */
+export function guessCategory(title: string): CostCategory {
+  return CATEGORY_WORDS.find(([, words]) => words.test(title))?.[0] ?? "activities";
+}

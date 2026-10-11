@@ -6,6 +6,7 @@ import type { Mode } from "../../shared/travelMode";
 import { hotelLink, hotelPlaces } from "../../shared/hotels";
 import type { HotelCampaign } from "../../shared/hotels";
 import { flightLink, flightOrigin } from "../../shared/flights";
+import { currencyFor } from "../../shared/currency";
 import type { StayDates } from "../../shared/tripDates";
 import { api } from "../api";
 import { useData } from "../data";
@@ -62,6 +63,8 @@ export function BookLinks({
   before?: ReactNode;
 }) {
   const { home, people } = useData();
+  // Searches are for the whole family, priced in the currency where they live (their home airport's country).
+  const currency = currencyFor(home?.country_code);
   const flies = mode === "flight" || mode === "road";
   const from = flies ? flightOrigin(trip.depart, home) : null;
   const to = useFlightDestination(trip);
@@ -76,13 +79,13 @@ export function BookLinks({
       {before}
       <div className="book-buttons">
         {flight && (
-          <a className="btn ghost" href={flightLink(flight.from, flight.to, people.length, campaign, dates)} target="_blank" rel="sponsored noopener">
+          <a className="btn ghost" href={flightLink(flight.from, flight.to, people.length, campaign, { dates, currency })} target="_blank" rel="sponsored noopener">
             ✈️ Find flights {flight.from} → {flight.to}
             <span aria-hidden>↗</span>
           </a>
         )}
         {stops.map((p) => (
-          <a key={`${p.name}|${p.country_code}`} className="btn ghost" href={hotelLink(p, campaign, dates)} target="_blank" rel="sponsored noopener">
+          <a key={`${p.name}|${p.country_code}`} className="btn ghost" href={hotelLink(p, campaign, { dates, guests: people.length, currency })} target="_blank" rel="sponsored noopener">
             🏨 Find hotels in {p.name}
             <span aria-hidden>↗</span>
           </a>

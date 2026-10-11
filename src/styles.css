@@ -463,8 +463,7 @@ a.icon-btn {
   display: flex;
   flex-direction: column;
 }
-button.card,
-.as-button {
+button.card {
   cursor: pointer;
   border: 0;
   background: none;
@@ -511,10 +510,7 @@ button.card:hover {
   border-top: 1px solid var(--border);
   gap: 0.5rem;
 }
-.idea-flags {
-  font-size: 1.5rem;
-  margin-bottom: 0.2rem;
-}
+
 .clamp {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -536,9 +532,6 @@ button.card:hover {
   color: var(--gold);
 }
 
-.year-group {
-  margin-bottom: 1.5rem;
-}
 .year {
   color: var(--muted);
   font-size: 0.95rem;
@@ -2753,68 +2746,7 @@ button.card:hover {
   justify-content: space-between;
   align-items: flex-start;
 }
-.lock-status {
-  list-style: none;
-  padding: 0;
-  margin: 0.9rem 0;
-  display: grid;
-  gap: 0.5rem;
-}
-.lock-status li {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.55rem 0.7rem;
-  background: var(--surface-2);
-  border-radius: 12px;
-  font-weight: 600;
-}
-.lock-status .state {
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-.lock-status li.locked .state {
-  color: var(--accent);
-}
 
-.points-left {
-  display: flex;
-  align-items: baseline;
-  gap: 0.35rem;
-  font-size: 1rem;
-  padding: 0.7rem 0.9rem;
-  border-radius: 12px;
-  background: var(--accent-soft);
-}
-.points-left strong {
-  font-size: 1.6rem;
-  color: var(--accent);
-}
-.points-left .save-state {
-  margin-left: auto;
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-.alloc-list {
-  list-style: none;
-  padding: 0;
-  margin: 0.75rem 0 0;
-  display: grid;
-  gap: 0.5rem;
-}
-.alloc-row {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.7rem 0.8rem;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  transition: border-color 0.15s, background 0.15s;
-}
-.alloc-row.has {
-  border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent-soft) 45%, transparent);
-}
 .stepper {
   display: flex;
   align-items: center;
@@ -2850,8 +2782,7 @@ button.card:hover {
   align-items: center;
 }
 
-.reveal,
-.reveal-cta {
+.reveal {
   text-align: center;
 }
 .table-wrap {
@@ -2910,10 +2841,7 @@ button.card:hover {
 .history-head:disabled {
   cursor: default;
 }
-.winner-name {
-  font-weight: 600;
-  text-align: right;
-}
+
 .chev {
   color: var(--muted);
 }
@@ -2985,29 +2913,6 @@ button.card:hover {
 .filter-row .choice {
   flex-shrink: 0;
 }
-.veto-link {
-  margin-top: 0.2rem;
-  text-decoration: none;
-  font-weight: 600;
-}
-.veto-used {
-  font-size: 0.9rem;
-}
-.veto-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 0.9rem;
-  display: grid;
-  gap: 0.4rem;
-}
-.veto-list li {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.7rem;
-  border-radius: 12px;
-  border: 1px dashed var(--border);
-}
 
 /* ---------- Places extras ---------- */
 
@@ -3071,36 +2976,6 @@ button.card:hover {
   margin-top: 0.6rem;
 }
 
-/* ---------- Spinning wheel ---------- */
-
-.wheel-wrap {
-  position: relative;
-  width: min(320px, 82vw);
-  margin: 1.25rem auto 1rem;
-}
-.wheel {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  box-shadow: 0 6px 24px rgb(0 0 0 / 0.18);
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.12, 0.7, 0.12, 1);
-}
-.wheel-pointer {
-  position: absolute;
-  top: -6px;
-  left: 50%;
-  z-index: 1;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 14px solid transparent;
-  border-right: 14px solid transparent;
-  border-top: 26px solid var(--text);
-  filter: drop-shadow(0 2px 2px rgb(0 0 0 / 0.3));
-}
-
 /* ---------- Round filters ---------- */
 
 .round-filters {
@@ -3109,32 +2984,9 @@ button.card:hover {
 .round-filters .detail {
   white-space: normal;
 }
-.filters-box {
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 0.6rem 0.8rem;
-}
-.filters-box summary {
-  cursor: pointer;
-  font-weight: 600;
-}
-.filters-box[open] summary {
-  margin-bottom: 0.6rem;
-}
-.filters-box .field + .field {
-  margin-top: 0.6rem;
-}
-.match-count {
-  margin: 0;
-}
 
 /* ---------- Idea page ---------- */
 
-.idea-link {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-}
 .back-link {
   font-weight: 600;
   color: var(--accent);
@@ -3152,12 +3004,7 @@ button.card:hover {
   font-size: 3rem;
   background: linear-gradient(135deg, var(--accent-soft), var(--surface-2));
 }
-.idea-page h1 {
-  margin-bottom: 0.2rem;
-}
-.idea-page h2 {
-  margin-top: 1.5rem;
-}
+
 .win-panel {
   display: flex;
   align-items: center;
@@ -3192,9 +3039,7 @@ button.card:hover {
   margin: 0.2rem 0 0;
   font-weight: 600;
 }
-.idea-notes {
-  white-space: pre-wrap;
-}
+
 .stops {
   padding-left: 1.4rem;
   margin: 0 0 1rem;
@@ -3206,31 +3051,8 @@ button.card:hover {
   color: var(--muted);
 }
 
-/* ---------- Travel time ---------- */
-
-.travel-hint {
-  margin-top: -0.4rem;
-}
-
 /* ---------- Swipe to shortlist ---------- */
 
-.form .check-row,
-.check-row {
-  display: flex;
-  flex-direction: row;
-  gap: 0.6rem;
-  align-items: flex-start;
-  font-weight: 400;
-}
-.check-row input {
-  margin-top: 0.25rem;
-  width: auto;
-}
-.check-row > span {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
 .swipe {
   margin-top: 1rem;
 }
@@ -3313,17 +3135,6 @@ button.card:hover {
 
 /* ---------- Trip page ---------- */
 
-a.trip-card {
-  color: inherit;
-  text-decoration: none;
-}
-.trip-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0.75rem 0;
-}
 a.detail {
   color: inherit;
   text-decoration: none;
@@ -3949,11 +3760,7 @@ a.detail {
   margin-top: 1rem;
   align-items: start;
 }
-.pass-left {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+
 .pass-notes {
   margin: 0;
   font-size: 1rem;

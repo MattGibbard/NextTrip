@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "country",
+  "country": "ES",
+  "name": "Spain",
+  "title": "Holidays in Spain",
+  "intro": "Beaches, islands, food and city breaks a short flight away. Here's where to go on holiday in Spain, and the best time to visit each.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "Where in Spain is warm in winter?",
+      "answer": "Tenerife, in the Canary Islands, stays mild all year and is at its best from October to March."
+    },
+    {
+      "question": "Where in Spain is good in summer?",
+      "answer": "Asturias, on the green north coast, is cooler than the south in July and August. Menorca is lovely in June and September."
+    },
+    {
+      "question": "Where should we go for a city break in Spain?",
+      "answer": "Barcelona and Valencia both have a beach as well as plenty to see, and work well in three to five nights."
+    }
+  ]
+}

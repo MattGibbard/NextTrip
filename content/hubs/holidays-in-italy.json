@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "country",
+  "country": "IT",
+  "name": "Italy",
+  "title": "Holidays in Italy",
+  "intro": "Ancient ruins, lakes, pasta and gelato. Here's where to go on holiday in Italy, how long to stay and the best time to visit.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "What is the best time to visit Italy?",
+      "answer": "Spring and early autumn are best for most of Italy: April and May, then September and October. Summer can be very hot and busy."
+    },
+    {
+      "question": "Where in Italy is good for a beach holiday?",
+      "answer": "Puglia and Syracuse, in Sicily, have warm sea and good food, best in June and September."
+    },
+    {
+      "question": "Where in Italy is good away from the cities?",
+      "answer": "Lake Garda has swimming, boats and walks, and Matera's old cave town is like nowhere else."
+    }
+  ]
+}

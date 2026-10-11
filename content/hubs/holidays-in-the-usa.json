@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "country",
+  "country": "US",
+  "name": "United States",
+  "title": "Holidays in the USA",
+  "intro": "Theme parks, national parks, big cities and beaches. Here's where to go on holiday in the USA, how long to stay and the best time to visit.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "What is the best time to visit the USA?",
+      "answer": "It depends where. Cities like New York, Boston and Washington, D.C. are best in spring and autumn, the national parks in summer, and Miami and Maui in winter."
+    },
+    {
+      "question": "Do UK visitors need a visa for the USA?",
+      "answer": "Most British passport holders apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How long should a holiday in the USA be?",
+      "answer": "Four or five nights works for one city. For Orlando, Maui or a national park road trip, plan on ten nights to two weeks."
+    }
+  ]
+}

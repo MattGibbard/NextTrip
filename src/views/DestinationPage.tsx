@@ -7,6 +7,7 @@ import type { Destination, DestinationCard } from "../destinations";
 import { HOLIDAY_TYPES, budgetLabel, holidayType, travelTimeLabel } from "../../shared/ideaDetails";
 import { destinationPath } from "../../shared/seo";
 import { SiteFooter, SiteHeader } from "./Welcome";
+import { HUBS, countryHub, hubGuides, typeHub } from "../hubs";
 import { AppBottomNav, AppTopbar } from "../components/AppNav";
 
 /**
@@ -23,7 +24,7 @@ export interface Family {
   airport: Terminal | null;
 }
 
-function useFamily(given?: Family): Family {
+export function useFamily(given?: Family): Family {
   const [state, setState] = useState<Family>({ signedIn: false, me: null, ideas: null, airport: null });
   useEffect(() => {
     if (given) return;
@@ -46,7 +47,7 @@ function useFamily(given?: Family): Family {
   return given ?? state;
 }
 
-function Label({ children }: { children: string }) {
+export function Label({ children }: { children: string }) {
   return <span className="dg-label">{children}</span>;
 }
 
@@ -60,6 +61,7 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
   const onList = ideas?.find((i) => i.status === "active" && i.title.trim().toLowerCase() === d.name.toLowerCase());
   const standby = ideas?.filter((i) => i.status === "active" && i !== onList).slice(0, 3) ?? [];
   const types = d.holiday_types.map(holidayType).filter((t) => !!t);
+  const country = countryHub(d.country_code);
 
   return (
     <div className={`lp dg ${signedIn ? "dg-app" : ""}`}>
@@ -76,6 +78,12 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
             )}
             <a href="/destinations">Inspire</a>
             <span aria-hidden>›</span>
+            {country && (
+              <>
+                <a href={destinationPath(country.slug)}>{country.name}</a>
+                <span aria-hidden>›</span>
+              </>
+            )}
             <span aria-current="page">{d.name}</span>
           </nav>
 
@@ -83,7 +91,7 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
             <article className="dg-ticket">
               <div className="dg-ticket-head">
                 <span>{signedIn ? (onList ? "On your list" : "Not on your list yet") : "Destination guide"}</span>
-                {d.country && <span>{d.country}</span>}
+                {d.country && (country ? <a href={destinationPath(country.slug)}>{d.country}</a> : <span>{d.country}</span>)}
               </div>
               <div className="dg-ticket-body">
                 {d.to_code && (
@@ -107,7 +115,18 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
                 {types.length > 0 && (
                   <div>
                     <Label>BEST FOR</Label>
-                    <strong>{types.map((t) => `${t.icon} ${t.label}`).join(", ")}</strong>
+                    <strong>
+                      {types.map((t, i) => {
+                        const hub = typeHub(t.key);
+                        const label = `${t.icon} ${t.label}`;
+                        return (
+                          <span key={t.key}>
+                            {i > 0 && ", "}
+                            {hub ? <a href={destinationPath(hub.slug)}>{label}</a> : label}
+                          </span>
+                        );
+                      })}
+                    </strong>
                   </div>
                 )}
                 {d.nights && (
@@ -344,12 +363,71 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
 }
 
 
-const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const shortMonth = (i: number) => MONTH_NAMES[i].slice(0, 3);
+export const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+export const shortMonth = (i: number) => MONTH_NAMES[i].slice(0, 3);
 
 /** Months a guide rates "best", by number (0 is January). */
-function bestSet(d: DestinationCard): Set<number> {
+export function bestSet(d: DestinationCard): Set<number> {
   return new Set(d.months.flatMap((m, i) => (m.rating === "best" ? [i] : [])));
+}
+
+/** A guide's card, on the Inspire page and the hub pages. `best` is its best months, by number. */
+export function GuideCard({ d, from, month, best, idea, signedIn }: { d: DestinationCard; from: { lat: number | null; lon: number | null }; month: number | null; best: Set<number>; idea?: Idea; signedIn: boolean }) {
+  const hours = flightHoursTo(from, d);
+  const t = d.holiday_types.map(holidayType).find((x) => !!x);
+  return (
+    <article className="dx-card">
+      <div className="dx-card-photo">
+        {d.image ? <img src={imageUrl(d.image)} alt={d.image_alt} loading="lazy" /> : <span aria-hidden>{d.to_code || d.name.slice(0, 3).toUpperCase()}</span>}
+        {month !== null && best.has(month) && <span className="dx-badge">Good in {shortMonth(month)}</span>}
+      </div>
+      <div className="dx-card-body">
+        <Label>{`${countryFlag(d.country_code)} ${d.country.toUpperCase()}`.trim()}</Label>
+        <h3>
+          <a href={destinationPath(d.slug)}>{d.name}</a>
+        </h3>
+        {d.intro && <p className="muted small">{shortIntro(d)}</p>}
+        <div className="dx-pills">
+          {t && (
+            <span>
+              <span aria-hidden>{t.icon}</span> {t.label}
+            </span>
+          )}
+          {hours !== null && <span>✈️ {hours}h</span>}
+          {d.nights && <span>{d.nights} nights</span>}
+          {d.budget && <span>{budgetLabel(d.budget)}</span>}
+        </div>
+      </div>
+      <div className="dx-perf" aria-hidden />
+      <div className="dx-card-foot">
+        <div>
+          <p className="dx-best">
+            <span>BEST TIME</span>
+            <span>{bestMonths(d).toUpperCase() || "ANY TIME"}</span>
+          </p>
+          <div className="dx-months" aria-hidden>
+            {MONTH_NAMES.map((name, i) => (
+              <span key={name} className={`${best.has(i) ? "on" : ""} ${month === i ? "now" : ""}`}>
+                {name[0]}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="dx-card-actions">
+          <a href={destinationPath(d.slug)}>Read the guide</a>
+          {idea ? (
+            <a className="dx-standby" href={`/#/next/${idea.id}`}>
+              On your list
+            </a>
+          ) : (
+            <a className="dx-standby" href={signedIn ? `/#/next/add/${d.slug}` : "/#signin"}>
+              Put on standby
+            </a>
+          )}
+        </div>
+      </div>
+    </article>
+  );
 }
 
 /** A copy of the list in a random order (Fisher-Yates). */
@@ -536,65 +614,9 @@ export function DestinationsIndex({ family }: { family?: Family }) {
             <p className="muted">No guides match that yet.</p>
           ) : (
             <div className="dx-grid" ref={grid}>
-              {cards.slice(0, showing).map((d) => {
-                const months = best.get(d.slug)!;
-                const hours = flightHoursTo(from, d);
-                const t = d.holiday_types.map(holidayType).find((x) => !!x);
-                const idea = onList(d);
-                return (
-                  <article key={d.slug} className="dx-card">
-                    <div className="dx-card-photo">
-                      {d.image ? <img src={imageUrl(d.image)} alt={d.image_alt} loading="lazy" /> : <span aria-hidden>{d.to_code || d.name.slice(0, 3).toUpperCase()}</span>}
-                      {inSeason(d) && month !== null && <span className="dx-badge">Good in {shortMonth(month)}</span>}
-                    </div>
-                    <div className="dx-card-body">
-                      <Label>{`${countryFlag(d.country_code)} ${d.country.toUpperCase()}`.trim()}</Label>
-                      <h3>
-                        <a href={destinationPath(d.slug)}>{d.name}</a>
-                      </h3>
-                      {d.intro && <p className="muted small">{shortIntro(d)}</p>}
-                      <div className="dx-pills">
-                        {t && (
-                          <span>
-                            <span aria-hidden>{t.icon}</span> {t.label}
-                          </span>
-                        )}
-                        {hours !== null && <span>✈️ {hours}h</span>}
-                        {d.nights && <span>{d.nights} nights</span>}
-                        {d.budget && <span>{budgetLabel(d.budget)}</span>}
-                      </div>
-                    </div>
-                    <div className="dx-perf" aria-hidden />
-                    <div className="dx-card-foot">
-                      <div>
-                        <p className="dx-best">
-                          <span>BEST TIME</span>
-                          <span>{bestMonths(d).toUpperCase() || "ANY TIME"}</span>
-                        </p>
-                        <div className="dx-months" aria-hidden>
-                          {MONTH_NAMES.map((name, i) => (
-                            <span key={name} className={`${months.has(i) ? "on" : ""} ${month === i ? "now" : ""}`}>
-                              {name[0]}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="dx-card-actions">
-                        <a href={destinationPath(d.slug)}>Read the guide</a>
-                        {idea ? (
-                          <a className="dx-standby" href={`/#/next/${idea.id}`}>
-                            On your list
-                          </a>
-                        ) : (
-                          <a className="dx-standby" href={signedIn ? `/#/next/add/${d.slug}` : "/#signin"}>
-                            Put on standby
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </article>
-                );
-              })}
+              {cards.slice(0, showing).map((d) => (
+                <GuideCard key={d.slug} d={d} from={from} month={month} best={best.get(d.slug)!} idea={onList(d)} signedIn={signedIn} />
+              ))}
             </div>
           )}
           {cards.length > showing && (
@@ -613,16 +635,23 @@ export function DestinationsIndex({ family }: { family?: Family }) {
           <section className="lp-wrap dx-section" aria-labelledby="dx-countries">
             <h2 id="dx-countries">Browse by country</h2>
             <div className="dx-countries">
-              {countries.map((c) => (
+              {countries.map((c) => {
+                // A country with its own hub page links there; the others filter the guides above.
+                const hub = countryHub(c.code);
+                return (
                 <a
                   key={c.code}
-                  href={`/destinations?country=${c.code}#guides`}
+                  href={hub ? destinationPath(hub.slug) : `/destinations?country=${c.code}#guides`}
                   aria-current={country === c.code ? "true" : undefined}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    pickCountry(c.code);
-                    document.getElementById("guides")?.scrollIntoView({ behavior: "smooth", block: "start" });
-                  }}
+                  onClick={
+                    hub
+                      ? undefined
+                      : (e) => {
+                          e.preventDefault();
+                          pickCountry(c.code);
+                          document.getElementById("guides")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }
+                  }
                 >
                   <span aria-hidden>{countryFlag(c.code)}</span>
                   <span>{c.name}</span>
@@ -630,10 +659,13 @@ export function DestinationsIndex({ family }: { family?: Family }) {
                     {c.count} {c.count === 1 ? "GUIDE" : "GUIDES"}
                   </span>
                 </a>
-              ))}
+                );
+              })}
             </div>
           </section>
         )}
+
+        <HubLinks kind="type" heading="Browse by holiday type" />
 
         {!signedIn && (
           <section className="lp-wrap dx-section">
@@ -657,5 +689,32 @@ export function DestinationsIndex({ family }: { family?: Family }) {
       <SiteFooter signedIn={signedIn} />
       {signedIn && <AppBottomNav current="guides" />}
     </div>
+  );
+}
+
+/** Links to the hub pages of one kind, with how many guides each has. */
+export function HubLinks({ kind, heading, except }: { kind: "type" | "country"; heading: string; except?: string }) {
+  const hubs = HUBS.filter((h) => h.kind === kind && h.slug !== except);
+  if (hubs.length === 0) return null;
+  const id = `dx-hubs-${kind}`;
+  return (
+    <section className="lp-wrap dx-section" aria-labelledby={id}>
+      <h2 id={id}>{heading}</h2>
+      <div className="dx-countries">
+        {hubs.map((h) => {
+          const count = hubGuides(h).length;
+          const icon = kind === "type" ? HOLIDAY_TYPES.find((t) => t.key === h.holiday_type)?.icon : countryFlag(h.country_code);
+          return (
+            <a key={h.slug} href={destinationPath(h.slug)}>
+              <span aria-hidden>{icon}</span>
+              <span>{h.name}</span>
+              <span className="dx-count">
+                {count} {count === 1 ? "GUIDE" : "GUIDES"}
+              </span>
+            </a>
+          );
+        })}
+      </div>
+    </section>
   );
 }

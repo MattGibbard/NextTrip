@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "type",
+  "holiday_type": "relax",
+  "name": "Relax & spa",
+  "title": "Relaxing holidays",
+  "intro": "Pools, quiet beaches and nowhere you need to be. Here's where to go for a relaxing holiday, and the best months for each.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "Where is good for a relaxing holiday in winter?",
+      "answer": "The Maldives, Barbados, Dubai and Tenerife are warm and sunny between December and February."
+    },
+    {
+      "question": "Where can we relax close to home?",
+      "answer": "Malta, Gozo, Menorca, Madeira and Lake Garda are short flights from the UK, with quiet spots to unwind."
+    },
+    {
+      "question": "How long should a relaxing holiday be?",
+      "answer": "A week is enough to properly switch off in Europe. Long-haul places like the Maldives or Mauritius are worth two weeks."
+    }
+  ]
+}

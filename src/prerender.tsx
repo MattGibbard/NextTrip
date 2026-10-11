@@ -6,7 +6,9 @@ import { renderToString } from "react-dom/server";
 import { HomePage, NotFound } from "./views/Welcome";
 import { LegalView } from "./views/Legal";
 import { DestinationPage, DestinationsIndex } from "./views/DestinationPage";
+import { HubPage } from "./views/HubPage";
 import { DESTINATIONS, destinationMeta, readDestination } from "./destinations";
+import { HUBS, countryHub, hubMeta, readHub } from "./hubs";
 import { CREATORS, HOME } from "./site";
 import { CreatorsPage } from "./views/Creators";
 import { InfoPage } from "./views/InfoPage";
@@ -32,6 +34,8 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
   return [
     ...fixed.map((f) => ({ ...f, path: PAGES[f.page].path, index: PAGES[f.page].index })),
     ...DESTINATIONS.map((d) => ({ page: `destination:${d.slug}` as const, file: `destinations/${d.slug}.html`, path: `/destinations/${d.slug}`, index: true, source: `content/destinations/${d.slug}.json` })),
+    // Hubs share the guides' addresses, and their page names.
+    ...HUBS.map((h) => ({ page: `destination:${h.slug}` as const, file: `destinations/${h.slug}.html`, path: `/destinations/${h.slug}`, index: true, source: `content/hubs/${h.slug}.json` })),
   ];
 }
 
@@ -44,10 +48,21 @@ function destination(page: PublicPage) {
   return raw ? readDestination(slug, raw) : undefined;
 }
 
+// Every hub in full, likewise.
+const hubFiles = import.meta.glob<Record<string, unknown>>("/content/hubs/*.json", { eager: true, import: "default" });
+
+function hub(page: PublicPage) {
+  const slug = page.startsWith("destination:") ? page.slice("destination:".length) : "";
+  const raw = HUBS.some((h) => h.slug === slug) ? hubFiles[`/content/hubs/${slug}.json`] : undefined;
+  return raw ? readHub(slug, raw) : undefined;
+}
+
 /** The page's <head> tags. `updated` is when its words last changed, as an ISO date, if known. */
 export function headTags(page: PublicPage, updated?: string): string {
   const d = destination(page);
-  if (d) return metaTags(destinationMeta(d, updated));
+  if (d) return metaTags(destinationMeta(d, updated, countryHub(d.country_code)));
+  const h = hub(page);
+  if (h) return metaTags(hubMeta(h, updated));
   if (page === "home") return fixedTags("home", { title: HOME.seo_title, description: HOME.seo_description });
   if (page === "creators") return fixedTags("creators", { title: CREATORS.seo_title, description: CREATORS.seo_description });
   const info = page in INFO_PAGES ? (page as Info) : null;
@@ -68,6 +83,8 @@ export function render(page: PublicPage): string {
 function pageBody(page: PublicPage) {
   const d = destination(page);
   if (d) return <DestinationPage destination={d} />;
+  const h = hub(page);
+  if (h) return <HubPage hub={h} />;
   if (page === "home") return <HomePage />;
   if (page === "notfound") return <NotFound />;
   if (page === "destinations") return <DestinationsIndex />;

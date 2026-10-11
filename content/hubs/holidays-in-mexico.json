@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "country",
+  "country": "MX",
+  "name": "Mexico",
+  "title": "Holidays in Mexico",
+  "intro": "Caribbean beaches, cenotes, ruins and amazing food. Here's where to go on holiday in Mexico, and the best time to visit.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "What is the best time to visit Mexico?",
+      "answer": "December to April is dry season for most of Mexico, and the best time for Cancún, Bacalar and Oaxaca."
+    },
+    {
+      "question": "Where in Mexico is good for a beach holiday?",
+      "answer": "Cancún has the Caribbean beaches, and Bacalar has a calm, bright-blue lagoon a few hours south."
+    },
+    {
+      "question": "Is Mexico City worth visiting?",
+      "answer": "Yes. It has some of the best food and museums in the world, and is at its best in spring and autumn."
+    }
+  ]
+}

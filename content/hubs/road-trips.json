@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "type",
+  "holiday_type": "road-trip",
+  "name": "Road trips",
+  "title": "Road trip holidays",
+  "intro": "Open roads, big views and stops wherever you like. Here's where to go for a road trip holiday, how long you'll need and when to go.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "Where is good for a road trip in Europe?",
+      "answer": "Istria, the Alentejo and the hill towns around Ronda make easy road trips, with short drives between stops."
+    },
+    {
+      "question": "Where are the best road trips in North America?",
+      "answer": "Yellowstone, the Grand Canyon, Banff, Acadia National Park and Nova Scotia from Halifax are all great by car."
+    },
+    {
+      "question": "How long do you need for a road trip?",
+      "answer": "A week covers a region like Istria or the Alentejo. Big parks like Yellowstone or the Grand Canyon are better with two weeks."
+    }
+  ]
+}

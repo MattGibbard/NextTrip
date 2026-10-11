@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "country",
+  "country": "HR",
+  "name": "Croatia",
+  "title": "Holidays in Croatia",
+  "intro": "Clear sea, old towns and waterfalls. Here's where to go on holiday in Croatia, how long to stay and the best time to visit.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "What is the best time to visit Croatia?",
+      "answer": "June and September are best: warm sea without the peak summer crowds. Plitvice Lakes is also lovely in May and October."
+    },
+    {
+      "question": "Where in Croatia should we go?",
+      "answer": "Dubrovnik for its old town, Istria for food and road trips, Zadar for beaches and islands, and Plitvice Lakes for waterfalls."
+    },
+    {
+      "question": "How long should a holiday in Croatia be?",
+      "answer": "A week is enough for one part of the coast. Plitvice Lakes needs only two or three nights."
+    }
+  ]
+}

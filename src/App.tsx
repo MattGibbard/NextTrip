@@ -9,6 +9,7 @@ import { infoTitle } from "./infoPages";
 import { NotFound } from "./views/Welcome";
 import { PAGES, infoPage, isPrivatePath, publicPage } from "../shared/seo";
 import { findDestination, searchTitle } from "./destinations";
+import { findHub, hubSearchTitle } from "./hubs";
 import { CREATORS } from "./site";
 import { GuideView } from "./views/GuideView";
 import { followInPlace, isGuidePath } from "./navigate";
@@ -79,8 +80,11 @@ function pageTitle(path: string): string {
   if (page === "creators") return CREATORS.seo_title || PAGES.creators.title;
   const info = infoPage(path);
   if (info) return infoTitle(info);
-  const destination = page?.startsWith("destination:") ? findDestination(page.slice("destination:".length)) : undefined;
-  return destination ? searchTitle(destination) : "somewhere🎉";
+  const slug = page?.startsWith("destination:") ? page.slice("destination:".length) : "";
+  const destination = findDestination(slug);
+  if (destination) return searchTitle(destination);
+  const hub = findHub(slug);
+  return hub ? hubSearchTitle(hub) : "somewhere🎉";
 }
 
 

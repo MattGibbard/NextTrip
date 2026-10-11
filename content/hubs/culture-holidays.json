@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "type",
+  "holiday_type": "culture",
+  "name": "Culture & history",
+  "title": "Culture and history holidays",
+  "intro": "Old towns, ancient ruins, temples and museums. Here's where to go for a holiday full of history and culture, and the best time to visit each.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "Where is best for history on holiday?",
+      "answer": "Rome, Kraków, Cusco, Jordan and Crete are packed with history, from ancient ruins to old towns you can wander for days."
+    },
+    {
+      "question": "Where is good for culture in winter?",
+      "answer": "Oman, Kerala, Sri Lanka, Oaxaca and Luang Prabang are all at their best between December and February, when it's dry and not too hot."
+    },
+    {
+      "question": "Are culture holidays good with children?",
+      "answer": "They can be. Pick places with plenty to do outdoors as well as indoors, keep museum visits short, and leave time for a swim or a playground."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "country",
+  "country": "GR",
+  "name": "Greece",
+  "title": "Holidays in Greece",
+  "intro": "Islands, beaches, ruins and long lunches by the sea. Here's where to go on holiday in Greece, and the best time to visit each island.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "What is the best time to visit Greece?",
+      "answer": "June and September are best for the islands: warm sea without the peak summer heat and crowds. Crete is also good into October."
+    },
+    {
+      "question": "Which Greek island is best for a holiday?",
+      "answer": "Crete has the most to do, Kefalonia is green and quiet, Naxos is great for food and beaches, and Milos has some of the most unusual coastline in Greece."
+    },
+    {
+      "question": "How long should a holiday in Greece be?",
+      "answer": "A week is enough for one island. Crete is big enough for two weeks."
+    }
+  ]
+}

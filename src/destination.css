@@ -1069,3 +1069,81 @@ a.dg-similar-card:hover {
 .site-banner-close:hover {
   background: color-mix(in srgb, currentColor 12%, transparent);
 }
+
+/* Links from a guide to its country's and holiday types' hub pages. */
+.dg-ticket-head a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.dg-facts strong a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+}
+.dg-facts strong a:hover {
+  text-decoration-color: var(--accent);
+}
+
+/* Hub pages: every guide for one kind of holiday or one country. */
+.hb .dx-hero-text .dg-crumbs {
+  margin-bottom: 4px;
+}
+.hb-months {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: 10px;
+}
+.hb-months > div {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hb-months > div.now {
+  border-color: var(--accent);
+}
+.hb-months dt {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hb-months > div.now dt {
+  color: var(--accent);
+}
+.hb-months dd {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.hb-months dd a {
+  color: var(--text);
+  font-weight: 600;
+}
+.hb-az ul {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  font-size: 0.9rem;
+}
+.hb-az a {
+  color: var(--text);
+}
+.hb-az {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.hb-az .dx-filter-label {
+  margin: 0;
+}

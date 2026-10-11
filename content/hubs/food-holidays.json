@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "type",
+  "holiday_type": "food",
+  "name": "Food & drink",
+  "title": "Food and drink holidays",
+  "intro": "Street food, markets, cooking classes and long lunches. Here's where to go for a holiday built around eating well, and when to go.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "Where is best for food on holiday?",
+      "answer": "Tokyo, Bangkok, Penang, Mexico City, Lisbon and Rome are some of the best places in the world to eat, at every budget."
+    },
+    {
+      "question": "Where is good for a food weekend away?",
+      "answer": "Porto, Paris, Copenhagen, Ghent and Kraków are short flights from the UK and easy to eat your way around in a long weekend."
+    },
+    {
+      "question": "Are food holidays good with fussy eaters?",
+      "answer": "Usually. Markets and street food let everyone pick a little of what they like, and most food cities have plenty of simple dishes like pasta, noodles and grilled meat."
+    }
+  ]
+}

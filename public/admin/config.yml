@@ -496,6 +496,62 @@ collections:
           - { label: Code, name: code, widget: string, hint: "Three letters, e.g. BOS." }
           - { label: Label, name: label, widget: string, required: false, hint: "e.g. 🏙️ City break" }
 
+  - name: hubs
+    label: Hub pages
+    label_singular: Hub page
+    description: Pages that list every guide for one kind of holiday (Beach holidays) or one country (Holidays in Spain). The guides on each come from the guides themselves, so these only hold the words. Untick "Published" to take one off the site.
+    folder: content/hubs
+    format: json
+    extension: json
+    create: true
+    identifier_field: title
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    preview_path: destinations/{{slug}}
+    editor:
+      preview: false
+    fields:
+      - { label: Published, name: published, widget: boolean, default: false, hint: "Only published hubs with at least one guide appear on the site and in the sitemap." }
+      - label: Kind of hub
+        name: kind
+        widget: select
+        default: type
+        options:
+          - { label: "A kind of holiday", value: type }
+          - { label: "A country", value: country }
+      - label: Holiday type
+        name: holiday_type
+        widget: select
+        required: false
+        hint: For a kind of holiday. Lists every guide with this in "Best for".
+        options:
+          - { label: "🏙️ City break", value: city }
+          - { label: "🏖️ Beach", value: beach }
+          - { label: "🥾 Nature & hiking", value: nature }
+          - { label: "🧗 Adventure", value: adventure }
+          - { label: "🏛️ Culture & history", value: culture }
+          - { label: "🍷 Food & drink", value: food }
+          - { label: "🚗 Road trip", value: road-trip }
+          - { label: "🛳️ Cruise", value: cruise }
+          - { label: "🚆 By train", value: rail }
+          - { label: "⛷️ Skiing", value: ski }
+          - { label: "🧘 Relax & spa", value: relax }
+      - { label: Country code, name: country, widget: string, required: false, hint: "For a country. Its two-letter code, e.g. ES for Spain or US for the United States. Lists every guide in that country." }
+      - { label: Link name, name: name, widget: string, hint: "Short, for links and the breadcrumb, e.g. Beach holidays or Spain." }
+      - { label: Page heading, name: title, widget: string, hint: "e.g. Beach holidays or Holidays in Spain. A new hub's address comes from this, e.g. somewhere.party/destinations/holidays-in-spain, so it mustn't be the same as a guide's." }
+      - { label: Introduction, name: intro, widget: text, hint: "One or two sentences under the heading. Google also shows this under the page title in search results, cut off after about 155 characters, so put the most important part first." }
+      - { label: Google title, name: seo_title, widget: string, required: false, hint: "Optional. The page title in search results, about 50 characters. Leave empty for \"Beach holidays: where to go and when\"." }
+      - { label: Google description, name: seo_description, widget: text, required: false, hint: "Optional. Shown under the title in search results, cut off after about 155 characters. Leave empty to use the introduction." }
+      - label: Common questions
+        name: faqs
+        widget: list
+        required: false
+        summary: "{{question}}"
+        hint: Shown near the bottom of the page. These can show up as questions and answers in Google.
+        fields:
+          - { label: Question, name: question, widget: string }
+          - { label: Answer, name: answer, widget: text }
+
   - name: site
     label: Site
     description: The home page's words, the announcement banner across the top of every page, the creators page and the creators featured on the home page, and the welcome steps new people see when they first sign in.

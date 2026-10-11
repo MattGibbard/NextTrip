@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "country",
+  "country": "FR",
+  "name": "France",
+  "title": "Holidays in France",
+  "intro": "Mountains, lakes, islands and Paris. Here's where to go on holiday in France, how long to stay and the best time to visit.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "What is the best time to visit France?",
+      "answer": "Late spring to early autumn suits most of France. Chamonix is also a ski resort in winter."
+    },
+    {
+      "question": "Where in France is good for the outdoors?",
+      "answer": "Annecy and Chamonix for lakes and mountains, Corsica for beaches and hiking, and the Dordogne for canoeing and castles."
+    },
+    {
+      "question": "How long do you need in Paris?",
+      "answer": "Three to five nights covers the big sights at an easy pace."
+    }
+  ]
+}

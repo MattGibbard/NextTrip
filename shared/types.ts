@@ -1,3 +1,4 @@
+import type { TripDates } from "./tripDates";
 import type { RoundFilters } from "./roundFilters";
 import type { Shortlist } from "./shortlist";
 import type { HolidayType, TravelTime, TripLength } from "./ideaDetails";
@@ -112,6 +113,8 @@ export interface Round {
   drawn_at: string | null;
   /** Which ideas this round is limited to, chosen when it started. */
   filters: RoundFilters;
+  /** When the drawn trip will be, if anyone has said. */
+  trip_dates: TripDates | null;
   /** Whether the round starts with everyone swiping to make a shortlist. */
   swipe: boolean;
   /** Fixed once everyone has swiped; until then (or without swiping) null. */

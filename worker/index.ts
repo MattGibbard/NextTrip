@@ -19,6 +19,7 @@ import { NO_FILTERS, cleanFilters, matchesFilters } from "../shared/roundFilters
 import { buildShortlist, parseShortlist, unswiped } from "../shared/shortlist";
 import type { Swipe } from "../shared/shortlist";
 import type { RoundFilters } from "../shared/roundFilters";
+import { cleanTripDates } from "../shared/tripDates";
 import type {
   Allocation,
   Bootstrap,
@@ -421,8 +422,9 @@ app.delete("/ideas/:id", async (c) => {
 
 // ---------- Rounds and the draw ----------
 
-type RoundRow = Omit<Round, "locked" | "vetoes" | "allocations" | "ideas" | "filters" | "swipe" | "shortlist" | "my_swipes" | "swiping"> & {
+type RoundRow = Omit<Round, "locked" | "vetoes" | "allocations" | "ideas" | "filters" | "swipe" | "shortlist" | "my_swipes" | "swiping" | "trip_dates"> & {
   filters: string;
+  trip_dates: string | null;
   swipe: number;
   shortlist: string | null;
 };
@@ -505,8 +507,9 @@ app.post("/rounds", async (c) => {
   if ((await matchingIdeaIds(c.env.DB, family, filters)).length < 2) {
     throw new HttpError(400, "At least 2 ideas need to match the filters");
   }
-  const row = await c.env.DB.prepare("INSERT INTO rounds (name, points_per_person, filters, swipe, family_id) VALUES (?, ?, ?, ?, ?) RETURNING id")
-    .bind(name, points, JSON.stringify(filters), b.swipe === true ? 1 : 0, family)
+  const dates = cleanTripDates(b.trip_dates);
+  const row = await c.env.DB.prepare("INSERT INTO rounds (name, points_per_person, filters, swipe, trip_dates, family_id) VALUES (?, ?, ?, ?, ?, ?) RETURNING id")
+    .bind(name, points, JSON.stringify(filters), b.swipe === true ? 1 : 0, dates && JSON.stringify(dates), family)
     .first<{ id: number }>();
   return c.json({ id: row!.id }, 201);
 });
@@ -525,6 +528,18 @@ app.delete("/rounds/:id", async (c) => {
   }
   await db.batch(stmts);
   return c.json({ ok: true });
+});
+
+// When the trip will be. Anyone in the family can set or clear it, before or after the draw.
+app.put("/rounds/:id/dates", async (c) => {
+  const b = await body(c);
+  const dates = cleanTripDates(b.trip_dates);
+  if (b.trip_dates != null && !dates) throw new HttpError(400, "Those dates don't look right");
+  const res = await c.env.DB.prepare("UPDATE rounds SET trip_dates = ? WHERE id = ? AND family_id = ?")
+    .bind(dates && JSON.stringify(dates), idParam(c), c.get("family"))
+    .run();
+  if (!res.meta.changes) throw new HttpError(404, "Not found");
+  return c.json({ trip_dates: dates });
 });
 
 app.put("/rounds/:id/allocations", async (c) => {
@@ -784,6 +799,7 @@ function buildRounds({
     return {
       ...r,
       filters: cleanFilters(r.filters),
+      trip_dates: cleanTripDates(r.trip_dates),
       swipe: !!r.swipe,
       shortlist: parseShortlist(r.shortlist),
       my_swipes: roundSwipes.filter((x) => x.person_id === viewer).map(({ idea_id, liked }) => ({ idea_id, liked })),

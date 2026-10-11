@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import type { ReactNode } from "react";
 import type { Place } from "../../shared/types";
 import type { Terminal } from "../../shared/terminals";
 import type { Mode } from "../../shared/travelMode";
 import { hotelLink, hotelPlaces } from "../../shared/hotels";
 import type { HotelCampaign } from "../../shared/hotels";
 import { flightLink, flightOrigin } from "../../shared/flights";
+import type { StayDates } from "../../shared/tripDates";
 import { api } from "../api";
 import { useData } from "../data";
 
@@ -46,12 +48,18 @@ export function BookLinks({
   campaign,
   title = "🧳 Book it",
   className = "",
+  dates = null,
+  before,
 }: {
   trip: Journey;
   mode: Mode;
   campaign: HotelCampaign;
   title?: string;
   className?: string;
+  /** When the trip is, so the searches open on those dates. */
+  dates?: StayDates | null;
+  /** Shown under the heading, above the buttons. */
+  before?: ReactNode;
 }) {
   const { home, people } = useData();
   const flies = mode === "flight" || mode === "road";
@@ -65,15 +73,16 @@ export function BookLinks({
       <h2 id={`book-${campaign}`} className="mono-label">
         {title}
       </h2>
+      {before}
       <div className="book-buttons">
         {flight && (
-          <a className="btn ghost" href={flightLink(flight.from, flight.to, people.length, campaign)} target="_blank" rel="sponsored noopener">
+          <a className="btn ghost" href={flightLink(flight.from, flight.to, people.length, campaign, dates)} target="_blank" rel="sponsored noopener">
             ✈️ Find flights {flight.from} → {flight.to}
             <span aria-hidden>↗</span>
           </a>
         )}
         {stops.map((p) => (
-          <a key={`${p.name}|${p.country_code}`} className="btn ghost" href={hotelLink(p, campaign)} target="_blank" rel="sponsored noopener">
+          <a key={`${p.name}|${p.country_code}`} className="btn ghost" href={hotelLink(p, campaign, dates)} target="_blank" rel="sponsored noopener">
             🏨 Find hotels in {p.name}
             <span aria-hidden>↗</span>
           </a>

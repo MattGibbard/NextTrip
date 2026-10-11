@@ -119,6 +119,7 @@ describe.each(["owner", "member"] as const)("a signed-in %s of another family", 
       ["POST", `/rounds/${a.round}/veto`, { idea_id: a.ideas[2] }],
       ["DELETE", `/rounds/${a.round}/veto`],
       ["POST", `/rounds/${a.round}/draw`],
+      ["PUT", `/rounds/${a.round}/dates`, { trip_dates: { kind: "month", month: "2027-07" } }],
     ];
     for (const [method, path, json] of tries) {
       const res = await call(as(), method, path, json);

@@ -18,6 +18,8 @@ export interface TripDraft {
   idea_id?: number | null;
   depart?: Terminal | null;
   arrive?: Terminal | null;
+  start_date?: string;
+  end_date?: string;
 }
 
 const RATING_WORDS = ["Not rated yet", "Not for us", "It was OK", "Good", "Really good", "Loved it"];
@@ -26,8 +28,8 @@ export function TripForm({ trip, draft, onClose, onDeleted }: { trip?: Trip; dra
   const { me, reload, ideas, trips, isOwner } = useData();
   const fromIdea = ideas.find((i) => i.id === draft?.idea_id);
   const [title, setTitle] = useState(trip?.title ?? draft?.title ?? "");
-  const [start, setStart] = useState(trip?.start_date ?? "");
-  const [end, setEnd] = useState(trip?.end_date ?? "");
+  const [start, setStart] = useState(trip?.start_date ?? draft?.start_date ?? "");
+  const [end, setEnd] = useState(trip?.end_date ?? draft?.end_date ?? "");
   const [places, setPlaces] = useState<Place[]>(trip?.places ?? draft?.places ?? []);
   const [rating, setRating] = useState<number | null>(trip?.rating ?? null);
   const [notes, setNotes] = useState(trip?.notes ?? "");

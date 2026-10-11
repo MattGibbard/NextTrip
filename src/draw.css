@@ -1020,3 +1020,71 @@
     animation: none;
   }
 }
+
+/* ---------- Trip dates (start of a round, and changeable after) ---------- */
+.dates-field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.dates-field .segmented {
+  margin: 0;
+  max-width: 320px;
+}
+.dates-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.dates-pair input,
+.dates-pair select {
+  min-height: 44px;
+  width: 100%;
+  min-width: 0;
+  background: var(--surface);
+}
+/* Two date fields side by side are tight on a phone, so give the date its room. */
+.dates-pair input[type="date"] {
+  padding-inline: 0.5rem;
+}
+.dates-pair input[type="date"]::-webkit-calendar-picker-indicator {
+  margin-inline-start: 2px;
+}
+.round-dates {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.round-dates-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+}
+.round-dates-value {
+  font-weight: 700;
+}
+.round-dates-searching {
+  flex-basis: 100%;
+}
+.round-dates-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+.round-dates-edit p {
+  margin: 0;
+}
+.round-dates-edit .row {
+  flex-wrap: wrap;
+}
+.round-dates.in-head {
+  margin-top: 8px;
+}
+.book-links .round-dates {
+  margin-bottom: 12px;
+}

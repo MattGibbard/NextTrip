@@ -1,5 +1,6 @@
 import type { Bootstrap, FamilyPart, GeocodeResult, HomeEnds, Idea, IdeaInput, Person, Round, Session, Trip, TripInput } from "../shared/types";
 import type { RoundFilters } from "../shared/roundFilters";
+import type { TripDates } from "../shared/tripDates";
 import type { Terminal, TerminalSearchResult } from "../shared/terminals";
 import type { PhotoSearch } from "../shared/photos";
 import { forget, load } from "./storage";
@@ -78,7 +79,8 @@ export const api = {
   deleteIdea: (id: number) => request("DELETE", `/ideas/${id}`),
 
   rounds: () => request<Round[]>("GET", "/rounds"),
-  createRound: (r: { name?: string; points_per_person: number; filters?: RoundFilters; swipe?: boolean }) => request<{ id: number }>("POST", "/rounds", r),
+  createRound: (r: { name?: string; points_per_person: number; filters?: RoundFilters; swipe?: boolean; trip_dates?: TripDates | null }) => request<{ id: number }>("POST", "/rounds", r),
+  setRoundDates: (id: number, trip_dates: TripDates | null) => request<{ trip_dates: TripDates | null }>("PUT", `/rounds/${id}/dates`, { trip_dates }),
   deleteRound: (id: number) => request("DELETE", `/rounds/${id}`),
   swipe: (id: number, idea_id: number, liked: boolean) => request("PUT", `/rounds/${id}/swipes`, { idea_id, liked }),
   homeEnds: () => request<HomeEnds>("GET", "/home-ends"),

@@ -1,4 +1,5 @@
 import type { Place } from "./types";
+import type { StayDates } from "./tripDates";
 
 /** Our Stay22 affiliate ID. Bookings made through these links earn somewhere🎉 a commission. */
 export const STAY22_AID = "somewhereparty";
@@ -13,8 +14,9 @@ export type HotelCampaign = "draw_result" | "idea_page" | "been_page";
  * A Stay22 link that searches hotels in a place, on whichever booking site Stay22 picks.
  * It sends the place's name and country rather than its coordinates: Booking.com searches
  * by name reliably, but coordinates sometimes landed on the wrong city (Banff opened Munich).
+ * With dates, the search opens for that check-in and check-out.
  */
-export function hotelLink(place: Place, campaign: HotelCampaign): string {
+export function hotelLink(place: Place, campaign: HotelCampaign, dates: StayDates | null = null): string {
   const q = new URLSearchParams({ aid: STAY22_AID });
   const address = [place.name.trim(), place.country.trim()].filter(Boolean).join(", ");
   if (address) {
@@ -22,6 +24,10 @@ export function hotelLink(place: Place, campaign: HotelCampaign): string {
   } else if (place.lat !== null && place.lon !== null) {
     q.set("lat", String(place.lat));
     q.set("lng", String(place.lon));
+  }
+  if (dates) {
+    q.set("checkin", dates.start);
+    q.set("checkout", dates.end);
   }
   q.set("currency", CURRENCY);
   q.set("campaign", campaign);

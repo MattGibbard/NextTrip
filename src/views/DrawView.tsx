@@ -20,6 +20,8 @@ import { RoundFilterFields, RoundFilterLine } from "../components/RoundFilters";
 import { NO_FILTERS, hasFilters, matchesFilters } from "../../shared/roundFilters";
 import type { RoundFilters } from "../../shared/roundFilters";
 import type { TripDraft } from "./TripForm";
+import { RoundDates, TripDatesField, datesOf, draftOf } from "../components/TripDatesField";
+import { stayDates, tripDatesLabel } from "../../shared/tripDates";
 
 const dayMonth = (sql: string, year = false) =>
   new Date(sql.replace(" ", "T") + "Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", ...(year ? { year: "numeric" } : {}) });
@@ -118,6 +120,8 @@ function StartRound({ lastPoints, roundNo }: { lastPoints: number; roundNo: numb
   const [error, setError] = useState<string | null>(null);
   const [filters, setFilters] = useState<RoundFilters>(NO_FILTERS);
   const [swipe, setSwipe] = useState(true);
+  const [when, setWhen] = useState(() => draftOf(null));
+  const whenChecked = datesOf(when);
   const pool = ideas.filter((i) => i.status === "active");
   const matching = pool.filter((i) => matchesFilters(i, filters));
   const filtered = hasFilters(filters);
@@ -125,7 +129,7 @@ function StartRound({ lastPoints, roundNo }: { lastPoints: number; roundNo: numb
 
   const start = async () => {
     try {
-      await api.createRound({ name: name.trim() || undefined, points_per_person: points, filters, swipe });
+      await api.createRound({ name: name.trim() || undefined, points_per_person: points, filters, swipe, trip_dates: whenChecked.dates });
       await reload(["rounds"]);
     } catch (e) {
       setError((e as Error).message);
@@ -193,6 +197,18 @@ function StartRound({ lastPoints, roundNo }: { lastPoints: number; roundNo: numb
                   </p>
                 )}
               </div>
+              <div className="ideas-in">
+                <div className="ideas-in-head">
+                  <h3>When's the trip?</h3>
+                  <span className="muted small">Optional. You can add or change it after the draw.</span>
+                </div>
+                <TripDatesField value={when} onChange={setWhen} />
+                {whenChecked.error ? (
+                  <p className="small error-text">{whenChecked.error}</p>
+                ) : (
+                  <p className="small muted">The flight and hotel searches for the winner open on these dates.</p>
+                )}
+              </div>
               <label className="check-card">
                 <input type="checkbox" checked={swipe} onChange={(e) => setSwipe(e.target.checked)} />
                 <span>
@@ -201,7 +217,7 @@ function StartRound({ lastPoints, roundNo }: { lastPoints: number; roundNo: numb
                 </span>
               </label>
               {error && <p className="error-text">{error}</p>}
-              <button className="btn bright large" onClick={start} disabled={matching.length < 2}>
+              <button className="btn bright large" onClick={start} disabled={matching.length < 2 || !!whenChecked.error}>
                 🎟️ Start round with {plural(points, "point")} each
               </button>
             </div>
@@ -320,6 +336,7 @@ function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => vo
               {plural(round.points_per_person, "point")} each · {plural(onStandby, "idea")} on standby · started {dayMonth(round.created_at)}
             </p>
             <RoundFilterLine filters={round.filters} />
+            <RoundDates roundId={round.id} dates={round.trip_dates} className="in-head" />
           </>
         }
       >
@@ -655,7 +672,9 @@ const STEP_MS = 60;
 
 /** The departures board counts down to the ticket the server already drew, then the breakdown. */
 function Reveal({ round, onDone, onClose }: { round: Round; onDone: () => void; onClose: () => void }) {
-  const { ideas, home } = useData();
+  const { ideas, home, rounds } = useData();
+  // The round as it was drawn, but with any dates changed since.
+  const tripDates = (rounds.find((r) => r.id === round.id) ?? round).trip_dates;
   const people = useRoundPeople(round);
   const still = useMedia("(prefers-reduced-motion: reduce)");
   const ranges = useMemo(() => drawnRanges(round), [round]);
@@ -733,7 +752,7 @@ function Reveal({ round, onDone, onClose }: { round: Round; onDone: () => void; 
           </p>
         }
       />
-      <FlapBoard rows={rows} at={at} tick={tick} still={still} meta={[round.name.toUpperCase(), plural(total, "TICKET"), drawnAt].filter(Boolean).join(" · ")} />
+      <FlapBoard rows={rows} at={at} tick={tick} still={still} meta={[round.name.toUpperCase(), tripDates && tripDatesLabel(tripDates).toUpperCase(), plural(total, "TICKET"), drawnAt].filter(Boolean).join(" · ")} />
 
       <section className="odds-card" aria-labelledby="odds">
         <div className="odds-head">
@@ -807,7 +826,16 @@ function Reveal({ round, onDone, onClose }: { round: Round; onDone: () => void; 
         </section>
       )}
 
-      {done && planIdea && <BookLinks trip={planIdea} mode={ideaMode(planIdea.holiday_types)} campaign="draw_result" className="odds-card" />}
+      {done && planIdea && (
+        <BookLinks
+          trip={planIdea}
+          mode={ideaMode(planIdea.holiday_types)}
+          campaign="draw_result"
+          className="odds-card"
+          dates={stayDates(tripDates, planIdea.trip_length)}
+          before={<RoundDates roundId={round.id} dates={tripDates} searching={stayDates(tripDates, planIdea.trip_length)} />}
+        />
+      )}
 
       <div className="reveal-actions">
         {done ? (
@@ -930,6 +958,7 @@ function HistoryRow({ round, hidden }: { round: Round; hidden: boolean }) {
             </span>
             <span className="hs-title">{hidden ? "Not revealed yet" : `${winnerIdea ? flagsOf(winnerIdea) + " " : ""}${winner?.title ?? "Removed idea"}`}</span>
             <span className="muted small">
+              {!hidden && round.trip_dates && `${tripDatesLabel(round.trip_dates)} · `}
               Drawn {date}
               {!hidden && round.winning_ticket && ` · ticket ${round.winning_ticket} of ${round.total_tickets}`} · {plural(round.locked.length, "passenger")}
             </span>
@@ -941,9 +970,15 @@ function HistoryRow({ round, hidden }: { round: Round; hidden: boolean }) {
       {open && (
         <div className="history-body">
           <RoundFilterLine filters={round.filters} />
+          <RoundDates roundId={round.id} dates={round.trip_dates} />
           <Breakdown round={round} />
           {winnerIdea?.status === "won" && (
-            <button className="btn small" onClick={() => setDraft({ title: winnerIdea.title, places: winnerIdea.places, idea_id: winnerIdea.id })}>
+            <button className="btn small" onClick={() => setDraft({
+                  title: winnerIdea.title,
+                  places: winnerIdea.places,
+                  idea_id: winnerIdea.id,
+                  ...(round.trip_dates?.kind === "exact" && { start_date: round.trip_dates.start, end_date: round.trip_dates.end }),
+                })}>
               We went! Add to Been
             </button>
           )}

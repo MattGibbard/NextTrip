@@ -3,7 +3,8 @@
 // page for the same address and picks up from this HTML. App itself isn't used here because the
 // signed-in views pull in the map library, which needs a browser.
 import { renderToString } from "react-dom/server";
-import { HomePage, NotFound } from "./views/Welcome";
+import { HomePage } from "./views/HomePage";
+import { NotFound } from "./views/NotFound";
 import { LegalView } from "./views/Legal";
 import { DestinationPage, DestinationsIndex } from "./views/DestinationPage";
 import { HubPage } from "./views/HubPage";

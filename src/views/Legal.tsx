@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Frame, INSTAGRAM } from "./Welcome";
+import { Frame, INSTAGRAM } from "../components/SiteFrame";
 
 // Keep these in step with what the app really does: if a change stores something new
 // or sends data to another service, update the privacy policy and this date.

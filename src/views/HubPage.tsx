@@ -4,7 +4,7 @@ import { HOLIDAY_TYPES } from "../../shared/ideaDetails";
 import { destinationPath } from "../../shared/seo";
 import { hubGuides } from "../hubs";
 import type { Hub } from "../hubs";
-import { SiteFooter, SiteHeader } from "./Welcome";
+import { SiteFooter, SiteHeader } from "../components/SiteFrame";
 import { AppBottomNav, AppTopbar } from "../components/AppNav";
 import { GuideCard, HubLinks, Label, MONTH_NAMES, bestSet, useFamily } from "./DestinationPage";
 import type { Family } from "./DestinationPage";

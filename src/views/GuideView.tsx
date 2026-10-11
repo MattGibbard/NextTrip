@@ -3,7 +3,7 @@ import { publicPage } from "../../shared/seo";
 import { findDestination, loadDestination, loadedDestination } from "../destinations";
 import { DestinationPage, DestinationsIndex } from "./DestinationPage";
 import type { Family } from "./DestinationPage";
-import { NotFound } from "./Welcome";
+import { NotFound } from "./NotFound";
 import { AppSkeleton } from "../components/AppSkeleton";
 import { findHub, loadHub, loadedHub } from "../hubs";
 import { HubPage } from "./HubPage";

@@ -139,15 +139,18 @@ export function IdeaPage({ id }: { id: number }) {
 
       {idea.status === "won" && (
         <div className="panel win-panel">
-          <span className="grow">This one won a draw. Been yet?</span>
-          <button className="btn small" onClick={() => setTripDraft({ title: idea.title, places: idea.places, idea_id: idea.id, depart: idea.depart, arrive: idea.arrive })}>
+          <span className="grow">This one won a draw. Plan it in detail, or add it to Been once you've gone.</span>
+          <a className="btn small" href={`#/next/${idea.id}/plan`}>
+            Plan the trip
+          </a>
+          <button className="btn small ghost" onClick={() => setTripDraft({ title: idea.title, places: idea.places, idea_id: idea.id, depart: idea.depart, arrive: idea.arrive })}>
             We went! Add to Been
           </button>
         </div>
       )}
       {trip && (
         <p className="small">
-          ✓ You went: <a href={`#/been/${trip.id}`}>{trip.title}</a>
+          ✓ You went: <a href={`#/been/${trip.id}`}>{trip.title}</a> · <a href={`#/next/${idea.id}/plan`}>See the trip plan</a>
         </p>
       )}
 

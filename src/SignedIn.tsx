@@ -16,6 +16,9 @@ import { DrawView } from "./views/DrawView";
 import { SettingsView } from "./views/SettingsView";
 import { IdeaPage } from "./views/IdeaPage";
 import { TripPage } from "./views/TripPage";
+import { PlanPage } from "./views/plan/PlanPage";
+import { PLAN_TABS } from "./views/plan/context";
+import type { PlanTab } from "./views/plan/context";
 import { Onboarding } from "./views/Onboarding";
 import { GuideView } from "./views/GuideView";
 import { PersonPicker } from "./components/PersonPicker";
@@ -39,14 +42,16 @@ export default function SignedIn({ session, path, initial, stale }: { session: S
 
 /**
  * Reads routes like #/next or #/next/12, and #/next/add/new-york from a destination guide's "Add to ideas".
+ * #/next/12/plan is a won idea's trip plan, and #/next/12/plan/costs one of its tabs.
  * #/welcome replays the welcome steps from Settings. #/places/share makes a picture of the map to post.
  */
-function currentRoute(): { tab: TabId; id: number | null; add: string | null; welcome: boolean; share: boolean } {
-  const [first, second, third] = location.hash.replace(/^#\/?/, "").split("/");
+function currentRoute(): { tab: TabId; id: number | null; add: string | null; plan: PlanTab | null; welcome: boolean; share: boolean } {
+  const [first, second, third, fourth] = location.hash.replace(/^#\/?/, "").split("/");
   const tab = (["been", "places", "next", "draw", "settings"] as const).find((t) => t === first) ?? "been";
   const id = Number(second);
   const add = second === "add" && third && findDestination(third) ? third : null;
-  return { tab, id: Number.isInteger(id) && id > 0 ? id : null, add, welcome: first === "welcome", share: tab === "places" && second === "share" };
+  const plan = tab === "next" && third === "plan" ? (PLAN_TABS.find((t) => t.id === fourth)?.id ?? "overview") : null;
+  return { tab, id: Number.isInteger(id) && id > 0 ? id : null, add, plan, welcome: first === "welcome", share: tab === "places" && second === "share" };
 }
 
 function Shell({ path }: { path: string }) {
@@ -118,7 +123,14 @@ function Shell({ path }: { path: string }) {
           <>
             {tab === "been" && (route.id ? <TripPage key={route.id} id={route.id} /> : <TripsView addFrom={route.add} />)}
             {tab === "places" && (route.share ? <ShareMapView /> : <PlacesView />)}
-            {tab === "next" && (route.id ? <IdeaPage key={route.id} id={route.id} /> : <IdeasView addFrom={route.add} />)}
+            {tab === "next" &&
+              (route.id && route.plan ? (
+                <PlanPage key={route.id} id={route.id} tab={route.plan} />
+              ) : route.id ? (
+                <IdeaPage key={route.id} id={route.id} />
+              ) : (
+                <IdeasView addFrom={route.add} />
+              ))}
             {tab === "draw" && <DrawView />}
             {tab === "settings" && <SettingsView />}
           </>

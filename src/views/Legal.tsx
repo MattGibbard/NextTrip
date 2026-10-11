@@ -74,6 +74,14 @@ function Privacy() {
           track you across other sites and doesn't build a profile of you. We only see totals, such as page views, referring sites, countries and device types.
         </li>
         <li>
+          <strong>Cloudflare Turnstile</strong> checks that whoever asks for a sign-in email is a person, not a bot. When you sign in, it looks at information
+          from your browser and device to do that. Its use is covered by Cloudflare's{" "}
+          <a href="https://www.cloudflare.com/turnstile-privacy-policy/" target="_blank" rel="noopener noreferrer">
+            Turnstile Privacy Addendum
+          </a>
+          .
+        </li>
+        <li>
           <strong>Resend</strong> sends the sign-in emails, so it receives the organiser's email address for that purpose.
         </li>
         <li>

@@ -1,0 +1,373 @@
+/* Places: coverage over the map, then passport stamps */
+.places-page .display {
+  margin-bottom: 0.9rem;
+}
+.places-map .world-map {
+  height: 260px;
+}
+.coverage {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background: var(--board);
+  color: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-top: 0.9rem;
+}
+.coverage > div {
+  padding: 0.6rem 0.75rem;
+}
+.coverage > div + div {
+  border-left: 1px dashed var(--board-line);
+}
+.coverage .mono-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  color: var(--board-muted);
+}
+.coverage-num {
+  font: 500 1.5rem/1.2 var(--mono);
+}
+.coverage-num.lit {
+  color: var(--board-lit);
+}
+@media (min-width: 760px) {
+  .places-map .world-map {
+    height: 500px;
+  }
+  .coverage {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 500;
+    grid-template-columns: repeat(3, auto);
+    margin: 0;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgb(0 0 0 / 0.18);
+  }
+  .coverage > div {
+    padding: 0.9rem 1.25rem;
+  }
+  .coverage .mono-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+  }
+  .coverage-num {
+    font-size: 2.1rem;
+    line-height: 1.1;
+  }
+  /* Leaflet's zoom buttons move below the coverage box. */
+  .places-map .leaflet-top.leaflet-left {
+    top: 6.5rem;
+    left: 0.75rem;
+  }
+  .places-map .legend {
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+}
+.stamps-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.9rem;
+}
+.stamps-head .segmented {
+  margin-bottom: 0;
+}
+@media (min-width: 760px) {
+  .stamps-head {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 2.25rem 0 1.25rem;
+  }
+  .stamps-head .segmented {
+    width: 360px;
+  }
+}
+.passport {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
+.passport-empty {
+  grid-column: 1 / -1;
+}
+.stamp-cell {
+  display: grid;
+  place-items: center;
+  height: 130px;
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}
+.stamp {
+  border: 2px solid var(--mode-ink);
+  color: var(--mode-ink);
+  background: var(--surface);
+  padding: 0.55rem 0.75rem;
+  min-width: 124px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  text-align: center;
+  transition: transform 0.15s;
+}
+.stamp-cell:hover .stamp {
+  transform: scale(1.04);
+}
+/* Stamp variety: each country gets a shape, border and trim (see stampLook). */
+.stamp {
+  position: relative;
+}
+.stamp.shape-rounded {
+  border-radius: 14px;
+}
+.stamp.shape-square {
+  border-radius: 4px;
+}
+.stamp.shape-circle,
+.stamp.shape-oval {
+  border-radius: 50%;
+  justify-content: center;
+  height: 122px;
+  padding: 0.5rem;
+}
+.stamp.shape-circle {
+  width: 122px;
+  min-width: 0;
+}
+.stamp.shape-oval {
+  width: 100%;
+  min-width: 0;
+  padding: 0.5rem 1rem;
+}
+/* Cut shapes draw their outline as two clipped layers: ink, then the card on top. */
+.stamp.shape-octagon,
+.stamp.shape-hexagon,
+.stamp.shape-shield,
+.stamp.shape-banner {
+  --cut: 14px;
+  border: 0;
+  background: none;
+  padding: 0.65rem 0.95rem;
+  isolation: isolate;
+}
+.stamp.shape-octagon {
+  --outline: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 calc(100% - var(--cut)), 0 var(--cut));
+}
+.stamp.shape-hexagon {
+  --cut: 18px;
+  --outline: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% 50%, calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 50%);
+  padding-inline: 1.5rem;
+}
+.stamp.shape-shield {
+  --outline: polygon(0 0, 100% 0, 100% 68%, 50% 100%, 0 68%);
+  padding-bottom: 1.6rem;
+}
+.stamp.shape-banner {
+  --outline: polygon(0 0, 100% 0, calc(100% - var(--cut)) 50%, 100% 100%, 0 100%, var(--cut) 50%);
+  padding-inline: 1.5rem;
+}
+.stamp.shape-octagon::before,
+.stamp.shape-octagon::after,
+.stamp.shape-hexagon::before,
+.stamp.shape-hexagon::after,
+.stamp.shape-shield::before,
+.stamp.shape-shield::after,
+.stamp.shape-banner::before,
+.stamp.shape-banner::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  clip-path: var(--outline);
+}
+.stamp.shape-octagon::before,
+.stamp.shape-hexagon::before,
+.stamp.shape-shield::before,
+.stamp.shape-banner::before {
+  inset: 0;
+  background: var(--mode-ink);
+}
+.stamp.shape-octagon::after,
+.stamp.shape-hexagon::after,
+.stamp.shape-shield::after,
+.stamp.shape-banner::after {
+  inset: 2px;
+  background: var(--surface);
+}
+/* Tickets take the notches from the boarding passes. */
+.stamp.shape-ticket {
+  border-radius: 6px;
+  padding-inline: 1.1rem;
+}
+.stamp-notch {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  margin-top: -7px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--mode-ink);
+}
+.stamp-notch.left {
+  left: -8px;
+  clip-path: inset(0 0 0 50%);
+}
+.stamp-notch.right {
+  right: -8px;
+  clip-path: inset(0 50% 0 0);
+}
+.stamp.border-double {
+  border-style: double;
+  border-width: 5px;
+}
+.stamp.border-inner {
+  outline: 1px solid var(--mode-ink);
+  outline-offset: -6px;
+}
+.stamp-label {
+  display: block;
+  font-size: 0.85em;
+  letter-spacing: 0.16em;
+  opacity: 0.8;
+}
+.stamp.trim-stars .stamp-label::before {
+  content: "★ ";
+}
+.stamp.trim-stars .stamp-label::after {
+  content: " ★";
+}
+.stamp.trim-dots .stamp-label::before {
+  content: "• • ";
+}
+.stamp.trim-dots .stamp-label::after {
+  content: " • •";
+}
+.stamp.trim-waves .stamp-label::before {
+  content: "∿ ";
+}
+.stamp.trim-waves .stamp-label::after {
+  content: " ∿";
+}
+/* The travel icon at the top, drawn in the stamp's ink. */
+.stamp-icon {
+  width: 1.4em;
+  height: 1.4em;
+  margin-right: 0.35em;
+  vertical-align: -0.35em;
+}
+/* Small print: visit and serial numbers. */
+.stamp-serial {
+  font: 500 0.5rem var(--mono);
+  letter-spacing: 0.12em;
+  opacity: 0.7;
+}
+.stamp.trim-rules .stamp-label {
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+}
+.stamp.trim-rules .stamp-label::before,
+.stamp.trim-rules .stamp-label::after {
+  content: "";
+  flex: 1;
+  min-width: 0.6em;
+  border-top: 1px solid currentColor;
+}
+.stamp.shape-circle .stamp-date,
+.stamp.shape-oval .stamp-date {
+  border-top: 0;
+  padding-top: 0;
+}
+.stamp.pending {
+  border: 2px dashed var(--map-idea);
+  color: var(--standby-ink);
+  background: none;
+  border-radius: 14px;
+}
+.stamp-top {
+  font: 500 0.56rem var(--mono);
+  letter-spacing: 0.12em;
+}
+.stamp-name {
+  font: 500 0.85rem var(--mono);
+  overflow-wrap: anywhere;
+}
+.stamp-date {
+  font: 500 0.6rem var(--mono);
+  letter-spacing: 0.1em;
+  border-top: 1px solid currentColor;
+  padding-top: 0.2rem;
+}
+.stamp.pending .stamp-date {
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  border-top-style: dashed;
+}
+.add-stamp {
+  border: 2px dashed var(--border);
+  border-radius: 14px;
+  color: var(--muted);
+  font-weight: 600;
+}
+@media (min-width: 760px) {
+  .passport {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.9rem;
+    padding: 1.5rem;
+    border-radius: 18px;
+  }
+  .stamp-cell {
+    height: 168px;
+  }
+  .stamp {
+    border-width: 2.5px;
+    padding: 0.75rem 1.1rem;
+    min-width: 150px;
+  }
+  .stamp-top {
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+  }
+  .stamp-name {
+    font-size: 1.2rem;
+    letter-spacing: 0.06em;
+  }
+  .stamp-date {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+  }
+  .stamp.shape-circle,
+  .stamp.shape-oval {
+    height: 158px;
+  }
+  .stamp.shape-circle {
+    width: 158px;
+  }
+  .stamp-serial {
+    font-size: 0.58rem;
+  }
+  .stamp.border-double {
+    border-width: 6px;
+  }
+}
+.eyebrow.standby-ink {
+  color: var(--standby-ink);
+}

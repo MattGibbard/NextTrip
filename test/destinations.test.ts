@@ -124,9 +124,31 @@ describe("New York", () => {
     expect(destinationMeta(readDestination("x", { name: "Lisbon", intro: "Hills and trams." })).description).toBe("Hills and trams.");
   });
 
-  it("says when the guide last changed, when the build knows", () => {
-    expect(metaTags(destinationMeta(ny, "2026-10-08"))).toContain('"dateModified":"2026-10-08"');
+  it("says when the guide was published and last changed, when the build knows", () => {
+    const tags = metaTags(destinationMeta(ny, { updated: "2026-10-08", published: "2026-10-01" }));
+    expect(tags).toContain('"dateModified":"2026-10-08"');
+    expect(tags).toContain('"datePublished":"2026-10-01"');
+    expect(tags).toContain('<meta property="article:modified_time" content="2026-10-08" />');
     expect(metaTags(destinationMeta(ny))).not.toContain("dateModified");
+  });
+
+  it("marks the guide up as an article by the site, about the place", async () => {
+    const d = (await loadDestination("new-york"))!;
+    const meta = destinationMeta(d);
+    const [place, article, crumbs] = meta.jsonLd as Record<string, any>[];
+    expect(place.sameAs).toEqual(["https://en.wikipedia.org/wiki/New_York_City"]);
+    expect(article).toMatchObject({ "@type": "Article", headline: "Holidays in New York", about: { "@id": place["@id"] } });
+    expect(article.author.name).toBe("somewhere🎉");
+    expect(article.image).toMatchObject({ url: place.image, width: d.image_size![0], height: d.image_size![1] });
+    expect(crumbs.itemListElement.map((i: { name: string }) => i.name)).toEqual(["Home", "Inspire", "New York"]);
+    const tags = metaTags(meta);
+    expect(tags).toContain('<meta property="og:type" content="article" />');
+    expect(tags).toContain(`<meta property="og:image:width" content="${d.image_size![0]}" />`);
+  });
+
+  it("only takes a Wikipedia address as its Wikipedia page", () => {
+    expect(readDestination("x", { name: "X", wikipedia: "https://en.wikipedia.org/wiki/Lisbon" }).wikipedia).toBe("https://en.wikipedia.org/wiki/Lisbon");
+    expect(readDestination("x", { name: "X", wikipedia: "https://example.com/wiki/Lisbon" }).wikipedia).toBe("");
   });
 });
 

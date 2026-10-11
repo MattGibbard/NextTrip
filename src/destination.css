@@ -194,6 +194,8 @@
 }
 .dg-photo {
   flex: 1 1 340px;
+  /* The photo's width and height attributes give its shape early; the layout still sets its size. */
+  height: auto;
   min-height: 420px;
   max-height: 560px;
   border-radius: 22px;

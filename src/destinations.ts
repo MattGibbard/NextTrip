@@ -7,6 +7,7 @@ import { distanceKm, flightHours } from "../shared/travelTime";
 import { countryName } from "./countries";
 import geo from "../content/destinations-geo.json";
 import airports from "../content/destination-airports.json";
+import imageSizes from "../content/destination-images.json";
 import type { HolidayType, TripLength } from "../shared/ideaDetails";
 import { SITE, destinationPath } from "../shared/seo";
 import type { Meta } from "../shared/seo";
@@ -38,6 +39,10 @@ export interface Destination {
   /** A path under /images/destinations, or empty. */
   image: string;
   image_alt: string;
+  /** The main photo's width and height, if known (scripts/destination-images.mjs). */
+  image_size: [number, number] | null;
+  /** The place's Wikipedia page, which helps search engines tell which place the guide is about. Empty if unknown. */
+  wikipedia: string;
   /** The airport families fly into. Shown on the page's ticket, and fills in a new idea or trip's arrival. */
   to_code: string;
   /** to_code's airport, if it's one we know (scripts/destination-airports.mjs). */
@@ -56,7 +61,7 @@ export interface Destination {
 }
 
 /** What the list of guides knows about each one: everything but the guide's own words further down its page. Months have their ratings but not their notes. */
-export type DestinationCard = Omit<Destination, "facts" | "facts_note" | "when_to_go" | "things" | "faqs" | "similar">;
+export type DestinationCard = Omit<Destination, "facts" | "facts_note" | "when_to_go" | "things" | "faqs" | "similar" | "wikipedia">;
 
 const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
 const num = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? v : null);
@@ -113,6 +118,8 @@ export function readDestination(slug: string, raw: Record<string, unknown>, posi
     seo_description: str(raw.seo_description),
     image: str(raw.image),
     image_alt: str(raw.image_alt),
+    image_size: (imageSizes as unknown as Record<string, [number, number] | undefined>)[str(raw.image)] ?? null,
+    wikipedia: /^https:\/\/[a-z-]+\.wikipedia\.org\/wiki\/\S+$/.test(str(raw.wikipedia)) ? str(raw.wikipedia) : "",
     to_code: str(raw.to_code).toUpperCase(),
     airport: guideAirport(str(raw.to_code).toUpperCase()),
     holiday_types: (Array.isArray(raw.holiday_types) ? raw.holiday_types : []).filter((t): t is HolidayType =>
@@ -257,45 +264,61 @@ export function searchTitle(d: DestinationCard): string {
   return `${d.seo_title || `${d.name} holiday guide: when to go and what to do`} | somewhere🎉`;
 }
 
+/** The site, as the author and publisher of its guides. */
+export const SITE_ORG = { "@type": "Organization", name: "somewhere🎉", url: `${SITE}/`, logo: { "@type": "ImageObject", url: `${SITE}/icon-512.png` } };
+
 /**
- * Title, description, share image and search-result data for a guide's page. `updated` is when its content last changed, as an ISO date, if known.
- * `country` is the country's hub page, if it has one, which the breadcrumb goes through.
+ * Title, description, share image and search-result data for a guide's page. `updated` and `published`
+ * are when its content last changed and when it was first added, as ISO dates, if known. `country` is
+ * the country's hub page, if it has one, which the breadcrumb goes through.
  */
-export function destinationMeta(d: Destination, updated?: string, country?: { slug: string; name: string }): Meta {
+export function destinationMeta(d: Destination, { updated, published, country }: { updated?: string; published?: string; country?: { slug: string; name: string } } = {}): Meta {
   const description = d.seo_description || d.intro;
   const url = SITE + destinationPath(d.slug);
+  const image = d.image
+    ? { "@type": "ImageObject", url: imageUrl(d.image), ...(d.image_size ? { width: d.image_size[0], height: d.image_size[1] } : {}) }
+    : undefined;
   const jsonLd: unknown[] = [
     {
       "@context": "https://schema.org",
       "@type": "TouristDestination",
+      "@id": `${url}#place`,
       name: d.name,
       description,
       url,
-      ...(d.image ? { image: imageUrl(d.image) } : {}),
+      ...(image ? { image: image.url } : {}),
+      ...(d.wikipedia ? { sameAs: [d.wikipedia] } : {}),
       ...(d.lat !== null && d.lon !== null ? { geo: { "@type": "GeoCoordinates", latitude: d.lat, longitude: d.lon } } : {}),
       ...(d.country ? { containedInPlace: { "@type": "Country", name: d.country } } : {}),
       ...(d.things.length ? { includesAttraction: d.things.map((t) => ({ "@type": "TouristAttraction", name: t.name, description: t.blurb })) } : {}),
     },
     {
       "@context": "https://schema.org",
+      "@type": "Article",
+      headline: d.title,
+      description,
+      url,
+      mainEntityOfPage: url,
+      inLanguage: "en-GB",
+      ...(image ? { image } : {}),
+      ...(published ? { datePublished: published } : {}),
+      ...(updated ? { dateModified: updated } : {}),
+      author: SITE_ORG,
+      publisher: SITE_ORG,
+      about: { "@id": `${url}#place` },
+      isPartOf: { "@type": "WebSite", name: "somewhere🎉", url: `${SITE}/` },
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Inspire", item: `${SITE}/destinations` },
-        ...(country ? [{ "@type": "ListItem", position: 2, name: country.name, item: SITE + destinationPath(country.slug) }] : []),
-        { "@type": "ListItem", position: country ? 3 : 2, name: d.name, item: url },
-      ],
+        { name: "Home", item: `${SITE}/` },
+        { name: "Inspire", item: `${SITE}/destinations` },
+        ...(country ? [{ name: country.name, item: SITE + destinationPath(country.slug) }] : []),
+        { name: d.name, item: url },
+      ].map((crumb, i) => ({ "@type": "ListItem", position: i + 1, ...crumb })),
     },
   ];
-  if (updated) {
-    jsonLd.push({
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      url,
-      name: d.title,
-      dateModified: updated,
-      isPartOf: { "@type": "WebSite", name: "somewhere🎉", url: `${SITE}/` },
-    });
-  }
   if (d.faqs.length) {
     jsonLd.push({
       "@context": "https://schema.org",
@@ -308,8 +331,12 @@ export function destinationMeta(d: Destination, updated?: string, country?: { sl
     title: searchTitle(d),
     description,
     index: true,
-    image: d.image ? imageUrl(d.image) : undefined,
+    type: "article",
+    image: image?.url,
     imageAlt: d.image_alt || undefined,
+    imageSize: d.image_size ?? undefined,
+    published,
+    updated,
     jsonLd,
   };
 }

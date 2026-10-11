@@ -1,6 +1,6 @@
 {
   "seo_title": "FAQ: questions about somewhere🎉, the family holiday planner",
-  "seo_description": "Is somewhere🎉 free? Who needs an account? Who can see our trips? Answers to common questions about the free family holiday planner.",
+  "seo_description": "Is somewhere🎉 free? Who needs an account? Who can see our trips? How do we plan the trip after the draw? Answers to common questions about the free family holiday planner.",
   "hero": {
     "kicker": "Help",
     "heading": "Questions and answers",
@@ -44,6 +44,10 @@
       {
         "question": "Can we narrow the ideas down before the draw?",
         "answer": "Yes. When you start a round you can filter ideas by things like budget and travel time, and switch on \"Swipe to shortlist first\" so everyone says yes or no to each idea. Only the ones everyone likes go into the draw."
+      },
+      {
+        "question": "What happens after the draw?",
+        "answer": "The winner becomes your next departure, with its own trip plan. You can plan each day, log costs against a budget and see who owes whom, keep a packing list for each person plus a shared one, and give out the jobs to do before you go. Everyone in the family can add to it."
       },
       {
         "question": "We don't fly. Does it still work?",

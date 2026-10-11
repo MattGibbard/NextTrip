@@ -38,8 +38,8 @@
       "text": "Add up the points and turn them into tickets: every point is one ticket in the draw. The ideas with the most support have the best chance, but every idea that got points can still win. Then draw one ticket.\n\nIt sounds odd to leave it to chance, but it works. Nobody wins the argument, nobody loses it, and the decision is made. It's also much more exciting than another spreadsheet."
     },
     {
-      "heading": "7. Book it before you change your mind",
-      "text": "Once the draw is done, treat it as decided and start booking. Look at flights and places to stay while everyone's excited, and keep the ideas that didn't win for next time."
+      "heading": "7. Book it and plan it before you change your mind",
+      "text": "Once the draw is done, treat it as decided and start booking. Look at flights and places to stay while everyone's excited, and keep the ideas that didn't win for next time.\n\nThen plan it together. Rough out the days, agree a budget and keep track of who's paid for what, and share the jobs out (passports, insurance, pet sitter) so it isn't all on one person. Give everyone their own packing list, children included."
     },
     {
       "heading": "Tips for choosing with children",
@@ -71,7 +71,12 @@
       },
       {
         "title": "The draw picks where you go",
-        "text": "Every point is a ticket, and the departures board reveals the winner. It's free.",
+        "text": "Every point is a ticket, and the departures board reveals the winner.",
+        "status": "Final call"
+      },
+      {
+        "title": "Plan the trip together",
+        "text": "The winner gets a shared trip plan: days, costs and who paid, packing lists and jobs before you go. It's all free.",
         "status": "Now departing"
       }
     ]

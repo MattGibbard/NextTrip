@@ -124,6 +124,30 @@ export function HomePage() {
               <span className="lp-veto">1 veto</span>
             </div>
           </div>
+          <div className="panel lp-feature">
+            <span className="lp-feature-icon" aria-hidden>
+              🧾
+            </span>
+            <h3>{features.plan.title}</h3>
+            <p className="muted">{features.plan.text}</p>
+            <div className="lp-feature-foot lp-plan" aria-hidden>
+              <span className="lp-plan-label">Departs in</span>
+              <div className="lp-plan-count">
+                <span className="lp-flaps">
+                  <span>3</span>
+                  <span>0</span>
+                  <span>7</span>
+                </span>
+                <span className="lp-plan-label">days</span>
+              </div>
+              <div className="lp-plan-bar">
+                <span />
+              </div>
+              <div className="lp-plan-money">
+                <strong>£2,800</strong> of £6,000
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

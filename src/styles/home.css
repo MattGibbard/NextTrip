@@ -568,7 +568,7 @@
 }
 .lp-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 18px;
 }
 .lp-feature {
@@ -698,6 +698,68 @@
   background: var(--surface);
   padding: 5px 10px;
   border-radius: 999px;
+}
+/* The Trip plan card: a countdown on the departures board and the budget so far. */
+.lp-plan {
+  background: var(--board);
+  color: #fff;
+  border-radius: 10px;
+  padding: 9px 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.lp-plan-count {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.lp-plan-label {
+  font: 500 0.56rem var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--board-muted);
+}
+.lp-flaps {
+  display: flex;
+  gap: 3px;
+}
+.lp-flaps span {
+  position: relative;
+  font: 500 0.9rem/1 var(--mono);
+  background: var(--board-line);
+  border-radius: 3px;
+  padding: 0.22rem 0.24rem;
+  min-width: 0.85rem;
+  text-align: center;
+}
+.lp-flaps span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px solid rgb(0 0 0 / 0.35);
+}
+.lp-plan-bar {
+  height: 4px;
+  border-radius: 999px;
+  background: var(--board-line);
+  overflow: hidden;
+}
+.lp-plan-bar span {
+  display: block;
+  width: 47%;
+  height: 100%;
+  background: var(--board-lit);
+}
+.lp-plan-money {
+  font-size: 0.72rem;
+  color: var(--board-muted);
+}
+.lp-plan-money strong {
+  color: #fff;
 }
 .lp-why {
   background: var(--surface);

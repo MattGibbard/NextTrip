@@ -22,7 +22,7 @@ export interface HomeContent {
   signup: { strip: string; heading: string; lead: string };
 }
 
-export const FEATURE_KEYS = ["been", "places", "next", "draw"] as const;
+export const FEATURE_KEYS = ["been", "places", "next", "draw", "plan"] as const;
 export type FeatureKey = (typeof FEATURE_KEYS)[number];
 
 /** Reads the home page file, so a field left empty in the editor just drops out instead of breaking the build. */
@@ -56,6 +56,7 @@ export function readHome(raw: unknown): HomeContent {
       places: card("places"),
       next: card("next"),
       draw: card("draw"),
+      plan: card("plan"),
     },
     why: {
       kicker: str(why.kicker),
@@ -153,7 +154,7 @@ const ONBOARDING_DEFAULTS: OnboardingContent = {
     steps: [
       { icon: "💡", title: "DISCOVER AND ADD IDEAS", text: "Find places you'd love to go and put them on standby. Everyone in the family can add their own." },
       { icon: "🎟️", title: "DRAW AS A FAMILY", text: "Everyone spreads their points in secret, gets one veto, and the draw picks where you go." },
-      { icon: "✈️", title: "PLAN THE TRIP", text: "Your winner becomes your next departure, ready to plan together." },
+      { icon: "✈️", title: "PLAN THE TRIP", text: "Your winner gets a trip plan for the days, costs, packing and jobs before you go, shared with everyone." },
     ],
     bonus_label: "BONUS",
     bonus: "Log the holidays you've already been on to fill in your map.",

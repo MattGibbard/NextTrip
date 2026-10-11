@@ -71,3 +71,40 @@ describe("flightOrigin", () => {
     expect(flightOrigin(null, null)).toBeNull();
   });
 });
+
+describe("family size and currency", () => {
+  it("searches hotels for everyone, in the family's currency", async () => {
+    const url = new URL(hotelLink(banff, "draw_result", { guests: 4, currency: "CAD" }));
+    expect(url.searchParams.get("adults")).toBe("4");
+    expect(url.searchParams.get("currency")).toBe("CAD");
+  });
+
+  it("leaves the guest count out when nobody's known, and defaults to pounds", () => {
+    const url = new URL(hotelLink(banff, "draw_result"));
+    expect(url.searchParams.has("adults")).toBe(false);
+    expect(url.searchParams.get("currency")).toBe("GBP");
+  });
+
+  it("prices flights in the family's currency", async () => {
+    const { flightLink } = await import("../shared/flights");
+    const u = new URL(new URL(flightLink("DUB", "BCN", 3, "idea_page", { currency: "EUR" })).searchParams.get("u")!);
+    expect(u.searchParams.get("params")).toBe("DUBBCN3");
+    expect(u.searchParams.get("currency")).toBe("eur");
+  });
+});
+
+describe("currencyFor", () => {
+  it("goes by the home airport's country", async () => {
+    const { currencyFor } = await import("../shared/currency");
+    expect(currencyFor("GB")).toBe("GBP");
+    expect(currencyFor("IE")).toBe("EUR");
+    expect(currencyFor("es")).toBe("EUR");
+    expect(currencyFor("US")).toBe("USD");
+    expect(currencyFor("CA")).toBe("CAD");
+    expect(currencyFor("AU")).toBe("AUD");
+    expect(currencyFor("CH")).toBe("CHF");
+    // Somewhere we don't list: dollars. No home airport yet: pounds.
+    expect(currencyFor("ZZ")).toBe("USD");
+    expect(currencyFor(null)).toBe("GBP");
+  });
+});

@@ -53,12 +53,12 @@ describe("links with dates", () => {
   const dates = { start: "2027-07-01", end: "2027-07-08" };
 
   it("searches Aviasales for that return trip", () => {
-    const u = new URL(new URL(flightLink("LHR", "BCN", 4, "draw_result", dates)).searchParams.get("u")!);
+    const u = new URL(new URL(flightLink("LHR", "BCN", 4, "draw_result", { dates })).searchParams.get("u")!);
     expect(u.searchParams.get("params")).toBe("LHR0107BCN08074");
   });
 
   it("opens Stay22 on those check-in and check-out dates", () => {
-    const url = new URL(hotelLink({ name: "Barcelona", country: "Spain", country_code: "ES", lat: 41.4, lon: 2.2 }, "draw_result", dates));
+    const url = new URL(hotelLink({ name: "Barcelona", country: "Spain", country_code: "ES", lat: 41.4, lon: 2.2 }, "draw_result", { dates }));
     expect(url.searchParams.get("checkin")).toBe("2027-07-01");
     expect(url.searchParams.get("checkout")).toBe("2027-07-08");
   });

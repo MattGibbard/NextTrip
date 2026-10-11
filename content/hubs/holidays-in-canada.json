@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "country",
+  "country": "CA",
+  "name": "Canada",
+  "title": "Holidays in Canada",
+  "intro": "Mountains, lakes, whales and easy-going cities. Here's where to go on holiday in Canada, how long to stay and the best time to visit.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "What is the best time to visit Canada?",
+      "answer": "June to September suits most of Canada, from the Rockies to Quebec. Whistler is also a ski resort in winter."
+    },
+    {
+      "question": "Do UK visitors need a visa for Canada?",
+      "answer": "Most British passport holders apply for an eTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Where should we go in Canada?",
+      "answer": "Banff and Whistler for mountains, Vancouver and Tofino for the west coast, and Montreal and Quebec City for French-speaking cities."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "type",
+  "holiday_type": "beach",
+  "name": "Beach holidays",
+  "title": "Beach holidays",
+  "intro": "Warm sea, soft sand and somewhere to dry off with an ice cream. Here's where to go for a beach holiday, and the best months for each.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "Where is hot for a beach holiday in winter?",
+      "answer": "From December to February, look further afield: Barbados, the Maldives, Mauritius, Cancún and Cape Town are all at their best then. Closer to home, Tenerife stays mild all winter."
+    },
+    {
+      "question": "Where can we go for a beach holiday in the summer holidays?",
+      "answer": "July and August suit the north of Spain, like Asturias, and places where it's dry season then, such as Bali, Lombok and Zanzibar. The Mediterranean is lovely but hot and busy, so June and September are often better there."
+    },
+    {
+      "question": "Which beach destinations are good for a short flight from the UK?",
+      "answer": "Spain, Portugal, Malta, Croatia and the Greek islands are mostly three to four hours away. Tenerife and Cape Verde take a little longer but are warm well into winter."
+    }
+  ]
+}

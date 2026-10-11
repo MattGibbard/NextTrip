@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "type",
+  "holiday_type": "city",
+  "name": "City breaks",
+  "title": "City breaks",
+  "intro": "Museums, markets, parks and a good place for lunch. Here's where to go for a city break, how long to stay and the best months to visit.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "Where is good for a weekend city break?",
+      "answer": "Places like Amsterdam, Paris, Prague, Porto, Vienna and Kraków are short flights from the UK and easy to see in two or three nights."
+    },
+    {
+      "question": "When is the best time for a city break?",
+      "answer": "Spring and autumn suit most cities in Europe and North America: it's warm enough to walk all day without the summer crowds. Each guide shows its best months."
+    },
+    {
+      "question": "Where can we go for a city break in winter sun?",
+      "answer": "Dubai, Bangkok, Penang, Cape Town and Miami are all at their best between December and February."
+    }
+  ]
+}

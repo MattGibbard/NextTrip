@@ -3,7 +3,7 @@ import { publicPage } from "../shared/seo";
 // Moving between the signed-in app and the Guides pages without loading the page again. The app and
 // the guides are one React app, so a link between them only needs the address changing and a redraw.
 
-/** A Guides page: the list of guides or one guide. */
+/** A Guides page: the list of guides, one guide or a hub of guides. */
 export function isGuidePath(pathname: string): boolean {
   const page = publicPage(pathname);
   return page === "destinations" || !!page?.startsWith("destination:");

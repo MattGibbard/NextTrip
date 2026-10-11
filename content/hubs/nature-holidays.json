@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "type",
+  "holiday_type": "nature",
+  "name": "Nature & hiking",
+  "title": "Nature and hiking holidays",
+  "intro": "Mountains, lakes, waterfalls and wildlife. Here's where to go for a nature or hiking holiday, from easy walks to proper adventures, and when to go.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "Where is good for walking holidays in Europe?",
+      "answer": "Annecy, Interlaken, Lake Garda, the Azores, Madeira and Lofoten all have walks for every level, from flat lakeside paths to mountain trails."
+    },
+    {
+      "question": "Where can we see wildlife on holiday?",
+      "answer": "The Galápagos Islands, the Maasai Mara, Borneo, Costa Rica and Namibia are some of the best places in the world to see animals in the wild."
+    },
+    {
+      "question": "When is the best time for a hiking holiday?",
+      "answer": "Summer suits the mountains of Europe and North America, from June to September. Hot places like Jordan and the Grand Canyon are better in spring and autumn."
+    }
+  ]
+}

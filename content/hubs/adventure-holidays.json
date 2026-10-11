@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "type",
+  "holiday_type": "adventure",
+  "name": "Adventure",
+  "title": "Adventure holidays",
+  "intro": "Kayaking, snorkelling, zip lines and glaciers. Here's where to go for an adventure holiday, how long you'll need and the best months to go.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "Where is good for an adventure holiday in Europe?",
+      "answer": "Chamonix, Interlaken, Lofoten, the Faroe Islands and the Azores all have big outdoor days within a short flight of the UK."
+    },
+    {
+      "question": "Where can we go for adventure in winter?",
+      "answer": "Costa Rica, the Galápagos Islands, Oman and Queenstown are all at their best between December and February. Rovaniemi is the place for snow."
+    },
+    {
+      "question": "How long do you need for an adventure holiday?",
+      "answer": "A week is enough for most European trips. Long-haul places like Costa Rica, Namibia or Torres del Paine are better with two weeks."
+    }
+  ]
+}

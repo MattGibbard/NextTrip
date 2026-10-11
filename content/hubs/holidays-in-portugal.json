@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "country",
+  "country": "PT",
+  "name": "Portugal",
+  "title": "Holidays in Portugal",
+  "intro": "Islands, beaches, hills and pastéis de nata. Here's where to go on holiday in Portugal, how long to stay and the best time to visit.",
+  "seo_title": "",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "What is the best time to visit Portugal?",
+      "answer": "Spring and early autumn are best for most of Portugal, from April to June and in September."
+    },
+    {
+      "question": "Where in Portugal is good for nature?",
+      "answer": "Madeira and the Azores have walks, waterfalls and whale watching, and stay mild for most of the year."
+    },
+    {
+      "question": "Should we go to Lisbon or Porto?",
+      "answer": "Both are great for a short break. Lisbon has beaches nearby, and Porto is smaller and easy to see in a long weekend."
+    }
+  ]
+}

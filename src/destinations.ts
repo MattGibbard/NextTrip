@@ -259,8 +259,9 @@ export function searchTitle(d: DestinationCard): string {
 
 /**
  * Title, description, share image and search-result data for a guide's page. `updated` is when its content last changed, as an ISO date, if known.
+ * `country` is the country's hub page, if it has one, which the breadcrumb goes through.
  */
-export function destinationMeta(d: Destination, updated?: string): Meta {
+export function destinationMeta(d: Destination, updated?: string, country?: { slug: string; name: string }): Meta {
   const description = d.seo_description || d.intro;
   const url = SITE + destinationPath(d.slug);
   const jsonLd: unknown[] = [
@@ -280,7 +281,8 @@ export function destinationMeta(d: Destination, updated?: string): Meta {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Inspire", item: `${SITE}/destinations` },
-        { "@type": "ListItem", position: 2, name: d.name, item: url },
+        ...(country ? [{ "@type": "ListItem", position: 2, name: country.name, item: SITE + destinationPath(country.slug) }] : []),
+        { "@type": "ListItem", position: country ? 3 : 2, name: d.name, item: url },
       ],
     },
   ];

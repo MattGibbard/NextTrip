@@ -34,9 +34,16 @@ export type Meta = {
   title: string;
   description: string;
   index: boolean;
+  /** "article" for a guide; a website page otherwise. */
+  type?: "website" | "article";
   /** Share image, an absolute address. The site's own share image without one. */
   image?: string;
   imageAlt?: string;
+  /** The share image's width and height, if known. */
+  imageSize?: [number, number];
+  /** For an article: when it was first published and last changed, as ISO dates, if known. */
+  published?: string;
+  updated?: string;
   /** schema.org data for search results. */
   jsonLd?: unknown[];
 };
@@ -162,7 +169,7 @@ export function metaTags(m: Meta): string {
   }
   tags.push(
     `<link rel="canonical" href="${url}" />`,
-    `<meta property="og:type" content="website" />`,
+    `<meta property="og:type" content="${m.type ?? "website"}" />`,
     `<meta property="og:site_name" content="somewhere🎉" />`,
     `<meta property="og:locale" content="en_GB" />`,
     `<meta property="og:url" content="${url}" />`,
@@ -171,6 +178,7 @@ export function metaTags(m: Meta): string {
   );
   if (m.image) {
     tags.push(`<meta property="og:image" content="${esc(m.image)}" />`);
+    if (m.imageSize) tags.push(`<meta property="og:image:width" content="${m.imageSize[0]}" />`, `<meta property="og:image:height" content="${m.imageSize[1]}" />`);
     if (m.imageAlt) tags.push(`<meta property="og:image:alt" content="${esc(m.imageAlt)}" />`);
   } else {
     tags.push(
@@ -179,6 +187,10 @@ export function metaTags(m: Meta): string {
       `<meta property="og:image:height" content="630" />`,
       `<meta property="og:image:alt" content="somewhere🎉: can't agree where to go next? Let the draw decide." />`,
     );
+  }
+  if (m.type === "article") {
+    if (m.published) tags.push(`<meta property="article:published_time" content="${m.published}" />`);
+    if (m.updated) tags.push(`<meta property="article:modified_time" content="${m.updated}" />`);
   }
   tags.push(`<meta name="twitter:card" content="summary_large_image" />`);
   for (const data of m.jsonLd ?? []) tags.push(`<script type="application/ld+json">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>`);

@@ -10,15 +10,27 @@ import { destinationCards } from "./destination-cards.mjs";
 const OUT = new URL("../dist/client/", import.meta.url);
 const shell = await readFile(new URL("index.html", OUT), "utf8");
 
-/**
- * When a content file last changed, from git, as an ISO date. Unknown when git isn't there or only
- * has the latest commit (a shallow clone would give every page the same date, which would mislead).
- */
-function lastChanged(file) {
-  if (!file) return undefined;
+// The site is built from a shallow clone (Cloudflare's builds fetch only the latest commit), which
+// can't say when anything changed. Fetch the rest of the history first: commits and file lists only,
+// no file contents, so it's quick. If that fails, pages go out without dates rather than wrong ones.
+function fullHistory() {
   try {
-    if (execFileSync("git", ["rev-parse", "--is-shallow-repository"], { encoding: "utf8" }).trim() !== "false") return undefined;
-    const date = execFileSync("git", ["log", "-1", "--format=%cs", "--", file], { encoding: "utf8" }).trim();
+    if (execFileSync("git", ["rev-parse", "--is-shallow-repository"], { encoding: "utf8" }).trim() === "false") return true;
+    execFileSync("git", ["fetch", "--unshallow", "--filter=blob:none", "--quiet"], { stdio: "ignore", timeout: 60_000 });
+    return execFileSync("git", ["rev-parse", "--is-shallow-repository"], { encoding: "utf8" }).trim() === "false";
+  } catch {
+    return false;
+  }
+}
+const history = fullHistory();
+if (!history) console.warn("No git history, so pages and the sitemap go out without dates.");
+
+/** A git date for a content file, as an ISO date: the latest change, or with `first`, when it was added. */
+function gitDate(file, first = false) {
+  if (!file || !history) return undefined;
+  try {
+    const out = execFileSync("git", ["log", ...(first ? ["--no-renames", "--diff-filter=A"] : ["-1"]), "--format=%cs", "--", file], { encoding: "utf8" }).trim();
+    const date = out.split("\n").pop();
     return /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : undefined;
   } catch {
     return undefined;
@@ -39,11 +51,11 @@ try {
   const base = shell.replace(/\s*<title>[^<]*<\/title>/, "").replace(/\s*<meta name="description"[^>]*>/, "");
   if (base === shell || !base.includes('<div id="root"></div>')) throw new Error("index.html doesn't look as expected");
 
-  const list = pages().map((p) => ({ ...p, updated: lastChanged(p.source) }));
-  for (const { page, file, updated } of list) {
+  const list = pages().map((p) => ({ ...p, updated: gitDate(p.source), published: gitDate(p.source, true) }));
+  for (const { page, file, updated, published } of list) {
     // Replacer functions, so a "$" in the page's words isn't read as a replacement pattern.
     const html = base
-      .replace("</head>", () => `  ${headTags(page, updated)}\n  </head>`)
+      .replace("</head>", () => `  ${headTags(page, updated, published)}\n  </head>`)
       .replace('<div id="root"></div>', () => `<div id="root" data-page="${page}">${render(page)}</div>`);
     const out = new URL(file, OUT);
     await mkdir(new URL(".", out), { recursive: true });

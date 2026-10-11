@@ -65,7 +65,7 @@ describe("hub pages", () => {
     expect(page.dateModified).toBe("2026-10-11");
     expect(page.mainEntity.numberOfItems).toBe(hubGuides(hub).length);
     expect(page.mainEntity.itemListElement[0].url).toMatch(/^https:\/\/somewhere\.party\/destinations\//);
-    expect(crumbs.itemListElement.map((i: { name: string }) => i.name)).toEqual(["Inspire", "Beach holidays"]);
+    expect(crumbs.itemListElement.map((i: { name: string }) => i.name)).toEqual(["Home", "Inspire", "Beach holidays"]);
     expect(faq["@type"]).toBe("FAQPage");
   });
 });
@@ -74,11 +74,12 @@ describe("a guide in a country with a hub", () => {
   it("goes through the country in its breadcrumb", () => {
     const spain = countryHub("ES")!;
     const d = readDestination("valencia", JSON.parse(readFileSync(new URL("../content/destinations/valencia.json", import.meta.url), "utf8")));
-    const crumbs = (destinationMeta(d, undefined, spain).jsonLd as Record<string, any>[])[1];
+    const crumbs = (destinationMeta(d, { country: spain }).jsonLd as Record<string, any>[])[2];
     expect(crumbs.itemListElement.map((i: { name: string; position: number }) => [i.position, i.name])).toEqual([
-      [1, "Inspire"],
-      [2, "Spain"],
-      [3, "Valencia"],
+      [1, "Home"],
+      [2, "Inspire"],
+      [3, "Spain"],
+      [4, "Valencia"],
     ]);
   });
 });

@@ -147,8 +147,9 @@ export function hubMeta(h: Hub, updated?: string): Meta {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Inspire", item: `${SITE}/destinations` },
-        { "@type": "ListItem", position: 2, name: h.name, item: url },
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+        { "@type": "ListItem", position: 2, name: "Inspire", item: `${SITE}/destinations` },
+        { "@type": "ListItem", position: 3, name: h.name, item: url },
       ],
     },
   ];
@@ -168,6 +169,7 @@ export function hubMeta(h: Hub, updated?: string): Meta {
     index: true,
     image: pic ? imageUrl(pic.image) : undefined,
     imageAlt: pic?.image_alt || undefined,
+    imageSize: pic?.image_size ?? undefined,
     jsonLd,
   };
 }

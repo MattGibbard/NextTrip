@@ -57,10 +57,10 @@ function hub(page: PublicPage) {
   return raw ? readHub(slug, raw) : undefined;
 }
 
-/** The page's <head> tags. `updated` is when its words last changed, as an ISO date, if known. */
-export function headTags(page: PublicPage, updated?: string): string {
+/** The page's <head> tags. `updated` and `published` are when its words last changed and were first added, as ISO dates, if known. */
+export function headTags(page: PublicPage, updated?: string, published?: string): string {
   const d = destination(page);
-  if (d) return metaTags(destinationMeta(d, updated, countryHub(d.country_code)));
+  if (d) return metaTags(destinationMeta(d, { updated, published, country: countryHub(d.country_code) }));
   const h = hub(page);
   if (h) return metaTags(hubMeta(h, updated));
   if (page === "home") return fixedTags("home", { title: HOME.seo_title, description: HOME.seo_description });

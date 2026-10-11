@@ -703,19 +703,19 @@
 .lp-plan {
   background: var(--board);
   color: #fff;
-  border-radius: 12px;
-  padding: 12px 14px;
+  border-radius: 10px;
+  padding: 9px 11px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 .lp-plan-count {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 .lp-plan-label {
-  font: 500 0.62rem var(--mono);
+  font: 500 0.56rem var(--mono);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -727,11 +727,11 @@
 }
 .lp-flaps span {
   position: relative;
-  font: 500 1.15rem/1 var(--mono);
+  font: 500 0.9rem/1 var(--mono);
   background: var(--board-line);
-  border-radius: 4px;
-  padding: 0.28rem 0.3rem;
-  min-width: 1.1rem;
+  border-radius: 3px;
+  padding: 0.22rem 0.24rem;
+  min-width: 0.85rem;
   text-align: center;
 }
 .lp-flaps span::after {
@@ -743,7 +743,7 @@
   border-top: 1px solid rgb(0 0 0 / 0.35);
 }
 .lp-plan-bar {
-  height: 6px;
+  height: 4px;
   border-radius: 999px;
   background: var(--board-line);
   overflow: hidden;
@@ -755,7 +755,7 @@
   background: var(--board-lit);
 }
 .lp-plan-money {
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   color: var(--board-muted);
 }
 .lp-plan-money strong {

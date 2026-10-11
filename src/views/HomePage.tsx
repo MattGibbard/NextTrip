@@ -144,7 +144,7 @@ export function HomePage() {
                 <span />
               </div>
               <div className="lp-plan-money">
-                <strong>£2,800</strong> of £6,000 budget
+                <strong>£2,800</strong> of £6,000
               </div>
             </div>
           </div>

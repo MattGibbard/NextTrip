@@ -12,5 +12,6 @@
 @import "./styles/tickets.css"; /* The boarding-pass look: tickets, stats, the next departure and standby idea cards. */
 @import "./styles/places.css"; /* The Places tab: coverage and passport stamps. */
 @import "./styles/settings.css"; /* The Settings page. */
+@import "./styles/plan.css"; /* A won idea's trip plan: days, costs, packing and jobs before you go. */
 @import "./styles/book-links.css"; /* Find flights and hotels (affiliate links). */
 @import "./styles/skeleton.css"; /* Loading placeholders. */

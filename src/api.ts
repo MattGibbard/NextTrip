@@ -3,6 +3,7 @@ import type { RoundFilters } from "../shared/roundFilters";
 import type { TripDates } from "../shared/tripDates";
 import type { Terminal, TerminalSearchResult } from "../shared/terminals";
 import type { PhotoSearch } from "../shared/photos";
+import type { CostCategory, CostStatus, ItemStatus, TripPlan } from "../shared/plan";
 import { forget, load } from "./storage";
 
 // Browsers that picked a person before the server kept track of it send that
@@ -96,6 +97,25 @@ export const api = {
   unveto: (id: number) => request("DELETE", `/rounds/${id}/veto`),
   draw: (id: number) => request<Round>("POST", `/rounds/${id}/draw`),
 
+  /** A won idea's trip plan. Everything below takes the idea's id first. */
+  plan: (id: number) => request<TripPlan>("GET", `/plans/${id}`),
+  setPlan: (id: number, p: { budget?: number | null; days?: number }) => request("PUT", `/plans/${id}`, p),
+  nameDay: (id: number, day: number, title: string) => request("PUT", `/plans/${id}/days/${day}`, { title }),
+  savePlanItem: (id: number, itemId: number | null, i: PlanItemInput) =>
+    itemId === null ? request<{ id: number }>("POST", `/plans/${id}/items`, i) : request("PUT", `/plans/${id}/items/${itemId}`, i),
+  deletePlanItem: (id: number, itemId: number) => request("DELETE", `/plans/${id}/items/${itemId}`),
+  saveCost: (id: number, costId: number | null, k: CostInput) =>
+    costId === null ? request<{ id: number }>("POST", `/plans/${id}/costs`, k) : request("PUT", `/plans/${id}/costs/${costId}`, k),
+  deleteCost: (id: number, costId: number) => request("DELETE", `/plans/${id}/costs/${costId}`),
+  settle: (id: number, s: { from_person: number; to_person: number; amount: number }) => request<{ id: number }>("POST", `/plans/${id}/settlements`, s),
+  unsettle: (id: number, settlementId: number) => request("DELETE", `/plans/${id}/settlements/${settlementId}`),
+  addPacking: (id: number, p: { label: string; person_id: number | null }) => request<{ id: number }>("POST", `/plans/${id}/packing`, p),
+  updatePacking: (id: number, itemId: number, p: { label: string; person_id: number | null; packed: boolean }) => request("PUT", `/plans/${id}/packing/${itemId}`, p),
+  deletePacking: (id: number, itemId: number) => request("DELETE", `/plans/${id}/packing/${itemId}`),
+  saveTodo: (id: number, todoId: number | null, t: TodoInput) =>
+    todoId === null ? request<{ id: number }>("POST", `/plans/${id}/todos`, t) : request("PUT", `/plans/${id}/todos/${todoId}`, t),
+  deleteTodo: (id: number, todoId: number) => request("DELETE", `/plans/${id}/todos/${todoId}`),
+
   photos: (queries: string[]) => request<PhotoSearch>("GET", `/photos?${queries.map((q) => `q=${encodeURIComponent(q)}`).join("&")}`),
   /** Copies a suggested photo to somewhere🎉 and gives back the link to save as the cover. */
   savePhoto: (id: number) => request<{ url: string }>("POST", "/photos", { id }),
@@ -103,3 +123,27 @@ export const api = {
   nearestAirport: (lat: number, lon: number) => request<Terminal | null>("GET", `/terminals/nearest?lat=${lat}&lon=${lon}`),
   terminals: (kind: "airport" | "station", q: string) => request<TerminalSearchResult[]>("GET", `/terminals?kind=${kind}&q=${encodeURIComponent(q)}`),
 };
+
+export interface PlanItemInput {
+  day: number;
+  time: string | null;
+  title: string;
+  notes: string | null;
+  status: ItemStatus;
+}
+
+export interface CostInput {
+  title: string;
+  amount: number;
+  category: CostCategory;
+  status: CostStatus;
+  day: number | null;
+  paid_by: number | null;
+}
+
+export interface TodoInput {
+  label: string;
+  person_id: number | null;
+  due: string | null;
+  done: boolean;
+}

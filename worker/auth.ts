@@ -373,6 +373,8 @@ export const DELETE_CONFIRMATION = "DELETE";
  */
 export function deleteFamilyStatements(db: D1Database, family: number): D1PreparedStatement[] {
   const stmts = [
+    // Trip plans point at ideas and people, so they go first.
+    ...["plan_days", "plan_items", "plan_costs", "plan_settlements", "plan_packing", "plan_todos", "plans"].map((t) => `DELETE FROM ${t} WHERE family_id = ?1`),
     "DELETE FROM rounds WHERE family_id = ?1",
     "DELETE FROM trips WHERE family_id = ?1",
     "DELETE FROM ideas WHERE family_id = ?1",

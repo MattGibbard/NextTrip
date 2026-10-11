@@ -51,9 +51,14 @@ export function NextDeparture({ onBeen }: { onBeen: (d: TripDraft) => void }) {
             <Field label="BUDGET">{budgetLabel(idea.budget) ?? "—"}</Field>
           )}
         </div>
-        <button className="btn departure-been mobile-only" onClick={been}>
-          We went! Add to Been
-        </button>
+        <div className="departure-phone-actions mobile-only">
+          <a className="btn departure-plan" href={`#/next/${idea.id}/plan`}>
+            Plan the trip
+          </a>
+          <button className="btn departure-been" onClick={been}>
+            We went! Add to Been
+          </button>
+        </div>
       </div>
       <div className="departure-side desktop-only">
         <Photo url={idea.cover_url} fallback={flags || "🏆"} className="fill" />
@@ -63,7 +68,10 @@ export function NextDeparture({ onBeen }: { onBeen: (d: TripDraft) => void }) {
               TICKET {round.winning_ticket} / {round.total_tickets}
             </span>
           )}
-          <button className="departure-been" onClick={been}>
+          <a className="departure-been departure-plan" href={`#/next/${idea.id}/plan`}>
+            Plan the trip
+          </a>
+          <button className="departure-been ghosted" onClick={been}>
             We went! Add to Been
           </button>
         </div>

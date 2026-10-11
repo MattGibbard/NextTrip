@@ -16,6 +16,7 @@ import { ideaRoutes } from "./ideas";
 import { roundRoutes } from "./rounds";
 import { homeEndRoutes } from "./homeEnds";
 import { searchRoutes } from "./search";
+import { planRoutes } from "./plans";
 import type { Bootstrap, FamilyPart } from "../shared/types";
 
 const app = new Hono<App>().basePath("/api");
@@ -84,6 +85,7 @@ ideaRoutes(app);
 roundRoutes(app);
 homeEndRoutes(app);
 searchRoutes(app);
+planRoutes(app);
 
 app.all("*", (c) => c.json({ error: "Not found" }, 404));
 

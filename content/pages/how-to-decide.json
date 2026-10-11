@@ -1,0 +1,100 @@
+{
+  "seo_title": "How to decide where to go on holiday (without the arguments)",
+  "seo_description": "Can't decide where to go on holiday? A simple way to choose as a family or group: gather ideas, agree the must-haves, narrow it down and let a fair draw pick.",
+  "hero": {
+    "kicker": "Guide · Planning",
+    "heading": "How to decide where to go on holiday",
+    "lead": "Choosing is often the hardest part of a holiday. Here's a simple way to pick somewhere everyone's happy with, whether it's the two of you, the whole family or a group of friends.",
+    "button_label": "",
+    "button_url": ""
+  },
+  "sections": [
+    {
+      "heading": "Why it's so hard to choose",
+      "text": "There are too many good options, and everyone wants something different. One of you wants a beach, someone else wants a city, and the kids just want a pool. The conversation goes round in circles in the group chat, ideas get lost, and in the end the loudest voice or the person doing the booking decides.\n\nThe fix isn't finding the perfect place. It's having a fair way to choose, so the decision gets made and everyone feels they had a say."
+    },
+    {
+      "heading": "1. Collect everyone's ideas in one place",
+      "text": "Start by asking everyone where they'd love to go, with no judging yet. Put every idea in one list rather than scattered across messages, so nothing gets forgotten.\n\nFor each idea, jot down a few basics:\n- **What kind of trip it is:** beach, city break, skiing, nature, a road trip\n- **Rough budget:** £, ££ or £££\n- **How far it is:** the travel time each way\n- **Who suggested it,** so everyone can see their idea made the list\n\nIf you're short on ideas, browse some [destination guides](/destinations) for when to go and what to do there."
+    },
+    {
+      "heading": "2. Agree the must-haves before you compare",
+      "text": "Before anyone argues for their favourite, agree the few things that rule places in or out. Settle these first and half the list often sorts itself out.\n- **When can you go?** School holidays, a long weekend or a fortnight changes everything.\n- **What's the budget,** all in?\n- **How far are you willing to travel?** A two-hour flight feels very different with small children than a twelve-hour one.\n- **How do you want to get there?** Some families don't fly, and a train or car can be part of the fun.\n- **Anything that's a must,** such as a beach, snow, a pool or good food."
+    },
+    {
+      "heading": "3. Check the timing",
+      "text": "A place that's perfect in May can be too hot, too wet or too crowded in August. Look up the best months for each idea and drop any that don't work for your dates. Each of our [destination guides](/destinations) shows the best months to go and how long to stay."
+    },
+    {
+      "heading": "4. Narrow it down to a shortlist",
+      "text": "With the must-haves agreed, cut the list to the ideas that fit. A quick way is for everyone to say yes or no to each one, privately, and keep only the ideas nobody minds. Three to six is a good number to choose between."
+    },
+    {
+      "heading": "5. Give everyone a fair say",
+      "text": "This is where most families get stuck. Voting with a show of hands rewards whoever argues hardest, and it doesn't show how much each person cares.\n\nInstead, give everyone the same number of points, say 10, to spread across the shortlist in secret. Someone who's set on one place can put all their points on it; someone who'd be happy with several can share them out. Give each person **one veto** too, for the place they really can't face."
+    },
+    {
+      "heading": "6. Let a draw make the final call",
+      "text": "Add up the points and turn them into tickets: every point is one ticket in the draw. The ideas with the most support have the best chance, but every idea that got points can still win. Then draw one ticket.\n\nIt sounds odd to leave it to chance, but it works. Nobody wins the argument, nobody loses it, and the decision is made. It's also much more exciting than another spreadsheet."
+    },
+    {
+      "heading": "7. Book it before you change your mind",
+      "text": "Once the draw is done, treat it as decided and start booking. Look at flights and places to stay while everyone's excited, and keep the ideas that didn't win for next time."
+    },
+    {
+      "heading": "Tips for choosing with children",
+      "text": "- **Give children their own points.** Even young children take it seriously when their choice counts, and it stops anyone feeling left out.\n- **Let them add an idea of their own,** even if it's a long shot.\n- **Keep the travel time sensible** for the youngest person going.\n- **Look back at where you've been.** Remembering which trips everyone loved, and why, is the best guide to what to do next."
+    },
+    {
+      "heading": "Choosing with friends or as a couple",
+      "text": "The same steps work for any group. With friends, agree the budget and dates first, because they rule out the most. As a couple, points and a veto are a good way to settle a beach-versus-city stalemate without anyone giving in."
+    }
+  ],
+  "board": {
+    "label": "Departures · The easy way",
+    "heading": "Do all of this in one place with somewhere🎉",
+    "steps": [
+      {
+        "title": "Put your ideas on standby",
+        "text": "Everyone in the family adds the places they'd love to go, with the trip type, budget and travel time.",
+        "status": "On standby"
+      },
+      {
+        "title": "Filter and shortlist",
+        "text": "Take ideas that don't fit off the board, then everyone swipes yes or no to make a shortlist.",
+        "status": "Check-in"
+      },
+      {
+        "title": "Spread your points in secret",
+        "text": "You each share out your points and get one veto. Nobody sees anyone else's until the draw.",
+        "status": "Boarding"
+      },
+      {
+        "title": "The draw picks where you go",
+        "text": "Every point is a ticket, and the departures board reveals the winner. It's free.",
+        "status": "Now departing"
+      }
+    ]
+  },
+  "faqs": {
+    "heading": "Questions people ask",
+    "items": [
+      {
+        "question": "How do you decide where to go on holiday as a family?",
+        "answer": "Collect everyone's ideas in one list, agree the must-haves (dates, budget, travel time), cut it to a shortlist, then give everyone the same number of points to spread in secret and let a draw pick, with more points meaning a better chance."
+      },
+      {
+        "question": "What if we can't agree at all?",
+        "answer": "Stop debating and use points and a draw. Everyone's preference counts, a veto rules out anything someone really doesn't want, and the draw makes the final call so nobody has to win the argument."
+      },
+      {
+        "question": "How many ideas should we choose between?",
+        "answer": "Three to six works well. Fewer feels like there's no real choice, and many more spreads everyone's points too thin."
+      },
+      {
+        "question": "Is it fair to let a draw decide?",
+        "answer": "Yes, as long as it's weighted by everyone's points. The places the family wants most have the best chance, everyone had the same say, and nobody's favourite was ruled out by someone shouting louder."
+      }
+    ]
+  }
+}

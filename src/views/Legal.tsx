@@ -1,10 +1,11 @@
 import type { ReactNode } from "react";
-import { Frame } from "./Welcome";
+import { Frame, INSTAGRAM } from "./Welcome";
 
 // Keep these in step with what the app really does: if a change stores something new
 // or sends data to another service, update the privacy policy and this date.
 const UPDATED = "8 October 2026";
-const CONTACT = "https://github.com/MattGibbard/NextTrip/issues";
+// Until there's an email address on the domain, people get in touch on Instagram.
+const CONTACT = INSTAGRAM;
 
 export type LegalPage = "privacy" | "terms";
 
@@ -23,7 +24,7 @@ export function LegalView({ page }: { page: LegalPage }) {
 
 function Contact({ children }: { children: ReactNode }) {
   return (
-    <a href={CONTACT} target="_blank" rel="noreferrer">
+    <a href={CONTACT} target="_blank" rel="noopener me">
       {children}
     </a>
   );

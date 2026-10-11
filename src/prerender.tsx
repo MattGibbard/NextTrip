@@ -9,9 +9,11 @@ import { DestinationPage, DestinationsIndex } from "./views/DestinationPage";
 import { DESTINATIONS, destinationMeta, readDestination } from "./destinations";
 import { CREATORS, HOME } from "./site";
 import { CreatorsPage } from "./views/Creators";
+import { InfoPage } from "./views/InfoPage";
+import { INFO, infoJsonLd, infoSource } from "./infoPages";
 import { SiteBanner } from "./components/SiteBanner";
-import { PAGES, headTags as fixedTags, metaTags } from "../shared/seo";
-import type { FixedPage, PublicPage } from "../shared/seo";
+import { INFO_PAGES, PAGES, headTags as fixedTags, metaTags } from "../shared/seo";
+import type { FixedPage, InfoPage as Info, PublicPage } from "../shared/seo";
 
 /**
  * Every page to write, with the file it goes in. Destination guides come from content/destinations.
@@ -24,6 +26,7 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
     { page: "terms", file: "terms.html" },
     { page: "destinations", file: "destinations.html" },
     { page: "creators", file: "creators.html", source: "content/site/creators.json" },
+    ...(Object.keys(INFO_PAGES) as Info[]).map((page) => ({ page, file: `${INFO_PAGES[page].path.slice(1)}.html`, source: infoSource(page) })),
     { page: "notfound", file: "404.html" },
   ];
   return [
@@ -47,6 +50,8 @@ export function headTags(page: PublicPage, updated?: string): string {
   if (d) return metaTags(destinationMeta(d, updated));
   if (page === "home") return fixedTags("home", { title: HOME.seo_title, description: HOME.seo_description });
   if (page === "creators") return fixedTags("creators", { title: CREATORS.seo_title, description: CREATORS.seo_description });
+  const info = page in INFO_PAGES ? (page as Info) : null;
+  if (info) return fixedTags(info, { title: INFO[info].seo_title, description: INFO[info].seo_description, jsonLd: infoJsonLd(info, updated) });
   return fixedTags(page as FixedPage);
 }
 
@@ -67,5 +72,7 @@ function pageBody(page: PublicPage) {
   if (page === "notfound") return <NotFound />;
   if (page === "destinations") return <DestinationsIndex />;
   if (page === "creators") return <CreatorsPage />;
+  const info = page in INFO_PAGES ? (page as Info) : null;
+  if (info) return <InfoPage page={info} />;
   return <LegalView page={page as "privacy" | "terms"} />;
 }

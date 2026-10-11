@@ -1,0 +1,30 @@
+{
+  "seo_title": "Contact us | somewhere🎉",
+  "seo_description": "Questions, ideas or something not working? Get in touch with somewhere🎉, the free family holiday planner, by message on Instagram.",
+  "hero": {
+    "kicker": "Contact",
+    "heading": "Get in touch",
+    "lead": "The quickest way to reach us is a direct message on Instagram. We read every message and reply as soon as we can.",
+    "button_label": "Message us on Instagram",
+    "button_url": "https://instagram.com/somewhereparty"
+  },
+  "sections": [
+    {
+      "heading": "What you can message us about",
+      "text": "- **Help with the site,** such as signing in, family links or the draw\n- **Something not working,** ideally with what you were doing and which device you were on\n- **Ideas,** for new features or destinations you'd like a guide to\n- **Your data,** such as a request to see or delete what we hold\n- **Working together,** if you're a creator, a travel company or a journalist"
+    },
+    {
+      "heading": "Before you message",
+      "text": "Lots of common questions are answered in our [FAQ](/faq). Creators can find out how we work together on the [creators page](/creators).\n\nPlease don't send your family link or sign-in links in a message. We'll never ask for them."
+    }
+  ],
+  "board": {
+    "label": "",
+    "heading": "",
+    "steps": []
+  },
+  "faqs": {
+    "heading": "",
+    "items": []
+  }
+}

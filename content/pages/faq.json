@@ -1,0 +1,82 @@
+{
+  "seo_title": "FAQ: questions about somewhere🎉, the family holiday planner",
+  "seo_description": "Is somewhere🎉 free? Who needs an account? Who can see our trips? Answers to common questions about the free family holiday planner.",
+  "hero": {
+    "kicker": "Help",
+    "heading": "Questions and answers",
+    "lead": "Everything families usually ask before they start. Can't find your answer? [Message us on Instagram](https://instagram.com/somewhereparty).",
+    "button_label": "",
+    "button_url": ""
+  },
+  "sections": [],
+  "board": {
+    "label": "",
+    "heading": "",
+    "steps": []
+  },
+  "faqs": {
+    "heading": "",
+    "items": [
+      {
+        "question": "Is somewhere🎉 free?",
+        "answer": "Yes. It's free for the whole family, with no subscription, no ads and no limit on trips or ideas."
+      },
+      {
+        "question": "How do you make money?",
+        "answer": "Some of the \"Find flights\" and \"Find hotels\" buttons are affiliate links. If you book after following one, we may earn a small commission, at no extra cost to you. [How we make money](/how-we-make-money) explains it in full."
+      },
+      {
+        "question": "Who needs to sign up?",
+        "answer": "Only one person, the organiser, signs in with an email address. They share a family link with everyone else, who just pick their name and colour."
+      },
+      {
+        "question": "Do the children need an email address or a phone?",
+        "answer": "No. Family members don't need an email or an account. They can use the family link on any device, including a shared tablet or a parent's phone."
+      },
+      {
+        "question": "Who can see our trips and ideas?",
+        "answer": "Only people with your family link. Your family's pages aren't public and don't appear in search engines. If the link gets out, the organiser can reset it in Settings."
+      },
+      {
+        "question": "How does the draw work?",
+        "answer": "Everyone gets the same number of points (10 unless you change it) and spreads them across the ideas in secret. You each get one veto. Every point becomes a ticket, so the more points an idea has, the better its chance, and the departures board reveals the winner."
+      },
+      {
+        "question": "Can we narrow the ideas down before the draw?",
+        "answer": "Yes. When you start a round you can filter ideas by things like budget and travel time, and switch on \"Swipe to shortlist first\" so everyone says yes or no to each idea. Only the ones everyone likes go into the draw."
+      },
+      {
+        "question": "We don't fly. Does it still work?",
+        "answer": "Yes. You can skip the airport when you set up, and trips can be by train, car or cruise as well as by plane."
+      },
+      {
+        "question": "Can we add holidays we've already been on?",
+        "answer": "Yes. Add them on Been and each one becomes a postcard. Your map fills in, and your passport collects a stamp for every country."
+      },
+      {
+        "question": "Do I need to download an app?",
+        "answer": "No. somewhere🎉 works in any web browser on phones, tablets and computers. You can also add it to your home screen so it opens like an app."
+      },
+      {
+        "question": "Where do the destination ideas come from?",
+        "answer": "Anyone in the family can add their own. For inspiration, our [destination guides](/destinations) cover when to go, how long to stay and what to do, and you can add any of them to your ideas in one tap."
+      },
+      {
+        "question": "Is it just for families?",
+        "answer": "It's built for families, but it works just as well for couples and groups of friends deciding where to go together."
+      },
+      {
+        "question": "Can someone leave, or be removed?",
+        "answer": "Family members can leave from Settings. The organiser can remove people and reset the family link at any time."
+      },
+      {
+        "question": "How do we delete our account?",
+        "answer": "The organiser can delete the whole account in Settings. It removes all of the family's trips, ideas and draws straight away. See our [privacy policy](/privacy) for what we keep."
+      },
+      {
+        "question": "How do I get in touch?",
+        "answer": "[Message us on Instagram](https://instagram.com/somewhereparty) at @somewhereparty. We read everything."
+      }
+    ]
+  }
+}

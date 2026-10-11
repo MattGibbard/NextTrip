@@ -2410,6 +2410,127 @@ button.card:hover {
   max-width: 75ch;
   line-height: 1.6;
 }
+
+/* Content pages: About, FAQ, Contact, How we make money and the how-to-decide guide (src/views/InfoPage.tsx) */
+.lp-info-head {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+.lp-info-head h1 {
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  max-width: 820px;
+}
+.lp-info-head .lp-lead {
+  max-width: 640px;
+}
+.lp-info-head .lp-lead a,
+.lp-article a,
+.lp-info-faqs a {
+  color: var(--accent);
+  font-weight: 600;
+}
+.lp-info-body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 72px;
+}
+.lp-info-contents {
+  max-width: 720px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lp-info-contents ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+.lp-info-contents a {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+.lp-info-contents a:hover {
+  color: var(--accent);
+}
+.lp-article {
+  max-width: 720px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+.lp-article section {
+  scroll-margin-top: 16px;
+}
+.lp-article section + section {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.lp-info .lp-article h2 {
+  font-size: clamp(1.4rem, 2.6vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+.lp-info .lp-article p {
+  margin: 0 0 14px;
+}
+.lp-article ul {
+  margin: 0 0 14px;
+  padding-left: 1.3rem;
+}
+.lp-article li + li {
+  margin-top: 8px;
+}
+.lp-article > section > :last-child,
+.lp-article > section > div:last-child > :last-child {
+  margin-bottom: 0;
+}
+.lp-info-board {
+  padding-top: 0;
+}
+.lp-info-board-go {
+  display: flex;
+}
+.lp-info-board-go .btn {
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+}
+.lp-info-faqs {
+  padding-bottom: 80px;
+}
+.lp-info-faqs-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+}
+.lp-info-faqs h2 {
+  font-size: clamp(1.4rem, 2.6vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.lp-info .lp-accordion p {
+  margin: 0;
+}
+.lp-info .lp-accordion ul {
+  margin: 0;
+  padding: 0 20px 18px 2.4rem;
+}
 @media (max-width: 480px) {
   .lp-wrap {
     padding-left: 16px;

@@ -245,6 +245,15 @@ export function SiteFooter({ sections = false, signedIn = false }: { sections?: 
                 <a {...home("why")}>Why use it</a>
               </li>
               <li>
+                <a href="/how-to-decide-where-to-go-on-holiday">Deciding where to go</a>
+              </li>
+              <li>
+                <a href="/about">About us</a>
+              </li>
+              <li>
+                <a href="/faq">FAQ</a>
+              </li>
+              <li>
                 <a href="/creators">Creators</a>
               </li>
             </ul>
@@ -281,6 +290,9 @@ export function SiteFooter({ sections = false, signedIn = false }: { sections?: 
               </li>
               <li>
                 <a href="/terms">Terms of use</a>
+              </li>
+              <li>
+                <a href="/how-we-make-money">How we make money</a>
               </li>
               <li>
                 <a href={INSTAGRAM} target="_blank" rel="noopener me">

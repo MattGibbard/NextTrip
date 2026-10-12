@@ -8,7 +8,7 @@ export const SITE = "https://somewhere.party";
 export const OLD_HOST = "nexttrip.matt-gibbard.workers.dev";
 
 /** The fixed pages. */
-export type FixedPage = "home" | "privacy" | "terms" | "notfound" | "destinations" | "creators" | InfoPage;
+export type FixedPage = "home" | "privacy" | "terms" | "notfound" | "destinations" | "creators" | "blog" | InfoPage;
 /** The plain content pages, whose words are edited at /admin (content/pages). */
 export type InfoPage = "about" | "faq" | "contact" | "money" | "decide";
 
@@ -27,8 +27,8 @@ export function infoPage(pathname: string): InfoPage | null {
   const hit = (Object.keys(INFO_PAGES) as InfoPage[]).find((k) => INFO_PAGES[k].path === clean);
   return hit ?? null;
 }
-/** Every prerendered page: the fixed ones plus one per destination guide, as "destination:new-york". */
-export type PublicPage = FixedPage | `destination:${string}`;
+/** Every prerendered page: the fixed ones plus one per destination guide, as "destination:new-york", and one per blog post, as "post:my-post". */
+export type PublicPage = FixedPage | `destination:${string}` | `post:${string}`;
 
 export type Meta = {
   path: string;
@@ -82,6 +82,12 @@ export const PAGES: Record<FixedPage, Meta> = {
     description: "Do you make travel or family content and love somewhere🎉? Message us on Instagram to be featured on our home page.",
     index: true,
   },
+  blog: {
+    path: "/blog",
+    title: "Blog: deciding where to go on holiday | somewhere🎉",
+    description: "Ideas and advice for choosing where to go on holiday, agreeing as a family or group, and making the decision fair.",
+    index: true,
+  },
   about: {
     path: INFO_PAGES.about.path,
     title: "About us | somewhere🎉",
@@ -123,12 +129,19 @@ export const PAGES: Record<FixedPage, Meta> = {
 /** Which prerendered page an address shows, if any. Family links and the app itself are never prerendered. */
 export function publicPage(pathname: string): PublicPage | null {
   if (pathname === "/") return "home";
-  const m = pathname.match(/^\/(privacy|terms|destinations|creators)\/?$/);
+  const m = pathname.match(/^\/(privacy|terms|destinations|creators|blog)\/?$/);
   if (m) return m[1] as FixedPage;
   const info = infoPage(pathname);
   if (info) return info;
   const d = pathname.match(/^\/destinations\/([a-z0-9-]+)\/?$/);
-  return d ? `destination:${d[1]}` : null;
+  if (d) return `destination:${d[1]}`;
+  const p = pathname.match(/^\/blog\/([a-z0-9-]+)\/?$/);
+  return p ? `post:${p[1]}` : null;
+}
+
+/** The address of a blog post. */
+export function postPath(slug: string): string {
+  return `/blog/${slug}`;
 }
 
 /** The address of a destination guide. */

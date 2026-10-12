@@ -1,15 +1,18 @@
-// Hub pages: one page for a kind of holiday ("Beach holidays") or a country ("Holidays in Spain"),
-// listing every guide that fits. Each is a JSON file in content/hubs, written in the editor at /admin.
+// Hub pages: one page for a kind of holiday ("Beach holidays"), a country ("Holidays in Spain") or a
+// month ("Where to go on holiday in February"), listing every guide that fits. Each is a JSON file in content/hubs, written in the editor at /admin.
 // They live at /destinations/<slug>, next to the guides, so a hub's slug must not be a guide's.
-// The guides on a hub come from the guides themselves, so a new beach guide joins the beach hub by itself.
+// The guides on a hub come from the guides themselves, so a new beach guide joins the beach hub by itself,
+// and a new guide rated "best" for February joins the February page.
 import { HOLIDAY_TYPES } from "../shared/ideaDetails";
 import type { HolidayType } from "../shared/ideaDetails";
 import { SITE, destinationPath } from "../shared/seo";
 import type { Meta } from "../shared/seo";
-import { DESTINATIONS, destinationCountry, findDestination, imageUrl } from "./destinations";
+import { DESTINATIONS, MONTHS, countryFlag, destinationCountry, findDestination, imageUrl } from "./destinations";
 import type { DestinationCard } from "./destinations";
 
-export type HubKind = "type" | "country";
+export type HubKind = "type" | "country" | "month";
+
+const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 export interface Hub {
   slug: string;
@@ -19,6 +22,8 @@ export interface Hub {
   holiday_type: HolidayType | null;
   /** For a country hub, ISO 3166-1 alpha-2, upper case. */
   country_code: string;
+  /** For a month hub, its number (0 is January). */
+  month: number | null;
   /** What links to the hub say: "Beach holidays", "Spain". */
   name: string;
   /** The page heading. */
@@ -39,17 +44,22 @@ const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
 export function readHub(slug: string, raw: Record<string, unknown>): Hub {
   const holiday_type = HOLIDAY_TYPES.find((t) => t.key === raw.holiday_type)?.key ?? null;
   const code = /^[A-Za-z]{2}$/.test(str(raw.country)) ? str(raw.country).toUpperCase() : "";
-  const kind: HubKind = raw.kind === "country" ? "country" : "type";
+  const kind: HubKind = raw.kind === "country" ? "country" : raw.kind === "month" ? "month" : "type";
   const type = HOLIDAY_TYPES.find((t) => t.key === holiday_type);
-  const name = str(raw.name) || (kind === "country" ? (code ? destinationCountry(code) : slug) : type ? `${type.label} holidays` : slug);
+  const m = MONTHS.indexOf(str(raw.month).toLowerCase() as (typeof MONTHS)[number]);
+  const month = kind === "month" && m >= 0 ? m : null;
+  const name =
+    str(raw.name) ||
+    (kind === "country" ? (code ? destinationCountry(code) : slug) : kind === "month" ? (month !== null ? MONTH_NAMES[month] : slug) : type ? `${type.label} holidays` : slug);
   return {
     slug,
     published: raw.published === true,
     kind,
     holiday_type: kind === "type" ? holiday_type : null,
     country_code: kind === "country" ? code : "",
+    month,
     name,
-    title: str(raw.title) || (kind === "country" ? `Holidays in ${name}` : name),
+    title: str(raw.title) || (kind === "country" ? `Holidays in ${name}` : kind === "month" ? `Where to go on holiday in ${name}` : name),
     intro: str(raw.intro),
     seo_title: str(raw.seo_title),
     seo_description: str(raw.seo_description),
@@ -60,9 +70,22 @@ export function readHub(slug: string, raw: Record<string, unknown>): Hub {
   };
 }
 
-/** The guides a hub lists, A to Z. */
+/** The guides a hub lists, A to Z. A month lists the guides at their best that month. */
 export function hubGuides(h: HubCard): DestinationCard[] {
+  if (h.kind === "month") return h.month === null ? [] : DESTINATIONS.filter((d) => d.months[h.month!]?.rating === "best");
   return DESTINATIONS.filter((d) => (h.kind === "country" ? d.country_code === h.country_code : !!h.holiday_type && d.holiday_types.includes(h.holiday_type)));
+}
+
+/** For a month: the guides rated "good" that month, the next best thing, A to Z. */
+export function alsoGood(h: HubCard): DestinationCard[] {
+  return h.kind === "month" && h.month !== null ? DESTINATIONS.filter((d) => d.months[h.month!]?.rating === "good") : [];
+}
+
+/** What a hub is about, for its links: a holiday type's icon, a country's flag or the month's season. */
+export function hubIcon(h: HubCard): string {
+  if (h.kind === "type") return HOLIDAY_TYPES.find((t) => t.key === h.holiday_type)?.icon ?? "";
+  if (h.kind === "month") return h.month === null ? "" : ["❄️", "❄️", "🌷", "🌷", "🌷", "☀️", "☀️", "☀️", "🍂", "🍂", "🍂", "❄️"][h.month];
+  return countryFlag(h.country_code);
 }
 
 const slugOf = (path: string) => path.replace(/^.*\/|\.json(\?.*)?$/g, "");
@@ -71,21 +94,24 @@ const slugOf = (path: string) => path.replace(/^.*\/|\.json(\?.*)?$/g, "");
 const cards = import.meta.glob<Record<string, unknown>>("/content/hubs/*.json", { eager: true, query: "?card", import: "default" });
 const files = import.meta.glob<Record<string, unknown>>("/content/hubs/*.json", { import: "default" });
 
+const KIND_ORDER: HubKind[] = ["type", "month", "country"];
+const fits = (h: Hub) => (h.kind === "country" ? !!h.country_code : h.kind === "month" ? h.month !== null : !!h.holiday_type);
+
 /**
- * Every published hub with at least one guide: holiday types in the usual order, then countries A to Z.
+ * Every published hub with at least one guide: holiday types in the usual order, then months, then countries A to Z.
  * A slug that's also a guide's goes to the guide, so such a hub is left out.
  */
 export const HUBS: HubCard[] = Object.entries(cards)
   .map(([path, raw]) => readHub(slugOf(path), raw))
-  .filter((h) => h.published && (h.kind === "country" ? !!h.country_code : !!h.holiday_type) && !findDestination(h.slug) && hubGuides(h).length > 0)
+  .filter((h) => h.published && fits(h) && !findDestination(h.slug) && hubGuides(h).length > 0)
   .sort((a, b) =>
     a.kind !== b.kind
-      ? a.kind === "type"
-        ? -1
-        : 1
+      ? KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind)
       : a.kind === "type"
         ? HOLIDAY_TYPES.findIndex((t) => t.key === a.holiday_type) - HOLIDAY_TYPES.findIndex((t) => t.key === b.holiday_type)
-        : a.name.localeCompare(b.name, "en-GB"),
+        : a.kind === "month"
+          ? a.month! - b.month!
+          : a.name.localeCompare(b.name, "en-GB"),
   );
 
 export function findHub(slug: string): HubCard | undefined {
@@ -95,6 +121,11 @@ export function findHub(slug: string): HubCard | undefined {
 /** The hub for a kind of holiday, if there is one. */
 export function typeHub(key: string): HubCard | undefined {
   return HUBS.find((h) => h.kind === "type" && h.holiday_type === key);
+}
+
+/** The page for a month (0 is January), if there is one. */
+export function monthHub(month: number): HubCard | undefined {
+  return HUBS.find((h) => h.kind === "month" && h.month === month);
 }
 
 /** The hub for a country, if there is one. */
@@ -118,9 +149,9 @@ export async function loadHub(slug: string): Promise<Hub | undefined> {
   return h;
 }
 
-/** A hub's title in search results: the editor's own, or "Beach holidays: where to go and when". */
+/** A hub's title in search results: the editor's own, or "Beach holidays: where to go and when" ("Where to go on holiday in May" for a month). */
 export function hubSearchTitle(h: HubCard): string {
-  return `${h.seo_title || `${h.title}: where to go and when`} | somewhere🎉`;
+  return `${h.seo_title || (h.kind === "month" ? h.title : `${h.title}: where to go and when`)} | somewhere🎉`;
 }
 
 /** Title, description and search-result data for a hub's page. `updated` is when its words last changed, as an ISO date, if known. */

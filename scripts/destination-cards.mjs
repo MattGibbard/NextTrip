@@ -2,6 +2,7 @@
 // on the Inspire page needs, so that list can hold every guide without carrying every guide's full
 // text. The full guide loads on its own page (src/destinations.ts). Hubs (content/hubs) work the same
 // way: every page knows enough to link to them, and their words load on their own page (src/hubs.ts).
+// So do blog posts (content/blog, src/blog.ts).
 import { readFile } from "node:fs/promises";
 
 /** The fields a card, the departures board, the filters and "Add to ideas" read. */
@@ -24,7 +25,15 @@ const CARD_FIELDS = [
 ];
 
 /** The fields links to a hub need. */
-const HUB_CARD_FIELDS = ["published", "kind", "holiday_type", "country", "name", "title", "seo_title"];
+const HUB_CARD_FIELDS = ["published", "kind", "holiday_type", "country", "month", "name", "title", "seo_title"];
+
+/** The fields links to a blog post need. */
+const POST_CARD_FIELDS = ["published", "title", "date", "intro", "seo_title"];
+
+/** A blog post's card fields. */
+export function postCard(raw) {
+  return Object.fromEntries(POST_CARD_FIELDS.filter((k) => k in raw).map((k) => [k, raw[k]]));
+}
 
 /** A hub's card fields. */
 export function hubCard(raw) {
@@ -49,7 +58,7 @@ export function destinationCards() {
       if (query !== "card" || !file.endsWith(".json")) return null;
       this.addWatchFile(file);
       const raw = JSON.parse(await readFile(file, "utf8"));
-      const card = /[\\/]content[\\/]hubs[\\/]/.test(file) ? hubCard(raw) : guideCard(raw);
+      const card = /[\\/]content[\\/]hubs[\\/]/.test(file) ? hubCard(raw) : /[\\/]content[\\/]blog[\\/]/.test(file) ? postCard(raw) : guideCard(raw);
       return { code: `export default ${JSON.stringify(card)};`, moduleType: "js" };
     },
   };

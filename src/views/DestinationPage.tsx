@@ -7,7 +7,8 @@ import type { Destination, DestinationCard } from "../destinations";
 import { HOLIDAY_TYPES, budgetLabel, holidayType, travelTimeLabel } from "../../shared/ideaDetails";
 import { destinationPath } from "../../shared/seo";
 import { SiteFooter, SiteHeader } from "../components/SiteFrame";
-import { HUBS, countryHub, hubGuides, typeHub } from "../hubs";
+import { HUBS, countryHub, hubGuides, hubIcon, monthHub, typeHub } from "../hubs";
+import type { HubKind } from "../hubs";
 import { AppBottomNav, AppTopbar } from "../components/AppNav";
 
 /**
@@ -272,15 +273,18 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
               </div>
             </div>
             <ol className="dg-months">
-              {d.months.map((m) => (
+              {d.months.map((m, i) => {
+                const page = monthHub(i);
+                return (
                 <li key={m.code} className={m.rating}>
-                  <span className="dg-month">{m.code}</span>
+                  <span className="dg-month">{page ? <a href={destinationPath(page.slug)} title={page.title}>{m.code}</a> : m.code}</span>
                   <span className="dg-month-note">
                     {m.note}
                     <span className="visually-hidden">, {m.rating === "best" ? "best time to go" : m.rating === "good" ? "a good time to go" : "quieter"}</span>
                   </span>
                 </li>
-              ))}
+                );
+              })}
             </ol>
             {d.when_to_go && <p className="dg-prose">{d.when_to_go}</p>}
           </section>
@@ -673,6 +677,7 @@ export function DestinationsIndex({ family }: { family?: Family }) {
         )}
 
         <HubLinks kind="type" heading="Browse by holiday type" />
+        <HubLinks kind="month" heading="Browse by month" />
 
         {!signedIn && (
           <section className="lp-wrap dx-section">
@@ -700,7 +705,7 @@ export function DestinationsIndex({ family }: { family?: Family }) {
 }
 
 /** Links to the hub pages of one kind, with how many guides each has. */
-export function HubLinks({ kind, heading, except }: { kind: "type" | "country"; heading: string; except?: string }) {
+export function HubLinks({ kind, heading, except }: { kind: HubKind; heading: string; except?: string }) {
   const hubs = HUBS.filter((h) => h.kind === kind && h.slug !== except);
   if (hubs.length === 0) return null;
   const id = `dx-hubs-${kind}`;
@@ -710,7 +715,7 @@ export function HubLinks({ kind, heading, except }: { kind: "type" | "country"; 
       <div className="dx-countries">
         {hubs.map((h) => {
           const count = hubGuides(h).length;
-          const icon = kind === "type" ? HOLIDAY_TYPES.find((t) => t.key === h.holiday_type)?.icon : countryFlag(h.country_code);
+          const icon = hubIcon(h);
           return (
             <a key={h.slug} href={destinationPath(h.slug)}>
               <span aria-hidden>{icon}</span>

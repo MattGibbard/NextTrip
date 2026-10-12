@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "kind": "month",
+  "month": "jun",
+  "name": "June",
+  "title": "Where to go on holiday in June",
+  "intro": "June has long, warm days without the full heat and prices of the school holidays. It's the best month of the year for more of our guides than almost any other.",
+  "seo_title": "Where to go on holiday in June: the best of the European summer",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "Where is hot in June?",
+      "answer": "The Greek islands (Crete, Naxos, Milos, Kefalonia), Menorca, Corsica, Puglia, Croatia and the Turkish coast are hot and sunny, but not yet at their busiest."
+    },
+    {
+      "question": "Where can we go in June that isn't too hot?",
+      "answer": "Try the north: Bergen and the Lofoten Islands, Reykjavik, the Faroe Islands, the Azores and Asturias are mild, green and light until late. In Canada, Banff and Vancouver are lovely."
+    },
+    {
+      "question": "Is June a good time to visit North America?",
+      "answer": "Yes. Most of the US and Canada is warm without being sweltering, and the national parks like Yellowstone and Banff open up fully. Montreal, Quebec City and Toronto have their summer festivals."
+    }
+  ]
+}

@@ -185,7 +185,7 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
                 <p className="muted">Put it on standby with the rest of your family's ideas. Everyone spreads their points in secret, gets one veto, and the draw picks where you go.</p>
               </div>
               <div className="dx-cta-actions">
-                <a className="btn dg-btn" href="/#signin">
+                <a className="btn" href="/#signin">
                   Start planning
                 </a>
                 <a href="/destinations">All destination guides</a>

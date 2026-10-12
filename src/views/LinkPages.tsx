@@ -31,7 +31,7 @@ export function SignInPage({ token, onSignedIn }: { token: string; onSignedIn: (
             <>
               <p className="big">That link didn't work</p>
               <p className="error-text">{error}</p>
-              <a className="btn large" href="/">
+              <a className="btn large block" href="/">
                 Get a new link
               </a>
             </>

@@ -26,14 +26,14 @@
   flex: none;
   width: 56px;
   height: 56px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   object-fit: cover;
   background: var(--accent-soft);
   color: var(--accent);
   display: grid;
   place-items: center;
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: var(--text-15);
 }
 .lp-creator-who {
   display: flex;
@@ -42,7 +42,7 @@
 }
 .lp-creator-who a {
   font-family: var(--mono);
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   color: var(--accent);
   overflow-wrap: anywhere;
 }
@@ -59,11 +59,6 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 8px 14px;
-}
-.lp-creators-btn {
-  padding: 0.8rem 1.2rem;
-  font-size: 1.05rem;
-  text-decoration: none;
 }
 .lp-creators-how {
   padding-top: 80px;
@@ -167,7 +162,7 @@
 }
 .lp-article {
   max-width: 720px;
-  font-size: 1.05rem;
+  font-size: var(--text-10);
   line-height: 1.65;
 }
 .lp-article section {
@@ -230,7 +225,7 @@
   margin: 0;
   padding: 0 20px 18px 2.4rem;
 }
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .lp-wrap {
     padding-left: 16px;
     padding-right: 16px;

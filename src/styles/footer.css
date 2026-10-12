@@ -19,7 +19,7 @@
 }
 .lp-foot-board {
   background: var(--board);
-  border-radius: 16px;
+  border-radius: var(--radius-card-lg);
   padding: 1.25rem 1.5rem;
   display: flex;
   flex-wrap: wrap;
@@ -38,7 +38,7 @@
   flex-wrap: wrap;
   gap: 0.4rem 1.25rem;
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: var(--text-3);
   font-weight: 500;
   letter-spacing: 0.14em;
   color: var(--board-muted);
@@ -47,15 +47,15 @@
   color: var(--board-lit);
 }
 .lp-foot-board-title {
-  font-size: 1.5rem;
+  font-size: var(--text-16);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.01em;
-  color: #ffffff;
+  color: var(--on-photo);
 }
 .lp-foot-board-sub {
-  font-size: 0.95rem;
-  color: #cbd5d1;
+  font-size: var(--text-8);
+  color: var(--board-dim);
 }
 .lp-foot-board-btn {
   flex: 0 0 auto;
@@ -65,23 +65,23 @@
   min-height: 44px;
   box-sizing: border-box;
   padding: 0.75rem 1.1rem;
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   background: var(--board-lit);
-  color: #052e2a;
+  color: var(--on-bright);
   font-weight: 700;
   text-decoration: none;
 }
 .lp-foot-board-btn:hover {
-  background: #5eead4;
+  background: var(--board-lit-hover);
 }
 .lp-foot-board-free {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: var(--text-3);
   font-weight: 500;
   letter-spacing: 0.14em;
   padding: 0.15rem 0.45rem;
-  border-radius: 999px;
-  background: #052e2a;
+  border-radius: var(--radius-pill);
+  background: var(--on-bright);
   color: var(--board-lit);
 }
 .lp-foot-cols {
@@ -98,15 +98,15 @@
 }
 .lp-foot .lp-brand {
   align-self: flex-start;
-  font-size: 1.6rem;
+  font-size: var(--text-17);
 }
 .lp-foot-tagline {
-  font-size: 1.1rem;
+  font-size: var(--text-11);
   color: var(--muted);
   max-width: 30ch;
 }
 .lp-foot-note {
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   color: var(--muted);
   max-width: 38ch;
 }
@@ -124,7 +124,7 @@
   width: 44px;
   height: 44px;
   box-sizing: border-box;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
@@ -146,7 +146,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  font-size: 0.95rem;
+  font-size: var(--text-8);
 }
 .lp-foot-col a {
   color: var(--text);
@@ -189,6 +189,6 @@
   gap: 0.4rem 1.5rem;
   padding-top: 0.75rem;
   padding-bottom: 1.5rem;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   color: var(--muted);
 }

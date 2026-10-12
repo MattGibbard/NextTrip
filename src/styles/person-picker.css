@@ -6,7 +6,7 @@
 }
 @media (max-width: 759px) {
   .picker {
-    border-radius: 18px 18px 0 0;
+    border-radius: var(--radius-sheet) var(--radius-sheet) 0 0;
   }
 }
 .picker-options {
@@ -26,7 +26,7 @@
   background: var(--surface);
   cursor: pointer;
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: var(--text-10);
 }
 .picker-option.selected {
   background: var(--surface-2);
@@ -36,15 +36,15 @@
   place-items: center;
   width: 2.2rem;
   height: 2.2rem;
-  border-radius: 50%;
-  color: #fff;
+  border-radius: var(--radius-round);
+  color: var(--on-photo);
   font-weight: 800;
   flex-shrink: 0;
 }
 .picker-option .avatar {
   width: 3.2rem;
   height: 3.2rem;
-  font-size: 1.4rem;
+  font-size: var(--text-15);
 }
 .picker .form {
   text-align: left;
@@ -58,7 +58,7 @@
 .color-swatch {
   width: 2.2rem;
   height: 2.2rem;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   border: 3px solid transparent;
   box-shadow: 0 0 0 1px var(--border);
   cursor: pointer;
@@ -72,12 +72,12 @@
   width: 2.2rem;
   height: 2.2rem;
   border: 1px solid var(--border);
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   padding: 2px;
   background: var(--surface);
 }
 .share-link {
   font-family: var(--mono);
-  font-size: 0.85rem !important;
+  font-size: var(--text-6) !important;
   margin: 0.4rem 0 0.2rem;
 }

@@ -27,7 +27,7 @@
   display: block;
   width: 36px;
   height: 4px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--border);
   margin: -10px auto 10px;
 }
@@ -43,7 +43,7 @@
   gap: 4px;
 }
 .ts-head h2 {
-  font-size: 1.3rem;
+  font-size: var(--text-14);
   font-weight: 800;
   letter-spacing: -0.01em;
 }
@@ -54,7 +54,7 @@
   display: grid;
   place-items: center;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   background: var(--surface);
   cursor: pointer;
   padding: 0;
@@ -92,7 +92,7 @@
 }
 .trip-sheet .field-label,
 .journey-cards-field .field-label {
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   font-weight: 600;
   line-height: 1.2;
 }
@@ -122,7 +122,7 @@
   gap: 10px;
 }
 .ts-preview .mono-label {
-  font-size: 0.62rem;
+  font-size: var(--text-1);
 }
 
 /* How did you travel? */
@@ -140,9 +140,9 @@
   justify-content: center;
   gap: 4px;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   background: var(--surface);
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   font-weight: 600;
   cursor: pointer;
   padding: 0 4px;
@@ -159,7 +159,7 @@
 .ts-mode.on {
   background: var(--mode);
   border-color: var(--mode);
-  color: #fff;
+  color: var(--on-photo);
 }
 .ts-mode.on svg {
   color: inherit;
@@ -182,7 +182,7 @@
   min-width: 0;
 }
 .ts-sep {
-  font: 500 0.85rem var(--mono);
+  font: 500 var(--text-6) var(--mono);
 }
 .ts-place {
   display: inline-flex;
@@ -191,9 +191,9 @@
   height: 36px;
   min-width: 0;
   padding: 0 4px 0 12px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--accent-soft);
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   font-weight: 600;
 }
 .ts-place > span {
@@ -208,7 +208,7 @@
   display: grid;
   place-items: center;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: transparent;
   color: var(--accent);
   cursor: pointer;
@@ -259,7 +259,7 @@
   min-width: 0;
   padding: 10px 12px;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   background: var(--surface);
   display: flex;
   flex-direction: column;
@@ -268,24 +268,24 @@
 }
 .end-label {
   align-self: flex-start;
-  font: 500 0.6rem var(--mono);
+  font: 500 var(--text-1) var(--mono);
   letter-spacing: 0.14em;
   color: var(--muted);
 }
 .end-code {
-  font: 500 1.6rem/1.1 var(--mono);
+  font: 500 var(--text-17)/1.1 var(--mono);
   letter-spacing: -0.02em;
   color: var(--mode-ink);
   padding-right: 28px;
 }
 .end-code.end-place {
-  font: 700 1.05rem/1.25 Inter, system-ui, sans-serif;
+  font: 700 var(--text-10)/1.25 Inter, system-ui, sans-serif;
   letter-spacing: 0;
   color: var(--text);
   margin-top: 4px;
 }
 .end-name {
-  font-size: 0.78rem;
+  font-size: var(--text-4);
   color: var(--muted);
   white-space: nowrap;
   overflow: hidden;
@@ -304,7 +304,7 @@
   color: var(--muted);
   cursor: pointer;
   padding: 0;
-  border-radius: 10px;
+  border-radius: var(--radius-control);
 }
 .end-clear:hover {
   color: var(--text);
@@ -343,7 +343,7 @@
   margin: 0;
   padding: 0.25rem;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   background: var(--surface);
   box-shadow: var(--shadow);
 }
@@ -353,7 +353,7 @@
 }
 .end-search .results li.muted {
   padding: 0.5rem 0.6rem;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 .end-search .results button {
   display: block;
@@ -362,7 +362,7 @@
   border: 0;
   background: none;
   padding: 0.55rem 0.6rem;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
 }
 .end-search .results button:hover {
@@ -404,7 +404,7 @@
   aspect-ratio: 4 / 3;
   padding: 0;
   border: 0;
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   overflow: hidden;
   background: color-mix(in srgb, var(--mode) 12%, var(--surface));
   cursor: pointer;
@@ -445,18 +445,18 @@
   right: 6px;
   width: 22px;
   height: 22px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   display: grid;
   place-items: center;
   background: var(--mode);
-  color: #fff;
+  color: var(--on-photo);
   box-shadow: 0 1px 4px rgb(0 0 0 / 0.3);
 }
 .cover-empty {
   margin: 0;
   padding: 14px;
   border: 1px dashed var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   text-align: center;
 }
 .cover-picker p {
@@ -480,7 +480,7 @@
   background: none;
   color: var(--mode-ink);
   font: inherit;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   font-weight: 600;
   cursor: pointer;
 }
@@ -489,7 +489,7 @@
   gap: 8px;
 }
 .trip-sheet .field > span {
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   line-height: 1.2;
 }
 .trip-sheet .choice-row {
@@ -498,8 +498,8 @@
 .trip-sheet .choice {
   min-height: 44px;
   padding: 0 14px;
-  border-radius: 10px;
-  font-size: 0.88rem;
+  border-radius: var(--radius-control);
+  font-size: var(--text-6);
 }
 .trip-sheet .choice:hover:not(.on) {
   border-color: var(--accent);
@@ -540,10 +540,10 @@
   padding: 0 10px;
   margin-left: -10px;
   border: 0;
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   background: transparent;
   color: var(--danger);
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   font-weight: 600;
   cursor: pointer;
 }

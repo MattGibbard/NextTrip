@@ -16,7 +16,7 @@
   max-height: 92dvh;
   overflow-y: auto;
   overflow-x: hidden; /* never scroll sideways, even if a field is a touch too wide */
-  border-radius: 18px 18px 0 0;
+  border-radius: var(--radius-sheet) var(--radius-sheet) 0 0;
   padding: 1rem 1.1rem calc(1.1rem + env(safe-area-inset-bottom));
   animation: up 0.2s ease-out;
 }
@@ -25,7 +25,7 @@
     align-items: center;
   }
   .sheet {
-    border-radius: 18px;
+    border-radius: var(--radius-sheet);
   }
 }
 @keyframes up {
@@ -52,7 +52,7 @@
   flex-direction: column;
   gap: 0.35rem;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 .field > span {
   font-weight: 600;
@@ -91,16 +91,16 @@
   align-items: center;
   gap: 0.3rem;
   background: var(--accent-soft);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0.3rem 0.4rem 0.3rem 0.7rem;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   font-weight: 600;
 }
 .chip button {
   border: 0;
   background: none;
   cursor: pointer;
-  font-size: 0.75rem;
+  font-size: var(--text-4);
   opacity: 0.6;
   padding: 0.1rem 0.3rem;
 }
@@ -121,7 +121,7 @@
   margin-top: -0.4rem;
 }
 .chip-code {
-  font: 500 0.8rem var(--mono);
+  font: 500 var(--text-5) var(--mono);
   letter-spacing: 0.04em;
 }
 
@@ -134,13 +134,13 @@
   margin: 0.3rem 0 0;
   padding: 0.25rem;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   background: var(--surface);
   box-shadow: var(--shadow);
 }
 .place-search .results li.muted {
   padding: 0.5rem 0.6rem;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 .place-search .results button {
   display: block;
@@ -149,7 +149,7 @@
   border: 0;
   background: none;
   padding: 0.55rem 0.6rem;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
 }
 .place-search .results button:hover {

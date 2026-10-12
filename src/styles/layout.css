@@ -27,7 +27,7 @@
 .lp-brand {
   color: var(--text);
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: var(--text-13);
   font-weight: 800;
   letter-spacing: -0.01em;
   white-space: nowrap;
@@ -49,10 +49,10 @@
   background: none;
   min-height: 40px;
   padding: 0 1rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   cursor: pointer;
   color: var(--text);
-  font-size: 0.95rem;
+  font-size: var(--text-8);
   font-weight: 600;
 }
 .tabs a {
@@ -78,29 +78,29 @@
   box-sizing: border-box;
   border: 1px solid var(--border);
   background: var(--surface);
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   padding: 0 14px;
   cursor: pointer;
   color: var(--text);
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: var(--text-8);
 }
 .dot {
   display: inline-block;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   vertical-align: middle;
 }
 .icon-btn {
   border: 1px solid var(--border);
   background: var(--surface);
-  font-size: 1.15rem;
+  font-size: var(--text-12);
   cursor: pointer;
   width: 44px;
   height: 44px;
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   line-height: 1;
 }
 a.icon-btn {
@@ -143,7 +143,7 @@ a.icon-btn {
   flex-direction: column;
   align-items: center;
   gap: 0.1rem;
-  font-size: 0.75rem;
+  font-size: var(--text-4);
   font-weight: 600;
   color: var(--muted);
   cursor: pointer;
@@ -154,11 +154,11 @@ a.icon-btn {
 @media (max-width: 380px) {
   .bottom-nav button,
   .bottom-nav a {
-    font-size: 0.68rem;
+    font-size: var(--text-2);
   }
 }
 .bottom-nav .icon {
-  font-size: 1.3rem;
+  font-size: var(--text-14);
   filter: grayscale(1);
   opacity: 0.7;
 }

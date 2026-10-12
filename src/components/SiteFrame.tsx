@@ -33,7 +33,7 @@ export function SiteHeader({ sections = false, guide = false }: { sections?: boo
             <a href="/#how">How the draw works</a>
             <a href="/#signin">Sign in</a>
           </nav>
-          <a className="btn lp-top-signin lp-top-start" href="/#signin">
+          <a className="btn" href="/#signin">
             Start planning
           </a>
         </div>
@@ -65,11 +65,11 @@ export function SiteHeader({ sections = false, guide = false }: { sections?: boo
           </a>
         </nav>
         {sections ? (
-          <a className="btn ghost lp-top-signin" href="#signin" onClick={jump}>
+          <a className="btn ghost" href="#signin" onClick={jump}>
             Sign in
           </a>
         ) : (
-          <a className="btn ghost lp-top-signin" href="/">
+          <a className="btn ghost" href="/">
             Home
           </a>
         )}

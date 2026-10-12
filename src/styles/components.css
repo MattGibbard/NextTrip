@@ -5,12 +5,14 @@
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
+  min-height: 44px;
   border: 0;
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   padding: 0.6rem 1rem;
   background: var(--accent);
   color: var(--accent-text);
   font-weight: 700;
+  text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -21,15 +23,32 @@
   opacity: 0.45;
   cursor: not-allowed;
 }
+/* Outline: the second choice next to a main button. Filled with the surface so it reads on the page background too. */
 .btn.ghost {
-  background: transparent;
+  background: var(--surface);
   color: var(--text);
   border: 1px solid var(--border);
 }
 .btn.ghost:hover:not(:disabled) {
   background: var(--surface-2);
 }
-.btn.danger {
+/* A ghost button that has done its job, like a copied link. */
+.btn.ghost.done {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+/* No fill or border, for quiet actions in a row. */
+.btn.plain {
+  background: transparent;
+  color: var(--muted);
+}
+.btn.plain:hover:not(:disabled) {
+  background: var(--surface-2);
+  color: var(--text);
+}
+.btn.danger,
+.btn.plain.danger {
   color: var(--danger);
 }
 .btn.danger-fill,
@@ -37,19 +56,51 @@
   background: var(--danger);
   color: var(--bg);
 }
+/* The bright board teal, only on the dark departures boards. */
+.btn.bright {
+  background: var(--board-lit);
+  color: var(--board-lit-text);
+  flex-shrink: 0;
+}
+.btn.bright:hover:not(:disabled) {
+  background: var(--board-lit-hover);
+}
+/* White on a coloured pass or photo. With ghost, a white outline instead. */
+.btn.inverse {
+  background: var(--on-photo);
+  color: var(--flight);
+}
+.btn.inverse:hover:not(:disabled) {
+  background: var(--on-photo);
+  opacity: 0.92;
+}
+.btn.ghost.inverse {
+  background: transparent;
+  color: var(--on-photo);
+  border: 1.5px solid rgb(255 255 255 / 0.85);
+}
 .btn.small {
+  min-height: 0;
   padding: 0.4rem 0.75rem;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
 }
 .btn.large {
+  min-height: 52px;
+  padding: 0 1.75rem;
+  font-size: var(--text-10);
+}
+/* Full width, for the one main button at the foot of a panel. */
+.btn.block {
   width: 100%;
-  padding: 0.9rem 1rem;
-  font-size: 1.05rem;
-  margin-top: 0.75rem;
 }
 .btn.glow {
   box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 60%, transparent);
   animation: pulse 1.8s infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn.glow {
+    animation: none;
+  }
 }
 @keyframes pulse {
   70% {
@@ -62,7 +113,7 @@
   color: var(--accent);
   cursor: pointer;
   padding: 0.25rem 0;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   text-decoration: underline;
 }
 .link.danger {
@@ -116,7 +167,7 @@ button.card:hover {
 .cover.placeholder {
   display: grid;
   place-items: center;
-  font-size: 2.2rem;
+  font-size: var(--text-20);
   background: linear-gradient(135deg, var(--accent-soft), var(--surface-2));
 }
 .card-foot {
@@ -146,10 +197,10 @@ button.card:hover {
   padding-top: 0.4rem;
 }
 .badge {
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   font-weight: 700;
   padding: 0.2rem 0.55rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 }
 .badge.win {
   background: color-mix(in srgb, var(--gold) 20%, transparent);
@@ -158,7 +209,7 @@ button.card:hover {
 
 .year {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: var(--text-8);
   margin: 0 0 0.6rem;
 }
 
@@ -177,12 +228,12 @@ button.card:hover {
 }
 .stats strong {
   display: block;
-  font-size: 1.6rem;
+  font-size: var(--text-17);
   color: var(--accent);
 }
 .stats span {
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: var(--text-6);
 }
 
 .stars {
@@ -195,7 +246,7 @@ button.card:hover {
 .stars.editable button {
   border: 0;
   background: none;
-  font-size: 1.6rem;
+  font-size: var(--text-17);
   cursor: pointer;
   color: var(--border);
   padding: 0 0.1rem;
@@ -230,7 +281,7 @@ button.card:hover {
 
 .banner {
   padding: 0.7rem 0.9rem;
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   background: var(--surface-2);
   margin: 0.5rem 0 1rem;
 }
@@ -239,7 +290,7 @@ button.card:hover {
 }
 .error-text {
   color: var(--danger);
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 
 /* ---------- Segmented + lists ---------- */
@@ -247,7 +298,7 @@ button.card:hover {
 .segmented {
   display: flex;
   background: var(--surface-2);
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   padding: 4px;
   gap: 4px;
   margin-bottom: 1rem;
@@ -257,11 +308,11 @@ button.card:hover {
   border: 0;
   background: none;
   padding: 0.5rem;
-  border-radius: 9px;
+  border-radius: var(--radius-segment);
   font-weight: 600;
   color: var(--muted);
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 .segmented button.active {
   background: var(--surface);
@@ -299,13 +350,13 @@ button.card:hover {
   border-top: 0;
 }
 .flag {
-  font-size: 1.6rem;
+  font-size: var(--text-17);
 }
 .pill {
   background: var(--surface-2);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0.15rem 0.6rem;
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   font-weight: 600;
   white-space: nowrap;
 }
@@ -333,8 +384,8 @@ button.card:hover {
   gap: 0.8rem;
   background: var(--surface);
   padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  font-size: 0.8rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-5);
   box-shadow: var(--shadow);
 }
 .legend label,
@@ -347,7 +398,7 @@ button.card:hover {
 .swatch {
   width: 12px;
   height: 12px;
-  border-radius: 3px;
+  border-radius: var(--radius-xs);
   display: inline-block;
 }
 .swatch.visited {

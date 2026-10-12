@@ -69,10 +69,10 @@ export function NextDeparture({ onBeen }: { onBeen: (d: TripDraft) => void }) {
           )}
         </div>
         <div className="departure-phone-actions mobile-only">
-          <a className="btn departure-plan" href={`#/next/${idea.id}/plan`}>
+          <a className="btn inverse" href={`#/next/${idea.id}/plan`}>
             Plan the trip
           </a>
-          <button className="btn departure-been" onClick={been}>
+          <button className="btn ghost inverse" onClick={been}>
             We went! Add to Been
           </button>
         </div>
@@ -85,10 +85,10 @@ export function NextDeparture({ onBeen }: { onBeen: (d: TripDraft) => void }) {
               TICKET {round.winning_ticket} / {round.total_tickets}
             </span>
           )}
-          <a className="departure-been departure-plan" href={`#/next/${idea.id}/plan`}>
+          <a className="btn inverse" href={`#/next/${idea.id}/plan`}>
             Plan the trip
           </a>
-          <button className="departure-been ghosted" onClick={been}>
+          <button className="btn" onClick={been}>
             We went! Add to Been
           </button>
         </div>

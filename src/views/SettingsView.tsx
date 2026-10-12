@@ -124,7 +124,7 @@ function FamilySection() {
       action={
         isOwner &&
         shareUrl && (
-          <button type="button" className="btn ghost soft" onClick={() => scrollToSection("invite")}>
+          <button type="button" className="btn ghost" onClick={() => scrollToSection("invite")}>
             + Invite someone
           </button>
         )
@@ -233,7 +233,7 @@ function PersonCard({ person, isMe, canEdit, canManage }: { person: Person; isMe
         </div>
         <div className="person-card-actions">
           {canManage && (
-            <button type="button" className={`btn ghost soft ${link ? "done" : ""}`} onClick={() => void sendLink()}>
+            <button type="button" className={`btn ghost ${link ? "done" : ""}`} onClick={() => void sendLink()}>
               {link ? "Link made ✓" : "Send sign-in link"}
             </button>
           )}
@@ -356,7 +356,7 @@ function InviteSection() {
             {copied ? "Copied ✓" : "Copy link"}
           </button>
           {"share" in navigator && (
-            <button type="button" className="btn ghost raised" onClick={share}>
+            <button type="button" className="btn ghost" onClick={share}>
               Share…
             </button>
           )}
@@ -558,7 +558,7 @@ function DeviceSection() {
               )}
             </div>
             {install && (
-              <button type="button" className="btn ghost raised" onClick={() => void install()}>
+              <button type="button" className="btn ghost" onClick={() => void install()}>
                 Install
               </button>
             )}
@@ -574,7 +574,7 @@ function DeviceSection() {
                 : "You came in with the family link. If this isn't you, ask your family organiser for your own sign-in link."}
             </span>
           </div>
-          <button type="button" className="btn ghost raised" onClick={() => void signOut()}>
+          <button type="button" className="btn ghost" onClick={() => void signOut()}>
             {isOwner ? "Sign out" : "Leave"}
           </button>
         </div>
@@ -596,7 +596,7 @@ function WelcomeSection() {
           : "Go back through the welcome steps: how the draw works and adding an idea."
       }
       action={
-        <button type="button" className="btn ghost raised" onClick={() => (location.hash = "/welcome")}>
+        <button type="button" className="btn ghost" onClick={() => (location.hash = "/welcome")}>
           Show me again
         </button>
       }

@@ -8,7 +8,7 @@ export function NotFound() {
         <div className="panel signin">
           <h1 className="big">Page not found</h1>
           <p className="muted">There's nothing at this address. If someone sent you a family link, check it was copied in full.</p>
-          <a className="btn large" href="/">
+          <a className="btn large block" href="/">
             Go to the home page
           </a>
         </div>

@@ -9,15 +9,6 @@
   white-space: nowrap;
 }
 
-.lp-top-start {
-  background: var(--accent);
-  color: var(--accent-text);
-  border: 0;
-}
-.lp-top-start:hover {
-  background: var(--accent-hover);
-}
-
 .dg h1,
 .dg h2,
 .dg h3,
@@ -25,7 +16,7 @@
   margin: 0;
 }
 .dg h2 {
-  font-size: 1.6rem;
+  font-size: var(--text-17);
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -50,17 +41,10 @@
 }
 .dg-label,
 .lp-foot-label {
-  font-size: 0.7rem;
+  font-size: var(--text-3);
   letter-spacing: 0.14em;
   color: var(--muted);
 }
-.dg-btn {
-  min-height: 46px;
-  padding: 0 20px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
 /* Signed-in families get the app's header and, on phones, its bottom bar, so leave room for it. */
 @media (max-width: 759px) {
   .dg-app {
@@ -77,7 +61,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   color: var(--muted);
 }
 .dg-crumbs a {
@@ -100,20 +84,20 @@
   min-width: 0;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 22px;
-  box-shadow: 0 10px 30px rgb(0 0 0 / 0.08);
+  border-radius: var(--radius-pass);
+  box-shadow: var(--shadow-pass);
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 .dg-ticket-head {
   background: var(--standby);
-  color: #fff;
+  color: var(--on-photo);
   padding: 12px 28px;
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  font-size: 0.7rem;
+  font-size: var(--text-3);
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -154,7 +138,7 @@
   top: -0.75em;
   background: var(--surface);
   padding: 0 8px;
-  font-size: 0.7rem;
+  font-size: var(--text-3);
   letter-spacing: 0.14em;
   color: var(--muted);
 }
@@ -165,7 +149,7 @@
   letter-spacing: -0.02em;
 }
 .dg-intro {
-  font-size: 1.1rem;
+  font-size: var(--text-11);
   color: var(--muted);
   max-width: 60ch;
 }
@@ -198,7 +182,7 @@
   height: auto;
   min-height: 420px;
   max-height: 560px;
-  border-radius: 22px;
+  border-radius: var(--radius-pass);
   border: 1px solid var(--border);
   object-fit: cover;
   min-width: 0;
@@ -214,11 +198,11 @@
 }
 .dg-photo-empty span {
   font-family: var(--mono);
-  font-size: 3rem;
+  font-size: var(--text-22);
   font-weight: 500;
   color: color-mix(in srgb, var(--standby-ink) 40%, transparent);
 }
-@media (max-width: 700px) {
+@media (max-width: 759px) {
   /* A fixed shape, so the page doesn't jump when the photo arrives. */
   .dg-photo {
     min-height: 220px;
@@ -250,12 +234,12 @@
   gap: 8px;
 }
 .dg .dg-standby h2 {
-  font-size: 1.15rem;
+  font-size: var(--text-12);
   font-weight: 700;
   letter-spacing: 0;
 }
 .dg-standby-head a {
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   font-weight: 600;
 }
 .dg-table-wrap {
@@ -265,11 +249,11 @@
   width: 100%;
   min-width: 520px;
   border-collapse: collapse;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 .dg-standby th {
   text-align: left;
-  font-size: 0.7rem;
+  font-size: var(--text-3);
   letter-spacing: 0.14em;
   color: var(--muted);
   font-weight: 500;
@@ -292,13 +276,13 @@
 }
 .dg-standby tr.here td:first-child {
   font-weight: 800;
-  border-radius: 12px 0 0 12px;
+  border-radius: var(--radius-row) 0 0 var(--radius-row);
 }
 .dg-standby tr.here td:last-child {
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 var(--radius-row) var(--radius-row) 0;
 }
 .dg-here {
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   font-weight: 600;
   color: var(--accent);
 }
@@ -316,10 +300,10 @@
 .dg-board {
   margin: 0;
   background: var(--board);
-  color: #fff;
-  border-radius: 16px;
+  color: var(--on-photo);
+  border-radius: var(--radius-card-lg);
   padding: 8px 24px;
-  font-size: 1.05rem;
+  font-size: var(--text-10);
   font-weight: 500;
 }
 .dg-board > div {
@@ -335,7 +319,7 @@
 }
 .dg-board dt {
   color: var(--board-muted);
-  font-size: 0.75rem;
+  font-size: var(--text-4);
   letter-spacing: 0.14em;
   align-self: center;
 }
@@ -358,7 +342,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   font-weight: 600;
 }
 .dg-key span {
@@ -369,7 +353,7 @@
 .dg-key i {
   width: 12px;
   height: 12px;
-  border-radius: 3px;
+  border-radius: var(--radius-xs);
   box-sizing: border-box;
 }
 .dg-months {
@@ -381,18 +365,18 @@
   gap: 8px;
 }
 .dg-months li {
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   padding: 12px 10px;
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 .dg-month {
-  font-size: 0.75rem;
+  font-size: var(--text-4);
   letter-spacing: 0.14em;
 }
 .dg-month-note {
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   font-weight: 600;
 }
 .dg-months .best,
@@ -421,7 +405,7 @@
 .dg-thing {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius-card-lg);
   box-shadow: var(--shadow);
   overflow: hidden;
   display: flex;
@@ -442,17 +426,17 @@
   flex: 1;
 }
 .dg-tag {
-  font-size: 0.7rem;
+  font-size: var(--text-3);
   letter-spacing: 0.06em;
   color: var(--standby-ink);
 }
 .dg-thing h3 {
-  font-size: 1.15rem;
+  font-size: var(--text-12);
   font-weight: 800;
   line-height: 1.2;
 }
 .dg-thing p {
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 
 /* Common questions. */
@@ -514,14 +498,14 @@ a.dg-similar-card:hover {
   flex-direction: column;
 }
 .dg-similar-code {
-  font-size: 1.6rem;
+  font-size: var(--text-17);
   font-weight: 500;
   color: var(--standby-ink);
 }
 
 .dg-cta {
   background: var(--accent-soft);
-  border-radius: 22px;
+  border-radius: var(--radius-pass);
   padding: 40px 32px;
   display: flex;
   flex-wrap: wrap;
@@ -535,11 +519,11 @@ a.dg-similar-card:hover {
   gap: 10px;
 }
 .dg .dg-cta h2 {
-  font-size: 2rem;
+  font-size: var(--text-19);
   line-height: 1.15;
 }
 .dg-cta p {
-  font-size: 1.1rem;
+  font-size: var(--text-11);
   max-width: 60ch;
 }
 
@@ -549,7 +533,7 @@ a.dg-similar-card:hover {
   color: var(--accent);
   background: var(--accent-soft);
   padding: 10px 14px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 }
 .dx main {
   padding-bottom: 24px;
@@ -590,7 +574,7 @@ a.dg-similar-card:hover {
   margin-top: 8px;
 }
 .dx-search label {
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   font-weight: 600;
 }
 .dx-search input {
@@ -598,7 +582,7 @@ a.dg-similar-card:hover {
   font-size: 16px;
   height: 48px;
   padding: 0 16px;
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
@@ -609,10 +593,10 @@ a.dg-similar-card:hover {
   flex: 1 1 360px;
   min-width: 0;
   background: var(--board);
-  border-radius: 14px;
+  border-radius: var(--radius);
   padding: 20px;
-  color: #fff;
-  box-shadow: 0 10px 30px rgb(15 118 110 / 0.25);
+  color: var(--on-photo);
+  box-shadow: var(--shadow-departure);
   font-family: var(--mono);
 }
 .dx-board-head {
@@ -622,7 +606,7 @@ a.dg-similar-card:hover {
   gap: 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--board-line);
-  font-size: 0.7rem;
+  font-size: var(--text-3);
   font-weight: 500;
   letter-spacing: 0.14em;
   color: var(--board-muted);
@@ -642,12 +626,12 @@ a.dg-similar-card:hover {
   align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid var(--board-line);
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   font-weight: 500;
-  color: #cbd5d1;
+  color: var(--board-dim);
 }
 .dx-board li a {
-  color: #fff;
+  color: var(--on-photo);
   text-decoration: none;
   white-space: nowrap;
   overflow: hidden;
@@ -659,7 +643,7 @@ a.dg-similar-card:hover {
 .dx-board p {
   margin-top: 12px;
   font-family: inherit;
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   color: var(--board-muted);
 }
 
@@ -667,7 +651,7 @@ a.dg-similar-card:hover {
 .dx-filters {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 18px 20px;
   display: flex;
@@ -680,7 +664,7 @@ a.dg-similar-card:hover {
   gap: 8px;
 }
 .dx-filter-label {
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   font-weight: 600;
 }
 .dx-chips {
@@ -690,12 +674,12 @@ a.dg-similar-card:hover {
 }
 .dx-chips button {
   font: inherit;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   font-weight: 600;
   min-height: 44px;
   min-width: 52px;
   padding: 0 14px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   cursor: pointer;
   background: var(--surface);
   color: var(--text);
@@ -719,7 +703,7 @@ a.dg-similar-card:hover {
   scroll-margin-top: 16px;
 }
 .dx .dx-section h2 {
-  font-size: 1.15rem;
+  font-size: var(--text-12);
   font-weight: 700;
   letter-spacing: 0;
 }
@@ -764,7 +748,7 @@ a.dg-similar-card:hover {
   flex-direction: column;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius-card-lg);
   box-shadow: var(--shadow);
   transition: transform 0.15s ease;
 }
@@ -774,14 +758,14 @@ a.dg-similar-card:hover {
 .dx-card-photo {
   position: relative;
   aspect-ratio: 16 / 10;
-  border-radius: 15px 15px 0 0;
+  border-radius: calc(var(--radius-card-lg) - 1px) calc(var(--radius-card-lg) - 1px) 0 0;
   background: var(--surface-2);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   font-family: var(--mono);
-  font-size: 2.25rem;
+  font-size: var(--text-20);
   font-weight: 500;
   color: var(--standby-ink);
 }
@@ -790,7 +774,7 @@ a.dg-similar-card:hover {
   height: 100%;
   object-fit: cover;
   font-family: Inter, system-ui, sans-serif;
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   color: var(--muted);
 }
 .dx-badge {
@@ -798,11 +782,11 @@ a.dg-similar-card:hover {
   left: 12px;
   top: 12px;
   padding: 5px 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--accent);
   color: var(--accent-text);
   font-family: Inter, system-ui, sans-serif;
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   font-weight: 600;
 }
 .dx-card-body {
@@ -813,7 +797,7 @@ a.dg-similar-card:hover {
   flex-grow: 1;
 }
 .dx-card h3 {
-  font-size: 1.15rem;
+  font-size: var(--text-12);
   font-weight: 800;
   line-height: 1.2;
 }
@@ -832,9 +816,9 @@ a.dg-similar-card:hover {
 }
 .dx-pills > span {
   padding: 5px 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--surface-2);
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   font-weight: 600;
 }
 .dx-perf {
@@ -850,7 +834,7 @@ a.dg-similar-card:hover {
   top: -11px;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--bg);
 }
 .dx-perf::before {
@@ -871,7 +855,7 @@ a.dg-similar-card:hover {
   gap: 8px;
   margin-bottom: 6px;
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: var(--text-3);
   font-weight: 500;
   letter-spacing: 0.14em;
   color: var(--muted);
@@ -890,9 +874,9 @@ a.dg-similar-card:hover {
   align-items: center;
   justify-content: center;
   height: 24px;
-  border-radius: 5px;
+  border-radius: var(--radius-flap);
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: var(--text-3);
   font-weight: 500;
   color: var(--muted);
 }
@@ -913,12 +897,12 @@ a.dg-similar-card:hover {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   font-weight: 600;
 }
 .dx-card-actions .dx-standby {
   padding: 0 14px;
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   border: 1px solid var(--border);
   background: var(--surface-2);
   color: var(--text);
@@ -939,12 +923,12 @@ a.dg-similar-card:hover {
   gap: 12px;
   min-height: 52px;
   padding: 0 16px;
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   font-weight: 600;
 }
 .dx-countries a:hover,
@@ -952,7 +936,7 @@ a.dg-similar-card:hover {
   border-color: var(--accent);
 }
 .dx-countries a > span:first-child {
-  font-size: 1.3rem;
+  font-size: var(--text-14);
 }
 .dx-countries a > span:nth-child(2) {
   flex-grow: 1;
@@ -960,7 +944,7 @@ a.dg-similar-card:hover {
 .dx-count {
   white-space: nowrap;
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: var(--text-3);
   font-weight: 400;
   letter-spacing: 0.06em;
   color: var(--muted);
@@ -969,7 +953,7 @@ a.dg-similar-card:hover {
 .dx-cta {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius-card-lg);
   padding: 32px;
   display: flex;
   flex-wrap: wrap;
@@ -985,7 +969,7 @@ a.dg-similar-card:hover {
   gap: 8px;
 }
 .dx .dx-cta h2 {
-  font-size: 1.6rem;
+  font-size: var(--text-17);
   font-weight: 800;
   letter-spacing: -0.02em;
 }
@@ -994,7 +978,7 @@ a.dg-similar-card:hover {
 }
 .dx-cta-label {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: var(--text-3);
   font-weight: 500;
   letter-spacing: 0.14em;
   color: var(--standby-ink);
@@ -1009,7 +993,7 @@ a.dg-similar-card:hover {
 .dx-cta-actions a:not(.btn) {
   font-weight: 600;
 }
-@media (max-width: 560px) {
+@media (max-width: 520px) {
   .dx-cta {
     padding: 24px 20px;
   }
@@ -1025,7 +1009,7 @@ a.dg-similar-card:hover {
   padding: 10px 56px 10px 16px;
   padding-top: max(10px, env(safe-area-inset-top));
   position: relative;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   font-weight: 600;
   text-align: center;
   background: var(--accent-soft);
@@ -1043,7 +1027,7 @@ a.dg-similar-card:hover {
 }
 .site-banner.celebrate {
   background: var(--board);
-  color: #fff;
+  color: var(--on-photo);
   border-bottom-color: var(--board-line);
 }
 .site-banner.celebrate a {
@@ -1051,7 +1035,7 @@ a.dg-similar-card:hover {
 }
 .site-banner.warning {
   background: var(--standby);
-  color: #fff;
+  color: var(--on-photo);
   border-bottom-color: transparent;
 }
 .site-banner-close {
@@ -1064,9 +1048,9 @@ a.dg-similar-card:hover {
   border: 0;
   background: none;
   color: inherit;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }
 .site-banner-close:hover {
   background: color-mix(in srgb, currentColor 12%, transparent);
@@ -1100,7 +1084,7 @@ a.dg-similar-card:hover {
 }
 .hb-months > div {
   padding: 14px 16px;
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   border: 1px solid var(--border);
   background: var(--surface);
   display: flex;
@@ -1112,7 +1096,7 @@ a.dg-similar-card:hover {
 }
 .hb-months dt {
   font-family: var(--mono);
-  font-size: 0.75rem;
+  font-size: var(--text-4);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
@@ -1122,7 +1106,7 @@ a.dg-similar-card:hover {
 }
 .hb-months dd {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   line-height: 1.5;
 }
 .hb-months dd a {
@@ -1136,7 +1120,7 @@ a.dg-similar-card:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 6px 18px;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 .hb-az a {
   color: var(--text);

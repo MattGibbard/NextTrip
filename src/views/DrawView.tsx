@@ -92,7 +92,7 @@ export function DrawView() {
             <div className="eyebrow">Final call · {unseen.name}</div>
             <h2 className="display-2">🎟️ {unseen.name} has been drawn!</h2>
             <p className="muted">Ready to find out where you're going?</p>
-            <button className="btn bright large glow" onClick={() => setRevealing(unseen)}>
+            <button className="btn large glow" onClick={() => setRevealing(unseen)}>
               Reveal the winner
             </button>
           </div>
@@ -219,7 +219,7 @@ function StartRound({ lastPoints, roundNo }: { lastPoints: number; roundNo: numb
                 </span>
               </label>
               {error && <p className="error-text">{error}</p>}
-              <button className="btn bright large" onClick={start} disabled={matching.length < 2 || !!whenChecked.error}>
+              <button className="btn large block" onClick={start} disabled={matching.length < 2 || !!whenChecked.error}>
                 🎟️ Start round with {plural(points, "point")} each
               </button>
             </div>
@@ -386,7 +386,7 @@ function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => vo
           <h2 className="display-2">Everyone's locked in</h2>
           <p className="muted">Time to find out where you're going. There's one draw and no re-rolls.</p>
           {error && <p className="error-text">{error}</p>}
-          <button className="btn bright large glow" onClick={draw} disabled={drawing}>
+          <button className="btn large glow" onClick={draw} disabled={drawing}>
             {drawing ? "Drawing…" : "🎟️ Draw the winner"}
           </button>
           {iLocked && (
@@ -559,7 +559,7 @@ function Allocator({ round }: { round: Round }) {
         </div>
         <div className="pb-right">
           <span className="veto-pill desktop-only">{vetoText}</span>
-          <button className={`btn bright ${left === 0 ? "glow" : ""}`} disabled={left !== 0} onClick={lock}>
+          <button className={`btn ${left === 0 ? "glow" : ""}`} disabled={left !== 0} onClick={lock}>
             {left === 0 ? "🔒 Lock in my points" : `Spend ${plural(left, "more point")} to lock in`}
           </button>
         </div>
@@ -840,7 +840,7 @@ function Reveal({ round, onDone, onClose }: { round: Round; onDone: () => void; 
       <div className="reveal-actions">
         {done ? (
           <>
-            <button className="btn ghost-link" onClick={() => setRun((n) => n + 1)}>
+            <button className="btn plain" onClick={() => setRun((n) => n + 1)}>
               ↻ Replay
             </button>
             {!showBreakdown && (
@@ -852,13 +852,13 @@ function Reveal({ round, onDone, onClose }: { round: Round; onDone: () => void; 
               Done
             </button>
             {planIdea && (
-              <a className="btn bright" href={`#/next/${planIdea.id}/plan`}>
+              <a className="btn" href={`#/next/${planIdea.id}/plan`}>
                 Start planning
               </a>
             )}
           </>
         ) : (
-          <button className="btn bright large" disabled>
+          <button className="btn large" disabled>
             Drawing…
           </button>
         )}

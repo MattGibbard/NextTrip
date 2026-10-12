@@ -33,25 +33,25 @@
 }
 
 .mono-label {
-  font: 500 0.7rem var(--mono);
+  font: 500 var(--text-3) var(--mono);
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 .eyebrow {
-  font: 500 0.75rem var(--mono);
+  font: 500 var(--text-4) var(--mono);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 0.5rem;
 }
 .display {
-  font-size: 1.8rem;
+  font-size: var(--text-18);
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.15;
 }
 .display-2 {
-  font-size: 1.35rem;
+  font-size: var(--text-14);
   font-weight: 800;
 }
 @media (min-width: 760px) {
@@ -59,7 +59,7 @@
     font-size: clamp(2rem, 3.4vw, 2.5rem);
   }
   .display-2 {
-    font-size: 1.75rem;
+    font-size: var(--text-18);
   }
 }
 .ellipsis {
@@ -73,20 +73,13 @@
 .page-sub {
   margin-top: 0.35rem;
 }
-.btn.bright {
-  background: var(--board-lit);
-  color: #052e2a;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
 .photo {
   background: var(--surface-2) center / cover no-repeat;
 }
 .photo.placeholder {
   display: grid;
   place-items: center;
-  font-size: 2.2rem;
+  font-size: var(--text-20);
   text-align: center;
   background: linear-gradient(135deg, var(--accent-soft), var(--surface-2));
 }
@@ -117,9 +110,9 @@
   flex: 1;
   text-align: center;
   background: var(--board);
-  color: #fff;
-  border-radius: 5px;
-  font: 500 1.25rem/2.25rem var(--mono);
+  color: var(--on-photo);
+  border-radius: var(--radius-flap);
+  font: 500 var(--text-13)/2.25rem var(--mono);
   overflow: hidden;
 }
 .flap::after {
@@ -147,12 +140,12 @@
     gap: 4px;
   }
   .flap {
-    border-radius: 8px;
-    font-size: 2.9rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-22);
     line-height: 4.75rem;
   }
   .flaps .mono-label {
-    font-size: 0.75rem;
+    font-size: var(--text-4);
     letter-spacing: 0.12em;
   }
 }
@@ -169,10 +162,10 @@
   flex-shrink: 0;
   border: 1px solid var(--border);
   background: var(--surface);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0.3rem 0.7rem;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   cursor: pointer;
 }
 .mode-chip.on {
@@ -186,7 +179,7 @@
     margin-bottom: 2rem;
   }
   .mode-chip {
-    font-size: 0.85rem;
+    font-size: var(--text-6);
     padding: 0.4rem 0.8rem;
   }
 }
@@ -198,7 +191,7 @@
   gap: 0.75rem;
 }
 .year-label {
-  font: 500 0.85rem var(--mono);
+  font: 500 var(--text-6) var(--mono);
   letter-spacing: 0.1em;
   color: var(--accent);
 }
@@ -208,7 +201,7 @@
 }
 .pass-stub {
   background: var(--mode);
-  color: #fff;
+  color: var(--on-photo);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -218,16 +211,16 @@
 .stub-text {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font: 500 0.6rem var(--mono);
+  font: 500 var(--text-1) var(--mono);
   letter-spacing: 0.14em;
   white-space: nowrap;
 }
 .stub-no {
-  font: 500 0.7rem var(--mono);
+  font: 500 var(--text-3) var(--mono);
 }
 @media (min-width: 760px) {
   .stub-text {
-    font-size: 0.7rem;
+    font-size: var(--text-3);
     letter-spacing: 0.16em;
   }
 }
@@ -239,7 +232,7 @@
   gap: 0.6rem;
 }
 .route-line .code {
-  font: 500 2.25rem/1 var(--mono);
+  font: 500 var(--text-20)/1 var(--mono);
   letter-spacing: -0.02em;
 }
 .route-names {
@@ -249,7 +242,7 @@
   margin-top: 0.3rem;
 }
 .route-line .code-name {
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   opacity: 0.85;
   max-width: 50%;
 }
@@ -277,7 +270,7 @@
     display: flex;
   }
   .route-icon {
-    font-size: 1.4rem;
+    font-size: var(--text-15);
   }
 }
 
@@ -286,10 +279,10 @@
   position: relative;
   display: grid;
   background: var(--flight);
-  color: #fff;
-  border-radius: 18px;
+  color: var(--on-photo);
+  border-radius: var(--radius-sheet);
   margin: 0.5rem 0 1rem;
-  box-shadow: 0 10px 30px rgb(15 118 110 / 0.25);
+  box-shadow: var(--shadow-departure);
   --mode-line: rgb(255 255 255 / 0.55);
 }
 .departure a {
@@ -312,14 +305,14 @@
   opacity: 0.85;
 }
 .departure-badge {
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   font-weight: 700;
   padding: 0.2rem 0.6rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: rgb(255 255 255 / 0.16);
 }
 .departure-flags {
-  font-size: 2.5rem;
+  font-size: var(--text-21);
 }
 .departure-fields {
   display: grid;
@@ -330,37 +323,27 @@
 }
 .departure-fields .mono-label {
   opacity: 0.75;
-  font-size: 0.65rem;
+  font-size: var(--text-2);
 }
 .departure-length {
   display: block;
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   font-weight: 500;
   opacity: 0.8;
 }
 .departure-trip .tk-value {
-  font-size: 1.05rem;
+  font-size: var(--text-10);
   font-weight: 800;
 }
 .tk-value {
   font-weight: 600;
   margin-top: 0.25rem;
 }
-.departure-been {
-  border: 0;
-  border-radius: 10px;
-  padding: 0.65rem 0.9rem;
-  background: #fff;
-  color: var(--flight);
-  font-weight: 700;
-  cursor: pointer;
-  justify-content: center;
-}
 .departure-side {
   position: relative;
   border-left: 2px dashed rgb(255 255 255 / 0.5);
   overflow: hidden;
-  border-radius: 0 22px 22px 0;
+  border-radius: 0 var(--radius-pass) var(--radius-pass) 0;
 }
 .departure-actions {
   position: absolute;
@@ -373,18 +356,18 @@
 }
 .ticket-tag {
   align-self: flex-start;
-  font: 500 0.7rem var(--mono);
+  font: 500 var(--text-3) var(--mono);
   letter-spacing: 0.12em;
-  background: #fff;
+  background: var(--on-photo);
   color: var(--flight);
   padding: 0.25rem 0.5rem;
-  border-radius: 6px;
+  border-radius: var(--radius-tag);
 }
 .notch {
   position: absolute;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--bg);
 }
 .departure .notch.top {
@@ -398,7 +381,7 @@
 @media (min-width: 760px) {
   .departure {
     grid-template-columns: minmax(0, 1fr) 300px;
-    border-radius: 22px;
+    border-radius: var(--radius-pass);
     margin: 1rem 0 1.5rem;
   }
   .departure-main {
@@ -412,10 +395,10 @@
     padding-top: 1.1rem;
   }
   .departure-fields .tk-value {
-    font-size: 1rem;
+    font-size: var(--text-9);
   }
   .departure-trip .tk-value {
-    font-size: 1.35rem;
+    font-size: var(--text-14);
   }
   .departure .notch.top,
   .departure .notch.bottom {
@@ -443,25 +426,25 @@
 }
 .pass-photo {
   height: 220px;
-  font-size: 3rem;
+  font-size: var(--text-22);
 }
 .pass-main {
   position: relative;
   margin: -56px 1rem 0;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 18px;
-  box-shadow: 0 8px 24px rgb(0 0 0 / 0.1);
+  border-radius: var(--radius-sheet);
+  box-shadow: var(--shadow-pass-card);
 }
 .pass-head {
   display: flex;
   justify-content: space-between;
   gap: 0.75rem;
   background: var(--mode);
-  color: #fff;
-  border-radius: 17px 17px 0 0;
+  color: var(--on-photo);
+  border-radius: calc(var(--radius-card-lg) + 1px) calc(var(--radius-card-lg) + 1px) 0 0;
   padding: 0.55rem 1rem;
-  font: 500 0.7rem var(--mono);
+  font: 500 var(--text-3) var(--mono);
   letter-spacing: 0.14em;
 }
 .pass-top {
@@ -471,7 +454,7 @@
   gap: 0.65rem;
 }
 .pass-title {
-  font-size: 1.5rem;
+  font-size: var(--text-16);
   font-weight: 800;
   letter-spacing: -0.01em;
 }
@@ -492,7 +475,7 @@
   top: -11px;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--bg);
 }
 .pass-perf::before {
@@ -510,12 +493,12 @@
   gap: 0.65rem;
 }
 .pass-facts .mono-label {
-  font-size: 0.62rem;
+  font-size: var(--text-1);
   letter-spacing: 0.12em;
   color: var(--muted);
 }
 .pass-facts .tk-value {
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 .pass-tags {
   display: flex;
@@ -535,9 +518,9 @@
     margin: 0;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 22px;
+    border-radius: var(--radius-pass);
     overflow: hidden;
-    box-shadow: 0 10px 30px rgb(0 0 0 / 0.08);
+    box-shadow: var(--shadow-pass);
   }
   .pass-photo {
     height: auto;
@@ -558,7 +541,7 @@
     color: var(--mode-ink);
     padding: 0;
     border-radius: 0;
-    font-size: 0.75rem;
+    font-size: var(--text-4);
   }
   .pass-head span + span {
     color: var(--muted);
@@ -568,7 +551,7 @@
     gap: 1.1rem;
   }
   .pass-title {
-    font-size: 2rem;
+    font-size: var(--text-19);
   }
   .pass-perf {
     display: none;
@@ -580,11 +563,11 @@
     padding: 1rem 0 0;
   }
   .pass-facts .mono-label {
-    font-size: 0.7rem;
+    font-size: var(--text-3);
     letter-spacing: 0.14em;
   }
   .pass-facts .tk-value {
-    font-size: 1rem;
+    font-size: var(--text-9);
   }
   .pass-tags {
     padding: 0;
@@ -593,10 +576,10 @@
     display: flex;
     justify-content: space-between;
     padding: 1.4rem 0;
-    font-size: 1.4rem;
+    font-size: var(--text-15);
   }
   .pass-stub .stub-text {
-    font-size: 0.8rem;
+    font-size: var(--text-5);
     letter-spacing: 0.2em;
   }
   .pass .notch {
@@ -623,7 +606,7 @@
 
 .pass-notes {
   margin: 0;
-  font-size: 1rem;
+  font-size: var(--text-9);
   line-height: 1.55;
   white-space: pre-wrap;
 }
@@ -631,7 +614,7 @@
   height: 220px;
 }
 .pass-h2 {
-  font-size: 1.1rem;
+  font-size: var(--text-11);
   margin: 0 0 0.5rem;
 }
 @media (min-width: 760px) {
@@ -691,16 +674,16 @@
 .step-num {
   width: 26px;
   height: 26px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--map-idea);
-  color: #fff;
-  font-size: 0.75rem;
+  color: var(--on-photo);
+  font-size: var(--text-4);
   font-weight: 800;
   display: grid;
   place-items: center;
 }
 .step-name {
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   font-weight: 600;
 }
 
@@ -720,10 +703,10 @@
   padding: 0.7rem 1rem;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius-row);
 }
 .draw-odds {
-  font: 500 0.75rem var(--mono);
+  font: 500 var(--text-4) var(--mono);
   color: var(--muted);
   min-width: 2.5rem;
 }
@@ -756,34 +739,34 @@
   padding: 0.75rem 0.9rem;
   margin: 1rem 0;
   background: var(--board);
-  color: #fff;
-  border-radius: 14px;
-  font-size: 0.9rem;
+  color: var(--on-photo);
+  border-radius: var(--radius);
+  font-size: var(--text-7);
 }
 .draw-prompt-icon {
-  font-size: 1.25rem;
+  font-size: var(--text-13);
 }
 .draw-prompt .desktop-only {
-  color: #cbd5d1;
-  font-size: 0.9rem;
+  color: var(--board-dim);
+  font-size: var(--text-7);
 }
 @media (min-width: 760px) {
   .draw-prompt {
     gap: 1rem;
     padding: 1rem 1.25rem;
-    border-radius: 16px;
+    border-radius: var(--radius-card-lg);
     margin: 1.4rem 0;
-    font-size: 1rem;
+    font-size: var(--text-9);
   }
   .draw-prompt-icon {
-    font-size: 1.6rem;
+    font-size: var(--text-17);
   }
 }
 .standby-grid {
   display: grid;
   gap: 0.9rem;
 }
-@media (min-width: 700px) {
+@media (min-width: 760px) {
   .standby-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -800,7 +783,7 @@
   flex-direction: column;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius-card-lg);
   box-shadow: var(--shadow);
 }
 .standby-link {
@@ -813,19 +796,19 @@
 .standby-photo {
   position: relative;
   height: 140px;
-  border-radius: 15px 15px 0 0;
+  border-radius: calc(var(--radius-card-lg) - 1px) calc(var(--radius-card-lg) - 1px) 0 0;
   overflow: hidden;
 }
 .standby-tag {
   position: absolute;
   top: 12px;
   left: 12px;
-  font: 500 0.7rem var(--mono);
+  font: 500 var(--text-3) var(--mono);
   letter-spacing: 0.1em;
   background: var(--surface);
   color: var(--standby-ink);
   padding: 0.25rem 0.5rem;
-  border-radius: 6px;
+  border-radius: var(--radius-tag);
 }
 .perf {
   position: relative;
@@ -838,7 +821,7 @@
   top: -12px;
   width: 22px;
   height: 22px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--bg);
 }
 .perf::before {
@@ -862,10 +845,10 @@
   gap: 0.5rem;
 }
 .standby-flags {
-  font-size: 1.25rem;
+  font-size: var(--text-13);
 }
 .standby-name h3 {
-  font-size: 1.05rem;
+  font-size: var(--text-10);
   font-weight: 800;
 }
 .standby-body p {
@@ -878,7 +861,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   color: var(--muted);
 }
 .standby-foot .mono-label {
@@ -900,9 +883,9 @@
     gap: 0.25rem;
   }
   .standby-flags {
-    font-size: 1.4rem;
+    font-size: var(--text-15);
   }
   .standby-name h3 {
-    font-size: 1.15rem;
+    font-size: var(--text-12);
   }
 }

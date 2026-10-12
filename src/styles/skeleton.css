@@ -7,7 +7,7 @@
 .sk-bar,
 .sk-card {
   background: var(--sk);
-  border-radius: 6px;
+  border-radius: var(--radius-tag);
   animation: sk-pulse 1.4s ease-in-out infinite;
 }
 .sk-eyebrow {
@@ -32,7 +32,7 @@
 }
 .sk-card {
   aspect-ratio: 3 / 2;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }
 @media (min-width: 760px) {
   .sk-title {

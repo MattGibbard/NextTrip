@@ -119,7 +119,7 @@ export function CreatorsPage() {
 function InstagramButton({ label }: { label: string }) {
   return (
     <div className="lp-creators-ig">
-      <a className="btn lp-creators-btn" href={INSTAGRAM} target="_blank" rel="noopener me">
+      <a className="btn large" href={INSTAGRAM} target="_blank" rel="noopener me">
         <InstagramIcon /> {label}
       </a>
       <span className="muted small">@somewhereparty</span>

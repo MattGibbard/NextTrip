@@ -8,7 +8,7 @@
 }
 .settings-head .lede {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: var(--text-10);
 }
 .settings-layout {
   display: grid;
@@ -25,9 +25,9 @@
 .settings-nav a {
   flex-shrink: 0;
   padding: 0.65rem 0.9rem;
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
@@ -42,7 +42,7 @@
   background: var(--accent-soft);
   color: var(--accent);
 }
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   .settings-layout {
     grid-template-columns: 220px minmax(0, 1fr);
     gap: 2rem;
@@ -98,33 +98,11 @@
 .settings-card .btn {
   min-height: 44px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 .settings-card .btn.small {
   min-height: 40px;
-  font-size: 0.85rem;
-}
-.btn.ghost.soft {
-  background: var(--surface-2);
-}
-.btn.ghost.soft.done {
-  border-color: var(--accent);
-  background: var(--accent-soft);
-  color: var(--accent);
-}
-.btn.ghost.raised {
-  background: var(--surface);
-}
-.btn.plain {
-  background: transparent;
-  color: var(--muted);
-}
-.btn.plain:hover:not(:disabled) {
-  background: var(--surface-2);
-  color: var(--text);
-}
-.btn.plain.danger {
-  color: var(--danger);
+  font-size: var(--text-6);
 }
 .accent-text {
   color: var(--accent);
@@ -138,7 +116,7 @@
 }
 .person-card {
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   overflow: hidden;
 }
 .person-card.editing {
@@ -171,9 +149,9 @@
 }
 .tag {
   padding: 0.15rem 0.55rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--surface-2);
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   font-weight: 600;
 }
 .tag.accent {
@@ -234,7 +212,7 @@ fieldset.field legend {
   height: 2.5rem;
   border: 0;
   box-shadow: none;
-  color: #fff;
+  color: var(--on-photo);
   font-weight: 800;
 }
 .person-card-edit .color-swatch.on,
@@ -262,14 +240,14 @@ fieldset.field legend {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.4rem;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 
 /* Invite */
 .family-link {
   background: var(--surface-2);
   border: 1px dashed var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   padding: 0.9rem 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -293,7 +271,7 @@ fieldset.field legend {
   padding: 0 !important;
   border: 0 !important;
   background: transparent !important;
-  font: 400 0.95rem var(--mono) !important;
+  font: 400 var(--text-8) var(--mono) !important;
   text-overflow: ellipsis;
 }
 .settings-note {
@@ -302,7 +280,7 @@ fieldset.field legend {
   align-items: flex-start;
   padding: 0.75rem 0.9rem;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius-row);
 }
 .settings-note p {
   margin: 0;
@@ -317,11 +295,11 @@ fieldset.field legend {
   place-items: center;
   width: 1.5rem;
   height: 1.5rem;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--accent-soft);
   color: var(--accent);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
 }
 .settings-foot {
   display: flex;
@@ -337,9 +315,9 @@ fieldset.field legend {
   flex-direction: column;
   gap: 0.6rem;
   border: 1px solid var(--danger);
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   padding: 0.9rem 1rem;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 .settings-confirm .form-actions {
   margin: 0;
@@ -363,18 +341,18 @@ fieldset.field legend {
   min-height: 52px;
   padding: 0 0.9rem;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   background: var(--surface);
   text-align: left;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: var(--text-9);
   cursor: pointer;
 }
 .terminal-card:hover {
   background: var(--surface-2);
 }
 .terminal-card-code {
-  font: 500 1rem var(--mono);
+  font: 500 var(--text-9) var(--mono);
   letter-spacing: 0.04em;
   color: var(--accent);
 }
@@ -386,7 +364,7 @@ fieldset.field legend {
   white-space: nowrap;
 }
 .terminal-card-change {
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   font-weight: 600;
   color: var(--accent);
 }
@@ -415,7 +393,7 @@ fieldset.field legend {
   gap: 0.15rem;
 }
 .settings-row strong {
-  font-size: 0.95rem;
+  font-size: var(--text-8);
   font-weight: 600;
 }
 .settings-row .muted strong {
@@ -427,17 +405,17 @@ fieldset.field legend {
   padding: 0.25rem;
   gap: 0.25rem;
   background: var(--surface-2);
-  border-radius: 12px;
+  border-radius: var(--radius-row);
 }
 .segmented button {
   min-height: 40px;
   padding: 0 0.9rem;
   border: 0;
-  border-radius: 9px;
+  border-radius: var(--radius-segment);
   background: transparent;
   color: var(--muted);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   cursor: pointer;
 }
 .segmented button.on {
@@ -455,7 +433,7 @@ fieldset.field legend {
   white-space: nowrap;
 }
 .person-card-edit .color-row input[type="color"] {
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   overflow: hidden;
 }
 .person-card-edit .color-row input[type="color"]::-webkit-color-swatch-wrapper {
@@ -463,5 +441,5 @@ fieldset.field legend {
 }
 .person-card-edit .color-row input[type="color"]::-webkit-color-swatch {
   border: 0;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
 }

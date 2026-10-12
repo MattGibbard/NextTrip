@@ -36,36 +36,10 @@
   margin: 0;
   max-width: 620px;
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: var(--text-10);
 }
 .draw-lead.small-lead {
-  font-size: 0.95rem;
-}
-.btn.bright:hover:not(:disabled) {
-  background: #5eead4;
-}
-.btn.bright.large {
-  margin-top: 0;
-  min-height: 52px;
-  box-shadow: 0 0 0 4px rgb(45 212 191 / 0.18), 0 10px 30px rgb(15 118 110 / 0.25);
-}
-.btn.bright.glow {
-  animation: pulse-bright 1.8s infinite;
-}
-@keyframes pulse-bright {
-  0% {
-    box-shadow: 0 0 0 0 rgb(45 212 191 / 0.5);
-  }
-  70% {
-    box-shadow: 0 0 0 14px transparent;
-  }
-}
-.btn.ghost-link {
-  background: transparent;
-  color: var(--accent);
-}
-.btn.ghost-link:hover:not(:disabled) {
-  background: var(--accent-soft);
+  font-size: var(--text-8);
 }
 
 /* Start a round */
@@ -80,7 +54,7 @@
   min-width: 0;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius-card-lg);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
@@ -90,7 +64,7 @@
   gap: 12px;
   padding: 14px 20px;
   background: var(--flight);
-  color: #fff;
+  color: var(--on-photo);
 }
 .office-body {
   padding: 20px;
@@ -119,7 +93,7 @@
   gap: 4px;
   min-height: 44px;
   padding: 0 4px;
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   border: 1px solid var(--border);
   background: var(--bg);
 }
@@ -127,11 +101,11 @@
 .stepper button {
   width: 36px;
   height: 36px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   border: 1px solid var(--border);
   background: var(--surface-2);
   color: var(--text);
-  font-size: 1.1rem;
+  font-size: var(--text-11);
   font-weight: 700;
   line-height: 1;
   cursor: pointer;
@@ -144,7 +118,7 @@
 .count-stepper .value {
   flex: 1;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: var(--text-13);
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   color: var(--accent);
@@ -154,7 +128,7 @@
   flex-direction: column;
   gap: 14px;
   padding: 16px;
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   background: var(--bg);
   border: 1px solid var(--border);
 }
@@ -179,7 +153,7 @@
   gap: 14px;
   align-items: flex-start;
   padding: 14px 16px;
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   border: 1px solid var(--border);
   background: var(--surface-2);
   cursor: pointer;
@@ -195,7 +169,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 .draw-aside {
   flex: 1 1 320px;
@@ -206,9 +180,9 @@
 }
 .standby-board {
   background: var(--board);
-  color: #fff;
+  color: var(--on-photo);
   border: 1px solid var(--board-line);
-  border-radius: 14px;
+  border-radius: var(--radius);
   padding: 18px;
   display: flex;
   flex-direction: column;
@@ -232,10 +206,10 @@
   position: relative;
   width: 32px;
   text-align: center;
-  font: 500 1.6rem/2.6rem var(--mono);
+  font: 500 var(--text-17)/2.6rem var(--mono);
   background: #18201d;
   border: 1px solid var(--board-line);
-  border-radius: 5px;
+  border-radius: var(--radius-flap);
 }
 .sb-digit::after,
 .fb-flap::after {
@@ -260,13 +234,13 @@
   align-items: center;
   padding: 7px 0;
   border-top: 1px solid var(--board-line);
-  font: 500 0.9rem var(--mono);
+  font: 500 var(--text-7) var(--mono);
 }
 .sb-code {
-  color: #cbd5d1;
+  color: var(--board-dim);
 }
 .sb-state {
-  font-size: 0.7rem;
+  font-size: var(--text-3);
   letter-spacing: 0.1em;
   color: var(--board-lit);
 }
@@ -279,13 +253,13 @@
 }
 .sb-note {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   color: var(--board-muted);
 }
 .how-it-works {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: var(--radius);
   padding: 18px;
 }
 .how-it-works ol {
@@ -309,12 +283,12 @@
 .how-num {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--accent-soft);
   color: var(--accent);
   display: grid;
   place-items: center;
-  font: 500 0.8rem var(--mono);
+  font: 500 var(--text-5) var(--mono);
 }
 
 /* Spend your points */
@@ -329,14 +303,14 @@
   align-items: center;
   gap: 10px;
   padding: 6px 14px 6px 6px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--surface);
   border: 1px solid var(--border);
 }
 .crew-chip .avatar {
   width: 30px;
   height: 30px;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
 }
 .crew-text {
   display: flex;
@@ -344,11 +318,11 @@
   line-height: 1.2;
 }
 .crew-name {
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   font-weight: 600;
 }
 .crew-state {
-  font-size: 0.6rem;
+  font-size: var(--text-1);
   color: var(--muted);
 }
 .crew-state.on {
@@ -367,10 +341,10 @@
   justify-content: space-between;
   gap: 12px 16px;
   padding: 14px 18px;
-  border-radius: 14px;
+  border-radius: var(--radius);
   background: var(--accent-soft);
   border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
-  box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+  box-shadow: var(--shadow-lift);
 }
 :root[data-theme="dark"] .points-bar {
   border-color: #115e59;
@@ -389,17 +363,17 @@
   display: flex;
   align-items: baseline;
   gap: 8px;
-  font-size: 0.95rem;
+  font-size: var(--text-8);
 }
 .pb-count strong {
-  font-size: 1.6rem;
+  font-size: var(--text-17);
   line-height: 1.2;
   color: var(--accent);
   font-variant-numeric: tabular-nums;
 }
 .pb-count .save-state {
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: var(--text-5);
 }
 .pb-pips {
   display: flex;
@@ -409,7 +383,7 @@
 .pb-pips span {
   width: 22px;
   height: 8px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--bg);
 }
 .pb-pips span.on {
@@ -418,7 +392,7 @@
 .pb-meter {
   width: min(320px, 100%);
   height: 8px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--bg);
   overflow: hidden;
 }
@@ -443,10 +417,10 @@
   align-items: center;
   gap: 6px;
   padding: 6px 12px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--bg);
   border: 1px solid var(--border);
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   font-weight: 600;
 }
 .pb-picks {
@@ -480,7 +454,7 @@
   flex-direction: column;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius-card-lg);
   box-shadow: var(--shadow);
   transition: border-color 0.15s;
 }
@@ -503,10 +477,10 @@
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  font-size: 0.65rem;
+  font-size: var(--text-2);
 }
 .ac-title {
-  font-size: 1.15rem;
+  font-size: var(--text-12);
   font-weight: 800;
 }
 .alloc-card .details-line {
@@ -526,11 +500,11 @@
   min-height: 44px;
   padding: 0 10px;
   border: 0;
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   background: transparent;
   color: var(--danger);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   cursor: pointer;
 }
 .ac-veto:hover:not(:disabled) {
@@ -549,7 +523,7 @@
   gap: 4px;
 }
 .ac-tickets .mono-label {
-  font-size: 0.6rem;
+  font-size: var(--text-1);
   margin-right: 4px;
 }
 .stepper {
@@ -564,7 +538,7 @@
 .stepper .value {
   width: 32px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: var(--text-13);
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   color: var(--muted);
@@ -579,9 +553,9 @@
   transform: rotate(-8deg);
   padding: 4px 12px;
   border: 3px solid var(--danger);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   color: var(--danger);
-  font: 500 1.3rem var(--mono);
+  font: 500 var(--text-14) var(--mono);
   letter-spacing: 0.08em;
   background: color-mix(in srgb, var(--surface) 75%, transparent);
   pointer-events: none;
@@ -595,7 +569,7 @@
   padding: 2rem 1.25rem;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius-card-lg);
   box-shadow: var(--shadow);
 }
 .draw-ready-panel .eyebrow {
@@ -604,11 +578,6 @@
 .draw-ready-panel p {
   margin: 0 0 0.5rem;
 }
-.draw-ready-panel .btn.large {
-  width: auto;
-  padding: 0 28px;
-}
-
 /* The reveal: a split-flap departures board */
 .reveal {
   text-align: left;
@@ -623,13 +592,13 @@
   --group-gap: 8px;
   background: var(--board);
   border: 1px solid var(--board-line);
-  border-radius: 16px;
+  border-radius: var(--radius-card-lg);
   padding: 14px 12px 16px;
   box-shadow: 0 10px 30px rgb(0 0 0 / 0.3);
   display: flex;
   flex-direction: column;
   gap: 12px;
-  color: #fff;
+  color: var(--on-photo);
 }
 .fb-head {
   display: flex;
@@ -642,22 +611,22 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font: 500 1.1rem var(--mono);
+  font: 500 var(--text-11) var(--mono);
   letter-spacing: 0.12em;
 }
 .fb-icon {
   width: 32px;
   height: 32px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   background: var(--board-lit);
   display: grid;
   place-items: center;
-  font-size: 1.05rem;
+  font-size: var(--text-10);
   letter-spacing: 0;
 }
 .fb-meta {
-  color: #cbd5d1;
-  font-size: 0.6rem;
+  color: var(--board-dim);
+  font-size: var(--text-1);
 }
 .fb-rows {
   display: flex;
@@ -695,15 +664,15 @@
   place-items: center;
   width: var(--flap-w);
   height: var(--flap-h);
-  border-radius: 3px;
+  border-radius: var(--radius-xs);
   background: #161d1a;
   border: 1px solid #222b27;
-  font: 500 0.8rem var(--mono);
-  color: #fff;
+  font: 500 var(--text-5) var(--mono);
+  color: var(--on-photo);
   overflow: hidden;
 }
 .fb-remark .fb-flap {
-  color: #cbd5d1;
+  color: var(--board-dim);
 }
 .fb-row.dim .fb-group .fb-flap {
   color: #5f6b66;
@@ -718,7 +687,7 @@
   width: 8px;
   height: 8px;
   margin-left: auto;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   flex: none;
   background: #fbbf24;
 }
@@ -729,7 +698,7 @@
   background: var(--board-lit);
   box-shadow: 0 0 10px var(--board-lit);
 }
-@media (min-width: 641px) {
+@media (min-width: 760px) {
   .flap-board {
     --flap-w: 26px;
     --flap-h: 38px;
@@ -739,19 +708,19 @@
     gap: 14px;
   }
   .fb-title {
-    font-size: 1.6rem;
+    font-size: var(--text-17);
     gap: 14px;
   }
   .fb-icon {
     width: 40px;
     height: 40px;
-    font-size: 1.3rem;
+    font-size: var(--text-14);
   }
   .fb-meta {
-    font-size: 0.7rem;
+    font-size: var(--text-3);
   }
   .fb-cols {
-    font-size: 0.65rem;
+    font-size: var(--text-2);
   }
   .fb-rows {
     gap: 6px;
@@ -760,8 +729,8 @@
     padding-top: 5px;
   }
   .fb-flap {
-    border-radius: 4px;
-    font-size: 1.2rem;
+    border-radius: var(--radius-xs);
+    font-size: var(--text-13);
   }
   .fb-dot {
     width: 10px;
@@ -776,13 +745,13 @@
     --group-gap: 24px;
   }
   .fb-flap {
-    font-size: 1.3rem;
+    font-size: var(--text-14);
   }
 }
 .odds-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: var(--radius);
   padding: 18px 20px;
 }
 .odds-card .table-wrap {
@@ -799,7 +768,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   font-weight: 600;
 }
 .odds-legend .dot,
@@ -812,13 +781,13 @@
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 .odds-table th,
 .breakdown th {
   padding: 0 12px 8px;
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: var(--text-2);
   white-space: nowrap;
 }
 .odds-table th,
@@ -864,7 +833,7 @@
 .odds-pips span {
   width: 10px;
   height: 14px;
-  border-radius: 3px;
+  border-radius: var(--radius-xs);
 }
 .odds-bar {
   display: flex;
@@ -873,7 +842,7 @@
   height: 10px;
 }
 .odds-bar span {
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 }
 .odds-table td:first-child {
   min-width: 160px;
@@ -884,13 +853,6 @@
   justify-content: center;
   gap: 8px;
 }
-.reveal-actions .btn {
-  min-height: 44px;
-}
-.reveal-actions .btn.large {
-  width: auto;
-  padding: 0 28px;
-}
 
 /* Past draws, as winning tickets */
 .history h2 {
@@ -899,7 +861,7 @@
 .history-row {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: var(--radius);
   margin-bottom: 0.6rem;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -924,7 +886,7 @@
   flex: none;
   display: grid;
   place-items: center;
-  font-size: 1.35rem;
+  font-size: var(--text-14);
   background: var(--mode);
 }
 .history-row.sealed .hs-stub {
@@ -952,7 +914,7 @@
   letter-spacing: 0.06em;
 }
 .hs-title {
-  font-size: 1.15rem;
+  font-size: var(--text-12);
   font-weight: 800;
 }
 .history-row.sealed .hs-title {
@@ -963,15 +925,15 @@
   align-items: center;
   gap: 6px;
   padding: 6px 12px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: color-mix(in srgb, var(--gold) 14%, transparent);
   color: var(--gold);
 }
 .hs-more {
   padding: 6px 12px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   border: 1px solid var(--border);
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   font-weight: 600;
   white-space: nowrap;
 }
@@ -997,7 +959,7 @@
     padding: 14px 18px;
   }
   .hs-title {
-    font-size: 1.2rem;
+    font-size: var(--text-13);
   }
 }
 @media (max-width: 759px) {
@@ -1015,12 +977,6 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .btn.bright.glow {
-    animation: none;
-  }
-}
-
 /* ---------- Trip dates (start of a round, and changeable after) ---------- */
 .dates-field {
   display: flex;
@@ -1072,7 +1028,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 14px;
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   border: 1px solid var(--border);
   background: var(--bg);
 }

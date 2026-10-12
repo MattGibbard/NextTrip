@@ -12,7 +12,7 @@
   letter-spacing: -0.02em;
 }
 .intro .lead {
-  font-size: 1.1rem;
+  font-size: var(--text-11);
   color: var(--muted);
   max-width: 34rem;
 }
@@ -25,9 +25,6 @@
   flex-direction: column;
   gap: 0.6rem;
   margin: 0;
-}
-.signin .btn.large {
-  margin-top: 0.2rem;
 }
 @media (min-width: 760px) {
   .intro:not(.narrow) {
@@ -111,7 +108,7 @@
   display: flex;
   align-items: center;
   gap: 28px;
-  font-size: 0.95rem;
+  font-size: var(--text-8);
   font-weight: 600;
 }
 .lp-nav a {
@@ -120,13 +117,6 @@
 }
 .lp-nav a:hover {
   color: var(--accent);
-}
-.lp-top-signin {
-  min-height: 44px;
-  padding: 0 16px;
-  background: var(--surface);
-  text-decoration: none;
-  font-size: 0.95rem;
 }
 /* On phones the header keeps just the Inspire link; the section links come back on wider screens. */
 .lp-nav a:not(.lp-nav-keep) {
@@ -163,11 +153,11 @@
   text-transform: uppercase;
 }
 .lp-kicker {
-  font-size: 0.75rem;
+  font-size: var(--text-4);
   color: var(--accent);
 }
 .lp-lead {
-  font-size: 1.1rem;
+  font-size: var(--text-11);
   line-height: 1.5;
   color: var(--muted);
 }
@@ -193,14 +183,14 @@
   letter-spacing: -0.03em;
 }
 .lp-hero .lp-lead {
-  font-size: 1.15rem;
+  font-size: var(--text-12);
   max-width: 520px;
 }
 .lp-perks {
   display: flex;
   flex-wrap: wrap;
   gap: 6px 16px;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   color: var(--muted);
 }
 .lp-perks strong {
@@ -225,7 +215,7 @@
   max-width: 520px;
 }
 .lp-form label {
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   font-weight: 600;
 }
 .lp-form-row {
@@ -244,15 +234,15 @@
   color: var(--text);
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius-control);
 }
 .lp-form .btn {
   flex: 1 0 auto;
   height: 52px;
   padding: 0 22px;
-  font-size: 1rem;
+  font-size: var(--text-9);
 }
-@media (min-width: 480px) {
+@media (min-width: 521px) {
   .lp-form .btn {
     flex-grow: 0;
   }
@@ -288,26 +278,26 @@
 .lp-pass {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 22px;
+  border-radius: var(--radius-pass);
   box-shadow: 0 10px 30px color-mix(in srgb, var(--flight) 25%, transparent);
   overflow: hidden;
 }
 .lp-pass-head {
   background: var(--flight);
-  color: #fff;
+  color: var(--on-photo);
   padding: 14px 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  font-size: 0.72rem;
+  font-size: var(--text-3);
 }
 .lp-pass-tag {
-  background: #fff;
+  background: var(--on-photo);
   color: var(--flight);
   padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 0.68rem;
+  border-radius: var(--radius-tag);
+  font-size: var(--text-2);
   letter-spacing: 0.1em;
   white-space: nowrap;
 }
@@ -348,7 +338,7 @@
   border-top: 2px dashed var(--flight-line);
 }
 .lp-pass-title {
-  font-size: 1.6rem;
+  font-size: var(--text-17);
   font-weight: 800;
   letter-spacing: -0.01em;
   line-height: 1.2;
@@ -364,7 +354,7 @@
   gap: 2px;
 }
 .lp-pass-facts span {
-  font-size: 0.66rem;
+  font-size: var(--text-2);
   color: var(--muted);
 }
 .lp-pass-tear {
@@ -379,7 +369,7 @@
   top: -16px;
   width: 30px;
   height: 30px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--bg);
 }
 .lp-pass-tear::before {
@@ -394,11 +384,11 @@
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   color: var(--muted);
 }
 .lp-pass-win {
-  font-size: 0.68rem;
+  font-size: var(--text-2);
   color: var(--flight-ink);
   white-space: nowrap;
 }
@@ -416,7 +406,7 @@
   display: flex;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
 }
@@ -430,8 +420,8 @@
 .lp-stub span {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 0.6rem;
-  color: #fff;
+  font-size: var(--text-1);
+  color: var(--on-photo);
 }
 .lp-mini-body,
 .lp-standby {
@@ -444,10 +434,10 @@
 .lp-standby {
   background: var(--surface);
   border: 1px dashed var(--standby-line);
-  border-radius: 16px;
+  border-radius: var(--radius-card-lg);
 }
 .lp-mini-label {
-  font-size: 0.62rem;
+  font-size: var(--text-1);
 }
 .lp-mini-label.train {
   color: var(--train-ink);
@@ -463,8 +453,8 @@
 }
 .lp-board {
   background: var(--board);
-  color: #fff;
-  border-radius: 16px;
+  color: var(--on-photo);
+  border-radius: var(--radius-card-lg);
   padding: 32px;
   display: flex;
   flex-direction: column;
@@ -476,7 +466,7 @@
   gap: 8px;
 }
 .lp-board-label {
-  font-size: 0.75rem;
+  font-size: var(--text-4);
   color: var(--board-muted);
 }
 .lp-board h2 {
@@ -499,12 +489,12 @@
 }
 .lp-board-cols {
   padding: 0 0 10px;
-  font-size: 0.68rem;
+  font-size: var(--text-2);
   color: var(--board-muted);
 }
 .lp-board-num {
   font-family: var(--mono);
-  font-size: 1.4rem;
+  font-size: var(--text-15);
   color: var(--board-lit);
 }
 .lp-board-what {
@@ -513,20 +503,20 @@
   gap: 4px;
 }
 .lp-board-what strong {
-  font-size: 1.1rem;
+  font-size: var(--text-11);
 }
 .lp-board-what span {
-  color: #cbd5d1;
-  font-size: 0.95rem;
+  color: var(--board-dim);
+  font-size: var(--text-8);
 }
 .lp-board-status {
-  font-size: 0.75rem;
-  color: #cbd5d1;
+  font-size: var(--text-4);
+  color: var(--board-dim);
 }
 .lp-board-status.lit {
   color: var(--board-lit);
 }
-@media (max-width: 640px) {
+@media (max-width: 759px) {
   .lp-board {
     padding: 24px 20px;
   }
@@ -579,11 +569,11 @@
   gap: 12px;
 }
 .lp-feature h3 {
-  font-size: 1.2rem;
+  font-size: var(--text-13);
   font-weight: 800;
 }
 .lp-feature-icon {
-  font-size: 1.8rem;
+  font-size: var(--text-18);
   line-height: 1;
 }
 .lp-feature-foot {
@@ -597,11 +587,11 @@
   padding-top: 6px;
 }
 .lp-modes span {
-  font-size: 0.66rem;
+  font-size: var(--text-2);
   letter-spacing: 0.12em;
-  color: #fff;
+  color: var(--on-photo);
   padding: 5px 9px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 }
 .lp-modes .flight,
 .lp-stamps .flight {
@@ -624,7 +614,7 @@
 .lp-stamps {
   background: var(--paper);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   padding: 12px;
   display: flex;
   gap: 10px;
@@ -638,17 +628,17 @@
   align-items: center;
   justify-content: center;
   font-family: var(--mono);
-  font-size: 0.75rem;
+  font-size: var(--text-4);
   font-weight: 500;
   letter-spacing: 0.08em;
   color: var(--c);
 }
 .lp-stamps .round {
-  border-radius: 50%;
+  border-radius: var(--radius-round);
 }
 .lp-stamps .square {
   border-style: dashed;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }
 .lp-stamps span:nth-child(1) {
   transform: rotate(-8deg);
@@ -663,16 +653,16 @@
   filter: brightness(1.5);
 }
 .lp-chips span {
-  font-size: 0.82rem;
+  font-size: var(--text-5);
   font-weight: 600;
   background: var(--accent-soft);
   color: var(--text);
   padding: 5px 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 }
 .lp-points {
   background: var(--accent-soft);
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   padding: 12px 14px;
   display: flex;
   align-items: center;
@@ -684,26 +674,26 @@
   flex-direction: column;
 }
 .lp-points strong {
-  font-size: 1.6rem;
+  font-size: var(--text-17);
   line-height: 1.1;
   color: var(--accent);
   font-variant-numeric: tabular-nums;
 }
 .lp-points div span {
-  font-size: 0.8rem;
+  font-size: var(--text-5);
 }
 .lp-veto {
-  font-size: 0.82rem;
+  font-size: var(--text-5);
   font-weight: 600;
   background: var(--surface);
   padding: 5px 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 }
 /* The Trip plan card: a countdown on the departures board and the budget so far. */
 .lp-plan {
   background: var(--board);
-  color: #fff;
-  border-radius: 10px;
+  color: var(--on-photo);
+  border-radius: var(--radius-control);
   padding: 9px 11px;
   display: flex;
   flex-direction: column;
@@ -727,9 +717,9 @@
 }
 .lp-flaps span {
   position: relative;
-  font: 500 0.9rem/1 var(--mono);
+  font: 500 var(--text-7)/1 var(--mono);
   background: var(--board-line);
-  border-radius: 3px;
+  border-radius: var(--radius-xs);
   padding: 0.22rem 0.24rem;
   min-width: 0.85rem;
   text-align: center;
@@ -744,7 +734,7 @@
 }
 .lp-plan-bar {
   height: 4px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--board-line);
   overflow: hidden;
 }
@@ -755,11 +745,11 @@
   background: var(--board-lit);
 }
 .lp-plan-money {
-  font-size: 0.72rem;
+  font-size: var(--text-3);
   color: var(--board-muted);
 }
 .lp-plan-money strong {
-  color: #fff;
+  color: var(--on-photo);
 }
 .lp-why {
   background: var(--surface);
@@ -783,7 +773,7 @@
   border-top: 3px solid var(--accent);
 }
 .lp-reason h3 {
-  font-size: 1.25rem;
+  font-size: var(--text-13);
   font-weight: 800;
   line-height: 1.2;
 }
@@ -796,15 +786,15 @@
 .lp-cta {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 22px;
-  box-shadow: 0 10px 30px rgb(0 0 0 / 0.08);
+  border-radius: var(--radius-pass);
+  box-shadow: var(--shadow-pass);
   overflow: hidden;
 }
 .lp-cta-strip {
   background: var(--flight);
-  color: #fff;
+  color: var(--on-photo);
   padding: 14px 28px;
-  font-size: 0.72rem;
+  font-size: var(--text-3);
 }
 .lp-cta-body {
   padding: 40px 28px 44px;

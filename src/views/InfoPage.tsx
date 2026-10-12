@@ -115,7 +115,7 @@ function HeroButton({ label, url }: { label: string; url: string }) {
   const instagram = /instagram\.com\/somewhereparty/i.test(url);
   return (
     <div className="lp-creators-ig">
-      <a className="btn lp-creators-btn" href={url} {...(external ? { target: "_blank", rel: instagram ? "noopener me" : "noopener" } : {})}>
+      <a className="btn large" href={url} {...(external ? { target: "_blank", rel: instagram ? "noopener me" : "noopener" } : {})}>
         {instagram && <InstagramIcon />} {label}
       </a>
       {instagram && <span className="muted small">@somewhereparty</span>}

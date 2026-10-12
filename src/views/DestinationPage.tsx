@@ -152,21 +152,21 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
                 {signedIn ? (
                   <>
                     {onList ? (
-                      <a className="btn dg-btn" href={`/#/next/${onList.id}`}>
+                      <a className="btn" href={`/#/next/${onList.id}`}>
                         See it in your ideas
                       </a>
                     ) : (
-                      <a className="btn dg-btn" href={`/#/next/add/${d.slug}`}>
+                      <a className="btn" href={`/#/next/add/${d.slug}`}>
                         Add to ideas
                       </a>
                     )}
-                    <a className="btn ghost dg-btn" href={`/#/been/add/${d.slug}`}>
+                    <a className="btn ghost" href={`/#/been/add/${d.slug}`}>
                       We've been! Add trip
                     </a>
                   </>
                 ) : (
                   <>
-                    <a className="btn dg-btn" href="/#signin">
+                    <a className="btn" href="/#signin">
                       Add {d.name} to your ideas
                     </a>
                     <span className="muted small">Free. One email per family.</span>
@@ -356,7 +356,7 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
               <h2>Can't agree where to go next?</h2>
               <p>Put {d.name} on standby with everyone's other ideas. You each spread your points in secret, get one veto, and the draw picks where you go.</p>
             </div>
-            <a className="btn dg-btn" href="/#signin">
+            <a className="btn" href="/#signin">
               Start planning, it's free
             </a>
           </section>
@@ -683,7 +683,7 @@ export function DestinationsIndex({ family }: { family?: Family }) {
                 <p className="muted">Put it on standby with the rest of your family's ideas. Everyone spreads their points in secret, gets one veto, and the draw picks where you go.</p>
               </div>
               <div className="dx-cta-actions">
-                <a className="btn dg-btn" href="/#signin">
+                <a className="btn" href="/#signin">
                   Start planning
                 </a>
                 <a href="/#how">How the draw works</a>

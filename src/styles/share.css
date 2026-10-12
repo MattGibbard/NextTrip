@@ -4,9 +4,9 @@
 .places-share {
   margin: 1rem 0;
   padding: 22px 28px;
-  border-radius: 16px;
+  border-radius: var(--radius-card-lg);
   background: var(--board);
-  box-shadow: 0 8px 30px rgb(0 0 0 / 0.18);
+  box-shadow: var(--shadow-coverage);
   display: flex;
   align-items: center;
   gap: 28px;
@@ -29,14 +29,14 @@
 .places-share-label i {
   width: 8px;
   height: 8px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--board-lit);
 }
 .places-share-tiles {
   display: flex;
   gap: 4px;
   font: 500 22px var(--mono);
-  color: #ffffff;
+  color: var(--on-photo);
 }
 .places-share-tiles span {
   width: 30px;
@@ -46,7 +46,7 @@
   align-items: center;
   justify-content: center;
   background: var(--board-line);
-  border-radius: 5px;
+  border-radius: var(--radius-flap);
 }
 .places-share-tiles span:first-child {
   color: var(--board-lit);
@@ -61,7 +61,7 @@
   .places-share {
     margin-top: 0.75rem;
     padding: 18px;
-    border-radius: 14px;
+    border-radius: var(--radius);
     flex-direction: column;
     align-items: stretch;
     gap: 14px;
@@ -84,7 +84,7 @@
     width: auto;
     min-width: 0;
     height: 30px;
-    border-radius: 4px;
+    border-radius: var(--radius-xs);
   }
   .places-share .btn {
     width: 100%;
@@ -95,7 +95,7 @@
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
 }
 .share-head {
   margin: 0.25rem 0 1.5rem;
@@ -103,7 +103,7 @@
 .share-head p {
   margin: 0.4rem 0 0;
   max-width: 40rem;
-  font-size: 1.05rem;
+  font-size: var(--text-10);
 }
 
 .share-layout {
@@ -138,7 +138,7 @@
 .share-formats button {
   min-height: 56px;
   padding: 0.6rem 0.75rem;
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
@@ -162,11 +162,11 @@
   gap: 0.4rem;
 }
 .share-format-top strong {
-  font-size: 0.95rem;
+  font-size: var(--text-8);
 }
 .share-format-top .mono {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: var(--text-3);
   letter-spacing: 0.06em;
   color: var(--muted);
 }
@@ -174,7 +174,7 @@
   color: var(--accent);
 }
 .share-format-where {
-  font-size: 0.75rem;
+  font-size: var(--text-4);
   font-weight: 600;
   color: var(--muted);
 }
@@ -196,8 +196,8 @@
   height: auto;
   max-width: 100%;
   max-height: 640px;
-  border-radius: 4px;
-  box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-lift);
   transition: opacity 0.2s;
 }
 .share-stage img.loading {
@@ -210,7 +210,7 @@
 
 .share-note {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   color: var(--muted);
 }
 
@@ -227,7 +227,7 @@
 }
 .share-section h2 {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: var(--text-12);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -241,7 +241,7 @@
   gap: 0.4rem;
 }
 .share-label {
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   font-weight: 600;
   line-height: 1.2;
 }
@@ -263,7 +263,7 @@
 }
 .share-themes button {
   padding: 4px;
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
@@ -279,7 +279,7 @@
   box-shadow: inset 0 0 0 1px var(--accent);
 }
 .share-themes button > span:last-child {
-  font-size: 0.75rem;
+  font-size: var(--text-4);
   font-weight: 600;
   line-height: 1.2;
   text-align: center;
@@ -288,7 +288,7 @@
 }
 .share-theme-chip {
   height: 40px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   border: 1px solid rgb(0 0 0 / 0.08);
   display: flex;
   align-items: center;
@@ -298,7 +298,7 @@
 .share-theme-chip i {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
 }
 
 .share-colours {
@@ -315,7 +315,7 @@
   width: 44px;
   height: 44px;
   padding: 0;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   border: 3px solid var(--surface);
   box-shadow: 0 0 0 1px var(--border);
   cursor: pointer;
@@ -329,7 +329,7 @@
   align-items: center;
   gap: 0.6rem;
   min-height: 44px;
-  font-size: 0.95rem;
+  font-size: var(--text-8);
   cursor: pointer;
 }
 .share-check input {
@@ -364,7 +364,7 @@
 }
 .share-buttons .btn {
   min-height: 48px;
-  font-size: 1rem;
+  font-size: var(--text-9);
 }
 .share-buttons .btn:first-child {
   flex: 1 1 auto;
@@ -377,7 +377,7 @@
 }
 
 /* Picture beside the settings: the picture stays in view while you scroll through the settings. */
-@media (min-width: 960px) {
+@media (min-width: 1000px) {
   .share-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 360px;
@@ -406,7 +406,7 @@
     margin-bottom: 1rem;
   }
   .share-head p {
-    font-size: 0.95rem;
+    font-size: var(--text-8);
   }
   .share-formats {
     display: flex;
@@ -418,7 +418,7 @@
     flex: none;
     min-height: 40px;
     padding: 0 0.9rem;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     flex-direction: row;
     align-items: center;
   }
@@ -468,7 +468,7 @@
     display: none;
   }
   .share-themes button > span:last-child {
-    font-size: 0.7rem;
+    font-size: var(--text-3);
   }
   .share-theme-chip {
     height: 32px;

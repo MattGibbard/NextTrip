@@ -37,6 +37,57 @@
   --board-muted: #96a29c;
   --board-lit: #2dd4bf;
   --paper: #fbfaf6;
+  /* Text on the bright board teal, and white on coloured passes and photos. Fixed in both themes. */
+  --board-dim: #cbd5d1;
+  --board-lit-hover: #5eead4;
+  --on-bright: #052e2a;
+  --on-photo: #ffffff;
+
+  /* Type scale. Pick the nearest step rather than adding a new size. */
+  --text-1: 0.6rem; /* 9.6px */
+  --text-2: 0.65rem; /* 10.4px */
+  --text-3: 0.7rem; /* 11.2px: mono labels */
+  --text-4: 0.75rem; /* 12px: eyebrows */
+  --text-5: 0.8rem; /* 12.8px: pills */
+  --text-6: 0.85rem; /* 13.6px: small */
+  --text-7: 0.9rem; /* 14.4px: labels */
+  --text-8: 0.95rem; /* 15.2px */
+  --text-9: 1rem; /* 16px: body */
+  --text-10: 1.05rem; /* 16.8px */
+  --text-11: 1.1rem; /* 17.6px: lead */
+  --text-12: 1.15rem; /* 18.4px: h2 */
+  --text-13: 1.25rem; /* 20px */
+  --text-14: 1.3rem; /* 20.8px */
+  --text-15: 1.4rem; /* 22.4px */
+  --text-16: 1.5rem; /* 24px: h1 */
+  --text-17: 1.6rem; /* 25.6px: display */
+  --text-18: 1.75rem; /* 28px */
+  --text-19: 2rem; /* 32px */
+  --text-20: 2.25rem; /* 36px: route codes */
+  --text-21: 2.5rem; /* 40px */
+  --text-22: 3rem; /* 48px */
+
+  /* Corners, named as in the design system. */
+  --radius-xs: 3px;
+  --radius-flap: 5px;
+  --radius-tag: 6px;
+  --radius-sm: 8px;
+  --radius-segment: 9px;
+  --radius-control: 10px; /* buttons and inputs */
+  --radius-row: 12px; /* rows inside a panel */
+  --radius-card-lg: 16px; /* standby cards, the passport */
+  --radius-sheet: 18px;
+  --radius-pass: 22px;
+  --radius-pill: 999px;
+  --radius-round: 50%;
+
+  /* Lifted things. Cards and panels use --shadow. */
+  --shadow-float: 0 4px 12px rgb(0 0 0 / 0.1);
+  --shadow-lift: 0 8px 24px rgb(0 0 0 / 0.12);
+  --shadow-pass: 0 10px 30px rgb(0 0 0 / 0.08);
+  --shadow-pass-card: 0 8px 24px rgb(0 0 0 / 0.1);
+  --shadow-departure: 0 10px 30px rgb(15 118 110 / 0.25);
+  --shadow-coverage: 0 8px 30px rgb(0 0 0 / 0.18);
   color-scheme: light;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color: var(--text);
@@ -98,13 +149,13 @@ h3 {
   line-height: 1.2;
 }
 h1 {
-  font-size: 1.5rem;
+  font-size: var(--text-16);
 }
 h2 {
-  font-size: 1.15rem;
+  font-size: var(--text-12);
 }
 h3 {
-  font-size: 1rem;
+  font-size: var(--text-9);
 }
 p {
   margin: 0.4rem 0;
@@ -128,7 +179,7 @@ textarea {
   width: 100%;
   padding: 0.6rem 0.75rem;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   background: var(--surface);
   font-size: 16px; /* stops iOS zooming into fields */
 }
@@ -155,7 +206,7 @@ textarea:focus {
   color: var(--muted);
 }
 .small {
-  font-size: 0.85rem;
+  font-size: var(--text-6);
 }
 .center {
   text-align: center;
@@ -168,6 +219,6 @@ textarea:focus {
   flex: 1;
 }
 .big {
-  font-size: 1.3rem;
+  font-size: var(--text-14);
   font-weight: 700;
 }

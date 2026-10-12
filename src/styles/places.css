@@ -9,8 +9,8 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   background: var(--board);
-  color: #fff;
-  border-radius: 14px;
+  color: var(--on-photo);
+  border-radius: var(--radius);
   overflow: hidden;
   margin-top: 0.9rem;
 }
@@ -21,12 +21,12 @@
   border-left: 1px dashed var(--board-line);
 }
 .coverage .mono-label {
-  font-size: 0.6rem;
+  font-size: var(--text-1);
   letter-spacing: 0.12em;
   color: var(--board-muted);
 }
 .coverage-num {
-  font: 500 1.5rem/1.2 var(--mono);
+  font: 500 var(--text-16)/1.2 var(--mono);
 }
 .coverage-num.lit {
   color: var(--board-lit);
@@ -42,18 +42,18 @@
     z-index: 500;
     grid-template-columns: repeat(3, auto);
     margin: 0;
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgb(0 0 0 / 0.18);
+    border-radius: var(--radius-card-lg);
+    box-shadow: var(--shadow-coverage);
   }
   .coverage > div {
     padding: 0.9rem 1.25rem;
   }
   .coverage .mono-label {
-    font-size: 0.65rem;
+    font-size: var(--text-2);
     letter-spacing: 0.14em;
   }
   .coverage-num {
-    font-size: 2.1rem;
+    font-size: var(--text-19);
     line-height: 1.1;
   }
   /* Leaflet's zoom buttons move below the coverage box. */
@@ -65,7 +65,7 @@
     top: 1.5rem;
     right: 1.5rem;
     padding: 0.45rem 0.9rem;
-    font-size: 0.85rem;
+    font-size: var(--text-6);
     font-weight: 600;
   }
 }
@@ -96,7 +96,7 @@
   padding: 0.75rem;
   background: var(--paper);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius-card-lg);
   margin-bottom: 1rem;
 }
 .passport-empty {
@@ -134,14 +134,14 @@
   position: relative;
 }
 .stamp.shape-rounded {
-  border-radius: 14px;
+  border-radius: var(--radius);
 }
 .stamp.shape-square {
-  border-radius: 4px;
+  border-radius: var(--radius-xs);
 }
 .stamp.shape-circle,
 .stamp.shape-oval {
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   justify-content: center;
   height: 122px;
   padding: 0.5rem;
@@ -211,7 +211,7 @@
 }
 /* Tickets take the notches from the boarding passes. */
 .stamp.shape-ticket {
-  border-radius: 6px;
+  border-radius: var(--radius-tag);
   padding-inline: 1.1rem;
 }
 .stamp-notch {
@@ -220,7 +220,7 @@
   width: 14px;
   height: 14px;
   margin-top: -7px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--paper);
   border: 2px solid var(--mode-ink);
 }
@@ -298,32 +298,32 @@
   border: 2px dashed var(--map-idea);
   color: var(--standby-ink);
   background: none;
-  border-radius: 14px;
+  border-radius: var(--radius);
 }
 .stamp-top {
   font: 500 0.56rem var(--mono);
   letter-spacing: 0.12em;
 }
 .stamp-name {
-  font: 500 0.85rem var(--mono);
+  font: 500 var(--text-6) var(--mono);
   overflow-wrap: anywhere;
 }
 .stamp-date {
-  font: 500 0.6rem var(--mono);
+  font: 500 var(--text-1) var(--mono);
   letter-spacing: 0.1em;
   border-top: 1px solid currentColor;
   padding-top: 0.2rem;
 }
 .stamp.pending .stamp-date {
   font-family: inherit;
-  font-size: 0.75rem;
+  font-size: var(--text-4);
   font-weight: 600;
   letter-spacing: 0;
   border-top-style: dashed;
 }
 .add-stamp {
   border: 2px dashed var(--border);
-  border-radius: 14px;
+  border-radius: var(--radius);
   color: var(--muted);
   font-weight: 600;
 }
@@ -332,7 +332,7 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.9rem;
     padding: 1.5rem;
-    border-radius: 18px;
+    border-radius: var(--radius-sheet);
   }
   .stamp-cell {
     height: 168px;
@@ -343,15 +343,15 @@
     min-width: 150px;
   }
   .stamp-top {
-    font-size: 0.66rem;
+    font-size: var(--text-2);
     letter-spacing: 0.14em;
   }
   .stamp-name {
-    font-size: 1.2rem;
+    font-size: var(--text-13);
     letter-spacing: 0.06em;
   }
   .stamp-date {
-    font-size: 0.7rem;
+    font-size: var(--text-3);
     letter-spacing: 0.12em;
   }
   .stamp.shape-circle,
@@ -362,7 +362,7 @@
     width: 158px;
   }
   .stamp-serial {
-    font-size: 0.58rem;
+    font-size: var(--text-1);
   }
   .stamp.border-double {
     border-width: 6px;

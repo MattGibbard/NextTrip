@@ -142,7 +142,7 @@ export function RoundDates({
           <TripDatesField value={draft} onChange={setDraft} />
           {(checked.error || error) && <p className="error-text small">{checked.error ?? error}</p>}
           <div className="row">
-            <button type="button" className="btn small bright" disabled={saving || !!checked.error} onClick={() => void save(checked.dates)}>
+            <button type="button" className="btn small" disabled={saving || !!checked.error} onClick={() => void save(checked.dates)}>
               {saving ? "Saving…" : "Save"}
             </button>
             <button type="button" className="btn small ghost" onClick={() => setDraft(null)}>

@@ -14,10 +14,10 @@
 .stepper button {
   width: 2.4rem;
   height: 2.4rem;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   border: 1px solid var(--border);
   background: var(--surface);
-  font-size: 1.3rem;
+  font-size: var(--text-14);
   font-weight: 700;
   cursor: pointer;
   line-height: 1;
@@ -29,7 +29,7 @@
 .stepper .value {
   min-width: 2rem;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: var(--text-13);
   font-weight: 800;
   font-variant-numeric: tabular-nums;
 }
@@ -51,7 +51,7 @@
 .breakdown {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   text-align: left;
 }
 .breakdown th,
@@ -82,7 +82,7 @@
 .history-row {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   margin-bottom: 0.5rem;
   overflow: hidden;
 }
@@ -131,10 +131,10 @@
   margin-top: 0.35rem;
 }
 .detail {
-  font-size: 0.75rem;
+  font-size: var(--text-4);
   font-weight: 600;
   background: var(--surface-2);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0.12rem 0.5rem;
   white-space: nowrap;
 }
@@ -146,15 +146,15 @@
 .choice {
   border: 1px solid var(--border);
   background: var(--surface);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0.4rem 0.8rem;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   cursor: pointer;
 }
 .choice.small {
   padding: 0.25rem 0.65rem;
-  font-size: 0.8rem;
+  font-size: var(--text-5);
 }
 .choice.on {
   background: var(--accent);
@@ -179,7 +179,7 @@
   display: block;
   height: 4px;
   margin-top: 0.4rem;
-  border-radius: 99px;
+  border-radius: var(--radius-pill);
   background: linear-gradient(to right, var(--accent) var(--pct), var(--surface-2) var(--pct));
 }
 .list-row.clickable {
@@ -192,7 +192,7 @@
   margin: -0.4rem 0 1rem;
 }
 .country-panel h2 {
-  font-size: 1.25rem;
+  font-size: var(--text-13);
 }
 .detail.new {
   border: 0;
@@ -216,7 +216,7 @@
   top: 0.3rem;
   width: 12px;
   height: 12px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--accent);
   border: 2px solid var(--bg);
 }
@@ -260,7 +260,7 @@
 .hero.placeholder {
   display: grid;
   place-items: center;
-  font-size: 3rem;
+  font-size: var(--text-22);
   background: linear-gradient(135deg, var(--accent-soft), var(--surface-2));
 }
 
@@ -276,7 +276,7 @@
   gap: 0.5rem;
   margin: 1rem 0;
 }
-@media (min-width: 700px) {
+@media (min-width: 760px) {
   .facts {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -288,7 +288,7 @@
   padding: 0.6rem 0.75rem;
 }
 .facts dt {
-  font-size: 0.75rem;
+  font-size: var(--text-4);
   font-weight: 600;
   color: var(--muted);
   text-transform: uppercase;
@@ -327,7 +327,7 @@
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+  box-shadow: var(--shadow-lift);
   overflow: hidden;
   touch-action: pan-y;
   user-select: none;
@@ -349,9 +349,9 @@
   top: 1rem;
   padding: 0.2rem 0.6rem;
   border: 3px solid;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: var(--text-15);
   letter-spacing: 0.08em;
   background: var(--surface);
 }
@@ -374,12 +374,12 @@
 .swipe-btn {
   width: 64px;
   height: 64px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   border: 1px solid var(--border);
   background: var(--surface);
-  font-size: 1.6rem;
+  font-size: var(--text-17);
   cursor: pointer;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  box-shadow: var(--shadow-float);
 }
 .swipe-btn.no {
   color: var(--danger);

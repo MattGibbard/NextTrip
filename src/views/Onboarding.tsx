@@ -217,7 +217,7 @@ function Welcome({ isOwner, onNext, onLeave }: { isOwner: boolean; onNext: () =>
     </p>
   );
   const start = (
-    <button type="button" className="btn onb-primary" onClick={onNext}>
+    <button type="button" className="btn large" onClick={onNext}>
       {W.button}
     </button>
   );
@@ -408,7 +408,7 @@ function Airport({ onNext, onBack }: { onNext: () => void; onBack?: () => void }
       </div>
   );
   const go = (
-    <button type="button" className="btn onb-primary" onClick={() => void save()} disabled={!picked || saving}>
+    <button type="button" className="btn large" onClick={() => void save()} disabled={!picked || saving}>
       {saving ? "Saving…" : A.button}
     </button>
   );
@@ -566,7 +566,7 @@ function FirstIdea({ onNext, onBack }: { onNext: (p: Place | null) => void; onBa
   );
   const errorText = error && <p className="error-text">{error}</p>;
   const add = (
-    <button type="button" className="btn onb-primary" onClick={() => void save()} disabled={!place || saving}>
+    <button type="button" className="btn large" onClick={() => void save()} disabled={!place || saving}>
       {saving ? "Saving…" : I.button}
     </button>
   );
@@ -694,7 +694,7 @@ function Done({ added, from, onClose }: { added: Place | null; from: Terminal | 
       </div>
   );
   const shareButton = (
-    <button type="button" className="btn onb-primary" onClick={() => void share()}>
+    <button type="button" className="btn large" onClick={() => void share()}>
       {D.share_button}
     </button>
   );
@@ -710,7 +710,7 @@ function Done({ added, from, onClose }: { added: Place | null; from: Terminal | 
       )}
       <div className="onb-link">
         <input id="onb-family-link" readOnly value={shareUrl.replace(/^https?:\/\//, "")} onFocus={(e) => e.target.select()} aria-label="Your family link" />
-        <button type="button" className="btn ghost onb-copy" onClick={() => void copy()}>
+        <button type="button" className="btn ghost" onClick={() => void copy()}>
           {copied ? "Copied" : "Copy"}
         </button>
       </div>
@@ -720,7 +720,7 @@ function Done({ added, from, onClose }: { added: Place | null; from: Terminal | 
 
   if (wide) {
     const toIdeas = (
-      <button type="button" className={invite ? "onb-skip" : "btn onb-primary"} onClick={toNext}>
+      <button type="button" className={invite ? "onb-skip" : "btn large"} onClick={toNext}>
         {D.ideas_button}
       </button>
     );
@@ -763,7 +763,7 @@ function Done({ added, from, onClose }: { added: Place | null; from: Terminal | 
       <Actions>
         {invite ? (
           <>
-            <button type="button" className="btn onb-primary" onClick={() => void share()}>
+            <button type="button" className="btn large" onClick={() => void share()}>
               {D.share_button}
             </button>
             <button type="button" className="onb-skip" onClick={toNext}>
@@ -771,7 +771,7 @@ function Done({ added, from, onClose }: { added: Place | null; from: Terminal | 
             </button>
           </>
         ) : (
-          <button type="button" className="btn onb-primary" onClick={toNext}>
+          <button type="button" className="btn large" onClick={toNext}>
             {D.ideas_button}
           </button>
         )}

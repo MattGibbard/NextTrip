@@ -15,9 +15,9 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   background: var(--flight);
-  color: #fff;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(15, 118, 110, 0.25);
+  color: var(--on-photo);
+  border-radius: var(--radius-sheet);
+  box-shadow: var(--shadow-departure);
 }
 .plan-pass-main {
   padding: 1rem 1.1rem;
@@ -42,12 +42,12 @@
   gap: 0.25rem 1.1rem;
 }
 .plan-pass-title h1 {
-  font-size: 1.5rem;
+  font-size: var(--text-16);
   font-weight: 800;
   letter-spacing: -0.01em;
 }
 .plan-pass-route {
-  font: 500 0.8rem var(--mono);
+  font: 500 var(--text-5) var(--mono);
   letter-spacing: 0.06em;
   opacity: 0.9;
 }
@@ -59,7 +59,7 @@
   padding-top: 0.65rem;
 }
 .plan-pass-fields .mono-label {
-  font-size: 0.65rem;
+  font-size: var(--text-2);
   opacity: 0.75;
 }
 .plan-pass-edit {
@@ -67,9 +67,9 @@
   border: 1px solid rgb(255 255 255 / 0.55);
   background: none;
   color: inherit;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0.1rem 0.6rem;
-  font-size: 0.8rem;
+  font-size: var(--text-5);
   font-weight: 600;
   cursor: pointer;
 }
@@ -85,7 +85,7 @@
 }
 .plan-pass-side .mono-label {
   opacity: 0.85;
-  font-size: 0.65rem;
+  font-size: var(--text-2);
 }
 .plan-flaps {
   display: flex;
@@ -93,10 +93,10 @@
 }
 .plan-flap {
   position: relative;
-  font: 500 1.4rem/1 var(--mono);
+  font: 500 var(--text-15)/1 var(--mono);
   background: var(--board);
-  color: #fff;
-  border-radius: 5px;
+  color: var(--on-photo);
+  border-radius: var(--radius-flap);
   padding: 0.3rem 0.35rem;
   min-width: 1.3rem;
   text-align: center;
@@ -110,20 +110,20 @@
   border-top: 1px solid rgb(255 255 255 / 0.18);
 }
 .plan-today {
-  font: 500 1.3rem var(--mono);
+  font: 500 var(--text-14) var(--mono);
   color: var(--board-lit);
 }
 @media (min-width: 760px) {
   .plan-pass {
     grid-template-columns: minmax(0, 1fr) 220px;
-    border-radius: 22px;
+    border-radius: var(--radius-pass);
   }
   .plan-pass-main {
     padding: 1.4rem 2rem;
     gap: 0.9rem;
   }
   .plan-pass-title h1 {
-    font-size: 2rem;
+    font-size: var(--text-19);
   }
   .plan-pass-fields {
     grid-template-columns: 1.6fr 1fr 1.2fr;
@@ -139,7 +139,7 @@
     padding: 1.25rem 1.6rem;
   }
   .plan-flap {
-    font-size: 2rem;
+    font-size: var(--text-19);
     min-width: 1.8rem;
   }
 }
@@ -187,11 +187,11 @@
   border-bottom-color: var(--accent);
 }
 .plan-tabs .count {
-  font: 500 0.68rem var(--mono);
+  font: 500 var(--text-2) var(--mono);
   background: var(--surface-2);
   color: var(--text);
   padding: 0.1rem 0.4rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 }
 
 /* Two columns from desktop: the main things, then a narrower side. */
@@ -241,7 +241,7 @@
   margin: 0.2rem 0 0;
 }
 .plan-section-head > a {
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   font-weight: 600;
   white-space: nowrap;
 }
@@ -259,8 +259,8 @@
 /* The days on a departures board. */
 .plan-board {
   background: var(--board);
-  color: #fff;
-  border-radius: 14px;
+  color: var(--on-photo);
+  border-radius: var(--radius);
   padding: 0.6rem 0.9rem;
 }
 .plan-board-row {
@@ -270,7 +270,7 @@
   gap: 0.6rem;
   padding: 0.55rem 0;
   border-bottom: 1px solid var(--board-line);
-  font: 500 0.88rem var(--mono);
+  font: 500 var(--text-6) var(--mono);
   color: inherit;
   text-decoration: none;
 }
@@ -290,9 +290,9 @@ a.plan-board-row:hover {
 }
 .plan-board-note {
   text-align: right;
-  font-size: 0.65rem;
+  font-size: var(--text-2);
   letter-spacing: 0.12em;
-  color: #cbd5d1;
+  color: var(--board-dim);
 }
 .plan-board-note.lit {
   color: var(--board-lit);
@@ -306,12 +306,12 @@ a.plan-board-row:hover {
 }
 @media (min-width: 760px) {
   .plan-board {
-    border-radius: 16px;
+    border-radius: var(--radius-card-lg);
     padding: 0.9rem 1.25rem;
   }
   .plan-board-row {
     grid-template-columns: 48px minmax(0, 1fr) 96px;
-    font-size: 1rem;
+    font-size: var(--text-9);
   }
 }
 
@@ -321,16 +321,16 @@ a.plan-board-row:hover {
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 0.75rem;
+  border-radius: var(--radius-round);
+  color: var(--on-photo);
+  font-size: var(--text-4);
   font-weight: 700;
 }
 .plan-status {
-  font: 500 0.62rem var(--mono);
+  font: 500 var(--text-1) var(--mono);
   letter-spacing: 0.12em;
   padding: 0.2rem 0.45rem;
-  border-radius: 6px;
+  border-radius: var(--radius-tag);
   white-space: nowrap;
   background: var(--surface-2);
   color: var(--text);
@@ -347,7 +347,7 @@ a.plan-board-row:hover {
   width: 26px;
   height: 26px;
   flex-shrink: 0;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   border: 2px solid var(--border);
   background: var(--surface);
   color: var(--accent-text);
@@ -363,7 +363,7 @@ a.plan-board-row:hover {
 .plan-bar {
   display: flex;
   height: 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   overflow: hidden;
   background: var(--surface-2);
 }
@@ -382,7 +382,7 @@ a.plan-board-row:hover {
   display: inline-block;
   width: 10px;
   height: 10px;
-  border-radius: 3px;
+  border-radius: var(--radius-xs);
   margin-right: 0.35rem;
   vertical-align: baseline;
 }
@@ -391,7 +391,7 @@ a.plan-board-row:hover {
   flex-wrap: wrap;
   gap: 0.3rem 1rem;
   margin-top: 0.55rem;
-  font-size: 0.85rem;
+  font-size: var(--text-6);
   color: var(--muted);
 }
 .plan-big {
@@ -401,18 +401,18 @@ a.plan-board-row:hover {
   margin: 0.25rem 0 0.6rem;
 }
 .plan-stat {
-  font-size: 2rem;
+  font-size: var(--text-19);
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--accent);
   font-variant-numeric: tabular-nums;
 }
 .plan-stat .muted {
-  font-size: 1.1rem;
+  font-size: var(--text-11);
   font-weight: 600;
 }
 .plan-stat-2 {
-  font-size: 1.3rem;
+  font-size: var(--text-14);
   font-weight: 800;
   font-variant-numeric: tabular-nums;
 }
@@ -445,7 +445,7 @@ a.plan-board-row:hover {
   margin-top: 0.9rem;
   padding: 0.7rem 0.8rem;
   background: var(--accent-soft);
-  border-radius: 12px;
+  border-radius: var(--radius-row);
   color: var(--text);
   text-decoration: none;
 }
@@ -509,7 +509,7 @@ a.plan-board-row:hover {
   font-weight: 800;
 }
 .plan-day-title {
-  font-size: 1.05rem;
+  font-size: var(--text-10);
   font-weight: 700;
 }
 .plan-items {
@@ -536,7 +536,7 @@ a.plan-board-row:hover {
   background: var(--surface-2);
 }
 .plan-item-time {
-  font: 500 0.82rem var(--mono);
+  font: 500 var(--text-5) var(--mono);
   color: var(--muted);
 }
 .plan-item-text {
@@ -549,12 +549,12 @@ a.plan-board-row:hover {
   align-self: flex-start;
   margin-top: 0.3rem;
   border: 1px dashed var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius-control);
   background: none;
   color: var(--muted);
   padding: 0.45rem 0.75rem;
   font: inherit;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   cursor: pointer;
 }
 .plan-add-row:hover {
@@ -658,14 +658,14 @@ a.plan-board-row:hover {
 .plan-cat-head {
   display: flex;
   justify-content: space-between;
-  font-size: 0.9rem;
+  font-size: var(--text-7);
   margin-bottom: 0.3rem;
 }
 .plan-per-head {
   margin: 0.8rem 0 0;
 }
 .plan-amount {
-  font-size: 1.6rem !important;
+  font-size: var(--text-17) !important;
   font-weight: 800;
 }
 
@@ -712,7 +712,7 @@ a.plan-board-row:hover {
   color: var(--muted);
   cursor: pointer;
   padding: 0.3rem 0.4rem;
-  border-radius: 6px;
+  border-radius: var(--radius-tag);
 }
 .plan-remove:hover {
   background: var(--surface-2);
@@ -727,28 +727,10 @@ a.plan-board-row:hover {
   min-width: 0;
 }
 
-/* Getting to the plan from the boarding pass on Next. */
-.departure a.departure-plan {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--flight);
-  background: #fff;
-}
-/* The side can be a pale colour or a photo, so the second button is the pass colour, solid, to read on either. */
-.departure-been.ghosted {
-  background: var(--flight);
-  color: #fff;
-}
-/* On a phone the buttons sit on the pass itself: Plan in white, Been as an outline, one above the other so the words fit. */
+/* On a phone the pass's buttons sit on the pass itself, one above the other so the words fit. */
 .departure-phone-actions {
   display: grid;
   gap: 0.5rem;
-}
-.departure-phone-actions .departure-been {
-  background: transparent;
-  color: #fff;
-  border: 1.5px solid rgb(255 255 255 / 0.85);
 }
 
 /* An empty list's offer of a ready-made one, and a finished trip's offer to save it to Been. */
@@ -765,10 +747,10 @@ a.plan-board-row:hover {
   margin: 0;
 }
 .plan-starter-icon {
-  font-size: 1.75rem;
+  font-size: var(--text-18);
   line-height: 1;
 }
-@media (max-width: 640px) {
+@media (max-width: 759px) {
   .plan-starter {
     flex-wrap: wrap;
   }

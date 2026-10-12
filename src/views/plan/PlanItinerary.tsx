@@ -1,7 +1,7 @@
 // Day by day: each day's name and date, the things on it in time order, and whether they're booked.
 import { useState } from "react";
 import { api } from "../../api";
-import { dayDate, MAX_DAYS } from "../../../shared/plan";
+import { dayDate, lastTripDay, MAX_DAYS } from "../../../shared/plan";
 import type { PlanItem } from "../../../shared/plan";
 import { dayLabel, pad2 } from "./context";
 import type { PlanCtx } from "./context";
@@ -15,6 +15,8 @@ export function PlanItinerary({ ctx, onDates }: { ctx: PlanCtx; onDates?: () => 
   const days = Array.from({ length: ctx.days }, (_, i) => i + 1);
   const fixed = ctx.dates?.kind === "exact";
   const lastEmpty = !plan.items.some((i) => i.day === ctx.days);
+  const lastDay = lastTripDay(ctx.dates);
+  const beyond = lastDay === null ? 0 : plan.items.filter((i) => i.day > lastDay).length;
 
   return (
     <div className="plan-days">
@@ -27,15 +29,22 @@ export function PlanItinerary({ ctx, onDates }: { ctx: PlanCtx; onDates?: () => 
         </button>
       </div>
 
+      {beyond > 0 && (
+        <div className="banner">
+          {beyond === 1 ? "1 plan falls" : `${beyond} plans fall`} after your last day. Move {beyond === 1 ? "it" : "them"} to another day, or change your dates.
+        </div>
+      )}
+
       {days.map((d) => {
         const items = plan.items.filter((i) => i.day === d);
         const date = dayDate(ctx.dates, d);
         const title = plan.day_titles[d];
         return (
-          <article key={d} className="panel plan-day">
+          <article key={d} className={`panel plan-day${lastDay !== null && d > lastDay ? " plan-day-after" : ""}`}>
             <div className="plan-day-when">
               <div className="mono-label plan-day-num">DAY {pad2(d)}</div>
               {date && <div className="plan-day-date">{dayLabel(date)}</div>}
+              {lastDay !== null && d > lastDay && <div className="mono-label plan-day-after-tag">AFTER TRIP</div>}
             </div>
             <div className="plan-day-body">
               <div className="plan-day-head">

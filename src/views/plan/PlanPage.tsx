@@ -7,7 +7,7 @@ import { currencyFor } from "../../../shared/currency";
 import { MODES, ideaMode, ticketEnds } from "../../../shared/travelMode";
 import type { Mode } from "../../../shared/travelMode";
 import { tripLengthLabel } from "../../../shared/ideaDetails";
-import { daysUntil, formatMoney, planDays } from "../../../shared/plan";
+import { daysUntil, formatMoney, planDays, tripSpanLabel } from "../../../shared/plan";
 import type { TripPlan } from "../../../shared/plan";
 import { PLAN_TABS, dayLabel, planHref, todayIso } from "./context";
 import type { PlanCtx, PlanTab } from "./context";
@@ -209,7 +209,7 @@ function PlanHeader({
           </div>
           <div className="desktop-only">
             <div className="mono-label">LENGTH</div>
-            <div className="tk-value">{tripLengthLabel(idea.trip_length) ?? "—"}</div>
+            <div className="tk-value">{tripSpanLabel(dates) ?? tripLengthLabel(idea.trip_length) ?? "—"}</div>
           </div>
           <div className="desktop-only">
             <div className="mono-label">PASSENGERS</div>

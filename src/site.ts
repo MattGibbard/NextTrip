@@ -1,12 +1,14 @@
 // Site-wide words edited at /admin: the home page (content/site/home.json), the announcement
 // banner (content/site/banner.json), the welcome steps (content/site/onboarding.json), the creators
-// page (content/site/creators.json) and the creators featured on the home page (content/site/featured-creators.json).
+// page (content/site/creators.json), the creators featured on the home page (content/site/featured-creators.json)
+// and the How it works page (content/site/how-it-works.json).
 // Bundled at build time like the destination guides.
 import homeFile from "../content/site/home.json";
 import bannerFile from "../content/site/banner.json";
 import onboardingFile from "../content/site/onboarding.json";
 import creatorsFile from "../content/site/creators.json";
 import featuredFile from "../content/site/featured-creators.json";
+import howFile from "../content/site/how-it-works.json";
 
 const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
 const obj = (v: unknown): Record<string, unknown> => (v && typeof v === "object" && !Array.isArray(v) ? (v as Record<string, unknown>) : {});
@@ -16,7 +18,7 @@ export interface HomeContent {
   seo_title: string;
   seo_description: string;
   hero: { kicker: string; heading: string; lead: string; perks: string[] };
-  how: { label: string; heading: string; steps: { title: string; text: string; status: string }[] };
+  how: { label: string; heading: string; steps: { title: string; text: string; status: string }[]; link_text: string };
   features: { kicker: string; heading: string; lead: string } & Record<FeatureKey, { title: string; text: string }>;
   why: { kicker: string; heading: string; reasons: { title: string; text: string }[] };
   signup: { strip: string; heading: string; lead: string };
@@ -47,6 +49,7 @@ export function readHome(raw: unknown): HomeContent {
       label: str(how.label),
       heading: str(how.heading),
       steps: list(how.steps).map((s) => ({ title: str(s.title), text: str(s.text), status: str(s.status) })).filter((s) => s.title),
+      link_text: str(how.link_text),
     },
     features: {
       kicker: str(features.kicker),
@@ -239,6 +242,37 @@ export function readCreators(raw: unknown): CreatorsContent {
 }
 
 export const CREATORS = readCreators(creatorsFile);
+
+/** The How it works page at /how-it-works: one animation per step, each beside its own words. */
+export interface HowContent {
+  seo_title: string;
+  seo_description: string;
+  hero: { kicker: string; heading: string; lead: string };
+  steps: Record<HowStep, { kicker: string; title: string; text: string }>;
+}
+
+/** The page's steps, in order. Each has its own animation, so they're fixed rather than a list. */
+export const HOW_STEPS = ["ideas", "points", "draw", "departure", "plan"] as const;
+export type HowStep = (typeof HOW_STEPS)[number];
+
+/** Reads the How it works page file. Like the home page, a field left empty just drops out. */
+export function readHow(raw: unknown): HowContent {
+  const r = obj(raw);
+  const hero = obj(r.hero);
+  const steps = obj(r.steps);
+  const step = (k: HowStep) => {
+    const s = obj(steps[k]);
+    return { kicker: str(s.kicker), title: str(s.title), text: str(s.text) };
+  };
+  return {
+    seo_title: str(r.seo_title),
+    seo_description: str(r.seo_description),
+    hero: { kicker: str(hero.kicker), heading: str(hero.heading), lead: str(hero.lead) },
+    steps: { ideas: step("ideas"), points: step("points"), draw: step("draw"), departure: step("departure"), plan: step("plan") },
+  };
+}
+
+export const HOW = readHow(howFile);
 
 export interface FeaturedCreator {
   name: string;

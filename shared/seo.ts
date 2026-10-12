@@ -8,7 +8,7 @@ export const SITE = "https://somewhere.party";
 export const OLD_HOST = "nexttrip.matt-gibbard.workers.dev";
 
 /** The fixed pages. */
-export type FixedPage = "home" | "privacy" | "terms" | "notfound" | "destinations" | "creators" | "blog" | InfoPage;
+export type FixedPage = "home" | "privacy" | "terms" | "notfound" | "destinations" | "creators" | "blog" | "how" | InfoPage;
 /** The plain content pages, whose words are edited at /admin (content/pages). */
 export type InfoPage = "about" | "faq" | "contact" | "money" | "decide";
 
@@ -82,6 +82,12 @@ export const PAGES: Record<FixedPage, Meta> = {
     description: "Do you make travel or family content and love somewhere🎉? Message us on Instagram to be featured on our home page.",
     index: true,
   },
+  how: {
+    path: "/how-it-works",
+    title: "How it works: decide where to go on holiday, fairly | somewhere🎉",
+    description: "See how somewhere🎉 works: put holiday ideas on standby, spread points in secret, let a fair draw pick the winner, then plan the trip together.",
+    index: true,
+  },
   blog: {
     path: "/blog",
     title: "Blog: deciding where to go on holiday | somewhere🎉",
@@ -131,6 +137,7 @@ export function publicPage(pathname: string): PublicPage | null {
   if (pathname === "/") return "home";
   const m = pathname.match(/^\/(privacy|terms|destinations|creators|blog)\/?$/);
   if (m) return m[1] as FixedPage;
+  if (/^\/how-it-works\/?$/.test(pathname)) return "how";
   const info = infoPage(pathname);
   if (info) return info;
   const d = pathname.match(/^\/destinations\/([a-z0-9-]+)\/?$/);
@@ -156,7 +163,7 @@ export function isPrivatePath(pathname: string): boolean {
 
 /** The title, description, canonical address and share-preview tags for a fixed page's <head>. */
 export function headTags(page: FixedPage, words?: { title?: string; description?: string; jsonLd?: unknown[] }): string {
-  // The home and creators pages' titles and descriptions can be changed in the editor at /admin.
+  // The home, creators and How it works pages' titles and descriptions can be changed in the editor at /admin.
   const m = {
     ...PAGES[page],
     ...(words?.title ? { title: words.title } : {}),

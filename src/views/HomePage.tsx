@@ -63,6 +63,11 @@ export function HomePage() {
               </div>
             ))}
           </div>
+          {how.link_text && (
+            <a className="lp-board-more" href="/how-it-works">
+              {how.link_text} →
+            </a>
+          )}
         </div>
       </section>
 

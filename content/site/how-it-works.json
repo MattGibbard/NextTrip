@@ -1,0 +1,36 @@
+{
+  "seo_title": "How it works: decide where to go on holiday, fairly | somewhere🎉",
+  "seo_description": "See how somewhere🎉 works: the family puts holiday ideas on standby, spreads points in secret, lets a fair draw pick the winner, then plans the trip together. Free to use.",
+  "hero": {
+    "kicker": "How it works",
+    "heading": "From \"where shall we go?\" to packed, in five steps.",
+    "lead": "Everyone in the family gets a fair say, nobody has to win the argument, and the trip you end up on is one you all picked. Here's how it goes."
+  },
+  "steps": {
+    "ideas": {
+      "kicker": "Step 1 · On standby",
+      "title": "Put your ideas on standby",
+      "text": "Anyone in the family can add a place they'd love to go, from a city break to a week on the beach. Each idea becomes a standby ticket with its type of trip, rough budget and travel time, so you can compare like for like.\n\nIdeas stop getting lost in the group chat. They wait on standby, in one place, until you're ready to choose."
+    },
+    "points": {
+      "kicker": "Step 2 · Ticket office",
+      "title": "Everyone spreads their points in secret",
+      "text": "When it's time to decide, each of you gets the same number of points to share out between the ideas. Put them all on one place you love, or spread them around.\n\nEveryone also gets one veto for somewhere they really can't face. Nobody sees anyone else's points until the draw, so the quietest voice counts as much as the loudest."
+    },
+    "draw": {
+      "kicker": "Step 3 · The draw",
+      "title": "The draw picks where you go",
+      "text": "Every point is a ticket in the draw, so the more points an idea has, the better its chances. But it's never a sure thing.\n\nThe departures board flips through the ideas one by one until a single destination is left with a seat. The decision's made, and nobody had to win the argument."
+    },
+    "departure": {
+      "kicker": "Step 4 · Next departure",
+      "title": "Your winner gets a boarding pass",
+      "text": "The winning idea becomes your next departure: a boarding pass with where you're going, who's coming and how many nights away.\n\nIt counts down the days until you go, right at the top of the app, so the whole family has something to look forward to."
+    },
+    "plan": {
+      "kicker": "Step 5 · Trip plan",
+      "title": "Plan the trip together",
+      "text": "Your winner gets its own trip plan that everyone can add to: a day-by-day itinerary, a budget that keeps track of what's booked and who paid, and a packing list for each person.\n\nWhen you're home, the trip moves to Been, and your map and passport fill in. Then it's back to standby for the next one."
+    }
+  }
+}

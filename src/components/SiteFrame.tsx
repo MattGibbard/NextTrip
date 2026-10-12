@@ -238,7 +238,7 @@ export function SiteFooter({ sections = false, signedIn = false }: { sections?: 
             <h2 className="lp-foot-label">ABOUT</h2>
             <ul>
               <li>
-                <a {...home("how")}>How it works</a>
+                <a href="/how-it-works">How it works</a>
               </li>
               <li>
                 <a {...home("features")}>Features</a>

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { CREATORS, HOME, ONBOARDING, bannerEnded, bannerKey, readBanner, readCreators, readFeatured, readHome, readOnboarding } from "../src/site";
+import { CREATORS, HOME, HOW, HOW_STEPS, ONBOARDING, bannerEnded, bannerKey, readBanner, readCreators, readFeatured, readHome, readHow, readOnboarding } from "../src/site";
 
 describe("home page words", () => {
   it("come from the editor's file", () => {
@@ -14,6 +14,23 @@ describe("home page words", () => {
     expect(h.hero.perks).toEqual(["Free"]);
     expect(h.how.steps.map((s) => s.title)).toEqual(["One"]);
     expect(h.features.been).toEqual({ title: "", text: "" });
+  });
+});
+
+describe("How it works page words", () => {
+  it("have a title and words for every step's animation", () => {
+    for (const k of HOW_STEPS) {
+      expect(HOW.steps[k].title).not.toBe("");
+      expect(HOW.steps[k].text).not.toBe("");
+    }
+    expect(HOME.how.link_text).not.toBe("");
+  });
+
+  it("drop empty fields rather than breaking", () => {
+    const h = readHow({ hero: { heading: " Hi " }, steps: { draw: { title: "Draw" } } });
+    expect(h.hero.heading).toBe("Hi");
+    expect(h.steps.draw).toEqual({ kicker: "", title: "Draw", text: "" });
+    expect(h.steps.plan).toEqual({ kicker: "", title: "", text: "" });
   });
 });
 

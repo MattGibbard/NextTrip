@@ -666,6 +666,7 @@ collections:
                   - { label: Title, name: title, widget: string }
                   - { label: Description, name: text, widget: text, required: false }
                   - { label: Status, name: status, widget: string, required: false, hint: "e.g. On standby, Boarding" }
+              - { label: Link to the How it works page, name: link_text, widget: string, required: false, hint: "Under the board. Leave empty for no link." }
           - label: What's inside
             name: features
             widget: object
@@ -698,6 +699,29 @@ collections:
               - { label: Strip label, name: strip, widget: string, required: false }
               - { label: Heading, name: heading, widget: string }
               - { label: Text, name: lead, widget: text, required: false }
+      - name: how_it_works
+        label: How it works page
+        file: content/site/how-it-works.json
+        description: The page at somewhere.party/how-it-works. Each step sits beside its own animation, so steps can't be added or reordered here.
+        fields:
+          - { label: Google title, name: seo_title, widget: string, hint: "The page title in search results and browser tabs. About 60 characters." }
+          - { label: Google description, name: seo_description, widget: text, hint: "Shown under the title in search results, cut off after about 155 characters." }
+          - label: Top of the page
+            name: hero
+            widget: object
+            fields:
+              - { label: Small heading, name: kicker, widget: string, required: false }
+              - { label: Main heading, name: heading, widget: string }
+              - { label: Introduction, name: lead, widget: text, required: false }
+          - label: Steps
+            name: steps
+            widget: object
+            fields:
+              - { label: 1. Ideas on standby (cards dropping in), name: ideas, widget: object, fields: [{ label: Small heading, name: kicker, widget: string, required: false }, { label: Title, name: title, widget: string }, { label: Text, name: text, widget: text, hint: "Leave a blank line between paragraphs." }] }
+              - { label: 2. Spreading points (points and a veto), name: points, widget: object, fields: [{ label: Small heading, name: kicker, widget: string, required: false }, { label: Title, name: title, widget: string }, { label: Text, name: text, widget: text, hint: "Leave a blank line between paragraphs." }] }
+              - { label: 3. The draw (departures board), name: draw, widget: object, fields: [{ label: Small heading, name: kicker, widget: string, required: false }, { label: Title, name: title, widget: string }, { label: Text, name: text, widget: text, hint: "Leave a blank line between paragraphs." }] }
+              - { label: 4. Next departure (boarding pass), name: departure, widget: object, fields: [{ label: Small heading, name: kicker, widget: string, required: false }, { label: Title, name: title, widget: string }, { label: Text, name: text, widget: text, hint: "Leave a blank line between paragraphs." }] }
+              - { label: 5. Trip plan (itinerary, costs, packing), name: plan, widget: object, fields: [{ label: Small heading, name: kicker, widget: string, required: false }, { label: Title, name: title, widget: string }, { label: Text, name: text, widget: text, hint: "Leave a blank line between paragraphs." }] }
       - name: featured_creators
         label: Featured creators (home page)
         file: content/site/featured-creators.json

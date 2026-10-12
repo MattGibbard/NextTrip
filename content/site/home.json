@@ -16,7 +16,8 @@
       { "title": "Everyone spreads their points", "text": "You each share out your points in secret and get one veto. Nobody sees anyone else's until the draw.", "status": "Boarding" },
       { "title": "The draw picks where you go", "text": "Every point is a ticket, so the more points an idea has, the better its chances. The departures board counts down to the one that gets a seat.", "status": "Final call" },
       { "title": "Plan the trip together", "text": "Your winner gets its own trip plan: a day-by-day itinerary, a budget with who paid what, packing lists for everyone and the jobs to do before you go.", "status": "Now departing" }
-    ]
+    ],
+    "link_text": "See how it works"
   },
   "features": {
     "kicker": "What's inside",

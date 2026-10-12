@@ -12,6 +12,8 @@ describe("publicPage", () => {
     expect(publicPage("/nope")).toBeNull();
     expect(publicPage("/destinations")).toBe("destinations");
     expect(publicPage("/creators")).toBe("creators");
+    expect(publicPage("/how-it-works")).toBe("how");
+    expect(publicPage("/how-it-works/")).toBe("how");
     expect(publicPage("/destinations/new-york")).toBe("destination:new-york");
     expect(publicPage("/destinations/New York")).toBeNull();
   });

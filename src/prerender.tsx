@@ -10,8 +10,9 @@ import { DestinationPage, DestinationsIndex } from "./views/DestinationPage";
 import { HubPage } from "./views/HubPage";
 import { DESTINATIONS, destinationMeta, readDestination } from "./destinations";
 import { HUBS, countryHub, hubMeta, readHub } from "./hubs";
-import { CREATORS, HOME } from "./site";
+import { CREATORS, HOME, HOW } from "./site";
 import { CreatorsPage } from "./views/Creators";
+import { HowItWorksPage } from "./views/HowItWorks";
 import { InfoPage } from "./views/InfoPage";
 import { BlogIndex, BlogPost } from "./views/Blog";
 import { POSTS, blogJsonLd, postMeta, readPost } from "./blog";
@@ -31,6 +32,7 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
     { page: "terms", file: "terms.html" },
     { page: "destinations", file: "destinations.html" },
     { page: "creators", file: "creators.html", source: "content/site/creators.json" },
+    { page: "how", file: "how-it-works.html", source: "content/site/how-it-works.json" },
     { page: "blog", file: "blog.html", source: "content/blog" },
     ...(Object.keys(INFO_PAGES) as Info[]).map((page) => ({ page, file: `${INFO_PAGES[page].path.slice(1)}.html`, source: infoSource(page) })),
     { page: "notfound", file: "404.html" },
@@ -82,6 +84,7 @@ export function headTags(page: PublicPage, updated?: string, published?: string)
   if (page === "blog") return fixedTags("blog", { jsonLd: blogJsonLd() });
   if (page === "home") return fixedTags("home", { title: HOME.seo_title, description: HOME.seo_description });
   if (page === "creators") return fixedTags("creators", { title: CREATORS.seo_title, description: CREATORS.seo_description });
+  if (page === "how") return fixedTags("how", { title: HOW.seo_title, description: HOW.seo_description });
   const info = page in INFO_PAGES ? (page as Info) : null;
   if (info) return fixedTags(info, { title: INFO[info].seo_title, description: INFO[info].seo_description, jsonLd: infoJsonLd(info, updated) });
   return fixedTags(page as FixedPage);
@@ -109,6 +112,7 @@ function pageBody(page: PublicPage) {
   if (page === "notfound") return <NotFound />;
   if (page === "destinations") return <DestinationsIndex />;
   if (page === "creators") return <CreatorsPage />;
+  if (page === "how") return <HowItWorksPage />;
   const info = page in INFO_PAGES ? (page as Info) : null;
   if (info) return <InfoPage page={info} />;
   return <LegalView page={page as "privacy" | "terms"} />;

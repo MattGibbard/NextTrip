@@ -12,7 +12,7 @@ export function HowItWorksPage() {
   const { hero, steps } = HOW;
   return (
     <div className="lp lp-home">
-      <SiteHeader />
+      <SiteHeader current="how" exact />
 
       <section className="lp-wrap hw-hero">
         {hero.kicker && <div className="lp-kicker">{hero.kicker}</div>}

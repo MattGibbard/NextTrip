@@ -5,11 +5,12 @@ import { api } from "../../api";
 import { BookLinks } from "../../components/BookLinks";
 import { ideaMode } from "../../../shared/travelMode";
 import { stayDates } from "../../../shared/tripDates";
-import { costTotals, dayDate, dayStatus, balances, settleUp } from "../../../shared/plan";
+import { costTotals, dayDate, dayStatus, balances, settleUp, tripOver } from "../../../shared/plan";
 import type { PlanItem, PlanTodo } from "../../../shared/plan";
 import { planHref, pad2, shortDate, todayIso } from "./context";
 import type { PlanCtx } from "./context";
-import { Avatar, Bar, Tick } from "./bits";
+import { Avatar, Bar, OnceButton, Tick } from "./bits";
+import { addStarterPacking, addStarterTodos } from "./starter";
 import { BudgetSheet, ItemSheet, TodoSheet } from "./sheets";
 import { packingGroups } from "./PlanPacking";
 
@@ -64,7 +65,7 @@ export function PlanOverview({ ctx }: { ctx: PlanCtx }) {
       </div>
 
       <aside className="plan-side">
-        {idea.status === "won" && (
+        {idea.status === "won" && !tripOver(ctx.dates, todayIso()) && (
           <BookLinks
             trip={idea}
             mode={ideaMode(idea.holiday_types)}
@@ -151,7 +152,7 @@ function Todos({ ctx, onEdit }: { ctx: PlanCtx; onEdit: (t: PlanTodo | "new") =>
         )}
       </div>
       {plan.todos.length === 0 ? (
-        <p className="muted small">No jobs yet. Add things like visas, travel insurance or booking the car.</p>
+        <p className="muted small">No jobs yet. Start with the usual ones for a family trip, like passports and travel insurance, each with a date to do it by.</p>
       ) : (
         <ul className="list plan-flat-list">
           {open.map(row)}
@@ -159,6 +160,7 @@ function Todos({ ctx, onEdit }: { ctx: PlanCtx; onEdit: (t: PlanTodo | "new") =>
         </ul>
       )}
       <div className="plan-actions">
+        {plan.todos.length === 0 && <OnceButton label="Add the usual jobs" busy="Adding…" run={() => addStarterTodos(ctx)} />}
         <button type="button" className="btn small ghost" onClick={() => onEdit("new")}>
           + Add a job
         </button>
@@ -245,7 +247,12 @@ function PackingPanel({ ctx }: { ctx: PlanCtx }) {
         <a href={planHref(ctx.plan.idea_id, "packing")}>Open list →</a>
       </div>
       {groups.length === 0 ? (
-        <p className="muted small">Nothing on the list yet. Everyone gets their own, plus one for shared things.</p>
+        <>
+          <p className="muted small">Nothing on the list yet. Everyone gets their own, plus one for shared things.</p>
+          <div className="plan-actions">
+            <OnceButton label="Add our family list" busy="Adding…" className="btn small ghost" run={() => addStarterPacking(ctx)} />
+          </div>
+        </>
       ) : (
         <div className="plan-progress">
           {groups.map((g) => {

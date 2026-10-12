@@ -122,6 +122,29 @@ describe("a family planning its winner", () => {
     ]);
   });
 
+  it("adds a ready-made list in one go", async () => {
+    const before = (await call(a.owner, "GET", `/plans/${a.won}`)).body;
+    const packing = [
+      { label: "Swimwear", person_id: a.person },
+      { label: "Swimwear", person_id: a.memberPerson },
+      { label: "Sun cream", person_id: null },
+    ];
+    expect((await call(a.member, "POST", `/plans/${a.won}/packing/many`, { items: packing })).body).toEqual({ added: 3 });
+    const todos = [{ label: "Buy travel insurance", due: "2027-06-01" }, { label: "Pack!" }];
+    expect((await call(a.member, "POST", `/plans/${a.won}/todos/many`, { items: todos })).body).toEqual({ added: 2 });
+    const plan = (await call(a.owner, "GET", `/plans/${a.won}`)).body;
+    expect(plan.packing.slice(before.packing.length)).toMatchObject(packing.map((p) => ({ ...p, packed: false })));
+    expect(plan.todos.filter((t: { label: string }) => t.label === "Buy travel insurance")).toMatchObject([{ due: "2027-06-01", done: false }]);
+    // Nothing is added when one of them is wrong, or the list isn't a list.
+    expect((await call(a.member, "POST", `/plans/${a.won}/packing/many`, { items: [{ label: "Fine" }, { label: " " }] })).status).toBe(400);
+    expect((await call(a.member, "POST", `/plans/${a.won}/todos/many`, { items: "Pack!" })).status).toBe(400);
+    expect((await call(a.member, "POST", `/plans/${a.won}/todos/many`, { items: Array.from({ length: 301 }, () => ({ label: "x" })) })).status).toBe(400);
+    expect((await call(a.owner, "GET", `/plans/${a.won}`)).body.packing.length).toBe(plan.packing.length);
+    // Cleans up so the tests below see what they expect.
+    for (const p of plan.packing.slice(before.packing.length)) await call(a.member, "DELETE", `/plans/${a.won}/packing/${p.id}`);
+    for (const t of plan.todos) await call(a.member, "DELETE", `/plans/${a.won}/todos/${t.id}`);
+  });
+
   it("lists jobs to do, soonest first and done last", async () => {
     const late = (await call(a.member, "POST", `/plans/${a.won}/todos`, { label: "Order dollars", person_id: a.person, due: "2027-08-07" })).body.id;
     const soon = (await call(a.member, "POST", `/plans/${a.won}/todos`, { label: "Apply for eTAs", due: "2027-07-01" })).body.id;
@@ -153,6 +176,8 @@ describe("another family", () => {
       ["DELETE", `/plans/${a.won}/costs/${cost}`],
       ["POST", `/plans/${a.won}/settlements`, { from_person: a.person, to_person: a.memberPerson, amount: 100 }],
       ["POST", `/plans/${a.won}/packing`, { label: "Hijacked" }],
+      ["POST", `/plans/${a.won}/packing/many`, { items: [{ label: "Hijacked" }] }],
+      ["POST", `/plans/${a.won}/todos/many`, { items: [{ label: "Hijacked" }] }],
       ["PUT", `/plans/${a.won}/packing/${pack}`, { label: "Hijacked" }],
       ["DELETE", `/plans/${a.won}/packing/${pack}`],
       ["POST", `/plans/${a.won}/todos`, { label: "Hijacked" }],
@@ -182,6 +207,14 @@ describe("another family", () => {
     expect(plan.costs[0].paid_by).toBeNull();
     expect(plan.packing[0].person_id).toBeNull();
     expect(plan.todos[0].person_id).toBeNull();
+  });
+
+  it("can't name the other family's people in a ready-made list", async () => {
+    await call(b.member, "POST", `/plans/${b.won}/packing/many`, { items: [{ label: "Sneaky list", person_id: a.person }] });
+    await call(b.member, "POST", `/plans/${b.won}/todos/many`, { items: [{ label: "Sneaky list", person_id: a.memberPerson }] });
+    const plan = (await call(b.owner, "GET", `/plans/${b.won}`)).body;
+    expect(plan.packing.find((p: { label: string }) => p.label === "Sneaky list").person_id).toBeNull();
+    expect(plan.todos.find((t: { label: string }) => t.label === "Sneaky list").person_id).toBeNull();
   });
 
   it("needs a sign-in", async () => {

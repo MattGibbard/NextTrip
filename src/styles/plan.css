@@ -750,3 +750,32 @@ a.plan-board-row:hover {
   color: #fff;
   border: 1.5px solid rgb(255 255 255 / 0.85);
 }
+
+/* An empty list's offer of a ready-made one, and a finished trip's offer to save it to Been. */
+.plan-starter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.plan-starter h2 {
+  margin: 0 0 0.25rem;
+}
+.plan-starter p {
+  margin: 0;
+}
+.plan-starter-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+@media (max-width: 640px) {
+  .plan-starter {
+    flex-wrap: wrap;
+  }
+  .plan-starter .btn {
+    width: 100%;
+  }
+  .plan-starter-icon {
+    display: none;
+  }
+}

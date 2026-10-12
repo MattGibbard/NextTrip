@@ -5,7 +5,8 @@ import { api } from "../../api";
 import type { PackingItem } from "../../../shared/plan";
 import type { Person } from "../../../shared/types";
 import type { PlanCtx } from "./context";
-import { Avatar, Bar, Tick } from "./bits";
+import { Avatar, Bar, OnceButton, Tick } from "./bits";
+import { addStarterPacking } from "./starter";
 
 export interface PackingGroup {
   key: string;
@@ -39,6 +40,18 @@ export function PlanPacking({ ctx }: { ctx: PlanCtx }) {
         </span>
         <Bar label={`${packed} of ${all.length} packed`} parts={[{ share: all.length ? packed / all.length : 0, className: "booked" }]} />
       </div>
+      {all.length === 0 && (
+        <section className="panel plan-starter">
+          <span className="plan-starter-icon" aria-hidden>
+            🧳
+          </span>
+          <div className="grow">
+            <h2>Start with our family packing list</h2>
+            <p className="muted small">The basics in everyone's bag, plus shared things like passports and chargers, picked for this kind of holiday. Remove anything you don't need.</p>
+          </div>
+          <OnceButton label="Add the list" busy="Adding…" run={() => addStarterPacking(ctx)} />
+        </section>
+      )}
       <div className="plan-packing-grid">
         {groups.map((g) => (
           <PackingList key={g.key} ctx={ctx} group={g} />

@@ -110,10 +110,12 @@ export const api = {
   settle: (id: number, s: { from_person: number; to_person: number; amount: number }) => request<{ id: number }>("POST", `/plans/${id}/settlements`, s),
   unsettle: (id: number, settlementId: number) => request("DELETE", `/plans/${id}/settlements/${settlementId}`),
   addPacking: (id: number, p: { label: string; person_id: number | null }) => request<{ id: number }>("POST", `/plans/${id}/packing`, p),
+  addManyPacking: (id: number, items: { label: string; person_id: number | null }[]) => request<{ added: number }>("POST", `/plans/${id}/packing/many`, { items }),
   updatePacking: (id: number, itemId: number, p: { label: string; person_id: number | null; packed: boolean }) => request("PUT", `/plans/${id}/packing/${itemId}`, p),
   deletePacking: (id: number, itemId: number) => request("DELETE", `/plans/${id}/packing/${itemId}`),
   saveTodo: (id: number, todoId: number | null, t: TodoInput) =>
     todoId === null ? request<{ id: number }>("POST", `/plans/${id}/todos`, t) : request("PUT", `/plans/${id}/todos/${todoId}`, t),
+  addManyTodos: (id: number, items: TodoInput[]) => request<{ added: number }>("POST", `/plans/${id}/todos/many`, { items }),
   deleteTodo: (id: number, todoId: number) => request("DELETE", `/plans/${id}/todos/${todoId}`),
 
   photos: (queries: string[]) => request<PhotoSearch>("GET", `/photos?${queries.map((q) => `q=${encodeURIComponent(q)}`).join("&")}`),

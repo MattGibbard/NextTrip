@@ -18,6 +18,25 @@ async function planIdea(c: Ctx): Promise<number> {
   return id;
 }
 
+/** The most a ready-made list adds at once: a starter list for a big family is about 150 things. */
+const MAX_MANY = 300;
+
+/** A list of things to add in one go. */
+function manyOf(v: unknown): Record<string, unknown>[] {
+  if (!Array.isArray(v) || v.length > MAX_MANY || !v.every((x) => x && typeof x === "object")) throw new HttpError(400, "That list doesn't look right");
+  return v as Record<string, unknown>[];
+}
+
+/**
+ * Checks person ids against the family with one query, for adding many things at once
+ * (D1 limits how many queries one request can make).
+ */
+async function familyPeople(c: Ctx): Promise<(v: unknown) => number | null> {
+  const rows = await c.env.DB.prepare("SELECT id FROM people WHERE family_id = ?").bind(c.get("family")).all<{ id: number }>();
+  const ids = new Set(rows.results.map((r) => r.id));
+  return (v) => (typeof v === "number" && ids.has(v) ? v : null);
+}
+
 /** A person id if they're in this family, otherwise null. */
 async function familyPersonOrNull(c: Ctx, v: unknown): Promise<number | null> {
   if (typeof v !== "number" || !Number.isInteger(v)) return null;
@@ -221,6 +240,19 @@ export function planRoutes(app: Hono<App>) {
     return c.json({ id: row!.id }, 201);
   });
 
+  // A ready-made list, added in one go.
+  app.post("/plans/:id/packing/many", async (c) => {
+    const id = await planIdea(c);
+    const person = await familyPeople(c);
+    const rows = manyOf((await body(c)).items).map((b) => ({ label: requiredText(b.label, 200, "Say what to pack"), person_id: person(b.person_id) }));
+    if (rows.length) {
+      await c.env.DB.batch(
+        rows.map((r) => c.env.DB.prepare("INSERT INTO plan_packing (idea_id, family_id, label, person_id) VALUES (?, ?, ?, ?)").bind(id, c.get("family"), r.label, r.person_id)),
+      );
+    }
+    return c.json({ added: rows.length }, 201);
+  });
+
   app.put("/plans/:id/packing/:item", async (c) => {
     const id = await planIdea(c);
     const b = await body(c);
@@ -253,6 +285,25 @@ export function planRoutes(app: Hono<App>) {
       .bind(id, c.get("family"), t.label, t.person_id, t.due, t.done)
       .first<{ id: number }>();
     return c.json({ id: row!.id }, 201);
+  });
+
+  app.post("/plans/:id/todos/many", async (c) => {
+    const id = await planIdea(c);
+    const person = await familyPeople(c);
+    const rows = manyOf((await body(c)).items).map((b) => ({
+      label: requiredText(b.label, 200, "Say what needs doing"),
+      person_id: person(b.person_id),
+      due: cleanDate(b.due),
+      done: b.done === true ? 1 : 0,
+    }));
+    if (rows.length) {
+      await c.env.DB.batch(
+        rows.map((t) =>
+          c.env.DB.prepare("INSERT INTO plan_todos (idea_id, family_id, label, person_id, due, done) VALUES (?, ?, ?, ?, ?, ?)").bind(id, c.get("family"), t.label, t.person_id, t.due, t.done),
+        ),
+      );
+    }
+    return c.json({ added: rows.length }, 201);
   });
 
   app.put("/plans/:id/todos/:todo", async (c) => {

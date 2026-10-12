@@ -100,6 +100,10 @@ function Privacy() {
           commission if you book. We only send the two airports. Once you're on Aviasales, its own privacy policy and cookies apply.
         </li>
         <li>
+          <strong>Tiqets</strong>, also through Travelpayouts, runs the "Things to do" buttons, which search attractions and activities. They're affiliate links, so we
+          may earn a commission if you book. We only send the place's name. Once you're on Tiqets, its own privacy policy and cookies apply.
+        </li>
+        <li>
           <strong>Pixabay</strong> provides the cover photos to pick from. We search it for the places on your trip or idea from our server, and your browser loads the
           small previews from Pixabay directly. A photo you pick is copied to somewhere🎉, so it loads from us after that.
         </li>
@@ -155,7 +159,7 @@ function Terms() {
       <h2>The draw and travel details</h2>
       <p>
         The draw is a bit of fun to help you decide. Travel times, maps and place details are rough estimates. Check them, and anything else, before you book. We're not
-        responsible for travel plans or bookings you make. The "Find flights" and "Find hotels" buttons are affiliate links, so we may earn a commission if you book, and the booking is
+        responsible for travel plans or bookings you make. The "Find flights", "Find hotels" and "Things to do" buttons are affiliate links, so we may earn a commission if you book, and the booking is
         between you and the site you book with.
       </p>
 

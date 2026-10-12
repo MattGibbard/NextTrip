@@ -59,7 +59,7 @@
 /* The bright board teal, only on the dark departures boards. */
 .btn.bright {
   background: var(--board-lit);
-  color: var(--board-lit-text);
+  color: var(--on-bright);
   flex-shrink: 0;
 }
 .btn.bright:hover:not(:disabled) {

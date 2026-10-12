@@ -148,6 +148,138 @@
   align-items: baseline;
   gap: 4px 12px;
 }
+/* "Which ideas are in?": a summary that opens into rows of filter chips. */
+.ideas-pick {
+  background: var(--surface);
+  padding: 18px 20px;
+  gap: 0;
+}
+.ideas-pick h3 {
+  margin: 0;
+  font-size: var(--text-9);
+  line-height: 1.2;
+}
+.ideas-pick p.small,
+.ideas-pick .ip-label .muted {
+  margin-top: 3px;
+}
+.ip-summary,
+.ip-head,
+.ip-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+}
+.ip-summary {
+  gap: 14px 20px;
+}
+.ip-summary-text {
+  flex: 999 1 280px;
+  min-width: 0;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.ip-count {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-row);
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 500 var(--text-8) var(--mono);
+}
+.ip-count.warn {
+  background: var(--surface-2);
+  color: var(--danger);
+}
+.ip-actions {
+  flex: 1 0 auto;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.btn.ip-toggle {
+  color: var(--accent);
+  font-size: var(--text-7);
+  font-weight: 600;
+}
+.ideas-pick .btn.plain {
+  font-size: var(--text-7);
+  font-weight: 600;
+}
+.ip-pills {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.ip-pills li {
+  background: var(--accent-soft);
+  color: var(--text);
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+  font-size: var(--text-5);
+  font-weight: 600;
+}
+.ip-head {
+  padding-bottom: 6px;
+}
+.ip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+.ip-label {
+  flex: 1 1 150px;
+  max-width: 200px;
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: var(--text-7);
+  line-height: 1.2;
+}
+.ip-label .muted {
+  font-size: var(--text-5);
+  font-weight: 400;
+}
+.ip-group .choice-row {
+  flex: 999 1 320px;
+  min-width: 0;
+}
+.ideas-pick .choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 14px;
+  font-size: var(--text-7);
+  line-height: 1;
+  color: var(--text);
+}
+.ideas-pick .choice.on {
+  color: var(--accent-text);
+}
+.ip-foot {
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.ip-foot p {
+  font-size: var(--text-8);
+  font-weight: 700;
+}
+.ip-match {
+  color: var(--accent);
+}
 .check-card {
   display: flex;
   gap: 14px;

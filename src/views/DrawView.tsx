@@ -19,8 +19,8 @@ import { CancelDraw } from "../components/CancelDraw";
 import { FlapBoard, boardTimeline } from "../components/FlapBoard";
 import { useMedia } from "../useMedia";
 import type { BoardRow } from "../components/FlapBoard";
-import { RoundFilterFields, RoundFilterLine } from "../components/RoundFilters";
-import { NO_FILTERS, hasFilters, matchesFilters } from "../../shared/roundFilters";
+import { IdeasInPicker, RoundFilterLine } from "../components/RoundFilters";
+import { NO_FILTERS, matchesFilters } from "../../shared/roundFilters";
 import type { RoundFilters } from "../../shared/roundFilters";
 import type { TripDraft } from "./TripForm";
 import { RoundDates, TripDatesField, datesOf, draftOf } from "../components/TripDatesField";
@@ -127,7 +127,6 @@ function StartRound({ lastPoints, roundNo }: { lastPoints: number; roundNo: numb
   const whenChecked = datesOf(when);
   const pool = ideas.filter((i) => i.status === "active");
   const matching = pool.filter((i) => matchesFilters(i, filters));
-  const filtered = hasFilters(filters);
   const bump = (d: number) => setPoints((p) => Math.max(1, Math.min(100, p + d)));
 
   const start = async () => {
@@ -184,22 +183,7 @@ function StartRound({ lastPoints, roundNo }: { lastPoints: number; roundNo: numb
                   </div>
                 </div>
               </div>
-              <div className="ideas-in">
-                <div className="ideas-in-head">
-                  <h3>Which ideas are in?</h3>
-                  <span className="muted small">Leave it all on any to include everything.</span>
-                </div>
-                <RoundFilterFields value={filters} onChange={setFilters} />
-                {filtered && (
-                  <p className={`small ${matching.length < 2 ? "error-text" : "muted"}`}>
-                    {matching.length} of {plural(pool.length, "idea")} match
-                    {matching.length < 2 ? ". You need at least 2 to start a round." : "."}{" "}
-                    <button className="link" onClick={() => setFilters(NO_FILTERS)}>
-                      Clear filters
-                    </button>
-                  </p>
-                )}
-              </div>
+              <IdeasInPicker value={filters} onChange={setFilters} total={pool.length} matching={matching.length} />
               <div className="ideas-in">
                 <div className="ideas-in-head">
                   <h3>When's the trip?</h3>

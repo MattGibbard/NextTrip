@@ -5,6 +5,8 @@ import { budgetLabel, tripLengthLabel } from "../../shared/ideaDetails";
 import { useData } from "../data";
 import { Field, Photo, RouteLine } from "./Ticket";
 import { flagsOf } from "../countries";
+import { tripDatesLabel } from "../../shared/tripDates";
+import { tripSpanLabel } from "../../shared/plan";
 import type { TripDraft } from "../views/TripForm";
 
 /** The idea that won the latest draw and hasn't been turned into a trip yet, as a boarding pass. */
@@ -23,7 +25,11 @@ export function NextDeparture({ onBeen }: { onBeen: (d: TripDraft) => void }) {
   const flags = flagsOf(idea.places);
   const then = mode === "cruise" || mode === "road" ? `${MODES[mode].icon} ${mode === "cruise" ? "Sail" : "Drive"} ${idea.places.length} stops` : null;
   const passengers = people.map((p) => p.name).join(" & ") || "—";
-  const been = () => onBeen({ title: idea.title, places: idea.places, idea_id: idea.id, depart: idea.depart, arrive: idea.arrive });
+  // Only the winning round's dates belong to this idea; a fallback idea has none.
+  const dates = round?.winner_idea_id === idea.id ? (round.trip_dates ?? null) : null;
+  const length = tripSpanLabel(dates) ?? tripLengthLabel(idea.trip_length);
+  const exact = dates?.kind === "exact" ? { start_date: dates.start, end_date: dates.end } : {};
+  const been = () => onBeen({ title: idea.title, places: idea.places, idea_id: idea.id, depart: idea.depart, arrive: idea.arrive, ...exact });
 
   return (
     <div className="departure">
@@ -42,13 +48,24 @@ export function NextDeparture({ onBeen }: { onBeen: (d: TripDraft) => void }) {
           <Field label="PASSENGERS" className="desktop-only">
             {passengers}
           </Field>
-          <Field label="LENGTH" className="desktop-only">
-            {tripLengthLabel(idea.trip_length) ?? "—"}
-          </Field>
-          {then ? (
-            <Field label="THEN">{then}</Field>
+          {dates ? (
+            <Field label="WHEN">
+              {tripDatesLabel(dates)}
+              {length && <span className="departure-length">{length}</span>}
+            </Field>
           ) : (
-            <Field label="BUDGET">{budgetLabel(idea.budget) ?? "—"}</Field>
+            <Field label="LENGTH" className="desktop-only">
+              {length ?? "—"}
+            </Field>
+          )}
+          {then ? (
+            <Field label="THEN" className={dates ? "desktop-only" : undefined}>
+              {then}
+            </Field>
+          ) : (
+            <Field label="BUDGET" className={dates ? "desktop-only" : undefined}>
+              {budgetLabel(idea.budget) ?? "—"}
+            </Field>
           )}
         </div>
         <div className="departure-phone-actions mobile-only">

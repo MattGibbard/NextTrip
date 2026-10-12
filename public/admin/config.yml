@@ -572,6 +572,46 @@ collections:
           - { label: Question, name: question, widget: string }
           - { label: Answer, name: answer, widget: text }
 
+  - name: blog
+    label: Blog
+    label_singular: Blog post
+    description: Articles at somewhere.party/blog about deciding where to go and agreeing on it. Untick "Published" to take one off the site.
+    folder: content/blog
+    format: json
+    extension: json
+    create: true
+    identifier_field: title
+    slug: "{{slug}}"
+    summary: "{{title}} ({{date}})"
+    sortable_fields: [date, title]
+    preview_path: blog/{{slug}}
+    editor:
+      preview: false
+    fields:
+      - { label: Published, name: published, widget: boolean, default: false, hint: "Only published posts appear on the site and in the sitemap." }
+      - { label: Title, name: title, widget: string, hint: "The heading, e.g. How to agree on a holiday as a family. A new post's address comes from this, e.g. somewhere.party/blog/how-to-agree-on-a-holiday-as-a-family." }
+      - { label: Date, name: date, widget: datetime, time_format: false, date_format: YYYY-MM-DD, format: YYYY-MM-DD, hint: "When it was first published. Newest posts show first." }
+      - { label: Introduction, name: intro, widget: text, hint: "One or two sentences under the heading, also on the blog's front page. Google shows this under the page title in search results, cut off after about 155 characters, so put the most important part first." }
+      - { label: Google title, name: seo_title, widget: string, required: false, hint: "Optional. The page title in search results, about 50 characters. Leave empty to use the title." }
+      - { label: Google description, name: seo_description, widget: text, required: false, hint: "Optional. Shown under the title in search results. Leave empty to use the introduction." }
+      - label: Sections
+        name: sections
+        widget: list
+        summary: "{{heading}}"
+        hint: "Text: leave a blank line between paragraphs, start a line with - for a bullet, **two stars** for bold, and [words](/destinations) for a link. Posts with five or more sections get a list of them at the top."
+        fields:
+          - { label: Heading, name: heading, widget: string, required: false }
+          - { label: Text, name: text, widget: text }
+      - label: Common questions
+        name: faqs
+        widget: list
+        required: false
+        summary: "{{question}}"
+        hint: Shown near the bottom of the post. These can show up as questions and answers in Google.
+        fields:
+          - { label: Question, name: question, widget: string }
+          - { label: Answer, name: answer, widget: text }
+
   - name: site
     label: Site
     description: The home page's words, the announcement banner across the top of every page, the creators page and the creators featured on the home page, and the welcome steps new people see when they first sign in.

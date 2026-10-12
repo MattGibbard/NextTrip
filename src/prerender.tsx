@@ -13,6 +13,8 @@ import { HUBS, countryHub, hubMeta, readHub } from "./hubs";
 import { CREATORS, HOME } from "./site";
 import { CreatorsPage } from "./views/Creators";
 import { InfoPage } from "./views/InfoPage";
+import { BlogIndex, BlogPost } from "./views/Blog";
+import { POSTS, blogJsonLd, postMeta, readPost } from "./blog";
 import { INFO, infoJsonLd, infoSource } from "./infoPages";
 import { SiteBanner } from "./components/SiteBanner";
 import { INFO_PAGES, PAGES, headTags as fixedTags, metaTags } from "../shared/seo";
@@ -29,6 +31,7 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
     { page: "terms", file: "terms.html" },
     { page: "destinations", file: "destinations.html" },
     { page: "creators", file: "creators.html", source: "content/site/creators.json" },
+    { page: "blog", file: "blog.html", source: "content/blog" },
     ...(Object.keys(INFO_PAGES) as Info[]).map((page) => ({ page, file: `${INFO_PAGES[page].path.slice(1)}.html`, source: infoSource(page) })),
     { page: "notfound", file: "404.html" },
   ];
@@ -37,6 +40,7 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
     ...DESTINATIONS.map((d) => ({ page: `destination:${d.slug}` as const, file: `destinations/${d.slug}.html`, path: `/destinations/${d.slug}`, index: true, source: `content/destinations/${d.slug}.json` })),
     // Hubs share the guides' addresses, and their page names.
     ...HUBS.map((h) => ({ page: `destination:${h.slug}` as const, file: `destinations/${h.slug}.html`, path: `/destinations/${h.slug}`, index: true, source: `content/hubs/${h.slug}.json` })),
+    ...POSTS.map((p) => ({ page: `post:${p.slug}` as const, file: `blog/${p.slug}.html`, path: `/blog/${p.slug}`, index: true, source: `content/blog/${p.slug}.json` })),
   ];
 }
 
@@ -58,12 +62,24 @@ function hub(page: PublicPage) {
   return raw ? readHub(slug, raw) : undefined;
 }
 
+// Every blog post in full, likewise.
+const postFiles = import.meta.glob<Record<string, unknown>>("/content/blog/*.json", { eager: true, import: "default" });
+
+function post(page: PublicPage) {
+  const slug = page.startsWith("post:") ? page.slice("post:".length) : "";
+  const raw = POSTS.some((p) => p.slug === slug) ? postFiles[`/content/blog/${slug}.json`] : undefined;
+  return raw ? readPost(slug, raw) : undefined;
+}
+
 /** The page's <head> tags. `updated` and `published` are when its words last changed and were first added, as ISO dates, if known. */
 export function headTags(page: PublicPage, updated?: string, published?: string): string {
   const d = destination(page);
   if (d) return metaTags(destinationMeta(d, { updated, published, country: countryHub(d.country_code) }));
   const h = hub(page);
   if (h) return metaTags(hubMeta(h, updated));
+  const p = post(page);
+  if (p) return metaTags(postMeta(p, updated));
+  if (page === "blog") return fixedTags("blog", { jsonLd: blogJsonLd() });
   if (page === "home") return fixedTags("home", { title: HOME.seo_title, description: HOME.seo_description });
   if (page === "creators") return fixedTags("creators", { title: CREATORS.seo_title, description: CREATORS.seo_description });
   const info = page in INFO_PAGES ? (page as Info) : null;
@@ -86,6 +102,9 @@ function pageBody(page: PublicPage) {
   if (d) return <DestinationPage destination={d} />;
   const h = hub(page);
   if (h) return <HubPage hub={h} />;
+  const p = post(page);
+  if (p) return <BlogPost post={p} />;
+  if (page === "blog") return <BlogIndex />;
   if (page === "home") return <HomePage />;
   if (page === "notfound") return <NotFound />;
   if (page === "destinations") return <DestinationsIndex />;

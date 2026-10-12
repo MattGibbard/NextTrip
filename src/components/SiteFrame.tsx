@@ -250,6 +250,9 @@ export function SiteFooter({ sections = false, signedIn = false }: { sections?: 
                 <a href="/how-to-decide-where-to-go-on-holiday">Deciding where to go</a>
               </li>
               <li>
+                <a href="/blog">Blog</a>
+              </li>
+              <li>
                 <a href="/about">About us</a>
               </li>
               <li>

@@ -12,6 +12,8 @@ import { PAGES, infoPage, isPrivatePath, publicPage } from "../shared/seo";
 import { findDestination, searchTitle } from "./destinations";
 import { findHub, hubSearchTitle } from "./hubs";
 import { CREATORS } from "./site";
+import { findPost, loadedPost, postTitle } from "./blog";
+import { BlogIndex, BlogPost } from "./views/Blog";
 import { GuideView } from "./views/GuideView";
 import { followInPlace, isGuidePath } from "./navigate";
 import { load, save } from "./storage";
@@ -67,6 +69,12 @@ export function App() {
   if (publicPage(path) === "creators") return <CreatorsPage />;
   const info = infoPage(path);
   if (info) return <InfoPage page={info} />;
+  const page = publicPage(path);
+  if (page === "blog") return <BlogIndex />;
+  if (page?.startsWith("post:")) {
+    const post = loadedPost(page.slice("post:".length));
+    return post ? <BlogPost post={post} /> : <NotFound />;
+  }
   // Signed-in families see the Guides inside the app, so moving between them is instant.
   // index.html clears the visitors' version before the first paint so it doesn't flash.
   if (isGuidePath(path) && !load(SIGNED_IN, false)) return <GuideView path={path} />;
@@ -79,6 +87,9 @@ function pageTitle(path: string): string {
   const page = publicPage(path);
   if (page === "destinations") return PAGES.destinations.title;
   if (page === "creators") return CREATORS.seo_title || PAGES.creators.title;
+  if (page === "blog") return PAGES.blog.title;
+  const post = page?.startsWith("post:") ? findPost(page.slice("post:".length)) : undefined;
+  if (post) return postTitle(post);
   const info = infoPage(path);
   if (info) return infoTitle(info);
   const slug = page?.startsWith("destination:") ? page.slice("destination:".length) : "";

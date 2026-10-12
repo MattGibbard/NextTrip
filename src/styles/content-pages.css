@@ -225,6 +225,78 @@
   margin: 0;
   padding: 0 20px 18px 2.4rem;
 }
+/* The blog (src/views/Blog.tsx) */
+.bl-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 16px;
+  padding-bottom: 72px;
+}
+.bl-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.bl-card:hover {
+  border-color: var(--accent);
+}
+.bl-card h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.bl-card h2 a {
+  color: var(--text);
+  text-decoration: none;
+}
+/* The whole card is the link. */
+.bl-card h2 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.bl-card p {
+  margin: 0;
+  line-height: 1.55;
+}
+.bl-date {
+  font-size: var(--text-6);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.bl-crumbs {
+  display: flex;
+  gap: 8px;
+  font-size: var(--text-7);
+  color: var(--muted);
+}
+.bl-crumbs a {
+  color: inherit;
+}
+.bl-byline {
+  margin: 0;
+}
+.bl-cta {
+  max-width: 720px;
+}
+.bl-more {
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
+}
+.bl-more h2 {
+  font-size: clamp(1.4rem, 2.6vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
 @media (max-width: 520px) {
   .lp-wrap {
     padding-left: 16px;

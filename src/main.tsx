@@ -9,6 +9,7 @@ import "./theme";
 import { publicPage } from "../shared/seo";
 import { loadDestination } from "./destinations";
 import { loadHub } from "./hubs";
+import { loadPost } from "./blog";
 
 const root = document.getElementById("root")!;
 const app = (
@@ -34,6 +35,9 @@ const opening = publicPage(location.pathname);
 if (opening?.startsWith("destination:")) {
   const slug = opening.slice("destination:".length);
   void Promise.all([loadDestination(slug), loadHub(slug)]).catch(() => {}).finally(start);
+} else if (opening?.startsWith("post:")) {
+  // Likewise a blog post.
+  void loadPost(opening.slice("post:".length)).catch(() => {}).finally(start);
 } else start();
 
 // Lets the site work as an installed app from the home screen. Skipped in dev so Vite's reloads aren't cached.

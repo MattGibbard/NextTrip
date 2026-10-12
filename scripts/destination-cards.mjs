@@ -24,7 +24,7 @@ const CARD_FIELDS = [
 ];
 
 /** The fields links to a hub need. */
-const HUB_CARD_FIELDS = ["published", "kind", "holiday_type", "country", "name", "title", "seo_title"];
+const HUB_CARD_FIELDS = ["published", "kind", "holiday_type", "country", "month", "name", "title", "seo_title"];
 
 /** A hub's card fields. */
 export function hubCard(raw) {

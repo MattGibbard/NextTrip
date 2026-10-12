@@ -500,7 +500,7 @@ collections:
   - name: hubs
     label: Hub pages
     label_singular: Hub page
-    description: Pages that list every guide for one kind of holiday (Beach holidays) or one country (Holidays in Spain). The guides on each come from the guides themselves, so these only hold the words. Untick "Published" to take one off the site.
+    description: Pages that list every guide for one kind of holiday (Beach holidays), one country (Holidays in Spain) or one month (Where to go on holiday in February). The guides on each come from the guides themselves, so these only hold the words. A month page lists every guide rated "Best" for that month, then the ones rated "Good". Untick "Published" to take one off the site.
     folder: content/hubs
     format: json
     extension: json
@@ -520,6 +520,7 @@ collections:
         options:
           - { label: "A kind of holiday", value: type }
           - { label: "A country", value: country }
+          - { label: "A month", value: month }
       - label: Holiday type
         name: holiday_type
         widget: select
@@ -538,8 +539,26 @@ collections:
           - { label: "⛷️ Skiing", value: ski }
           - { label: "🧘 Relax & spa", value: relax }
       - { label: Country code, name: country, widget: string, required: false, hint: "For a country. Its two-letter code, e.g. ES for Spain or US for the United States. Lists every guide in that country." }
-      - { label: Link name, name: name, widget: string, hint: "Short, for links and the breadcrumb, e.g. Beach holidays or Spain." }
-      - { label: Page heading, name: title, widget: string, hint: "e.g. Beach holidays or Holidays in Spain. A new hub's address comes from this, e.g. somewhere.party/destinations/holidays-in-spain, so it mustn't be the same as a guide's." }
+      - label: Month
+        name: month
+        widget: select
+        required: false
+        hint: For a month. Lists every guide rated "Best" that month, then the ones rated "Good".
+        options:
+          - { label: January, value: jan }
+          - { label: February, value: feb }
+          - { label: March, value: mar }
+          - { label: April, value: apr }
+          - { label: May, value: may }
+          - { label: June, value: jun }
+          - { label: July, value: jul }
+          - { label: August, value: aug }
+          - { label: September, value: sep }
+          - { label: October, value: oct }
+          - { label: November, value: nov }
+          - { label: December, value: dec }
+      - { label: Link name, name: name, widget: string, hint: "Short, for links and the breadcrumb, e.g. Beach holidays, Spain or February." }
+      - { label: Page heading, name: title, widget: string, hint: "e.g. Beach holidays, Holidays in Spain or Where to go on holiday in February. A new hub's address comes from this, e.g. somewhere.party/destinations/holidays-in-spain, so it mustn't be the same as a guide's." }
       - { label: Introduction, name: intro, widget: text, hint: "One or two sentences under the heading. Google also shows this under the page title in search results, cut off after about 155 characters, so put the most important part first." }
       - { label: Google title, name: seo_title, widget: string, required: false, hint: "Optional. The page title in search results, about 50 characters. Leave empty for \"Beach holidays: where to go and when\"." }
       - { label: Google description, name: seo_description, widget: text, required: false, hint: "Optional. Shown under the title in search results, cut off after about 155 characters. Leave empty to use the introduction." }

@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { HUBS, countryHub, findHub, hubGuides, hubMeta, hubSearchTitle, loadHub, readHub, typeHub } from "../src/hubs";
+import { HUBS, alsoGood, countryHub, findHub, hubGuides, hubMeta, hubSearchTitle, loadHub, monthHub, readHub, typeHub } from "../src/hubs";
 import { DESTINATIONS, destinationMeta, findDestination, readDestination } from "../src/destinations";
 import { publicPage } from "../shared/seo";
 
@@ -15,6 +15,7 @@ describe("hub files", () => {
     const raw = JSON.parse(readFileSync(new URL(file, dir), "utf8"));
     const h = readHub(slug, raw);
     if (h.kind === "type") expect(h.holiday_type).not.toBeNull();
+    else if (h.kind === "month") expect(h.month).not.toBeNull();
     else expect(h.country_code).toMatch(/^[A-Z]{2}$/);
     expect(h.intro).not.toBe("");
     if (raw.published) {
@@ -24,7 +25,7 @@ describe("hub files", () => {
   });
 
   it("gives each kind of holiday and country one hub at most", () => {
-    const keys = HUBS.map((h) => `${h.kind}:${h.holiday_type ?? h.country_code}`);
+    const keys = HUBS.map((h) => `${h.kind}:${h.holiday_type ?? h.month ?? h.country_code}`);
     expect(new Set(keys).size).toBe(keys.length);
   });
 });
@@ -36,6 +37,9 @@ describe("readHub", () => {
     const country = readHub("spain", { kind: "country", country: "es", holiday_type: "beach" });
     expect(country).toMatchObject({ kind: "country", country_code: "ES", holiday_type: null, name: "Spain", title: "Holidays in Spain" });
     expect(readHub("x", { holiday_type: "moon" }).holiday_type).toBeNull();
+    const month = readHub("feb", { kind: "month", month: "feb", holiday_type: "beach" });
+    expect(month).toMatchObject({ kind: "month", month: 1, holiday_type: null, country_code: "", name: "February", title: "Where to go on holiday in February" });
+    expect(readHub("x", { kind: "month", month: "smarch" }).month).toBeNull();
   });
 });
 
@@ -49,9 +53,25 @@ describe("hub pages", () => {
     expect(hubGuides(countryHub("ES")!).every((d) => d.country_code === "ES")).toBe(true);
   });
 
-  it("put kinds of holiday before countries", () => {
+  it("put kinds of holiday first, then months in order, then countries", () => {
     const kinds = HUBS.map((h) => h.kind);
-    expect(kinds.indexOf("country")).toBeGreaterThan(kinds.lastIndexOf("type"));
+    expect(kinds.indexOf("month")).toBeGreaterThan(kinds.lastIndexOf("type"));
+    expect(kinds.indexOf("country")).toBeGreaterThan(kinds.lastIndexOf("month"));
+    const months = HUBS.filter((h) => h.kind === "month").map((h) => h.month);
+    expect(months).toEqual(Array.from({ length: 12 }, (_, i) => i));
+  });
+
+  it("list a month's best guides, then its good ones, picking up new guides by themselves", () => {
+    const feb = monthHub(1)!;
+    expect(feb.slug).toBe("where-to-go-in-february");
+    const best = hubGuides(feb);
+    expect(best.length).toBeGreaterThan(0);
+    expect(best).toEqual(DESTINATIONS.filter((d) => d.months[1].rating === "best"));
+    const good = alsoGood(feb);
+    expect(good).toEqual(DESTINATIONS.filter((d) => d.months[1].rating === "good"));
+    expect(good.some((d) => best.includes(d))).toBe(false);
+    expect(alsoGood(typeHub("beach")!)).toEqual([]);
+    expect(hubSearchTitle(readHub("may", { kind: "month", month: "may" }))).toBe("Where to go on holiday in May | somewhere🎉");
   });
 
   it("tell search engines what they list", async () => {

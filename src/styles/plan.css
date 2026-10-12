@@ -490,6 +490,13 @@ a.plan-board-row:hover {
   grid-template-columns: minmax(0, 1fr);
   gap: 0.4rem;
 }
+.plan-day-after {
+  border-style: dashed;
+  opacity: 0.85;
+}
+.plan-day-after-tag {
+  color: var(--standby-ink);
+}
 .plan-day-when {
   display: flex;
   align-items: baseline;

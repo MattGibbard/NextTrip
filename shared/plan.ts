@@ -89,6 +89,20 @@ function spanDays(start: string, end: string) {
   return Number.isFinite(n) ? n : null;
 }
 
+/** How long the trip is from the draw's exact dates, like "2 days · 1 night", or null without them. */
+export function tripSpanLabel(dates: TripDates | null): string | null {
+  const n = dates?.kind === "exact" ? spanDays(dates.start, dates.end) : null;
+  if (n === null || n < 1) return null;
+  const nights = n - 1;
+  const d = `${n} ${n === 1 ? "day" : "days"}`;
+  return nights ? `${d} · ${nights} ${nights === 1 ? "night" : "nights"}` : d;
+}
+
+/** The draw's last day as a day number, when it has exact dates. Days after it are only kept for their plans. */
+export function lastTripDay(dates: TripDates | null): number | null {
+  return dates?.kind === "exact" ? spanDays(dates.start, dates.end) : null;
+}
+
 /**
  * How many days the itinerary shows: one for each of the draw's exact dates, else what the family
  * set, else the idea's trip length, else a week. Never fewer than the last day with something on it.

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { balances, costTotals, dayDate, dayStatus, daysUntil, formatMoney, guessCategory, parseAmount, planDays, settleUp } from "../shared/plan";
+import { balances, costTotals, dayDate, dayStatus, daysUntil, formatMoney, guessCategory, parseAmount, lastTripDay, planDays, settleUp, tripSpanLabel } from "../shared/plan";
 import type { PlanCost, PlanItem, PlanSettlement } from "../shared/plan";
 
 const cost = (amount: number, paid_by: number | null, status: PlanCost["status"] = "booked", category: PlanCost["category"] = "travel"): PlanCost => ({
@@ -27,6 +27,20 @@ describe("planDays", () => {
   });
   it("never hides a day that has something on it", () => {
     expect(planDays({ days: 3, items: [item(6)] }, null, null)).toBe(6);
+  });
+});
+
+describe("tripSpanLabel", () => {
+  it("counts days and nights from the draw's exact dates", () => {
+    expect(tripSpanLabel({ kind: "exact", start: "2027-08-14", end: "2027-08-15" })).toBe("2 days · 1 night");
+    expect(tripSpanLabel({ kind: "exact", start: "2027-08-14", end: "2027-08-21" })).toBe("8 days · 7 nights");
+    expect(tripSpanLabel({ kind: "exact", start: "2027-08-14", end: "2027-08-14" })).toBe("1 day");
+  });
+  it("is null without exact dates, so the idea's length shows instead", () => {
+    expect(tripSpanLabel({ kind: "month", month: "2027-08" })).toBeNull();
+    expect(tripSpanLabel(null)).toBeNull();
+    expect(lastTripDay(null)).toBeNull();
+    expect(lastTripDay({ kind: "exact", start: "2027-08-14", end: "2027-08-15" })).toBe(2);
   });
 });
 

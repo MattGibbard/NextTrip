@@ -2,6 +2,7 @@ import type { Hono } from "hono";
 import { HttpError } from "./env";
 import type { App, Ctx } from "./env";
 import { requireOwner } from "./auth";
+import { PLAN_TABLES } from "./plans";
 import { activePeople, loadFamily, matchingIdeaIds, toSwipe } from "./data";
 import type { SwipeRow } from "./data";
 import { body, cleanText, idParam, requireViewer, viewerId } from "./request";
@@ -106,8 +107,10 @@ export function roundRoutes(app: Hono<App>) {
       .first<{ id: number; winner_idea_id: number | null }>();
     if (!r) throw new HttpError(404, "Not found");
     const stmts = [db.prepare("DELETE FROM rounds WHERE id = ?").bind(r.id)];
-    // Deleting a draw puts its winner back in the pool, unless you've already turned it into a trip.
+    // Cancelling a draw puts its winner back in the pool with its trip plan cleared, unless you've already turned it into a trip.
     if (r.winner_idea_id !== null) {
+      const won = "EXISTS (SELECT 1 FROM ideas WHERE id = ?1 AND status = 'won')";
+      for (const t of PLAN_TABLES) stmts.push(db.prepare(`DELETE FROM ${t} WHERE idea_id = ?1 AND ${won}`).bind(r.winner_idea_id));
       stmts.push(db.prepare("UPDATE ideas SET status = 'active' WHERE id = ? AND status = 'won'").bind(r.winner_idea_id));
     }
     await db.batch(stmts);

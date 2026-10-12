@@ -21,6 +21,9 @@ async function planIdea(c: Ctx): Promise<number> {
 /** The most a ready-made list adds at once: a starter list for a big family is about 150 things. */
 const MAX_MANY = 300;
 
+/** Every table holding part of a trip plan, children before `plans`. */
+export const PLAN_TABLES = ["plan_days", "plan_items", "plan_costs", "plan_settlements", "plan_packing", "plan_todos", "plans"] as const;
+
 /** A list of things to add in one go. */
 function manyOf(v: unknown): Record<string, unknown>[] {
   if (!Array.isArray(v) || v.length > MAX_MANY || !v.every((x) => x && typeof x === "object")) throw new HttpError(400, "That list doesn't look right");

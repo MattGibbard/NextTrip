@@ -1,5 +1,6 @@
 // What search engines and link previews see for each public page. scripts/prerender.mjs writes
 // these into the built HTML, and the Worker serves the private pages with noindex.
+import { escapeHtml } from "./html";
 
 export const SITE = "https://somewhere.party";
 
@@ -140,10 +141,6 @@ export function isPrivatePath(pathname: string): boolean {
   return /^\/[fp]\/[\w-]+\/?$/.test(pathname) || /^\/signin\/?$/.test(pathname);
 }
 
-function esc(s: string): string {
-  return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-}
-
 /** The title, description, canonical address and share-preview tags for a fixed page's <head>. */
 export function headTags(page: FixedPage, words?: { title?: string; description?: string; jsonLd?: unknown[] }): string {
   // The home and creators pages' titles and descriptions can be changed in the editor at /admin.
@@ -160,8 +157,8 @@ export function headTags(page: FixedPage, words?: { title?: string; description?
 export function metaTags(m: Meta): string {
   const url = SITE + m.path;
   const tags = [
-    `<title>${esc(m.title)}</title>`,
-    `<meta name="description" content="${esc(m.description)}" />`,
+    `<title>${escapeHtml(m.title)}</title>`,
+    `<meta name="description" content="${escapeHtml(m.description)}" />`,
   ];
   if (!m.index) {
     tags.push(`<meta name="robots" content="noindex" />`);
@@ -173,13 +170,13 @@ export function metaTags(m: Meta): string {
     `<meta property="og:site_name" content="somewhere🎉" />`,
     `<meta property="og:locale" content="en_GB" />`,
     `<meta property="og:url" content="${url}" />`,
-    `<meta property="og:title" content="${esc(m.title)}" />`,
-    `<meta property="og:description" content="${esc(m.description)}" />`,
+    `<meta property="og:title" content="${escapeHtml(m.title)}" />`,
+    `<meta property="og:description" content="${escapeHtml(m.description)}" />`,
   );
   if (m.image) {
-    tags.push(`<meta property="og:image" content="${esc(m.image)}" />`);
+    tags.push(`<meta property="og:image" content="${escapeHtml(m.image)}" />`);
     if (m.imageSize) tags.push(`<meta property="og:image:width" content="${m.imageSize[0]}" />`, `<meta property="og:image:height" content="${m.imageSize[1]}" />`);
-    if (m.imageAlt) tags.push(`<meta property="og:image:alt" content="${esc(m.imageAlt)}" />`);
+    if (m.imageAlt) tags.push(`<meta property="og:image:alt" content="${escapeHtml(m.imageAlt)}" />`);
   } else {
     tags.push(
       `<meta property="og:image" content="${SITE}/og.png" />`,

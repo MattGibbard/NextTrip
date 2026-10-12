@@ -1,5 +1,6 @@
 import type { App } from "./env";
 import type { Hono } from "hono";
+import { escapeHtml } from "../shared/html";
 
 // GitHub sign-in for the content editor at /admin (Sveltia CMS). The editor opens /api/cms/auth in a
 // pop-up, GitHub sends the visitor back to /api/cms/callback, and the callback hands the token to the
@@ -77,8 +78,4 @@ function page(status: "success" | "error", payload: { token?: string; message?: 
       "Set-Cookie": `${STATE_COOKIE}=; Path=/api/cms; HttpOnly; Secure; SameSite=Lax; Max-Age=0`,
     },
   });
-}
-
-function escapeHtml(s: string): string {
-  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }

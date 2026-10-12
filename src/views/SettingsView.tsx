@@ -14,6 +14,7 @@ import { plural } from "../format";
 import { setThemeChoice, themeChoice } from "../theme";
 import type { ThemeChoice } from "../theme";
 import { LegalLinks } from "../components/SiteFrame";
+import { Avatar } from "../components/Avatar";
 
 const COLOUR_NAMES = ["Blue", "Pink", "Green", "Orange", "Purple", "Sea blue", "Mustard", "Red"];
 
@@ -221,9 +222,7 @@ function PersonCard({ person, isMe, canEdit, canManage }: { person: Person; isMe
   return (
     <div className={`person-card ${editing ? "editing" : ""}`}>
       <div className="person-card-row">
-        <span className="avatar" style={{ background: person.color }} aria-hidden>
-          {person.name.slice(0, 1).toUpperCase()}
-        </span>
+        <Avatar person={person} />
         <div className="person-card-who">
           <div className="person-card-name">
             <strong>{person.name}</strong>

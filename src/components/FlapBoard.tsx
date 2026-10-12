@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
+import { useMedia } from "../useMedia";
 
 /** One idea on the departures board. */
 export interface BoardRow {
@@ -51,19 +51,6 @@ export function boardTimeline(rows: BoardRow[]) {
   const winAt = losers.length ? t + 28 : t;
   for (const r of rows) if (r.win) at.set(r.id, winAt);
   return { at, end: winAt + 14 };
-}
-
-export function useMedia(query: string) {
-  const get = () => typeof matchMedia === "function" && matchMedia(query).matches;
-  const [on, setOn] = useState(get);
-  useEffect(() => {
-    if (typeof matchMedia !== "function") return;
-    const m = matchMedia(query);
-    const f = () => setOn(m.matches);
-    m.addEventListener("change", f);
-    return () => m.removeEventListener("change", f);
-  }, [query]);
-  return on;
 }
 
 /**

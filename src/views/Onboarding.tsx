@@ -12,6 +12,7 @@ import { PlaceSearch } from "../components/PlaceSearch";
 import { StandbyCard } from "../components/StandbyCard";
 import { CrossIcon } from "../components/TerminalPicker";
 import { ONBOARDING } from "../site";
+import { useMedia } from "../useMedia";
 
 // The words are edited at /admin (content/site/onboarding.json).
 const W = ONBOARDING.welcome;
@@ -24,16 +25,7 @@ type Step = "welcome" | "airport" | "idea" | "done";
 /** Wider than a phone, the steps sit in a two-panel card under a header bar instead of filling the screen. */
 const WIDE = "(min-width: 760px)";
 
-function useWide() {
-  const [wide, setWide] = useState(() => window.matchMedia(WIDE).matches);
-  useEffect(() => {
-    const mq = window.matchMedia(WIDE);
-    const onChange = () => setWide(mq.matches);
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
-  return wide;
-}
+const useWide = () => useMedia(WIDE);
 
 /**
  * The welcome steps shown the first time someone is in, and again from Settings.

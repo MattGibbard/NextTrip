@@ -5,6 +5,7 @@ import type { Hono } from "hono";
 import { HttpError } from "./env";
 import type { App, Ctx } from "./env";
 import { body, cleanText, idParam, viewerId } from "./request";
+import { isDate } from "../shared/tripDates";
 import { COST_CATEGORIES, ITEM_STATUSES, MAX_AMOUNT, MAX_DAYS } from "../shared/plan";
 import type { CostCategory, ItemStatus, PackingItem, PlanCost, PlanItem, PlanSettlement, PlanTodo, TripPlan } from "../shared/plan";
 
@@ -14,12 +15,6 @@ async function planIdea(c: Ctx): Promise<number> {
   const row = await c.env.DB.prepare("SELECT status FROM ideas WHERE id = ? AND family_id = ?").bind(id, c.get("family")).first<{ status: string }>();
   if (!row) throw new HttpError(404, "Not found");
   if (row.status !== "won" && row.status !== "done") throw new HttpError(400, "Only an idea that won a draw has a trip plan");
-  return id;
-}
-
-function rowId(c: Ctx, name: string): number {
-  const id = Number(c.req.param(name));
-  if (!Number.isInteger(id)) throw new HttpError(404, "Not found");
   return id;
 }
 
@@ -51,7 +46,7 @@ function requiredText(v: unknown, max: number, message: string): string {
 
 function cleanDate(v: unknown): string | null {
   const t = cleanText(v, 10);
-  return t && /^\d{4}-\d{2}-\d{2}$/.test(t) ? t : null;
+  return isDate(t) ? t : null;
 }
 
 const oneOf = <T extends string>(v: unknown, options: readonly T[], fallback: T): T => (options.includes(v as T) ? (v as T) : fallback);
@@ -145,7 +140,7 @@ export function planRoutes(app: Hono<App>) {
     const i = item(await body(c));
     changed(
       await c.env.DB.prepare("UPDATE plan_items SET day = ?, time = ?, title = ?, notes = ?, status = ? WHERE id = ? AND idea_id = ?")
-        .bind(i.day, i.time, i.title, i.notes, i.status, rowId(c, "item"), id)
+        .bind(i.day, i.time, i.title, i.notes, i.status, idParam(c, "item"), id)
         .run(),
     );
     return c.json({ ok: true });
@@ -153,7 +148,7 @@ export function planRoutes(app: Hono<App>) {
 
   app.delete("/plans/:id/items/:item", async (c) => {
     const id = await planIdea(c);
-    changed(await c.env.DB.prepare("DELETE FROM plan_items WHERE id = ? AND idea_id = ?").bind(rowId(c, "item"), id).run());
+    changed(await c.env.DB.prepare("DELETE FROM plan_items WHERE id = ? AND idea_id = ?").bind(idParam(c, "item"), id).run());
     return c.json({ ok: true });
   });
 
@@ -185,7 +180,7 @@ export function planRoutes(app: Hono<App>) {
     const k = await cost(c, await body(c));
     changed(
       await c.env.DB.prepare("UPDATE plan_costs SET title = ?, amount = ?, category = ?, status = ?, day = ?, paid_by = ? WHERE id = ? AND idea_id = ?")
-        .bind(k.title, k.amount, k.category, k.status, k.day, k.paid_by, rowId(c, "cost"), id)
+        .bind(k.title, k.amount, k.category, k.status, k.day, k.paid_by, idParam(c, "cost"), id)
         .run(),
     );
     return c.json({ ok: true });
@@ -193,7 +188,7 @@ export function planRoutes(app: Hono<App>) {
 
   app.delete("/plans/:id/costs/:cost", async (c) => {
     const id = await planIdea(c);
-    changed(await c.env.DB.prepare("DELETE FROM plan_costs WHERE id = ? AND idea_id = ?").bind(rowId(c, "cost"), id).run());
+    changed(await c.env.DB.prepare("DELETE FROM plan_costs WHERE id = ? AND idea_id = ?").bind(idParam(c, "cost"), id).run());
     return c.json({ ok: true });
   });
 
@@ -212,7 +207,7 @@ export function planRoutes(app: Hono<App>) {
 
   app.delete("/plans/:id/settlements/:settlement", async (c) => {
     const id = await planIdea(c);
-    changed(await c.env.DB.prepare("DELETE FROM plan_settlements WHERE id = ? AND idea_id = ?").bind(rowId(c, "settlement"), id).run());
+    changed(await c.env.DB.prepare("DELETE FROM plan_settlements WHERE id = ? AND idea_id = ?").bind(idParam(c, "settlement"), id).run());
     return c.json({ ok: true });
   });
 
@@ -231,7 +226,7 @@ export function planRoutes(app: Hono<App>) {
     const b = await body(c);
     changed(
       await c.env.DB.prepare("UPDATE plan_packing SET label = ?, person_id = ?, packed = ? WHERE id = ? AND idea_id = ?")
-        .bind(requiredText(b.label, 200, "Say what to pack"), await familyPersonOrNull(c, b.person_id), b.packed === true ? 1 : 0, rowId(c, "item"), id)
+        .bind(requiredText(b.label, 200, "Say what to pack"), await familyPersonOrNull(c, b.person_id), b.packed === true ? 1 : 0, idParam(c, "item"), id)
         .run(),
     );
     return c.json({ ok: true });
@@ -239,7 +234,7 @@ export function planRoutes(app: Hono<App>) {
 
   app.delete("/plans/:id/packing/:item", async (c) => {
     const id = await planIdea(c);
-    changed(await c.env.DB.prepare("DELETE FROM plan_packing WHERE id = ? AND idea_id = ?").bind(rowId(c, "item"), id).run());
+    changed(await c.env.DB.prepare("DELETE FROM plan_packing WHERE id = ? AND idea_id = ?").bind(idParam(c, "item"), id).run());
     return c.json({ ok: true });
   });
 
@@ -265,7 +260,7 @@ export function planRoutes(app: Hono<App>) {
     const t = await todo(c, await body(c));
     changed(
       await c.env.DB.prepare("UPDATE plan_todos SET label = ?, person_id = ?, due = ?, done = ? WHERE id = ? AND idea_id = ?")
-        .bind(t.label, t.person_id, t.due, t.done, rowId(c, "todo"), id)
+        .bind(t.label, t.person_id, t.due, t.done, idParam(c, "todo"), id)
         .run(),
     );
     return c.json({ ok: true });
@@ -273,7 +268,7 @@ export function planRoutes(app: Hono<App>) {
 
   app.delete("/plans/:id/todos/:todo", async (c) => {
     const id = await planIdea(c);
-    changed(await c.env.DB.prepare("DELETE FROM plan_todos WHERE id = ? AND idea_id = ?").bind(rowId(c, "todo"), id).run());
+    changed(await c.env.DB.prepare("DELETE FROM plan_todos WHERE id = ? AND idea_id = ?").bind(idParam(c, "todo"), id).run());
     return c.json({ ok: true });
   });
 }

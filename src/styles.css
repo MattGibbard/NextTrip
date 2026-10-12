@@ -1,4 +1,5 @@
 /* The site's main styles, one file per area. The order matters: later files win when two rules clash. */
+/* draw, onboarding, postcard and share.css load with the signed-in app (SignedIn.tsx), destination.css from main.tsx. */
 @import "./styles/base.css"; /* Colours, fonts and resets used everywhere. */
 @import "./styles/layout.css"; /* Page layout: the signed-in header, tabs and page width. */
 @import "./styles/components.css"; /* Buttons, cards, lists and the map. */

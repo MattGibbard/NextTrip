@@ -6,6 +6,7 @@ import type { Mode } from "../../shared/travelMode";
 import { hotelLink, hotelPlaces } from "../../shared/hotels";
 import type { HotelCampaign } from "../../shared/hotels";
 import { flightLink, flightOrigin } from "../../shared/flights";
+import { activitiesLink } from "../../shared/activities";
 import { currencyFor } from "../../shared/currency";
 import type { StayDates } from "../../shared/tripDates";
 import { api } from "../api";
@@ -42,7 +43,7 @@ function useFlightDestination(trip: Journey): Terminal | null {
   return arrive ?? (nearest?.key === key ? nearest.airport : null);
 }
 
-/** "Find flights" and "Find hotels" buttons through our affiliate links, with the commission note beside them. */
+/** "Find flights", "Find hotels" and "Things to do" buttons through our affiliate links, with the commission note beside them. */
 export function BookLinks({
   trip,
   mode,
@@ -87,6 +88,12 @@ export function BookLinks({
         {stops.map((p) => (
           <a key={`${p.name}|${p.country_code}`} className="btn ghost" href={hotelLink(p, campaign, { dates, guests: people.length, currency })} target="_blank" rel="sponsored noopener">
             🏨 Find hotels in {p.name}
+            <span aria-hidden>↗</span>
+          </a>
+        ))}
+        {stops.map((p) => (
+          <a key={`things|${p.name}|${p.country_code}`} className="btn ghost" href={activitiesLink(p, campaign)} target="_blank" rel="sponsored noopener">
+            🎟️ Things to do in {p.name}
             <span aria-hidden>↗</span>
           </a>
         ))}

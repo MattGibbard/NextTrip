@@ -108,3 +108,19 @@ describe("currencyFor", () => {
     expect(currencyFor(null)).toBe("GBP");
   });
 });
+
+describe("activitiesLink", () => {
+  it("wraps a Tiqets search for the place in our Travelpayouts link", async () => {
+    const { activitiesLink } = await import("../shared/activities");
+    const url = new URL(activitiesLink({ ...banff, name: " Rome " }, "trip_plan"));
+    expect(url.origin + url.pathname).toBe("https://tp.media/r");
+    expect(Object.fromEntries(url.searchParams)).toEqual({
+      campaign_id: "89",
+      marker: "786925",
+      p: "2074",
+      trs: "582749",
+      sub_id: "trip_plan",
+      u: "https://www.tiqets.com/en/search?q=Rome",
+    });
+  });
+});

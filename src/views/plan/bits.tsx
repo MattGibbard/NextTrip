@@ -1,14 +1,11 @@
 // Small pieces shared across the trip plan's tabs.
 import type { Person } from "../../../shared/types";
 import type { ItemStatus } from "../../../shared/plan";
+import { Avatar as PersonAvatar } from "../../components/Avatar";
 
-/** A round initial in the person's colour, or a star for the whole family. */
+/** The trip plan's smaller avatar. */
 export function Avatar({ person, size = 26 }: { person: Pick<Person, "name" | "color"> | null; size?: number }) {
-  return (
-    <span className="plan-av" style={{ background: person?.color ?? "var(--muted)", width: size, height: size }} title={person?.name ?? "Everyone"} aria-hidden>
-      {person ? person.name.slice(0, 1).toUpperCase() : "★"}
-    </span>
-  );
+  return <PersonAvatar person={person} className="plan-av" size={size} />;
 }
 
 const STATUS_TEXT: Record<ItemStatus | "estimate" | "free", string> = { plan: "PLAN", to_book: "TO BOOK", booked: "BOOKED", estimate: "ESTIMATE", free: "FREE" };

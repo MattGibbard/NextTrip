@@ -1,6 +1,7 @@
 // The sign-in email, styled as a boarding pass to match the site.
 // Email apps ignore most modern CSS, so the layout is tables with inline styles. The <style> block only adds
 // phone stacking and dark colours for the apps that read it (Apple Mail, iOS Mail); everyone else gets the light version.
+import { escapeHtml } from "../shared/html";
 
 const C = {
   bg: "#f6f7f5",
@@ -14,10 +15,6 @@ const C = {
 };
 const SANS = "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
 const MONO = "'DM Mono', ui-monospace, Menlo, Consolas, monospace";
-
-function esc(s: string) {
-  return s.replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[ch]!);
-}
 
 const label = (text: string, extra = "") =>
   `<div class="muted" style="font-family:${MONO};font-size:11px;font-weight:500;letter-spacing:0.14em;color:${C.muted};${extra}">${text}</div>`;
@@ -33,15 +30,15 @@ const notch = (side: "left" | "right") => {
 // across the middle, in two groups of three. Apps that drop the gradient still show plain dark tiles.
 const flaps = (code: string) => {
   const tile = (d: string) =>
-    `<td class="flap" width="40" align="center" style="width:40px;height:56px;padding:0;background-color:${C.board};background-image:linear-gradient(to bottom,transparent 27px,rgba(0,0,0,0.55) 27px,rgba(0,0,0,0.55) 28px,transparent 28px);border-radius:7px;font-family:${MONO};font-size:30px;font-weight:500;line-height:56px;color:#ffffff">${esc(d)}</td>`;
+    `<td class="flap" width="40" align="center" style="width:40px;height:56px;padding:0;background-color:${C.board};background-image:linear-gradient(to bottom,transparent 27px,rgba(0,0,0,0.55) 27px,rgba(0,0,0,0.55) 28px,transparent 28px);border-radius:7px;font-family:${MONO};font-size:30px;font-weight:500;line-height:56px;color:#ffffff">${escapeHtml(d)}</td>`;
   const gap = (w: number) => `<td width="${w}" style="width:${w}px;padding:0;font-size:0;line-height:0">&nbsp;</td>`;
   const cells = [...code].map((d, i) => (i === 0 ? "" : gap(i === 3 ? 14 : 4)) + tile(d)).join("");
-  return `<table role="presentation" cellpadding="0" cellspacing="0" border="0" aria-label="${esc(code.split("").join(" "))}"><tr>${cells}</tr></table>`;
+  return `<table role="presentation" cellpadding="0" cellspacing="0" border="0" aria-label="${escapeHtml(code.split("").join(" "))}"><tr>${cells}</tr></table>`;
 };
 
 export function signInEmail({ link, code, email, minutes }: { link: string; code: string; email: string; minutes: number }) {
   const subject = "Your somewhere🎉 sign-in link";
-  const href = esc(link);
+  const href = escapeHtml(link);
   // Spaced into two groups of three so it's easy to read off and type.
   const shownCode = `${code.slice(0, 3)} ${code.slice(3)}`;
   const preheader = `Your code is ${shownCode}, or tap to sign in. Both work once and run out in ${minutes} minutes.`;
@@ -74,7 +71,7 @@ export function signInEmail({ link, code, email, minutes }: { link: string; code
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
-<title>${esc(subject)}</title>
+<title>${escapeHtml(subject)}</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;family=DM+Mono:wght@500&amp;display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light dark;supported-color-schemes:light dark}
@@ -99,7 +96,7 @@ a{color:${C.accent}}
 </style>
 </head>
 <body class="page" style="margin:0;padding:0;background:${C.bg};-webkit-text-size-adjust:100%">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all">${esc(preheader)}</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all">${escapeHtml(preheader)}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="page" style="background:${C.bg}">
 <tr><td align="center" class="outer" style="padding:48px 16px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;font-family:${SANS};color:${C.text}">
@@ -162,7 +159,7 @@ ${label("DIDN'T ASK FOR THIS?", "margin-bottom:6px")}
 <tr><td style="padding:32px 4px 0">
 <div class="ink" style="font-family:${SANS};font-size:16px;font-weight:800;line-height:1.2;color:${C.text};margin-bottom:6px">somewhere🎉</div>
 <p class="muted" style="margin:0 0 6px;font-size:14px;line-height:1.45;color:${C.muted}">Where we've been, and where we're going next.</p>
-<p class="muted" style="margin:0;font-size:13px;line-height:1.45;color:${C.muted}">This went to ${esc(email)} because someone asked to sign in to <a href="https://somewhere.party/" class="link" style="color:${C.accent}">somewhere.party</a> with it.</p>
+<p class="muted" style="margin:0;font-size:13px;line-height:1.45;color:${C.muted}">This went to ${escapeHtml(email)} because someone asked to sign in to <a href="https://somewhere.party/" class="link" style="color:${C.accent}">somewhere.party</a> with it.</p>
 </td></tr>
 
 </table>

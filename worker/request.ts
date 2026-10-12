@@ -14,8 +14,9 @@ export function requireViewer(c: Ctx): number {
   return id;
 }
 
-export function idParam(c: Ctx): number {
-  const id = Number(c.req.param("id"));
+/** A numeric id from the address, `:id` unless another name is given. */
+export function idParam(c: Ctx, name = "id"): number {
+  const id = Number(c.req.param(name));
   if (!Number.isInteger(id)) throw new HttpError(404, "Not found");
   return id;
 }

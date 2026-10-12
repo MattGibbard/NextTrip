@@ -12,9 +12,11 @@ import { listNames, plural } from "../format";
 import { TripForm } from "./TripForm";
 import { IdeaDetailsLine } from "../components/IdeaDetails";
 import { celebrate } from "../components/celebrate";
+import { Avatar } from "../components/Avatar";
 import { SwipeDeck } from "../components/SwipeDeck";
 import { BookLinks } from "../components/BookLinks";
-import { FlapBoard, boardTimeline, useMedia } from "../components/FlapBoard";
+import { FlapBoard, boardTimeline } from "../components/FlapBoard";
+import { useMedia } from "../useMedia";
 import type { BoardRow } from "../components/FlapBoard";
 import { RoundFilterFields, RoundFilterLine } from "../components/RoundFilters";
 import { NO_FILTERS, hasFilters, matchesFilters } from "../../shared/roundFilters";
@@ -347,9 +349,7 @@ function OpenRound({ round, onDrawn }: { round: Round; onDrawn: (r: Round) => vo
             const done = shortlisting ? !swiping : locked;
             return (
               <div key={p.id} className="crew-chip">
-                <span className="avatar" style={{ background: p.color }}>
-                  {p.name.slice(0, 1).toUpperCase()}
-                </span>
+                <Avatar person={p} />
                 <span className="crew-text">
                   <span className="crew-name">
                     {p.name}

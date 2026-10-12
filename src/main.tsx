@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot, hydrateRoot } from "react-dom/client";
 import "./styles.css";
-import "./destination.css";
+import "./styles/destination.css";
 import { App } from "./App";
 import { SiteBanner } from "./components/SiteBanner";
 import "./install";

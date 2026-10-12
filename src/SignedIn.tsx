@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "leaflet/dist/leaflet.css";
-import "./draw.css";
-import "./onboarding.css";
-import "./postcard.css";
-import "./share.css";
+import "./styles/draw.css";
+import "./styles/onboarding.css";
+import "./styles/postcard.css";
+import "./styles/share.css";
 import type { FamilyData, Person } from "../shared/types";
 import type { SignedInSession } from "./lastFamily";
 import { DataProvider, useData } from "./data";

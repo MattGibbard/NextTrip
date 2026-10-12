@@ -3,6 +3,7 @@ import type { FormEvent } from "react";
 import { PERSON_COLORS } from "../../shared/auth";
 import { api } from "../api";
 import { useData } from "../data";
+import { Avatar } from "./Avatar";
 
 /**
  * Asks who this browser is, the first time. Everyone else can only add a new
@@ -36,9 +37,7 @@ export function PersonPicker() {
             <div className="picker-options">
               {people.map((p) => (
                 <button key={p.id} className="picker-option" style={{ borderColor: p.color }} onClick={() => void pick(p.id)}>
-                  <span className="avatar" style={{ background: p.color }}>
-                    {p.name.slice(0, 1).toUpperCase()}
-                  </span>
+                  <Avatar person={p} />
                   {p.name}
                 </button>
               ))}

@@ -19,7 +19,8 @@ const DEFAULT_NIGHTS = 7;
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const MONTH = /^\d{4}-\d{2}$/;
 
-function isDate(s: unknown): s is string {
+/** A real calendar date written YYYY-MM-DD. */
+export function isDate(s: unknown): s is string {
   if (typeof s !== "string" || !DATE.test(s)) return false;
   const d = new Date(`${s}T00:00:00Z`);
   return !Number.isNaN(d.getTime()) && d.toISOString().slice(0, 10) === s;

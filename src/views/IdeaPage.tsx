@@ -9,6 +9,7 @@ import { MODES, ideaMode, ticketEnds } from "../../shared/travelMode";
 import { followsInOrder } from "../../shared/routes";
 import { Pass } from "../components/Ticket";
 import { BookLinks } from "../components/BookLinks";
+import { CancelDraw } from "../components/CancelDraw";
 import { WorldMap, terminalPins } from "../components/WorldMap";
 import { journeyLegs } from "../../shared/terminals";
 import type { Pin, Route } from "../components/WorldMap";
@@ -86,6 +87,8 @@ export function IdeaPage({ id }: { id: number }) {
 
   const creator = people.find((p) => p.id === idea.created_by);
   const trip = trips.find((t) => t.idea_id === idea.id);
+  // The latest draw it won; rounds arrive newest first.
+  const wonIn = rounds.find((r) => r.status === "drawn" && r.winner_idea_id === idea.id);
   const origin = idea.depart ?? home;
   const estimate = estimateTravel(origin, idea.places);
   const types = idea.holiday_types.map(holidayType).filter((t) => t !== undefined);
@@ -146,6 +149,7 @@ export function IdeaPage({ id }: { id: number }) {
           <button className="btn small ghost" onClick={() => setTripDraft({ title: idea.title, places: idea.places, idea_id: idea.id, depart: idea.depart, arrive: idea.arrive })}>
             We went! Add to Been
           </button>
+          {wonIn && <CancelDraw round={wonIn} winner={idea} onCancelled={() => (location.hash = "/next")} />}
         </div>
       )}
       {trip && (

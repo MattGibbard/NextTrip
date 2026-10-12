@@ -3,6 +3,7 @@ import { deleteCookie, getCookie, setCookie } from "hono/cookie";
 import { normaliseEmail, randomToken, sha256 } from "../shared/auth";
 import { HttpError } from "./env";
 import { signInEmail } from "./signInEmail";
+import { PLAN_TABLES } from "./plans";
 import type { App, Ctx, Env, Role } from "./env";
 import type { Session } from "../shared/types";
 
@@ -374,7 +375,7 @@ export const DELETE_CONFIRMATION = "DELETE";
 export function deleteFamilyStatements(db: D1Database, family: number): D1PreparedStatement[] {
   const stmts = [
     // Trip plans point at ideas and people, so they go first.
-    ...["plan_days", "plan_items", "plan_costs", "plan_settlements", "plan_packing", "plan_todos", "plans"].map((t) => `DELETE FROM ${t} WHERE family_id = ?1`),
+    ...PLAN_TABLES.map((t) => `DELETE FROM ${t} WHERE family_id = ?1`),
     "DELETE FROM rounds WHERE family_id = ?1",
     "DELETE FROM trips WHERE family_id = ?1",
     "DELETE FROM ideas WHERE family_id = ?1",

@@ -15,6 +15,7 @@ import { celebrate } from "../components/celebrate";
 import { Avatar } from "../components/Avatar";
 import { SwipeDeck } from "../components/SwipeDeck";
 import { BookLinks } from "../components/BookLinks";
+import { CancelDraw } from "../components/CancelDraw";
 import { FlapBoard, boardTimeline } from "../components/FlapBoard";
 import { useMedia } from "../useMedia";
 import type { BoardRow } from "../components/FlapBoard";
@@ -929,14 +930,7 @@ function Breakdown({ round }: { round: Round }) {
 function HistoryRow({ round, hidden }: { round: Round; hidden: boolean }) {
   const [open, setOpen] = useState(false);
   const [draft, setDraft] = useState<TripDraft | null>(null);
-  const { ideas, reload, isOwner, home } = useData();
-  const remove = async () => {
-    const back = winnerIdea?.status === "won" ? ` ${winnerIdea.title} goes back into the pool.` : "";
-    if (!confirm(`Delete ${round.name} and everyone's points for it?${back}`)) return;
-    await api.deleteRound(round.id);
-    // Its winner may go back into the pool.
-    await reload(["rounds", "ideas"]);
-  };
+  const { ideas, home } = useData();
   const winner = round.ideas.find((i) => i.id === round.winner_idea_id);
   const winnerIdea: Idea | undefined = ideas.find((i) => i.id === round.winner_idea_id);
   const date = round.drawn_at ? dayMonth(round.drawn_at, true) : "";
@@ -983,11 +977,7 @@ function HistoryRow({ round, hidden }: { round: Round; hidden: boolean }) {
             </button>
           )}
           {winnerIdea?.status === "done" && <p className="muted small">✓ Added to Been</p>}
-          {isOwner && (
-            <button className="link danger delete-draw" onClick={remove}>
-              Delete this draw
-            </button>
-          )}
+          <CancelDraw round={round} winner={winnerIdea} className="link danger delete-draw" />
         </div>
       )}
       {draft && <TripForm draft={draft} onClose={() => setDraft(null)} />}

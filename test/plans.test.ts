@@ -231,3 +231,57 @@ it("goes when the family deletes its account", async () => {
   // The other family's plan is untouched.
   expect((await call(a.owner, "GET", `/plans/${a.won}`)).body.costs).toHaveLength(1);
 });
+
+describe("cancelling the draw it won", () => {
+  const planRows = async (idea: number) => {
+    let n = 0;
+    for (const t of ["plans", "plan_days", "plan_items", "plan_costs", "plan_settlements", "plan_packing", "plan_todos"]) {
+      n += (await env.DB.prepare(`SELECT COUNT(*) AS n FROM ${t} WHERE idea_id = ?`).bind(idea).first<{ n: number }>())!.n;
+    }
+    return n;
+  };
+  const drawnRound = async (family: Family, idea: number) => {
+    const fam = await env.DB.prepare("SELECT family_id FROM ideas WHERE id = ?").bind(idea).first<{ family_id: number }>();
+    const row = await env.DB.prepare("INSERT INTO rounds (name, points_per_person, status, winner_idea_id, family_id) VALUES ('Spring', 10, 'drawn', ?, ?) RETURNING id")
+      .bind(idea, fam!.family_id)
+      .first<{ id: number }>();
+    return row!.id;
+  };
+  const fillPlan = async (family: Family, idea: number) => {
+    await call(family.member, "PUT", `/plans/${idea}`, { budget: 100000, days: 3 });
+    await call(family.member, "PUT", `/plans/${idea}/days/1`, { title: "Fly out" });
+    await call(family.member, "POST", `/plans/${idea}/items`, { day: 1, title: "Check in" });
+    await call(family.member, "POST", `/plans/${idea}/costs`, { title: "Hotel", amount: 50000, category: "stay", status: "booked", paid_by: family.person });
+    await call(family.member, "POST", `/plans/${idea}/packing`, { label: "Suncream" });
+    await call(family.member, "POST", `/plans/${idea}/todos`, { label: "Passports" });
+  };
+
+  it("clears the plan and puts the idea back in the pool", async () => {
+    const c = await makeFamily("plan-c@example.com", "Charlie");
+    await fillPlan(c, c.won);
+    expect(await planRows(c.won)).toBeGreaterThan(5);
+    const round = await drawnRound(c, c.won);
+    expect((await call(c.owner, "DELETE", `/rounds/${round}`)).status).toBe(200);
+    expect(await planRows(c.won)).toBe(0);
+    const idea = await env.DB.prepare("SELECT status FROM ideas WHERE id = ?").bind(c.won).first<{ status: string }>();
+    expect(idea!.status).toBe("active");
+    // Family A's plan is untouched.
+    expect((await call(a.owner, "GET", `/plans/${a.won}`)).body.costs).toHaveLength(1);
+  });
+
+  it("keeps the plan of a trip you've already been on", async () => {
+    const d = await makeFamily("plan-d@example.com", "Delta");
+    await fillPlan(d, d.won);
+    await env.DB.prepare("UPDATE ideas SET status = 'done' WHERE id = ?").bind(d.won).run();
+    const before = await planRows(d.won);
+    const round = await drawnRound(d, d.won);
+    expect((await call(d.owner, "DELETE", `/rounds/${round}`)).status).toBe(200);
+    expect(await planRows(d.won)).toBe(before);
+  });
+
+  it("is only for the organiser", async () => {
+    const e = await makeFamily("plan-e@example.com", "Echo");
+    const round = await drawnRound(e, e.won);
+    expect((await call(e.member, "DELETE", `/rounds/${round}`)).status).toBe(403);
+  });
+});

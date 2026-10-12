@@ -332,6 +332,12 @@
   opacity: 0.75;
   font-size: 0.65rem;
 }
+.departure-length {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
 .departure-trip .tk-value {
   font-size: 1.05rem;
   font-weight: 800;

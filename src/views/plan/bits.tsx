@@ -1,4 +1,5 @@
 // Small pieces shared across the trip plan's tabs.
+import { useState } from "react";
 import type { Person } from "../../../shared/types";
 import type { ItemStatus } from "../../../shared/plan";
 import { Avatar as PersonAvatar } from "../../components/Avatar";
@@ -47,5 +48,24 @@ export function PersonChoice({ people, value, onChange, none }: { people: Person
         {none}
       </button>
     </div>
+  );
+}
+
+/** A button that runs something once, saying so while it does. */
+export function OnceButton({ label, busy, run, className = "btn small" }: { label: string; busy: string; run: () => Promise<unknown>; className?: string }) {
+  const [running, setRunning] = useState(false);
+  return (
+    <button
+      type="button"
+      className={className}
+      disabled={running}
+      onClick={async () => {
+        setRunning(true);
+        await run();
+        setRunning(false);
+      }}
+    >
+      {running ? busy : label}
+    </button>
   );
 }

@@ -7,7 +7,7 @@ import { currencyFor } from "../../../shared/currency";
 import { MODES, ideaMode, ticketEnds } from "../../../shared/travelMode";
 import type { Mode } from "../../../shared/travelMode";
 import { tripLengthLabel } from "../../../shared/ideaDetails";
-import { daysUntil, formatMoney, planDays, tripSpanLabel } from "../../../shared/plan";
+import { costTotals, daysUntil, formatMoney, planDays, tripOver, tripSpanLabel } from "../../../shared/plan";
 import type { TripPlan } from "../../../shared/plan";
 import { PLAN_TABS, dayLabel, planHref, todayIso } from "./context";
 import type { PlanCtx, PlanTab } from "./context";
@@ -16,15 +16,18 @@ import { PlanItinerary } from "./PlanItinerary";
 import { PlanCosts } from "./PlanCosts";
 import { PlanPacking } from "./PlanPacking";
 import { DatesSheet } from "./sheets";
+import { TripForm } from "../TripForm";
+import type { TripDraft } from "../TripForm";
 
 const MONTH = new Intl.DateTimeFormat("en-GB", { month: "short", year: "numeric", timeZone: "UTC" });
 
 export function PlanPage({ id, tab }: { id: number; tab: PlanTab }) {
-  const { ideas, rounds, people, me, home } = useData();
+  const { ideas, rounds, people, me, home, trips } = useData();
   const idea = ideas.find((i) => i.id === id);
   const [plan, setPlan] = useState<TripPlan | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [editingDates, setEditingDates] = useState(false);
+  const [tripDraft, setTripDraft] = useState<TripDraft | null>(null);
 
   const load = useCallback(async () => {
     const p = await api.plan(id);
@@ -101,6 +104,8 @@ export function PlanPage({ id, tab }: { id: number; tab: PlanTab }) {
       </a>
       <PlanHeader idea={idea} dates={dates} round={round} people={people.map((p) => p.name)} onDates={round ? () => setEditingDates(true) : undefined} home={home} />
 
+      {ctx && <HomeAgain ctx={ctx} trip={trips.find((t) => t.idea_id === id) ?? null} onSave={setTripDraft} />}
+
       <nav className="plan-tabs" aria-label="Trip plan">
         {PLAN_TABS.map((t) => (
           <a key={t.id} href={planHref(id, t.id)} className={tab === t.id ? "on" : ""} aria-current={tab === t.id ? "page" : undefined}>
@@ -132,6 +137,46 @@ export function PlanPage({ id, tab }: { id: number; tab: PlanTab }) {
         </>
       )}
       {editingDates && ctx && <DatesSheet ctx={ctx} onClose={() => setEditingDates(false)} />}
+      {tripDraft && <TripForm draft={tripDraft} onClose={() => setTripDraft(null)} />}
+    </section>
+  );
+}
+
+/** Once the trip's over, an offer to keep it as a postcard on Been, filled in from the plan. */
+function HomeAgain({ ctx, trip, onSave }: { ctx: PlanCtx; trip: { id: number; title: string } | null; onSave: (d: TripDraft) => void }) {
+  const { idea, dates, plan } = ctx;
+  if (trip) {
+    return (
+      <p className="small">
+        ✓ You went: <a href={`#/been/${trip.id}`}>{trip.title}</a> is on Been.
+      </p>
+    );
+  }
+  if (idea.status !== "won" || !tripOver(dates, todayIso())) return null;
+  const spent = costTotals(plan.costs).total;
+  const save = () =>
+    onSave({
+      title: idea.title,
+      places: idea.places,
+      idea_id: idea.id,
+      depart: idea.depart,
+      arrive: idea.arrive,
+      cover_url: idea.cover_url,
+      ...(dates?.kind === "exact" ? { start_date: dates.start, end_date: dates.end } : {}),
+      ...(spent ? { notes: `We spent ${ctx.money(spent)} altogether.` } : {}),
+    });
+  return (
+    <section className="panel plan-starter">
+      <span className="plan-starter-icon" aria-hidden>
+        📮
+      </span>
+      <div className="grow">
+        <h2>Welcome home! Save this trip to Been</h2>
+        <p className="muted small">We'll make it a postcard with your places, dates{spent ? " and what you spent" : ""} filled in. Add a rating and a photo while it's fresh.</p>
+      </div>
+      <button type="button" className="btn small" onClick={save}>
+        Save to Been
+      </button>
     </section>
   );
 }

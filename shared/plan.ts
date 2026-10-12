@@ -115,6 +115,12 @@ export function planDays(plan: Pick<TripPlan, "days" | "items">, dates: TripDate
   return Math.min(MAX_DAYS, Math.max(1, n, used));
 }
 
+/** Whether the trip has been and gone: its last day, or its month, is before today. */
+export function tripOver(dates: TripDates | null, today: string): boolean {
+  if (!dates) return false;
+  return dates.kind === "exact" ? dates.end < today : dates.month < today.slice(0, 7);
+}
+
 /** The date of a day (1 is the first), when the draw has exact dates. */
 export function dayDate(dates: TripDates | null, day: number): string | null {
   if (dates?.kind !== "exact") return null;

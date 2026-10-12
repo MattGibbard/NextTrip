@@ -17,29 +17,21 @@ export function Frame({ children }: { children: ReactNode }) {
   );
 }
 
-/** The signed-out header, shared by the home page and the other public pages. Destination guides get their own links. */
-export function SiteHeader({ sections = false, guide = false }: { sections?: boolean; guide?: boolean | "index" }) {
-  if (guide) {
-    return (
-      <header className="lp-top">
-        <div className="lp-wrap lp-top-inner">
-          <a className="lp-brand" href="/">
-            somewhere<span aria-hidden>🎉</span>
-          </a>
-          <nav className="lp-nav lp-nav-guide" aria-label="Main">
-            <a className="lp-nav-keep" href="/destinations" aria-current={guide === "index" ? "page" : undefined}>
-              Inspire
-            </a>
-            <a href="/#how">How the draw works</a>
-            <a href="/#signin">Sign in</a>
-          </nav>
-          <a className="btn" href="/#signin">
-            Start planning
-          </a>
-        </div>
-      </header>
-    );
-  }
+/** The sections the header links to, so a page can light up the one it belongs to. */
+export type SiteSection = "how" | "inspire" | "blog";
+
+const NAV: { id: SiteSection; label: string; href: string }[] = [
+  { id: "how", label: "How it works", href: "/how-it-works" },
+  { id: "inspire", label: "Inspire", href: "/destinations" },
+  { id: "blog", label: "Blog", href: "/blog" },
+];
+
+/**
+ * The signed-out header, the same on every public page. `current` lights up the section the page is in;
+ * `exact` says the page is that section's front page. On the home page sign-in scrolls rather than reloads.
+ */
+export function SiteHeader({ current, exact = false, home = false }: { current?: SiteSection; exact?: boolean; home?: boolean }) {
+  const signin = home ? { href: "#signin", onClick: jump } : { href: "/#signin" };
   return (
     <header className="lp-top">
       <div className="lp-wrap lp-top-inner">
@@ -47,32 +39,16 @@ export function SiteHeader({ sections = false, guide = false }: { sections?: boo
           somewhere<span aria-hidden>🎉</span>
         </a>
         <nav className="lp-nav" aria-label="Main">
-          {sections && (
-            <>
-              <a href="#how" onClick={jump}>
-                How it works
-              </a>
-              <a href="#features" onClick={jump}>
-                Features
-              </a>
-              <a href="#why" onClick={jump}>
-                Why use it
-              </a>
-            </>
-          )}
-          <a className="lp-nav-keep" href="/destinations">
-            Inspire
-          </a>
+          {NAV.map((n) => (
+            <a key={n.id} className={n.id === "inspire" ? "lp-nav-keep" : undefined} href={n.href} aria-current={n.id === current ? (exact ? "page" : "true") : undefined}>
+              {n.label}
+            </a>
+          ))}
+          <a {...signin}>Sign in</a>
         </nav>
-        {sections ? (
-          <a className="btn ghost" href="#signin" onClick={jump}>
-            Sign in
-          </a>
-        ) : (
-          <a className="btn ghost" href="/">
-            Home
-          </a>
-        )}
+        <a className="btn" {...signin}>
+          Start planning
+        </a>
       </div>
     </header>
   );

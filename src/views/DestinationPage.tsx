@@ -66,7 +66,7 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
 
   return (
     <div className={`lp dg ${signedIn ? "dg-app" : ""}`}>
-      {signedIn ? <AppTopbar current="guides" me={me} /> : <SiteHeader guide />}
+      {signedIn ? <AppTopbar current="guides" me={me} /> : <SiteHeader current="inspire" />}
 
       <main className="lp-wrap dg-main">
         <div className="dg-top">
@@ -530,7 +530,7 @@ export function DestinationsIndex({ family }: { family?: Family }) {
 
   return (
     <div className={`lp dg dx ${signedIn ? "dg-app" : ""}`}>
-      {signedIn ? <AppTopbar current="guides" me={me} /> : <SiteHeader guide="index" />}
+      {signedIn ? <AppTopbar current="guides" me={me} /> : <SiteHeader current="inspire" exact />}
 
       <main>
         <section className="lp-wrap dx-hero">

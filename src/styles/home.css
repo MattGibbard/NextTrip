@@ -107,27 +107,45 @@
 .lp-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 4px;
+  margin-left: auto;
   font-size: var(--text-8);
   font-weight: 600;
 }
+/* Every link gets the pill's padding, so lighting one up doesn't move the others. */
 .lp-nav a {
   color: var(--text);
   text-decoration: none;
+  padding: 10px 14px;
+  border-radius: var(--radius-pill);
 }
 .lp-nav a:hover {
   color: var(--accent);
 }
-/* On phones the header keeps just the Inspire link; the section links come back on wider screens. */
+/* The section this page belongs to. */
+.lp-nav a[aria-current] {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+/* On phones the header keeps just the Inspire link and the button; the rest come back on wider screens and are in the footer. */
 .lp-nav a:not(.lp-nav-keep) {
   display: none;
 }
 @media (max-width: 759px) {
-  .lp-nav {
-    margin-left: auto;
+  .lp-top-inner {
+    gap: 4px;
   }
-  /* The guides' header has its own "Start planning" button, so phones get just that, as before. */
-  .lp-nav-guide {
+  .lp-nav a {
+    padding: 10px 10px;
+  }
+  .lp-top .btn {
+    padding: 0.6rem 0.75rem;
+    font-size: var(--text-7);
+  }
+}
+/* The narrowest phones drop the Inspire link too, so the button always fits; it's in the footer. */
+@media (max-width: 374px) {
+  .lp-nav {
     display: none;
   }
 }

@@ -19,7 +19,7 @@ export function HomePage() {
   const { hero, how, features, why, signup } = HOME;
   return (
     <div className="lp lp-home">
-      <SiteHeader sections />
+      <SiteHeader home />
 
       <section className="lp-wrap lp-hero">
         <div className="lp-hero-text">

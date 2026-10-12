@@ -41,7 +41,7 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
 
   return (
     <div className={`lp dg dx hb ${signedIn ? "dg-app" : ""}`}>
-      {signedIn ? <AppTopbar current="guides" me={me} /> : <SiteHeader guide />}
+      {signedIn ? <AppTopbar current="guides" me={me} /> : <SiteHeader current="inspire" />}
 
       <main>
         <section className="lp-wrap dx-hero">

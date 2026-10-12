@@ -11,7 +11,7 @@ const MORE = 3;
 export function BlogIndex() {
   return (
     <div className="lp lp-home lp-info bl">
-      <SiteHeader />
+      <SiteHeader current="blog" exact />
 
       <header className="lp-wrap lp-info-head">
         <div className="lp-kicker">Blog</div>
@@ -51,7 +51,7 @@ export function BlogPost({ post }: { post: Post }) {
 
   return (
     <div className="lp lp-home lp-info bl">
-      <SiteHeader />
+      <SiteHeader current="blog" />
 
       <header className="lp-wrap lp-info-head">
         <nav aria-label="Breadcrumb" className="bl-crumbs">

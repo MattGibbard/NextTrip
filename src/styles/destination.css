@@ -536,12 +536,6 @@ a.dg-similar-card:hover {
 
 /* ---------- All destinations (/destinations) ---------- */
 
-.lp-nav a[aria-current="page"] {
-  color: var(--accent);
-  background: var(--accent-soft);
-  padding: 10px 14px;
-  border-radius: var(--radius-pill);
-}
 .dx main {
   padding-bottom: 24px;
 }

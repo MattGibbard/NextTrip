@@ -1,0 +1,47 @@
+{
+  "published": true,
+  "kind": "collection",
+  "month": "feb",
+  "icon": "⛄",
+  "guides": [
+    "cape-verde",
+    "chamonix",
+    "dubai",
+    "gran-canaria",
+    "innsbruck",
+    "interlaken",
+    "lanzarote",
+    "levi",
+    "madeira",
+    "malta",
+    "marrakech",
+    "rovaniemi",
+    "saariselka",
+    "tenerife",
+    "tromso",
+    "zermatt"
+  ],
+  "name": "February half term",
+  "title": "February half term holidays",
+  "intro": "Winter sun four hours away, or snow, huskies and northern lights. Here's where to go on holiday at February half term, and what each place is like then.",
+  "seo_title": "February half term holidays: where to go for sun or snow",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "When is February half term?",
+      "answer": "Usually a week in mid-February in England and Wales, often the week containing or just after 14 February. Dates vary by council and school, and Scotland's mid-term break is often shorter, so check your school's calendar."
+    },
+    {
+      "question": "Where is warm at February half term?",
+      "answer": "The Canary Islands are the warmest choice within about four hours, at around 20 to 22°C. Madeira and Marrakech are a little cooler. For proper heat, Cape Verde is about six hours away and Dubai about seven."
+    },
+    {
+      "question": "Where can we go for snow at February half term?",
+      "answer": "February is one of the best months for snow. The Alps, from Chamonix and Zermatt to Innsbruck and Interlaken, are in full ski season, and Lapland and Tromsø have deep snow, longer days and good odds of the northern lights."
+    },
+    {
+      "question": "Is February half term expensive?",
+      "answer": "Yes, prices rise sharply in half-term week, especially for ski trips and the Canaries. Book early, and compare flights from different UK airports, as half-term dates differ by area."
+    }
+  ]
+}

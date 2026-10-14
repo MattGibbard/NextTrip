@@ -1,0 +1,49 @@
+{
+  "published": true,
+  "kind": "collection",
+  "month": "may",
+  "icon": "🌼",
+  "guides": [
+    "barcelona",
+    "budapest",
+    "cappadocia",
+    "copenhagen",
+    "crete",
+    "dubrovnik",
+    "gozo",
+    "kotor",
+    "krakow",
+    "lake-garda",
+    "lisbon",
+    "ljubljana",
+    "malta",
+    "matera",
+    "porto",
+    "prague",
+    "valencia",
+    "vienna"
+  ],
+  "name": "May half term",
+  "title": "May half term holidays",
+  "intro": "Warm, long days before the summer crowds and prices arrive. Here's where to go on holiday at May half term, from beaches to cities and lakes.",
+  "seo_title": "May half term holidays: where to go for early summer",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "When is May half term?",
+      "answer": "Usually the last week of May in England and Wales, around the spring bank holiday on the last Monday of May. Scotland and some councils differ, so check your school's dates."
+    },
+    {
+      "question": "Where is hot at May half term?",
+      "answer": "Crete, Malta and Gozo are usually warm, around 24 to 26°C, with the sea warming up. Barcelona, Valencia and Lisbon are in the low to mid twenties. For guaranteed heat, look further afield, as most of the Mediterranean is warm rather than hot."
+    },
+    {
+      "question": "Is May half term a good time for a city break?",
+      "answer": "Yes, it's one of the best. Cities like Prague, Vienna, Budapest, Kraków and Copenhagen are warm and green, with long evenings, and it's not yet too hot to walk around all day."
+    },
+    {
+      "question": "Is May half term cheaper than the summer holidays?",
+      "answer": "Usually, yes. Prices rise in half-term week, but they're normally well below July and August, and resorts are much quieter."
+    }
+  ]
+}

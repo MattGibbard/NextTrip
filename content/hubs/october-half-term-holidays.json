@@ -1,0 +1,49 @@
+{
+  "published": true,
+  "kind": "collection",
+  "month": "oct",
+  "icon": "🎃",
+  "guides": [
+    "cappadocia",
+    "crete",
+    "gozo",
+    "gran-canaria",
+    "jordan",
+    "kas",
+    "lanzarote",
+    "lisbon",
+    "madeira",
+    "malta",
+    "marrakech",
+    "matera",
+    "new-york",
+    "orlando",
+    "paphos",
+    "rome",
+    "tenerife",
+    "valencia"
+  ],
+  "name": "October half term",
+  "title": "October half term holidays",
+  "intro": "The last of the summer sun, autumn colours and Halloween in America. Here's where to go on holiday at October half term, and what each place is like then.",
+  "seo_title": "October half term holidays: where to go for sun or Halloween",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "When is October half term?",
+      "answer": "Usually the last week of October in England and Wales, often including Halloween. Scotland's October break is usually earlier and can be two weeks. Dates vary by council, so check your school's calendar."
+    },
+    {
+      "question": "Where is still hot at October half term?",
+      "answer": "The Canary Islands are warm all year, around 25°C in late October. Paphos, Malta, Gozo, Crete and Kaş on Turkey's coast are still warm, with the sea at its warmest of the year. Marrakech and Jordan are pleasant for sightseeing after the summer heat."
+    },
+    {
+      "question": "Where is good for Halloween?",
+      "answer": "New York and Orlando go all out, with parades, pumpkin patches, trick-or-treating and theme park Halloween events. In Europe, Halloween is much smaller, so a warm beach or a city break is often the better choice."
+    },
+    {
+      "question": "Is October half term a good time for a city break?",
+      "answer": "Yes. Rome, Lisbon, Valencia and Matera are warm and much quieter than in summer, and autumn light is lovely for walking around."
+    }
+  ]
+}

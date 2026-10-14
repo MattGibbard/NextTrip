@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "city-breaks",
+    "name": "City breaks",
+    "icon": "🏙️"
+  },
+  {
+    "slug": "beach-holidays",
+    "name": "Beach holidays",
+    "icon": "🏖️"
+  },
+  {
+    "slug": "nature-holidays",
+    "name": "Nature & hiking",
+    "icon": "🥾"
+  },
+  {
+    "slug": "adventure-holidays",
+    "name": "Adventure",
+    "icon": "🧗"
+  },
+  {
+    "slug": "culture-holidays",
+    "name": "Culture & history",
+    "icon": "🏛️"
+  },
+  {
+    "slug": "food-holidays",
+    "name": "Food & drink",
+    "icon": "🍷"
+  },
+  {
+    "slug": "road-trips",
+    "name": "Road trips",
+    "icon": "🚗"
+  },
+  {
+    "slug": "relaxing-holidays",
+    "name": "Relax & spa",
+    "icon": "🧘"
+  },
+  {
+    "slug": "where-to-go-in-january",
+    "name": "Holidays in January",
+    "icon": "❄️"
+  },
+  {
+    "slug": "where-to-go-in-february",
+    "name": "Holidays in February",
+    "icon": "❄️"
+  },
+  {
+    "slug": "where-to-go-in-march",
+    "name": "Holidays in March",
+    "icon": "🌷"
+  },
+  {
+    "slug": "where-to-go-in-april",
+    "name": "Holidays in April",
+    "icon": "🌷"
+  },
+  {
+    "slug": "where-to-go-in-may",
+    "name": "Holidays in May",
+    "icon": "🌷"
+  },
+  {
+    "slug": "where-to-go-in-june",
+    "name": "Holidays in June",
+    "icon": "☀️"
+  },
+  {
+    "slug": "where-to-go-in-july",
+    "name": "Holidays in July",
+    "icon": "☀️"
+  },
+  {
+    "slug": "where-to-go-in-august",
+    "name": "Holidays in August",
+    "icon": "☀️"
+  },
+  {
+    "slug": "where-to-go-in-september",
+    "name": "Holidays in September",
+    "icon": "🍂"
+  },
+  {
+    "slug": "where-to-go-in-october",
+    "name": "Holidays in October",
+    "icon": "🍂"
+  },
+  {
+    "slug": "where-to-go-in-november",
+    "name": "Holidays in November",
+    "icon": "🍂"
+  },
+  {
+    "slug": "where-to-go-in-december",
+    "name": "Holidays in December",
+    "icon": "❄️"
+  },
+  {
+    "slug": "february-half-term-holidays",
+    "name": "February half term",
+    "icon": "⛄"
+  },
+  {
+    "slug": "easter-holidays",
+    "name": "Easter holidays",
+    "icon": "🐣"
+  },
+  {
+    "slug": "may-half-term-holidays",
+    "name": "May half term",
+    "icon": "🌼"
+  },
+  {
+    "slug": "summer-holidays",
+    "name": "Summer holidays",
+    "icon": "😎"
+  },
+  {
+    "slug": "october-half-term-holidays",
+    "name": "October half term",
+    "icon": "🎃"
+  },
+  {
+    "slug": "christmas-holidays",
+    "name": "Christmas holidays",
+    "icon": "🎄"
+  },
+  {
+    "slug": "new-year-holidays",
+    "name": "New Year",
+    "icon": "🎆"
+  },
+  {
+    "slug": "holidays-in-canada",
+    "name": "Canada",
+    "icon": "🇨🇦"
+  },
+  {
+    "slug": "holidays-in-croatia",
+    "name": "Croatia",
+    "icon": "🇭🇷"
+  },
+  {
+    "slug": "holidays-in-france",
+    "name": "France",
+    "icon": "🇫🇷"
+  },
+  {
+    "slug": "holidays-in-greece",
+    "name": "Greece",
+    "icon": "🇬🇷"
+  },
+  {
+    "slug": "holidays-in-italy",
+    "name": "Italy",
+    "icon": "🇮🇹"
+  },
+  {
+    "slug": "holidays-in-mexico",
+    "name": "Mexico",
+    "icon": "🇲🇽"
+  },
+  {
+    "slug": "holidays-in-portugal",
+    "name": "Portugal",
+    "icon": "🇵🇹"
+  },
+  {
+    "slug": "holidays-in-spain",
+    "name": "Spain",
+    "icon": "🇪🇸"
+  },
+  {
+    "slug": "holidays-in-the-usa",
+    "name": "United States",
+    "icon": "🇺🇸"
+  }
+]

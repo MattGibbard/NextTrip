@@ -87,5 +87,14 @@ describe("servePage", () => {
     const res = await servePage(new Request("https://somewhere.party/privacy"), env);
     expect(asked).toEqual(["/privacy"]);
     expect(res.headers.get("X-Robots-Tag")).toBeNull();
+    expect(res.headers.get("Cache-Control")).toBeNull();
+  });
+
+  it("lets browsers keep built files, fonts and photos", async () => {
+    const cache = async (path: string) => (await servePage(new Request(`https://somewhere.party${path}`), env)).headers.get("Cache-Control");
+    expect(await cache("/assets/index-abc123.js")).toBe("public, max-age=31536000, immutable");
+    expect(await cache("/fonts/inter-var-latin.woff2")).toBe("public, max-age=31536000, immutable");
+    expect(await cache("/images/destinations/x.webp")).toBe("public, max-age=604800");
+    expect(await cache("/destinations/levi")).toBeNull();
   });
 });

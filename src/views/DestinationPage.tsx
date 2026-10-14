@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import type { Idea, Person } from "../../shared/types";
 import type { Terminal } from "../../shared/terminals";
 import { api } from "../api";
-import { DESTINATIONS, LONDON, bestMonths, countryFlag, destinationNamed, flightHoursTo, flightTime, imageUrl, shortIntro } from "../destinations";
+import { DESTINATIONS, LONDON, bestMonths, countryFlag, destinationNamed, flightHoursTo, flightTime, imageUrl, photoProps, shortIntro } from "../destinations";
 import type { Destination, DestinationCard } from "../destinations";
 import { HOLIDAY_TYPES, budgetLabel, holidayType, travelTimeLabel } from "../../shared/ideaDetails";
 import { destinationPath } from "../../shared/seo";
@@ -179,7 +179,7 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
             {d.image ? (
               <img
                 className="dg-photo"
-                src={imageUrl(d.image)}
+                {...photoProps(d.image, d.image_size, "(max-width: 759px) calc(100vw - 32px), 500px")}
                 alt={d.image_alt}
                 width={d.image_size?.[0]}
                 height={d.image_size?.[1]}
@@ -389,7 +389,7 @@ export function GuideCard({ d, from, month, best, idea, signedIn }: { d: Destina
   return (
     <article className="dx-card">
       <div className="dx-card-photo">
-        {d.image ? <img src={imageUrl(d.image)} alt={d.image_alt} width={d.image_size?.[0]} height={d.image_size?.[1]} loading="lazy" /> : <span aria-hidden>{d.to_code || d.name.slice(0, 3).toUpperCase()}</span>}
+        {d.image ? <img {...photoProps(d.image, d.image_size, "(max-width: 759px) calc(100vw - 32px), 360px")} alt={d.image_alt} width={d.image_size?.[0]} height={d.image_size?.[1]} loading="lazy" /> : <span aria-hidden>{d.to_code || d.name.slice(0, 3).toUpperCase()}</span>}
         {month !== null && best.has(month) && <span className="dx-badge">Good in {shortMonth(month)}</span>}
       </div>
       <div className="dx-card-body">

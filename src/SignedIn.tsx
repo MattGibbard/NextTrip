@@ -1,4 +1,14 @@
 import { useEffect, useState } from "react";
+// The app's own styles, in the order they used to load in styles.css (later files win a clash).
+import "./styles/forms.css"; /* Forms and modals. */
+import "./styles/trip-sheet.css"; /* The add and edit sheets for trips and ideas. */
+import "./styles/person-picker.css"; /* Choosing which family member you are. */
+import "./styles/app.css"; /* Signed-in odds and ends: the draw, idea details, filters, the idea page and swiping. */
+import "./styles/tickets.css"; /* The boarding-pass look: tickets, stats, the next departure and standby idea cards. */
+import "./styles/places.css"; /* The Places tab: coverage and passport stamps. */
+import "./styles/settings.css"; /* The Settings page. */
+import "./styles/plan.css"; /* A won idea's trip plan: days, costs, packing and jobs before you go. */
+import "./styles/book-links.css"; /* Find flights and hotels (affiliate links). */
 import "leaflet/dist/leaflet.css";
 import "./styles/draw.css";
 import "./styles/onboarding.css";

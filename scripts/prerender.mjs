@@ -94,6 +94,12 @@ try {
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`,
   );
 
+  // When each public page first appeared, for the owner's stats page to show how new pages are doing.
+  await writeFile(
+    new URL("page-dates.json", OUT),
+    JSON.stringify(list.filter((p) => p.index && p.published).map((p) => ({ path: p.path, published: p.published }))),
+  );
+
   // The blog's RSS feed, for feed readers and search engines.
   await mkdir(new URL("blog/", OUT), { recursive: true });
   await writeFile(new URL("blog/feed.xml", OUT), feed());

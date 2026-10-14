@@ -80,19 +80,19 @@ export function BookLinks({
       {before}
       <div className="book-buttons">
         {flight && (
-          <a className="btn ghost" href={flightLink(flight.from, flight.to, people.length, campaign, { dates, currency })} target="_blank" rel="sponsored noopener">
+          <a className="btn ghost" onClick={() => api.bookClick("flights", campaign)} href={flightLink(flight.from, flight.to, people.length, campaign, { dates, currency })} target="_blank" rel="sponsored noopener">
             ✈️ Find flights {flight.from} → {flight.to}
             <span aria-hidden>↗</span>
           </a>
         )}
         {stops.map((p) => (
-          <a key={`${p.name}|${p.country_code}`} className="btn ghost" href={hotelLink(p, campaign, { dates, guests: people.length, currency })} target="_blank" rel="sponsored noopener">
+          <a key={`${p.name}|${p.country_code}`} className="btn ghost" onClick={() => api.bookClick("hotels", campaign)} href={hotelLink(p, campaign, { dates, guests: people.length, currency })} target="_blank" rel="sponsored noopener">
             🏨 Find hotels in {p.name}
             <span aria-hidden>↗</span>
           </a>
         ))}
         {stops.map((p) => (
-          <a key={`things|${p.name}|${p.country_code}`} className="btn ghost" href={activitiesLink(p, campaign)} target="_blank" rel="sponsored noopener">
+          <a key={`things|${p.name}|${p.country_code}`} className="btn ghost" onClick={() => api.bookClick("things", campaign)} href={activitiesLink(p, campaign)} target="_blank" rel="sponsored noopener">
             🎟️ Things to do in {p.name}
             <span aria-hidden>↗</span>
           </a>

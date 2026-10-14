@@ -21,13 +21,8 @@ export interface Env {
   TURNSTILE_SECRET_KEY?: string;
   /** Pixabay API key for cover photo suggestions, a secret. Without it the sheets only take a photo link. */
   PIXABAY_API_KEY?: string;
-  /**
-   * The owner's stats page at /stats sits behind Cloudflare Access. The Worker checks Access's sign-in token
-   * too, using the team domain (like "somewhere.cloudflareaccess.com") and the Access application's
-   * audience tag. Until both are set the page answers 404 for everyone.
-   */
-  ACCESS_TEAM_DOMAIN?: string;
-  ACCESS_AUD?: string;
+  /** Who can sign in to the owner's stats page at /stats: email addresses, comma-separated. A secret. */
+  STATS_EMAILS?: string;
   /** A Cloudflare API token with Account Analytics Read, and the account id, for page visits on /stats. Secrets. */
   CF_ANALYTICS_TOKEN?: string;
   CF_ACCOUNT_ID?: string;

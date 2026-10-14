@@ -103,7 +103,7 @@ async function bodyOf(c: Ctx): Promise<Record<string, unknown>> {
 }
 
 /** A 6-digit code, every value equally likely. */
-function randomCode(): string {
+export function randomCode(): string {
   const buf = new Uint32Array(1);
   do crypto.getRandomValues(buf);
   while (buf[0] >= 4_294_000_000); // a multiple of a million, so no code is likelier than another

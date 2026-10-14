@@ -1,11 +1,11 @@
 import type { Env } from "./env";
 import { ensureSchema } from "./migrate";
+import { statsSignIn } from "./statsSignIn";
 
 /**
  * The owner's stats page at /stats: page visits from Cloudflare Web Analytics, and how many families,
- * people, trips, ideas, draws and plans there are. Cloudflare Access stands in front of the path and asks
- * for an emailed code; the Worker checks Access's signed token as well, so the page never shows without it.
- * Family 1 is the owner's own and is left out of every number.
+ * people, trips, ideas, draws and plans there are. Only the addresses in the STATS_EMAILS secret can sign in
+ * (worker/statsSignIn.ts). Family 1 is the owner's own and is left out of every number.
  */
 export const STATS_PATH = "/stats";
 
@@ -14,66 +14,25 @@ type Range = (typeof RANGES)[number];
 const HOST = "somewhere.party";
 
 export async function serveStats(req: Request, env: Env): Promise<Response> {
-  if (!(await accessAllowed(req, env))) return new Response("Not found", { status: 404, headers: { "X-Robots-Tag": "noindex" } });
+  await ensureSchema(env.DB);
+  const signedIn = await statsSignIn(req, env);
+  if (signedIn instanceof Response) return signedIn;
   const url = new URL(req.url);
   const asked = Number(url.searchParams.get("days"));
   const days: Range = (RANGES as readonly number[]).includes(asked) ? (asked as Range) : 30;
   const since = isoDay(Date.now() - (days - 1) * DAY);
-  await ensureSchema(env.DB);
   const [site, visits] = await Promise.all([siteNumbers(env.DB, since), pageVisits(env, since)]);
-  return new Response(renderStats({ days, since, site, visits }), {
-    headers: {
-      "Content-Type": "text/html; charset=utf-8",
-      "Cache-Control": "no-store",
-      "X-Robots-Tag": "noindex",
-    },
-  });
+  return htmlPage(renderStats({ days, since, site, visits }));
 }
 
-// ---------- Cloudflare Access ----------
-
-type Jwk = JsonWebKey & { kid: string };
-let certs: { domain: string; keys: Jwk[]; at: number } | null = null;
-
-/** Access signs a token for each request it lets through. A missing or wrong token, or no Access settings, means no. */
-export async function accessAllowed(req: Request, env: Env): Promise<boolean> {
-  const team = env.ACCESS_TEAM_DOMAIN?.replace(/^https?:\/\//, "").replace(/\/+$/, "");
-  const token = req.headers.get("Cf-Access-Jwt-Assertion");
-  if (!team || !env.ACCESS_AUD || !token) return false;
-  const [head, body, sig] = token.split(".");
-  if (!head || !body || !sig) return false;
-  try {
-    const header = JSON.parse(b64text(head)) as { kid?: string; alg?: string };
-    const claims = JSON.parse(b64text(body)) as { aud?: string | string[]; exp?: number; iss?: string };
-    if (header.alg !== "RS256") return false;
-    const aud = Array.isArray(claims.aud) ? claims.aud : [claims.aud];
-    if (!aud.includes(env.ACCESS_AUD) || claims.iss !== `https://${team}` || !claims.exp || claims.exp * 1000 < Date.now()) return false;
-    const jwk = await accessKey(team, header.kid);
-    if (!jwk) return false;
-    const key = await crypto.subtle.importKey("jwk", jwk, { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" }, false, ["verify"]);
-    return await crypto.subtle.verify("RSASSA-PKCS1-v1_5", key, b64bytes(sig), new TextEncoder().encode(`${head}.${body}`));
-  } catch {
-    return false;
-  }
+/** Every answer from /stats: never cached, never in search results. */
+export function htmlPage(html: string, init: ResponseInit = {}): Response {
+  const headers = new Headers(init.headers);
+  headers.set("Content-Type", "text/html; charset=utf-8");
+  headers.set("Cache-Control", "no-store");
+  headers.set("X-Robots-Tag", "noindex");
+  return new Response(html, { ...init, headers });
 }
-
-/** Access's public keys, kept for an hour and fetched again when a token names one we haven't seen. */
-async function accessKey(team: string, kid: string | undefined): Promise<Jwk | undefined> {
-  const fresh = certs && certs.domain === team && Date.now() - certs.at < 3600_000;
-  let key = fresh ? certs!.keys.find((k) => k.kid === kid) : undefined;
-  if (key) return key;
-  const res = await fetch(`https://${team}/cdn-cgi/access/certs`);
-  if (!res.ok) return undefined;
-  const { keys } = (await res.json()) as { keys: Jwk[] };
-  certs = { domain: team, keys, at: Date.now() };
-  return keys.find((k) => k.kid === kid);
-}
-
-function b64bytes(s: string): Uint8Array {
-  const bin = atob(s.replace(/-/g, "+").replace(/_/g, "/").padEnd(Math.ceil(s.length / 4) * 4, "="));
-  return Uint8Array.from(bin, (ch) => ch.charCodeAt(0));
-}
-const b64text = (s: string) => new TextDecoder().decode(b64bytes(s));
 
 // ---------- The site's own numbers ----------
 
@@ -180,7 +139,7 @@ const DAY = 86_400_000;
 const isoDay = (ms: number) => new Date(ms).toISOString().slice(0, 10);
 const fmt = (n: number) => n.toLocaleString("en-GB");
 
-function esc(s: string): string {
+export function esc(s: string): string {
   return s.replace(/[&<>"']/g, (ch) => `&#${ch.charCodeAt(0)};`);
 }
 
@@ -257,30 +216,8 @@ export function renderStats({ days, since, site, visits }: { days: Range; since:
     .join("");
   const noVisits = `<p class="note">Page visits aren't connected yet. Set the CF_ANALYTICS_TOKEN and CF_ACCOUNT_ID secrets on the Worker.</p>`;
 
-  return `<!doctype html>
-<html lang="en-GB">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Stats">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#1c2421">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
-<title>Stats · somewhere🎉</title>
-<style>${STYLES}</style>
-</head>
-<body>
-<header class="board">
-  <div class="top"><span class="eyebrow">somewhere🎉 · OWNER</span><span class="eyebrow">${esc(new Date().toLocaleString("en-GB", { timeZone: "Europe/London", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }))}</span></div>
-  <h1>Stats</h1>
-  <nav class="seg" aria-label="Range">${tabs}</nav>
-</header>
-<main>
+  const header = `<nav class="seg" aria-label="Range">${tabs}</nav>`;
+  return pageShell(header, `
   <section class="tiles" aria-label="Totals">${tiles}</section>
   <p class="hint">Totals leave out your own family. Green numbers are new in the last ${days} days.</p>
 
@@ -300,6 +237,39 @@ export function renderStats({ days, since, site, visits }: { days: Range; since:
   ${visits ? list("Came from", visits.referrers.map((r) => ({ name: r.host, value: r.visits })), "Nobody has followed a link here yet") : ""}
   ${visits ? list("Countries", visits.countries.map((c) => ({ name: countryName(c.country), value: c.visits })), "No visits yet") : ""}
   ${visits ? `<p class="hint">Visits come from Cloudflare Web Analytics, which samples busier ranges, so they're close estimates. In the signed-in app only the first page someone opens counts.</p>` : ""}
+`);
+}
+
+/** The page around the stats or the sign-in form: the dark board header, then the content. */
+export function pageShell(header: string, main: string, signOut = true): string {
+  const now = new Date().toLocaleString("en-GB", { timeZone: "Europe/London", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+  return `<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Stats">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#1c2421">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<title>Stats · somewhere🎉</title>
+<style>${STYLES}</style>
+</head>
+<body>
+<header class="board">
+  <div class="top"><span class="eyebrow">somewhere🎉 · ${esc(now)}</span>${
+    signOut ? `<form method="post" action="${STATS_PATH}"><button class="link" name="action" value="signout">Sign out</button></form>` : ""
+  }</div>
+  <h1>Stats</h1>
+  ${header}
+</header>
+<main>
+${main}
 </main>
 </body>
 </html>`;
@@ -310,7 +280,7 @@ const STYLES = `
 @font-face { font-family: "DM Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/dm-mono-500-latin.woff2") format("woff2"); }
 :root {
   --bg: #f6f7f5; --surface: #ffffff; --surface-2: #eef2ef; --text: #1c2421; --muted: #66716c; --border: #dde3df;
-  --accent: #0f766e; --accent-soft: #d5efeb; --gold: #d97706; --gold-soft: #fdf0dc;
+  --accent: #0f766e; --accent-soft: #d5efeb; --accent-text: #ffffff; --danger: #c2410c; --gold: #d97706; --gold-soft: #fdf0dc;
   --board: #1c2421; --board-line: #2c3833; --board-muted: #96a29c; --board-lit: #2dd4bf; --on-bright: #052e2a;
   --shadow: 0 1px 2px rgb(0 0 0 / 0.05), 0 4px 16px rgb(0 0 0 / 0.05);
   --mono: "DM Mono", ui-monospace, Menlo, monospace;
@@ -319,14 +289,23 @@ const STYLES = `
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #0f1412; --surface: #18201d; --surface-2: #212b27; --text: #e7ece9; --muted: #96a29c; --border: #2c3833;
-    --accent: #2dd4bf; --accent-soft: #123b36; --gold: #fbbf24; --gold-soft: #3a2a0c; --board: #0a0e0c; --board-line: #26302c;
+    --accent: #2dd4bf; --accent-soft: #123b36; --accent-text: #052e2a; --danger: #fb923c; --gold: #fbbf24; --gold-soft: #3a2a0c; --board: #0a0e0c; --board-line: #26302c;
     --shadow: 0 1px 2px rgb(0 0 0 / 0.4);
   }
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 400 1rem/1.45 Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
 .board { background: var(--board); color: #fff; padding: calc(env(safe-area-inset-top) + 14px) 16px 16px; }
-.board .top { display: flex; justify-content: space-between; gap: 12px; }
+.board .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.board form { margin: 0; }
+button.link { background: none; border: 0; padding: 0; color: var(--board-muted); font: 500 0.7rem/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; }
+.signin { display: grid; gap: 12px; }
+.signin label { font-weight: 600; }
+.signin input { font: inherit; font-size: 1.1rem; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg); color: var(--text); width: 100%; }
+.signin input.code { font-family: var(--mono); font-size: 1.6rem; letter-spacing: 0.3em; text-align: center; }
+.signin button { font: 600 1rem/1 Inter, system-ui, sans-serif; padding: 14px; border-radius: 10px; border: 0; background: var(--accent); color: var(--accent-text); cursor: pointer; }
+.signin .again { background: none; color: var(--accent); padding: 4px; font-weight: 500; }
+.error { margin: 0; color: var(--danger); font-weight: 500; }
 .eyebrow { font: 500 0.7rem/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--board-muted); }
 h1 { font-size: 2rem; letter-spacing: -0.02em; margin: 10px 0 14px; }
 .seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; background: var(--board-line); padding: 4px; border-radius: 10px; }

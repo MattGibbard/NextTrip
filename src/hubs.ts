@@ -107,7 +107,8 @@ const fits = (h: Hub) =>
   h.kind === "country" ? !!h.country_code : h.kind === "month" ? h.month !== null : h.kind === "collection" ? h.guides.length > 0 : !!h.holiday_type;
 
 /**
- * Every published hub with at least one guide: holiday types in the usual order, then months, then collections and countries A to Z.
+ * Every published hub with at least one guide: holiday types in the usual order, then months, then collections
+ * (in order through the year, those without a month last) and countries A to Z.
  * A slug that's also a guide's goes to the guide, so such a hub is left out.
  */
 export const HUBS: HubCard[] = Object.entries(cards)
@@ -120,7 +121,9 @@ export const HUBS: HubCard[] = Object.entries(cards)
         ? HOLIDAY_TYPES.findIndex((t) => t.key === a.holiday_type) - HOLIDAY_TYPES.findIndex((t) => t.key === b.holiday_type)
         : a.kind === "month"
           ? a.month! - b.month!
-          : a.name.localeCompare(b.name, "en-GB"),
+          : a.kind === "collection" && a.month !== b.month
+            ? (a.month ?? 12) - (b.month ?? 12)
+            : a.name.localeCompare(b.name, "en-GB"),
   );
 
 export function findHub(slug: string): HubCard | undefined {

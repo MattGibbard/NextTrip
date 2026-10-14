@@ -1,0 +1,47 @@
+{
+  "published": true,
+  "kind": "collection",
+  "month": "dec",
+  "icon": "🎆",
+  "guides": [
+    "amsterdam",
+    "berlin",
+    "budapest",
+    "cape-town",
+    "copenhagen",
+    "dubai",
+    "madeira",
+    "new-york",
+    "prague",
+    "reykjavik",
+    "rio-de-janeiro",
+    "rovaniemi",
+    "sydney",
+    "tenerife",
+    "tromso",
+    "vienna"
+  ],
+  "name": "New Year",
+  "title": "New Year holiday ideas",
+  "intro": "Big fireworks, northern lights or summer sunshine to see in the new year. Here's where to go on holiday for New Year's Eve, near and far.",
+  "seo_title": "New Year holidays: where to go for New Year's Eve",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "Where has the best New Year's Eve fireworks?",
+      "answer": "Sydney Harbour, Rio's Copacabana beach, Dubai's Burj Khalifa and Madeira's harbour at Funchal are famous for their fireworks. In Europe, Berlin, Prague, Amsterdam, Copenhagen and Reykjavik see in the new year with fireworks all over the city."
+    },
+    {
+      "question": "Where can we go for New Year with young children?",
+      "answer": "Somewhere you can watch fireworks early or from your hotel works best. Madeira's harbour fireworks can be seen from all over Funchal, and Tenerife resorts put on early family celebrations. Lapland and Tromsø are calm, snowy alternatives."
+    },
+    {
+      "question": "Where is warm for New Year?",
+      "answer": "The Canary Islands are around 20 to 22°C. Further afield, Dubai is in its best season, and it's summer in Cape Town, Sydney and Rio de Janeiro."
+    },
+    {
+      "question": "Is New Year an expensive time to travel?",
+      "answer": "Yes, along with Christmas it's the most expensive time of year, and hotels often have minimum stays over New Year's Eve. Book as early as you can, or go just after New Year, when prices drop."
+    }
+  ]
+}

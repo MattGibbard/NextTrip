@@ -1,0 +1,55 @@
+{
+  "published": true,
+  "kind": "collection",
+  "month": "aug",
+  "icon": "😎",
+  "guides": [
+    "annecy",
+    "asturias",
+    "azores",
+    "bali",
+    "banff",
+    "bergen",
+    "borneo",
+    "copenhagen",
+    "dordogne",
+    "faroe-islands",
+    "gdansk",
+    "interlaken",
+    "krakow",
+    "lake-ohrid",
+    "lofoten",
+    "lombok",
+    "maasai-mara",
+    "quebec-city",
+    "reykjavik",
+    "stockholm",
+    "tallinn",
+    "vancouver",
+    "yellowstone",
+    "zanzibar"
+  ],
+  "name": "Summer holidays",
+  "title": "Summer holiday ideas",
+  "intro": "Six weeks to fill, from cool northern escapes to safaris and Canadian road trips. Here's where to go in the summer holidays, including places that aren't too hot.",
+  "seo_title": "Summer holidays: where to go in July and August",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "When are the summer holidays?",
+      "answer": "In England and Wales, schools usually break up in the third or fourth week of July and go back in early September. Scotland's summer holidays start earlier, from late June or early July. Dates vary by council, so check your school's calendar."
+    },
+    {
+      "question": "Where is warm but not too hot in the summer holidays?",
+      "answer": "Northern Spain, like Asturias, the Azores, the French Alps around Annecy and the Dordogne are warm without the 35°C heat of the Mediterranean. Scandinavia and the Baltic, from Copenhagen and Stockholm to Tallinn and Gdańsk, are pleasantly warm with very long days."
+    },
+    {
+      "question": "Where is in season in July and August further afield?",
+      "answer": "July and August are the dry season in Bali, Lombok, Borneo and Zanzibar, and the best time for the Great Migration in Kenya's Maasai Mara. Canada and the Rockies, from Vancouver and Banff to Quebec City, are at their best too."
+    },
+    {
+      "question": "How can we save money on a summer holiday?",
+      "answer": "Travel in the first or last week of the holidays, fly midweek and book early. Places that are less fashionable in summer, like the Baltic or northern Spain, are often better value than the busiest Mediterranean resorts."
+    }
+  ]
+}

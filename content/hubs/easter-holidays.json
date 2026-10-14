@@ -1,0 +1,48 @@
+{
+  "published": true,
+  "kind": "collection",
+  "month": "apr",
+  "icon": "🐣",
+  "guides": [
+    "alentejo",
+    "amsterdam",
+    "cape-verde",
+    "jordan",
+    "lisbon",
+    "madeira",
+    "malta",
+    "marrakech",
+    "new-york",
+    "orlando",
+    "paphos",
+    "paris",
+    "porto",
+    "rome",
+    "tenerife",
+    "tokyo",
+    "valencia"
+  ],
+  "name": "Easter holidays",
+  "title": "Easter holiday ideas",
+  "intro": "Spring city breaks, blossom and the first warm beaches of the year. Here's where to go on holiday over the Easter holidays, near and far.",
+  "seo_title": "Easter holidays: where to go for spring sun and city breaks",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "When are the Easter holidays?",
+      "answer": "Most schools in England and Wales have two weeks off around Easter, which moves each year. In 2027 Easter Sunday is on 28 March, so most Easter holidays fall in late March and early April. Check your school's dates, as they vary by council."
+    },
+    {
+      "question": "Where is warm over Easter?",
+      "answer": "The Canary Islands and Cape Verde are reliably warm. Malta, Paphos, Madeira and Marrakech are pleasantly warm, around 20°C, but the sea is still cool. Southern Spain and Portugal are mild and good for sightseeing rather than beach days."
+    },
+    {
+      "question": "Where is good for a city break at Easter?",
+      "answer": "Rome, Lisbon, Porto, Valencia and Paris are lovely in spring, before the summer heat. Amsterdam's tulip season usually peaks in April, and in Tokyo the cherry blossom is often out in late March and early April."
+    },
+    {
+      "question": "Is Easter a busy time to travel?",
+      "answer": "Yes. Many European countries also have Easter holidays, so popular cities and resorts get busy and Holy Week celebrations draw crowds in Spain and Italy. Book early, especially for flights."
+    }
+  ]
+}

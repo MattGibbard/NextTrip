@@ -5,19 +5,18 @@ import { JoinPage, PersonLinkPage, SignInPage } from "./views/LinkPages";
 import { infoTitle } from "./infoPages";
 import { NotFound } from "./views/NotFound";
 import { PAGES, infoPage, isPrivatePath, publicPage } from "../shared/seo";
-import { findDestination, searchTitle } from "./destinations";
-import { findHub, hubSearchTitle } from "./hubs";
 import { CREATORS, HOW } from "./site";
 import { findPost, loadedPost, postTitle } from "./blog";
-import { GuideView } from "./views/GuideView";
 import { followInPlace, isGuidePath } from "./navigate";
 import { load, save } from "./storage";
 import { AppSkeleton } from "./components/AppSkeleton";
 import { SIGNED_IN, forgetFamily, forgetFamilyData, lastFamily } from "./lastFamily";
 import { lazyView } from "./lazyView";
 
-// Each public page's code downloads only when it's visited (see lazyView). The Guides load with
-// the site, as they're most of what visitors open.
+// Each public page's code downloads only when it's visited (see lazyView). The Guides pages carry
+// every guide's card, so pages that aren't about guides don't download those either.
+const loadGuides = () => import("./views/GuideView");
+const GuideView = lazyView(() => loadGuides().then((m) => m.GuideView));
 const HomePage = lazyView(() => import("./views/HomePage").then((m) => m.HomePage));
 const LegalView = lazyView(() => import("./views/Legal").then((m) => m.LegalView));
 const CreatorsPage = lazyView(() => import("./views/Creators").then((m) => m.CreatorsPage));
@@ -36,6 +35,9 @@ export function preloadPage(pathname: string): Promise<unknown> {
   if (page === "blog") return BlogIndex.preload();
   if (page?.startsWith("post:")) return BlogPost.preload();
   if (infoPage(pathname)) return InfoPage.preload();
+  // A guide or hub's own words are their own file too.
+  if (page === "destinations") return GuideView.preload();
+  if (page?.startsWith("destination:")) return Promise.all([GuideView.preload(), loadGuides().then((m) => m.preloadGuide(page.slice("destination:".length)))]);
   return Promise.resolve();
 }
 
@@ -80,7 +82,8 @@ export function App() {
   }, []);
 
   useEffect(() => {
-    document.title = pageTitle(path);
+    // A guide or hub names itself (GuideView), as only the Guides pages know every guide.
+    if (!publicPage(path)?.startsWith("destination:")) document.title = pageTitle(path);
   }, [path]);
 
   const page = publicPage(path);
@@ -111,12 +114,7 @@ function pageTitle(path: string): string {
   const post = page?.startsWith("post:") ? findPost(page.slice("post:".length)) : undefined;
   if (post) return postTitle(post);
   const info = infoPage(path);
-  if (info) return infoTitle(info);
-  const slug = page?.startsWith("destination:") ? page.slice("destination:".length) : "";
-  const destination = findDestination(slug);
-  if (destination) return searchTitle(destination);
-  const hub = findHub(slug);
-  return hub ? hubSearchTitle(hub) : "somewhere🎉";
+  return info ? infoTitle(info) : "somewhere🎉";
 }
 
 

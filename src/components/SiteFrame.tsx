@@ -1,10 +1,9 @@
 // The header and footer around every signed-out page, and the links they share with Settings.
 import { useEffect, useState } from "react";
 import type { MouseEvent, ReactNode } from "react";
-import { DESTINATIONS } from "../destinations";
+import { GUIDE_LINKS, countryFlag } from "../guideLinks";
 import { destinationPath } from "../../shared/seo";
 import { FEATURED } from "../site";
-import { flag } from "../countries";
 
 /** The page frame for signed-out pages other than the home page: the home page's header and footer around the content. */
 export function Frame({ children }: { children: ReactNode }) {
@@ -162,12 +161,12 @@ function shuffled<T>(items: readonly T[]): T[] {
 
 /**
  * The footer on every public page. The guides it links to are picked at random once the page is up,
- * from the guides bundled into the site, so the prerendered page stays the same and nothing is fetched.
+ * from the list of guides bundled into the site (just their names), so the prerendered page stays the same and nothing is fetched.
  * The "Start planning" banner is for people who aren't signed in.
  */
 export function SiteFooter({ sections = false, signedIn = false }: { sections?: boolean; signedIn?: boolean }) {
-  const [picks, setPicks] = useState(() => DESTINATIONS.slice(0, 3));
-  useEffect(() => setPicks(shuffled(DESTINATIONS).slice(0, 3)), []);
+  const [picks, setPicks] = useState(() => GUIDE_LINKS.slice(0, 3));
+  useEffect(() => setPicks(shuffled(GUIDE_LINKS).slice(0, 3)), []);
   // On the home page the section links scroll; elsewhere they go to the home page.
   const home = (id: string) => (sections ? { href: `#${id}`, onClick: jump } : { href: `/#${id}` });
 
@@ -240,14 +239,14 @@ export function SiteFooter({ sections = false, signedIn = false }: { sections?: 
             </ul>
           </nav>
 
-          {DESTINATIONS.length > 0 && (
+          {GUIDE_LINKS.length > 0 && (
             <nav aria-label="Destinations" className="lp-foot-col">
               <h2 className="lp-foot-label">DESTINATIONS</h2>
               <ul>
                 {picks.map((d) => (
                   <li key={d.slug}>
                     <a href={destinationPath(d.slug)}>
-                      <span aria-hidden>{flag(d.country_code)}</span> {d.name}
+                      <span aria-hidden>{countryFlag(d.country_code)}</span> {d.name}
                     </a>
                   </li>
                 ))}

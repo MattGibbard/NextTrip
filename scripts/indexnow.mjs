@@ -40,17 +40,26 @@ if (urls.size === 0) {
   process.exit(0);
 }
 
-// The site deploys separately (Cloudflare builds it from the same push), so give it time, then wait
-// until every page is up before asking search engines to look.
+// The site deploys separately: Cloudflare builds it from the same push and reports back as the
+// "Workers Builds" check on the commit. Wait for that check to pass before asking search engines to look.
+// (Fetching the pages themselves doesn't work from GitHub: Cloudflare's bot protection challenges it.)
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-await sleep(3 * 60_000);
-const deadline = Date.now() + 15 * 60_000;
-for (const url of urls) {
-  while ((await fetch(url, { method: "HEAD" }).then((r) => r.status, () => 0)) !== 200) {
-    if (Date.now() > deadline) throw new Error(`${url} still isn't live, so search engines weren't told about it.`);
-    await sleep(30_000);
+const repo = process.env.GITHUB_REPOSITORY ?? "MattGibbard/NextTrip";
+const headers = { Accept: "application/vnd.github+json", ...(process.env.GITHUB_TOKEN && { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` }) };
+const deadline = Date.now() + 20 * 60_000;
+for (;;) {
+  const res = await fetch(`https://api.github.com/repos/${repo}/commits/${after}/check-runs?per_page=100`, { headers });
+  if (!res.ok) console.log(`GitHub answered ${res.status} when asked about the Cloudflare build; trying again.`);
+  const build = res.ok ? (await res.json()).check_runs.find((c) => c.name.startsWith("Workers Builds")) : undefined;
+  if (build?.status === "completed") {
+    if (build.conclusion !== "success") throw new Error(`The site's Cloudflare build ${build.conclusion}, so search engines weren't told.`);
+    break;
   }
+  if (Date.now() > deadline) throw new Error("The site's Cloudflare build hadn't finished after 20 minutes, so search engines weren't told.");
+  await sleep(30_000);
 }
+// Give Cloudflare's edge a moment to pick up the new version.
+await sleep(30_000);
 
 const res = await fetch("https://api.indexnow.org/indexnow", {
   method: "POST",

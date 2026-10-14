@@ -25,7 +25,7 @@ const CARD_FIELDS = [
 ];
 
 /** The fields links to a hub need. */
-const HUB_CARD_FIELDS = ["published", "kind", "holiday_type", "country", "month", "name", "title", "seo_title"];
+const HUB_CARD_FIELDS = ["published", "kind", "holiday_type", "country", "month", "guides", "icon", "name", "title", "seo_title"];
 
 /** The fields links to a blog post need. */
 const POST_CARD_FIELDS = ["published", "title", "date", "intro", "seo_title"];

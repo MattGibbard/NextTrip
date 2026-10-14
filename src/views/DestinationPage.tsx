@@ -678,6 +678,7 @@ export function DestinationsIndex({ family }: { family?: Family }) {
 
         <HubLinks kind="type" heading="Browse by holiday type" />
         <HubLinks kind="month" heading="Browse by month" />
+        <HubLinks kind="collection" heading="Holiday ideas" />
 
         {!signedIn && (
           <section className="lp-wrap dx-section">

@@ -1,0 +1,179 @@
+{
+  "name": "Phuket",
+  "published": true,
+  "country": "TH",
+  "title": "Holidays in Phuket",
+  "intro": "Thailand's biggest island, with soft sandy beaches, limestone islands and great food, at its sunniest over Christmas. Here's what Phuket is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Phuket_province",
+  "to_code": "HKT",
+  "holiday_types": [
+    "beach",
+    "food",
+    "adventure"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Thai baht (฿)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B / C / O · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Thailand asks visitors to fill in an online arrival card before they fly. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, hot"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, hot"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, hot"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Very hot"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Wettest"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Rainy"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drier"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, busy"
+    }
+  },
+  "when_to_go": "November to April is the dry season, with calm seas and sunshine, and Christmas and New Year are the busiest and dearest weeks. May to October brings the monsoon, with rough seas on the west coast.",
+  "things": [
+    {
+      "name": "Kata and Karon beaches",
+      "tag": "Free",
+      "blurb": "Long sandy beaches with gentle waves in the dry season, good for families.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Phang Nga Bay",
+      "tag": "Tour",
+      "blurb": "A boat trip among towering limestone islands, including the famous James Bond Island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Big Buddha",
+      "tag": "Free",
+      "blurb": "A huge white marble Buddha on a hilltop, with views across the island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Phuket Old Town",
+      "tag": "Free",
+      "blurb": "Colourful shop-houses, street food and a Sunday walking market.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Elephant sanctuary",
+      "tag": "Ticketed",
+      "blurb": "Choose an ethical sanctuary where you watch and feed elephants rather than ride them.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Phi Phi Islands",
+      "tag": "Day trip",
+      "blurb": "A speedboat trip to snorkel in clear water round dramatic islands.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Phuket good for a family holiday?",
+      "answer": "Yes. It's easy, with family hotels, calm beaches in the dry season and food children will eat."
+    },
+    {
+      "question": "Is Christmas a good time to go?",
+      "answer": "Yes, it's dry and sunny with calm seas. It's also the busiest time, so book early and expect higher prices."
+    },
+    {
+      "question": "Which beach is best for families?",
+      "answer": "Kata and Karon are calmer than Patong and better for families. Kata Noi is smaller and quieter still."
+    },
+    {
+      "question": "How long is the flight?",
+      "answer": "There are no direct flights from the UK, so it's about 14 to 16 hours with one change, often in the Gulf or Bangkok."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bangkok",
+      "code": "BKK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Koh Lanta",
+      "code": "KBV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Penang",
+      "code": "PEN",
+      "label": "🍷 Food & drink"
+    }
+  ]
+}

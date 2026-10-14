@@ -1,0 +1,179 @@
+{
+  "name": "Zermatt",
+  "published": true,
+  "country": "CH",
+  "title": "Holidays in Zermatt",
+  "intro": "A car-free mountain village under the Matterhorn, with snow almost guaranteed at Christmas. Here's what Zermatt is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Zermatt",
+  "to_code": "GVA",
+  "holiday_types": [
+    "ski",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Swiss franc (CHF)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / J · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Switzerland is in the Schengen area, so the new EU entry checks apply. Check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Ski season"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Ski season"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Ski season"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring skiing"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Between seasons"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hiking"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Hiking"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Hiking"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hiking"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Between seasons"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas, snow"
+    }
+  },
+  "when_to_go": "December to April is ski season, with snow very likely at Christmas thanks to the high slopes and glacier. July and August are good for walking and mountain lakes. May and November are quiet, with many hotels closed.",
+  "things": [
+    {
+      "name": "Matterhorn Glacier Paradise",
+      "tag": "Ticketed",
+      "blurb": "Cable cars climb to almost 3,900 metres, with an ice palace carved inside the glacier.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gornergrat railway",
+      "tag": "Ticketed",
+      "blurb": "A cog railway up to a viewpoint facing the Matterhorn and 29 other peaks over 4,000 metres.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Skiing and sledging",
+      "tag": "Ticketed",
+      "blurb": "Gentle beginner slopes at Sunnegga and a long sledge run from Rotenboden to Riffelberg.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Christmas in the village",
+      "tag": "Free",
+      "blurb": "A small Christmas market, lantern-lit streets and horse-drawn sleighs instead of cars.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Matterhorn Museum",
+      "tag": "Indoors",
+      "blurb": "Learn about the first climb of the Matterhorn in a recreated old village.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Glacier Express",
+      "tag": "Ticketed",
+      "blurb": "A slow, scenic train across the Alps to St Moritz, with big panoramic windows.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Zermatt good for a family holiday?",
+      "answer": "Yes, if your budget stretches. It's car-free, snow-sure and has good ski schools and beginner areas."
+    },
+    {
+      "question": "Is there snow at Christmas?",
+      "answer": "Almost always. Zermatt's slopes go up to nearly 3,900 metres, so it's one of the safest bets in the Alps."
+    },
+    {
+      "question": "How do you get to Zermatt?",
+      "answer": "Fly to Geneva or Zurich and take the train, about three and a half hours. Cars must be left at Täsch, the station before."
+    },
+    {
+      "question": "Is Zermatt expensive?",
+      "answer": "Yes, Switzerland is dear. Self-catering apartments and supermarket picnics help."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Chamonix",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Innsbruck",
+      "code": "INN",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Whistler",
+      "code": "YVR",
+      "label": "⛷️ Skiing"
+    }
+  ]
+}

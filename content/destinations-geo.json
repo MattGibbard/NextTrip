@@ -24,6 +24,11 @@
     "lat": 45.8992,
     "lon": 6.1294
   },
+  "antigua": {
+    "query": "Antigua|AG",
+    "lat": 17.0747,
+    "lon": -61.8175
+  },
   "asheville": {
     "query": "Asheville|US",
     "lat": 35.5951,
@@ -99,6 +104,16 @@
     "lat": 45.6427,
     "lon": 25.5887
   },
+  "bruges": {
+    "query": "Bruges|BE",
+    "lat": 51.2093,
+    "lon": 3.2247
+  },
+  "budapest": {
+    "query": "Budapest|HU",
+    "lat": 47.4979,
+    "lon": 19.0402
+  },
   "cancun": {
     "query": "Cancún|MX",
     "lat": 21.1617,
@@ -133,6 +148,16 @@
     "query": "Chicago|US",
     "lat": 41.8756,
     "lon": -87.6244
+  },
+  "colmar": {
+    "query": "Colmar|FR",
+    "lat": 48.0794,
+    "lon": 7.3585
+  },
+  "cologne": {
+    "query": "Cologne|DE",
+    "lat": 50.9375,
+    "lon": 6.9603
   },
   "copenhagen": {
     "query": "Copenhagen|DK",
@@ -169,6 +194,11 @@
     "lat": 45.1047,
     "lon": 0.7417
   },
+  "dresden": {
+    "query": "Dresden|DE",
+    "lat": 51.0504,
+    "lon": 13.7373
+  },
   "dubai": {
     "query": "Dubai|AE",
     "lat": 25.2653,
@@ -199,10 +229,20 @@
     "lat": 51.0543,
     "lon": 3.7174
   },
+  "goa": {
+    "query": "Goa|IN",
+    "lat": 15.2993,
+    "lon": 74.124
+  },
   "gozo": {
     "query": "Gozo|MT",
     "lat": 36.0443,
     "lon": 14.2512
+  },
+  "gran-canaria": {
+    "query": "Gran Canaria|ES",
+    "lat": 27.9202,
+    "lon": -15.5474
   },
   "grand-canyon": {
     "query": "Grand Canyon|US",
@@ -228,6 +268,11 @@
     "query": "Hoi An|VN",
     "lat": 15.8801,
     "lon": 108.338
+  },
+  "innsbruck": {
+    "query": "Innsbruck|AT",
+    "lat": 47.2692,
+    "lon": 11.4041
   },
   "interlaken": {
     "query": "Interlaken|CH",
@@ -279,6 +324,11 @@
     "lat": 50.0619,
     "lon": 19.9369
   },
+  "lake-bled": {
+    "query": "Lake Bled|SI",
+    "lat": 46.3636,
+    "lon": 14.0938
+  },
   "lake-garda": {
     "query": "Lake Garda|IT",
     "lat": 45.6328,
@@ -288,6 +338,16 @@
     "query": "Lake Ohrid|MK",
     "lat": 41,
     "lon": 20.75
+  },
+  "lanzarote": {
+    "query": "Lanzarote|ES",
+    "lat": 29.0469,
+    "lon": -13.59
+  },
+  "levi": {
+    "query": "Levi|FI",
+    "lat": 67.804,
+    "lon": 24.809
   },
   "lisbon": {
     "query": "Lisbon|PT",
@@ -414,6 +474,11 @@
     "lat": 20.2539,
     "lon": 105.975
   },
+  "nuremberg": {
+    "query": "Nuremberg|DE",
+    "lat": 49.4521,
+    "lon": 11.0767
+  },
   "oaxaca": {
     "query": "Oaxaca|MX",
     "lat": 17.0732,
@@ -448,6 +513,11 @@
     "query": "Penang|MY",
     "lat": 5.4141,
     "lon": 100.3288
+  },
+  "phuket": {
+    "query": "Phuket|TH",
+    "lat": 7.8804,
+    "lon": 98.3923
   },
   "plitvice-lakes": {
     "query": "Plitvice Lakes|HR",
@@ -484,6 +554,16 @@
     "lat": 64.1466,
     "lon": -21.9426
   },
+  "riga": {
+    "query": "Riga|LV",
+    "lat": 56.9496,
+    "lon": 24.1052
+  },
+  "rio-de-janeiro": {
+    "query": "Rio de Janeiro|BR",
+    "lat": -22.9068,
+    "lon": -43.1729
+  },
   "rome": {
     "query": "Rome|IT",
     "lat": 41.8933,
@@ -498,6 +578,16 @@
     "query": "Rovaniemi|FI",
     "lat": 66.5028,
     "lon": 25.7285
+  },
+  "saariselka": {
+    "query": "Saariselkä|FI",
+    "lat": 68.4195,
+    "lon": 27.414
+  },
+  "salzburg": {
+    "query": "Salzburg|AT",
+    "lat": 47.8095,
+    "lon": 13.055
   },
   "san-diego": {
     "query": "San Diego|US",
@@ -524,6 +614,11 @@
     "lat": 37.5667,
     "lon": 126.9783
   },
+  "seychelles": {
+    "query": "Seychelles|SC",
+    "lat": -4.6796,
+    "lon": 55.492
+  },
   "singapore": {
     "query": "Singapore|SG",
     "lat": 1.2899,
@@ -533,6 +628,21 @@
     "query": "Sri Lanka|LK",
     "lat": 7.8731,
     "lon": 80.7718
+  },
+  "st-lucia": {
+    "query": "St Lucia|LC",
+    "lat": 13.9094,
+    "lon": -60.9789
+  },
+  "stockholm": {
+    "query": "Stockholm|SE",
+    "lat": 59.3293,
+    "lon": 18.0686
+  },
+  "strasbourg": {
+    "query": "Strasbourg|FR",
+    "lat": 48.5734,
+    "lon": 7.7521
   },
   "sydney": {
     "query": "Sydney|AU",
@@ -628,5 +738,10 @@
     "query": "Zanzibar|TZ",
     "lat": -6.1659,
     "lon": 39.2026
+  },
+  "zermatt": {
+    "query": "Zermatt|CH",
+    "lat": 46.0207,
+    "lon": 7.7491
   }
 }

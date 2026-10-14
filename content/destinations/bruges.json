@@ -1,0 +1,179 @@
+{
+  "name": "Bruges",
+  "published": true,
+  "country": "BE",
+  "title": "Holidays in Bruges",
+  "intro": "Canals, chocolate shops and a medieval square with an ice rink at Christmas, a short hop from the UK. Here's what Bruges is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Bruges",
+  "to_code": "BRU",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Markets open"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "Late November to early January brings Christmas markets, an ice rink and the Winter Glow light trail. May, June and September are warm and good for canal boats and cycling. Summer weekends are very busy with day-trippers.",
+  "things": [
+    {
+      "name": "Christmas market and ice rink",
+      "tag": "Free",
+      "blurb": "Stalls fill the Markt and Simon Stevinplein, with skating in the main square.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Winter Glow",
+      "tag": "Free",
+      "blurb": "A light trail through the old town during the Christmas holidays.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Canal boat trip",
+      "tag": "Ticketed",
+      "blurb": "Half an hour on the water shows Bruges at its prettiest. Boats stop for the coldest winter weeks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Belfry",
+      "tag": "Ticketed",
+      "blurb": "Climb 366 steps to the top of the bell tower for a view over the rooftops.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Choco-Story",
+      "tag": "Indoors",
+      "blurb": "A chocolate museum with a tasting at the end.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ghent",
+      "tag": "Day trip",
+      "blurb": "A livelier city with its own big Christmas market, 25 minutes away by train.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Bruges good for a family holiday?",
+      "answer": "Yes. It's small, car-free in the centre and full of treats, with an ice rink and lights at Christmas."
+    },
+    {
+      "question": "When is the Christmas market on?",
+      "answer": "Usually from late November until early January. Check this year's dates, as the ice rink sometimes runs a little longer."
+    },
+    {
+      "question": "How do you get to Bruges?",
+      "answer": "Take the Eurostar to Brussels and a train on, under an hour. You can also drive via the ferry or the Channel Tunnel."
+    },
+    {
+      "question": "Is Bruges just a day trip?",
+      "answer": "Lots of people visit for a day, but staying overnight means quiet streets in the evening, when the lights are at their best."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Ghent",
+      "code": "BRU",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Amsterdam",
+      "code": "AMS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Cologne",
+      "code": "CGN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Paris",
+      "code": "CDG",
+      "label": "🏙️ City break"
+    }
+  ]
+}

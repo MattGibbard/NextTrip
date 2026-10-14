@@ -1,0 +1,179 @@
+{
+  "name": "Stockholm",
+  "published": true,
+  "country": "SE",
+  "title": "Holidays in Stockholm",
+  "intro": "A city built on islands, with candlelit Christmas markets, Lucia processions and a museum about Pippi Longstocking. Here's what Stockholm is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Stockholm",
+  "to_code": "ARN",
+  "holiday_types": [
+    "city",
+    "culture",
+    "nature"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Swedish krona (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, dark"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, dark"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Midsummer"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Markets open"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas, Lucia"
+    }
+  },
+  "when_to_go": "Late November to Christmas brings markets and lights, with Lucia celebrations on 13 December. May to August is warm with very long days, perfect for island-hopping. January and February are cold, dark and quiet.",
+  "things": [
+    {
+      "name": "Gamla Stan Christmas market",
+      "tag": "Free",
+      "blurb": "Red huts in Stortorget, the old town's main square, sell glögg, gingerbread and smoked reindeer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Skansen",
+      "tag": "Ticketed",
+      "blurb": "An open-air museum with Nordic animals and a traditional Christmas market on Advent weekends.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Junibacken",
+      "tag": "Indoors",
+      "blurb": "A storybook museum about Astrid Lindgren's books, with a little train ride through the stories.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vasa Museum",
+      "tag": "Indoors",
+      "blurb": "A huge 17th-century warship that sank on her first voyage and was raised almost whole.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lucia Day",
+      "tag": "Free",
+      "blurb": "On 13 December, choirs in white robes with candles in their hair sing in churches and halls all over the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Archipelago boat trip",
+      "tag": "Ticketed",
+      "blurb": "Ferries weave between thousands of islands. Best from May to September.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Stockholm good for a family holiday?",
+      "answer": "Yes. It's safe and easy to get around, and the museums are among Europe's best for children."
+    },
+    {
+      "question": "When are the Christmas markets on?",
+      "answer": "Gamla Stan's market usually runs from late November to 23 December. Skansen's opens on Advent weekends."
+    },
+    {
+      "question": "Is Stockholm expensive?",
+      "answer": "Fairly, especially eating out. Museums like Junibacken and the Vasa are worth the money, and a travel card saves on transport."
+    },
+    {
+      "question": "How dark is it in December?",
+      "answer": "It's light for only about six hours, so plan outdoor things for the middle of the day."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Copenhagen",
+      "code": "CPH",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Tallinn",
+      "code": "TLL",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bergen",
+      "code": "BGO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Riga",
+      "code": "RIX",
+      "label": "🏙️ City break"
+    }
+  ]
+}

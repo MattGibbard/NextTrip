@@ -1,0 +1,179 @@
+{
+  "name": "Strasbourg",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Strasbourg",
+  "intro": "France's self-styled capital of Christmas, with one of Europe's oldest markets, a giant tree and canals lined with half-timbered houses. Here's what Strasbourg is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Strasbourg",
+  "to_code": "SXB",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Markets open"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "Late November to Christmas Eve is when the Christmas market fills the old town, with the busiest days at weekends. May, June and September are warm and good for boat trips. Winter after Christmas is cold and quiet.",
+  "things": [
+    {
+      "name": "Christkindelsmärik",
+      "tag": "Free",
+      "blurb": "The Christmas market has run since 1570, spread across a dozen squares, with mulled wine, bredele biscuits and wooden toys.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Great Christmas Tree",
+      "tag": "Free",
+      "blurb": "A huge decorated tree stands in Place Kléber all through Advent.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cathedral of Notre-Dame",
+      "tag": "Free",
+      "blurb": "A towering pink sandstone cathedral with an astronomical clock whose figures move every day at half past twelve.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Petite France",
+      "tag": "Free",
+      "blurb": "The prettiest corner of the old town, with canals, little bridges and timber-framed houses.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Batorama boat trip",
+      "tag": "Ticketed",
+      "blurb": "A covered boat glides round the old town and out to the European Parliament. Good in any weather.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vaisseau science centre",
+      "tag": "Indoors",
+      "blurb": "Hands-on science for children, with plenty to press, build and climb.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Strasbourg good for a family holiday?",
+      "answer": "Yes, especially at Christmas. The old town is compact and flat enough for buggies, and the markets are full of lights, food and small rides."
+    },
+    {
+      "question": "When is the Christmas market on?",
+      "answer": "Usually from the last week of November to 24 December. Check this year's dates before you book, as weekends get very busy."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights is enough for the markets and the old town, with time for a day trip to Colmar."
+    },
+    {
+      "question": "How do you get to Strasbourg?",
+      "answer": "There are a few flights to Strasbourg itself, or you can take the Eurostar to Paris and a fast train on from there in under two hours."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Colmar",
+      "code": "BSL",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Nuremberg",
+      "code": "NUE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Cologne",
+      "code": "CGN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Ghent",
+      "code": "BRU",
+      "label": "🏙️ City break"
+    }
+  ]
+}

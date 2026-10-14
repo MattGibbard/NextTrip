@@ -1,0 +1,178 @@
+{
+  "name": "Dresden",
+  "published": true,
+  "country": "DE",
+  "title": "Holidays in Dresden",
+  "intro": "Germany's oldest Christmas market, the home of Stollen cake, in a baroque city rebuilt along the River Elbe. Here's what Dresden is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Dresden",
+  "to_code": "DRS",
+  "holiday_types": [
+    "city",
+    "culture"
+  ],
+  "nights": "3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Markets open"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "Late November to Christmas Eve is when the Striezelmarkt and a dozen smaller markets are on. May to September is warm, with river boats and beer gardens. January and February are cold and quiet.",
+  "things": [
+    {
+      "name": "Striezelmarkt",
+      "tag": "Free",
+      "blurb": "Running since 1434, with a giant wooden Christmas pyramid, a huge walk-through arch and stalls of handmade wooden toys.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stollen Festival",
+      "tag": "Free",
+      "blurb": "On the Saturday before the second Sunday of Advent, a giant Stollen cake is paraded through town and sliced up.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Frauenkirche",
+      "tag": "Free",
+      "blurb": "The domed church destroyed in 1945 and rebuilt stone by stone. Climb the dome for the views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zwinger Palace",
+      "tag": "Ticketed",
+      "blurb": "A baroque palace with galleries of porcelain, paintings and old scientific instruments.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paddle steamer",
+      "tag": "Ticketed",
+      "blurb": "Ride one of the world's oldest fleets of paddle steamers along the Elbe. Most run spring to autumn.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Saxon Switzerland",
+      "tag": "Day trip",
+      "blurb": "Sandstone towers and the Bastei Bridge, under an hour away by train.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Dresden good for a family holiday?",
+      "answer": "Yes. It's good value, the markets have rides and wooden toys, and the old town is easy to walk round."
+    },
+    {
+      "question": "When is the Striezelmarkt on?",
+      "answer": "Usually from late November to 24 December. The Stollen Festival is on one Saturday in early December."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three nights is enough for the markets and museums, or longer with a day in Saxon Switzerland."
+    },
+    {
+      "question": "Is it cheaper than other German Christmas markets?",
+      "answer": "Usually, yes. Hotels in Dresden tend to cost less than in Cologne or Nuremberg, though flight choices from the UK are fewer."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Nuremberg",
+      "code": "NUE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Prague",
+      "code": "PRG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Saxon Switzerland",
+      "code": "DRS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Berlin",
+      "code": "BER",
+      "label": "🏙️ City break"
+    }
+  ]
+}

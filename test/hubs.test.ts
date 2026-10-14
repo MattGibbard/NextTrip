@@ -16,6 +16,10 @@ describe("hub files", () => {
     const h = readHub(slug, raw);
     if (h.kind === "type") expect(h.holiday_type).not.toBeNull();
     else if (h.kind === "month") expect(h.month).not.toBeNull();
+    else if (h.kind === "collection") {
+      expect(h.guides.length).toBeGreaterThan(0);
+      for (const g of h.guides) expect(findDestination(g), `${g} is a published guide`).toBeDefined();
+    }
     else expect(h.country_code).toMatch(/^[A-Z]{2}$/);
     expect(h.intro).not.toBe("");
     if (raw.published) {
@@ -25,7 +29,7 @@ describe("hub files", () => {
   });
 
   it("gives each kind of holiday and country one hub at most", () => {
-    const keys = HUBS.map((h) => `${h.kind}:${h.holiday_type ?? h.month ?? h.country_code}`);
+    const keys = HUBS.filter((h) => h.kind !== "collection").map((h) => `${h.kind}:${h.holiday_type ?? h.month ?? h.country_code}`);
     expect(new Set(keys).size).toBe(keys.length);
   });
 });
@@ -40,6 +44,9 @@ describe("readHub", () => {
     const month = readHub("feb", { kind: "month", month: "feb", holiday_type: "beach" });
     expect(month).toMatchObject({ kind: "month", month: 1, holiday_type: null, country_code: "", name: "February", title: "Where to go on holiday in February" });
     expect(readHub("x", { kind: "month", month: "smarch" }).month).toBeNull();
+    const xmas = readHub("christmas", { kind: "collection", guides: ["vienna", " vienna", "prague"], icon: "🎄", month: "dec" });
+    expect(xmas).toMatchObject({ kind: "collection", guides: ["vienna", "prague"], icon: "🎄", month: 11, name: "christmas" });
+    expect(readHub("beach", { holiday_type: "beach", guides: ["vienna"] }).guides).toEqual([]);
   });
 });
 
@@ -57,6 +64,7 @@ describe("hub pages", () => {
     const kinds = HUBS.map((h) => h.kind);
     expect(kinds.indexOf("month")).toBeGreaterThan(kinds.lastIndexOf("type"));
     expect(kinds.indexOf("country")).toBeGreaterThan(kinds.lastIndexOf("month"));
+    if (kinds.includes("collection")) expect(kinds.indexOf("collection")).toBeGreaterThan(kinds.lastIndexOf("month"));
     const months = HUBS.filter((h) => h.kind === "month").map((h) => h.month);
     expect(months).toEqual(Array.from({ length: 12 }, (_, i) => i));
   });
@@ -71,6 +79,9 @@ describe("hub pages", () => {
     expect(good).toEqual(DESTINATIONS.filter((d) => d.months[1].rating === "good"));
     expect(good.some((d) => best.includes(d))).toBe(false);
     expect(alsoGood(typeHub("beach")!)).toEqual([]);
+    const xmas = findHub("christmas-holidays")!;
+    expect(hubGuides(xmas)).toEqual(DESTINATIONS.filter((d) => xmas.guides.includes(d.slug)));
+    expect(alsoGood(xmas)).toEqual([]);
     expect(hubSearchTitle(readHub("may", { kind: "month", month: "may" }))).toBe("Where to go on holiday in May | somewhere🎉");
   });
 

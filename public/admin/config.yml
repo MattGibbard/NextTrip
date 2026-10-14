@@ -500,7 +500,7 @@ collections:
   - name: hubs
     label: Hub pages
     label_singular: Hub page
-    description: Pages that list every guide for one kind of holiday (Beach holidays), one country (Holidays in Spain) or one month (Where to go on holiday in February). The guides on each come from the guides themselves, so these only hold the words. A month page lists every guide rated "Best" for that month, then the ones rated "Good". Untick "Published" to take one off the site.
+    description: Pages that list every guide for one kind of holiday (Beach holidays), one country (Holidays in Spain) one month (Where to go on holiday in February) or a hand-picked collection (Christmas holidays). The guides on each come from the guides themselves, so these only hold the words, except a collection, which lists the guides you pick. A month page lists every guide rated "Best" for that month, then the ones rated "Good". Untick "Published" to take one off the site.
     folder: content/hubs
     format: json
     extension: json
@@ -521,6 +521,7 @@ collections:
           - { label: "A kind of holiday", value: type }
           - { label: "A country", value: country }
           - { label: "A month", value: month }
+          - { label: "A collection I pick", value: collection }
       - label: Holiday type
         name: holiday_type
         widget: select
@@ -543,7 +544,7 @@ collections:
         name: month
         widget: select
         required: false
-        hint: For a month. Lists every guide rated "Best" that month, then the ones rated "Good".
+        hint: For a month. Lists every guide rated "Best" that month, then the ones rated "Good". A collection can have a month too (December for Christmas), and its page is then about that month.
         options:
           - { label: January, value: jan }
           - { label: February, value: feb }
@@ -557,6 +558,17 @@ collections:
           - { label: October, value: oct }
           - { label: November, value: nov }
           - { label: December, value: dec }
+      - label: Guides
+        name: guides
+        widget: relation
+        collection: destinations
+        value_field: "{{slug}}"
+        search_fields: [name]
+        display_fields: [name]
+        multiple: true
+        required: false
+        hint: For a collection. The guides it lists, shown A to Z.
+      - { label: Emoji, name: icon, widget: string, required: false, hint: "For a collection. One emoji for its links, e.g. 🎄." }
       - { label: Link name, name: name, widget: string, hint: "Short, for links and the breadcrumb, e.g. Beach holidays, Spain or February." }
       - { label: Page heading, name: title, widget: string, hint: "e.g. Beach holidays, Holidays in Spain or Where to go on holiday in February. A new hub's address comes from this, e.g. somewhere.party/destinations/holidays-in-spain, so it mustn't be the same as a guide's." }
       - { label: Introduction, name: intro, widget: text, hint: "One or two sentences under the heading. Google also shows this under the page title in search results, cut off after about 155 characters, so put the most important part first." }

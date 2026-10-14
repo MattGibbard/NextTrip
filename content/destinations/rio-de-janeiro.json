@@ -1,0 +1,179 @@
+{
+  "name": "Rio de Janeiro",
+  "published": true,
+  "country": "BR",
+  "title": "Holidays in Rio de Janeiro",
+  "intro": "Christmas in summer on Copacabana beach, a cable car up Sugarloaf Mountain and the world's biggest New Year's Eve party. Here's what Rio is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Rio_de_Janeiro",
+  "to_code": "GIG",
+  "holiday_types": [
+    "city",
+    "beach",
+    "nature"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3 to 4 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Brazilian real (R$)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / N · 127V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Hot, humid"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Carnival, hot"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Mild, dry"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Mild, dry"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Mild, dry"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas, New Year"
+    }
+  },
+  "when_to_go": "April to September is drier and milder. December to March is summer, hot and humid with afternoon storms, and Christmas, New Year and Carnival are the busiest and dearest times to go.",
+  "things": [
+    {
+      "name": "Christ the Redeemer",
+      "tag": "Ticketed",
+      "blurb": "Ride the little train up through the forest to the famous statue on Corcovado.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sugarloaf Mountain",
+      "tag": "Ticketed",
+      "blurb": "Two cable cars climb to the top of the granite peak for views over the city and beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Copacabana and Ipanema",
+      "tag": "Free",
+      "blurb": "Long, lively beaches with snack sellers, beach football and lifeguards.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "New Year's Eve at Copacabana",
+      "tag": "Free",
+      "blurb": "Millions of people dressed in white watch fireworks over the beach at midnight.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tijuca Forest",
+      "tag": "Outdoors",
+      "blurb": "A huge rainforest in the city, with waterfalls, monkeys and trails.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Museum of Tomorrow",
+      "tag": "Indoors",
+      "blurb": "A striking science museum by the harbour, with hands-on exhibits about the planet.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Rio good for a family holiday?",
+      "answer": "It can be, especially with older children. Stay in a well-known area like Copacabana, Ipanema or Leblon and use registered taxis or ride apps."
+    },
+    {
+      "question": "Is Christmas a good time to go?",
+      "answer": "It's summer, so the beaches are lively but it's hot and humid, with storms some afternoons. It's also the busiest time of year."
+    },
+    {
+      "question": "Is Rio safe?",
+      "answer": "Crime is a problem in parts of the city, so check GOV.UK advice, keep valuables out of sight and go with a guide to less touristy areas."
+    },
+    {
+      "question": "How long is the flight?",
+      "answer": "About 11 to 12 hours direct from London."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cartagena",
+      "code": "CTG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Cusco",
+      "code": "CUZ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Cape Town",
+      "code": "CPT",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "name": "Innsbruck",
+  "published": true,
+  "country": "AT",
+  "title": "Holidays in Innsbruck",
+  "intro": "An Alpine city where cable cars from the centre take you up into the snow, with Christmas markets below. Here's what Innsbruck is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Innsbruck",
+  "to_code": "INN",
+  "holiday_types": [
+    "city",
+    "ski",
+    "nature"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Ski season"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Ski season"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring skiing"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hiking"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Hiking"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Hiking"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Between seasons"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Markets open"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas, snow"
+    }
+  },
+  "when_to_go": "Mid-November to 6 January is Christmas market season, and the ski season starts in December. January to March has the most reliable snow. June to September is good for hiking and mountain lakes.",
+  "things": [
+    {
+      "name": "Old Town Christmas market",
+      "tag": "Free",
+      "blurb": "Stalls gather under the Golden Roof, with a giant crystal Christmas tree nearby.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nordkette cable car",
+      "tag": "Ticketed",
+      "blurb": "Funicular and cable cars rise from the city centre to over 2,000 metres in about 20 minutes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Swarovski Crystal Worlds",
+      "tag": "Ticketed",
+      "blurb": "A quirky park of crystal art rooms with a big indoor and outdoor play area, at Wattens nearby.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alpine Zoo",
+      "tag": "Ticketed",
+      "blurb": "Bears, wolves and ibex on a hillside above the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Skiing at Axamer Lizum and Glungezer",
+      "tag": "Ticketed",
+      "blurb": "Several ski areas are within half an hour by free ski bus, and one ski pass covers them all.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bergisel ski jump",
+      "tag": "Ticketed",
+      "blurb": "Ride up to the top of the Olympic ski jump for a dizzying view.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Innsbruck good for a family holiday?",
+      "answer": "Yes. You get a city with markets and museums plus snow and skiing within easy reach, all from one hotel."
+    },
+    {
+      "question": "When are the Christmas markets on?",
+      "answer": "Usually from mid-November to 6 January, so you can still catch them after Christmas."
+    },
+    {
+      "question": "Is there snow at Christmas?",
+      "answer": "Usually in the mountains above the city, though not always in town. Higher ski areas like the Stubai Glacier are the safest bet."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A long weekend for the markets, or a week with skiing."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Salzburg",
+      "code": "SZG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Zermatt",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Chamonix",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

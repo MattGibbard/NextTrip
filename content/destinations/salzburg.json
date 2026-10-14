@@ -1,0 +1,179 @@
+{
+  "name": "Salzburg",
+  "published": true,
+  "country": "AT",
+  "title": "Holidays in Salzburg",
+  "intro": "Mozart's city, with a castle on the hill, markets in every square and snowy Alps on the doorstep. Here's what Salzburg is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Salzburg",
+  "to_code": "SZG",
+  "holiday_types": [
+    "city",
+    "culture",
+    "nature"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Snow nearby"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Festival, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Markets open"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "Late November to New Year's Day brings Christmas markets to the cathedral square and beyond, with snow often in the mountains nearby. May, June and September are warm and good for lakes and hiking. July and August are busy with the summer festival.",
+  "things": [
+    {
+      "name": "Christkindlmarkt",
+      "tag": "Free",
+      "blurb": "The cathedral square market dates back to the 15th century, with carol singing from the balconies on Advent evenings.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hohensalzburg Fortress",
+      "tag": "Ticketed",
+      "blurb": "Take the funicular up to one of Europe's biggest castles, with views over the city and the Alps.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hellbrunn Palace",
+      "tag": "Ticketed",
+      "blurb": "Famous for its trick fountains that soak visitors in summer, and a lovely Advent market in winter.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mozart's Birthplace",
+      "tag": "Indoors",
+      "blurb": "The house where Mozart was born, with his childhood violin.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sound of Music tour",
+      "tag": "Tour",
+      "blurb": "A coach trip to the film's locations around the city and the lakes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Silent Night Chapel",
+      "tag": "Day trip",
+      "blurb": "The small chapel in Oberndorf, half an hour away, where the carol was first sung in 1818.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Salzburg good for a family holiday?",
+      "answer": "Yes. The old town is small and walkable, the funicular is fun, and there's snow nearby in winter."
+    },
+    {
+      "question": "When are the Christmas markets on?",
+      "answer": "The main cathedral market usually runs from late November to 1 January. Hellbrunn's Advent market closes on Christmas Eve."
+    },
+    {
+      "question": "Can we combine Salzburg with skiing?",
+      "answer": "Yes. Ski areas such as Werfenweng and Zell am See are within about an hour, and Salzburg airport is busy with ski flights in winter."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights for the city, with a day out to the lakes or the mountains."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Innsbruck",
+      "code": "INN",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Vienna",
+      "code": "VIE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Hallstatt",
+      "code": "SZG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Bled",
+      "code": "LJU",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

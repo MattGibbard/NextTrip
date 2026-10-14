@@ -1,0 +1,79 @@
+{
+  "published": true,
+  "kind": "collection",
+  "month": "dec",
+  "icon": "🎄",
+  "guides": [
+    "antigua",
+    "barbados",
+    "bruges",
+    "budapest",
+    "cancun",
+    "cape-town",
+    "colmar",
+    "cologne",
+    "copenhagen",
+    "dresden",
+    "dubai",
+    "goa",
+    "gran-canaria",
+    "hallstatt",
+    "innsbruck",
+    "krakow",
+    "lake-bled",
+    "lanzarote",
+    "levi",
+    "ljubljana",
+    "maldives",
+    "mauritius",
+    "new-york",
+    "nuremberg",
+    "phuket",
+    "prague",
+    "quebec-city",
+    "riga",
+    "rio-de-janeiro",
+    "rovaniemi",
+    "saariselka",
+    "salzburg",
+    "seychelles",
+    "sri-lanka",
+    "st-lucia",
+    "stockholm",
+    "strasbourg",
+    "sydney",
+    "tallinn",
+    "tenerife",
+    "tromso",
+    "vienna",
+    "whistler",
+    "zermatt"
+  ],
+  "name": "Christmas holidays",
+  "title": "Christmas holidays",
+  "intro": "Christmas markets and snow, Santa in Lapland or a beach in the sunshine. Here's where to go on holiday over Christmas, near and far.",
+  "seo_title": "Christmas holidays: where to go for markets, snow or sun",
+  "seo_description": "",
+  "faqs": [
+    {
+      "question": "Where are the best Christmas markets in Europe?",
+      "answer": "Strasbourg, Colmar, Nuremberg, Dresden and Cologne have some of the oldest and biggest. Vienna, Salzburg, Prague, Budapest and Bruges are lovely too. Most run from late November until just before Christmas, though some stay open until New Year."
+    },
+    {
+      "question": "Where can we meet Santa at Christmas?",
+      "answer": "Finnish Lapland is the classic choice. Rovaniemi has Santa Claus Village on the Arctic Circle, while Levi and Saariselkä are smaller and quieter, with Santa visits, huskies and reindeer in the forest."
+    },
+    {
+      "question": "Where can we have a white Christmas?",
+      "answer": "Lapland and Tromsø are almost certain to have snow. In the Alps, high resorts like Zermatt are the safest bet, and Innsbruck and Salzburg often have snow in the mountains nearby."
+    },
+    {
+      "question": "Where is warm at Christmas?",
+      "answer": "Gran Canaria, Lanzarote and Tenerife are about four hours away and usually around 20 to 24°C. Further afield, the Caribbean, Thailand, Goa, Sri Lanka and the Maldives are in their dry season, and Cape Town and Sydney are in summer."
+    },
+    {
+      "question": "When should we book a Christmas holiday?",
+      "answer": "As early as you can. Christmas and New Year are the busiest and dearest weeks of the year to travel. Going in early December, to see the markets before the school holidays, is often much cheaper."
+    }
+  ]
+}

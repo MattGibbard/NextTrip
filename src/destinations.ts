@@ -223,7 +223,10 @@ export function flightTime(from: { lat: number | null; lon: number | null }, d: 
   return hours === null ? null : `About ${hours} hr${hours === 1 ? "" : "s"}`;
 }
 
-export { countryFlag } from "./guideLinks";
+/** A country's flag, from its two-letter code. */
+export function countryFlag(code: string): string {
+  return /^[A-Z]{2}$/.test(code) ? String.fromCodePoint(...[...code].map((c) => 0x1f1a5 + c.charCodeAt(0))) : "";
+}
 
 /** The first sentence of a guide's introduction, for its card in the list of guides. */
 export function shortIntro(d: DestinationCard): string {

@@ -7,6 +7,8 @@ import { SiteBanner } from "./components/SiteBanner";
 import "./install";
 import "./theme";
 import { publicPage } from "../shared/seo";
+import { loadDestination } from "./destinations";
+import { loadHub } from "./hubs";
 import { loadPost } from "./blog";
 
 const root = document.getElementById("root")!;
@@ -27,12 +29,14 @@ function start() {
     createRoot(root).render(app);
   }
 }
-// The code for most pages is its own file, and so is a guide's full text or a hub's words (preloadPage
-// fetches those too). Fetch them before starting, so the page picks up from the HTML as it is rather
-// than flashing empty while they arrive.
+// A guide's full text, or a hub's words, is its own file, and so is the code for most pages. Fetch them
+// before starting, so the page picks up from the HTML as it is rather than flashing empty while they
+// arrive. Guides and hubs share addresses.
 const opening = publicPage(location.pathname);
+const slug = opening?.startsWith("destination:") ? opening.slice("destination:".length) : "";
 void Promise.all([
   preloadPage(location.pathname),
+  ...(slug ? [loadDestination(slug), loadHub(slug)] : []),
   // Likewise a blog post.
   ...(opening?.startsWith("post:") ? [loadPost(opening.slice("post:".length))] : []),
 ])

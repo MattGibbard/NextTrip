@@ -65,13 +65,7 @@ try {
     return `\n    <link rel="stylesheet" crossorigin href="/assets/${file}">`;
   };
   const pageStyles = { how: ownStyles("HowItWorks") };
-  // The Guides pages' code (every guide's card) loads on its own too, so those pages start fetching it
-  // alongside the site's own code instead of after it.
-  const guidesCode = assets.find((f) => f.startsWith("GuideView-") && f.endsWith(".js"));
-  if (!guidesCode) throw new Error("No Guides code in the build");
-  const guidePage = (page) => page === "destinations" || page.startsWith("destination:");
-  const preload = (page) => (guidePage(page) ? `\n    <link rel="modulepreload" crossorigin href="/assets/${guidesCode}">` : "");
-  const styled = (page) => base.replace(cssLink[0], () => `\n    <style>${css}</style>${pageStyles[page] ?? ""}${preload(page)}`);
+  const styled = (page) => base.replace(cssLink[0], () => `\n    <style>${css}</style>${pageStyles[page] ?? ""}`);
 
   const list = pages().map((p) => ({ ...p, updated: gitDate(p.source), published: gitDate(p.source, true) }));
   for (const { page, file, updated, published } of list) {

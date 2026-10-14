@@ -26,6 +26,12 @@ export interface Env {
   /** A Cloudflare API token with Account Analytics Read, and the account id, for page visits on /stats. Secrets. */
   CF_ANALYTICS_TOKEN?: string;
   CF_ACCOUNT_ID?: string;
+  /**
+   * Google search numbers on /stats: a service account's JSON key, and the Search Console property it can read,
+   * like "sc-domain:somewhere.party". Secrets.
+   */
+  GSC_SERVICE_ACCOUNT?: string;
+  GSC_SITE?: string;
   /** "1" in local development: the sign-in link comes back in the response instead of by email. */
   DEV_LOGIN_LINKS?: string;
 }

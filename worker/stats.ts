@@ -1,17 +1,30 @@
 import type { Env } from "./env";
 import { ensureSchema } from "./migrate";
 import { statsSignIn } from "./statsSignIn";
+import { siteNumbers } from "./statsSite";
+import type { Period, SiteNumbers } from "./statsSite";
+import { pageVisits, workerHealth } from "./statsCloudflare";
+import type { Visits, WorkerHealth } from "./statsCloudflare";
+import { searchNumbers } from "./statsSearch";
+import type { Search } from "./statsSearch";
 
 /**
- * The owner's stats page at /stats: page visits from Cloudflare Web Analytics, and how many families,
- * people, trips, ideas, draws and plans there are. Only the addresses in the STATS_EMAILS secret can sign in
- * (worker/statsSignIn.ts). Family 1 is the owner's own and is left out of every number.
+ * The owner's stats page at /stats. Numbers come from the site's database (worker/statsSite.ts), Cloudflare
+ * (worker/statsCloudflare.ts) and Google Search Console (worker/statsSearch.ts). Only the addresses in the
+ * STATS_EMAILS secret can sign in (worker/statsSignIn.ts). Family 1 is the owner's own and is left out.
  */
 export const STATS_PATH = "/stats";
 
 const RANGES = [7, 30, 90] as const;
 type Range = (typeof RANGES)[number];
-const HOST = "somewhere.party";
+/** Cloudflare looks back at most 13 weeks, so longer periods have nothing to compare with. */
+const CLOUDFLARE_DAYS = 91;
+
+const DAY = 86_400_000;
+const isoDay = (ms: number) => new Date(ms).toISOString().slice(0, 10);
+
+/** Hub pages share /destinations/ with the guides; their slugs come from the content folder. */
+const HUBS = new Set(Object.keys(import.meta.glob("../content/hubs/*.json")).map((p) => p.split("/").pop()!.replace(/\.json$/, "")));
 
 export async function serveStats(req: Request, env: Env): Promise<Response> {
   await ensureSchema(env.DB);
@@ -20,9 +33,17 @@ export async function serveStats(req: Request, env: Env): Promise<Response> {
   const url = new URL(req.url);
   const asked = Number(url.searchParams.get("days"));
   const days: Range = (RANGES as readonly number[]).includes(asked) ? (asked as Range) : 30;
+  const today = isoDay(Date.now());
   const since = isoDay(Date.now() - (days - 1) * DAY);
-  const [site, visits] = await Promise.all([siteNumbers(env.DB, since), pageVisits(env, since)]);
-  return htmlPage(renderStats({ days, since, site, visits }));
+  const prevSince = isoDay(Date.now() - (2 * days - 1) * DAY);
+  const [site, visits, worker, search, pageDates] = await Promise.all([
+    siteNumbers(env.DB, since, prevSince),
+    pageVisits(env, since, 2 * days <= CLOUDFLARE_DAYS ? prevSince : null),
+    workerHealth(env, since),
+    searchNumbers(env, since, prevSince, today),
+    newPages(env, today),
+  ]);
+  return htmlPage(renderStats({ days, since, site, visits, worker, search, pageDates }));
 }
 
 /** Every answer from /stats: never cached, never in search results. */
@@ -34,110 +55,23 @@ export function htmlPage(html: string, init: ResponseInit = {}): Response {
   return new Response(html, { ...init, headers });
 }
 
-// ---------- The site's own numbers ----------
-
-export interface SiteNumbers {
-  totals: { label: string; total: number; recent: number | null }[];
-  /** New families per day, by date. */
-  signups: Record<string, number>;
-  /** Of the families that joined in the range: how many added an idea, and how many finished a draw. */
-  funnel: { families: number; withIdea: number; withDraw: number };
-}
-
-export async function siteNumbers(db: D1Database, since: string): Promise<SiteNumbers> {
-  const count = (sql: string) => db.prepare(sql).bind(since);
-  const [families, people, trips, ideas, draws, plans, signups, funnel] = await db.batch<Record<string, number | string>>([
-    count("SELECT COUNT(*) AS total, SUM(created_at >= ?) AS recent FROM families WHERE id != 1"),
-    count("SELECT COUNT(*) AS total, SUM(created_at >= ?) AS recent FROM people WHERE family_id != 1 AND removed = 0"),
-    count("SELECT COUNT(*) AS total, SUM(created_at >= ?) AS recent FROM trips WHERE family_id != 1"),
-    count("SELECT COUNT(*) AS total, SUM(created_at >= ?) AS recent FROM ideas WHERE family_id != 1"),
-    count("SELECT COUNT(*) AS total, SUM(drawn_at >= ?) AS recent FROM rounds WHERE family_id != 1 AND status = 'drawn'"),
-    db.prepare("SELECT COUNT(*) AS total FROM plans WHERE family_id != 1"),
-    count("SELECT date(created_at) AS day, COUNT(*) AS n FROM families WHERE id != 1 AND created_at >= ? GROUP BY day"),
-    count(
-      `SELECT COUNT(*) AS families,
-        SUM(EXISTS (SELECT 1 FROM ideas i WHERE i.family_id = f.id)) AS withIdea,
-        SUM(EXISTS (SELECT 1 FROM rounds r WHERE r.family_id = f.id AND r.status = 'drawn')) AS withDraw
-       FROM families f WHERE f.id != 1 AND f.created_at >= ?`,
-    ),
-  ]);
-  const row = (r: D1Result<Record<string, number | string>>) => r.results[0] ?? {};
-  const num = (v: unknown) => Number(v ?? 0);
-  const total = (label: string, r: D1Result<Record<string, number | string>>, recent = true) => ({
-    label,
-    total: num(row(r).total),
-    recent: recent ? num(row(r).recent) : null,
-  });
-  const f = row(funnel);
-  return {
-    totals: [
-      total("Families", families),
-      total("People", people),
-      total("Ideas", ideas),
-      total("Trips", trips),
-      total("Draws", draws),
-      total("Trip plans", plans, false),
-    ],
-    signups: Object.fromEntries(signups.results.map((r) => [String(r.day), num(r.n)])),
-    funnel: { families: num(f.families), withIdea: num(f.withIdea), withDraw: num(f.withDraw) },
-  };
-}
-
-// ---------- Page visits from Cloudflare Web Analytics ----------
-
-export interface Visits {
-  /** Visits and page views per day, by date. */
-  daily: Record<string, { visits: number; views: number }>;
-  pages: { path: string; views: number }[];
-  referrers: { host: string; visits: number }[];
-  countries: { country: string; visits: number }[];
-}
-
-const VISITS_QUERY = `query($account: String!, $since: Date!, $host: String!) {
-  viewer { accounts(filter: { accountTag: $account }) {
-    daily: rumPageloadEventsAdaptiveGroups(limit: 100, filter: { date_geq: $since, requestHost: $host }, orderBy: [date_ASC]) {
-      count sum { visits } dimensions { date } }
-    pages: rumPageloadEventsAdaptiveGroups(limit: 10, filter: { date_geq: $since, requestHost: $host }, orderBy: [count_DESC]) {
-      count dimensions { requestPath } }
-    referrers: rumPageloadEventsAdaptiveGroups(limit: 10, filter: { date_geq: $since, requestHost: $host, refererHost_neq: "" }, orderBy: [sum_visits_DESC]) {
-      sum { visits } dimensions { refererHost } }
-    countries: rumPageloadEventsAdaptiveGroups(limit: 8, filter: { date_geq: $since, requestHost: $host }, orderBy: [sum_visits_DESC]) {
-      sum { visits } dimensions { countryName } }
-  } }
-}`;
-
-type Group = { count?: number; sum?: { visits: number }; dimensions: Record<string, string> };
-
-/** Null when the token isn't set or Cloudflare doesn't answer; the page says so and still shows the rest. */
-export async function pageVisits(env: Env, since: string): Promise<Visits | null> {
-  if (!env.CF_ANALYTICS_TOKEN || !env.CF_ACCOUNT_ID) return null;
+/** Public pages that first went up in the last two weeks, from the list the build writes (scripts/prerender.mjs). */
+async function newPages(env: Env, today: string): Promise<{ path: string; published: string }[]> {
+  if (!env.ASSETS) return [];
   try {
-    const res = await fetch("https://api.cloudflare.com/client/v4/graphql", {
-      method: "POST",
-      headers: { Authorization: `Bearer ${env.CF_ANALYTICS_TOKEN}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ query: VISITS_QUERY, variables: { account: env.CF_ACCOUNT_ID, since, host: HOST } }),
-    });
-    const json = (await res.json()) as { data?: { viewer: { accounts: Record<string, Group[]>[] } }; errors?: unknown[] | null };
-    const acc = json.data?.viewer.accounts[0];
-    if (!res.ok || json.errors?.length || !acc) return null;
-    return {
-      daily: Object.fromEntries(acc.daily.map((g) => [g.dimensions.date, { visits: g.sum?.visits ?? 0, views: g.count ?? 0 }])),
-      pages: acc.pages.map((g) => ({ path: g.dimensions.requestPath, views: g.count ?? 0 })),
-      referrers: acc.referrers
-        .filter((g) => g.dimensions.refererHost !== HOST && (g.sum?.visits ?? 0) > 0)
-        .map((g) => ({ host: g.dimensions.refererHost.replace(/^www\./, ""), visits: g.sum?.visits ?? 0 })),
-      countries: acc.countries.map((g) => ({ country: g.dimensions.countryName, visits: g.sum?.visits ?? 0 })),
-    };
+    const res = await env.ASSETS.fetch(new Request("https://somewhere.party/page-dates.json"));
+    if (!res.ok) return [];
+    const cutoff = isoDay(Date.parse(today) - 13 * DAY);
+    return ((await res.json()) as { path: string; published: string }[]).filter((p) => p.published >= cutoff);
   } catch {
-    return null;
+    return [];
   }
 }
 
 // ---------- The page ----------
 
-const DAY = 86_400_000;
-const isoDay = (ms: number) => new Date(ms).toISOString().slice(0, 10);
 const fmt = (n: number) => n.toLocaleString("en-GB");
+const pct = (part: number, whole: number) => (whole ? `${Math.round((part / whole) * 100)}%` : "–");
 
 export function esc(s: string): string {
   return s.replace(/[&<>"']/g, (ch) => `&#${ch.charCodeAt(0)};`);
@@ -152,8 +86,17 @@ function countryName(code: string): string {
   }
 }
 
+/** "▲ 40%" against the period before. Nothing when there's no period before to compare with. */
+function change(current: number, prev: number | null): string {
+  if (prev === null) return "";
+  if (prev === 0) return current ? `<span class="chg up">new</span>` : "";
+  const d = Math.round(((current - prev) / prev) * 100);
+  if (d === 0) return `<span class="chg">±0%</span>`;
+  return `<span class="chg ${d > 0 ? "up" : "down"}">${d > 0 ? "▲" : "▼"} ${Math.abs(d)}%</span>`;
+}
+
 /** One bar per day. The tallest bar fills the chart; days with nothing still get a hairline so gaps read as zero. */
-function barChart(values: number[], dates: string[], label: string, tone: "accent" | "gold"): string {
+function barChart(values: number[], dates: string[], label: string, tone: "accent" | "gold", extra = ""): string {
   const w = 320;
   const h = 96;
   const max = Math.max(1, ...values);
@@ -168,76 +111,248 @@ function barChart(values: number[], dates: string[], label: string, tone: "accen
   const first = dates[0].slice(5).split("-").reverse().join("/");
   const last = dates[dates.length - 1].slice(5).split("-").reverse().join("/");
   return `<figure class="chart">
-  <figcaption><span>${label}</span><b>${fmt(values.reduce((a, b) => a + b, 0))}</b></figcaption>
+  <figcaption><span>${label}</span><span><b>${fmt(values.reduce((a, b) => a + b, 0))}</b>${extra}</span></figcaption>
   <svg class="bars ${tone}" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="${label} per day, highest ${fmt(max)}">${bars}</svg>
   <div class="axis"><span>${first}</span><span>peak ${fmt(max)}</span><span>${last}</span></div>
 </figure>`;
 }
 
-function list(title: string, rows: { name: string; value: number }[], empty: string): string {
-  const max = Math.max(1, ...rows.map((r) => r.value));
-  const body = rows.length
-    ? rows
+type ListRow = { name: string; value: number; note?: string };
+
+/** Rows with a bar behind each, as long as its share of the biggest. */
+function rows(items: ListRow[], empty: string): string {
+  const max = Math.max(1, ...items.map((r) => r.value));
+  const body = items.length
+    ? items
         .map(
           (r) =>
-            `<li><span class="fill" style="width:${((r.value / max) * 100).toFixed(1)}%"></span><span class="name">${esc(r.name)}</span><span class="num">${fmt(r.value)}</span></li>`,
+            `<li><span class="fill" style="width:${((r.value / max) * 100).toFixed(1)}%"></span><span class="name">${esc(r.name)}${
+              r.note ? ` <small>${esc(r.note)}</small>` : ""
+            }</span><span class="num">${fmt(r.value)}</span></li>`,
         )
         .join("")
-    : `<li class="empty">${empty}</li>`;
-  return `<section class="panel"><h2>${title}</h2><ol class="rows">${body}</ol></section>`;
+    : `<li class="empty">${esc(empty)}</li>`;
+  return `<ol class="rows">${body}</ol>`;
 }
 
-export function renderStats({ days, since, site, visits }: { days: Range; since: string; site: SiteNumbers; visits: Visits | null }): string {
-  const dates = Array.from({ length: days }, (_, i) => isoDay(Date.parse(since) + i * DAY));
-  const visitorTotal = visits ? dates.reduce((n, d) => n + (visits.daily[d]?.visits ?? 0), 0) : null;
-  const tabs = RANGES.map(
-    (r) => `<a href="${STATS_PATH}?days=${r}"${r === days ? ' aria-current="page"' : ""}>${r} days</a>`,
-  ).join("");
-  const tiles = site.totals
-    .map(
-      (t) => `<div class="tile"><span class="label">${t.label}</span><b>${fmt(t.total)}</b>${
-        t.recent === null ? "" : `<span class="recent${t.recent ? " up" : ""}">+${fmt(t.recent)}</span>`
-      }</div>`,
-    )
-    .join("");
-  const steps = [
-    { label: "Visits", value: visitorTotal },
-    { label: "New families", value: site.funnel.families },
-    { label: "Added an idea", value: site.funnel.withIdea },
-    { label: "Did a draw", value: site.funnel.withDraw },
-  ];
+const panel = (title: string, body: string, note = "") =>
+  `<section class="panel"><h2>${title}</h2>${body}${note ? `<p class="note">${note}</p>` : ""}</section>`;
+const sub = (title: string) => `<h3>${title}</h3>`;
+
+/** Small label and number pairs, two or three to a row. */
+function facts(items: { label: string; value: string; extra?: string; tone?: "good" | "ok" | "poor" }[]): string {
+  return `<dl class="facts">${items
+    .map((i) => `<div${i.tone ? ` class="${i.tone}"` : ""}><dt>${i.label}</dt><dd>${i.value}${i.extra ?? ""}</dd></div>`)
+    .join("")}</dl>`;
+}
+
+/** A step-by-step funnel: each bar against the first, each percentage against the step before. */
+function funnel(steps: { label: string; value: number | null }[]): string {
   const top = Math.max(1, ...steps.map((s) => s.value ?? 0));
-  const funnel = steps
+  return `<ol class="funnel">${steps
     .map((s, i) => {
-      const prev = i > 0 ? steps[i - 1].value : null;
-      const pct = s.value !== null && prev ? ` <small>${Math.round((s.value / prev) * 100)}%</small>` : "";
-      return `<li><span class="name">${s.label}</span><span class="track"><span class="fill" style="width:${(((s.value ?? 0) / top) * 100).toFixed(1)}%"></span></span><span class="num">${s.value === null ? "–" : fmt(s.value)}${pct}</span></li>`;
+      const before = i > 0 ? steps[i - 1].value : null;
+      const share = s.value !== null && before ? ` <small>${pct(s.value, before)}</small>` : "";
+      return `<li><span class="name">${s.label}</span><span class="track"><span class="fill" style="width:${(((s.value ?? 0) / top) * 100).toFixed(1)}%"></span></span><span class="num">${
+        s.value === null ? "–" : fmt(s.value)
+      }${share}</span></li>`;
     })
-    .join("");
+    .join("")}</ol>`;
+}
+
+/** Which part of the site a page belongs to. */
+export function section(path: string): string {
+  if (path === "/") return "Home";
+  if (path === "/destinations" || path === "/destinations/") return "Inspire";
+  const guide = path.match(/^\/destinations\/([^/]+)/);
+  if (guide) return HUBS.has(guide[1]) ? "Holiday ideas pages" : "Destination guides";
+  if (/^\/blog(\/|$)/.test(path)) return "Blog";
+  if (path.startsWith("/how-it-works")) return "How it works";
+  if (/^\/(signin|f\/|p\/)/.test(path)) return "Sign-in and family links";
+  return "Other pages";
+}
+
+const BOOK_KIND_NAMES: Record<string, string> = { flights: "✈️ Flights", hotels: "🏨 Hotels", things: "🎟️ Things to do" };
+const BOOK_PLACE_NAMES: Record<string, string> = {
+  draw_result: "Draw result",
+  idea_page: "Idea pages",
+  been_page: "Been trip pages",
+  trip_plan: "Trip plans",
+};
+
+/** Google's thresholds for a good, middling and poor page experience. */
+const tone = (v: number | null, good: number, poor: number) => (v === null ? undefined : v <= good ? "good" : v <= poor ? "ok" : "poor");
+const ms = (v: number | null) => (v === null ? "–" : v >= 1000 ? `${(v / 1000).toFixed(1)}s` : `${v}ms`);
+
+export interface StatsView {
+  days: Range;
+  since: string;
+  site: SiteNumbers;
+  visits: Visits | null;
+  worker: WorkerHealth | null;
+  search: Search | null;
+  pageDates: { path: string; published: string }[];
+}
+
+export function renderStats({ days, since, site, visits, worker, search, pageDates }: StatsView): string {
+  const dates = Array.from({ length: days }, (_, i) => isoDay(Date.parse(since) + i * DAY));
+  const visitTotal = visits ? dates.reduce((n, d) => n + (visits.daily[d]?.visits ?? 0), 0) : null;
+  const tabs = RANGES.map((r) => `<a href="${STATS_PATH}?days=${r}"${r === days ? ' aria-current="page"' : ""}>${r} days</a>`).join("");
+  const period = (p: Period) => `${fmt(p.current)}${change(p.current, p.prev)}`;
+
+  const tile = (label: string, value: string, extra = "") => `<div class="tile"><span class="label">${label}</span><b>${value}</b>${extra}</div>`;
+  const tiles = [
+    tile("Visits", visitTotal === null ? "–" : fmt(visitTotal), visits && visitTotal !== null ? change(visitTotal, visits.prevVisits) : ""),
+    ...site.totals.map((t) =>
+      tile(t.label, fmt(t.total), t.recent === null ? "" : `<span class="recent${t.recent ? " up" : ""}">+${fmt(t.recent)}</span>${change(t.recent, t.prev)}`),
+    ),
+    tile("Active families", fmt(site.active.period), `<span class="recent">${fmt(site.active.week)} in 7 days</span>`),
+    tile("Book it taps", fmt(site.book.total.current), change(site.book.total.current, site.book.total.prev)),
+  ].join("");
+
   const noVisits = `<p class="note">Page visits aren't connected yet. Set the CF_ANALYTICS_TOKEN and CF_ACCOUNT_ID secrets on the Worker.</p>`;
 
-  const header = `<nav class="seg" aria-label="Range">${tabs}</nav>`;
-  return pageShell(header, `
+  // Which parts of the site get looked at, and how the newest pages are doing.
+  let content = "";
+  if (visits) {
+    const bySection = new Map<string, number>();
+    for (const p of visits.pages) bySection.set(section(p.path), (bySection.get(section(p.path)) ?? 0) + p.views);
+    const views = new Map(visits.pages.map((p) => [p.path.replace(/\/$/, "") || "/", p.views]));
+    const fresh = pageDates
+      .map((p) => ({ name: p.path, value: views.get(p.path) ?? 0, note: `${p.published.slice(8)}/${p.published.slice(5, 7)}` }))
+      .sort((a, b) => b.value - a.value || b.note.localeCompare(a.note))
+      .slice(0, 12);
+    content = panel(
+      "What people look at",
+      `${sub("By part of the site")}${rows([...bySection].map(([name, value]) => ({ name, value })).sort((a, b) => b.value - a.value), "No page views yet")}
+       ${sub("Top pages")}${rows(visits.pages.slice(0, 10).map((p) => ({ name: p.path, value: p.views })), "No page views yet")}
+       ${sub("New pages (last 2 weeks)")}${rows(fresh, "No new pages in the last two weeks")}`,
+      "Page views. New pages show the day they went up and their views in this period.",
+    );
+  }
+
+  const searchPanel = search
+    ? panel(
+        "Google search",
+        `${facts([
+          { label: "Clicks", value: fmt(search.clicks), extra: change(search.clicks, search.prevClicks) },
+          { label: "Seen in results", value: fmt(search.impressions), extra: change(search.impressions, search.prevImpressions) },
+          { label: "Click rate", value: pct(search.clicks, search.impressions) },
+          { label: "Average position", value: search.position ? search.position.toFixed(1) : "–" },
+        ])}
+         ${sub("Searches")}${rows(search.queries.map((q) => ({ name: q.query, value: q.clicks, note: `${fmt(q.impressions)} seen` })), "No searches yet")}
+         ${sub("Pages")}${rows(search.pages.map((p) => ({ name: p.path, value: p.clicks, note: `${fmt(p.impressions)} seen` })), "No pages in search yet")}`,
+        "From Google Search Console, which runs two or three days behind. Numbers are clicks.",
+      )
+    : panel("Google search", "", "Not connected. Set the GSC_SERVICE_ACCOUNT and GSC_SITE secrets on the Worker to see Google clicks and searches here.");
+
+  const d = site.draws;
+  const vitals = visits?.vitals ?? [];
+  const deviceName = (v: string) => (v === "mobile" ? "Phones" : v === "desktop" ? "Computers" : v === "tablet" ? "Tablets" : v);
+
+  return pageShell(
+    `<nav class="seg" aria-label="Period">${tabs}</nav>`,
+    `
   <section class="tiles" aria-label="Totals">${tiles}</section>
-  <p class="hint">Totals leave out your own family. Green numbers are new in the last ${days} days.</p>
+  <p class="hint">Your own family is left out. Green numbers are new in the last ${days} days, and arrows compare with the ${days} days before${
+    days * 2 > CLOUDFLARE_DAYS ? " (Cloudflare can't look back far enough to compare visits)" : ""
+  }. Active families opened the app in this period.</p>
 
-  <section class="panel">
-    <h2>Every day</h2>
-    ${visits ? barChart(dates.map((d) => visits.daily[d]?.visits ?? 0), dates, "Visits", "accent") : noVisits}
-    ${barChart(dates.map((d) => site.signups[d] ?? 0), dates, "New families", "gold")}
-  </section>
+  ${panel(
+    "Every day",
+    `${visits ? barChart(dates.map((x) => visits.daily[x]?.visits ?? 0), dates, "Visits", "accent", visitTotal !== null ? change(visitTotal, visits.prevVisits) : "") : noVisits}
+    ${barChart(dates.map((x) => site.signups[x] ?? 0), dates, "New families", "gold", change(site.totals[0].recent ?? 0, site.totals[0].prev))}`,
+  )}
 
-  <section class="panel">
-    <h2>From visit to draw</h2>
-    <ol class="funnel">${funnel}</ol>
-    <p class="note">Families that joined in the last ${days} days, and how far they've got.</p>
-  </section>
+  ${panel(
+    "From visit to draw",
+    funnel([
+      { label: "Visits", value: visitTotal },
+      { label: "New families", value: site.funnel.families },
+      { label: "Finished welcome", value: site.funnel.welcomed },
+      { label: "Added an idea", value: site.funnel.withIdea },
+      { label: "Invited family", value: site.funnel.invited },
+      { label: "Did a draw", value: site.funnel.withDraw },
+    ]),
+    `Families that joined in the last ${days} days, and how far they've got. Percentages are against the step before.`,
+  )}
 
-  ${visits ? list("Top pages", visits.pages.map((p) => ({ name: p.path, value: p.views })), "No page views yet") : ""}
-  ${visits ? list("Came from", visits.referrers.map((r) => ({ name: r.host, value: r.visits })), "Nobody has followed a link here yet") : ""}
-  ${visits ? list("Countries", visits.countries.map((c) => ({ name: countryName(c.country), value: c.visits })), "No visits yet") : ""}
-  ${visits ? `<p class="hint">Visits come from Cloudflare Web Analytics, which samples busier ranges, so they're close estimates. In the signed-in app only the first page someone opens counts.</p>` : ""}
-`);
+  ${panel(
+    "Signing in",
+    facts([
+      { label: "Sign-in emails sent", value: period(site.signin.emails) },
+      { label: "Signed in", value: period(site.signin.done) },
+      { label: "Got through", value: pct(site.signin.done.current, site.signin.emails.current) },
+    ]),
+    "Organisers' email sign-ins, not counting yours. If far fewer sign in than get an email, emails may be landing in spam.",
+  )}
+
+  ${panel(
+    "Book it taps",
+    `${facts([{ label: "Taps", value: period(site.book.total) }])}
+     ${sub("What")}${rows(Object.entries(site.book.kinds).map(([k, value]) => ({ name: BOOK_KIND_NAMES[k] ?? k, value })), "")}
+     ${sub("Where")}${rows(Object.entries(site.book.places).map(([k, value]) => ({ name: BOOK_PLACE_NAMES[k] ?? k, value })), "")}`,
+    "Taps on the flight, hotel and things-to-do buttons. Bookings themselves show in Stay22 and Travelpayouts.",
+  )}
+
+  ${searchPanel}
+  ${content}
+
+  ${panel(
+    "Families",
+    `${sub("Family size")}${rows(site.familySizes.map((s) => ({ name: s.size, value: s.families })), "No families yet")}
+     ${sub("Draws")}${facts([
+       { label: "Draws done", value: fmt(d.total) },
+       { label: "With dates", value: pct(d.dates, d.total), extra: ` <small>${fmt(d.dates)}</small>` },
+       { label: "With filters", value: pct(d.filters, d.total), extra: ` <small>${fmt(d.filters)}</small>` },
+       { label: "With swipes", value: pct(d.swipes, d.total), extra: ` <small>${fmt(d.swipes)}</small>` },
+     ])}
+     ${sub("Trip plans")}${facts([
+       { label: "Winners planned", value: pct(site.plans.planned, site.plans.won), extra: ` <small>${fmt(site.plans.planned)} of ${fmt(site.plans.won)}</small>` },
+       { label: "Plan items booked", value: pct(site.plans.booked, site.plans.items), extra: ` <small>${fmt(site.plans.booked)} of ${fmt(site.plans.items)}</small>` },
+     ])}`,
+    "All time.",
+  )}
+
+  ${panel(
+    "Popular destinations",
+    `${sub("Places")}${rows(site.places.map((p) => ({ name: p.name, value: p.families, note: countryName(p.country) })), "No ideas yet")}
+     ${sub("Countries")}${rows(site.countries.map((c) => ({ name: countryName(c.country), value: c.families })), "No ideas yet")}`,
+    "How many families have each one in their ideas, all time.",
+  )}
+
+  ${
+    visits
+      ? panel(
+          "Visitors",
+          `${sub("Came from")}${rows(visits.referrers.map((r) => ({ name: r.host, value: r.visits })), "Nobody has followed a link here yet")}
+           ${sub("Countries")}${rows(visits.countries.map((c) => ({ name: countryName(c.country), value: c.visits })), "No visits yet")}
+           ${sub("Devices")}${rows(visits.devices.map((x) => ({ name: deviceName(x.device), value: x.visits })), "No visits yet")}`,
+          "Visits. Cloudflare samples busier periods, so these are close estimates.",
+        )
+      : ""
+  }
+
+  ${panel(
+    "Site health",
+    `${vitals
+      .map(
+        (v) => `${sub(`Page speed on ${deviceName(v.device).toLowerCase()}`)}${facts([
+          { label: "Main content shows", value: ms(v.lcp), tone: tone(v.lcp, 2500, 4000) },
+          { label: "Reacts to taps", value: ms(v.inp), tone: tone(v.inp, 200, 500) },
+          { label: "Layout shift", value: v.cls === null ? "–" : v.cls.toFixed(2), tone: tone(v.cls, 0.1, 0.25) },
+        ])}`,
+      )
+      .join("")}
+     ${sub("Errors")}${facts([
+       { label: "Requests", value: worker ? fmt(worker.requests) : "–" },
+       { label: "Crashes", value: worker ? fmt(worker.errors) : "–", tone: worker ? (worker.errors ? "poor" : "good") : undefined },
+       { label: "Server errors", value: fmt(site.serverErrors), tone: site.serverErrors ? "poor" : "good" },
+     ])}`,
+    "Page speed is what 3 in 4 real visitors got or better: green is good, amber needs work, red is poor. Crashes are requests the Worker failed on; server errors are ones the site caught and answered with an error.",
+  )}
+`,
+  );
 }
 
 /** The page around the stats or the sign-in form: the dark board header, then the content. */
@@ -315,7 +430,7 @@ main { max-width: 640px; margin: 0 auto; padding: 16px 16px calc(env(safe-area-i
 .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .tile { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); padding: 12px; display: grid; gap: 2px; min-width: 0; }
 .tile .label { font: 500 0.7rem/1.2 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
-.tile b { font-size: 1.75rem; line-height: 1.1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.tile b { font-size: 1.6rem; line-height: 1.1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
 .recent { justify-self: start; font: 500 0.75rem/1 var(--mono); padding: 3px 6px; border-radius: 6px; background: var(--surface-2); color: var(--muted); }
 .recent.up { background: var(--accent-soft); color: var(--accent); }
 .hint { margin: -4px 2px 0; font-size: 0.8rem; color: var(--muted); }
@@ -329,7 +444,7 @@ h2 { margin: 0; font: 500 0.75rem/1 var(--mono); text-transform: uppercase; lett
 .bars.gold rect { fill: var(--gold); }
 .axis { display: flex; justify-content: space-between; font: 500 0.7rem/1 var(--mono); color: var(--muted); }
 .funnel, .rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-.funnel li { display: grid; grid-template-columns: 7.5rem 1fr auto; align-items: center; gap: 10px; font-size: 0.9rem; }
+.funnel li { display: grid; grid-template-columns: 8.5rem 1fr auto; align-items: center; gap: 10px; font-size: 0.9rem; }
 .funnel .track { height: 10px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
 .funnel .fill { display: block; height: 100%; background: var(--accent); border-radius: 999px; }
 .num { font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; }
@@ -340,5 +455,22 @@ h2 { margin: 0; font: 500 0.75rem/1 var(--mono); text-transform: uppercase; lett
 .rows .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
 .rows .empty { color: var(--muted); }
 .note { margin: 0; font-size: 0.85rem; color: var(--muted); }
-@media (min-width: 560px) { .tiles { grid-template-columns: repeat(6, 1fr); } .tile b { font-size: 1.5rem; } }
+.tile .recent, .tile .chg { margin-right: 4px; }
+.tile .recent:not(.up) { background: none; padding: 3px 0; }
+.tile { align-content: start; }
+.chg { display: inline-block; font: 500 0.75rem/1 var(--mono); color: var(--muted); margin-left: 6px; white-space: nowrap; }
+.tile .chg { margin-left: 0; margin-top: 4px; }
+.chg.up { color: var(--accent); }
+.chg.down { color: var(--danger); }
+h3 { margin: 4px 0 -6px; font-size: 0.9rem; font-weight: 600; }
+.rows small { color: var(--muted); font-size: 0.75rem; margin-left: 4px; }
+.facts { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; }
+.facts div { background: var(--surface-2); border-radius: 10px; padding: 10px 12px; display: grid; gap: 4px; }
+.facts dt { font: 500 0.7rem/1.2 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.facts dd { margin: 0; font-size: 1.25rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.facts dd small { font-size: 0.75rem; font-weight: 500; color: var(--muted); }
+.facts .good dd { color: var(--accent); }
+.facts .ok dd { color: var(--gold); }
+.facts .poor dd { color: var(--danger); }
+.chart figcaption .chg { font-size: 0.75rem; }
 `;

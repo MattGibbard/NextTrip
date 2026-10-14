@@ -9,28 +9,64 @@ const env = { DB: sqliteD1(), DEV_LOGIN_LINKS: "1", STATS_EMAILS: "owner@example
 const ctx = {} as ExecutionContext;
 const ORIGIN = "https://somewhere.party";
 
+const googleCalls: { dimensions: string[]; startDate: string }[] = [];
+
 function stubCloudflare() {
-  vi.stubGlobal("fetch", async (url: string) => {
+  vi.stubGlobal("fetch", async (url: string, init?: RequestInit) => {
     if (url === "https://api.cloudflare.com/client/v4/graphql") {
       const today = new Date().toISOString().slice(0, 10);
+      if (String(init?.body).includes("workersInvocationsAdaptive")) {
+        return Response.json({ data: { viewer: { accounts: [{ worker: [{ sum: { requests: 1234, errors: 2 } }] }] } }, errors: null });
+      }
       return Response.json({
         data: {
           viewer: {
             accounts: [
               {
-                daily: [{ count: 9, sum: { visits: 7 }, dimensions: { date: today } }],
-                pages: [{ count: 9, dimensions: { requestPath: "/destinations/<lapland>" } }],
+                daily: [
+                  { count: 9, sum: { visits: 7 }, dimensions: { date: today } },
+                  { count: 4, sum: { visits: 4 }, dimensions: { date: "2000-01-01" } },
+                ],
+                pages: [
+                  { count: 9, dimensions: { requestPath: "/destinations/<lapland>" } },
+                  { count: 5, dimensions: { requestPath: "/blog/new-post" } },
+                ],
                 referrers: [
                   { sum: { visits: 3 }, dimensions: { refererHost: "www.facebook.com" } },
                   { sum: { visits: 0 }, dimensions: { refererHost: "somewhere.party" } },
                 ],
                 countries: [{ sum: { visits: 7 }, dimensions: { countryName: "GB" } }],
+                devices: [{ sum: { visits: 5 }, dimensions: { deviceType: "mobile" } }],
+                vitals: [
+                  {
+                    count: 5,
+                    dimensions: { deviceType: "mobile" },
+                    quantiles: { largestContentfulPaintP75: 3100000, interactionToNextPaintP75: 80000, cumulativeLayoutShiftP75: 0.02 },
+                  },
+                ],
               },
             ],
           },
         },
         errors: null,
       });
+    }
+    if (url === "https://oauth2.googleapis.com/token") {
+      const assertion = new URLSearchParams(String(init?.body)).get("assertion")!;
+      const claims = JSON.parse(Buffer.from(assertion.split(".")[1], "base64url").toString());
+      expect(claims.iss).toBe("stats@example.iam.gserviceaccount.com");
+      return Response.json({ access_token: "google-token", expires_in: 3600 });
+    }
+    if (url.startsWith("https://www.googleapis.com/webmasters/v3/sites/sc-domain%3Asomewhere.party/")) {
+      expect((init?.headers as Record<string, string>).Authorization).toBe("Bearer google-token");
+      const ask = JSON.parse(String(init?.body)) as { dimensions: string[]; startDate: string };
+      googleCalls.push(ask);
+      const rows = !ask.dimensions.length
+        ? [{ clicks: googleCalls.length === 1 ? 12 : 6, impressions: 340, position: 8.4 }]
+        : ask.dimensions[0] === "query"
+          ? [{ keys: ["decide where to go on holiday"], clicks: 5, impressions: 90, position: 6 }]
+          : [{ keys: ["https://somewhere.party/destinations/levi"], clicks: 4, impressions: 50, position: 3 }];
+      return Response.json({ rows });
     }
     throw new Error(`Unexpected fetch ${url}`);
   });
@@ -71,7 +107,8 @@ async function api(cookie: string | null, method: string, path: string, json?: u
     env,
     ctx,
   );
-  return { body: (await res.json()) as Record<string, string>, setCookie: res.headers.get("Set-Cookie") };
+  const text = await res.text();
+  return { status: res.status, body: (text ? JSON.parse(text) : {}) as Record<string, string>, setCookie: res.headers.get("Set-Cookie") };
 }
 
 beforeAll(async () => {
@@ -80,7 +117,13 @@ beforeAll(async () => {
   const token = new URL(body.dev_link).searchParams.get("token");
   const cookie = (await api(null, "POST", "/auth/verify", { token })).setCookie!.split(";")[0];
   await api(cookie, "POST", "/people", { name: "Sam" });
-  await api(cookie, "POST", "/ideas", { title: "Lapland", places: [] });
+  await api(cookie, "POST", "/ideas", { title: "Lapland", places: [{ name: "Rovaniemi", country: "Finland", country_code: "FI", lat: 66.5, lon: 25.7 }] });
+  // Opening the app marks the family as active.
+  await api(cookie, "GET", "/bootstrap");
+  // A tap on a Book it button, and two that aren't real buttons.
+  for (const tap of [{ kind: "hotels", place: "idea_page" }, { kind: "cars", place: "idea_page" }, { kind: "hotels", place: "nowhere" }]) {
+    expect((await api(null, "POST", "/clicks", tap)).status).toBe(204);
+  }
   await env.DB.prepare("INSERT INTO ideas (title, family_id) VALUES ('Owner idea', 1)").run();
 });
 
@@ -165,6 +208,39 @@ it("shows the numbers, leaving out family 1", async () => {
   expect(html).toContain("facebook.com");
   expect(html).not.toContain(">somewhere.party<");
   expect(html).toContain("United Kingdom");
+  // Visits against the period before, and which part of the site they looked at.
+  expect(html).toMatch(/Visits<\/span><b>7<\/b><span class="chg up">▲ 75%/);
+  expect(html).toContain("Destination guides");
+  expect(html).toContain("Phones");
+  expect(html).toMatch(/Main content shows<\/dt><dd>3.1s/);
+  expect(html).toMatch(/Crashes<\/dt><dd>2/);
+  // The family that joined: welcome not finished, one idea, opened the app.
+  expect(html).toMatch(/Added an idea<\/span>.*?<span class="num">1/);
+  expect(html).toMatch(/Active families<\/span><b>1<\/b>/);
+  expect(html).toMatch(/Sign-in emails sent<\/dt><dd>1/);
+  expect(html).toMatch(/Signed in<\/dt><dd>1/);
+  expect(html).toMatch(/Book it taps<\/span><b>1<\/b>/);
+  expect(html).toContain("Rovaniemi");
+  expect(html).toContain("Finland");
+  expect(html).toContain("Google search");
+  expect(html).toContain("Not connected");
+});
+
+it("shows Google search numbers once Search Console is connected", async () => {
+  stubCloudflare();
+  const keys = (await crypto.subtle.generateKey(
+    { name: "RSASSA-PKCS1-v1_5", modulusLength: 2048, publicExponent: new Uint8Array([1, 0, 1]), hash: "SHA-256" },
+    true,
+    ["sign", "verify"],
+  )) as CryptoKeyPair;
+  const pkcs8 = Buffer.from(await crypto.subtle.exportKey("pkcs8", keys.privateKey)).toString("base64");
+  const account = { client_email: "stats@example.iam.gserviceaccount.com", private_key: `-----BEGIN PRIVATE KEY-----\n${pkcs8}\n-----END PRIVATE KEY-----\n` };
+  const e = { ...env, GSC_SERVICE_ACCOUNT: JSON.stringify(account), GSC_SITE: "sc-domain:somewhere.party" } as Env;
+  const html = await (await stats(await signIn("owner@example.com"), e)).text();
+  expect(html).toMatch(/Clicks<\/dt><dd>12<span class="chg up">▲ 100%/);
+  expect(html).toContain("decide where to go on holiday");
+  expect(html).toContain("/destinations/levi");
+  expect(html).toMatch(/Click rate<\/dt><dd>4%/);
 });
 
 it("still shows the site's numbers when page visits aren't connected", async () => {
@@ -172,6 +248,16 @@ it("still shows the site's numbers when page visits aren't connected", async () 
   const html = await (await stats(await signIn("owner@example.com"))).text();
   expect(html).toContain("Page visits aren't connected yet");
   expect(html).toContain("New families");
+});
+
+it("sorts pages into parts of the site", async () => {
+  const { section } = await import("../worker/stats");
+  expect(section("/")).toBe("Home");
+  expect(section("/destinations")).toBe("Inspire");
+  expect(section("/destinations/levi")).toBe("Destination guides");
+  expect(section("/destinations/beach-holidays")).toBe("Holiday ideas pages");
+  expect(section("/blog/tag/europe")).toBe("Blog");
+  expect(section("/f/abc")).toBe("Sign-in and family links");
 });
 
 it("dates people who were already there to the day before join dates began", async () => {

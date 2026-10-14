@@ -18,15 +18,17 @@ import { roundRoutes } from "./rounds";
 import { homeEndRoutes } from "./homeEnds";
 import { searchRoutes } from "./search";
 import { planRoutes } from "./plans";
+import { bump, clickRoutes } from "./counters";
 import type { Bootstrap, FamilyPart } from "../shared/types";
 
 const app = new Hono<App>().basePath("/api");
 
-app.onError((err, c) => {
+app.onError(async (err, c) => {
   if (err instanceof HttpError) return c.json({ error: err.message }, err.status);
   // Hono's own refusals, like the cross-site form check below.
   if (err instanceof HTTPException) return err.getResponse();
   console.error(err);
+  if (c.env.DB) await bump(c.env.DB, "error_500");
   return c.json({ error: "Something went wrong" }, 500);
 });
 
@@ -51,12 +53,19 @@ app.use("*", async (c, next) => {
 app.get("/photos/:key", (c) => servePhoto(c.env.DB, c.req.param("key")));
 
 authRoutes(app);
+clickRoutes(app);
 
 // What the signed-in app needs to open, in one request: who this browser is and the family's things.
 // The app also uses it to refresh, with ?only=rounds,ideas to fetch just the lists that changed.
 app.get("/bootstrap", async (c) => {
   const session = await readSession(c);
   if (!session) return c.json({ session: { signed_in: false }, data: null } satisfies Bootstrap);
+  // For "active families" on the stats page. At most one write an hour per family.
+  await c.env.DB.prepare(
+    "UPDATE families SET last_seen_at = datetime('now') WHERE id = ? AND (last_seen_at IS NULL OR last_seen_at < datetime('now', '-1 hour'))",
+  )
+    .bind(session.family)
+    .run();
   const asked = (c.req.query("only") ?? "").split(",").filter((p): p is FamilyPart => (FAMILY_PARTS as readonly string[]).includes(p));
   const data = await loadFamily(c.env.DB, session.family, session.person, asked.length ? asked : FAMILY_PARTS);
   return c.json({ session: sessionJson(session), data } satisfies Bootstrap);

@@ -4,6 +4,7 @@ import { normaliseEmail, randomToken, sha256 } from "../shared/auth";
 import { HttpError } from "./env";
 import { signInEmail } from "./signInEmail";
 import { PLAN_TABLES } from "./plans";
+import { bump } from "./counters";
 import type { App, Ctx, Env, Role } from "./env";
 import type { Session } from "../shared/types";
 
@@ -157,6 +158,7 @@ async function signInOrganiser(c: Ctx, emailHash: string) {
     .bind(family)
     .first<{ id: number }>();
   await startSession(c, family, "owner", me?.id ?? null);
+  if (family !== 1) await bump(c.env.DB, "signin_done");
 }
 
 /**
@@ -225,6 +227,8 @@ export function authRoutes(app: Hono<App>) {
     ]);
     const link = `${new URL(c.req.url).origin}/signin?token=${token}`;
     if (c.env.RESEND_API_KEY) await sendSignInEmail(c.env, email, link, code);
+    // Counted for the stats page, leaving out the owner's own sign-ins.
+    if (emailHash !== (await sha256(normaliseEmail(c.env.OWNER_EMAIL) ?? ""))) await bump(db, "signin_email");
     return c.json(dev && !c.env.RESEND_API_KEY ? { ok: true, dev_link: link, dev_code: code } : { ok: true });
   });
 

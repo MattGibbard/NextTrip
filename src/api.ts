@@ -46,6 +46,10 @@ async function request<T>(method: string, path: string, body?: unknown): Promise
 }
 
 export const api = {
+  /** Counts a tap on a Book it button for the stats page. Sent with keepalive so it survives the new tab opening. */
+  bookClick: (kind: "flights" | "hotels" | "things", place: string) => {
+    fetch("/api/clicks", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ kind, place }), keepalive: true }).catch(() => {});
+  },
   session: () => request<Session>("GET", "/auth/me"),
   /** Who this browser is and the family's things in one go, or only the lists named. */
   bootstrap: (only?: FamilyPart[]) => request<Bootstrap>("GET", `/bootstrap${only?.length ? `?only=${only.join(",")}` : ""}`),

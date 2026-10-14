@@ -1,11 +1,12 @@
 import { Hono } from "hono";
 import { csrf } from "hono/csrf";
 import { HTTPException } from "hono/http-exception";
-import { migrate } from "./migrate";
+import { ensureSchema } from "./migrate";
 import { authRoutes, familyRoutes, readSession, sessionJson } from "./auth";
 import { HttpError } from "./env";
 import type { App, Env } from "./env";
 import { servePage } from "./pages";
+import { STATS_PATH, serveStats } from "./stats";
 import { cmsRoutes } from "./cms";
 import { servePhoto } from "./photos";
 import { PHOTO_PATH } from "../shared/photos";
@@ -36,19 +37,13 @@ app.use("*", csrf());
 // The content editor's GitHub sign-in needs no database, so it comes before the database check.
 cmsRoutes(app);
 
-let schemaReady: Promise<void> | null = null;
-
 // Bring the database up to date on first use, once per Worker instance, so the
 // site works even if the deploy never ran `wrangler d1 migrations apply`.
 app.use("*", async (c, next) => {
   if (!c.env.DB) {
     return c.json({ error: "The database isn't connected. Check the D1 binding named DB on the Worker." }, 500);
   }
-  schemaReady ??= migrate(c.env.DB).catch((err) => {
-    schemaReady = null;
-    throw err;
-  });
-  await schemaReady;
+  await ensureSchema(c.env.DB);
   await next();
 });
 
@@ -118,6 +113,7 @@ export const SECURITY_HEADERS: Record<string, string> = {
 async function route(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
   const path = new URL(req.url).pathname;
   if (req.method === "GET" && path.startsWith(PHOTO_PATH)) return cachedPhoto(req, env, ctx);
+  if (path === STATS_PATH || path === `${STATS_PATH}/`) return serveStats(req, env);
   return path.startsWith("/api/") ? app.fetch(req, env, ctx) : servePage(req, env);
 }
 

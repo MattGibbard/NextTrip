@@ -46,7 +46,7 @@ const vite = await createServer({
 });
 
 try {
-  const { render, headTags, pages } = await vite.ssrLoadModule("/src/prerender.tsx");
+  const { render, headTags, pages, feed } = await vite.ssrLoadModule("/src/prerender.tsx");
   // The build's own title and description give way to each page's.
   const base = shell.replace(/\s*<title>[^<]*<\/title>/, "").replace(/\s*<meta name="description"[^>]*>/, "");
   if (base === shell || !base.includes('<div id="root"></div>')) throw new Error("index.html doesn't look as expected");
@@ -94,11 +94,15 @@ try {
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`,
   );
 
+  // The blog's RSS feed, for feed readers and search engines.
+  await mkdir(new URL("blog/", OUT), { recursive: true });
+  await writeFile(new URL("blog/feed.xml", OUT), feed());
+
   await writeFile(
     new URL("shell.html", OUT),
     shell.replace("</head>", `  <meta name="robots" content="noindex" />\n  </head>`),
   );
-  console.log(`Prerendered ${list.length} pages, the sitemap and the app shell.`);
+  console.log(`Prerendered ${list.length} pages, the sitemap, the blog feed and the app shell.`);
 } finally {
   await vite.close();
 }

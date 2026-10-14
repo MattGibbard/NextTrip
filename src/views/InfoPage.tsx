@@ -182,7 +182,12 @@ export function Inline({ text }: { text: string }) {
   while ((m = re.exec(text))) {
     if (m.index > last) out.push(text.slice(last, m.index));
     if (m[1] !== undefined) {
-      out.push(<strong key={m.index}>{m[1]}</strong>);
+      // Bold words may hold a link, e.g. **Choose [Lisbon](/destinations/lisbon)**.
+      out.push(
+        <strong key={m.index}>
+          <Inline text={m[1]} />
+        </strong>,
+      );
     } else {
       const href = safeUrl(m[3]);
       const external = /^https:/i.test(href);

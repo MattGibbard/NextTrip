@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { AUTHORS, POSTS, blogJsonLd, findPost, loadPost, postDate, postMeta, postTitle, postsAboutGuide, postsAboutHub, postsTagged, readPost, relatedPosts, tagMeta, usedTags } from "../src/blog";
+import { AUTHORS, PAGE_SIZE, POSTS, findPost, listing, listingMeta, listingPath, listings, loadPost, postDate, postMeta, postTitle, postsAboutGuide, postsAboutHub, postsTagged, readPost, relatedPosts, usedTags } from "../src/blog";
 import { BLOG_TAGS, TAG_INDEX_MIN, isBlogTag } from "../src/blogTags";
 import { feedXml } from "../src/feed";
 import { publicPage } from "../shared/seo";
@@ -67,7 +67,7 @@ describe("the blog", () => {
     expect(crumbs.itemListElement.map((i: { name: string }) => i.name)).toEqual(["Home", "Blog", p.title]);
     // A date from before the post was published (an older file history) never goes backwards.
     expect(postMeta(p, "2000-01-01").updated).toBe(p.date);
-    expect((blogJsonLd()[0] as Record<string, any>).blogPost).toHaveLength(POSTS.length);
+    expect((listingMeta(listing("blog")!).jsonLd![0] as Record<string, any>).blogPost).toHaveLength(Math.min(PAGE_SIZE, POSTS.length));
   });
 
   it("writes dates out in full", () => {
@@ -90,7 +90,7 @@ describe("tags", () => {
     for (const { tag, count } of used) {
       expect(publicPage(`/blog/tag/${tag}`)).toBe(`tag:${tag}`);
       expect(postsTagged(tag)).toHaveLength(count);
-      const meta = tagMeta(tag);
+      const meta = listingMeta(listing(`tag:${tag}`)!);
       expect(meta.index).toBe(count >= TAG_INDEX_MIN);
       expect(meta.path).toBe(`/blog/tag/${tag}`);
     }
@@ -144,5 +144,46 @@ describe("the feed", () => {
     expect(xml).toContain(`<link>https://somewhere.party/blog/${POSTS[0].slug}</link>`);
     expect(xml.match(/<item>/g)).toHaveLength(Math.min(50, POSTS.length));
     expect(publicPage("/blog/feed.xml")).toBeNull();
+  });
+});
+
+describe("pages of posts", () => {
+  it("splits the blog into pages with their own addresses", () => {
+    const pages = Math.ceil(POSTS.length / PAGE_SIZE);
+    const blog = listings().filter((l) => !l.tag);
+    expect(blog).toHaveLength(pages);
+    expect(blog.flatMap((l) => l.posts)).toEqual(POSTS);
+    expect(blog.map((l) => l.id)).toEqual(["blog", ...Array.from({ length: pages - 1 }, (_, i) => `blog:${i + 2}`)]);
+    for (const l of blog) {
+      expect(l.posts.length).toBeLessThanOrEqual(PAGE_SIZE);
+      expect(publicPage(listingPath(null, l.page))).toBe(l.id);
+      expect(listingMeta(l).index).toBe(true);
+    }
+  });
+
+  it("does the same for each tag", () => {
+    for (const { tag, count } of usedTags()) {
+      const pages = listings().filter((l) => l.tag === tag);
+      expect(pages).toHaveLength(Math.ceil(count / PAGE_SIZE));
+      expect(pages.flatMap((l) => l.posts)).toEqual(postsTagged(tag));
+      for (const l of pages) expect(publicPage(listingPath(tag, l.page))).toBe(l.id);
+    }
+    expect(publicPage("/blog/tag/europe/page/2")).toBe("tag:europe:2");
+    expect(listingPath("europe", 3)).toBe("/blog/tag/europe/page/3");
+  });
+
+  it("has no page 1 address, nothing past the last page and nothing for unused tags", () => {
+    expect(publicPage("/blog/page/2")).toBe("blog:2");
+    expect(listing("blog:1")).toBeNull();
+    expect(listing("tag:europe:1")).toBeNull();
+    expect(listing(`blog:${Math.ceil(POSTS.length / PAGE_SIZE) + 1}`)).toBeNull();
+    expect(listing("tag:not-a-tag")).toBeNull();
+    const unused = (Object.keys(BLOG_TAGS) as (keyof typeof BLOG_TAGS)[]).find((t) => postsTagged(t).length === 0);
+    if (unused) expect(listing(`tag:${unused}`)).toBeNull();
+  });
+
+  it("names later pages in their titles", () => {
+    expect(listingMeta({ tag: null, page: 2, pages: 3, posts: [], total: 30 }).title).toContain("page 2");
+    expect(listingMeta({ tag: "europe", page: 2, pages: 2, posts: [], total: 20 }).title).toContain("page 2");
   });
 });

@@ -29,9 +29,10 @@ export function infoPage(pathname: string): InfoPage | null {
 }
 /**
  * Every prerendered page: the fixed ones plus one per destination guide, as "destination:new-york", one
- * per blog post, as "post:my-post", and one per blog tag in use, as "tag:city-breaks".
+ * per blog post, as "post:my-post", and one per blog tag in use, as "tag:city-breaks". The blog's later
+ * pages are "blog:2" and so on, and a tag's are "tag:city-breaks:2".
  */
-export type PublicPage = FixedPage | `destination:${string}` | `post:${string}` | `tag:${string}`;
+export type PublicPage = FixedPage | `destination:${string}` | `post:${string}` | `tag:${string}` | `blog:${number}`;
 
 /** The blog's RSS feed, written by scripts/prerender.mjs. */
 export const FEED_PATH = "/blog/feed.xml";
@@ -148,10 +149,12 @@ export function publicPage(pathname: string): PublicPage | null {
   if (info) return info;
   const d = pathname.match(/^\/destinations\/([a-z0-9-]+)\/?$/);
   if (d) return `destination:${d[1]}`;
+  const bp = pathname.match(/^\/blog\/page\/([1-9]\d*)\/?$/);
+  if (bp) return `blog:${Number(bp[1])}`;
   const p = pathname.match(/^\/blog\/([a-z0-9-]+)\/?$/);
   if (p) return `post:${p[1]}`;
-  const t = pathname.match(/^\/blog\/tag\/([a-z0-9-]+)\/?$/);
-  return t ? `tag:${t[1]}` : null;
+  const t = pathname.match(/^\/blog\/tag\/([a-z0-9-]+)(?:\/page\/([1-9]\d*))?\/?$/);
+  return t ? (t[2] ? `tag:${t[1]}:${Number(t[2])}` : `tag:${t[1]}`) : null;
 }
 
 /** The address of a blog post. */

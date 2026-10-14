@@ -3,12 +3,12 @@ import { postDate } from "../blog";
 import type { PostCard } from "../blog";
 import { photoProps } from "../photos";
 
-/** A post's card: its photo, date and author, title and introduction. The whole card is the link. */
-export function PostLink({ post, heading: H = "h2" }: { post: PostCard; heading?: "h2" | "h3" }) {
+/** A post's card: its photo, date and author, title and introduction. The whole card is the link. `eager` for cards near the top of the page, whose photos are seen straight away. */
+export function PostLink({ post, heading: H = "h2", eager = false }: { post: PostCard; heading?: "h2" | "h3"; eager?: boolean }) {
   return (
     <article className="bl-card">
       {post.cover && (
-        <img className="bl-card-photo" {...photoProps(post.cover.image, post.cover.size, "(max-width: 720px) 100vw, 400px")} alt="" loading="lazy" decoding="async" width={post.cover.size?.[0]} height={post.cover.size?.[1]} />
+        <img className="bl-card-photo" {...photoProps(post.cover.image, post.cover.size, "(max-width: 720px) 100vw, 400px")} alt="" loading={eager ? "eager" : "lazy"} decoding="async" width={post.cover.size?.[0]} height={post.cover.size?.[1]} />
       )}
       {post.date && (
         <p className="bl-date">

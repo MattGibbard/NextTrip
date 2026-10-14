@@ -695,6 +695,51 @@ a.dg-similar-card:hover {
   border-color: var(--accent);
 }
 
+/* On phones the board goes and the filters fold to a summary row, so the cards come sooner. */
+.dx-fold,
+.dx-filters > .dx-filters-done {
+  display: none;
+}
+@media (max-width: 759px) {
+  .dx-board {
+    display: none;
+  }
+  .dx-hero {
+    padding-bottom: 20px;
+  }
+  .dx-fold {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 12px 12px 12px 20px;
+  }
+  .dx-fold .muted {
+    margin-top: 2px;
+  }
+  .dx-filter-wrap.open .dx-fold,
+  .dx-filter-wrap:not(.open) .dx-filters {
+    display: none;
+  }
+  .dx-filters > .dx-filters-done {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+}
+.btn.dx-fold-toggle {
+  flex: none;
+  color: var(--accent);
+  font-size: var(--text-7);
+  font-weight: 600;
+}
+
 .dx-section {
   padding-top: 40px;
   padding-bottom: 16px;

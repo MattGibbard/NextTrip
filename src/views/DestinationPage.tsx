@@ -454,11 +454,18 @@ function shuffled<T>(items: readonly T[]): T[] {
 /** How many guide cards show at first, and how many more each "Show more guides" adds. Even rows of 2, 3 or 4. */
 const BATCH = 24;
 
+const Chevron = ({ up }: { up?: boolean }) => (
+  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+    <path d={up ? "M6 15l6-6 6 6" : "M6 9l6 6 6-6"} />
+  </svg>
+);
+
 /**
- * Every guide, for browsing: a departures board of what's in season, filters for the month and kind
- * of holiday, a card per guide and the countries they're in. The month is the visitor's own, set once
- * the page is up so the prerendered page doesn't depend on when the site was built. The order is
- * shuffled then too, so each visit leads with different places while the prerendered page stays A to Z.
+ * Every guide, for browsing: a departures board of what's in season (wider screens only), filters for
+ * the month and kind of holiday (folded to a summary on phones), a card per guide and the countries
+ * they're in. The month is the visitor's own, set once the page is up so the prerendered page doesn't
+ * depend on when the site was built. The order is shuffled then too, so each visit leads with
+ * different places while the prerendered page stays A to Z.
  * Cards come in batches, and changing the month, a filter or the search starts again from the first.
  */
 export function DestinationsIndex({ family }: { family?: Family }) {
@@ -469,6 +476,15 @@ export function DestinationsIndex({ family }: { family?: Family }) {
   const [country, setCountry] = useState<string | null>(null);
   const [search, setSearch] = useState("");
   const [order, setOrder] = useState(DESTINATIONS);
+  // On phones the filters fold away to a one-line summary; wider screens always show them.
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const changeRef = useRef<HTMLButtonElement>(null);
+  const doneRef = useRef<HTMLButtonElement>(null);
+  // Change and Done swap places, so focus follows to the one that takes its place.
+  const showFilters = (o: boolean) => {
+    setFiltersOpen(o);
+    requestAnimationFrame(() => (o ? doneRef : changeRef).current?.focus());
+  };
 
   useEffect(() => {
     setMonth(new Date().getMonth());
@@ -527,6 +543,7 @@ export function DestinationsIndex({ family }: { family?: Family }) {
 
   const onList = (d: DestinationCard) => ideas?.find((i) => i.status === "active" && i.title.trim().toLowerCase() === d.name.toLowerCase());
   const filtered = !!(type || country || words);
+  const pickedType = type ? holidayType(type) : undefined;
 
   return (
     <div className={`lp dg dx ${signedIn ? "dg-app" : ""}`}>
@@ -573,8 +590,20 @@ export function DestinationsIndex({ family }: { family?: Family }) {
           )}
         </section>
 
-        <section className="lp-wrap" aria-label="Filter destinations">
-          <div className="dx-filters">
+        <section className={`lp-wrap dx-filter-wrap ${filtersOpen ? "open" : ""}`} aria-label="Filter destinations">
+          <div className="dx-fold">
+            <div>
+              <p className="dx-filter-label">Filters</p>
+              <p className="muted small">
+                {month === null ? "Any month" : MONTH_NAMES[month]} · {pickedType ? `${pickedType.icon} ${pickedType.label}` : "All types"}
+              </p>
+            </div>
+            <button ref={changeRef} type="button" className="btn ghost dx-fold-toggle" aria-expanded="false" aria-controls="dx-filters" onClick={() => showFilters(true)}>
+              Change
+              <Chevron />
+            </button>
+          </div>
+          <div className="dx-filters" id="dx-filters">
             <div>
               <p className="dx-filter-label">When can you go?</p>
               <div role="group" aria-label="Month" className="dx-chips">
@@ -600,6 +629,12 @@ export function DestinationsIndex({ family }: { family?: Family }) {
                 </div>
               </div>
             )}
+            <div className="dx-filters-done">
+              <button ref={doneRef} type="button" className="btn ghost dx-fold-toggle" aria-expanded="true" aria-controls="dx-filters" onClick={() => showFilters(false)}>
+                Done
+                <Chevron up />
+              </button>
+            </div>
           </div>
         </section>
 

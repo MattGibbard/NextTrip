@@ -1,5 +1,5 @@
 import { normaliseEmail, randomToken, sha256 } from "../shared/auth";
-import { randomCode } from "./auth";
+import { passedTurnstile, randomCode, turnstileKey } from "./auth";
 import type { Env } from "./env";
 import { STATS_PATH, esc, htmlPage, pageShell } from "./stats";
 
@@ -48,7 +48,8 @@ export async function statsSignIn(req: Request, env: Env): Promise<true | Respon
     signedIn = !!row && allowed.has(row.email_hash);
   }
 
-  if (req.method === "GET" || req.method === "HEAD") return signedIn ? true : htmlPage(emailForm());
+  const bot = turnstileKey(env);
+  if (req.method === "GET" || req.method === "HEAD") return signedIn ? true : htmlPage(emailForm(bot));
   if (req.method !== "POST") return new Response("Method not allowed", { status: 405 });
   // Forms posted from another site don't count, so nobody can sign this browser in or out from elsewhere.
   if (req.headers.get("Origin") !== new URL(req.url).origin) return new Response("Forbidden", { status: 403 });
@@ -62,18 +63,22 @@ export async function statsSignIn(req: Request, env: Env): Promise<true | Respon
   if (signedIn) return backToStats();
 
   const email = normaliseEmail(form?.get("email"));
-  if (!email) return htmlPage(emailForm("That doesn't look like an email address."), { status: 400 });
+  if (!email) return htmlPage(emailForm(bot, "That doesn't look like an email address."), { status: 400 });
   const emailHash = await sha256(email);
   const dev = env.DEV_LOGIN_LINKS === "1" && !env.RESEND_API_KEY;
 
   if (action === "send") {
-    if (!env.RESEND_API_KEY && !dev) return htmlPage(emailForm("Sign-in emails aren't set up yet."), { status: 503 });
-    if (!allowed.has(emailHash)) return htmlPage(codeForm(email));
+    if (!env.RESEND_API_KEY && !dev) return htmlPage(emailForm(bot, "Sign-in emails aren't set up yet."), { status: 503 });
+    // The same invisible bot check as the site's own sign-in form, when its keys are set.
+    if (bot && !(await passedTurnstile(env, form?.get("cf-turnstile-response"), req.headers.get("CF-Connecting-IP")))) {
+      return htmlPage(emailForm(bot, "We couldn't check you're not a bot. Try again."), { status: 403 });
+    }
+    if (!allowed.has(emailHash)) return htmlPage(codeForm(bot, email));
     const recent = await db.prepare("SELECT COUNT(*) AS n FROM stats_codes WHERE email_hash = ? AND created_at > datetime('now', '-15 minutes')")
       .bind(emailHash)
       .first<{ n: number }>();
     if ((recent?.n ?? 0) >= CODES_PER_WINDOW) {
-      return htmlPage(codeForm(email, "We've sent a few codes already. Check your inbox, or try again in 15 minutes."), { status: 429 });
+      return htmlPage(codeForm(bot, email, "We've sent a few codes already. Check your inbox, or try again in 15 minutes."), { status: 429 });
     }
     const code = randomCode();
     await db.batch([
@@ -81,9 +86,9 @@ export async function statsSignIn(req: Request, env: Env): Promise<true | Respon
       db.prepare(`INSERT INTO stats_codes (email_hash, code_hash, expires_at) VALUES (?, ?, datetime('now', '+${CODE_MINUTES} minutes'))`)
         .bind(emailHash, await codeHash(emailHash, code)),
     ]);
-    if (dev) return htmlPage(codeForm(email, undefined, code));
-    if (!(await sendCode(env, email, code))) return htmlPage(emailForm("We couldn't send the email just now. Try again in a minute."), { status: 503 });
-    return htmlPage(codeForm(email));
+    if (dev) return htmlPage(codeForm(bot, email, undefined, code));
+    if (!(await sendCode(env, email, code))) return htmlPage(emailForm(bot, "We couldn't send the email just now. Try again in a minute."), { status: 503 });
+    return htmlPage(codeForm(bot, email));
   }
 
   if (action === "code") {
@@ -97,7 +102,7 @@ export async function statsSignIn(req: Request, env: Env): Promise<true | Respon
     if (!hit) {
       // A wrong guess counts against every live code for this address.
       await db.prepare(`UPDATE stats_codes SET tries = tries + 1 WHERE ${live}`).bind(emailHash).run();
-      return htmlPage(codeForm(email, "That code didn't work. Check the latest email, or send a new one."), { status: 400 });
+      return htmlPage(codeForm(bot, email, "That code didn't work. Check the latest email, or send a new one."), { status: 400 });
     }
     const session = randomToken(32);
     await db.batch([
@@ -108,7 +113,7 @@ export async function statsSignIn(req: Request, env: Env): Promise<true | Respon
     return backToStats(sessionCookie(session, SESSION_DAYS));
   }
 
-  return htmlPage(emailForm(), { status: 400 });
+  return htmlPage(emailForm(bot), { status: 400 });
 }
 
 async function sendCode(env: Env, to: string, code: string): Promise<boolean> {
@@ -128,22 +133,33 @@ async function sendCode(env: Env, to: string, code: string): Promise<boolean> {
   return !!res?.ok;
 }
 
+/**
+ * The Turnstile widget, rendered by Cloudflare's script into the form. Its answer arrives as the
+ * cf-turnstile-response field. With the key set to Invisible nothing shows unless Cloudflare wants a tick.
+ */
+const botCheck = (siteKey: string | null) =>
+  siteKey
+    ? `<div class="cf-turnstile" data-sitekey="${esc(siteKey)}" data-action="stats"></div>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>`
+    : "";
+
 const error = (message?: string) => (message ? `<p class="error" role="alert">${esc(message)}</p>` : "");
 
-function emailForm(message?: string): string {
+function emailForm(siteKey: string | null, message?: string): string {
   return pageShell(
     "",
     `<form class="panel signin" method="post" action="${STATS_PATH}">
   <label for="email">Your email</label>
   <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required autofocus>
   ${error(message)}
+  ${botCheck(siteKey)}
   <button name="action" value="send">Email me a code</button>
 </form>`,
     false,
   );
 }
 
-function codeForm(email: string, message?: string, devCode?: string): string {
+function codeForm(siteKey: string | null, email: string, message?: string, devCode?: string): string {
   return pageShell(
     "",
     `<form class="panel signin" method="post" action="${STATS_PATH}">
@@ -152,6 +168,7 @@ function codeForm(email: string, message?: string, devCode?: string): string {
   <label for="code">Code</label>
   <input id="code" class="code" name="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9 ]*" maxlength="7" required autofocus>
   ${error(message)}
+  ${botCheck(siteKey)}
   <button name="action" value="code">Sign in</button>
   <button class="again" name="action" value="send" formnovalidate>Send a new code</button>
 </form>`,

@@ -28,11 +28,44 @@ const CARD_FIELDS = [
 const HUB_CARD_FIELDS = ["published", "kind", "holiday_type", "country", "month", "guides", "icon", "name", "title", "seo_title"];
 
 /** The fields links to a blog post need. */
-const POST_CARD_FIELDS = ["published", "title", "date", "intro", "seo_title"];
+const POST_CARD_FIELDS = ["published", "title", "date", "updated", "intro", "seo_title", "author", "tags"];
 
-/** A blog post's card fields. */
-export function postCard(raw) {
-  return Object.fromEntries(POST_CARD_FIELDS.filter((k) => k in raw).map((k) => [k, raw[k]]));
+const GUIDES = new URL("../content/destinations/", import.meta.url);
+const HUBS = new URL("../content/hubs/", import.meta.url);
+const IMAGE_SIZES = new URL("../content/destination-images.json", import.meta.url);
+
+/** Reads a JSON file, or undefined when it isn't there. */
+async function readJson(url) {
+  try {
+    return JSON.parse(await readFile(url, "utf8"));
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * A blog post's card fields, plus the guides and hubs it links to (for "From the blog" on their pages
+ * and for related posts) and its cover photo: the guide picked in the editor, or else the first guide
+ * it links to that has a photo.
+ */
+export async function postCard(raw) {
+  const card = Object.fromEntries(POST_CARD_FIELDS.filter((k) => k in raw).map((k) => [k, raw[k]]));
+  const text = [...(Array.isArray(raw.sections) ? raw.sections : []).map((s) => s?.text ?? ""), ...(Array.isArray(raw.faqs) ? raw.faqs : []).map((f) => f?.answer ?? "")].join("\n");
+  const linked = [...new Set([...text.matchAll(/\]\(\/destinations\/([a-z0-9-]+)/g)].map((m) => m[1]))];
+  const guides = [];
+  const hubs = [];
+  let cover;
+  for (const slug of [...new Set([typeof raw.cover === "string" ? raw.cover.trim() : "", ...linked].filter(Boolean))]) {
+    const guide = await readJson(new URL(`${slug}.json`, GUIDES));
+    if (guide) {
+      if (linked.includes(slug)) guides.push(slug);
+      if (!cover && guide.published === true && typeof guide.image === "string" && guide.image) {
+        const size = (await readJson(IMAGE_SIZES))?.[guide.image];
+        cover = { guide: slug, image: guide.image, alt: typeof guide.image_alt === "string" ? guide.image_alt : "", ...(size ? { size } : {}) };
+      }
+    } else if (linked.includes(slug) && (await readJson(new URL(`${slug}.json`, HUBS)))) hubs.push(slug);
+  }
+  return { ...card, guides, hubs, ...(cover ? { cover } : {}) };
 }
 
 /** A hub's card fields. */
@@ -58,7 +91,7 @@ export function destinationCards() {
       if (query !== "card" || !file.endsWith(".json")) return null;
       this.addWatchFile(file);
       const raw = JSON.parse(await readFile(file, "utf8"));
-      const card = /[\\/]content[\\/]hubs[\\/]/.test(file) ? hubCard(raw) : /[\\/]content[\\/]blog[\\/]/.test(file) ? postCard(raw) : guideCard(raw);
+      const card = /[\\/]content[\\/]hubs[\\/]/.test(file) ? hubCard(raw) : /[\\/]content[\\/]blog[\\/]/.test(file) ? await postCard(raw) : guideCard(raw);
       return { code: `export default ${JSON.stringify(card)};`, moduleType: "js" };
     },
   };

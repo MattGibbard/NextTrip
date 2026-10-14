@@ -14,8 +14,11 @@ import { CREATORS, HOME, HOW } from "./site";
 import { CreatorsPage } from "./views/Creators";
 import { HowItWorksPage } from "./views/HowItWorks";
 import { InfoPage } from "./views/InfoPage";
-import { BlogIndex, BlogPost } from "./views/Blog";
-import { POSTS, blogJsonLd, postMeta, readPost } from "./blog";
+import { BlogIndex, BlogPost, BlogTagPage } from "./views/Blog";
+import { POSTS, blogJsonLd, postMeta, readPost, tagMeta, usedTags, withCard } from "./blog";
+import { TAG_INDEX_MIN, isBlogTag } from "./blogTags";
+import type { BlogTag } from "./blogTags";
+import { feedXml } from "./feed";
 import { INFO, infoJsonLd, infoSource } from "./infoPages";
 import { SiteBanner } from "./components/SiteBanner";
 import { INFO_PAGES, PAGES, headTags as fixedTags, metaTags } from "../shared/seo";
@@ -43,6 +46,8 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
     // Hubs share the guides' addresses, and their page names.
     ...HUBS.map((h) => ({ page: `destination:${h.slug}` as const, file: `destinations/${h.slug}.html`, path: `/destinations/${h.slug}`, index: true, source: `content/hubs/${h.slug}.json` })),
     ...POSTS.map((p) => ({ page: `post:${p.slug}` as const, file: `blog/${p.slug}.html`, path: `/blog/${p.slug}`, index: true, source: `content/blog/${p.slug}.json` })),
+    // A page for each tag in use. Nearly empty ones are kept out of search results until they fill up.
+    ...usedTags().map(({ tag, count }) => ({ page: `tag:${tag}` as const, file: `blog/tag/${tag}.html`, path: `/blog/tag/${tag}`, index: count >= TAG_INDEX_MIN, source: "content/blog" })),
   ];
 }
 
@@ -70,7 +75,17 @@ const postFiles = import.meta.glob<Record<string, unknown>>("/content/blog/*.jso
 function post(page: PublicPage) {
   const slug = page.startsWith("post:") ? page.slice("post:".length) : "";
   const raw = POSTS.some((p) => p.slug === slug) ? postFiles[`/content/blog/${slug}.json`] : undefined;
-  return raw ? readPost(slug, raw) : undefined;
+  return raw ? withCard(readPost(slug, raw)) : undefined;
+}
+
+function tag(page: PublicPage): BlogTag | undefined {
+  const slug = page.startsWith("tag:") ? page.slice("tag:".length) : "";
+  return isBlogTag(slug) && usedTags().some((t) => t.tag === slug) ? slug : undefined;
+}
+
+/** The blog's RSS feed. */
+export function feed(): string {
+  return feedXml();
 }
 
 /** The page's <head> tags. `updated` and `published` are when its words last changed and were first added, as ISO dates, if known. */
@@ -81,6 +96,8 @@ export function headTags(page: PublicPage, updated?: string, published?: string)
   if (h) return metaTags(hubMeta(h, updated));
   const p = post(page);
   if (p) return metaTags(postMeta(p, updated));
+  const t = tag(page);
+  if (t) return metaTags(tagMeta(t));
   if (page === "blog") return fixedTags("blog", { jsonLd: blogJsonLd() });
   if (page === "home") return fixedTags("home", { title: HOME.seo_title, description: HOME.seo_description });
   if (page === "creators") return fixedTags("creators", { title: CREATORS.seo_title, description: CREATORS.seo_description });
@@ -107,6 +124,8 @@ function pageBody(page: PublicPage) {
   if (h) return <HubPage hub={h} />;
   const p = post(page);
   if (p) return <BlogPost post={p} />;
+  const t = tag(page);
+  if (t) return <BlogTagPage tag={t} />;
   if (page === "blog") return <BlogIndex />;
   if (page === "home") return <HomePage />;
   if (page === "notfound") return <NotFound />;

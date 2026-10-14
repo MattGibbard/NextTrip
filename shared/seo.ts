@@ -27,8 +27,14 @@ export function infoPage(pathname: string): InfoPage | null {
   const hit = (Object.keys(INFO_PAGES) as InfoPage[]).find((k) => INFO_PAGES[k].path === clean);
   return hit ?? null;
 }
-/** Every prerendered page: the fixed ones plus one per destination guide, as "destination:new-york", and one per blog post, as "post:my-post". */
-export type PublicPage = FixedPage | `destination:${string}` | `post:${string}`;
+/**
+ * Every prerendered page: the fixed ones plus one per destination guide, as "destination:new-york", one
+ * per blog post, as "post:my-post", and one per blog tag in use, as "tag:city-breaks".
+ */
+export type PublicPage = FixedPage | `destination:${string}` | `post:${string}` | `tag:${string}`;
+
+/** The blog's RSS feed, written by scripts/prerender.mjs. */
+export const FEED_PATH = "/blog/feed.xml";
 
 export type Meta = {
   path: string;
@@ -143,7 +149,9 @@ export function publicPage(pathname: string): PublicPage | null {
   const d = pathname.match(/^\/destinations\/([a-z0-9-]+)\/?$/);
   if (d) return `destination:${d[1]}`;
   const p = pathname.match(/^\/blog\/([a-z0-9-]+)\/?$/);
-  return p ? `post:${p[1]}` : null;
+  if (p) return `post:${p[1]}`;
+  const t = pathname.match(/^\/blog\/tag\/([a-z0-9-]+)\/?$/);
+  return t ? `tag:${t[1]}` : null;
 }
 
 /** The address of a blog post. */
@@ -210,6 +218,8 @@ export function metaTags(m: Meta): string {
     if (m.updated) tags.push(`<meta property="article:modified_time" content="${m.updated}" />`);
   }
   tags.push(`<meta name="twitter:card" content="summary_large_image" />`);
+  // Blog pages point feed readers to the blog's feed.
+  if (m.path === "/blog" || m.path.startsWith("/blog/")) tags.push(`<link rel="alternate" type="application/rss+xml" title="somewhere🎉 blog" href="${SITE}${FEED_PATH}" />`);
   for (const data of m.jsonLd ?? []) tags.push(`<script type="application/ld+json">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>`);
   return tags.join("\n    ");
 }

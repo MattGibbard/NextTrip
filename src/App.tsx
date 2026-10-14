@@ -6,7 +6,9 @@ import { infoTitle } from "./infoPages";
 import { NotFound } from "./views/NotFound";
 import { PAGES, infoPage, isPrivatePath, publicPage } from "../shared/seo";
 import { CREATORS, HOW } from "./site";
-import { findPost, loadedPost, postTitle } from "./blog";
+import { findPost, loadedPost, postTitle, tagTitle, usedTags } from "./blog";
+import { isBlogTag } from "./blogTags";
+import type { BlogTag } from "./blogTags";
 import { followInPlace, isGuidePath } from "./navigate";
 import { load, save } from "./storage";
 import { AppSkeleton } from "./components/AppSkeleton";
@@ -24,6 +26,13 @@ const HowItWorksPage = lazyView(() => import("./views/HowItWorks").then((m) => m
 const InfoPage = lazyView(() => import("./views/InfoPage").then((m) => m.InfoPage));
 const BlogIndex = lazyView(() => import("./views/Blog").then((m) => m.BlogIndex));
 const BlogPost = lazyView(() => import("./views/Blog").then((m) => m.BlogPost));
+const BlogTagPage = lazyView(() => import("./views/Blog").then((m) => m.BlogTagPage));
+
+/** The blog tag at this address, if it has posts. */
+function blogTag(page: string | null): BlogTag | null {
+  const slug = page?.startsWith("tag:") ? page.slice("tag:".length) : "";
+  return isBlogTag(slug) && usedTags().some((t) => t.tag === slug) ? slug : null;
+}
 
 /** Fetches the code for the page at this address, if it's one that loads on its own. */
 export function preloadPage(pathname: string): Promise<unknown> {
@@ -34,6 +43,7 @@ export function preloadPage(pathname: string): Promise<unknown> {
   if (page === "how") return HowItWorksPage.preload();
   if (page === "blog") return BlogIndex.preload();
   if (page?.startsWith("post:")) return BlogPost.preload();
+  if (page?.startsWith("tag:")) return BlogTagPage.preload();
   if (infoPage(pathname)) return InfoPage.preload();
   // A guide or hub's own words are their own file too.
   if (page === "destinations") return GuideView.preload();
@@ -97,6 +107,10 @@ export function App() {
     const post = loadedPost(page.slice("post:".length));
     return post ? <BlogPost post={post} /> : <NotFound />;
   }
+  if (page?.startsWith("tag:")) {
+    const tag = blogTag(page);
+    return tag ? <BlogTagPage tag={tag} /> : <NotFound />;
+  }
   // Signed-in families see the Guides inside the app, so moving between them is instant.
   // index.html clears the visitors' version before the first paint so it doesn't flash.
   if (isGuidePath(path) && !load(SIGNED_IN, false)) return <GuideView path={path} />;
@@ -113,6 +127,8 @@ function pageTitle(path: string): string {
   if (page === "how") return HOW.seo_title || PAGES.how.title;
   const post = page?.startsWith("post:") ? findPost(page.slice("post:".length)) : undefined;
   if (post) return postTitle(post);
+  const tag = blogTag(page);
+  if (tag) return tagTitle(tag);
   const info = infoPage(path);
   return info ? infoTitle(info) : "somewhere🎉";
 }

@@ -36,6 +36,8 @@ describe("content pages", () => {
     expect(html).toContain("<ul><li>one</li>");
     expect(html).not.toContain("javascript");
     expect(renderToString(createElement(RichText, { text: "[Email us](mailto:hello@somewhere.party)" }))).toContain('href="mailto:hello@somewhere.party"');
+    // A link inside bold words still works.
+    expect(renderToString(createElement(RichText, { text: "- **Choose [Lisbon](/destinations/lisbon)** for a first trip" }))).toContain('<strong>Choose <a href="/destinations/lisbon">Lisbon</a></strong>');
   });
 
   it("give search engines the questions and the guide", () => {

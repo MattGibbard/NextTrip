@@ -10,6 +10,8 @@ import { SiteFooter, SiteHeader } from "../components/SiteFrame";
 import { HUBS, countryHub, hubGuides, hubIcon, monthHub, typeHub } from "../hubs";
 import type { HubKind } from "../hubs";
 import { AppBottomNav, AppTopbar } from "../components/AppNav";
+import { PostLink } from "../components/PostCards";
+import { postsAboutGuide } from "../blog";
 
 /**
  * Who's looking. Starts as a visitor, the same as the prerendered page, then checks for a signed-in
@@ -63,6 +65,7 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
   const standby = ideas?.filter((i) => i.status === "active" && i !== onList).slice(0, 3) ?? [];
   const types = d.holiday_types.map(holidayType).filter((t) => !!t);
   const country = countryHub(d.country_code);
+  const blogPosts = postsAboutGuide(d.slug, 3);
 
   return (
     <div className={`lp dg ${signedIn ? "dg-app" : ""}`}>
@@ -350,6 +353,17 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
                   </div>
                 );
               })}
+            </div>
+          </section>
+        )}
+
+        {blogPosts.length > 0 && (
+          <section aria-labelledby="dg-blog" className="dg-section">
+            <h2 id="dg-blog">Read more about {d.name}</h2>
+            <div className="bl-list">
+              {blogPosts.map((p) => (
+                <PostLink key={p.slug} post={p} heading="h3" />
+              ))}
             </div>
           </section>
         )}

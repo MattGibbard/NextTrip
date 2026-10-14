@@ -603,6 +603,56 @@ collections:
       - { label: Published, name: published, widget: boolean, default: false, hint: "Only published posts appear on the site and in the sitemap." }
       - { label: Title, name: title, widget: string, hint: "The heading, e.g. How to agree on a holiday as a family. A new post's address comes from this, e.g. somewhere.party/blog/how-to-agree-on-a-holiday-as-a-family." }
       - { label: Date, name: date, widget: datetime, time_format: false, date_format: YYYY-MM-DD, format: YYYY-MM-DD, hint: "When it was first published. Newest posts show first." }
+      - { label: Author, name: author, widget: select, options: [Matt, Brogan], hint: "Shown under the heading and given to Google as the writer." }
+      - label: Tags
+        name: tags
+        widget: select
+        multiple: true
+        required: false
+        hint: "Pick one to four. Each tag has its own page listing its posts, e.g. somewhere.party/blog/tag/city-breaks."
+        options:
+          - { label: Deciding where to go, value: deciding-where-to-go }
+          - { label: Holiday ideas, value: holiday-ideas }
+          - { label: Comparisons, value: comparisons }
+          - { label: Planning, value: planning }
+          - { label: Travel tips, value: travel-tips }
+          - { label: Flights, value: flights }
+          - { label: Airports, value: airports }
+          - { label: Train travel, value: train-travel }
+          - { label: Road trips, value: road-trips }
+          - { label: Cruises, value: cruises }
+          - { label: Weather, value: weather }
+          - { label: Winter sun, value: winter-sun }
+          - { label: Christmas, value: christmas }
+          - { label: Spring, value: spring }
+          - { label: Summer, value: summer }
+          - { label: Autumn, value: autumn }
+          - { label: Winter, value: winter }
+          - { label: School holidays, value: school-holidays }
+          - { label: City breaks, value: city-breaks }
+          - { label: Short breaks, value: short-breaks }
+          - { label: Beach holidays, value: beach-holidays }
+          - { label: Ski and snow, value: ski-and-snow }
+          - { label: Nature and outdoors, value: nature-and-outdoors }
+          - { label: Adventure, value: adventure }
+          - { label: Food and drink, value: food-and-drink }
+          - { label: Culture and history, value: culture-and-history }
+          - { label: Family holidays, value: family-holidays }
+          - { label: Couples, value: couples }
+          - { label: Group trips, value: group-trips }
+          - { label: Budget travel, value: budget-travel }
+          - { label: Europe, value: europe }
+          - { label: Long haul, value: long-haul }
+      - { label: Updated, name: updated, widget: datetime, required: false, time_format: false, date_format: YYYY-MM-DD, format: YYYY-MM-DD, hint: "Optional. When you last checked or changed the advice. Shows as Updated under the heading. Leave empty for small fixes." }
+      - label: Cover photo
+        name: cover
+        widget: relation
+        collection: destinations
+        value_field: "{{slug}}"
+        search_fields: [name]
+        display_fields: [name]
+        required: false
+        hint: "Optional. Uses this guide's photo at the top of the post and when it's shared. Leave empty to use the photo from the first guide the post links to."
       - { label: Introduction, name: intro, widget: text, hint: "One or two sentences under the heading, also on the blog's front page. Google shows this under the page title in search results, cut off after about 155 characters, so put the most important part first." }
       - { label: Google title, name: seo_title, widget: string, required: false, hint: "Optional. The page title in search results, about 50 characters. Leave empty to use the title." }
       - { label: Google description, name: seo_description, widget: text, required: false, hint: "Optional. Shown under the title in search results. Leave empty to use the introduction." }

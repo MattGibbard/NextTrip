@@ -1,6 +1,8 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { POSTS, blogJsonLd, findPost, loadPost, postDate, postMeta, postTitle, readPost } from "../src/blog";
+import { AUTHORS, POSTS, blogJsonLd, findPost, loadPost, postDate, postMeta, postTitle, postsAboutGuide, postsAboutHub, postsTagged, readPost, relatedPosts, tagMeta, usedTags } from "../src/blog";
+import { BLOG_TAGS, TAG_INDEX_MIN, isBlogTag } from "../src/blogTags";
+import { feedXml } from "../src/feed";
 import { publicPage } from "../shared/seo";
 import { DESTINATIONS } from "../src/destinations";
 import { HUBS } from "../src/hubs";
@@ -25,6 +27,10 @@ describe("blog files", () => {
     expect(p.intro).not.toBe("");
     expect(p.sections.length).toBeGreaterThan(0);
     if (p.published) expect(publicPage(`/blog/${slug}`)).toBe(`post:${slug}`);
+    const raw = JSON.parse(readFileSync(new URL(file, dir), "utf8"));
+    expect(AUTHORS, `${slug} needs an author`).toContain(raw.author);
+    expect(raw.tags?.length, `${slug} needs at least one tag`).toBeGreaterThan(0);
+    for (const t of raw.tags) expect(isBlogTag(t), `${slug} has an unknown tag ${t}`).toBe(true);
     for (const href of links([...p.sections.map((s) => s.text), ...p.faqs.map((f) => f.answer)].join("\n"))) {
       expect(pages.has(href), `${slug} links to ${href}, which isn't a page`).toBe(true);
     }
@@ -67,5 +73,76 @@ describe("the blog", () => {
   it("writes dates out in full", () => {
     expect(postDate("2026-10-02")).toBe("2 October 2026");
     expect(postDate("")).toBe("");
+  });
+});
+
+describe("tags", () => {
+  it("offers the same tags in the editor as on the site", () => {
+    const config = readFileSync(new URL("../public/admin/config.yml", import.meta.url), "utf8");
+    const blog = config.slice(config.indexOf("  - name: blog"), config.indexOf("  - name: site"));
+    const values = [...blog.matchAll(/\{ label: ([^,]+), value: ([a-z-]+) \}/g)].map((m) => [m[2], m[1]]);
+    expect(Object.fromEntries(values)).toEqual(BLOG_TAGS);
+  });
+
+  it("gives each tag in use a page, kept out of search until it has a few posts", () => {
+    const used = usedTags();
+    expect(used.length).toBeGreaterThan(0);
+    for (const { tag, count } of used) {
+      expect(publicPage(`/blog/tag/${tag}`)).toBe(`tag:${tag}`);
+      expect(postsTagged(tag)).toHaveLength(count);
+      const meta = tagMeta(tag);
+      expect(meta.index).toBe(count >= TAG_INDEX_MIN);
+      expect(meta.path).toBe(`/blog/tag/${tag}`);
+    }
+  });
+});
+
+describe("links between posts and guides", () => {
+  it("knows which guides each post links to, and picks a cover photo from one", () => {
+    const lisbon = findPost("lisbon-or-porto")!;
+    expect(lisbon.guides).toEqual(expect.arrayContaining(["lisbon", "porto"]));
+    expect(lisbon.cover?.image).toMatch(/^\/images\/destinations\//);
+    expect(postsAboutGuide("lisbon", 3)).toContainEqual(lisbon);
+  });
+
+  it("suggests related posts first, then the newest", () => {
+    for (const p of POSTS) {
+      const more = relatedPosts(p, 3);
+      expect(more).toHaveLength(Math.min(3, POSTS.length - 1));
+      expect(more).not.toContainEqual(p);
+    }
+  });
+
+  it("lists posts on a hub that link to it or to two of its guides", () => {
+    const p = POSTS.find((x) => x.guides.length >= 2)!;
+    expect(postsAboutHub("anything", p.guides.slice(0, 2), 3)).toContainEqual(p);
+    expect(postsAboutHub("anything", p.guides.slice(0, 1), 3).every((x) => x.guides.includes(p.guides[0]) || x.hubs.includes("anything"))).toBe(true);
+  });
+});
+
+describe("the post page's data", () => {
+  it("names the writer and uses the cover photo", async () => {
+    const card = POSTS.find((p) => p.cover)!;
+    const p = (await loadPost(card.slug))!;
+    const [article] = postMeta(p).jsonLd as Record<string, any>[];
+    expect(article.author).toEqual({ "@type": "Person", name: p.author });
+    expect(article.image.url).toContain(card.cover!.image);
+    expect(postMeta(p).image).toContain(card.cover!.image);
+  });
+
+  it("shows Updated only when it's later than the date", () => {
+    expect(readPost("x", { date: "2026-10-12", updated: "2026-10-20" }).updated).toBe("2026-10-20");
+    expect(readPost("x", { date: "2026-10-12", updated: "2026-10-01" }).updated).toBe("");
+    expect(postMeta(readPost("x", { date: "2026-10-12", updated: "2026-10-20" }), "2026-10-15").updated).toBe("2026-10-20");
+  });
+});
+
+describe("the feed", () => {
+  it("lists the newest posts as RSS", () => {
+    const xml = feedXml();
+    expect(xml).toMatch(/^<\?xml/);
+    expect(xml).toContain(`<link>https://somewhere.party/blog/${POSTS[0].slug}</link>`);
+    expect(xml.match(/<item>/g)).toHaveLength(Math.min(50, POSTS.length));
+    expect(publicPage("/blog/feed.xml")).toBeNull();
   });
 });

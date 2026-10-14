@@ -5,6 +5,8 @@ import { alsoGood, hubGuides, hubIcon } from "../hubs";
 import type { Hub } from "../hubs";
 import { SiteFooter, SiteHeader } from "../components/SiteFrame";
 import { AppBottomNav, AppTopbar } from "../components/AppNav";
+import { PostCards } from "../components/PostCards";
+import { postsAboutHub } from "../blog";
 import { GuideCard, HubLinks, Label, MONTH_NAMES, bestSet, useFamily } from "./DestinationPage";
 import type { Family } from "./DestinationPage";
 
@@ -192,6 +194,8 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
             </div>
           </section>
         )}
+
+        <PostCards posts={postsAboutHub(hub.slug, guides.map((g) => g.slug), 3)} heading="From the blog" id="hb-blog" className="dx-section" />
 
         <HubLinks kind="type" heading={hub.kind === "type" ? "Other kinds of holiday" : "Browse by holiday type"} except={hub.slug} />
         <HubLinks kind="month" heading={hub.kind === "month" ? "Other months" : "Browse by month"} except={hub.slug} />

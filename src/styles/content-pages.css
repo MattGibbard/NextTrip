@@ -316,3 +316,116 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+/* Blog tags: the row of topics on the blog's pages, and a post's own topics. */
+.bl-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 28px;
+}
+.bl-tags a,
+.bl-post-tags a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--text-6);
+  font-weight: 600;
+  text-decoration: none;
+}
+.bl-tags a:hover,
+.bl-post-tags a:hover {
+  border-color: var(--accent);
+}
+.bl-tags a[aria-current] {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.bl-tag-count {
+  font-family: var(--mono);
+  font-size: var(--text-3);
+  font-weight: 400;
+  color: var(--muted);
+}
+.bl-post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+}
+.bl-post-tags a {
+  min-height: 30px;
+  padding: 0 10px;
+  font-size: var(--text-5);
+}
+/* A post's cover photo, and the smaller one on its card. */
+.bl-cover {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.bl-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+}
+.bl-card {
+  overflow: hidden;
+}
+.bl-card-photo {
+  display: block;
+  width: calc(100% + 44px);
+  max-width: none;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: -20px -22px 6px;
+  background: var(--accent-soft);
+}
+.bl-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.bl-card h3 a {
+  color: var(--text);
+  text-decoration: none;
+}
+.bl-card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.bl-date {
+  margin: 0;
+}
+/* Posts on a guide's page (DestinationPage) and a hub's page (HubPage). */
+.dg-section .bl-list,
+.dx-section.bl-more .bl-list {
+  padding-bottom: 0;
+}
+/* On phones the topics scroll sideways in one row, so the posts start near the top. */
+@media (max-width: 520px) {
+  .bl-tags {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-right: -16px;
+    padding-right: 16px;
+  }
+  .bl-tags a {
+    flex-shrink: 0;
+  }
+}

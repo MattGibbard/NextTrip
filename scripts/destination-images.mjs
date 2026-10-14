@@ -4,7 +4,7 @@
 // and JPEG are read too, and anything else is skipped with a warning.
 // It also makes smaller WebP copies of each photo in public/images/sized/<width>/ (not kept in git), so
 // phones download a photo the size they show it rather than the full 1280px one. See photoProps in
-// src/destinations.ts, which must list the same widths.
+// src/photos.ts, which must list the same widths.
 import { mkdir, readdir, readFile, stat, writeFile } from "node:fs/promises";
 
 const DIR = new URL("../public/images/destinations/", import.meta.url);

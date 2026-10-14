@@ -17,7 +17,8 @@ const vite = await createServer({
 });
 try {
   const { HUBS, hubIcon } = await vite.ssrLoadModule("/src/hubs.ts");
-  const links = HUBS.map((h) => ({ slug: h.slug, name: h.name, icon: hubIcon(h) }));
+  // A month on its own ("May") doesn't say what the link is, so it reads "Holidays in May".
+  const links = HUBS.map((h) => ({ slug: h.slug, name: h.kind === "month" ? `Holidays in ${h.name}` : h.name, icon: hubIcon(h) }));
   await writeFile(OUT, JSON.stringify(links, null, 2) + "\n");
   console.log(`Footer links ready for ${links.length} hub pages.`);
 } finally {

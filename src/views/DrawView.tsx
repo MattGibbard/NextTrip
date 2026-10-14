@@ -701,7 +701,7 @@ function Reveal({ round, onDone, onClose }: { round: Round; onDone: () => void; 
   useEffect(() => {
     if (done && !landed.current) {
       landed.current = true;
-      void celebrate();
+      celebrate();
       onDone();
     }
   }, [done, onDone]);

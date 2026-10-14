@@ -1,34 +1,18 @@
 import { useEffect, useState } from "react";
 import { publicPage } from "../../shared/seo";
-import { findDestination, loadDestination, loadedDestination, searchTitle } from "../destinations";
+import { findDestination, loadDestination, loadedDestination } from "../destinations";
 import { DestinationPage, DestinationsIndex } from "./DestinationPage";
 import type { Family } from "./DestinationPage";
 import { NotFound } from "./NotFound";
 import { AppSkeleton } from "../components/AppSkeleton";
-import { findHub, hubSearchTitle, loadHub, loadedHub } from "../hubs";
+import { findHub, loadHub, loadedHub } from "../hubs";
 import { HubPage } from "./HubPage";
-
-/** Fetches a guide's full text or a hub's words, whichever the address is (they share addresses). */
-export function preloadGuide(slug: string) {
-  return Promise.all([loadDestination(slug), loadHub(slug)]);
-}
-
-/** The tab title for a guide or hub. */
-function guideTitle(slug: string) {
-  const destination = findDestination(slug);
-  if (destination) return searchTitle(destination);
-  const hub = findHub(slug);
-  return hub ? hubSearchTitle(hub) : "somewhere🎉";
-}
 
 /** A Guides page: the list of guides, one guide, a hub of guides, or not found. */
 export function GuideView({ path, family }: { path: string; family?: Family }) {
   const page = publicPage(path);
-  const slug = page?.startsWith("destination:") ? page.slice("destination:".length) : "";
-  useEffect(() => {
-    if (slug) document.title = guideTitle(slug);
-  }, [slug]);
   if (page === "destinations") return <DestinationsIndex family={family} />;
+  const slug = page?.startsWith("destination:") ? page.slice("destination:".length) : "";
   if (findDestination(slug)) return <Guide key={slug} slug={slug} family={family} />;
   return findHub(slug) ? <HubView key={slug} slug={slug} family={family} /> : <NotFound />;
 }

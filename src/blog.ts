@@ -225,22 +225,6 @@ function postItem(p: PostCard) {
   };
 }
 
-/** The blog's front page data for search results: the blog and the posts on it. */
-export function blogJsonLd(): unknown[] {
-  return [
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      name: "somewhere🎉 blog",
-      description: PAGES.blog.description,
-      url: SITE + PAGES.blog.path,
-      inLanguage: "en-GB",
-      publisher: ORG,
-      blogPost: POSTS.map(postItem),
-    },
-  ];
-}
-
 // Tags
 
 /** Posts with this tag, newest first. */
@@ -257,21 +241,111 @@ export function usedTags(): { tag: BlogTag; count: number }[] {
     .sort((a, b) => b.count - a.count || BLOG_TAGS[a.tag].localeCompare(BLOG_TAGS[b.tag], "en-GB"));
 }
 
-/** A tag page's title in search results and the browser tab. */
-export function tagTitle(tag: BlogTag): string {
-  return `${BLOG_TAGS[tag]}: articles and advice | somewhere🎉`;
+// Lists of posts: the blog's front page and each tag's page, a page of PAGE_SIZE posts at a time.
+
+/** How many posts each page of the blog or a tag shows. */
+export const PAGE_SIZE = 12;
+
+/** One page of posts: all posts, or a tag's, newest first. */
+export interface Listing {
+  tag: BlogTag | null;
+  /** Which page, from 1, and how many there are. */
+  page: number;
+  pages: number;
+  posts: PostCard[];
+  /** How many posts there are across every page. */
+  total: number;
 }
 
-/** Title, description and search-result data for a tag page. Nearly empty ones stay out of search results. */
-export function tagMeta(tag: BlogTag): Meta {
-  const url = SITE + tagPath(tag);
-  const posts = postsTagged(tag);
-  const label = BLOG_TAGS[tag];
+function makeListing(tag: BlogTag | null, page: number): Listing | null {
+  const all = tag ? postsTagged(tag) : POSTS;
+  const pages = Math.max(1, Math.ceil(all.length / PAGE_SIZE));
+  if (!Number.isInteger(page) || page < 1 || page > pages || (tag && all.length === 0)) return null;
+  return { tag, page, pages, posts: all.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE), total: all.length };
+}
+
+/**
+ * The page of posts a page name stands for: "blog" and "blog:2", or "tag:city-breaks" and
+ * "tag:city-breaks:2". Null for anything else, a tag nobody uses, or a page past the end. Page 1
+ * only has the short address, so "blog:1" isn't a page.
+ */
+export function listing(page: string | null | undefined): Listing | null {
+  if (page === "blog") return makeListing(null, 1);
+  const b = page?.match(/^blog:(\d+)$/);
+  if (b) return Number(b[1]) > 1 ? makeListing(null, Number(b[1])) : null;
+  const t = page?.match(/^tag:([a-z0-9-]+)(?::(\d+))?$/);
+  if (!t || !isBlogTag(t[1])) return null;
+  if (t[2] && Number(t[2]) < 2) return null;
+  return makeListing(t[1], t[2] ? Number(t[2]) : 1);
+}
+
+/** Every page of posts, with its page name, for the build to write. */
+export function listings(): (Listing & { id: string })[] {
+  const out: (Listing & { id: string })[] = [];
+  for (const tag of [null, ...usedTags().map((t) => t.tag)]) {
+    const first = makeListing(tag, 1)!;
+    for (let page = 1; page <= first.pages; page++) {
+      const id = tag ? (page > 1 ? `tag:${tag}:${page}` : `tag:${tag}`) : page > 1 ? `blog:${page}` : "blog";
+      out.push({ ...makeListing(tag, page)!, id });
+    }
+  }
+  return out;
+}
+
+/** The address of a page of posts. */
+export function listingPath(tag: BlogTag | null, page: number): string {
+  if (tag) return tagPath(tag, page);
+  return page > 1 ? `${PAGES.blog.path}/page/${page}` : PAGES.blog.path;
+}
+
+/** A page of posts' title in search results and the browser tab. */
+export function listingTitle(l: Pick<Listing, "tag" | "page">): string {
+  if (!l.tag) return l.page > 1 ? `Blog: deciding where to go on holiday, page ${l.page} | somewhere🎉` : PAGES.blog.title;
+  return `${BLOG_TAGS[l.tag]}: articles and advice${l.page > 1 ? `, page ${l.page}` : ""} | somewhere🎉`;
+}
+
+/**
+ * Title, description and search-result data for a page of posts. Every page has its own address, so
+ * search engines can follow the Older links to every post. A tag with only a couple of posts stays
+ * out of search results until it fills up.
+ */
+export function listingMeta(l: Listing): Meta {
+  const path = listingPath(l.tag, l.page);
+  const url = SITE + path;
+  const pageNote = l.page > 1 ? ` Page ${l.page} of ${l.pages}.` : "";
+  const crumbs = [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+    { "@type": "ListItem", position: 2, name: "Blog", item: SITE + PAGES.blog.path },
+    ...(l.tag ? [{ "@type": "ListItem", position: 3, name: BLOG_TAGS[l.tag], item: SITE + tagPath(l.tag) }] : []),
+  ];
+  if (!l.tag) {
+    return {
+      ...PAGES.blog,
+      path,
+      title: listingTitle(l),
+      description: PAGES.blog.description + pageNote,
+      jsonLd: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: "somewhere🎉 blog",
+          description: PAGES.blog.description,
+          url: SITE + PAGES.blog.path,
+          inLanguage: "en-GB",
+          publisher: ORG,
+          blogPost: l.posts.map(postItem),
+        },
+        ...(l.page > 1 ? [{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: crumbs }] : []),
+      ],
+    };
+  }
+  const label = BLOG_TAGS[l.tag];
+  const first = (l.page - 1) * PAGE_SIZE;
   return {
-    path: tagPath(tag),
-    title: tagTitle(tag),
-    description: `Articles about ${tagInSentence(tag)} from the somewhere🎉 blog: ideas and advice for choosing where to go on holiday and planning the trip.`,
-    index: posts.length >= TAG_INDEX_MIN,
+    path,
+    title: listingTitle(l),
+    description: `Articles about ${tagInSentence(l.tag)} from the somewhere🎉 blog: ideas and advice for choosing where to go on holiday and planning the trip.${pageNote}`,
+    index: l.total >= TAG_INDEX_MIN,
     jsonLd: [
       {
         "@context": "https://schema.org",
@@ -280,17 +354,9 @@ export function tagMeta(tag: BlogTag): Meta {
         url,
         inLanguage: "en-GB",
         isPartOf: { "@type": "Blog", name: "somewhere🎉 blog", url: SITE + PAGES.blog.path },
-        mainEntity: { "@type": "ItemList", itemListElement: posts.map((p, i) => ({ "@type": "ListItem", position: i + 1, url: SITE + postPath(p.slug), name: p.title })) },
+        mainEntity: { "@type": "ItemList", itemListElement: l.posts.map((p, i) => ({ "@type": "ListItem", position: first + i + 1, url: SITE + postPath(p.slug), name: p.title })) },
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
-          { "@type": "ListItem", position: 2, name: "Blog", item: SITE + PAGES.blog.path },
-          { "@type": "ListItem", position: 3, name: label, item: url },
-        ],
-      },
+      { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: crumbs },
     ],
   };
 }

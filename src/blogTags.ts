@@ -48,9 +48,9 @@ export function tagInSentence(slug: BlogTag): string {
   return /^(Christmas|Europe)/.test(label) ? label : label.toLowerCase();
 }
 
-/** A tag page's address. */
-export function tagPath(slug: BlogTag): string {
-  return `/blog/tag/${slug}`;
+/** A tag page's address, or the address of one of its later pages. */
+export function tagPath(slug: BlogTag, page = 1): string {
+  return page > 1 ? `/blog/tag/${slug}/page/${page}` : `/blog/tag/${slug}`;
 }
 
 /** Tag pages with fewer posts than this stay out of search results until they fill up. */

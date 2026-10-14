@@ -1,5 +1,5 @@
-import { postDate, POSTS, postsTagged, relatedPosts, usedTags } from "../blog";
-import type { Post } from "../blog";
+import { listingPath, postDate, relatedPosts, usedTags } from "../blog";
+import type { Listing, Post } from "../blog";
 import { BLOG_TAGS, tagInSentence, tagPath } from "../blogTags";
 import type { BlogTag } from "../blogTags";
 import { photoProps } from "../photos";
@@ -16,11 +16,11 @@ function TagLinks({ current, label = "Topics" }: { current?: BlogTag; label?: st
   if (tags.length === 0) return null;
   return (
     <nav className="lp-wrap bl-tags" aria-label={label}>
-      <a href="/blog" aria-current={current ? undefined : "page"}>
+      <a href="/blog" aria-current={current ? undefined : "true"}>
         All
       </a>
       {tags.map(({ tag, count }) => (
-        <a key={tag} href={tagPath(tag)} aria-current={tag === current ? "page" : undefined}>
+        <a key={tag} href={tagPath(tag)} aria-current={tag === current ? "true" : undefined}>
           {BLOG_TAGS[tag]} <span className="bl-tag-count">{count}</span>
         </a>
       ))}
@@ -28,56 +28,77 @@ function TagLinks({ current, label = "Topics" }: { current?: BlogTag; label?: st
   );
 }
 
-/** The blog's front page: every post, newest first. */
-export function BlogIndex() {
+/** Newer and Older links, and a link to each page, under a page of posts. */
+function Pager({ listing: l }: { listing: Listing }) {
+  if (l.pages < 2) return null;
+  const pages = Array.from({ length: l.pages }, (_, i) => i + 1);
   return (
-    <div className="lp lp-home lp-info bl">
-      <SiteHeader current="blog" exact />
-
-      <header className="lp-wrap lp-info-head">
-        <div className="lp-kicker">Blog</div>
-        <h1>Deciding where to go</h1>
-        <p className="lp-lead">Ideas and advice for choosing your next holiday, and for agreeing on it, whether it's the two of you, the whole family or a group of friends.</p>
-      </header>
-
-      <TagLinks />
-
-      <section className="lp-wrap bl-list" aria-label="Posts">
-        {POSTS.length === 0 ? <p className="muted">Nothing here yet. Come back soon.</p> : POSTS.map((p) => <PostLink key={p.slug} post={p} />)}
-      </section>
-
-      <SiteFooter />
-    </div>
+    <nav className="lp-wrap bl-pager" aria-label="Pages">
+      {l.page > 1 ? (
+        <a href={listingPath(l.tag, l.page - 1)} rel="prev">
+          ← Newer
+        </a>
+      ) : (
+        <span aria-hidden className="bl-pager-off">
+          ← Newer
+        </span>
+      )}
+      <ol>
+        {pages.map((n) => (
+          <li key={n}>
+            <a href={listingPath(l.tag, n)} aria-current={n === l.page ? "page" : undefined} aria-label={`Page ${n}`}>
+              {n}
+            </a>
+          </li>
+        ))}
+      </ol>
+      {l.page < l.pages ? (
+        <a href={listingPath(l.tag, l.page + 1)} rel="next">
+          Older →
+        </a>
+      ) : (
+        <span aria-hidden className="bl-pager-off">
+          Older →
+        </span>
+      )}
+    </nav>
   );
 }
 
-/** A tag's page: its posts, newest first. */
-export function BlogTagPage({ tag }: { tag: BlogTag }) {
-  const posts = postsTagged(tag);
-  const label = BLOG_TAGS[tag];
+/** The blog's front page or a tag's page: a page of posts, newest first, with links to the other pages. */
+export function BlogList({ listing: l }: { listing: Listing }) {
+  const label = l.tag ? BLOG_TAGS[l.tag] : null;
+  const pageOf = l.page > 1 ? ` Page ${l.page} of ${l.pages}.` : "";
   return (
     <div className="lp lp-home lp-info bl">
-      <SiteHeader current="blog" />
+      <SiteHeader current="blog" exact={!l.tag && l.page === 1} />
 
       <header className="lp-wrap lp-info-head">
-        <nav aria-label="Breadcrumb" className="bl-crumbs">
-          <a href="/">Home</a>
-          <span aria-hidden>›</span>
-          <a href="/blog">Blog</a>
-        </nav>
-        <h1>{label}</h1>
-        <p className="lp-lead">
-          {posts.length} {posts.length === 1 ? "article" : "articles"} about {tagInSentence(tag)}, with ideas and advice for choosing where to go and planning the trip.
-        </p>
+        {(l.tag || l.page > 1) && (
+          <nav aria-label="Breadcrumb" className="bl-crumbs">
+            <a href="/">Home</a>
+            <span aria-hidden>›</span>
+            <a href="/blog">Blog</a>
+          </nav>
+        )}
+        {!l.tag && <div className="lp-kicker">Blog</div>}
+        <h1>{label ?? "Deciding where to go"}</h1>
+        {l.tag ? (
+          <p className="lp-lead">
+            {l.total} {l.total === 1 ? "article" : "articles"} about {tagInSentence(l.tag)}, with ideas and advice for choosing where to go and planning the trip.{pageOf}
+          </p>
+        ) : (
+          <p className="lp-lead">Ideas and advice for choosing your next holiday, and for agreeing on it, whether it's the two of you, the whole family or a group of friends.{pageOf}</p>
+        )}
       </header>
 
-      <TagLinks current={tag} />
+      <TagLinks current={l.tag ?? undefined} />
 
       <section className="lp-wrap bl-list" aria-label="Posts">
-        {posts.map((p) => (
-          <PostLink key={p.slug} post={p} />
-        ))}
+        {l.posts.length === 0 ? <p className="muted">Nothing here yet. Come back soon.</p> : l.posts.map((p, i) => <PostLink key={p.slug} post={p} eager={i < 3} />)}
       </section>
+
+      <Pager listing={l} />
 
       <SiteFooter />
     </div>

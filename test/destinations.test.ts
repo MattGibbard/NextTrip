@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import { DESTINATIONS, LONDON, bestMonths, countryFlag, destinationCountry, destinationMeta, findDestination, flightHoursTo, loadDestination, loadedDestination, flightTime, photoProps, ideaFromDestination, readDestination, shortIntro } from "../src/destinations";
 import geo from "../content/destinations-geo.json";
 import { metaTags, publicPage } from "../shared/seo";
+import { GUIDE_LINKS } from "../src/guideLinks";
 
 const dir = new URL("../content/destinations/", import.meta.url);
 const files = readdirSync(dir).filter((f) => f.endsWith(".json"));
@@ -184,5 +185,11 @@ describe("photoProps", () => {
   it("uses other photos as they are", () => {
     expect(photoProps("https://example.com/x.jpg", [1280, 854], "100vw")).toEqual({ src: "https://example.com/x.jpg" });
     expect(photoProps("/images/destinations/a.webp", null, "100vw")).toEqual({ src: "https://somewhere.party/images/destinations/a.webp" });
+  });
+});
+
+describe("GUIDE_LINKS", () => {
+  it("links to the same guides as the cards, with the same names and flags", () => {
+    expect(GUIDE_LINKS).toEqual(DESTINATIONS.map((d) => ({ slug: d.slug, name: d.name, country_code: d.country_code })));
   });
 });

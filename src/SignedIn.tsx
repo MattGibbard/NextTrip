@@ -9,7 +9,6 @@ import "./styles/places.css"; /* The Places tab: coverage and passport stamps. *
 import "./styles/settings.css"; /* The Settings page. */
 import "./styles/plan.css"; /* A won idea's trip plan: days, costs, packing and jobs before you go. */
 import "./styles/book-links.css"; /* Find flights and hotels (affiliate links). */
-import "leaflet/dist/leaflet.css";
 import "./styles/draw.css";
 import "./styles/onboarding.css";
 import "./styles/postcard.css";
@@ -20,16 +19,11 @@ import { DataProvider, useData } from "./data";
 import { findDestination } from "./destinations";
 import { TripsView } from "./views/TripsView";
 import { PlacesView } from "./views/PlacesView";
-import { ShareMapView } from "./views/ShareMapView";
 import { IdeasView } from "./views/IdeasView";
-import { DrawView } from "./views/DrawView";
-import { SettingsView } from "./views/SettingsView";
 import { IdeaPage } from "./views/IdeaPage";
 import { TripPage } from "./views/TripPage";
-import { PlanPage } from "./views/plan/PlanPage";
 import { PLAN_TABS } from "./views/plan/context";
 import type { PlanTab } from "./views/plan/context";
-import { Onboarding } from "./views/Onboarding";
 import { GuideView } from "./views/GuideView";
 import { PersonPicker } from "./components/PersonPicker";
 import { AppBottomNav, AppTopbar } from "./components/AppNav";
@@ -37,9 +31,26 @@ import type { TabId } from "./components/AppNav";
 import { isGuidePath } from "./navigate";
 import { LAST_ME, PageSkeleton } from "./components/AppSkeleton";
 import { load, save } from "./storage";
+import { lazyView } from "./lazyView";
 
 // The signed-in app. App.tsx loads this on its own, once someone is signed in, so visitors to the
 // public pages never download it.
+
+// Less-used parts download when first opened, so the app opens sooner. Draw and Settings
+// are fetched once the app is idle, so switching to those tabs stays instant.
+const DrawView = lazyView(() => import("./views/DrawView").then((m) => m.DrawView), <PageSkeleton />);
+const SettingsView = lazyView(() => import("./views/SettingsView").then((m) => m.SettingsView), <PageSkeleton />);
+const PlanPage = lazyView(() => import("./views/plan/PlanPage").then((m) => m.PlanPage), <PageSkeleton />);
+const ShareMapView = lazyView(() => import("./views/ShareMapView").then((m) => m.ShareMapView), <PageSkeleton />);
+const Onboarding = lazyView(() => import("./views/Onboarding").then((m) => m.Onboarding));
+
+function preloadSoon() {
+  const later = window.requestIdleCallback ?? ((fn: () => void) => setTimeout(fn, 2000));
+  later(() => {
+    void DrawView.preload();
+    void SettingsView.preload();
+  });
+}
 
 /** The signed-in app for a family member. */
 export default function SignedIn({ session, path, initial, stale }: { session: SignedInSession; path: string; initial: FamilyData | null; stale: boolean }) {
@@ -70,6 +81,8 @@ function Shell({ path }: { path: string }) {
   // Someone new sees the welcome steps once; the server remembers when they've been through them.
   const [welcomed, setWelcomed] = useState(false);
   const tab = route.tab;
+
+  useEffect(preloadSoon, []);
 
   // Remembered so the header shows who you are straight away next time, while the app loads.
   useEffect(() => {

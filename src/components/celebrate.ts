@@ -1,7 +1,9 @@
-import confetti from "canvas-confetti";
-
-/** A burst of confetti for a winner. Skipped for people who prefer reduced motion. */
-export function celebrate() {
+/**
+ * A burst of confetti for a winner. Skipped for people who prefer reduced motion.
+ * The confetti code downloads the first time it's needed.
+ */
+export async function celebrate() {
+  const { default: confetti } = await import("canvas-confetti");
   const end = Date.now() + 1500;
   const opts = { disableForReducedMotion: true, zIndex: 3000 };
   confetti({ ...opts, particleCount: 140, spread: 90, origin: { y: 0.55 } });

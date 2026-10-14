@@ -422,8 +422,6 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
-    margin-right: -16px;
-    padding-right: 16px;
   }
   .bl-tags a {
     flex-shrink: 0;

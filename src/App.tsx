@@ -1,12 +1,7 @@
 import { Suspense, lazy, useCallback, useEffect, useState } from "react";
 import type { FamilyData, Session } from "../shared/types";
 import { api, forgetLegacyPerson, setSignedOutHandler } from "./api";
-import { HomePage } from "./views/HomePage";
 import { JoinPage, PersonLinkPage, SignInPage } from "./views/LinkPages";
-import { LegalView, legalPage } from "./views/Legal";
-import { CreatorsPage } from "./views/Creators";
-import { HowItWorksPage } from "./views/HowItWorks";
-import { InfoPage } from "./views/InfoPage";
 import { infoTitle } from "./infoPages";
 import { NotFound } from "./views/NotFound";
 import { PAGES, infoPage, isPrivatePath, publicPage } from "../shared/seo";
@@ -14,12 +9,35 @@ import { findDestination, searchTitle } from "./destinations";
 import { findHub, hubSearchTitle } from "./hubs";
 import { CREATORS, HOW } from "./site";
 import { findPost, loadedPost, postTitle } from "./blog";
-import { BlogIndex, BlogPost } from "./views/Blog";
 import { GuideView } from "./views/GuideView";
 import { followInPlace, isGuidePath } from "./navigate";
 import { load, save } from "./storage";
 import { AppSkeleton } from "./components/AppSkeleton";
 import { SIGNED_IN, forgetFamily, forgetFamilyData, lastFamily } from "./lastFamily";
+import { lazyView } from "./lazyView";
+
+// Each public page's code downloads only when it's visited (see lazyView). The Guides load with
+// the site, as they're most of what visitors open.
+const HomePage = lazyView(() => import("./views/HomePage").then((m) => m.HomePage));
+const LegalView = lazyView(() => import("./views/Legal").then((m) => m.LegalView));
+const CreatorsPage = lazyView(() => import("./views/Creators").then((m) => m.CreatorsPage));
+const HowItWorksPage = lazyView(() => import("./views/HowItWorks").then((m) => m.HowItWorksPage));
+const InfoPage = lazyView(() => import("./views/InfoPage").then((m) => m.InfoPage));
+const BlogIndex = lazyView(() => import("./views/Blog").then((m) => m.BlogIndex));
+const BlogPost = lazyView(() => import("./views/Blog").then((m) => m.BlogPost));
+
+/** Fetches the code for the page at this address, if it's one that loads on its own. */
+export function preloadPage(pathname: string): Promise<unknown> {
+  const page = publicPage(pathname);
+  if (page === "home") return HomePage.preload();
+  if (page === "privacy" || page === "terms") return LegalView.preload();
+  if (page === "creators") return CreatorsPage.preload();
+  if (page === "how") return HowItWorksPage.preload();
+  if (page === "blog") return BlogIndex.preload();
+  if (page?.startsWith("post:")) return BlogPost.preload();
+  if (infoPage(pathname)) return InfoPage.preload();
+  return Promise.resolve();
+}
 
 // The signed-in app (its views, the map and the draw) loads only once someone is signed in, so the
 // public pages that visitors and search engines see stay small and quick.
@@ -65,13 +83,12 @@ export function App() {
     document.title = pageTitle(path);
   }, [path]);
 
-  const legal = legalPage(path);
-  if (legal) return <LegalView page={legal} />;
-  if (publicPage(path) === "creators") return <CreatorsPage />;
-  if (publicPage(path) === "how") return <HowItWorksPage />;
+  const page = publicPage(path);
+  if (page === "privacy" || page === "terms") return <LegalView page={page} />;
+  if (page === "creators") return <CreatorsPage />;
+  if (page === "how") return <HowItWorksPage />;
   const info = infoPage(path);
   if (info) return <InfoPage page={info} />;
-  const page = publicPage(path);
   if (page === "blog") return <BlogIndex />;
   if (page?.startsWith("post:")) {
     const post = loadedPost(page.slice("post:".length));

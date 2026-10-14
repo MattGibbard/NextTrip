@@ -1,19 +1,12 @@
 /* The site's main styles, one file per area. The order matters: later files win when two rules clash. */
-/* draw, onboarding, postcard and share.css load with the signed-in app (SignedIn.tsx), destination.css from main.tsx. */
+/* Only what the public pages need is here, so they stay quick. The signed-in app's styles load with it
+   (SignedIn.tsx), destination.css from main.tsx and how-it-works.css with its page (HowItWorks.tsx). */
+@import "./styles/fonts.css"; /* Inter and DM Mono, from our own domain. */
 @import "./styles/base.css"; /* Colours, fonts and resets used everywhere. */
 @import "./styles/layout.css"; /* Page layout: the signed-in header, tabs and page width. */
 @import "./styles/components.css"; /* Buttons, cards, lists and the map. */
-@import "./styles/forms.css"; /* Forms and modals. */
-@import "./styles/trip-sheet.css"; /* The add and edit sheets for trips and ideas. */
-@import "./styles/person-picker.css"; /* Choosing which family member you are. */
 @import "./styles/home.css"; /* Signed-out pages: the home page, sign-in and family links. */
 @import "./styles/content-pages.css"; /* The creators page and the content pages (About, FAQ, Contact, How we make money, how to decide). */
-@import "./styles/how-it-works.css"; /* The How it works page and its animations. */
 @import "./styles/footer.css"; /* The footer on every public page. */
-@import "./styles/app.css"; /* Signed-in odds and ends: the draw, idea details, filters, the idea page and swiping. */
-@import "./styles/tickets.css"; /* The boarding-pass look: tickets, stats, the next departure and standby idea cards. */
-@import "./styles/places.css"; /* The Places tab: coverage and passport stamps. */
-@import "./styles/settings.css"; /* The Settings page. */
-@import "./styles/plan.css"; /* A won idea's trip plan: days, costs, packing and jobs before you go. */
-@import "./styles/book-links.css"; /* Find flights and hotels (affiliate links). */
+@import "./styles/labels.css"; /* Mode colours and type styles: labels, eyebrows and big headings. */
 @import "./styles/skeleton.css"; /* Loading placeholders. */

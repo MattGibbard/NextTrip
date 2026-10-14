@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { DESTINATIONS, LONDON, bestMonths, countryFlag, destinationCountry, destinationMeta, findDestination, flightHoursTo, loadDestination, loadedDestination, flightTime, ideaFromDestination, readDestination, shortIntro } from "../src/destinations";
+import { DESTINATIONS, LONDON, bestMonths, countryFlag, destinationCountry, destinationMeta, findDestination, flightHoursTo, loadDestination, loadedDestination, flightTime, photoProps, ideaFromDestination, readDestination, shortIntro } from "../src/destinations";
 import geo from "../content/destinations-geo.json";
 import { metaTags, publicPage } from "../shared/seo";
 
@@ -168,5 +168,21 @@ describe("the list of all guides", () => {
     const ny = findDestination("new-york")!;
     expect(flightHoursTo(LONDON, ny)).toBe(8);
     expect(flightTime(LONDON, ny)).toBe("About 8 hrs");
+  });
+});
+
+describe("photoProps", () => {
+  it("offers the smaller copies the build makes, up to the photo's own width", () => {
+    expect(photoProps("/images/destinations/a_1280.webp", [1280, 854], "100vw")).toEqual({
+      src: "/images/destinations/a_1280.webp",
+      srcSet: "/images/sized/480/a_1280.webp 480w, /images/sized/800/a_1280.webp 800w, /images/destinations/a_1280.webp 1280w",
+      sizes: "100vw",
+    });
+    expect(photoProps("images/destinations/b.jpg", [600, 400], "100vw").srcSet).toBe("/images/sized/480/b.webp 480w, /images/destinations/b.jpg 600w");
+  });
+
+  it("uses other photos as they are", () => {
+    expect(photoProps("https://example.com/x.jpg", [1280, 854], "100vw")).toEqual({ src: "https://example.com/x.jpg" });
+    expect(photoProps("/images/destinations/a.webp", null, "100vw")).toEqual({ src: "https://somewhere.party/images/destinations/a.webp" });
   });
 });

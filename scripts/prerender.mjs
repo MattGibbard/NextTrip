@@ -2,7 +2,7 @@
 // previews can read them, plus a bare app shell for the private pages, which the Worker serves
 // with noindex (worker/pages.ts).
 import { execFileSync } from "node:child_process";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { createServer } from "vite";
 import react from "@vitejs/plugin-react";
 import { destinationCards } from "./destination-cards.mjs";
@@ -51,10 +51,26 @@ try {
   const base = shell.replace(/\s*<title>[^<]*<\/title>/, "").replace(/\s*<meta name="description"[^>]*>/, "");
   if (base === shell || !base.includes('<div id="root"></div>')) throw new Error("index.html doesn't look as expected");
 
+  // The site's stylesheet goes inside each page rather than as a separate file, so the page can draw
+  // as soon as its HTML arrives instead of waiting on a second download. (The app shell keeps the link.)
+  // A page whose code loads on its own (see lazyView) links its own styles too, so it's styled before
+  // that code arrives; the same link then stops the code fetching them twice.
+  const cssLink = shell.match(/\s*<link rel="stylesheet"[^>]*href="(\/assets\/index-[\w-]+\.css)"[^>]*>/);
+  if (!cssLink) throw new Error("index.html has no stylesheet link to put inside the pages");
+  const css = (await readFile(new URL(`.${cssLink[1]}`, OUT), "utf8")).replaceAll("</style", "<\\/style");
+  const assets = await readdir(new URL("assets/", OUT));
+  const ownStyles = (name) => {
+    const file = assets.find((f) => f.startsWith(`${name}-`) && f.endsWith(".css"));
+    if (!file) throw new Error(`No ${name} styles in the build`);
+    return `\n    <link rel="stylesheet" crossorigin href="/assets/${file}">`;
+  };
+  const pageStyles = { how: ownStyles("HowItWorks") };
+  const styled = (page) => base.replace(cssLink[0], () => `\n    <style>${css}</style>${pageStyles[page] ?? ""}`);
+
   const list = pages().map((p) => ({ ...p, updated: gitDate(p.source), published: gitDate(p.source, true) }));
   for (const { page, file, updated, published } of list) {
     // Replacer functions, so a "$" in the page's words isn't read as a replacement pattern.
-    const html = base
+    const html = styled(page)
       .replace("</head>", () => `  ${headTags(page, updated, published)}\n  </head>`)
       .replace('<div id="root"></div>', () => `<div id="root" data-page="${page}">${render(page)}</div>`);
     const out = new URL(file, OUT);

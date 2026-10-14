@@ -1,0 +1,76 @@
+/* ---------- Mode colours and type styles (labels, eyebrows, big headings) ---------- */
+/* Used by the public pages and the app alike. The tickets themselves are in tickets.css. */
+
+.mode-flight {
+  --mode: var(--flight);
+  --mode-ink: var(--flight-ink);
+  --mode-line: var(--flight-line);
+}
+.mode-train {
+  --mode: var(--train);
+  --mode-ink: var(--train-ink);
+  --mode-line: var(--train-line);
+}
+.mode-cruise {
+  --mode: var(--cruise);
+  --mode-ink: var(--cruise-ink);
+  --mode-line: var(--cruise-line);
+}
+.mode-road {
+  --mode: var(--road);
+  --mode-ink: var(--road-ink);
+  --mode-line: var(--road-line);
+}
+.standby {
+  --mode: var(--standby);
+  --mode-ink: var(--standby-ink);
+  --mode-line: var(--standby-line);
+}
+.mode-ink {
+  color: var(--mode-ink);
+}
+.standby-ink {
+  color: var(--standby-ink) !important;
+}
+
+.mono-label {
+  font: 500 var(--text-3) var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.eyebrow {
+  font: 500 var(--text-4) var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.display {
+  font-size: var(--text-18);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.display-2 {
+  font-size: var(--text-14);
+  font-weight: 800;
+}
+@media (min-width: 760px) {
+  .display {
+    font-size: clamp(2rem, 3.4vw, 2.5rem);
+  }
+  .display-2 {
+    font-size: var(--text-18);
+  }
+}
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.page-head {
+  align-items: flex-end;
+}
+.page-sub {
+  margin-top: 0.35rem;
+}

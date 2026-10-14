@@ -25,5 +25,22 @@ export async function servePage(req: Request, env: Env): Promise<Response> {
     res.headers.set("X-Robots-Tag", "noindex");
     return res;
   }
-  return env.ASSETS.fetch(req);
+  const res = await env.ASSETS.fetch(req);
+  const cache = cacheFor(url.pathname);
+  if (!cache || !res.ok) return res;
+  const cached = new Response(res.body, res);
+  cached.headers.set("Cache-Control", cache);
+  return cached;
+}
+
+/**
+ * How long browsers may keep a built file without checking back. Built code and styles have the
+ * content in their names, so a change is a new address and they can be kept for good; fonts are
+ * renamed if they ever change. Guide photos keep their names when edited, so they're kept a week.
+ * Pages aren't listed: they always check for the latest.
+ */
+export function cacheFor(pathname: string): string | null {
+  if (pathname.startsWith("/assets/") || pathname.startsWith("/fonts/")) return "public, max-age=31536000, immutable";
+  if (pathname.startsWith("/images/")) return "public, max-age=604800";
+  return null;
 }

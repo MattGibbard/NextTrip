@@ -1,4 +1,5 @@
 import type { CSSProperties, ReactNode } from "react";
+import "../styles/how-it-works.css";
 import { HOW, HOW_STEPS } from "../site";
 import type { HowStep } from "../site";
 import { SiteFooter, SiteHeader } from "../components/SiteFrame";

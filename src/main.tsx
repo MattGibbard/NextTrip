@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot, hydrateRoot } from "react-dom/client";
 import "./styles.css";
 import "./styles/destination.css";
-import { App } from "./App";
+import { App, preloadPage } from "./App";
 import { SiteBanner } from "./components/SiteBanner";
 import "./install";
 import "./theme";
@@ -29,16 +29,19 @@ function start() {
     createRoot(root).render(app);
   }
 }
-// A guide's full text, or a hub's words, is its own file. Fetch it before starting, so the page picks
-// up from the HTML as it is rather than flashing empty while it arrives. Guides and hubs share addresses.
+// A guide's full text, or a hub's words, is its own file, and so is the code for most pages. Fetch them
+// before starting, so the page picks up from the HTML as it is rather than flashing empty while they
+// arrive. Guides and hubs share addresses.
 const opening = publicPage(location.pathname);
-if (opening?.startsWith("destination:")) {
-  const slug = opening.slice("destination:".length);
-  void Promise.all([loadDestination(slug), loadHub(slug)]).catch(() => {}).finally(start);
-} else if (opening?.startsWith("post:")) {
+const slug = opening?.startsWith("destination:") ? opening.slice("destination:".length) : "";
+void Promise.all([
+  preloadPage(location.pathname),
+  ...(slug ? [loadDestination(slug), loadHub(slug)] : []),
   // Likewise a blog post.
-  void loadPost(opening.slice("post:".length)).catch(() => {}).finally(start);
-} else start();
+  ...(opening?.startsWith("post:") ? [loadPost(opening.slice("post:".length))] : []),
+])
+  .catch(() => {})
+  .finally(start);
 
 // Lets the site work as an installed app from the home screen. Skipped in dev so Vite's reloads aren't cached.
 if (import.meta.env.PROD && "serviceWorker" in navigator) {

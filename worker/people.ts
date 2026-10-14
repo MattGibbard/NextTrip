@@ -25,7 +25,7 @@ export function peopleRoutes(app: Hono<App>) {
     const db = c.env.DB;
     const count = await db.prepare("SELECT COUNT(*) AS n FROM people WHERE family_id = ? AND removed = 0").bind(c.get("family")).first<{ n: number }>();
     if ((count?.n ?? 0) >= 30) throw new HttpError(409, "A family can have up to 30 people");
-    const row = await db.prepare("INSERT INTO people (name, color, family_id) VALUES (?, ?, ?) RETURNING id")
+    const row = await db.prepare("INSERT INTO people (name, color, family_id, created_at) VALUES (?, ?, ?, datetime('now')) RETURNING id")
       .bind(name, color ?? "#2563eb", c.get("family"))
       .first<{ id: number }>();
     if (viewerId(c) === null) {

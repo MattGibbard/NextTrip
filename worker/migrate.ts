@@ -34,3 +34,14 @@ export async function migrate(db: D1Database, migrations = MIGRATIONS) {
     ]);
   }
 }
+
+let schemaReady: Promise<void> | null = null;
+
+/** Runs the migrations once per Worker instance, trying again next time if they fail. */
+export function ensureSchema(db: D1Database): Promise<void> {
+  schemaReady ??= migrate(db).catch((err) => {
+    schemaReady = null;
+    throw err;
+  });
+  return schemaReady;
+}

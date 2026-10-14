@@ -133,15 +133,14 @@ async function sendSignInEmail(env: Env, to: string, link: string, code: string)
 }
 
 /** The site key for the sign-in form's bot check, when the check is switched on. */
-const turnstileKey = (env: Env) => (env.TURNSTILE_SITE_KEY && env.TURNSTILE_SECRET_KEY ? env.TURNSTILE_SITE_KEY : null);
+export const turnstileKey = (env: Env) => (env.TURNSTILE_SITE_KEY && env.TURNSTILE_SECRET_KEY ? env.TURNSTILE_SITE_KEY : null);
 
-/** Asks Cloudflare whether the bot check on the sign-in form passed. Each answer works once. */
-async function passedTurnstile(c: Ctx, token: unknown): Promise<boolean> {
+/** Asks Cloudflare whether the bot check on a sign-in form passed. Each answer works once. */
+export async function passedTurnstile(env: Env, token: unknown, ip: string | null | undefined): Promise<boolean> {
   if (typeof token !== "string" || !token || token.length > 2048) return false;
   const form = new FormData();
-  form.set("secret", c.env.TURNSTILE_SECRET_KEY!);
+  form.set("secret", env.TURNSTILE_SECRET_KEY!);
   form.set("response", token);
-  const ip = c.req.header("CF-Connecting-IP");
   if (ip) form.set("remoteip", ip);
   const res = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", { method: "POST", body: form }).catch(() => null);
   const data = (await res?.json().catch(() => null)) as { success?: boolean; "error-codes"?: string[] } | null;
@@ -207,7 +206,7 @@ export function authRoutes(app: Hono<App>) {
     const dev = c.env.DEV_LOGIN_LINKS === "1";
     if (!c.env.RESEND_API_KEY && !dev) throw new HttpError(503, "Sign-in emails aren't set up yet");
     // Stops scripts sending sign-in emails to lots of addresses and using up the day's emails.
-    if (turnstileKey(c.env) && !(await passedTurnstile(c, b.turnstile))) {
+    if (turnstileKey(c.env) && !(await passedTurnstile(c.env, b.turnstile, c.req.header("CF-Connecting-IP")))) {
       throw new HttpError(403, "We couldn't check you're not a bot. Reload the page and try again.");
     }
     const db = c.env.DB;

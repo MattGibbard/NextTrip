@@ -113,6 +113,30 @@ it("turns away wrong codes and stops after a few tries", async () => {
   expect((await post({ action: "code", email: "owner@example.com", code })).status).toBe(400);
 });
 
+it("needs the bot check to send a code once it's switched on", async () => {
+  const bot = { ...env, TURNSTILE_SITE_KEY: "site-key", TURNSTILE_SECRET_KEY: "secret" } as Env;
+  const send = (extra: Record<string, string>) =>
+    worker.fetch(
+      new Request(`${ORIGIN}/stats`, {
+        method: "POST",
+        headers: { Origin: ORIGIN, "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ action: "send", email: "owner@example.com", ...extra }).toString(),
+      }),
+      bot,
+      ctx,
+    );
+  vi.stubGlobal("fetch", async (url: string, init: RequestInit) => {
+    expect(url).toBe("https://challenges.cloudflare.com/turnstile/v0/siteverify");
+    return Response.json({ success: (init.body as FormData).get("response") === "good" });
+  });
+  expect(await (await stats(null, bot)).text()).toContain('data-sitekey="site-key"');
+  expect((await send({})).status).toBe(403);
+  expect((await send({ "cf-turnstile-response": "bad" })).status).toBe(403);
+  const ok = await send({ "cf-turnstile-response": "good" });
+  expect(ok.status).toBe(200);
+  expect(await ok.text()).toContain("Test code");
+});
+
 it("ignores forms posted from another site", async () => {
   expect((await post({ action: "send", email: "owner@example.com" }, null, "https://evil.example")).status).toBe(403);
 });

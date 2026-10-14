@@ -8,6 +8,9 @@ on:
       - "content/blog/**"
       - "content/destinations/**"
       - "content/hubs/**"
+permissions:
+  contents: read
+  checks: read
 jobs:
   ping:
     runs-on: ubuntu-latest
@@ -19,4 +22,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node scripts/indexnow.mjs "${{ github.event.before }}" "${{ github.sha }}"
+      - env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/indexnow.mjs "${{ github.event.before }}" "${{ github.sha }}"

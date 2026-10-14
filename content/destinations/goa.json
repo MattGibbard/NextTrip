@@ -1,0 +1,179 @@
+{
+  "name": "Goa",
+  "published": true,
+  "country": "IN",
+  "title": "Holidays in Goa",
+  "intro": "Palm-fringed beaches, Portuguese churches and one of India's biggest Christmas celebrations. Here's what Goa is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Goa",
+  "to_code": "GOX",
+  "holiday_types": [
+    "beach",
+    "food",
+    "culture"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4½ to 5½ hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Indian rupee (₹)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "e-Visa needed",
+      "highlight": true
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / D / M · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Most visitors need an Indian e-Visa, applied for online before you go. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, hot"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Monsoon"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Monsoon"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Monsoon"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Monsoon"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Green, warm"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas, busy"
+    }
+  },
+  "when_to_go": "November to March is dry and sunny, and Christmas is the liveliest and busiest time, with midnight mass, stars hung outside houses and parties on the beach. April and May get very hot, and the monsoon runs June to September.",
+  "things": [
+    {
+      "name": "South Goa beaches",
+      "tag": "Free",
+      "blurb": "Benaulim, Varca and Palolem are calmer and quieter than the north, with soft sand and gentle waves.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Christmas in Goa",
+      "tag": "Free",
+      "blurb": "Goa has a big Catholic community, so churches fill for midnight mass and villages light up with paper stars and cribs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old Goa",
+      "tag": "Free",
+      "blurb": "Grand Portuguese churches, including the Basilica of Bom Jesus, a World Heritage Site.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fontainhas",
+      "tag": "Free",
+      "blurb": "The old Latin quarter of Panaji, with brightly painted houses and narrow lanes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spice plantation",
+      "tag": "Tour",
+      "blurb": "A walk through a spice farm with a buffet lunch on banana leaves.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dolphin spotting",
+      "tag": "Tour",
+      "blurb": "Early morning boat trips go looking for dolphins off the coast.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Goa good for a family holiday?",
+      "answer": "Yes. It's good value, warm in winter and relaxed, especially in South Goa."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Yes, British passport holders need an Indian e-Visa, applied for online before you travel. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "North or South Goa?",
+      "answer": "North Goa is livelier, with markets and nightlife. South Goa has quieter, cleaner beaches and suits families better."
+    },
+    {
+      "question": "Is Christmas a good time to go?",
+      "answer": "Yes, the weather is perfect and the festivities are lovely, but prices peak, so book well ahead."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kerala",
+      "code": "COK",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Oman",
+      "code": "MCT",
+      "label": "☀️ Winter sun"
+    },
+    {
+      "name": "Maldives",
+      "code": "MLE",
+      "label": "🧘 Relax & spa"
+    }
+  ]
+}

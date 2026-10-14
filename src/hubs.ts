@@ -1,8 +1,8 @@
-// Hub pages: one page for a kind of holiday ("Beach holidays"), a country ("Holidays in Spain") or a
-// month ("Where to go on holiday in February"), listing every guide that fits. Each is a JSON file in content/hubs, written in the editor at /admin.
+// Hub pages: one page for a kind of holiday ("Beach holidays"), a country ("Holidays in Spain"), a
+// month ("Where to go on holiday in February") or a hand-picked collection ("Christmas holidays"), listing every guide that fits. Each is a JSON file in content/hubs, written in the editor at /admin.
 // They live at /destinations/<slug>, next to the guides, so a hub's slug must not be a guide's.
 // The guides on a hub come from the guides themselves, so a new beach guide joins the beach hub by itself,
-// and a new guide rated "best" for February joins the February page.
+// and a new guide rated "best" for February joins the February page. A collection lists the guides the editor picked.
 import { HOLIDAY_TYPES } from "../shared/ideaDetails";
 import type { HolidayType } from "../shared/ideaDetails";
 import { SITE, destinationPath } from "../shared/seo";
@@ -10,7 +10,7 @@ import type { Meta } from "../shared/seo";
 import { DESTINATIONS, MONTHS, countryFlag, destinationCountry, findDestination, imageUrl } from "./destinations";
 import type { DestinationCard } from "./destinations";
 
-export type HubKind = "type" | "country" | "month";
+export type HubKind = "type" | "country" | "month" | "collection";
 
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -22,8 +22,12 @@ export interface Hub {
   holiday_type: HolidayType | null;
   /** For a country hub, ISO 3166-1 alpha-2, upper case. */
   country_code: string;
-  /** For a month hub, its number (0 is January). */
+  /** For a month hub, its number (0 is January). A collection can have one too, when it's about a time of year. */
   month: number | null;
+  /** For a collection, the slugs of the guides it lists. */
+  guides: string[];
+  /** For a collection, the emoji on its links. */
+  icon: string;
   /** What links to the hub say: "Beach holidays", "Spain". */
   name: string;
   /** The page heading. */
@@ -44,10 +48,10 @@ const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
 export function readHub(slug: string, raw: Record<string, unknown>): Hub {
   const holiday_type = HOLIDAY_TYPES.find((t) => t.key === raw.holiday_type)?.key ?? null;
   const code = /^[A-Za-z]{2}$/.test(str(raw.country)) ? str(raw.country).toUpperCase() : "";
-  const kind: HubKind = raw.kind === "country" ? "country" : raw.kind === "month" ? "month" : "type";
+  const kind: HubKind = raw.kind === "country" || raw.kind === "month" || raw.kind === "collection" ? raw.kind : "type";
   const type = HOLIDAY_TYPES.find((t) => t.key === holiday_type);
   const m = MONTHS.indexOf(str(raw.month).toLowerCase() as (typeof MONTHS)[number]);
-  const month = kind === "month" && m >= 0 ? m : null;
+  const month = (kind === "month" || kind === "collection") && m >= 0 ? m : null;
   const name =
     str(raw.name) ||
     (kind === "country" ? (code ? destinationCountry(code) : slug) : kind === "month" ? (month !== null ? MONTH_NAMES[month] : slug) : type ? `${type.label} holidays` : slug);
@@ -58,6 +62,8 @@ export function readHub(slug: string, raw: Record<string, unknown>): Hub {
     holiday_type: kind === "type" ? holiday_type : null,
     country_code: kind === "country" ? code : "",
     month,
+    guides: kind === "collection" && Array.isArray(raw.guides) ? [...new Set(raw.guides.map(str).filter(Boolean))] : [],
+    icon: kind === "collection" ? str(raw.icon) : "",
     name,
     title: str(raw.title) || (kind === "country" ? `Holidays in ${name}` : kind === "month" ? `Where to go on holiday in ${name}` : name),
     intro: str(raw.intro),
@@ -70,8 +76,9 @@ export function readHub(slug: string, raw: Record<string, unknown>): Hub {
   };
 }
 
-/** The guides a hub lists, A to Z. A month lists the guides at their best that month. */
+/** The guides a hub lists, A to Z. A month lists the guides at their best that month, a collection the ones picked for it. */
 export function hubGuides(h: HubCard): DestinationCard[] {
+  if (h.kind === "collection") return DESTINATIONS.filter((d) => h.guides.includes(d.slug));
   if (h.kind === "month") return h.month === null ? [] : DESTINATIONS.filter((d) => d.months[h.month!]?.rating === "best");
   return DESTINATIONS.filter((d) => (h.kind === "country" ? d.country_code === h.country_code : !!h.holiday_type && d.holiday_types.includes(h.holiday_type)));
 }
@@ -81,8 +88,9 @@ export function alsoGood(h: HubCard): DestinationCard[] {
   return h.kind === "month" && h.month !== null ? DESTINATIONS.filter((d) => d.months[h.month!]?.rating === "good") : [];
 }
 
-/** What a hub is about, for its links: a holiday type's icon, a country's flag or the month's season. */
+/** What a hub is about, for its links: a holiday type's icon, a country's flag, the month's season or a collection's own emoji. */
 export function hubIcon(h: HubCard): string {
+  if (h.kind === "collection") return h.icon;
   if (h.kind === "type") return HOLIDAY_TYPES.find((t) => t.key === h.holiday_type)?.icon ?? "";
   if (h.kind === "month") return h.month === null ? "" : ["❄️", "❄️", "🌷", "🌷", "🌷", "☀️", "☀️", "☀️", "🍂", "🍂", "🍂", "❄️"][h.month];
   return countryFlag(h.country_code);
@@ -94,11 +102,12 @@ const slugOf = (path: string) => path.replace(/^.*\/|\.json(\?.*)?$/g, "");
 const cards = import.meta.glob<Record<string, unknown>>("/content/hubs/*.json", { eager: true, query: "?card", import: "default" });
 const files = import.meta.glob<Record<string, unknown>>("/content/hubs/*.json", { import: "default" });
 
-const KIND_ORDER: HubKind[] = ["type", "month", "country"];
-const fits = (h: Hub) => (h.kind === "country" ? !!h.country_code : h.kind === "month" ? h.month !== null : !!h.holiday_type);
+const KIND_ORDER: HubKind[] = ["type", "month", "collection", "country"];
+const fits = (h: Hub) =>
+  h.kind === "country" ? !!h.country_code : h.kind === "month" ? h.month !== null : h.kind === "collection" ? h.guides.length > 0 : !!h.holiday_type;
 
 /**
- * Every published hub with at least one guide: holiday types in the usual order, then months, then countries A to Z.
+ * Every published hub with at least one guide: holiday types in the usual order, then months, then collections and countries A to Z.
  * A slug that's also a guide's goes to the guide, so such a hub is left out.
  */
 export const HUBS: HubCard[] = Object.entries(cards)
@@ -149,9 +158,9 @@ export async function loadHub(slug: string): Promise<Hub | undefined> {
   return h;
 }
 
-/** A hub's title in search results: the editor's own, or "Beach holidays: where to go and when" ("Where to go on holiday in May" for a month). */
+/** A hub's title in search results: the editor's own, or "Beach holidays: where to go and when" (just the heading for a month or a collection). */
 export function hubSearchTitle(h: HubCard): string {
-  return `${h.seo_title || (h.kind === "month" ? h.title : `${h.title}: where to go and when`)} | somewhere🎉`;
+  return `${h.seo_title || (h.kind === "month" || h.kind === "collection" ? h.title : `${h.title}: where to go and when`)} | somewhere🎉`;
 }
 
 /** Title, description and search-result data for a hub's page. `updated` is when its words last changed, as an ISO date, if known. */

@@ -1,0 +1,179 @@
+{
+  "name": "Gran Canaria",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Gran Canaria",
+  "intro": "Golden dunes, year-round sunshine and a Christmas nativity made of sand, about four hours from the UK. Here's what Gran Canaria is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Gran_Canaria",
+  "to_code": "LPA",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "relax"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same time as the UK",
+      "highlight": true
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Winter sun"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Winter sun"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Easter, busy"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Winter sun"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas sun"
+    }
+  },
+  "when_to_go": "October to March is the best time for winter sun, at around 20 to 24°C, with Christmas and New Year the busiest and dearest weeks. Summer is hot and busy, with the south sunnier than the north all year.",
+  "things": [
+    {
+      "name": "Maspalomas Dunes",
+      "tag": "Free",
+      "blurb": "Huge golden sand dunes running down to the sea, like a small desert.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sand nativity at Las Canteras",
+      "tag": "Free",
+      "blurb": "Each Christmas, sculptors build a big nativity scene from sand on Las Palmas's city beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Puerto de Mogán",
+      "tag": "Free",
+      "blurb": "A pretty harbour of flower-covered houses and canals, with a calm beach for little ones.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Palmitos Park",
+      "tag": "Ticketed",
+      "blurb": "A zoo and botanical park with dolphins, birds of prey and a butterfly house.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Aqualand Maspalomas",
+      "tag": "Ticketed",
+      "blurb": "The island's biggest waterpark, with slides for all ages.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Roque Nublo",
+      "tag": "Outdoors",
+      "blurb": "A short, steep walk to a giant rock pillar in the mountains, with views to Tenerife's Mount Teide.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Gran Canaria good for a family holiday?",
+      "answer": "Yes. It's warm all year, the flight is about four hours, and there are calm beaches, waterparks and plenty of family hotels."
+    },
+    {
+      "question": "Is it warm at Christmas?",
+      "answer": "Yes, usually 20 to 24°C in the day, warm enough for the beach. Evenings are cooler, so pack a jumper."
+    },
+    {
+      "question": "Which area is best for families?",
+      "answer": "The south, around Maspalomas, Meloneras and Puerto de Mogán, is sunniest and has the calmest beaches."
+    },
+    {
+      "question": "Gran Canaria or Tenerife?",
+      "answer": "Both are warm in winter. Gran Canaria has the dunes and a lively capital. Tenerife has Mount Teide and Siam Park."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tenerife",
+      "code": "TFS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lanzarote",
+      "code": "ACE",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Cape Verde",
+      "code": "SID",
+      "label": "☀️ Winter sun"
+    }
+  ]
+}

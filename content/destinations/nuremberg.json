@@ -1,0 +1,179 @@
+{
+  "name": "Nuremberg",
+  "published": true,
+  "country": "DE",
+  "title": "Holidays in Nuremberg",
+  "intro": "Gingerbread, sausages and one of Germany's most famous Christmas markets, under a medieval castle. Here's what Nuremberg is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Nuremberg",
+  "to_code": "NUE",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Markets open"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "Late November to Christmas Eve is when the Christkindlesmarkt is on, and the city is at its busiest. May, June and September are warm and good for walking the old walls. January and February are cold and quiet.",
+  "things": [
+    {
+      "name": "Christkindlesmarkt",
+      "tag": "Free",
+      "blurb": "Around 150 red-and-white stalls fill the main square, selling gingerbread, prune-figure dolls and little Nuremberg sausages in a bun.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Children's Christmas market",
+      "tag": "Free",
+      "blurb": "A separate market with a carousel, a steam train ride and baking sessions for children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Imperial Castle",
+      "tag": "Ticketed",
+      "blurb": "Climb up to the castle for the best view over the red roofs of the old town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Toy Museum",
+      "tag": "Indoors",
+      "blurb": "Nuremberg has been a toy-making city for centuries, and this museum shows dolls' houses, tin toys and model railways.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "DB Railway Museum",
+      "tag": "Indoors",
+      "blurb": "Germany's first train ran from here, and the museum has old steam engines and a children's play area.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Documentation Centre",
+      "tag": "Indoors",
+      "blurb": "A serious exhibition at the Nazi rally grounds, best for older children and teenagers.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Nuremberg good for a family holiday?",
+      "answer": "Yes, especially at Christmas. There's a dedicated children's market, and the toy and railway museums are good for cold days."
+    },
+    {
+      "question": "When is the Christmas market on?",
+      "answer": "It opens on the Friday before the first Sunday of Advent and runs until 24 December. The opening night, when the Christkind reads the prologue, is very busy."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three nights is plenty for the markets, castle and a museum or two."
+    },
+    {
+      "question": "Can we eat well on a budget?",
+      "answer": "Yes. Three sausages in a bun from a market stall makes a cheap, filling lunch, and gingerbread is sold everywhere."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Dresden",
+      "code": "DRS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Cologne",
+      "code": "CGN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Prague",
+      "code": "PRG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Strasbourg",
+      "code": "SXB",
+      "label": "🍷 Food & drink"
+    }
+  ]
+}

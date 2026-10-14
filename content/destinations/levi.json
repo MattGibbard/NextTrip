@@ -1,0 +1,179 @@
+{
+  "name": "Levi",
+  "published": true,
+  "country": "FI",
+  "title": "Holidays in Levi",
+  "intro": "Finnish Lapland's biggest ski resort, with husky rides, reindeer farms and Santa in the forest at Christmas. Here's what Levi is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Levi,_Finland",
+  "to_code": "KTT",
+  "holiday_types": [
+    "ski",
+    "adventure",
+    "nature"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Snow, lights"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Snow, lights"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Snow, sunnier"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring snow"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Thaw"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Midnight sun"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Midnight sun"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn colours"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Before the snow"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Christmas starts"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas, busy"
+    }
+  },
+  "when_to_go": "December is the magical, busiest and dearest time for a Santa trip, with snow almost certain. January to March is quieter and colder, with longer days for skiing and good odds of the northern lights. Summer has the midnight sun and hiking.",
+  "things": [
+    {
+      "name": "Meet Santa",
+      "tag": "Tour",
+      "blurb": "Lapland trips from the UK usually include a sleigh ride through the forest to meet Santa in a log cabin.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Husky safari",
+      "tag": "Ticketed",
+      "blurb": "Ride through snowy forest behind a team of excited dogs, or drive your own sled with an older child.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Reindeer farm",
+      "tag": "Ticketed",
+      "blurb": "Meet the herders, feed the reindeer and take a gentle sleigh ride.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Skiing at Levi",
+      "tag": "Ticketed",
+      "blurb": "Over 40 slopes with gentle runs for beginners and a ski school with lessons in English.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lainio Snow Village",
+      "tag": "Ticketed",
+      "blurb": "A village of rooms and sculptures carved from snow and ice, rebuilt every winter, about 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Northern lights",
+      "tag": "Tour",
+      "blurb": "Snowmobile sleds and minibus tours take you away from the resort lights to look for the aurora.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Levi good for a family holiday?",
+      "answer": "Yes. It's compact, with hotels, slopes and activities close together, and tour companies lend thermal suits and boots."
+    },
+    {
+      "question": "Levi or Rovaniemi for a Santa trip?",
+      "answer": "Rovaniemi has Santa Claus Village and is a city. Levi is a ski resort in the countryside, with more snow sports and a quieter, more remote feel."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four nights covers a Santa visit, huskies and reindeer. Stay a week to add skiing."
+    },
+    {
+      "question": "How cold does it get?",
+      "answer": "Usually -10°C to -25°C in December and January. Layers, thermals, a hat and mittens are essential."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Rovaniemi",
+      "code": "RVN",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Saariselkä",
+      "code": "IVL",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Tromsø",
+      "code": "TOS",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Lofoten",
+      "code": "BOO",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

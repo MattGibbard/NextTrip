@@ -25,8 +25,8 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
   const from = airport?.code && airport.lat !== null ? { code: airport.code, name: airport.name, lat: airport.lat, lon: airport.lon } : LONDON;
   const [month, setMonth] = useState<number | null>(null);
   const [showing, setShowing] = useState(BATCH);
-  // A month's page is always about its own month; the others look at this month once the page is up.
-  const own = hub.kind === "month" ? hub.month : null;
+  // A month's page, or a collection with a month, is always about that month; the others look at this month once the page is up.
+  const own = hub.kind === "month" || hub.kind === "collection" ? hub.month : null;
   useEffect(() => setMonth(own ?? new Date().getMonth()), [own]);
   const shown = own ?? month;
 
@@ -57,7 +57,7 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
               <span aria-hidden>›</span>
               <span aria-current="page">{hub.name}</span>
             </nav>
-            <Label>{`${icon} ${hub.kind === "type" ? "HOLIDAY TYPE" : hub.kind === "month" ? "WHEN TO GO" : "COUNTRY"}`.trim()}</Label>
+            <Label>{`${icon} ${hub.kind === "type" ? "HOLIDAY TYPE" : hub.kind === "month" ? "WHEN TO GO" : hub.kind === "collection" ? "HOLIDAY IDEAS" : "COUNTRY"}`.trim()}</Label>
             <h1>{hub.title}</h1>
             {hub.intro && <p className="dg-intro">{hub.intro}</p>}
           </div>
@@ -195,6 +195,7 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
 
         <HubLinks kind="type" heading={hub.kind === "type" ? "Other kinds of holiday" : "Browse by holiday type"} except={hub.slug} />
         <HubLinks kind="month" heading={hub.kind === "month" ? "Other months" : "Browse by month"} except={hub.slug} />
+        <HubLinks kind="collection" heading={hub.kind === "collection" ? "More holiday ideas" : "Holiday ideas"} except={hub.slug} />
         <HubLinks kind="country" heading={hub.kind === "country" ? "Other countries" : "Browse by country"} except={hub.slug} />
 
         {!signedIn && (

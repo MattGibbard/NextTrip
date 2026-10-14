@@ -1,0 +1,179 @@
+{
+  "name": "Colmar",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Colmar",
+  "intro": "A fairytale Alsace town of painted houses and canals that looks like a Christmas card in December. Here's what Colmar is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Colmar",
+  "to_code": "BSL",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Grape harvest"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colours"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Markets open"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "Late November to the end of December brings six small Christmas markets and lights on every street. Late spring and September are warm, with wine villages and the grape harvest nearby. January to March is cold and quiet.",
+  "things": [
+    {
+      "name": "Christmas markets",
+      "tag": "Free",
+      "blurb": "Six markets spread through the old town, including a children's market in Little Venice with a letterbox for Santa.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Little Venice",
+      "tag": "Free",
+      "blurb": "Colourful houses lean over a canal. Take a flat-bottomed boat ride in the warmer months.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Unterlinden Museum",
+      "tag": "Indoors",
+      "blurb": "A former convent with the famous Isenheim Altarpiece and a good mix of art.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alsace wine villages",
+      "tag": "Day trip",
+      "blurb": "Riquewihr, Kaysersberg and Eguisheim are a short drive away, and each has its own Christmas market.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Haut-Koenigsbourg Castle",
+      "tag": "Ticketed",
+      "blurb": "A rebuilt medieval castle on a hilltop, with towers to climb and views across to the Black Forest.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mountain of Monkeys",
+      "tag": "Ticketed",
+      "blurb": "Barbary macaques roam free in a forest park near Kintzheim, and children can feed them popcorn. Open spring to autumn.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Colmar good for a family holiday?",
+      "answer": "Yes. It's small, walkable and pretty, with a children's Christmas market and easy day trips to castles and villages."
+    },
+    {
+      "question": "When are the Christmas markets on?",
+      "answer": "Usually from the last week of November to about 29 December. Weekends are crowded, so go on a weekday if you can."
+    },
+    {
+      "question": "How do you get to Colmar?",
+      "answer": "Fly to Basel-Mulhouse, about an hour away, or take the train from Strasbourg in around 30 minutes."
+    },
+    {
+      "question": "Should we stay in Colmar or Strasbourg?",
+      "answer": "Colmar is smaller and quieter with a cosier feel. Strasbourg has more to do on a longer stay. Many families do both."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Strasbourg",
+      "code": "SXB",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Annecy",
+      "code": "GVA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Dordogne",
+      "code": "EGC",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Ghent",
+      "code": "BRU",
+      "label": "🏙️ City break"
+    }
+  ]
+}

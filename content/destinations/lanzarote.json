@@ -1,0 +1,179 @@
+{
+  "name": "Lanzarote",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Lanzarote",
+  "intro": "Volcanoes, black lava fields and calm golden beaches, with warm sunshine right through Christmas. Here's what Lanzarote is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lanzarote",
+  "to_code": "ACE",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "relax"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same time as the UK",
+      "highlight": true
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Winter sun"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Winter sun"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Easter, busy"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Winter sun"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas sun"
+    }
+  },
+  "when_to_go": "October to April is the best time for winter sun, at around 20 to 23°C, though it can be breezy. Christmas and New Year are the busiest and dearest weeks. Summer is hot and dry.",
+  "things": [
+    {
+      "name": "Timanfaya National Park",
+      "tag": "Ticketed",
+      "blurb": "Ride a coach through a moonscape of volcanoes and watch guides cook chicken on the heat from the ground.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Papagayo beaches",
+      "tag": "Free",
+      "blurb": "Sheltered golden coves in the far south with calm, clear water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jameos del Agua",
+      "tag": "Ticketed",
+      "blurb": "A lava cave with a glowing lagoon of tiny blind white crabs, designed by local artist César Manrique.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cueva de los Verdes",
+      "tag": "Tour",
+      "blurb": "A guided walk through a long lava tube, with a surprise at the end.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rancho Texas Lanzarote Park",
+      "tag": "Ticketed",
+      "blurb": "A Wild West animal park with sea lion and birds of prey shows.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Teguise Sunday market",
+      "tag": "Free",
+      "blurb": "The island's biggest market, in the old capital every Sunday morning.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Lanzarote good for a family holiday?",
+      "answer": "Yes. The flight is about four hours, it's warm all winter, and Playa Blanca and Puerto del Carmen have calm, shallow beaches."
+    },
+    {
+      "question": "Is it warm at Christmas?",
+      "answer": "Yes, usually around 21°C in the day. It can be windy, so a sheltered beach helps."
+    },
+    {
+      "question": "Which resort is best for families?",
+      "answer": "Playa Blanca is quieter with calm beaches. Puerto del Carmen is livelier, with more restaurants and a long sandy beach."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week is ideal for beach days plus a couple of trips to the volcanoes and caves."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tenerife",
+      "code": "TFS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Gran Canaria",
+      "code": "LPA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Menorca",
+      "code": "MAH",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

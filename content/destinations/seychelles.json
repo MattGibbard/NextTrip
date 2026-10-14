@@ -1,0 +1,179 @@
+{
+  "name": "Seychelles",
+  "published": true,
+  "country": "SC",
+  "title": "Holidays in Seychelles",
+  "intro": "Granite boulders, white sand and giant tortoises on an Indian Ocean island chain, warm right through Christmas. Here's what the Seychelles are like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Seychelles",
+  "to_code": "SEZ",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "relax"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3 to 4 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Seychellois rupee (SCR)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Travel authorisation needed",
+      "highlight": true
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 240V (UK plugs)",
+      "highlight": true
+    }
+  ],
+  "facts_note": "Visitors apply online for a travel authorisation before they fly. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Hot, showers"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Hot, showers"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Calm, warm"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Calm, warm"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Calm, warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Breezy"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Breezy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Breezy"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Breezy"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Calm, warm"
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Calm, warm"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas, showers"
+    }
+  },
+  "when_to_go": "It's warm all year. April, May, October and November have the calmest seas for snorkelling. December and January are hot and humid with tropical showers, but still sunny much of the time. June to September is breezier and drier.",
+  "things": [
+    {
+      "name": "Anse Source d'Argent",
+      "tag": "Ticketed",
+      "blurb": "A famous beach on La Digue framed by huge pink granite boulders, with shallow, calm water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vallée de Mai",
+      "tag": "Ticketed",
+      "blurb": "A rainforest on Praslin where the giant coco de mer palm grows, and black parrots live.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Giant tortoises",
+      "tag": "Free",
+      "blurb": "Meet giant tortoises on Curieuse Island or at gardens on La Digue and Mahé.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sainte Anne Marine Park",
+      "tag": "Tour",
+      "blurb": "Glass-bottomed boats and snorkelling over coral and tropical fish off Mahé.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cycling on La Digue",
+      "tag": "Ticketed",
+      "blurb": "Hire bikes on this almost car-free island and pedal between beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Victoria market",
+      "tag": "Free",
+      "blurb": "A small, colourful market in one of the world's smallest capitals.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Seychelles good for a family holiday?",
+      "answer": "Yes, if you want beaches and nature rather than nightlife. It's safe and very beautiful, but expensive."
+    },
+    {
+      "question": "Is Christmas a good time to go?",
+      "answer": "It's hot and humid, with some heavy showers, but there's plenty of sunshine too. The calmest seas are in spring and autumn."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Flights take about 10 to 12 hours from the UK with one change, usually in the Gulf."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights, ideally split between two islands, like Mahé and Praslin."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Mauritius",
+      "code": "MRU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Maldives",
+      "code": "MLE",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Zanzibar",
+      "code": "ZNZ",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

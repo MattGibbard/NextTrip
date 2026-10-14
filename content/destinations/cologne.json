@@ -1,0 +1,179 @@
+{
+  "name": "Cologne",
+  "published": true,
+  "country": "DE",
+  "title": "Holidays in Cologne",
+  "intro": "Seven Christmas markets, a chocolate museum and a vast cathedral, all easy to reach by train from the UK. Here's what Cologne is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cologne",
+  "to_code": "CGN",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Markets open"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "Late November to 23 December is when the Christmas markets are on, filling the city at weekends. Carnival in February is loud, colourful and fun with older children. May to September is warm, with river cruises and beer gardens.",
+  "things": [
+    {
+      "name": "Cathedral Christmas market",
+      "tag": "Free",
+      "blurb": "Stalls gather under a canopy of lights right beside the cathedral, with Germany's biggest Christmas tree in the middle.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Angels' market",
+      "tag": "Free",
+      "blurb": "In Neumarkt, with angels wandering through and white lights strung through the trees.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Harbour Christmas market",
+      "tag": "Free",
+      "blurb": "A market by the river with a nautical theme and boats moored alongside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cologne Cathedral",
+      "tag": "Free",
+      "blurb": "Climb the 533 steps of the south tower for the view, if little legs can manage it.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chocolate Museum",
+      "tag": "Indoors",
+      "blurb": "See how chocolate is made and dip a wafer into a three-metre chocolate fountain.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cologne Zoo",
+      "tag": "Ticketed",
+      "blurb": "Elephants, an aquarium and a rainforest house, a short tram ride from the centre.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Cologne good for a family holiday?",
+      "answer": "Yes. The markets are close together, the Chocolate Museum is a big hit, and it's easy to reach without flying."
+    },
+    {
+      "question": "When are the Christmas markets on?",
+      "answer": "Usually from the last week of November to 23 December. Some smaller markets stay open a little later."
+    },
+    {
+      "question": "Can we get there by train?",
+      "answer": "Yes. Take the Eurostar to Brussels and a fast train on to Cologne, about five hours from London in all."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights is enough for the markets, the cathedral and a museum."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Nuremberg",
+      "code": "NUE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bruges",
+      "code": "BRU",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Amsterdam",
+      "code": "AMS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Strasbourg",
+      "code": "SXB",
+      "label": "🍷 Food & drink"
+    }
+  ]
+}

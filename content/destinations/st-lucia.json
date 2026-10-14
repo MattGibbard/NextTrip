@@ -1,0 +1,179 @@
+{
+  "name": "St Lucia",
+  "published": true,
+  "country": "LC",
+  "title": "Holidays in St Lucia",
+  "intro": "Twin volcanic peaks, rainforest and a volcano you can drive into, with festive lights in December. Here's what St Lucia is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Saint_Lucia",
+  "to_code": "UVF",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "adventure"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 to 5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "East Caribbean dollar (EC$)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 240V (UK plugs)",
+      "highlight": true
+    }
+  ],
+  "facts_note": "St Lucia drives on the left and uses the same plugs as the UK. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Dry, warm"
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Rainy spells"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Hurricane risk"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Rainy spells"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Festive, busy"
+    }
+  },
+  "when_to_go": "December to April is the dry season and the best time to go, with Christmas the busiest and dearest. National Day on 13 December brings the Festival of Lights to Castries. Hurricane season runs June to November.",
+  "things": [
+    {
+      "name": "The Pitons",
+      "tag": "Free",
+      "blurb": "Two steep green peaks rising from the sea, best seen from a boat or a beach at Soufrière.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sulphur Springs",
+      "tag": "Ticketed",
+      "blurb": "A drive-in volcano with bubbling pools and warm mud baths you can wallow in.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rainforest aerial tram",
+      "tag": "Ticketed",
+      "blurb": "A slow cable car ride through the rainforest canopy, with zip lines for older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pigeon Island",
+      "tag": "Ticketed",
+      "blurb": "A national park with an old fort, short hikes and two calm beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Festival of Lights",
+      "tag": "Free",
+      "blurb": "Lanterns, music and the lighting of the Christmas tree in Castries around National Day on 13 December.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Diamond Falls",
+      "tag": "Ticketed",
+      "blurb": "Botanical gardens with a waterfall coloured by minerals.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is St Lucia good for a family holiday?",
+      "answer": "Yes. It's English-speaking, with calm beaches in the north, family resorts and lots of nature to explore."
+    },
+    {
+      "question": "Which part of the island is best for families?",
+      "answer": "The north around Rodney Bay has calmer beaches and more to do nearby. Soufrière in the south is more dramatic but quieter."
+    },
+    {
+      "question": "How long is the transfer from the airport?",
+      "answer": "International flights land at Hewanorra in the south, and the drive to Rodney Bay takes about an hour and a half."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten to fourteen nights, to make the long flight worthwhile."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Antigua",
+      "code": "ANU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Grenada",
+      "code": "GND",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Dominica",
+      "code": "DOM",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

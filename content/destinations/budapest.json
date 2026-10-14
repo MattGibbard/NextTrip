@@ -1,0 +1,179 @@
+{
+  "name": "Budapest",
+  "published": true,
+  "country": "HU",
+  "title": "Holidays in Budapest",
+  "intro": "Steaming outdoor thermal baths, chimney cakes at the Christmas markets and great value for a city break. Here's what Budapest is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Budapest",
+  "to_code": "BUD",
+  "holiday_types": [
+    "city",
+    "culture",
+    "relax"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Hungarian forint (Ft)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, baths"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, baths"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Markets open"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "Mid-November to the end of December brings markets to Vörösmarty Square and St Stephen's Basilica, with a light show on the basilica's front. May, June and September are warm and good for the river. Winter is cold, but the outdoor baths are lovely in the snow.",
+  "things": [
+    {
+      "name": "Basilica Christmas market",
+      "tag": "Free",
+      "blurb": "Stalls, an ice rink round the tree and a light show projected on the basilica after dark.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vörösmarty Square market",
+      "tag": "Free",
+      "blurb": "The city's oldest Christmas market, with handmade crafts and chimney cakes rolled in cinnamon sugar.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Széchenyi Baths",
+      "tag": "Ticketed",
+      "blurb": "Huge outdoor pools of hot spring water, steaming even in winter. Some of the hotter pools are only for older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "City Park ice rink",
+      "tag": "Ticketed",
+      "blurb": "One of Europe's biggest outdoor rinks, in front of a fairytale castle.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Buda Castle and Fisherman's Bastion",
+      "tag": "Free",
+      "blurb": "Ride the funicular up for turrets and the best views over the Danube.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Children's Railway",
+      "tag": "Ticketed",
+      "blurb": "A forest railway in the Buda Hills run almost entirely by children.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Budapest good for a family holiday?",
+      "answer": "Yes. It's good value, the baths are fun, and there's plenty to do on cold days."
+    },
+    {
+      "question": "When are the Christmas markets on?",
+      "answer": "Usually from mid-November to around New Year's Eve. The basilica market sometimes stays open into early January."
+    },
+    {
+      "question": "Can children go in the thermal baths?",
+      "answer": "Yes, but check the age rules at each bath before you go. Some pools are only for older children, and babies in nappies usually can't swim."
+    },
+    {
+      "question": "Do we need Hungarian money?",
+      "answer": "Cards are taken almost everywhere, but forints help at market stalls. Hungary doesn't use the euro."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Vienna",
+      "code": "VIE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Prague",
+      "code": "PRG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Kraków",
+      "code": "KRK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Riga",
+      "code": "RIX",
+      "label": "🏙️ City break"
+    }
+  ]
+}

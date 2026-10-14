@@ -1,0 +1,178 @@
+{
+  "name": "Riga",
+  "published": true,
+  "country": "LV",
+  "title": "Holidays in Riga",
+  "intro": "A cobbled old town that claims the world's first decorated Christmas tree, with cosy markets and low prices. Here's what Riga is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Riga",
+  "to_code": "RIX",
+  "holiday_types": [
+    "city",
+    "culture"
+  ],
+  "nights": "3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Very cold"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Very cold"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Midsummer"
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Chilly"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Markets open"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas markets"
+    }
+  },
+  "when_to_go": "Late November to early January brings the Christmas market to Dome Square and lights across the old town. May to August is warm with long, light evenings. January and February are very cold, often well below freezing.",
+  "things": [
+    {
+      "name": "Christmas market",
+      "tag": "Free",
+      "blurb": "Wooden huts on Dome Square sell hot blackcurrant juice, gingerbread and woollen mittens.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "First Christmas tree",
+      "tag": "Free",
+      "blurb": "A plaque marks the spot where Riga says a decorated tree first stood in 1510.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old Town",
+      "tag": "Free",
+      "blurb": "Medieval streets, the House of the Blackheads and the Three Brothers, Riga's oldest houses.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Central Market",
+      "tag": "Free",
+      "blurb": "One of Europe's biggest markets, in old Zeppelin hangars.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Latvian Open-Air Ethnographic Museum",
+      "tag": "Ticketed",
+      "blurb": "Old farmhouses and windmills in a forest, with festive crafts in December.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jūrmala",
+      "tag": "Day trip",
+      "blurb": "A long, sandy Baltic beach, half an hour away by train. Best in summer.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Riga good for a family holiday?",
+      "answer": "Yes. It's compact, safe and cheap, with a cosy market and an old town that's easy to explore."
+    },
+    {
+      "question": "When is the Christmas market on?",
+      "answer": "Usually from late November until early January."
+    },
+    {
+      "question": "How cold is it in December?",
+      "answer": "Usually around 0°C to -5°C, and it's dark by four o'clock, so bring warm layers."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three nights is enough for the old town, the market and a museum."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tallinn",
+      "code": "TLL",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Kraków",
+      "code": "KRK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Gdańsk",
+      "code": "GDN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Budapest",
+      "code": "BUD",
+      "label": "🏙️ City break"
+    }
+  ]
+}

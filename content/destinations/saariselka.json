@@ -1,0 +1,179 @@
+{
+  "name": "Saariselkä",
+  "published": true,
+  "country": "FI",
+  "title": "Holidays in Saariselkä",
+  "intro": "A tiny village far above the Arctic Circle, with glass igloos, wild fells and some of Finland's best odds of the northern lights. Here's what Saariselkä is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "",
+  "image_alt": "",
+  "wikipedia": "https://en.wikipedia.org/wiki/Saariselkä",
+  "to_code": "IVL",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "ski"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Snow, lights"
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Snow, lights"
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Snow, sunnier"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring snow"
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Thaw"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Midnight sun"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Midnight sun"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Summer"
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn colours"
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Before the snow"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Christmas starts"
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas, busy"
+    }
+  },
+  "when_to_go": "December brings Christmas, deep snow and only a little daylight, which is good for northern lights. January to March is colder, with more daylight for husky and snowshoe trips. September has autumn colours and the first auroras.",
+  "things": [
+    {
+      "name": "Glass igloos",
+      "tag": "Ticketed",
+      "blurb": "Sleep under a glass roof and watch for the northern lights from your bed.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Husky safari",
+      "tag": "Ticketed",
+      "blurb": "Mush through the forest with a dog team, from short loops to full-day trips.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Reindeer sleigh ride",
+      "tag": "Ticketed",
+      "blurb": "A quiet ride through the snow at a reindeer farm, which suits younger children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kaunispää toboggan run",
+      "tag": "Free",
+      "blurb": "A long sledging run down the fell beside the village. Sledges can be hired nearby.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Siida Sámi Museum",
+      "tag": "Day trip",
+      "blurb": "Learn about the Sámi people and Arctic nature at Inari, about 40 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Urho Kekkonen National Park",
+      "tag": "Outdoors",
+      "blurb": "Snowshoe or ski trails lead into one of Finland's biggest wildernesses, right from the village.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Saariselkä good for a family holiday?",
+      "answer": "Yes, for families who want peace, snow and nature rather than a busy resort. It's small, safe and walkable."
+    },
+    {
+      "question": "Are the northern lights likely?",
+      "answer": "Saariselkä is well north of the Arctic Circle, so on clear nights from September to March your chances are good. Nothing is ever guaranteed."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Ivalo, about 25 minutes away by transfer. Some winter charters fly direct from the UK, or change in Helsinki."
+    },
+    {
+      "question": "Can we meet Santa here?",
+      "answer": "Yes. Several resorts and tour companies run Santa visits in December, though the village isn't as Santa-themed as Rovaniemi."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Levi",
+      "code": "KTT",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Rovaniemi",
+      "code": "RVN",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Tromsø",
+      "code": "TOS",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Reykjavik",
+      "code": "KEF",
+      "label": "🥾 Nature & hiking"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "name": "Essaouira",
+  "published": true,
+  "country": "MA",
+  "title": "Holidays in Essaouira",
+  "intro": "Blue fishing boats, sea-washed ramparts and a laid-back medina on Morocco's windy Atlantic coast. Here's what Essaouira is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/morocco-4816326_1280.webp",
+  "image_alt": "Rows of blue wooden fishing boats with small red flags packed together in Essaouira harbour",
+  "wikipedia": "https://en.wikipedia.org/wiki/Essaouira",
+  "to_code": "ESU",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "0 to 1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Moroccan dirham (MAD)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Dirhams can only be bought in Morocco. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, sunny"
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild, sunny"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Breezy, festival"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very windy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very windy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, calmer"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild, sunny"
+    }
+  },
+  "when_to_go": "Essaouira stays mild all year, with highs of around 20°C in winter and mid-20s in summer, so it never gets as hot as Marrakech. Spring and autumn are the most pleasant. In summer the trade winds blow hard, which is great for kitesurfing but less so for lying on the beach. The Gnaoua music festival usually takes over the town in June.",
+  "things": [
+    {
+      "name": "Skala de la Ville",
+      "tag": "Free",
+      "blurb": "The old sea ramparts lined with bronze cannons, with waves crashing below and views along the coast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fishing harbour",
+      "tag": "Free",
+      "blurb": "Watch the blue boats come in, then pick fish at the grill stalls and have it cooked on the spot.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The medina",
+      "tag": "Free",
+      "blurb": "A UNESCO-listed old town with whitewashed lanes, woodworkers and spice shops, calmer than Marrakech's souks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Essaouira beach",
+      "tag": "Outdoors",
+      "blurb": "A long sandy bay with camel and horse rides, and surf and kitesurf schools for all levels.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sidi Kaouki",
+      "tag": "Day trip",
+      "blurb": "A wilder surf beach about half an hour south, with a few cafés and plenty of space.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Argan cooperatives",
+      "tag": "Tour",
+      "blurb": "Women's cooperatives on the road inland show how argan oil is made, often with goats in the trees nearby.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can you fly direct to Essaouira from the UK?",
+      "answer": "Ryanair has flown from London Stansted to Essaouira, usually a few times a week, but schedules change by season. Otherwise fly to Marrakech and drive about three hours to the coast."
+    },
+    {
+      "question": "Is Essaouira good for a beach holiday?",
+      "answer": "Yes, if you don't mind wind. The beach is long and sandy, but the Atlantic breeze can be strong, especially from June to August. It's better for walks, riding and watersports than all-day sunbathing."
+    },
+    {
+      "question": "Is Essaouira better than Marrakech?",
+      "answer": "They're very different. Essaouira is smaller, cooler and more relaxed, while Marrakech is busier with more big sights. Many people combine the two."
+    },
+    {
+      "question": "How many days do you need in Essaouira?",
+      "answer": "Two or three days covers the town, harbour and ramparts. A week lets you slow down, add a surf lesson and visit the beaches to the south."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Marrakech",
+      "code": "RAK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Cape Verde",
+      "code": "SID",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lanzarote",
+      "code": "ACE",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Alentejo",
+      "code": "LIS",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

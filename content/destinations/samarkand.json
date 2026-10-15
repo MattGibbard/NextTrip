@@ -1,0 +1,179 @@
+{
+  "name": "Samarkand",
+  "published": true,
+  "country": "UZ",
+  "title": "Holidays in Samarkand",
+  "intro": "Turquoise domes, tiled madrasas and melon-piled bazaars in a Silk Road city that's finally on the map. Here's what Samarkand is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/bibi-xanom-196898_1280.webp",
+  "image_alt": "The ribbed turquoise dome and tiled walls of the Bibi-Khanym Mosque in Samarkand under a clear blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Samarkand",
+  "to_code": "SKD",
+  "holiday_types": [
+    "culture",
+    "city",
+    "food"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 to 5 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Uzbek som (UZS)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 30 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Visitors must be registered within 3 days of arrival, which hotels usually do for you. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, quiet"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, quiet"
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild, blossom"
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, green"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sunny"
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot"
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, harvest"
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, clear"
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool, quiet"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold"
+    }
+  },
+  "when_to_go": "April, May, September and October are the sweet spot, with warm days, clear skies and the bazaars full of fruit. July and August regularly pass 35°C, so sightseeing means early mornings and long lunches indoors. Winters are cold and grey but very quiet, with lower hotel prices.",
+  "things": [
+    {
+      "name": "Registan",
+      "tag": "Ticketed",
+      "blurb": "Three huge tiled madrasas around one square. Go at sunset, then come back after dark when the facades are lit up.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Shah-i-Zinda",
+      "tag": "Ticketed",
+      "blurb": "A narrow street of blue-tiled mausoleums climbing a hillside, some of the finest tilework in Central Asia.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gur-e-Amir",
+      "tag": "Ticketed",
+      "blurb": "The ribbed blue dome over Timur's tomb, with a gold-leaf interior that glows in the evening light.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Siab Bazaar",
+      "tag": "Free",
+      "blurb": "The big covered market next to Bibi-Khanym, piled with round bread, dried fruit, nuts and melons.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ulugh Beg Observatory",
+      "tag": "Ticketed",
+      "blurb": "The remains of a 15th-century observatory with a giant curved track once used to measure the stars.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bukhara",
+      "tag": "Day trip",
+      "blurb": "The Afrosiyob fast train runs to Bukhara's old town of mud-brick lanes and domed bazaars. Better as an overnight stop.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Samarkand safe for tourists?",
+      "answer": "Generally yes. Uzbekistan has become much more open to visitors, and Samarkand is calm and welcoming. GOV.UK advises against travel to parts of the Afghan border far to the south, so check the latest advice before you book."
+    },
+    {
+      "question": "Do UK passport holders need a visa for Uzbekistan?",
+      "answer": "No, British citizens can stay up to 30 days without a visa. Your passport needs at least 3 months left from the day you arrive."
+    },
+    {
+      "question": "How do you get to Samarkand from the UK?",
+      "answer": "There are direct flights from London to Tashkent, then the Afrosiyob high-speed train takes around two hours to Samarkand. Samarkand also has its own airport with connections via Istanbul and other hubs."
+    },
+    {
+      "question": "How many days do you need in Samarkand?",
+      "answer": "Two or three full days covers the main sights. Most people spend a week to ten days across Samarkand, Bukhara and Khiva by train."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tbilisi",
+      "code": "TBS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Jordan",
+      "code": "AMM",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Cappadocia",
+      "code": "NAV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Marrakech",
+      "code": "RAK",
+      "label": "🏙️ City break"
+    }
+  ]
+}

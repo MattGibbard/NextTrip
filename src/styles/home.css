@@ -800,7 +800,7 @@
 }
 
 /* Popular guides: Inspire's cards, with the whole card linking to its guide */
-.lp-guides {
+.dx-grid.lp-guides {
   grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
   list-style: none;
   margin: 0;

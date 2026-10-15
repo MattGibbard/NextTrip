@@ -15,7 +15,7 @@
   --map-idea: #ea580c;
   --shadow: 0 1px 2px rgb(0 0 0 / 0.05), 0 4px 16px rgb(0 0 0 / 0.05);
   --radius: 14px;
-  --mono: "DM Mono", ui-monospace, Menlo, monospace;
+  --mono: "DM Mono", "DM Mono fallback", ui-monospace, Menlo, monospace;
   /* Ticket colours, one per way of travelling. Stubs keep the strong colour in both themes; "ink" is for text. */
   --flight: #0f766e;
   --train: #7c3aed;

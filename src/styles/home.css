@@ -338,6 +338,9 @@
   align-items: flex-end;
 }
 .lp-code {
+  /* DM Mono's width for three letters, so the code keeps its place while the font is still loading. */
+  width: 1.75em;
+  white-space: nowrap;
   font-family: var(--mono);
   font-size: clamp(2.2rem, 7vw, 3rem);
   font-weight: 500;

@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Dry, sunny"
+      "note": "Dry, sunny",
+      "temp": 29
     },
     "feb": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 29
     },
     "mar": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 30
     },
     "apr": {
       "rating": "best",
-      "note": "Dry, hot"
+      "note": "Dry, hot",
+      "temp": 30
     },
     "may": {
       "rating": "good",
-      "note": "Turtles nesting"
+      "note": "Turtles nesting",
+      "temp": 31
     },
     "jun": {
       "rating": "good",
-      "note": "Rains start"
+      "note": "Rains start",
+      "temp": 31
     },
     "jul": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 31
     },
     "aug": {
       "rating": "quiet",
-      "note": "Hot, wet"
+      "note": "Hot, wet",
+      "temp": 31
     },
     "sep": {
       "rating": "quiet",
-      "note": "Hurricane risk"
+      "note": "Hurricane risk",
+      "temp": 31
     },
     "oct": {
       "rating": "quiet",
-      "note": "Hurricane risk"
+      "note": "Hurricane risk",
+      "temp": 31
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 30
     },
     "dec": {
       "rating": "good",
-      "note": "Festive"
+      "note": "Festive",
+      "temp": 29
     }
   },
   "when_to_go": "January to April is dry and sunny with a steady breeze. From April to July turtles nest on the north-east beaches. The hurricane season runs from June to November. Grenada is near the southern edge of the hurricane belt, but storms do still hit, so August to October is the riskiest time.",

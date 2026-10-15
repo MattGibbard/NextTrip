@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { LONDON, flightHoursTo } from "../destinations";
+import { LONDON, countryFlag, flightHoursTo } from "../destinations";
 import { destinationPath } from "../../shared/seo";
-import { alsoGood, hubGuides, hubIcon } from "../hubs";
+import { NEAR_HOURS, alsoGood, hotList, hubGuides, hubIcon } from "../hubs";
 import type { Hub } from "../hubs";
 import { SiteFooter, SiteHeader } from "../components/SiteFrame";
 import { AppBottomNav, AppTopbar } from "../components/AppNav";
@@ -90,6 +90,8 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
             </p>
           </aside>
         </section>
+
+        {hub.kind === "month" && hub.month !== null && <HotList hub={hub} from={from} />}
 
         <section className="lp-wrap dx-section" aria-labelledby="hb-guides">
           <div className="dx-section-head">
@@ -226,3 +228,52 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
     </div>
   );
 }
+
+/**
+ * A month page's answer to "where is hot in…": the warmest places that are good that month, near and
+ * further away, with their average daytime high. The sentence on top is the short answer.
+ */
+function HotList({ hub, from }: { hub: Hub; from: { code: string; lat: number | null; lon: number | null } }) {
+  const { near, far } = hotList(hub, from);
+  if (!near.length && !far.length) return null;
+  const month = MONTH_NAMES[hub.month!];
+  const top = (rows: typeof near) => rows.slice(0, 3).map((r) => `${r.d.name} (${r.temp}°C)`);
+  const list = (items: string[]) => (items.length < 2 ? items.join("") : `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}`);
+  const fromName = from === LONDON ? "the UK" : from.code;
+  const groups = [
+    { key: "near", title: `Within ${NEAR_HOURS} hours of ${fromName}`, rows: near },
+    { key: "far", title: "Further away", rows: far },
+  ].filter((g) => g.rows.length);
+  return (
+    <section className="lp-wrap dx-section hb-hot" aria-labelledby="hb-hot">
+      <div className="dx-section-head">
+        <h2 id="hb-hot">Where&rsquo;s hot in {month}?</h2>
+      </div>
+      <p className="hb-hot-answer">
+        {near.length > 0 && <>Within a {NEAR_HOURS}-hour flight of {fromName}, the warmest places that are good in {month} are {list(top(near))}. </>}
+        {far.length > 0 && <>Further away, try {list(top(far))}.</>}
+      </p>
+      <div className="hb-hot-groups">
+        {groups.map((g) => (
+          <div key={g.key} className="hb-hot-group">
+            <h3>{g.title}</h3>
+            <ol>
+              {g.rows.map((r) => (
+                <li key={r.d.slug}>
+                  <a href={destinationPath(r.d.slug)}>
+                    <span aria-hidden>{countryFlag(r.d.country_code)} </span>
+                    {r.d.name}
+                  </a>
+                  <span className="muted small">{r.hours !== null && `✈️ ${r.hours}h`}</span>
+                  <span className="hb-hot-temp">{r.temp}°C</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        ))}
+      </div>
+      <p className="muted small">Average daytime highs. Every place here is rated best or good to visit in {month}.</p>
+    </section>
+  );
+}
+

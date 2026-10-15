@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Dry, hot"
+      "note": "Dry, hot",
+      "temp": 32
     },
     "feb": {
       "rating": "best",
-      "note": "Dry, hot"
+      "note": "Dry, hot",
+      "temp": 33
     },
     "mar": {
       "rating": "best",
-      "note": "Dry, hot"
+      "note": "Dry, hot",
+      "temp": 33
     },
     "apr": {
       "rating": "good",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 33
     },
     "may": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 32
     },
     "jun": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 31
     },
     "jul": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 31
     },
     "aug": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 31
     },
     "sep": {
       "rating": "quiet",
-      "note": "Wettest"
+      "note": "Wettest",
+      "temp": 31
     },
     "oct": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 31
     },
     "nov": {
       "rating": "good",
-      "note": "Drier"
+      "note": "Drier",
+      "temp": 31
     },
     "dec": {
       "rating": "best",
-      "note": "Dry, busy"
+      "note": "Dry, busy",
+      "temp": 31
     }
   },
   "when_to_go": "November to April is the dry season, with calm seas and sunshine, and Christmas and New Year are the busiest and dearest weeks. May to October brings the monsoon, with rough seas on the west coast.",

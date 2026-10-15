@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Snowy"
+      "note": "Snowy",
+      "temp": 3
     },
     "feb": {
       "rating": "quiet",
-      "note": "Snowy"
+      "note": "Snowy",
+      "temp": 4
     },
     "mar": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 8
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 14
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 20
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 25
     },
     "jul": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 28
     },
     "aug": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 27
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "oct": {
       "rating": "best",
-      "note": "Autumn colour"
+      "note": "Autumn colour",
+      "temp": 17
     },
     "nov": {
       "rating": "good",
-      "note": "Crisp"
+      "note": "Crisp",
+      "temp": 11
     },
     "dec": {
       "rating": "good",
-      "note": "Festive"
+      "note": "Festive",
+      "temp": 5
     }
   },
   "when_to_go": "May, June, September and October are best, and October brings New England's famous autumn colours. Summer is warm and lively. Winter is cold and snowy.",

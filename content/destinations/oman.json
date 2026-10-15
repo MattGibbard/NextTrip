@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Warm, sunny"
+      "note": "Warm, sunny",
+      "temp": 25
     },
     "feb": {
       "rating": "best",
-      "note": "Warm, sunny"
+      "note": "Warm, sunny",
+      "temp": 26
     },
     "mar": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 29
     },
     "apr": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 34
     },
     "may": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 38
     },
     "jun": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 40
     },
     "jul": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 38
     },
     "aug": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 36
     },
     "sep": {
       "rating": "quiet",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 35
     },
     "oct": {
       "rating": "good",
-      "note": "Hot, cooling"
+      "note": "Hot, cooling",
+      "temp": 34
     },
     "nov": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 30
     },
     "dec": {
       "rating": "best",
-      "note": "Warm, sunny"
+      "note": "Warm, sunny",
+      "temp": 27
     }
   },
   "when_to_go": "November to March is the time to go, with warm days and cool desert nights. From May to September it is very hot across most of the country. The exception is Salalah in the south, which is green and misty in the summer monsoon. Turtles nest at Ras al Jinz all year, with most activity in summer.",

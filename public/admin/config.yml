@@ -364,104 +364,116 @@ collections:
       - label: When to go
         name: months
         widget: object
-        hint: How good each month is, with a word or two about it. The "Best months" at the top of the page come from the months marked Best.
+        hint: How good each month is, with a word or two about it and the average daytime high. The "Best months" at the top of the page come from the months marked Best.
         fields:
           - label: January
             name: jan
             widget: object
             collapsed: true
-            summary: "{{rating}}: {{note}}"
+            summary: "{{rating}}: {{note}} ({{temp}}°)"
             fields:
               - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
               - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+              - { label: Daytime high (°C), name: temp, widget: number, value_type: int, required: false, hint: "The average daytime high that month, rounded, e.g. 24. Shown on the month tiles and used for \"Where's hot\" on the month pages." }
           - label: February
             name: feb
             widget: object
             collapsed: true
-            summary: "{{rating}}: {{note}}"
+            summary: "{{rating}}: {{note}} ({{temp}}°)"
             fields:
               - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
               - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+              - { label: Daytime high (°C), name: temp, widget: number, value_type: int, required: false, hint: "The average daytime high that month, rounded, e.g. 24. Shown on the month tiles and used for \"Where's hot\" on the month pages." }
           - label: March
             name: mar
             widget: object
             collapsed: true
-            summary: "{{rating}}: {{note}}"
+            summary: "{{rating}}: {{note}} ({{temp}}°)"
             fields:
               - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
               - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+              - { label: Daytime high (°C), name: temp, widget: number, value_type: int, required: false, hint: "The average daytime high that month, rounded, e.g. 24. Shown on the month tiles and used for \"Where's hot\" on the month pages." }
           - label: April
             name: apr
             widget: object
             collapsed: true
-            summary: "{{rating}}: {{note}}"
+            summary: "{{rating}}: {{note}} ({{temp}}°)"
             fields:
               - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
               - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+              - { label: Daytime high (°C), name: temp, widget: number, value_type: int, required: false, hint: "The average daytime high that month, rounded, e.g. 24. Shown on the month tiles and used for \"Where's hot\" on the month pages." }
           - label: May
             name: may
             widget: object
             collapsed: true
-            summary: "{{rating}}: {{note}}"
+            summary: "{{rating}}: {{note}} ({{temp}}°)"
             fields:
               - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
               - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+              - { label: Daytime high (°C), name: temp, widget: number, value_type: int, required: false, hint: "The average daytime high that month, rounded, e.g. 24. Shown on the month tiles and used for \"Where's hot\" on the month pages." }
           - label: June
             name: jun
             widget: object
             collapsed: true
-            summary: "{{rating}}: {{note}}"
+            summary: "{{rating}}: {{note}} ({{temp}}°)"
             fields:
               - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
               - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+              - { label: Daytime high (°C), name: temp, widget: number, value_type: int, required: false, hint: "The average daytime high that month, rounded, e.g. 24. Shown on the month tiles and used for \"Where's hot\" on the month pages." }
           - label: July
             name: jul
             widget: object
             collapsed: true
-            summary: "{{rating}}: {{note}}"
+            summary: "{{rating}}: {{note}} ({{temp}}°)"
             fields:
               - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
               - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+              - { label: Daytime high (°C), name: temp, widget: number, value_type: int, required: false, hint: "The average daytime high that month, rounded, e.g. 24. Shown on the month tiles and used for \"Where's hot\" on the month pages." }
           - label: August
             name: aug
             widget: object
             collapsed: true
-            summary: "{{rating}}: {{note}}"
+            summary: "{{rating}}: {{note}} ({{temp}}°)"
             fields:
               - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
               - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+              - { label: Daytime high (°C), name: temp, widget: number, value_type: int, required: false, hint: "The average daytime high that month, rounded, e.g. 24. Shown on the month tiles and used for \"Where's hot\" on the month pages." }
           - label: September
             name: sep
             widget: object
             collapsed: true
-            summary: "{{rating}}: {{note}}"
+            summary: "{{rating}}: {{note}} ({{temp}}°)"
             fields:
               - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
               - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+              - { label: Daytime high (°C), name: temp, widget: number, value_type: int, required: false, hint: "The average daytime high that month, rounded, e.g. 24. Shown on the month tiles and used for \"Where's hot\" on the month pages." }
           - label: October
             name: oct
             widget: object
             collapsed: true
-            summary: "{{rating}}: {{note}}"
+            summary: "{{rating}}: {{note}} ({{temp}}°)"
             fields:
               - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
               - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+              - { label: Daytime high (°C), name: temp, widget: number, value_type: int, required: false, hint: "The average daytime high that month, rounded, e.g. 24. Shown on the month tiles and used for \"Where's hot\" on the month pages." }
           - label: November
             name: nov
             widget: object
             collapsed: true
-            summary: "{{rating}}: {{note}}"
+            summary: "{{rating}}: {{note}} ({{temp}}°)"
             fields:
               - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
               - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+              - { label: Daytime high (°C), name: temp, widget: number, value_type: int, required: false, hint: "The average daytime high that month, rounded, e.g. 24. Shown on the month tiles and used for \"Where's hot\" on the month pages." }
           - label: December
             name: dec
             widget: object
             collapsed: true
-            summary: "{{rating}}: {{note}}"
+            summary: "{{rating}}: {{note}} ({{temp}}°)"
             fields:
               - { label: How good, name: rating, widget: select, default: good, options: [{ label: Best, value: best }, { label: Good, value: good }, { label: Quieter, value: quiet }] }
               - { label: Note, name: note, widget: string, required: false, hint: "e.g. Cold, Festive, Hot and busy" }
+              - { label: Daytime high (°C), name: temp, widget: number, value_type: int, required: false, hint: "The average daytime high that month, rounded, e.g. 24. Shown on the month tiles and used for \"Where's hot\" on the month pages." }
       - { label: When to go text, name: when_to_go, widget: text, required: false }
 
       - label: Things to do

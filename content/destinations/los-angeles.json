@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 20
     },
     "feb": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 20
     },
     "mar": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 21
     },
     "apr": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "may": {
       "rating": "good",
-      "note": "May Gray"
+      "note": "May Gray",
+      "temp": 23
     },
     "jun": {
       "rating": "good",
-      "note": "June Gloom"
+      "note": "June Gloom",
+      "temp": 25
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 28
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 29
     },
     "sep": {
       "rating": "best",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 28
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 26
     },
     "nov": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 23
     },
     "dec": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 20
     }
   },
   "when_to_go": "LA is warm and dry most of the year. Mornings by the coast are often grey in May and June. July to October is sunniest and warmest for the beach, and September is quieter once US schools go back.",

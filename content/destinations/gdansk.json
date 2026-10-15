@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 2
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 3
     },
     "mar": {
       "rating": "quiet",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 6
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 12
     },
     "may": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 20
     },
     "jul": {
       "rating": "best",
-      "note": "Beach weather"
+      "note": "Beach weather",
+      "temp": 22
     },
     "aug": {
       "rating": "best",
-      "note": "St Dominic's Fair"
+      "note": "St Dominic's Fair",
+      "temp": 22
     },
     "sep": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 18
     },
     "oct": {
       "rating": "good",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 12
     },
     "nov": {
       "rating": "quiet",
-      "note": "Grey"
+      "note": "Grey",
+      "temp": 7
     },
     "dec": {
       "rating": "good",
-      "note": "Christmas market"
+      "note": "Christmas market",
+      "temp": 3
     }
   },
   "when_to_go": "June to August is warmest and the best time for the beaches at Sopot. St Dominic's Fair fills the old town with stalls from late July into August. Winter is cold and grey, but December has a Christmas market.",

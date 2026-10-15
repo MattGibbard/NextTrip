@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 3
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 6
     },
     "mar": {
       "rating": "quiet",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 11
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 16
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 21
     },
     "jun": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 25
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 27
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 27
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 21
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 16
     },
     "nov": {
       "rating": "quiet",
-      "note": "Foggy"
+      "note": "Foggy",
+      "temp": 9
     },
     "dec": {
       "rating": "good",
-      "note": "Christmas markets"
+      "note": "Christmas markets",
+      "temp": 4
     }
   },
   "when_to_go": "May to September is best for lakes, rivers and mountain walks. July and August are warm and lively but Bled gets busy. December has fairy lights and Christmas markets along the river.",

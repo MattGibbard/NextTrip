@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Very cold"
+      "note": "Very cold",
+      "temp": 0
     },
     "feb": {
       "rating": "quiet",
-      "note": "Very cold"
+      "note": "Very cold",
+      "temp": 0
     },
     "mar": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 4
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 11
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 17
     },
     "jun": {
       "rating": "best",
-      "note": "Midsummer"
+      "note": "Midsummer",
+      "temp": 21
     },
     "jul": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "aug": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "sep": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 17
     },
     "oct": {
       "rating": "quiet",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 11
     },
     "nov": {
       "rating": "good",
-      "note": "Markets open"
+      "note": "Markets open",
+      "temp": 5
     },
     "dec": {
       "rating": "best",
-      "note": "Christmas markets"
+      "note": "Christmas markets",
+      "temp": 1
     }
   },
   "when_to_go": "Late November to early January brings the Christmas market to Dome Square and lights across the old town. May to August is warm with long, light evenings. January and February are very cold, often well below freezing.",

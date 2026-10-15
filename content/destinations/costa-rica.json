@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 30
     },
     "feb": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 31
     },
     "mar": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 32
     },
     "apr": {
       "rating": "best",
-      "note": "Dry, hot"
+      "note": "Dry, hot",
+      "temp": 32
     },
     "may": {
       "rating": "good",
-      "note": "Green season"
+      "note": "Green season",
+      "temp": 31
     },
     "jun": {
       "rating": "good",
-      "note": "Green season"
+      "note": "Green season",
+      "temp": 30
     },
     "jul": {
       "rating": "good",
-      "note": "Drier spell"
+      "note": "Drier spell",
+      "temp": 30
     },
     "aug": {
       "rating": "good",
-      "note": "Green season"
+      "note": "Green season",
+      "temp": 30
     },
     "sep": {
       "rating": "quiet",
-      "note": "Wettest"
+      "note": "Wettest",
+      "temp": 30
     },
     "oct": {
       "rating": "quiet",
-      "note": "Wettest"
+      "note": "Wettest",
+      "temp": 29
     },
     "nov": {
       "rating": "good",
-      "note": "Drying out"
+      "note": "Drying out",
+      "temp": 29
     },
     "dec": {
       "rating": "best",
-      "note": "Dry, busy"
+      "note": "Dry, busy",
+      "temp": 29
     }
   },
   "when_to_go": "December to April is the dry season and the most popular time. May to November is the green season, with afternoon rain, lush forests and lower prices. July often has a drier spell, and turtles nest on the Caribbean coast from July to October.",

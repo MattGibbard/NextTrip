@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold, snow"
+      "note": "Cold, snow",
+      "temp": 5
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 7
     },
     "mar": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 11
     },
     "apr": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 15
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 21
     },
     "jun": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 27
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, storms"
+      "note": "Hot, storms",
+      "temp": 29
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, storms"
+      "note": "Hot, storms",
+      "temp": 28
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "oct": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 18
     },
     "nov": {
       "rating": "good",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 11
     },
     "dec": {
       "rating": "quiet",
-      "note": "Cold, snow"
+      "note": "Cold, snow",
+      "temp": 5
     }
   },
   "when_to_go": "April, May, September and October are best for walking the rim. Summer is busy, with afternoon thunderstorms and real heat inside the canyon. Winter is cold with snow on the rim, but very quiet. The South Rim is open all year.",

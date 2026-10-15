@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Mild, rainy"
+      "note": "Mild, rainy",
+      "temp": 17
     },
     "feb": {
       "rating": "quiet",
-      "note": "Mild, rainy"
+      "note": "Mild, rainy",
+      "temp": 17
     },
     "mar": {
       "rating": "quiet",
-      "note": "Mild, rainy"
+      "note": "Mild, rainy",
+      "temp": 17
     },
     "apr": {
       "rating": "good",
-      "note": "Blue whales"
+      "note": "Blue whales",
+      "temp": 18
     },
     "may": {
       "rating": "good",
-      "note": "Blue whales"
+      "note": "Blue whales",
+      "temp": 20
     },
     "jun": {
       "rating": "best",
-      "note": "Hydrangeas"
+      "note": "Hydrangeas",
+      "temp": 22
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 25
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 26
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 25
     },
     "oct": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 22
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 19
     },
     "dec": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 18
     }
   },
   "when_to_go": "June to September is warmest, with hydrangeas lining the roads and calm seas for boat trips. April and May are the best months for blue whales. Winter is mild but wet and windy. The weather changes fast all year, so pack a raincoat.",

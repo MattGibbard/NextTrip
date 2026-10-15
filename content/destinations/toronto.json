@@ -41,51 +41,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Snowy"
+      "note": "Snowy",
+      "temp": -1
     },
     "feb": {
       "rating": "quiet",
-      "note": "Snowy"
+      "note": "Snowy",
+      "temp": 0
     },
     "mar": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 5
     },
     "apr": {
       "rating": "good",
-      "note": "Mixed"
+      "note": "Mixed",
+      "temp": 12
     },
     "may": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 19
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 27
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 26
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "oct": {
       "rating": "best",
-      "note": "Autumn colour"
+      "note": "Autumn colour",
+      "temp": 15
     },
     "nov": {
       "rating": "good",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 8
     },
     "dec": {
       "rating": "good",
-      "note": "Festive"
+      "note": "Festive",
+      "temp": 2
     }
   },
   "when_to_go": "Summer is the easy pick, with warm days, island beaches and festivals most weekends. September and October are quieter and the autumn colours are lovely. Winters are properly cold, but there's skating outdoors and plenty to do inside. Toronto makes a good Christmas city break too, with the Winter Village in the Distillery District from mid-November.",

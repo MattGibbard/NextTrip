@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 22
     },
     "feb": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "mar": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 20
     },
     "apr": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 17
     },
     "may": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 14
     },
     "jun": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 12
     },
     "jul": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 12
     },
     "aug": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 13
     },
     "sep": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 15
     },
     "oct": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 17
     },
     "nov": {
       "rating": "good",
-      "note": "Warming up"
+      "note": "Warming up",
+      "temp": 19
     },
     "dec": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 21
     }
   },
   "when_to_go": "December to March is warm, with long days for walking and the beach. April brings autumn colour and calm weather. Winter is cold and wet, with snow in the mountains. The weather changes fast all year, so pack layers.",

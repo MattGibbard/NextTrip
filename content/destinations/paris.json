@@ -48,51 +48,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 7
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 8
     },
     "mar": {
       "rating": "good",
-      "note": "Mixed"
+      "note": "Mixed",
+      "temp": 12
     },
     "apr": {
       "rating": "best",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 16
     },
     "may": {
       "rating": "best",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 20
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 25
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, quieter city"
+      "note": "Hot, quieter city",
+      "temp": 25
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 21
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 16
     },
     "nov": {
       "rating": "quiet",
-      "note": "Grey"
+      "note": "Grey",
+      "temp": 11
     },
     "dec": {
       "rating": "good",
-      "note": "Festive"
+      "note": "Festive",
+      "temp": 8
     }
   },
   "when_to_go": "Late spring and September are the sweet spot, with long light evenings and parks at their best. Summer is busy at the big sights but the city itself empties in August. December brings Christmas markets and lights.",

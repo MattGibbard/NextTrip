@@ -73,11 +73,11 @@ export function hubCard(raw) {
   return Object.fromEntries(HUB_CARD_FIELDS.filter((k) => k in raw).map((k) => [k, raw[k]]));
 }
 
-/** A guide's card fields, with each month's rating but not its note. */
+/** A guide's card fields, with each month's rating and temperature but not its note. */
 export function guideCard(raw) {
   const card = Object.fromEntries(CARD_FIELDS.filter((k) => k in raw).map((k) => [k, raw[k]]));
   if (raw.months && typeof raw.months === "object") {
-    card.months = Object.fromEntries(Object.entries(raw.months).map(([code, m]) => [code, { rating: m?.rating }]));
+    card.months = Object.fromEntries(Object.entries(raw.months).map(([code, m]) => [code, { rating: m?.rating, temp: m?.temp }]));
   }
   return card;
 }

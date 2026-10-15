@@ -42,51 +42,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Cold, clear"
+      "note": "Cold, clear",
+      "temp": 10
     },
     "feb": {
       "rating": "good",
-      "note": "Cold, clear"
+      "note": "Cold, clear",
+      "temp": 11
     },
     "mar": {
       "rating": "best",
-      "note": "Blossom"
+      "note": "Blossom",
+      "temp": 14
     },
     "apr": {
       "rating": "best",
-      "note": "Blossom"
+      "note": "Blossom",
+      "temp": 19
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "jun": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 26
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 30
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 31
     },
     "sep": {
       "rating": "good",
-      "note": "Typhoons"
+      "note": "Typhoons",
+      "temp": 27
     },
     "oct": {
       "rating": "best",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 22
     },
     "nov": {
       "rating": "best",
-      "note": "Autumn colour"
+      "note": "Autumn colour",
+      "temp": 17
     },
     "dec": {
       "rating": "good",
-      "note": "Crisp"
+      "note": "Crisp",
+      "temp": 12
     }
   },
   "when_to_go": "Late March and early April bring the cherry blossom and the biggest crowds. October and November are mild with autumn leaves and fewer people. Summer is hot and humid, but there are festivals and fireworks, and winter is cold, dry and sunny.",

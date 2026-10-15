@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 15
     },
     "feb": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 16
     },
     "mar": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 17
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 20
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "jun": {
       "rating": "best",
-      "note": "Hot, sea warming"
+      "note": "Hot, sea warming",
+      "temp": 28
     },
     "jul": {
       "rating": "good",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 31
     },
     "aug": {
       "rating": "good",
-      "note": "Very hot, busy"
+      "note": "Very hot, busy",
+      "temp": 31
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 28
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 20
     },
     "dec": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     }
   },
   "when_to_go": "May, June, September and October are warm with a pleasant sea for swimming. July and August are very hot and the beaches are busy. Winter is mild but some beach places close. In late spring and early summer, Greek plays are staged in the ancient theatre in the evenings.",

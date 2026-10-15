@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Cool nights"
+      "note": "Cool nights",
+      "temp": 18
     },
     "feb": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 20
     },
     "mar": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "apr": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 25
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 29
     },
     "jun": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 33
     },
     "jul": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 37
     },
     "aug": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 37
     },
     "sep": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 32
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 28
     },
     "nov": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "dec": {
       "rating": "good",
-      "note": "Cool nights"
+      "note": "Cool nights",
+      "temp": 19
     }
   },
   "when_to_go": "Spring and autumn are best, with warm sunny days and comfortable evenings. July and August are very hot, so pick a riad with a pool. Winter days are sunny but nights are cold, and there may be snow on the mountains. Ramadan moves each year and changes opening hours.",

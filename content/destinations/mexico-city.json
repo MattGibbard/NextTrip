@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Dry, cool nights"
+      "note": "Dry, cool nights",
+      "temp": 22
     },
     "feb": {
       "rating": "good",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 24
     },
     "mar": {
       "rating": "best",
-      "note": "Warm, dry"
+      "note": "Warm, dry",
+      "temp": 26
     },
     "apr": {
       "rating": "best",
-      "note": "Warm, dry"
+      "note": "Warm, dry",
+      "temp": 27
     },
     "may": {
       "rating": "good",
-      "note": "Warmest"
+      "note": "Warmest",
+      "temp": 27
     },
     "jun": {
       "rating": "good",
-      "note": "Afternoon rain"
+      "note": "Afternoon rain",
+      "temp": 25
     },
     "jul": {
       "rating": "good",
-      "note": "Afternoon rain"
+      "note": "Afternoon rain",
+      "temp": 24
     },
     "aug": {
       "rating": "good",
-      "note": "Afternoon rain"
+      "note": "Afternoon rain",
+      "temp": 24
     },
     "sep": {
       "rating": "good",
-      "note": "Afternoon rain"
+      "note": "Afternoon rain",
+      "temp": 23
     },
     "oct": {
       "rating": "best",
-      "note": "Dry again"
+      "note": "Dry again",
+      "temp": 23
     },
     "nov": {
       "rating": "best",
-      "note": "Day of the Dead"
+      "note": "Day of the Dead",
+      "temp": 23
     },
     "dec": {
       "rating": "good",
-      "note": "Festive"
+      "note": "Festive",
+      "temp": 22
     }
   },
   "when_to_go": "March, April, October and November are dry and warm. The Day of the Dead at the start of November is colourful and family-friendly. June to September brings short afternoon downpours, but mornings are usually fine. Evenings can be cool all year because the city is so high.",

@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cool, drizzly"
+      "note": "Cool, drizzly",
+      "temp": 19
     },
     "feb": {
       "rating": "good",
-      "note": "Tet, cool"
+      "note": "Tet, cool",
+      "temp": 20
     },
     "mar": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 23
     },
     "apr": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 27
     },
     "may": {
       "rating": "best",
-      "note": "Golden rice"
+      "note": "Golden rice",
+      "temp": 31
     },
     "jun": {
       "rating": "good",
-      "note": "Hot, harvest"
+      "note": "Hot, harvest",
+      "temp": 33
     },
     "jul": {
       "rating": "quiet",
-      "note": "Hot, wet"
+      "note": "Hot, wet",
+      "temp": 33
     },
     "aug": {
       "rating": "quiet",
-      "note": "Wet, storms"
+      "note": "Wet, storms",
+      "temp": 32
     },
     "sep": {
       "rating": "good",
-      "note": "Hot, showers"
+      "note": "Hot, showers",
+      "temp": 31
     },
     "oct": {
       "rating": "best",
-      "note": "Dry, mild"
+      "note": "Dry, mild",
+      "temp": 29
     },
     "nov": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 25
     },
     "dec": {
       "rating": "good",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 21
     }
   },
   "when_to_go": "April, May, October and November are warm and mostly dry. The rice turns gold in late May and early June. July and August are hot and wet, with a risk of storms. Winter is cool and often grey.",

@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Mild, rainy"
+      "note": "Mild, rainy",
+      "temp": 12
     },
     "feb": {
       "rating": "quiet",
-      "note": "Mild, rainy"
+      "note": "Mild, rainy",
+      "temp": 13
     },
     "mar": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 15
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 18
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "jun": {
       "rating": "best",
-      "note": "Beach weather"
+      "note": "Beach weather",
+      "temp": 27
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, crowded"
+      "note": "Hot, crowded",
+      "temp": 30
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, crowded"
+      "note": "Hot, crowded",
+      "temp": 30
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 26
     },
     "oct": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 21
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 17
     },
     "dec": {
       "rating": "quiet",
-      "note": "Quiet"
+      "note": "Quiet",
+      "temp": 13
     }
   },
   "when_to_go": "May, June and September have warm sea and fewer crowds. July and August are hot, and the old town fills up when cruise ships are in. Winter is quiet and many places close.",

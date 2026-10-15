@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 28
     },
     "feb": {
       "rating": "best",
-      "note": "Dry, calving"
+      "note": "Dry, calving",
+      "temp": 29
     },
     "mar": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 28
     },
     "apr": {
       "rating": "quiet",
-      "note": "Long rains"
+      "note": "Long rains",
+      "temp": 26
     },
     "may": {
       "rating": "quiet",
-      "note": "Long rains"
+      "note": "Long rains",
+      "temp": 25
     },
     "jun": {
       "rating": "good",
-      "note": "Drying out"
+      "note": "Drying out",
+      "temp": 25
     },
     "jul": {
       "rating": "best",
-      "note": "Migration"
+      "note": "Migration",
+      "temp": 24
     },
     "aug": {
       "rating": "best",
-      "note": "Migration"
+      "note": "Migration",
+      "temp": 25
     },
     "sep": {
       "rating": "best",
-      "note": "Migration"
+      "note": "Migration",
+      "temp": 27
     },
     "oct": {
       "rating": "best",
-      "note": "Migration"
+      "note": "Migration",
+      "temp": 28
     },
     "nov": {
       "rating": "good",
-      "note": "Short rains"
+      "note": "Short rains",
+      "temp": 27
     },
     "dec": {
       "rating": "good",
-      "note": "Green"
+      "note": "Green",
+      "temp": 27
     }
   },
   "when_to_go": "July to October is the great migration, when huge herds of wildebeest cross the rivers. January and February are dry with good game viewing. April and May are the long rains, when some camps close.",

@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Hot, dry"
+      "note": "Hot, dry",
+      "temp": 32
     },
     "feb": {
       "rating": "good",
-      "note": "Hot, dry"
+      "note": "Hot, dry",
+      "temp": 32
     },
     "mar": {
       "rating": "quiet",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 32
     },
     "apr": {
       "rating": "quiet",
-      "note": "Long rains"
+      "note": "Long rains",
+      "temp": 30
     },
     "may": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 29
     },
     "jun": {
       "rating": "best",
-      "note": "Dry, breezy"
+      "note": "Dry, breezy",
+      "temp": 28
     },
     "jul": {
       "rating": "best",
-      "note": "Dry, breezy"
+      "note": "Dry, breezy",
+      "temp": 28
     },
     "aug": {
       "rating": "best",
-      "note": "Dry, sunny"
+      "note": "Dry, sunny",
+      "temp": 28
     },
     "sep": {
       "rating": "best",
-      "note": "Dry, sunny"
+      "note": "Dry, sunny",
+      "temp": 29
     },
     "oct": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 30
     },
     "nov": {
       "rating": "quiet",
-      "note": "Short rains"
+      "note": "Short rains",
+      "temp": 31
     },
     "dec": {
       "rating": "good",
-      "note": "Hot, festive"
+      "note": "Hot, festive",
+      "temp": 32
     }
   },
   "when_to_go": "June to September is dry and breezy, and it pairs well with a mainland safari. January and February are hot and mostly dry too. The long rains fall from March to May, with April the wettest month, and there are short rains in November. On the east coast the tide goes out a long way, so pick your beach with care.",

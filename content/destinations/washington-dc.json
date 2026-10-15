@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 7
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 9
     },
     "mar": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 14
     },
     "apr": {
       "rating": "best",
-      "note": "Cherry blossom"
+      "note": "Cherry blossom",
+      "temp": 20
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 25
     },
     "jun": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 30
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 32
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 31
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 27
     },
     "oct": {
       "rating": "best",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 21
     },
     "nov": {
       "rating": "good",
-      "note": "Crisp"
+      "note": "Crisp",
+      "temp": 15
     },
     "dec": {
       "rating": "good",
-      "note": "Festive"
+      "note": "Festive",
+      "temp": 9
     }
   },
   "when_to_go": "Spring brings cherry blossom around the Tidal Basin in late March and early April, and autumn is mild and clear. Summer is hot and humid, so plan museum afternoons. Winter is cold but quieter.",

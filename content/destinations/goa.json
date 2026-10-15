@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 32
     },
     "feb": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 32
     },
     "mar": {
       "rating": "best",
-      "note": "Dry, hot"
+      "note": "Dry, hot",
+      "temp": 32
     },
     "apr": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 33
     },
     "may": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 33
     },
     "jun": {
       "rating": "quiet",
-      "note": "Monsoon"
+      "note": "Monsoon",
+      "temp": 31
     },
     "jul": {
       "rating": "quiet",
-      "note": "Monsoon"
+      "note": "Monsoon",
+      "temp": 29
     },
     "aug": {
       "rating": "quiet",
-      "note": "Monsoon"
+      "note": "Monsoon",
+      "temp": 29
     },
     "sep": {
       "rating": "quiet",
-      "note": "Monsoon"
+      "note": "Monsoon",
+      "temp": 30
     },
     "oct": {
       "rating": "good",
-      "note": "Green, warm"
+      "note": "Green, warm",
+      "temp": 32
     },
     "nov": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 33
     },
     "dec": {
       "rating": "best",
-      "note": "Christmas, busy"
+      "note": "Christmas, busy",
+      "temp": 33
     }
   },
   "when_to_go": "November to March is dry and sunny, and Christmas is the liveliest and busiest time, with midnight mass, stars hung outside houses and parties on the beach. April and May get very hot, and the monsoon runs June to September.",

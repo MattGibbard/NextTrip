@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Freezing"
+      "note": "Freezing",
+      "temp": -5
     },
     "feb": {
       "rating": "quiet",
-      "note": "Freezing"
+      "note": "Freezing",
+      "temp": -3
     },
     "mar": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 3
     },
     "apr": {
       "rating": "quiet",
-      "note": "Thaw"
+      "note": "Thaw",
+      "temp": 11
     },
     "may": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 19
     },
     "jun": {
       "rating": "best",
-      "note": "Festivals"
+      "note": "Festivals",
+      "temp": 24
     },
     "jul": {
       "rating": "best",
-      "note": "Festivals"
+      "note": "Festivals",
+      "temp": 26
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 25
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 20
     },
     "oct": {
       "rating": "best",
-      "note": "Autumn colour"
+      "note": "Autumn colour",
+      "temp": 13
     },
     "nov": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 5
     },
     "dec": {
       "rating": "good",
-      "note": "Snowy, festive"
+      "note": "Snowy, festive",
+      "temp": -2
     }
   },
   "when_to_go": "June to October is best, with summer festivals almost every weekend and autumn colours on Mount Royal. Winter is very cold, but there's outdoor skating and a snow festival. Spring is a slushy in-between time.",

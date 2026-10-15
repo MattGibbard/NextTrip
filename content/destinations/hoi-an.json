@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 25
     },
     "feb": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 26
     },
     "mar": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 28
     },
     "apr": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 31
     },
     "may": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 33
     },
     "jun": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 34
     },
     "jul": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 34
     },
     "aug": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 34
     },
     "sep": {
       "rating": "good",
-      "note": "Rains start"
+      "note": "Rains start",
+      "temp": 32
     },
     "oct": {
       "rating": "quiet",
-      "note": "Rainy, floods"
+      "note": "Rainy, floods",
+      "temp": 29
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy, floods"
+      "note": "Rainy, floods",
+      "temp": 27
     },
     "dec": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 25
     }
   },
   "when_to_go": "February to April is the sweet spot, warm and dry with calm sea. May to August is hot but sunny and good for the beach. October and November are the rainy season, when the old town sometimes floods.",

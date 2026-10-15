@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 7
     },
     "feb": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 8
     },
     "mar": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 10
     },
     "apr": {
       "rating": "good",
-      "note": "Blossom"
+      "note": "Blossom",
+      "temp": 13
     },
     "may": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 17
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 20
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 22
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 23
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 19
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 14
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 9
     },
     "dec": {
       "rating": "good",
-      "note": "Snow on the mountains"
+      "note": "Snow on the mountains",
+      "temp": 6
     }
   },
   "when_to_go": "June to September is dry and sunny, perfect for beaches, bikes and whale watching. Winter is mild but rainy in the city, with skiing on the mountains just above it. Spring brings cherry blossom.",

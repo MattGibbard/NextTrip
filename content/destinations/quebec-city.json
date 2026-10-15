@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Snowy"
+      "note": "Snowy",
+      "temp": -8
     },
     "feb": {
       "rating": "good",
-      "note": "Winter Carnival"
+      "note": "Winter Carnival",
+      "temp": -6
     },
     "mar": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 0
     },
     "apr": {
       "rating": "quiet",
-      "note": "Thaw"
+      "note": "Thaw",
+      "temp": 8
     },
     "may": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 17
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "jul": {
       "rating": "best",
-      "note": "Festivals"
+      "note": "Festivals",
+      "temp": 25
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 24
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 18
     },
     "oct": {
       "rating": "best",
-      "note": "Autumn colour"
+      "note": "Autumn colour",
+      "temp": 11
     },
     "nov": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 3
     },
     "dec": {
       "rating": "good",
-      "note": "Christmas market"
+      "note": "Christmas market",
+      "temp": -5
     }
   },
   "when_to_go": "Summer and early autumn are warm, with street performers and festivals. February's Winter Carnival has ice palaces, snow slides and canoe races on the frozen river, so wrap up well. December has a German-style Christmas market.",

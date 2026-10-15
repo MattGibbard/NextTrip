@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 19
     },
     "feb": {
       "rating": "good",
-      "note": "Mild, flowers"
+      "note": "Mild, flowers",
+      "temp": 19
     },
     "mar": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 19
     },
     "apr": {
       "rating": "best",
-      "note": "Flower festival"
+      "note": "Flower festival",
+      "temp": 20
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 21
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "jul": {
       "rating": "good",
-      "note": "Warm, busy"
+      "note": "Warm, busy",
+      "temp": 24
     },
     "aug": {
       "rating": "good",
-      "note": "Warm, busy"
+      "note": "Warm, busy",
+      "temp": 26
     },
     "sep": {
       "rating": "best",
-      "note": "Warmest sea"
+      "note": "Warmest sea",
+      "temp": 26
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "nov": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 22
     },
     "dec": {
       "rating": "good",
-      "note": "New Year fireworks"
+      "note": "New Year fireworks",
+      "temp": 20
     }
   },
   "when_to_go": "Madeira is mild all year, so it's a good bet for winter sun without a long flight. Spring is full of flowers, and September has the warmest sea. New Year's Eve brings one of the biggest firework displays in the world.",

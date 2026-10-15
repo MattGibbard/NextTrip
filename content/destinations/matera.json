@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 10
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 11
     },
     "mar": {
       "rating": "good",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 14
     },
     "apr": {
       "rating": "best",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 18
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "jun": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 28
     },
     "jul": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 31
     },
     "aug": {
       "rating": "good",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 31
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 26
     },
     "oct": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 21
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 15
     },
     "dec": {
       "rating": "good",
-      "note": "Festive"
+      "note": "Festive",
+      "temp": 11
     }
   },
   "when_to_go": "April, May, September and October are warm enough for exploring but cool enough for all the steps. July and August are very hot, so explore early and late. Winter is cold and quiet, but the Sassi look magical at Christmas. Easter and the Festa della Bruna on 2 July are busy, so book ahead for those.",

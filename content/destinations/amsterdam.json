@@ -49,51 +49,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 6
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 7
     },
     "mar": {
       "rating": "good",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 10
     },
     "apr": {
       "rating": "best",
-      "note": "Tulips"
+      "note": "Tulips",
+      "temp": 14
     },
     "may": {
       "rating": "best",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 18
     },
     "jun": {
       "rating": "best",
-      "note": "Long days"
+      "note": "Long days",
+      "temp": 20
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 23
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 22
     },
     "sep": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 19
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 15
     },
     "nov": {
       "rating": "quiet",
-      "note": "Grey"
+      "note": "Grey",
+      "temp": 10
     },
     "dec": {
       "rating": "good",
-      "note": "Festive lights"
+      "note": "Festive lights",
+      "temp": 7
     }
   },
   "when_to_go": "April and May bring the tulips, and summer has long evenings for canal trips and parks. Winter is cold and grey, but December has light festivals and ice rinks. King's Day on 27 April turns the city orange and very busy.",

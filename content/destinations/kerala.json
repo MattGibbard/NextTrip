@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 31
     },
     "feb": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 31
     },
     "mar": {
       "rating": "good",
-      "note": "Getting hot"
+      "note": "Getting hot",
+      "temp": 32
     },
     "apr": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 33
     },
     "may": {
       "rating": "quiet",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 32
     },
     "jun": {
       "rating": "quiet",
-      "note": "Monsoon"
+      "note": "Monsoon",
+      "temp": 29
     },
     "jul": {
       "rating": "quiet",
-      "note": "Monsoon"
+      "note": "Monsoon",
+      "temp": 29
     },
     "aug": {
       "rating": "quiet",
-      "note": "Monsoon, Onam"
+      "note": "Monsoon, Onam",
+      "temp": 29
     },
     "sep": {
       "rating": "good",
-      "note": "Rains easing"
+      "note": "Rains easing",
+      "temp": 29
     },
     "oct": {
       "rating": "good",
-      "note": "Some rain"
+      "note": "Some rain",
+      "temp": 30
     },
     "nov": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 31
     },
     "dec": {
       "rating": "best",
-      "note": "Dry, busy"
+      "note": "Dry, busy",
+      "temp": 31
     }
   },
   "when_to_go": "December to February is the best time, warm and dry with green countryside. March and April get very hot and humid. The south-west monsoon brings heavy rain from June to September, and more rain falls in October and November. The hills around Munnar stay cooler all year.",

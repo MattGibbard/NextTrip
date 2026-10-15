@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 29
     },
     "feb": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 29
     },
     "mar": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 30
     },
     "apr": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 30
     },
     "may": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 31
     },
     "jun": {
       "rating": "good",
-      "note": "Rainy spells"
+      "note": "Rainy spells",
+      "temp": 31
     },
     "jul": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 31
     },
     "aug": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 31
     },
     "sep": {
       "rating": "quiet",
-      "note": "Hurricane risk"
+      "note": "Hurricane risk",
+      "temp": 31
     },
     "oct": {
       "rating": "quiet",
-      "note": "Hurricane risk"
+      "note": "Hurricane risk",
+      "temp": 31
     },
     "nov": {
       "rating": "good",
-      "note": "Rainy spells"
+      "note": "Rainy spells",
+      "temp": 30
     },
     "dec": {
       "rating": "best",
-      "note": "Festive, busy"
+      "note": "Festive, busy",
+      "temp": 29
     }
   },
   "when_to_go": "December to April is dry and sunny, with Christmas and Easter the busiest and dearest. Summer is hot with short showers and lower prices. Hurricane season runs June to November, though Barbados is usually south of the main storm track.",

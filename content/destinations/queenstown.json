@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 22
     },
     "feb": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 22
     },
     "mar": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 19
     },
     "apr": {
       "rating": "good",
-      "note": "Autumn colour"
+      "note": "Autumn colour",
+      "temp": 15
     },
     "may": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 11
     },
     "jun": {
       "rating": "good",
-      "note": "Skiing starts"
+      "note": "Skiing starts",
+      "temp": 8
     },
     "jul": {
       "rating": "good",
-      "note": "Skiing"
+      "note": "Skiing",
+      "temp": 8
     },
     "aug": {
       "rating": "good",
-      "note": "Skiing"
+      "note": "Skiing",
+      "temp": 10
     },
     "sep": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 13
     },
     "oct": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 16
     },
     "nov": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 18
     },
     "dec": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 21
     }
   },
   "when_to_go": "December to March is summer, with long days for lakes and hiking. June to September is ski season on four nearby mountains. April's autumn colours are lovely and quieter.",

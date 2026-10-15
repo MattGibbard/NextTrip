@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 19
     },
     "feb": {
       "rating": "quiet",
-      "note": "Rainy, Inca Trail shut"
+      "note": "Rainy, Inca Trail shut",
+      "temp": 19
     },
     "mar": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 19
     },
     "apr": {
       "rating": "good",
-      "note": "Drying out"
+      "note": "Drying out",
+      "temp": 20
     },
     "may": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 20
     },
     "jun": {
       "rating": "best",
-      "note": "Dry, festivals"
+      "note": "Dry, festivals",
+      "temp": 20
     },
     "jul": {
       "rating": "best",
-      "note": "Dry, busy"
+      "note": "Dry, busy",
+      "temp": 19
     },
     "aug": {
       "rating": "best",
-      "note": "Dry, busy"
+      "note": "Dry, busy",
+      "temp": 20
     },
     "sep": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 21
     },
     "oct": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 21
     },
     "nov": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 21
     },
     "dec": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 20
     }
   },
   "when_to_go": "May to September is the dry season, with sunny days and cold nights, and July and August are busiest. December to March is the rainy season, and the Inca Trail closes in February. Book Machu Picchu tickets and trains well ahead in any month.",

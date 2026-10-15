@@ -45,51 +45,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Skiing"
+      "note": "Skiing",
+      "temp": 3
     },
     "feb": {
       "rating": "good",
-      "note": "Skiing"
+      "note": "Skiing",
+      "temp": 5
     },
     "mar": {
       "rating": "good",
-      "note": "Spring skiing"
+      "note": "Spring skiing",
+      "temp": 10
     },
     "apr": {
       "rating": "quiet",
-      "note": "Between seasons"
+      "note": "Between seasons",
+      "temp": 14
     },
     "may": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 19
     },
     "jun": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 22
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 25
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 24
     },
     "sep": {
       "rating": "best",
-      "note": "Clear days"
+      "note": "Clear days",
+      "temp": 20
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 14
     },
     "nov": {
       "rating": "quiet",
-      "note": "Between seasons"
+      "note": "Between seasons",
+      "temp": 8
     },
     "dec": {
       "rating": "good",
-      "note": "Snowy, festive"
+      "note": "Snowy, festive",
+      "temp": 4
     }
   },
   "when_to_go": "June to September is best for hiking, lake swims and the mountain railways. December to March brings skiing in Grindelwald and Wengen nearby. April and November are quiet, with some lifts closed for maintenance.",

@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Mild, rainy"
+      "note": "Mild, rainy",
+      "temp": 15
     },
     "feb": {
       "rating": "quiet",
-      "note": "Mild, rainy"
+      "note": "Mild, rainy",
+      "temp": 16
     },
     "mar": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 19
     },
     "apr": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 20
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "jun": {
       "rating": "best",
-      "note": "Festivals"
+      "note": "Festivals",
+      "temp": 26
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 28
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 29
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 27
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 18
     },
     "dec": {
       "rating": "quiet",
-      "note": "Festive"
+      "note": "Festive",
+      "temp": 15
     }
   },
   "when_to_go": "April to June and September to October are warm and bright without the summer crowds. July and August are hot and busy, though the beaches are close. Winter is mild but wet, and cheap. In June the streets fill with sardine grills and street parties for the Santos Populares.",

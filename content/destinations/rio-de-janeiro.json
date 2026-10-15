@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 30
     },
     "feb": {
       "rating": "good",
-      "note": "Carnival, hot"
+      "note": "Carnival, hot",
+      "temp": 31
     },
     "mar": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 30
     },
     "apr": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 28
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 27
     },
     "jun": {
       "rating": "best",
-      "note": "Mild, dry"
+      "note": "Mild, dry",
+      "temp": 26
     },
     "jul": {
       "rating": "best",
-      "note": "Mild, dry"
+      "note": "Mild, dry",
+      "temp": 25
     },
     "aug": {
       "rating": "best",
-      "note": "Mild, dry"
+      "note": "Mild, dry",
+      "temp": 26
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 26
     },
     "oct": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 27
     },
     "nov": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 28
     },
     "dec": {
       "rating": "good",
-      "note": "Christmas, New Year"
+      "note": "Christmas, New Year",
+      "temp": 30
     }
   },
   "when_to_go": "April to September is drier and milder. December to March is summer, hot and humid with afternoon storms, and Christmas, New Year and Carnival are the busiest and dearest times to go.",

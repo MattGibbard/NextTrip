@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 10
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 11
     },
     "mar": {
       "rating": "quiet",
-      "note": "Cool, some closures"
+      "note": "Cool, some closures",
+      "temp": 15
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 17
     },
     "may": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 21
     },
     "jun": {
       "rating": "best",
-      "note": "Warm, green"
+      "note": "Warm, green",
+      "temp": 25
     },
     "jul": {
       "rating": "best",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 27
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busiest"
+      "note": "Hot, busiest",
+      "temp": 27
     },
     "sep": {
       "rating": "best",
-      "note": "Warm, calmer"
+      "note": "Warm, calmer",
+      "temp": 24
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn colours"
+      "note": "Autumn colours",
+      "temp": 19
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 13
     },
     "dec": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 10
     }
   },
   "when_to_go": "June and September are warm, with fewer people on the river and in the villages. July and August are hot and lively, with markets and festivals, but the castles and canoe launches get busy. Some sights and campsites close or cut their hours from November to March.",

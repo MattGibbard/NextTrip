@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Warm, calm"
+      "note": "Warm, calm",
+      "temp": 29
     },
     "feb": {
       "rating": "best",
-      "note": "Warm, calm"
+      "note": "Warm, calm",
+      "temp": 30
     },
     "mar": {
       "rating": "best",
-      "note": "Warm, calm"
+      "note": "Warm, calm",
+      "temp": 30
     },
     "apr": {
       "rating": "best",
-      "note": "Warm, calm"
+      "note": "Warm, calm",
+      "temp": 30
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 28
     },
     "jun": {
       "rating": "good",
-      "note": "Cooler, choppier"
+      "note": "Cooler, choppier",
+      "temp": 26
     },
     "jul": {
       "rating": "good",
-      "note": "Cooler, choppier"
+      "note": "Cooler, choppier",
+      "temp": 25
     },
     "aug": {
       "rating": "good",
-      "note": "Cooler, choppier"
+      "note": "Cooler, choppier",
+      "temp": 24
     },
     "sep": {
       "rating": "quiet",
-      "note": "Choppiest"
+      "note": "Choppiest",
+      "temp": 25
     },
     "oct": {
       "rating": "good",
-      "note": "Cooler"
+      "note": "Cooler",
+      "temp": 25
     },
     "nov": {
       "rating": "good",
-      "note": "Cooler"
+      "note": "Cooler",
+      "temp": 26
     },
     "dec": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 28
     }
   },
   "when_to_go": "The Galápagos are good all year. December to May is warmer, with calmer seas, which suits children who get seasick. June to November is cooler and choppier, but the sea is full of life.",

@@ -53,7 +53,8 @@ export interface Destination {
   budget: number | null;
   facts: { label: string; value: string; highlight: boolean }[];
   facts_note: string;
-  months: { code: string; rating: MonthRating; note: string }[];
+  /** temp: the average daytime high in °C, or null when the guide doesn't say. */
+  months: { code: string; rating: MonthRating; note: string; temp: number | null }[];
   when_to_go: string;
   things: { tag: string; name: string; blurb: string; image: string; image_alt: string }[];
   faqs: { question: string; answer: string }[];
@@ -135,7 +136,8 @@ export function readDestination(slug: string, raw: Record<string, unknown>, posi
     months: MONTHS.map((code) => {
       const m = months[code] ?? {};
       const rating = m.rating === "best" || m.rating === "good" ? m.rating : "quiet";
-      return { code: code.toUpperCase(), rating, note: str(m.note) };
+      const temp = num(m.temp);
+      return { code: code.toUpperCase(), rating, note: str(m.note), temp: temp === null ? null : Math.round(temp) };
     }),
     when_to_go: str(raw.when_to_go),
     things: list(raw.things)

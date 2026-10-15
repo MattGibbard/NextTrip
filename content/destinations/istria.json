@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 9
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 10
     },
     "mar": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 14
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 17
     },
     "may": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "jun": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 26
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 29
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busiest"
+      "note": "Hot, busiest",
+      "temp": 29
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 24
     },
     "oct": {
       "rating": "good",
-      "note": "Truffle season"
+      "note": "Truffle season",
+      "temp": 19
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 14
     },
     "dec": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 10
     }
   },
   "when_to_go": "June and September are best, with warm seas and quieter towns. July and August are hot and busy. October is truffle season inland, though it's too cool for most to swim.",

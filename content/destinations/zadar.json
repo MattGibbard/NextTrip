@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Mild, quiet"
+      "note": "Mild, quiet",
+      "temp": 11
     },
     "feb": {
       "rating": "quiet",
-      "note": "Mild, quiet"
+      "note": "Mild, quiet",
+      "temp": 12
     },
     "mar": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 14
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 18
     },
     "may": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "jun": {
       "rating": "best",
-      "note": "Hot, sunny"
+      "note": "Hot, sunny",
+      "temp": 26
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 29
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 29
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 25
     },
     "oct": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 20
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 16
     },
     "dec": {
       "rating": "quiet",
-      "note": "Quiet"
+      "note": "Quiet",
+      "temp": 12
     }
   },
   "when_to_go": "June and September are hot and sunny, with warm sea and fewer crowds than high summer. July and August are the hottest and busiest months. Many boat trips and seasonal restaurants slow down from November to March.",

@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Snow on peaks"
+      "note": "Snow on peaks",
+      "temp": 14
     },
     "feb": {
       "rating": "quiet",
-      "note": "Very quiet"
+      "note": "Very quiet",
+      "temp": 14
     },
     "mar": {
       "rating": "quiet",
-      "note": "Mild, showers"
+      "note": "Mild, showers",
+      "temp": 16
     },
     "apr": {
       "rating": "good",
-      "note": "Spring walks"
+      "note": "Spring walks",
+      "temp": 18
     },
     "may": {
       "rating": "good",
-      "note": "Maquis in bloom"
+      "note": "Maquis in bloom",
+      "temp": 22
     },
     "jun": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 26
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 28
     },
     "aug": {
       "rating": "good",
-      "note": "Busiest"
+      "note": "Busiest",
+      "temp": 29
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea, calmer"
+      "note": "Warm sea, calmer",
+      "temp": 26
     },
     "oct": {
       "rating": "good",
-      "note": "Chestnut season"
+      "note": "Chestnut season",
+      "temp": 22
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 18
     },
     "dec": {
       "rating": "quiet",
-      "note": "Closed resorts"
+      "note": "Closed resorts",
+      "temp": 15
     }
   },
   "when_to_go": "June and September are the sweet spot, with warm sea and fewer crowds. July and August are hot and busy, especially in the south. Spring is lovely for walking but the sea is still cold.",

@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Whales"
+      "note": "Whales",
+      "temp": 27
     },
     "feb": {
       "rating": "best",
-      "note": "Whales"
+      "note": "Whales",
+      "temp": 27
     },
     "mar": {
       "rating": "best",
-      "note": "Whales"
+      "note": "Whales",
+      "temp": 27
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 28
     },
     "may": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 29
     },
     "jun": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 30
     },
     "jul": {
       "rating": "good",
-      "note": "Summer, busy"
+      "note": "Summer, busy",
+      "temp": 31
     },
     "aug": {
       "rating": "good",
-      "note": "Summer, busy"
+      "note": "Summer, busy",
+      "temp": 31
     },
     "sep": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 31
     },
     "oct": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 30
     },
     "nov": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 29
     },
     "dec": {
       "rating": "good",
-      "note": "Whales, busy"
+      "note": "Whales, busy",
+      "temp": 27
     }
   },
   "when_to_go": "Maui is warm all year. December to March is humpback whale season, and April, May, September and October are quieter and good value. The north coast gets more winter waves, so families swim on the south and west coasts.",

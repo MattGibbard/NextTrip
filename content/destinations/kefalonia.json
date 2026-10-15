@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cool, closed"
+      "note": "Cool, closed",
+      "temp": 15
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cool, closed"
+      "note": "Cool, closed",
+      "temp": 15
     },
     "mar": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 20
     },
     "may": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "jun": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 28
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 31
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busiest"
+      "note": "Hot, busiest",
+      "temp": 31
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 28
     },
     "oct": {
       "rating": "good",
-      "note": "Season ends"
+      "note": "Season ends",
+      "temp": 24
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 20
     },
     "dec": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 16
     }
   },
   "when_to_go": "June and September are best, with warm seas and quieter beaches. July and August are hot and busy. Most hotels and tavernas close from November to April.",

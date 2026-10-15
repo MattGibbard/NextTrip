@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cool, quiet"
+      "note": "Cool, quiet",
+      "temp": 9
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cool, quiet"
+      "note": "Cool, quiet",
+      "temp": 10
     },
     "mar": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 13
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 17
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "jun": {
       "rating": "best",
-      "note": "Warm, swimming"
+      "note": "Warm, swimming",
+      "temp": 26
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 28
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 28
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 24
     },
     "oct": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 19
     },
     "nov": {
       "rating": "quiet",
-      "note": "Quiet"
+      "note": "Quiet",
+      "temp": 14
     },
     "dec": {
       "rating": "quiet",
-      "note": "Quiet"
+      "note": "Quiet",
+      "temp": 10
     }
   },
   "when_to_go": "June and September are ideal, with warm sea, long evenings and fewer crowds than high summer. July and August are hot and lively but the small town fills up. Spring and autumn are lovely for walking and day trips, though the sea is cool. Winter is quiet and many places shorten their hours.",

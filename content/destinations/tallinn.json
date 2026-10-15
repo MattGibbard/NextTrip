@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold, dark"
+      "note": "Cold, dark",
+      "temp": -1
     },
     "feb": {
       "rating": "quiet",
-      "note": "Snowy"
+      "note": "Snowy",
+      "temp": -1
     },
     "mar": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 3
     },
     "apr": {
       "rating": "good",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 10
     },
     "may": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 16
     },
     "jun": {
       "rating": "best",
-      "note": "Long days"
+      "note": "Long days",
+      "temp": 19
     },
     "jul": {
       "rating": "best",
-      "note": "Warmest"
+      "note": "Warmest",
+      "temp": 22
     },
     "aug": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 21
     },
     "sep": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 16
     },
     "oct": {
       "rating": "good",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 10
     },
     "nov": {
       "rating": "quiet",
-      "note": "Dark"
+      "note": "Dark",
+      "temp": 4
     },
     "dec": {
       "rating": "good",
-      "note": "Christmas market"
+      "note": "Christmas market",
+      "temp": 1
     }
   },
   "when_to_go": "June to August is warmest, with very long light evenings. December has a Christmas market in the Town Hall Square and the Old Town looks pretty in the snow. The rest of winter is cold and dark, but the museums are good on chilly days.",

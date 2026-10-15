@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Storm season"
+      "note": "Storm season",
+      "temp": 8
     },
     "feb": {
       "rating": "quiet",
-      "note": "Stormy"
+      "note": "Stormy",
+      "temp": 9
     },
     "mar": {
       "rating": "good",
-      "note": "Grey whales"
+      "note": "Grey whales",
+      "temp": 10
     },
     "apr": {
       "rating": "good",
-      "note": "Grey whales"
+      "note": "Grey whales",
+      "temp": 12
     },
     "may": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 14
     },
     "jun": {
       "rating": "good",
-      "note": "Warmer"
+      "note": "Warmer",
+      "temp": 16
     },
     "jul": {
       "rating": "best",
-      "note": "Driest"
+      "note": "Driest",
+      "temp": 18
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 18
     },
     "sep": {
       "rating": "best",
-      "note": "Calm, warm"
+      "note": "Calm, warm",
+      "temp": 17
     },
     "oct": {
       "rating": "quiet",
-      "note": "Rains return"
+      "note": "Rains return",
+      "temp": 13
     },
     "nov": {
       "rating": "quiet",
-      "note": "Stormy"
+      "note": "Stormy",
+      "temp": 9
     },
     "dec": {
       "rating": "quiet",
-      "note": "Storm season"
+      "note": "Storm season",
+      "temp": 7
     }
   },
   "when_to_go": "July to September is driest and warmest, and the best time for boat trips. Grey whales pass in March and April. From October to February it's very wet, and big winter storms draw people to watch the waves. The sea is cold all year, so surfers wear wetsuits.",

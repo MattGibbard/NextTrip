@@ -24,12 +24,13 @@ describe("destination guide files", () => {
 
 describe("readDestination", () => {
   it("fills gaps instead of failing on a half-written guide", () => {
-    const d = readDestination("somewhere", { name: "Somewhere", budget: 7, holiday_types: ["city", "moon"], months: { jan: { rating: "best", note: "Lovely" } } });
+    const d = readDestination("somewhere", { name: "Somewhere", budget: 7, holiday_types: ["city", "moon"], months: { jan: { rating: "best", note: "Lovely", temp: 21.6 } } });
     expect(d.published).toBe(false);
     expect(d.title).toBe("Holidays in Somewhere");
     expect(d.budget).toBeNull();
     expect(d.holiday_types).toEqual(["city"]);
-    expect(d.months[0]).toEqual({ code: "JAN", rating: "best", note: "Lovely" });
+    expect(d.months[0]).toEqual({ code: "JAN", rating: "best", note: "Lovely", temp: 22 });
+    expect(d.months[1].temp).toBeNull();
     expect(d.months[1].rating).toBe("quiet");
   });
 });
@@ -184,5 +185,17 @@ describe("photoProps", () => {
   it("uses other photos as they are", () => {
     expect(photoProps("https://example.com/x.jpg", [1280, 854], "100vw")).toEqual({ src: "https://example.com/x.jpg" });
     expect(photoProps("/images/destinations/a.webp", null, "100vw")).toEqual({ src: "https://somewhere.party/images/destinations/a.webp" });
+  });
+});
+
+describe("guide temperatures", () => {
+  it("gives every published guide a daytime high for every month", () => {
+    for (const d of DESTINATIONS) {
+      for (const m of d.months) {
+        expect(m.temp, `${d.slug} ${m.code}`).not.toBeNull();
+        expect(m.temp!, `${d.slug} ${m.code}`).toBeGreaterThanOrEqual(-30);
+        expect(m.temp!, `${d.slug} ${m.code}`).toBeLessThanOrEqual(50);
+      }
+    }
   });
 });

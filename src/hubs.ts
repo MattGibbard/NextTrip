@@ -7,7 +7,7 @@ import { HOLIDAY_TYPES } from "../shared/ideaDetails";
 import type { HolidayType } from "../shared/ideaDetails";
 import { SITE, destinationPath } from "../shared/seo";
 import type { Meta } from "../shared/seo";
-import { DESTINATIONS, MONTHS, countryFlag, destinationCountry, findDestination, imageUrl } from "./destinations";
+import { DESTINATIONS, MONTHS, countryFlag, destinationCountry, findDestination, flightHoursTo, imageUrl } from "./destinations";
 import type { DestinationCard } from "./destinations";
 
 export type HubKind = "type" | "country" | "month" | "collection";
@@ -86,6 +86,24 @@ export function hubGuides(h: HubCard): DestinationCard[] {
 /** For a month: the guides rated "good" that month, the next best thing, A to Z. */
 export function alsoGood(h: HubCard): DestinationCard[] {
   return h.kind === "month" && h.month !== null ? DESTINATIONS.filter((d) => d.months[h.month!]?.rating === "good") : [];
+}
+
+/** How long a flight counts as near, for a month's "Where's hot" list. */
+export const NEAR_HOURS = 5;
+
+/**
+ * For a month: the warmest places that are at their best or good that month, by average daytime high,
+ * split into those within NEAR_HOURS of `from` and those further away. Warmest first, `per` of each.
+ */
+export function hotList(h: HubCard, from: { lat: number | null; lon: number | null }, per = 6) {
+  if (h.kind !== "month" || h.month === null) return { near: [], far: [] };
+  const m = h.month;
+  const rows = DESTINATIONS.filter((d) => d.months[m]?.rating !== "quiet" && d.months[m]?.temp != null)
+    .map((d) => ({ d, temp: d.months[m].temp!, hours: flightHoursTo(from, d) }))
+    .sort((a, b) => b.temp - a.temp || a.d.name.localeCompare(b.d.name, "en-GB"));
+  const near = rows.filter((r) => r.hours !== null && r.hours <= NEAR_HOURS).slice(0, per);
+  const far = rows.filter((r) => r.hours === null || r.hours > NEAR_HOURS).slice(0, per);
+  return { near, far };
 }
 
 /** What a hub is about, for its links: a holiday type's icon, a country's flag, the month's season or a collection's own emoji. */

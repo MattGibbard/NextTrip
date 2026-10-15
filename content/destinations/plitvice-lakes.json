@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold, snowy"
+      "note": "Cold, snowy",
+      "temp": 2
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 4
     },
     "mar": {
       "rating": "quiet",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 9
     },
     "apr": {
       "rating": "good",
-      "note": "Full waterfalls"
+      "note": "Full waterfalls",
+      "temp": 14
     },
     "may": {
       "rating": "best",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 19
     },
     "jun": {
       "rating": "best",
-      "note": "Green"
+      "note": "Green",
+      "temp": 22
     },
     "jul": {
       "rating": "good",
-      "note": "Very busy"
+      "note": "Very busy",
+      "temp": 25
     },
     "aug": {
       "rating": "good",
-      "note": "Busiest"
+      "note": "Busiest",
+      "temp": 25
     },
     "sep": {
       "rating": "best",
-      "note": "Quieter"
+      "note": "Quieter",
+      "temp": 20
     },
     "oct": {
       "rating": "best",
-      "note": "Autumn colours"
+      "note": "Autumn colours",
+      "temp": 15
     },
     "nov": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 8
     },
     "dec": {
       "rating": "quiet",
-      "note": "Snowy"
+      "note": "Snowy",
+      "temp": 3
     }
   },
   "when_to_go": "May, June, September and October are best, with full waterfalls and fewer crowds. July and August are very busy, so book timed tickets and arrive early. In winter some trails and the boats close, but snowy waterfalls are beautiful.",

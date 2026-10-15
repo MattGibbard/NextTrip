@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Cold, clear"
+      "note": "Cold, clear",
+      "temp": 19
     },
     "feb": {
       "rating": "good",
-      "note": "Cold, clear"
+      "note": "Cold, clear",
+      "temp": 21
     },
     "mar": {
       "rating": "best",
-      "note": "Spring, blossom"
+      "note": "Spring, blossom",
+      "temp": 25
     },
     "apr": {
       "rating": "best",
-      "note": "Spring, blossom"
+      "note": "Spring, blossom",
+      "temp": 28
     },
     "may": {
       "rating": "good",
-      "note": "Hot, hazy"
+      "note": "Hot, hazy",
+      "temp": 29
     },
     "jun": {
       "rating": "quiet",
-      "note": "Monsoon"
+      "note": "Monsoon",
+      "temp": 29
     },
     "jul": {
       "rating": "quiet",
-      "note": "Monsoon"
+      "note": "Monsoon",
+      "temp": 28
     },
     "aug": {
       "rating": "quiet",
-      "note": "Monsoon"
+      "note": "Monsoon",
+      "temp": 28
     },
     "sep": {
       "rating": "good",
-      "note": "Clearing"
+      "note": "Clearing",
+      "temp": 28
     },
     "oct": {
       "rating": "best",
-      "note": "Clear, festivals"
+      "note": "Clear, festivals",
+      "temp": 26
     },
     "nov": {
       "rating": "best",
-      "note": "Clear"
+      "note": "Clear",
+      "temp": 23
     },
     "dec": {
       "rating": "good",
-      "note": "Cold, clear"
+      "note": "Cold, clear",
+      "temp": 20
     }
   },
   "when_to_go": "October and November are the best months, with clear mountain views after the monsoon and big festivals. March and April are warm with rhododendrons in bloom. June to August is the monsoon, with cloud, rain and leeches on trails.",

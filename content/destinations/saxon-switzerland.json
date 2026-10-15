@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 3
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 5
     },
     "mar": {
       "rating": "quiet",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 9
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 14
     },
     "may": {
       "rating": "best",
-      "note": "Fresh and green"
+      "note": "Fresh and green",
+      "temp": 19
     },
     "jun": {
       "rating": "best",
-      "note": "Long days"
+      "note": "Long days",
+      "temp": 22
     },
     "jul": {
       "rating": "good",
-      "note": "Warm, busy"
+      "note": "Warm, busy",
+      "temp": 24
     },
     "aug": {
       "rating": "good",
-      "note": "Warm, busy"
+      "note": "Warm, busy",
+      "temp": 24
     },
     "sep": {
       "rating": "best",
-      "note": "Golden light"
+      "note": "Golden light",
+      "temp": 19
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn colour"
+      "note": "Autumn colour",
+      "temp": 14
     },
     "nov": {
       "rating": "quiet",
-      "note": "Grey"
+      "note": "Grey",
+      "temp": 8
     },
     "dec": {
       "rating": "good",
-      "note": "Christmas markets"
+      "note": "Christmas markets",
+      "temp": 4
     }
   },
   "when_to_go": "May, June and September are best for walking, with mild days and fewer people on the trails. July and August are warm but the famous viewpoints get busy, so start early. December is cold, but Dresden's Christmas markets are close by.",

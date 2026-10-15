@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Mild, rainy"
+      "note": "Mild, rainy",
+      "temp": 15
     },
     "feb": {
       "rating": "quiet",
-      "note": "Mild, rainy"
+      "note": "Mild, rainy",
+      "temp": 16
     },
     "mar": {
       "rating": "quiet",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 17
     },
     "apr": {
       "rating": "good",
-      "note": "Easter"
+      "note": "Easter",
+      "temp": 20
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "jun": {
       "rating": "best",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 28
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 29
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 29
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 27
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 20
     },
     "dec": {
       "rating": "quiet",
-      "note": "Quiet"
+      "note": "Quiet",
+      "temp": 17
     }
   },
   "when_to_go": "May, June, September and October are best, hot enough for the beach but kinder for exploring. July and August are very hot, windy and busy. Many resorts close from November to March.",

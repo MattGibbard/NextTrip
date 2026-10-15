@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Snow, skiing"
+      "note": "Snow, skiing",
+      "temp": 1
     },
     "feb": {
       "rating": "good",
-      "note": "Snow, skiing"
+      "note": "Snow, skiing",
+      "temp": 3
     },
     "mar": {
       "rating": "quiet",
-      "note": "Thaw"
+      "note": "Thaw",
+      "temp": 9
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 15
     },
     "may": {
       "rating": "best",
-      "note": "Green"
+      "note": "Green",
+      "temp": 20
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "jul": {
       "rating": "good",
-      "note": "Warm, busy"
+      "note": "Warm, busy",
+      "temp": 26
     },
     "aug": {
       "rating": "good",
-      "note": "Warm, busy"
+      "note": "Warm, busy",
+      "temp": 26
     },
     "sep": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 21
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn colour"
+      "note": "Autumn colour",
+      "temp": 15
     },
     "nov": {
       "rating": "quiet",
-      "note": "Grey"
+      "note": "Grey",
+      "temp": 8
     },
     "dec": {
       "rating": "good",
-      "note": "Christmas market"
+      "note": "Christmas market",
+      "temp": 2
     }
   },
   "when_to_go": "May, June and September are mild and green, good for castles and mountain walks. July and August are warm but busier. Winter is cold and snowy, with skiing at nearby Poiana Brașov and a Christmas market in the main square.",

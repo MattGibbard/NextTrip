@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Dry, breezy"
+      "note": "Dry, breezy",
+      "temp": 27
     },
     "feb": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 28
     },
     "mar": {
       "rating": "best",
-      "note": "Dry, sunny"
+      "note": "Dry, sunny",
+      "temp": 29
     },
     "apr": {
       "rating": "best",
-      "note": "Dry, hot"
+      "note": "Dry, hot",
+      "temp": 30
     },
     "may": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 31
     },
     "jun": {
       "rating": "quiet",
-      "note": "Rains start"
+      "note": "Rains start",
+      "temp": 31
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, showers"
+      "note": "Hot, showers",
+      "temp": 31
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, showers"
+      "note": "Hot, showers",
+      "temp": 31
     },
     "sep": {
       "rating": "quiet",
-      "note": "Hurricane risk"
+      "note": "Hurricane risk",
+      "temp": 31
     },
     "oct": {
       "rating": "quiet",
-      "note": "Hurricane risk"
+      "note": "Hurricane risk",
+      "temp": 30
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 28
     },
     "dec": {
       "rating": "good",
-      "note": "Festive, breezy"
+      "note": "Festive, breezy",
+      "temp": 27
     }
   },
   "when_to_go": "February to April is the dry season, with calm seas for reef trips. December and January are pleasant but can bring cool fronts and choppy water. The hurricane season runs from June to November, with September and October the riskiest. Seaweed can wash up from spring to autumn.",

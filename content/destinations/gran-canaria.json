@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Winter sun"
+      "note": "Winter sun",
+      "temp": 22
     },
     "feb": {
       "rating": "best",
-      "note": "Winter sun"
+      "note": "Winter sun",
+      "temp": 22
     },
     "mar": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "apr": {
       "rating": "good",
-      "note": "Easter, busy"
+      "note": "Easter, busy",
+      "temp": 23
     },
     "may": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "jun": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 26
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 27
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 28
     },
     "sep": {
       "rating": "good",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 28
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 27
     },
     "nov": {
       "rating": "best",
-      "note": "Winter sun"
+      "note": "Winter sun",
+      "temp": 25
     },
     "dec": {
       "rating": "best",
-      "note": "Christmas sun"
+      "note": "Christmas sun",
+      "temp": 23
     }
   },
   "when_to_go": "October to March is the best time for winter sun, at around 20 to 24°C, with Christmas and New Year the busiest and dearest weeks. Summer is hot and busy, with the south sunnier than the north all year.",

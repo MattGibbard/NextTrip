@@ -40,51 +40,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 4
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 6
     },
     "mar": {
       "rating": "good",
-      "note": "Mixed"
+      "note": "Mixed",
+      "temp": 10
     },
     "apr": {
       "rating": "best",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 16
     },
     "may": {
       "rating": "best",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 22
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 27
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 29
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 29
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 25
     },
     "oct": {
       "rating": "best",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 18
     },
     "nov": {
       "rating": "good",
-      "note": "Crisp"
+      "note": "Crisp",
+      "temp": 12
     },
     "dec": {
       "rating": "good",
-      "note": "Festive"
+      "note": "Festive",
+      "temp": 6
     }
   },
   "when_to_go": "Spring and early autumn are mild and good for walking all day. Summer is hot and busy, but school holidays make it the easy choice for many families. December is cold, crowded and very festive.",

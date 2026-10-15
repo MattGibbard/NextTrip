@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Hot, rains"
+      "note": "Hot, rains",
+      "temp": 30
     },
     "feb": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 28
     },
     "mar": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 27
     },
     "apr": {
       "rating": "good",
-      "note": "Green"
+      "note": "Green",
+      "temp": 25
     },
     "may": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 23
     },
     "jun": {
       "rating": "best",
-      "note": "Dry, cool nights"
+      "note": "Dry, cool nights",
+      "temp": 20
     },
     "jul": {
       "rating": "best",
-      "note": "Dry, cool nights"
+      "note": "Dry, cool nights",
+      "temp": 21
     },
     "aug": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 23
     },
     "sep": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 27
     },
     "oct": {
       "rating": "best",
-      "note": "Hot, dry"
+      "note": "Hot, dry",
+      "temp": 29
     },
     "nov": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 30
     },
     "dec": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 30
     }
   },
   "when_to_go": "May to October is the dry season, best for game viewing at Etosha's waterholes, with cold nights in the desert. November to April is hot with some rain, green and quieter. School summer holidays are popular, so book lodges early.",

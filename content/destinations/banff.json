@@ -45,51 +45,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Skiing"
+      "note": "Skiing",
+      "temp": -4
     },
     "feb": {
       "rating": "good",
-      "note": "Skiing"
+      "note": "Skiing",
+      "temp": 0
     },
     "mar": {
       "rating": "good",
-      "note": "Skiing"
+      "note": "Skiing",
+      "temp": 5
     },
     "apr": {
       "rating": "quiet",
-      "note": "Between seasons"
+      "note": "Between seasons",
+      "temp": 10
     },
     "may": {
       "rating": "quiet",
-      "note": "Lakes still frozen"
+      "note": "Lakes still frozen",
+      "temp": 15
     },
     "jun": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 19
     },
     "jul": {
       "rating": "best",
-      "note": "Summer, busy"
+      "note": "Summer, busy",
+      "temp": 22
     },
     "aug": {
       "rating": "best",
-      "note": "Summer, busy"
+      "note": "Summer, busy",
+      "temp": 22
     },
     "sep": {
       "rating": "best",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 16
     },
     "oct": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 10
     },
     "nov": {
       "rating": "quiet",
-      "note": "Between seasons"
+      "note": "Between seasons",
+      "temp": 1
     },
     "dec": {
       "rating": "good",
-      "note": "Skiing, festive"
+      "note": "Skiing, festive",
+      "temp": -4
     }
   },
   "when_to_go": "Late June to September is when the lakes thaw to their famous blue and all the trails open, with July and August busiest. December to March is ski season, with frozen lakes for skating. May and October are quiet and the lakes are often still icy.",

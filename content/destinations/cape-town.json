@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 27
     },
     "feb": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 27
     },
     "mar": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 26
     },
     "apr": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 23
     },
     "may": {
       "rating": "quiet",
-      "note": "Cooler"
+      "note": "Cooler",
+      "temp": 21
     },
     "jun": {
       "rating": "quiet",
-      "note": "Wet"
+      "note": "Wet",
+      "temp": 19
     },
     "jul": {
       "rating": "quiet",
-      "note": "Wet"
+      "note": "Wet",
+      "temp": 18
     },
     "aug": {
       "rating": "quiet",
-      "note": "Wet"
+      "note": "Wet",
+      "temp": 19
     },
     "sep": {
       "rating": "good",
-      "note": "Spring flowers"
+      "note": "Spring flowers",
+      "temp": 20
     },
     "oct": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 22
     },
     "nov": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "dec": {
       "rating": "best",
-      "note": "Summer, busy"
+      "note": "Summer, busy",
+      "temp": 26
     }
   },
   "when_to_go": "November to March is summer, with long sunny days for beaches and the mountain, though it gets windy. Christmas and Easter are the busiest times. June to August is cooler and rainy, but whales arrive in the bays from July.",

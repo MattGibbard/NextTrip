@@ -42,51 +42,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 26
     },
     "feb": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 26
     },
     "mar": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 25
     },
     "apr": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 23
     },
     "may": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 20
     },
     "jun": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 18
     },
     "jul": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 17
     },
     "aug": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 19
     },
     "sep": {
       "rating": "best",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 21
     },
     "oct": {
       "rating": "best",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 23
     },
     "nov": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "dec": {
       "rating": "best",
-      "note": "Summer, festive"
+      "note": "Summer, festive",
+      "temp": 25
     }
   },
   "when_to_go": "Spring and summer, September to March, are best for beaches and harbour days. Christmas and New Year's Eve fireworks are spectacular but busy and expensive. June to August is cool but sunny, and good for whale watching.",

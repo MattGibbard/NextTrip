@@ -114,3 +114,26 @@ describe("a guide in a country with a hub", () => {
     ]);
   });
 });
+
+describe("where's hot on month pages", () => {
+  it("lists the warmest places that are good that month, near and far, warmest first", async () => {
+    const { HUBS, hotList, NEAR_HOURS } = await import("../src/hubs");
+    const { LONDON } = await import("../src/destinations");
+    const nov = HUBS.find((h) => h.kind === "month" && h.month === 10)!;
+    const { near, far } = hotList(nov, LONDON);
+    expect(near.length).toBeGreaterThan(0);
+    expect(far.length).toBeGreaterThan(0);
+    for (const rows of [near, far]) {
+      expect(rows.map((r) => r.temp)).toEqual([...rows.map((r) => r.temp)].sort((a, b) => b - a));
+      for (const r of rows) expect(r.d.months[10].rating).not.toBe("quiet");
+    }
+    for (const r of near) expect(r.hours!).toBeLessThanOrEqual(NEAR_HOURS);
+  });
+
+  it("is empty for hubs that aren't about a month", async () => {
+    const { HUBS, hotList } = await import("../src/hubs");
+    const { LONDON } = await import("../src/destinations");
+    const spain = HUBS.find((h) => h.slug === "holidays-in-spain")!;
+    expect(hotList(spain, LONDON)).toEqual({ near: [], far: [] });
+  });
+});

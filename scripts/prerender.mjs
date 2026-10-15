@@ -70,7 +70,12 @@ try {
   const guidesCode = assets.find((f) => f.startsWith("GuideView-") && f.endsWith(".js"));
   if (!guidesCode) throw new Error("No Guides code in the build");
   const guidePage = (page) => page === "destinations" || page.startsWith("destination:");
-  const preload = (page) => (guidePage(page) ? `\n    <link rel="modulepreload" crossorigin href="/assets/${guidesCode}">` : "");
+  // Pages with the hero boarding pass fetch its airport-code font straight away, so the codes don't
+  // jump when it arrives late (PageSpeed's "layout shift culprits").
+  const passPage = (page) => page === "home" || page === "creators";
+  const preload = (page) =>
+    (guidePage(page) ? `\n    <link rel="modulepreload" crossorigin href="/assets/${guidesCode}">` : "") +
+    (passPage(page) ? `\n    <link rel="preload" href="/fonts/dm-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin>` : "");
   const styled = (page) => base.replace(cssLink[0], () => `\n    <style>${css}</style>${pageStyles[page] ?? ""}${preload(page)}`);
 
   const list = pages().map((p) => ({ ...p, updated: gitDate(p.source), published: gitDate(p.source, true) }));

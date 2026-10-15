@@ -260,7 +260,7 @@ export function ideaFromDestination(d: DestinationCard): Partial<IdeaInput> {
  * doesn't say who the trip is for, so it suits couples, friends and families alike.
  */
 export function searchTitle(d: DestinationCard): string {
-  return `${d.seo_title || `${d.name} holiday guide: when to go and what to do`} | somewhere🎉`;
+  return `${d.seo_title || `${d.name} holidays: best time to go and things to do`} | somewhere🎉`;
 }
 
 /** The site, as the author and publisher of its guides. */

@@ -259,7 +259,7 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
         {d.months.some((m) => m.note) && (
           <section aria-labelledby="dg-when" className="dg-section">
             <div className="dg-when-head">
-              <h2 id="dg-when">When to go</h2>
+              <h2 id="dg-when">{`Best time to visit ${d.name}`}</h2>
               <div className="dg-key" aria-hidden>
                 <span>
                   <i className="best" />
@@ -295,7 +295,7 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
 
         {d.things.length > 0 && (
           <section aria-labelledby="dg-todo" className="dg-section">
-            <h2 id="dg-todo">Things to do with the family</h2>
+            <h2 id="dg-todo">{`Things to do in ${d.name}`}</h2>
             <div className="dg-things">
               {d.things.map((t) => (
                 <article key={t.name} className="dg-thing">

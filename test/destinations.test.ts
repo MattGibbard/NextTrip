@@ -118,7 +118,7 @@ describe("New York", () => {
   });
 
   it("gives search results a title that suits anyone, unless the editor wrote one", () => {
-    expect(destinationMeta(readDestination("x", { name: "Lisbon" })).title).toBe("Lisbon holiday guide: when to go and what to do | somewhere🎉");
+    expect(destinationMeta(readDestination("x", { name: "Lisbon" })).title).toBe("Lisbon holidays: best time to go and things to do | somewhere🎉");
     const own = readDestination("x", { name: "Lisbon", intro: "Hills and trams.", seo_title: "Lisbon city breaks", seo_description: "Seven hills." });
     expect(destinationMeta(own)).toMatchObject({ title: "Lisbon city breaks | somewhere🎉", description: "Seven hills." });
     expect(destinationMeta(readDestination("x", { name: "Lisbon", intro: "Hills and trams." })).description).toBe("Hills and trams.");

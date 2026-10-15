@@ -73,32 +73,34 @@ export function BlogList({ listing: l }: { listing: Listing }) {
     <div className="lp lp-home lp-info bl">
       <SiteHeader current="blog" exact={!l.tag && l.page === 1} />
 
-      <header className="lp-wrap lp-info-head">
-        {(l.tag || l.page > 1) && (
-          <nav aria-label="Breadcrumb" className="bl-crumbs">
-            <a href="/">Home</a>
-            <span aria-hidden>›</span>
-            <a href="/blog">Blog</a>
-          </nav>
-        )}
-        {!l.tag && <div className="lp-kicker">Blog</div>}
-        <h1>{label ?? "Deciding where to go"}</h1>
-        {l.tag ? (
-          <p className="lp-lead">
-            {l.total} {l.total === 1 ? "article" : "articles"} about {tagInSentence(l.tag)}, with ideas and advice for choosing where to go and planning the trip.{pageOf}
-          </p>
-        ) : (
-          <p className="lp-lead">Ideas and advice for choosing your next holiday, and for agreeing on it, whether it's the two of you, the whole family or a group of friends.{pageOf}</p>
-        )}
-      </header>
+      <main>
+        <header className="lp-wrap lp-info-head">
+          {(l.tag || l.page > 1) && (
+            <nav aria-label="Breadcrumb" className="bl-crumbs">
+              <a href="/">Home</a>
+              <span aria-hidden>›</span>
+              <a href="/blog">Blog</a>
+            </nav>
+          )}
+          {!l.tag && <div className="lp-kicker">Blog</div>}
+          <h1>{label ?? "Deciding where to go"}</h1>
+          {l.tag ? (
+            <p className="lp-lead">
+              {l.total} {l.total === 1 ? "article" : "articles"} about {tagInSentence(l.tag)}, with ideas and advice for choosing where to go and planning the trip.{pageOf}
+            </p>
+          ) : (
+            <p className="lp-lead">Ideas and advice for choosing your next holiday, and for agreeing on it, whether it's the two of you, the whole family or a group of friends.{pageOf}</p>
+          )}
+        </header>
 
-      <TagLinks current={l.tag ?? undefined} />
+        <TagLinks current={l.tag ?? undefined} />
 
-      <section className="lp-wrap bl-list" aria-label="Posts">
-        {l.posts.length === 0 ? <p className="muted">Nothing here yet. Come back soon.</p> : l.posts.map((p, i) => <PostLink key={p.slug} post={p} eager={i < 3} />)}
-      </section>
+        <section className="lp-wrap bl-list" aria-label="Posts">
+          {l.posts.length === 0 ? <p className="muted">Nothing here yet. Come back soon.</p> : l.posts.map((p, i) => <PostLink key={p.slug} post={p} eager={i < 3} />)}
+        </section>
 
-      <Pager listing={l} />
+        <Pager listing={l} />
+      </main>
 
       <SiteFooter />
     </div>
@@ -113,99 +115,101 @@ export function BlogPost({ post }: { post: Post }) {
     <div className="lp lp-home lp-info bl">
       <SiteHeader current="blog" />
 
-      <header className="lp-wrap lp-info-head">
-        <nav aria-label="Breadcrumb" className="bl-crumbs">
-          <a href="/">Home</a>
-          <span aria-hidden>›</span>
-          <a href="/blog">Blog</a>
-        </nav>
-        <h1>{post.title}</h1>
-        {post.intro && <p className="lp-lead">{post.intro}</p>}
-        {post.date && (
-          <p className="bl-byline muted small">
-            By {post.author || "somewhere🎉"} · <time dateTime={post.date}>{postDate(post.date)}</time>
-            {post.updated && (
-              <>
-                {" "}
-                · Updated <time dateTime={post.updated}>{postDate(post.updated)}</time>
-              </>
-            )}
-          </p>
-        )}
-        {post.tags.length > 0 && (
-          <ul className="bl-post-tags" aria-label="Topics">
-            {post.tags.map((t) => (
-              <li key={t}>
-                <a href={tagPath(t)}>{BLOG_TAGS[t]}</a>
-              </li>
-            ))}
-          </ul>
-        )}
-      </header>
-
-      {post.cover && (
-        <figure className="lp-wrap bl-cover">
-          <img {...photoProps(post.cover.image, post.cover.size, "(max-width: 1100px) 100vw, 1060px")} alt={post.cover.alt} fetchPriority="high" decoding="async" width={post.cover.size?.[0]} height={post.cover.size?.[1]} />
-        </figure>
-      )}
-
-      <div className="lp-wrap lp-info-body">
-        {contents.length > 0 && (
-          <nav className="lp-info-contents" aria-label="In this post">
-            <span className="lp-kicker">In this post</span>
-            <ul>
-              {contents.map((s) => (
-                <li key={s.heading}>
-                  <a href={`#${anchor(s.heading)}`}>{s.heading}</a>
+      <main>
+        <header className="lp-wrap lp-info-head">
+          <nav aria-label="Breadcrumb" className="bl-crumbs">
+            <a href="/">Home</a>
+            <span aria-hidden>›</span>
+            <a href="/blog">Blog</a>
+          </nav>
+          <h1>{post.title}</h1>
+          {post.intro && <p className="lp-lead">{post.intro}</p>}
+          {post.date && (
+            <p className="bl-byline muted small">
+              By {post.author || "somewhere🎉"} · <time dateTime={post.date}>{postDate(post.date)}</time>
+              {post.updated && (
+                <>
+                  {" "}
+                  · Updated <time dateTime={post.updated}>{postDate(post.updated)}</time>
+                </>
+              )}
+            </p>
+          )}
+          {post.tags.length > 0 && (
+            <ul className="bl-post-tags" aria-label="Topics">
+              {post.tags.map((t) => (
+                <li key={t}>
+                  <a href={tagPath(t)}>{BLOG_TAGS[t]}</a>
                 </li>
               ))}
             </ul>
-          </nav>
+          )}
+        </header>
+
+        {post.cover && (
+          <figure className="lp-wrap bl-cover">
+            <img {...photoProps(post.cover.image, post.cover.size, "(max-width: 1100px) 100vw, 1060px")} alt={post.cover.alt} fetchPriority="high" decoding="async" width={post.cover.size?.[0]} height={post.cover.size?.[1]} />
+          </figure>
         )}
-        <article className="lp-article">
-          {post.sections.map((s, i) => (
-            <section key={i} id={s.heading ? anchor(s.heading) : undefined}>
-              {s.heading && <h2>{s.heading}</h2>}
-              <RichText text={s.text} />
-            </section>
-          ))}
-        </article>
 
-        <div className="dx-cta bl-cta">
-          <div>
-            <span className="dx-cta-label">🎟️ CAN'T AGREE?</span>
-            <h2>Let a fair draw decide</h2>
-            <p className="muted">Everyone adds their ideas, spreads their points in secret and gets one veto. Then the draw picks where you go. It's free.</p>
-          </div>
-          <div className="dx-cta-actions">
-            <a className="btn" href="/#signin">
-              Start planning
-            </a>
-            <a href="/destinations">Find ideas</a>
-          </div>
-        </div>
-      </div>
+        <div className="lp-wrap lp-info-body">
+          {contents.length > 0 && (
+            <nav className="lp-info-contents" aria-label="In this post">
+              <span className="lp-kicker">In this post</span>
+              <ul>
+                {contents.map((s) => (
+                  <li key={s.heading}>
+                    <a href={`#${anchor(s.heading)}`}>{s.heading}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
+          <article className="lp-article">
+            {post.sections.map((s, i) => (
+              <section key={i} id={s.heading ? anchor(s.heading) : undefined}>
+                {s.heading && <h2>{s.heading}</h2>}
+                <RichText text={s.text} />
+              </section>
+            ))}
+          </article>
 
-      {post.faqs.length > 0 && (
-        <section className="lp-wrap lp-info-faqs" aria-labelledby="bl-faq">
-          <div className="lp-info-faqs-inner">
-            <h2 id="bl-faq">Common questions</h2>
-            <div className="lp-accordion">
-              {post.faqs.map((q) => (
-                <details key={q.question}>
-                  <summary>
-                    {q.question}
-                    <span aria-hidden>+</span>
-                  </summary>
-                  <RichText text={q.answer} />
-                </details>
-              ))}
+          <div className="dx-cta bl-cta">
+            <div>
+              <span className="dx-cta-label">🎟️ CAN'T AGREE?</span>
+              <h2>Let a fair draw decide</h2>
+              <p className="muted">Everyone adds their ideas, spreads their points in secret and gets one veto. Then the draw picks where you go. It's free.</p>
+            </div>
+            <div className="dx-cta-actions">
+              <a className="btn" href="/#signin">
+                Start planning
+              </a>
+              <a href="/destinations">Find ideas</a>
             </div>
           </div>
-        </section>
-      )}
+        </div>
 
-      <PostCards posts={relatedPosts(post, MORE)} heading="More like this" id="bl-more" />
+        {post.faqs.length > 0 && (
+          <section className="lp-wrap lp-info-faqs" aria-labelledby="bl-faq">
+            <div className="lp-info-faqs-inner">
+              <h2 id="bl-faq">Common questions</h2>
+              <div className="lp-accordion">
+                {post.faqs.map((q) => (
+                  <details key={q.question}>
+                    <summary>
+                      {q.question}
+                      <span aria-hidden>+</span>
+                    </summary>
+                    <RichText text={q.answer} />
+                  </details>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        <PostCards posts={relatedPosts(post, MORE)} heading="More like this" id="bl-more" />
+      </main>
 
       <SiteFooter />
     </div>

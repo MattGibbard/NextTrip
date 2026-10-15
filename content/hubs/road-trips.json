@@ -2,10 +2,14 @@
   "published": true,
   "kind": "type",
   "holiday_type": "road-trip",
+  "country": "",
+  "month": "",
+  "guides": [],
+  "icon": "",
   "name": "Road trips",
   "title": "Road trip holidays",
   "intro": "Open roads, big views and stops wherever you like. Here's where to go for a road trip holiday, how long you'll need and when to go.",
-  "seo_title": "",
+  "seo_title": "Road trip holidays: the best open roads, big views, and when to go",
   "seo_description": "",
   "faqs": [
     {

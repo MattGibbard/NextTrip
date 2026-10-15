@@ -209,6 +209,11 @@
     "lat": 42.6403,
     "lon": 18.1083
   },
+  "essaouira": {
+    "query": "Essaouira|MA",
+    "lat": 31.5118,
+    "lon": -9.7621
+  },
   "faroe-islands": {
     "query": "Faroe Islands|FO",
     "lat": 62.0107,
@@ -519,6 +524,11 @@
     "lat": 7.8804,
     "lon": 98.3923
   },
+  "piran": {
+    "query": "Piran|SI",
+    "lat": 45.5285,
+    "lon": 13.5684
+  },
   "plitvice-lakes": {
     "query": "Plitvice Lakes|HR",
     "lat": 44.8654,
@@ -588,6 +598,11 @@
     "query": "Salzburg|AT",
     "lat": 47.8095,
     "lon": 13.055
+  },
+  "samarkand": {
+    "query": "Samarkand|UZ",
+    "lat": 39.655,
+    "lon": 66.9757
   },
   "san-diego": {
     "query": "San Diego|US",

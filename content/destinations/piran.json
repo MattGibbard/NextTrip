@@ -1,0 +1,179 @@
+{
+  "name": "Piran",
+  "published": true,
+  "country": "SI",
+  "title": "Holidays in Piran",
+  "intro": "A Venetian-style old town on a finger of land in Slovenia's short stretch of Adriatic coast. Here's what Piran is like with the family, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/piran-8267187_1280.webp",
+  "image_alt": "Piran's red-roofed old town and church bell tower on a headland, with the sun setting over the Adriatic Sea",
+  "wikipedia": "https://en.wikipedia.org/wiki/Piran",
+  "to_code": "TRS",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The old town is closed to most cars, so park at the Fornače garage and take the free shuttle bus in. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, quiet"
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, quiet"
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild"
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring"
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm"
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, swimming"
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy"
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea"
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild"
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet"
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Quiet"
+    }
+  },
+  "when_to_go": "June and September are ideal, with warm sea, long evenings and fewer crowds than high summer. July and August are hot and lively but the small town fills up. Spring and autumn are lovely for walking and day trips, though the sea is cool. Winter is quiet and many places shorten their hours.",
+  "things": [
+    {
+      "name": "Tartini Square",
+      "tag": "Free",
+      "blurb": "The oval main square, once the harbour, ringed by Venetian-style houses and cafés.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Church of St George bell tower",
+      "tag": "Ticketed",
+      "blurb": "Climb the tower above the old town for views across the rooftops to Italy and Croatia.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Town walls",
+      "tag": "Ticketed",
+      "blurb": "Walk along the old walls on the hill for the classic view down over Piran.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sečovlje Salina Nature Park",
+      "tag": "Ticketed",
+      "blurb": "Salt pans still worked the traditional way, with walking and cycle paths and plenty of birdlife.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Strunjan cliffs",
+      "tag": "Outdoors",
+      "blurb": "A short trip to the highest cliffs on the Adriatic, with pebbly bays and calm water for swimming.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Škocjan Caves",
+      "tag": "Day trip",
+      "blurb": "A UNESCO-listed cave system with a huge underground canyon, about an hour's drive away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Does Piran have a beach?",
+      "answer": "Not a sandy one. People swim from the rocks and concrete promenade round the headland, which have ladders into the sea. Portorož next door has a man-made sandy beach, and Strunjan has quieter bays."
+    },
+    {
+      "question": "What is the nearest airport to Piran?",
+      "answer": "Trieste in Italy is about an hour's drive. Ljubljana is about an hour and a half, and Venice a little over two hours."
+    },
+    {
+      "question": "How many days do you need in Piran?",
+      "answer": "Two days covers the town itself. Four to seven nights gives time for swimming, the salt pans and day trips to the caves, Ljubljana or the Croatian coast."
+    },
+    {
+      "question": "Is Piran good for a family holiday?",
+      "answer": "Yes. The old town is compact and largely car-free, the sea is calm and there's easy swimming, and Portorož has more space to spread out."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Istria",
+      "code": "PUY",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lake Bled",
+      "code": "LJU",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Zadar",
+      "code": "ZAD",
+      "label": "🏖️ Beach"
+    }
+  ]
+}

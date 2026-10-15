@@ -88,7 +88,7 @@
       "note": "Festive"
     }
   },
-  "when_to_go": "Summer is the easy pick, with warm days, island beaches and festivals most weekends. September and October are quieter and the autumn colours are lovely. Winters are properly cold, but there's skating outdoors and plenty to do inside.",
+  "when_to_go": "Summer is the easy pick, with warm days, island beaches and festivals most weekends. September and October are quieter and the autumn colours are lovely. Winters are properly cold, but there's skating outdoors and plenty to do inside. Toronto makes a good Christmas city break too, with the Winter Village in the Distillery District from mid-November.",
   "things": [
     {
       "name": "Toronto Islands",
@@ -135,20 +135,24 @@
   ],
   "faqs": [
     {
-      "question": "Is Toronto good for a family holiday?",
-      "answer": "Yes. It's clean, safe and easy to get around on the subway and streetcars, with lots for children, from the islands to the science centre."
+      "question": "Is Toronto good for a city break?",
+      "answer": "Yes. It's clean, safe and easy to get around on the subway and streetcars, with food from all over the world, big museums, the CN Tower and the islands a short ferry ride away. It's great with children too, from the islands to the science centre."
     },
     {
-      "question": "How many nights do you need?",
-      "answer": "Five to seven nights gives you the city at a family pace plus a day at Niagara Falls."
+      "question": "How many nights do you need for a Toronto city break?",
+      "answer": "Four or five nights is enough for the city and a day at Niagara Falls. Allow a week if you're going at a slower pace or want to see more of Ontario."
     },
     {
-      "question": "Do UK families need a visa?",
+      "question": "Do you need a visa from the UK?",
       "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
     },
     {
       "question": "Can you visit Niagara Falls from Toronto?",
       "answer": "Yes, it's an easy day trip by car, coach or the GO train in summer. The falls are about 90 minutes away."
+    },
+    {
+      "question": "How long is the flight to Toronto?",
+      "answer": "About eight hours direct from London. Direct flights also go from several other UK airports, including Manchester, Glasgow and Edinburgh. Coming home is quicker, at around seven hours."
     }
   ],
   "similar": [

@@ -21,172 +21,174 @@ export function HomePage() {
     <div className="lp lp-home">
       <SiteHeader home />
 
-      <section className="lp-wrap lp-hero">
-        <div className="lp-hero-text">
-          {hero.kicker && <div className="lp-kicker">{hero.kicker}</div>}
-          <h1>{hero.heading}</h1>
-          {hero.lead && <p className="lp-lead">{hero.lead}</p>}
-          <SignInForm id="hero-email" />
-          {hero.perks.length > 0 && (
-            <div className="lp-perks">
-              {hero.perks.map((p) => (
-                <span key={p}>
-                  <Rich text={p} />
-                </span>
+      <main>
+        <section className="lp-wrap lp-hero">
+          <div className="lp-hero-text">
+            {hero.kicker && <div className="lp-kicker">{hero.kicker}</div>}
+            <h1>{hero.heading}</h1>
+            {hero.lead && <p className="lp-lead">{hero.lead}</p>}
+            <SignInForm id="hero-email" />
+            {hero.perks.length > 0 && (
+              <div className="lp-perks">
+                {hero.perks.map((p) => (
+                  <span key={p}>
+                    <Rich text={p} />
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+          <HeroTickets />
+        </section>
+
+        <section id="how" className="lp-wrap lp-section-how">
+          <div className="lp-board">
+            <div className="lp-board-head">
+              {how.label && <span className="lp-board-label">{how.label}</span>}
+              <h2>{how.heading}</h2>
+            </div>
+            <div className="lp-board-rows" role="list">
+              <div className="lp-board-row lp-board-cols" aria-hidden>
+                <span>Step</span>
+                <span>What happens</span>
+                <span>Status</span>
+              </div>
+              {how.steps.map((s, i) => (
+                <div key={s.title} className="lp-board-row" role="listitem">
+                  <span className="lp-board-num">{String(i + 1).padStart(2, "0")}</span>
+                  <div className="lp-board-what">
+                    <strong>{s.title}</strong>
+                    <span>{s.text}</span>
+                  </div>
+                  <span className={i === how.steps.length - 1 ? "lp-board-status lit" : "lp-board-status"}>{s.status}</span>
+                </div>
               ))}
             </div>
-          )}
-        </div>
-        <HeroTickets />
-      </section>
+            {how.link_text && (
+              <a className="lp-board-more" href="/how-it-works">
+                {how.link_text} →
+              </a>
+            )}
+          </div>
+        </section>
 
-      <section id="how" className="lp-wrap lp-section-how">
-        <div className="lp-board">
-          <div className="lp-board-head">
-            {how.label && <span className="lp-board-label">{how.label}</span>}
-            <h2>{how.heading}</h2>
-          </div>
-          <div className="lp-board-rows" role="list">
-            <div className="lp-board-row lp-board-cols" aria-hidden>
-              <span>Step</span>
-              <span>What happens</span>
-              <span>Status</span>
-            </div>
-            {how.steps.map((s, i) => (
-              <div key={s.title} className="lp-board-row" role="listitem">
-                <span className="lp-board-num">{String(i + 1).padStart(2, "0")}</span>
-                <div className="lp-board-what">
-                  <strong>{s.title}</strong>
-                  <span>{s.text}</span>
-                </div>
-                <span className={i === how.steps.length - 1 ? "lp-board-status lit" : "lp-board-status"}>{s.status}</span>
-              </div>
-            ))}
-          </div>
-          {how.link_text && (
-            <a className="lp-board-more" href="/how-it-works">
-              {how.link_text} →
-            </a>
-          )}
-        </div>
-      </section>
-
-      <section id="features" className="lp-wrap lp-section">
-        <div className="lp-heading">
-          {features.kicker && <span className="lp-kicker">{features.kicker}</span>}
-          <h2>{features.heading}</h2>
-          {features.lead && <p className="lp-lead">{features.lead}</p>}
-        </div>
-        <div className="lp-features">
-          <div className="panel lp-feature">
-            <span className="lp-feature-icon" aria-hidden>
-              🧳
-            </span>
-            <h3>{features.been.title}</h3>
-            <p className="muted">{features.been.text}</p>
-            <div className="lp-feature-foot lp-modes">
-              <span className="flight">Flight</span>
-              <span className="train">Train</span>
-              <span className="cruise">Cruise</span>
-              <span className="road">Road</span>
-            </div>
-          </div>
-          <div className="panel lp-feature">
-            <span className="lp-feature-icon" aria-hidden>
-              🗺️
-            </span>
-            <h3>{features.places.title}</h3>
-            <p className="muted">{features.places.text}</p>
-            <div className="lp-feature-foot lp-stamps" aria-hidden>
-              <span className="flight round">ESP</span>
-              <span className="train square">ITA</span>
-              <span className="cruise round">FRA</span>
-            </div>
-          </div>
-          <div className="panel lp-feature">
-            <span className="lp-feature-icon" aria-hidden>
-              💡
-            </span>
-            <h3>{features.next.title}</h3>
-            <p className="muted">{features.next.text}</p>
-            <div className="lp-feature-foot lp-chips">
-              <span>🏙️ City break</span>
-              <span>🏖️ Beach</span>
-              <span>🥾 Nature &amp; hiking</span>
-            </div>
-          </div>
-          <div className="panel lp-feature">
-            <span className="lp-feature-icon" aria-hidden>
-              🎟️
-            </span>
-            <h3>{features.draw.title}</h3>
-            <p className="muted">{features.draw.text}</p>
-            <div className="lp-feature-foot lp-points" aria-hidden>
-              <div>
-                <strong>23</strong>
-                <span>points left</span>
-              </div>
-              <span className="lp-veto">1 veto</span>
-            </div>
-          </div>
-          <div className="panel lp-feature">
-            <span className="lp-feature-icon" aria-hidden>
-              🧾
-            </span>
-            <h3>{features.plan.title}</h3>
-            <p className="muted">{features.plan.text}</p>
-            <div className="lp-feature-foot lp-plan" aria-hidden>
-              <span className="lp-plan-label">Departs in</span>
-              <div className="lp-plan-count">
-                <span className="lp-flaps">
-                  <span>3</span>
-                  <span>0</span>
-                  <span>7</span>
-                </span>
-                <span className="lp-plan-label">days</span>
-              </div>
-              <div className="lp-plan-bar">
-                <span />
-              </div>
-              <div className="lp-plan-money">
-                <strong>£2,800</strong> of £6,000
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="why" className="lp-why">
-        <div className="lp-wrap lp-section">
+        <section id="features" className="lp-wrap lp-section">
           <div className="lp-heading">
-            {why.kicker && <span className="lp-kicker">{why.kicker}</span>}
-            <h2>{why.heading}</h2>
+            {features.kicker && <span className="lp-kicker">{features.kicker}</span>}
+            <h2>{features.heading}</h2>
+            {features.lead && <p className="lp-lead">{features.lead}</p>}
           </div>
-          <div className="lp-reasons">
-            {why.reasons.map((r) => (
-              <div key={r.title} className="lp-reason">
-                <h3>{r.title}</h3>
-                <p className="muted">{r.text}</p>
+          <div className="lp-features">
+            <div className="panel lp-feature">
+              <span className="lp-feature-icon" aria-hidden>
+                🧳
+              </span>
+              <h3>{features.been.title}</h3>
+              <p className="muted">{features.been.text}</p>
+              <div className="lp-feature-foot lp-modes">
+                <span className="flight">Flight</span>
+                <span className="train">Train</span>
+                <span className="cruise">Cruise</span>
+                <span className="road">Road</span>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <FeaturedCreators />
-
-      <section id="signin" className="lp-wrap lp-section">
-        <div className="lp-cta">
-          {signup.strip && <div className="lp-cta-strip">{signup.strip}</div>}
-          <div className="lp-cta-body">
-            <div className="lp-cta-text">
-              <h2>{signup.heading}</h2>
-              {signup.lead && <p className="lp-lead">{signup.lead}</p>}
             </div>
-            <SignInForm id="cta-email" />
+            <div className="panel lp-feature">
+              <span className="lp-feature-icon" aria-hidden>
+                🗺️
+              </span>
+              <h3>{features.places.title}</h3>
+              <p className="muted">{features.places.text}</p>
+              <div className="lp-feature-foot lp-stamps" aria-hidden>
+                <span className="flight round">ESP</span>
+                <span className="train square">ITA</span>
+                <span className="cruise round">FRA</span>
+              </div>
+            </div>
+            <div className="panel lp-feature">
+              <span className="lp-feature-icon" aria-hidden>
+                💡
+              </span>
+              <h3>{features.next.title}</h3>
+              <p className="muted">{features.next.text}</p>
+              <div className="lp-feature-foot lp-chips">
+                <span>🏙️ City break</span>
+                <span>🏖️ Beach</span>
+                <span>🥾 Nature &amp; hiking</span>
+              </div>
+            </div>
+            <div className="panel lp-feature">
+              <span className="lp-feature-icon" aria-hidden>
+                🎟️
+              </span>
+              <h3>{features.draw.title}</h3>
+              <p className="muted">{features.draw.text}</p>
+              <div className="lp-feature-foot lp-points" aria-hidden>
+                <div>
+                  <strong>23</strong>
+                  <span>points left</span>
+                </div>
+                <span className="lp-veto">1 veto</span>
+              </div>
+            </div>
+            <div className="panel lp-feature">
+              <span className="lp-feature-icon" aria-hidden>
+                🧾
+              </span>
+              <h3>{features.plan.title}</h3>
+              <p className="muted">{features.plan.text}</p>
+              <div className="lp-feature-foot lp-plan" aria-hidden>
+                <span className="lp-plan-label">Departs in</span>
+                <div className="lp-plan-count">
+                  <span className="lp-flaps">
+                    <span>3</span>
+                    <span>0</span>
+                    <span>7</span>
+                  </span>
+                  <span className="lp-plan-label">days</span>
+                </div>
+                <div className="lp-plan-bar">
+                  <span />
+                </div>
+                <div className="lp-plan-money">
+                  <strong>£2,800</strong> of £6,000
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section id="why" className="lp-why">
+          <div className="lp-wrap lp-section">
+            <div className="lp-heading">
+              {why.kicker && <span className="lp-kicker">{why.kicker}</span>}
+              <h2>{why.heading}</h2>
+            </div>
+            <div className="lp-reasons">
+              {why.reasons.map((r) => (
+                <div key={r.title} className="lp-reason">
+                  <h3>{r.title}</h3>
+                  <p className="muted">{r.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <FeaturedCreators />
+
+        <section id="signin" className="lp-wrap lp-section">
+          <div className="lp-cta">
+            {signup.strip && <div className="lp-cta-strip">{signup.strip}</div>}
+            <div className="lp-cta-body">
+              <div className="lp-cta-text">
+                <h2>{signup.heading}</h2>
+                {signup.lead && <p className="lp-lead">{signup.lead}</p>}
+              </div>
+              <SignInForm id="cta-email" />
+            </div>
+          </div>
+        </section>
+      </main>
 
       <SiteFooter sections />
     </div>

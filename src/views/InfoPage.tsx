@@ -17,93 +17,95 @@ export function InfoPage({ page }: { page: Page }) {
     <div className="lp lp-home lp-info">
       <SiteHeader />
 
-      <header className="lp-wrap lp-info-head">
-        {hero.kicker && <div className="lp-kicker">{hero.kicker}</div>}
-        <h1>{hero.heading}</h1>
-        {hero.lead && (
-          <p className="lp-lead">
-            <Inline text={hero.lead} />
-          </p>
-        )}
-        {hero.button_label && <HeroButton label={hero.button_label} url={hero.button_url} />}
-      </header>
-
-      {(sections.length > 0 || contents.length > 0) && (
-        <div className="lp-wrap lp-info-body">
-          {contents.length > 0 && (
-            <nav className="lp-info-contents" aria-label="On this page">
-              <span className="lp-kicker">On this page</span>
-              <ul>
-                {contents.map((s) => (
-                  <li key={s.heading}>
-                    <a href={`#${anchor(s.heading)}`}>{s.heading}</a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+      <main>
+        <header className="lp-wrap lp-info-head">
+          {hero.kicker && <div className="lp-kicker">{hero.kicker}</div>}
+          <h1>{hero.heading}</h1>
+          {hero.lead && (
+            <p className="lp-lead">
+              <Inline text={hero.lead} />
+            </p>
           )}
-          <article className="lp-article">
-            {sections.map((s, i) => (
-              <section key={i} id={s.heading ? anchor(s.heading) : undefined}>
-                {s.heading && <h2>{s.heading}</h2>}
-                <RichText text={s.text} />
-              </section>
-            ))}
-          </article>
-        </div>
-      )}
+          {hero.button_label && <HeroButton label={hero.button_label} url={hero.button_url} />}
+        </header>
 
-      {board.steps.length > 0 && (
-        <section className="lp-wrap lp-section-how lp-info-board">
-          <div className="lp-board">
-            <div className="lp-board-head">
-              {board.label && <span className="lp-board-label">{board.label}</span>}
-              {board.heading && <h2>{board.heading}</h2>}
-            </div>
-            <div className="lp-board-rows" role="list">
-              <div className="lp-board-row lp-board-cols" aria-hidden>
-                <span>Step</span>
-                <span>What happens</span>
-                <span>Status</span>
+        {(sections.length > 0 || contents.length > 0) && (
+          <div className="lp-wrap lp-info-body">
+            {contents.length > 0 && (
+              <nav className="lp-info-contents" aria-label="On this page">
+                <span className="lp-kicker">On this page</span>
+                <ul>
+                  {contents.map((s) => (
+                    <li key={s.heading}>
+                      <a href={`#${anchor(s.heading)}`}>{s.heading}</a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
+            <article className="lp-article">
+              {sections.map((s, i) => (
+                <section key={i} id={s.heading ? anchor(s.heading) : undefined}>
+                  {s.heading && <h2>{s.heading}</h2>}
+                  <RichText text={s.text} />
+                </section>
+              ))}
+            </article>
+          </div>
+        )}
+
+        {board.steps.length > 0 && (
+          <section className="lp-wrap lp-section-how lp-info-board">
+            <div className="lp-board">
+              <div className="lp-board-head">
+                {board.label && <span className="lp-board-label">{board.label}</span>}
+                {board.heading && <h2>{board.heading}</h2>}
               </div>
-              {board.steps.map((s, i) => (
-                <div key={s.title} className="lp-board-row" role="listitem">
-                  <span className="lp-board-num">{String(i + 1).padStart(2, "0")}</span>
-                  <div className="lp-board-what">
-                    <strong>{s.title}</strong>
-                    <span>{s.text}</span>
-                  </div>
-                  <span className={i === board.steps.length - 1 ? "lp-board-status lit" : "lp-board-status"}>{s.status}</span>
+              <div className="lp-board-rows" role="list">
+                <div className="lp-board-row lp-board-cols" aria-hidden>
+                  <span>Step</span>
+                  <span>What happens</span>
+                  <span>Status</span>
                 </div>
-              ))}
+                {board.steps.map((s, i) => (
+                  <div key={s.title} className="lp-board-row" role="listitem">
+                    <span className="lp-board-num">{String(i + 1).padStart(2, "0")}</span>
+                    <div className="lp-board-what">
+                      <strong>{s.title}</strong>
+                      <span>{s.text}</span>
+                    </div>
+                    <span className={i === board.steps.length - 1 ? "lp-board-status lit" : "lp-board-status"}>{s.status}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="lp-info-board-go">
+                <a className="btn" href="/#signin">
+                  Start planning, it's free
+                </a>
+              </div>
             </div>
-            <div className="lp-info-board-go">
-              <a className="btn" href="/#signin">
-                Start planning, it's free
-              </a>
-            </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
 
-      {faqs.items.length > 0 && (
-        <section className="lp-wrap lp-info-faqs" aria-label={faqs.heading || "Questions and answers"}>
-          <div className="lp-info-faqs-inner">
-            {faqs.heading && <h2>{faqs.heading}</h2>}
-            <div className="lp-accordion">
-              {faqs.items.map((q) => (
-                <details key={q.question}>
-                  <summary>
-                    {q.question}
-                    <span aria-hidden>+</span>
-                  </summary>
-                  <RichText text={q.answer} />
-                </details>
-              ))}
+        {faqs.items.length > 0 && (
+          <section className="lp-wrap lp-info-faqs" aria-label={faqs.heading || "Questions and answers"}>
+            <div className="lp-info-faqs-inner">
+              {faqs.heading && <h2>{faqs.heading}</h2>}
+              <div className="lp-accordion">
+                {faqs.items.map((q) => (
+                  <details key={q.question}>
+                    <summary>
+                      {q.question}
+                      <span aria-hidden>+</span>
+                    </summary>
+                    <RichText text={q.answer} />
+                  </details>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
+      </main>
 
       <SiteFooter />
     </div>

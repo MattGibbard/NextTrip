@@ -15,29 +15,31 @@ export function HowItWorksPage() {
     <div className="lp lp-home">
       <SiteHeader current="how" exact />
 
-      <section className="lp-wrap hw-hero">
-        {hero.kicker && <div className="lp-kicker">{hero.kicker}</div>}
-        <h1>{hero.heading}</h1>
-        {hero.lead && <p className="lp-lead">{hero.lead}</p>}
-      </section>
+      <main>
+        <section className="lp-wrap hw-hero">
+          {hero.kicker && <div className="lp-kicker">{hero.kicker}</div>}
+          <h1>{hero.heading}</h1>
+          {hero.lead && <p className="lp-lead">{hero.lead}</p>}
+        </section>
 
-      <ol className="lp-wrap hw-steps">
-        {HOW_STEPS.map((key) => {
-          const s = steps[key];
-          return (
-            <li key={key} className="hw-step">
-              <div className="hw-text">
-                {s.kicker && <span className="lp-kicker">{s.kicker}</span>}
-                <h2>{s.title}</h2>
-                {s.text.split(/\n{2,}/).map((para, i) => (
-                  <p key={i}>{para}</p>
-                ))}
-              </div>
-              <div className="hw-stage-wrap">{STAGES[key]}</div>
-            </li>
-          );
-        })}
-      </ol>
+        <ol className="lp-wrap hw-steps">
+          {HOW_STEPS.map((key) => {
+            const s = steps[key];
+            return (
+              <li key={key} className="hw-step">
+                <div className="hw-text">
+                  {s.kicker && <span className="lp-kicker">{s.kicker}</span>}
+                  <h2>{s.title}</h2>
+                  {s.text.split(/\n{2,}/).map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))}
+                </div>
+                <div className="hw-stage-wrap">{STAGES[key]}</div>
+              </li>
+            );
+          })}
+        </ol>
+      </main>
 
       <SiteFooter />
     </div>

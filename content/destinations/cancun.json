@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 28
     },
     "feb": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 29
     },
     "mar": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 30
     },
     "apr": {
       "rating": "best",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 31
     },
     "may": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 32
     },
     "jun": {
       "rating": "good",
-      "note": "Rainy, seaweed"
+      "note": "Rainy, seaweed",
+      "temp": 33
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, seaweed"
+      "note": "Hot, seaweed",
+      "temp": 33
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, seaweed"
+      "note": "Hot, seaweed",
+      "temp": 33
     },
     "sep": {
       "rating": "quiet",
-      "note": "Hurricanes"
+      "note": "Hurricanes",
+      "temp": 33
     },
     "oct": {
       "rating": "quiet",
-      "note": "Hurricanes"
+      "note": "Hurricanes",
+      "temp": 31
     },
     "nov": {
       "rating": "good",
-      "note": "Drier"
+      "note": "Drier",
+      "temp": 30
     },
     "dec": {
       "rating": "best",
-      "note": "Dry, busy"
+      "note": "Dry, busy",
+      "temp": 28
     }
   },
   "when_to_go": "December to April is dry, sunny and the most popular time. Summer is hot and humid, and sargassum seaweed can cover some beaches. Hurricane season runs from June to November, with the highest risk in September and October.",

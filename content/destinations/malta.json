@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 16
     },
     "feb": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 16
     },
     "mar": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 17
     },
     "apr": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 20
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "jun": {
       "rating": "best",
-      "note": "Beach weather"
+      "note": "Beach weather",
+      "temp": 28
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 31
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 31
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 28
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 25
     },
     "nov": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 21
     },
     "dec": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     }
   },
   "when_to_go": "April to June and September to October are the sweet spot, warm with a calm sea. July and August are hot and busy. Winter is mild and sunny enough for sightseeing, though too cool for most to swim.",

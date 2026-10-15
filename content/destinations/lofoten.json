@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Dark"
+      "note": "Dark",
+      "temp": 1
     },
     "feb": {
       "rating": "good",
-      "note": "Snow, lights"
+      "note": "Snow, lights",
+      "temp": 1
     },
     "mar": {
       "rating": "good",
-      "note": "Snow, lights"
+      "note": "Snow, lights",
+      "temp": 2
     },
     "apr": {
       "rating": "quiet",
-      "note": "Changeable"
+      "note": "Changeable",
+      "temp": 5
     },
     "may": {
       "rating": "good",
-      "note": "Light nights"
+      "note": "Light nights",
+      "temp": 9
     },
     "jun": {
       "rating": "best",
-      "note": "Midnight sun"
+      "note": "Midnight sun",
+      "temp": 13
     },
     "jul": {
       "rating": "best",
-      "note": "Midnight sun"
+      "note": "Midnight sun",
+      "temp": 16
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 15
     },
     "sep": {
       "rating": "good",
-      "note": "Northern lights"
+      "note": "Northern lights",
+      "temp": 12
     },
     "oct": {
       "rating": "quiet",
-      "note": "Stormy"
+      "note": "Stormy",
+      "temp": 7
     },
     "nov": {
       "rating": "quiet",
-      "note": "Dark"
+      "note": "Dark",
+      "temp": 4
     },
     "dec": {
       "rating": "quiet",
-      "note": "Dark"
+      "note": "Dark",
+      "temp": 2
     }
   },
   "when_to_go": "June to August has round-the-clock daylight and the best weather for hiking and kayaking. February and March bring snowy peaks and northern lights with returning daylight. Late autumn and early winter are dark and stormy.",

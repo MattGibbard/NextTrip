@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 13
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 14
     },
     "mar": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 16
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 19
     },
     "may": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "jun": {
       "rating": "best",
-      "note": "Beach season"
+      "note": "Beach season",
+      "temp": 28
     },
     "jul": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 31
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, very busy"
+      "note": "Hot, very busy",
+      "temp": 31
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 27
     },
     "oct": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 22
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 18
     },
     "dec": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 14
     }
   },
   "when_to_go": "June and September are best, with warm seas and fewer crowds. July is hot, and in August Italian families fill the beaches and prices rise. Spring is lovely for exploring the towns, but the sea is still cool.",

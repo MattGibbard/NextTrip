@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 5
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 7
     },
     "mar": {
       "rating": "quiet",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 12
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 15
     },
     "may": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 20
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "jul": {
       "rating": "best",
-      "note": "Lake swimming"
+      "note": "Lake swimming",
+      "temp": 27
     },
     "aug": {
       "rating": "best",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 26
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 21
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 16
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 9
     },
     "dec": {
       "rating": "good",
-      "note": "Christmas market"
+      "note": "Christmas market",
+      "temp": 5
     }
   },
   "when_to_go": "June to September is warm enough to swim in the lake, which is one of the cleanest in Europe. July and August are busiest, so book early. Spring and autumn are quieter and good for cycling, and December brings a Christmas market.",

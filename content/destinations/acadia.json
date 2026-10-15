@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Snowy, roads shut"
+      "note": "Snowy, roads shut",
+      "temp": 0
     },
     "feb": {
       "rating": "quiet",
-      "note": "Snowy, roads shut"
+      "note": "Snowy, roads shut",
+      "temp": 1
     },
     "mar": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 5
     },
     "apr": {
       "rating": "quiet",
-      "note": "Roads reopen"
+      "note": "Roads reopen",
+      "temp": 11
     },
     "may": {
       "rating": "good",
-      "note": "Quiet, cool"
+      "note": "Quiet, cool",
+      "temp": 17
     },
     "jun": {
       "rating": "good",
-      "note": "Long days"
+      "note": "Long days",
+      "temp": 22
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 26
     },
     "aug": {
       "rating": "best",
-      "note": "Summer, busy"
+      "note": "Summer, busy",
+      "temp": 25
     },
     "sep": {
       "rating": "best",
-      "note": "Fewer crowds"
+      "note": "Fewer crowds",
+      "temp": 21
     },
     "oct": {
       "rating": "best",
-      "note": "Autumn colour"
+      "note": "Autumn colour",
+      "temp": 14
     },
     "nov": {
       "rating": "quiet",
-      "note": "Cold, closing"
+      "note": "Cold, closing",
+      "temp": 8
     },
     "dec": {
       "rating": "quiet",
-      "note": "Snowy"
+      "note": "Snowy",
+      "temp": 2
     }
   },
   "when_to_go": "July and August are warmest and busiest, with the free Island Explorer bus running. September and early October are calmer, and the autumn colour usually peaks in early to mid October. From December to mid April most of the Park Loop Road is closed and many places in Bar Harbor shut. Pack layers, as the coast can be foggy and cool even in summer.",

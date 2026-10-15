@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold, snowy"
+      "note": "Cold, snowy",
+      "temp": 2
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold, snowy"
+      "note": "Cold, snowy",
+      "temp": 4
     },
     "mar": {
       "rating": "quiet",
-      "note": "Thawing"
+      "note": "Thawing",
+      "temp": 9
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 14
     },
     "may": {
       "rating": "good",
-      "note": "Fresh, green"
+      "note": "Fresh, green",
+      "temp": 19
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "jul": {
       "rating": "good",
-      "note": "Warm, busy"
+      "note": "Warm, busy",
+      "temp": 24
     },
     "aug": {
       "rating": "good",
-      "note": "Warm, busy"
+      "note": "Warm, busy",
+      "temp": 23
     },
     "sep": {
       "rating": "best",
-      "note": "Mild, calmer"
+      "note": "Mild, calmer",
+      "temp": 19
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn colours"
+      "note": "Autumn colours",
+      "temp": 14
     },
     "nov": {
       "rating": "quiet",
-      "note": "Grey"
+      "note": "Grey",
+      "temp": 7
     },
     "dec": {
       "rating": "good",
-      "note": "Advent"
+      "note": "Advent",
+      "temp": 3
     }
   },
   "when_to_go": "June and September are warm enough for the lake and hiking, with fewer coach groups than high summer. July and August are lovely but the village gets very crowded in the middle of the day. Some caves and cable cars only open from spring to autumn, so check before you go in winter.",

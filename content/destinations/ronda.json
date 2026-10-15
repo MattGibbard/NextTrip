@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 12
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 14
     },
     "mar": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     },
     "apr": {
       "rating": "best",
-      "note": "Spring flowers"
+      "note": "Spring flowers",
+      "temp": 19
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "jun": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 29
     },
     "jul": {
       "rating": "good",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 33
     },
     "aug": {
       "rating": "good",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 33
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 28
     },
     "oct": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 22
     },
     "nov": {
       "rating": "good",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 16
     },
     "dec": {
       "rating": "quiet",
-      "note": "Cold nights"
+      "note": "Cold nights",
+      "temp": 13
     }
   },
   "when_to_go": "April, May, September and October are warm and good for walking. July and August are very hot in the day, though cooler than Seville or Córdoba. Winter days can be sunny, but nights are cold up in the mountains.",

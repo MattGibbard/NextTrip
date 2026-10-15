@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Skiing"
+      "note": "Skiing",
+      "temp": 0
     },
     "feb": {
       "rating": "best",
-      "note": "Skiing"
+      "note": "Skiing",
+      "temp": 2
     },
     "mar": {
       "rating": "best",
-      "note": "Skiing"
+      "note": "Skiing",
+      "temp": 7
     },
     "apr": {
       "rating": "good",
-      "note": "Spring skiing"
+      "note": "Spring skiing",
+      "temp": 12
     },
     "may": {
       "rating": "quiet",
-      "note": "Between seasons"
+      "note": "Between seasons",
+      "temp": 17
     },
     "jun": {
       "rating": "good",
-      "note": "Early summer"
+      "note": "Early summer",
+      "temp": 21
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 25
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 25
     },
     "sep": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 20
     },
     "oct": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 12
     },
     "nov": {
       "rating": "quiet",
-      "note": "Before the snow"
+      "note": "Before the snow",
+      "temp": 3
     },
     "dec": {
       "rating": "best",
-      "note": "Skiing, festive"
+      "note": "Skiing, festive",
+      "temp": -1
     }
   },
   "when_to_go": "December to March is ski season, with lots of snow and a long season. July and August are warm, with lake swimming, mountain biking and gondola rides. October and November are wet and quiet.",

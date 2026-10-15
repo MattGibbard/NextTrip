@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Skiing"
+      "note": "Skiing",
+      "temp": 2
     },
     "feb": {
       "rating": "best",
-      "note": "Skiing, half term"
+      "note": "Skiing, half term",
+      "temp": 4
     },
     "mar": {
       "rating": "best",
-      "note": "Skiing"
+      "note": "Skiing",
+      "temp": 8
     },
     "apr": {
       "rating": "good",
-      "note": "Spring skiing"
+      "note": "Spring skiing",
+      "temp": 12
     },
     "may": {
       "rating": "quiet",
-      "note": "Between seasons"
+      "note": "Between seasons",
+      "temp": 16
     },
     "jun": {
       "rating": "good",
-      "note": "Early summer"
+      "note": "Early summer",
+      "temp": 20
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 23
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 22
     },
     "sep": {
       "rating": "good",
-      "note": "Quieter"
+      "note": "Quieter",
+      "temp": 18
     },
     "oct": {
       "rating": "quiet",
-      "note": "Between seasons"
+      "note": "Between seasons",
+      "temp": 13
     },
     "nov": {
       "rating": "quiet",
-      "note": "Before the snow"
+      "note": "Before the snow",
+      "temp": 6
     },
     "dec": {
       "rating": "good",
-      "note": "Skiing, festive"
+      "note": "Skiing, festive",
+      "temp": 2
     }
   },
   "when_to_go": "January to March is ski season, with February half term the busiest. July and August are great for walking, cable cars and glacier views. May, October and November are quiet, with many lifts closed.",

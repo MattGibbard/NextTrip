@@ -45,51 +45,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 14
     },
     "feb": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 15
     },
     "mar": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 17
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 19
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "jun": {
       "rating": "best",
-      "note": "Beach weather"
+      "note": "Beach weather",
+      "temp": 26
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 29
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 29
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 26
     },
     "oct": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 22
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 17
     },
     "dec": {
       "rating": "quiet",
-      "note": "Festive"
+      "note": "Festive",
+      "temp": 14
     }
   },
   "when_to_go": "May, June and September are ideal, warm enough for the beach but not too crowded. July and August are hot and very busy. Winter is mild and quieter, and good for sightseeing.",

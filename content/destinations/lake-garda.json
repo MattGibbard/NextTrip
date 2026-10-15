@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold, closed"
+      "note": "Cold, closed",
+      "temp": 7
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold, closed"
+      "note": "Cold, closed",
+      "temp": 9
     },
     "mar": {
       "rating": "quiet",
-      "note": "Waking up"
+      "note": "Waking up",
+      "temp": 14
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 18
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "jun": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 27
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 30
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 29
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 18
     },
     "nov": {
       "rating": "quiet",
-      "note": "Closed"
+      "note": "Closed",
+      "temp": 12
     },
     "dec": {
       "rating": "quiet",
-      "note": "Christmas markets"
+      "note": "Christmas markets",
+      "temp": 7
     }
   },
   "when_to_go": "May, June and September are perfect, with warm days and room on the beaches. July and August are hot and lively. Many hotels, ferries and attractions close from November to March.",

@@ -42,51 +42,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "feb": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 25
     },
     "mar": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 28
     },
     "apr": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 33
     },
     "may": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 37
     },
     "jun": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 39
     },
     "jul": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 41
     },
     "aug": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 41
     },
     "sep": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 38
     },
     "oct": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 35
     },
     "nov": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 31
     },
     "dec": {
       "rating": "best",
-      "note": "Warm, busy"
+      "note": "Warm, busy",
+      "temp": 26
     }
   },
   "when_to_go": "November to March is the season, with warm sunny days that suit beaches and outdoor sights. Summer is extremely hot, so everything moves indoors, but hotels are much cheaper. Ramadan moves each year and brings shorter opening hours, so check the dates.",

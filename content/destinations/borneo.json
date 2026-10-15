@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 30
     },
     "feb": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 31
     },
     "mar": {
       "rating": "best",
-      "note": "Drier"
+      "note": "Drier",
+      "temp": 31
     },
     "apr": {
       "rating": "best",
-      "note": "Drier"
+      "note": "Drier",
+      "temp": 32
     },
     "may": {
       "rating": "best",
-      "note": "Drier"
+      "note": "Drier",
+      "temp": 32
     },
     "jun": {
       "rating": "best",
-      "note": "Drier"
+      "note": "Drier",
+      "temp": 32
     },
     "jul": {
       "rating": "best",
-      "note": "Drier"
+      "note": "Drier",
+      "temp": 31
     },
     "aug": {
       "rating": "best",
-      "note": "Drier, busy"
+      "note": "Drier, busy",
+      "temp": 31
     },
     "sep": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 31
     },
     "oct": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 31
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 31
     },
     "dec": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 31
     }
   },
   "when_to_go": "March to September is drier and best for wildlife, river trips and the islands. November to January is the wettest time, though rain usually comes in short, heavy bursts. It's hot and humid all year.",

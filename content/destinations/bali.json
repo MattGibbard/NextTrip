@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 31
     },
     "feb": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 31
     },
     "mar": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 31
     },
     "apr": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 32
     },
     "may": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 31
     },
     "jun": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 30
     },
     "jul": {
       "rating": "best",
-      "note": "Dry, busy"
+      "note": "Dry, busy",
+      "temp": 30
     },
     "aug": {
       "rating": "best",
-      "note": "Dry, busy"
+      "note": "Dry, busy",
+      "temp": 30
     },
     "sep": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 31
     },
     "oct": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 32
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 32
     },
     "dec": {
       "rating": "quiet",
-      "note": "Rainy, busy"
+      "note": "Rainy, busy",
+      "temp": 31
     }
   },
   "when_to_go": "April to October is the dry season, with July and August busiest. November to March is the wet season, with heavy afternoon rain and high humidity, but it's still warm and cheaper outside Christmas.",

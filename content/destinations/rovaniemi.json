@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Snow, lights"
+      "note": "Snow, lights",
+      "temp": -9
     },
     "feb": {
       "rating": "best",
-      "note": "Snow, lights"
+      "note": "Snow, lights",
+      "temp": -8
     },
     "mar": {
       "rating": "best",
-      "note": "Snow, sunnier"
+      "note": "Snow, sunnier",
+      "temp": -3
     },
     "apr": {
       "rating": "good",
-      "note": "Spring snow"
+      "note": "Spring snow",
+      "temp": 3
     },
     "may": {
       "rating": "quiet",
-      "note": "Thaw"
+      "note": "Thaw",
+      "temp": 10
     },
     "jun": {
       "rating": "good",
-      "note": "Midnight sun"
+      "note": "Midnight sun",
+      "temp": 17
     },
     "jul": {
       "rating": "good",
-      "note": "Midnight sun"
+      "note": "Midnight sun",
+      "temp": 20
     },
     "aug": {
       "rating": "good",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 17
     },
     "sep": {
       "rating": "good",
-      "note": "Autumn colours"
+      "note": "Autumn colours",
+      "temp": 11
     },
     "oct": {
       "rating": "quiet",
-      "note": "Before the snow"
+      "note": "Before the snow",
+      "temp": 3
     },
     "nov": {
       "rating": "good",
-      "note": "Christmas starts"
+      "note": "Christmas starts",
+      "temp": -3
     },
     "dec": {
       "rating": "best",
-      "note": "Christmas, busy"
+      "note": "Christmas, busy",
+      "temp": -6
     }
   },
   "when_to_go": "December is the magical, busiest and dearest time to meet Santa. January to March is quieter, with deep snow, longer days and good northern lights. In summer the sun never sets and Santa's village is still open.",

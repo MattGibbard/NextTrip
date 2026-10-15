@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Dry season starts"
+      "note": "Dry season starts",
+      "temp": 28
     },
     "feb": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 28
     },
     "mar": {
       "rating": "best",
-      "note": "Dry, whales"
+      "note": "Dry, whales",
+      "temp": 29
     },
     "apr": {
       "rating": "best",
-      "note": "Dry, whales"
+      "note": "Dry, whales",
+      "temp": 30
     },
     "may": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 31
     },
     "jun": {
       "rating": "quiet",
-      "note": "Rains start"
+      "note": "Rains start",
+      "temp": 31
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, showers"
+      "note": "Hot, showers",
+      "temp": 31
     },
     "aug": {
       "rating": "quiet",
-      "note": "Wet"
+      "note": "Wet",
+      "temp": 31
     },
     "sep": {
       "rating": "quiet",
-      "note": "Hurricane risk"
+      "note": "Hurricane risk",
+      "temp": 31
     },
     "oct": {
       "rating": "quiet",
-      "note": "Hurricane risk"
+      "note": "Hurricane risk",
+      "temp": 31
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 30
     },
     "dec": {
       "rating": "good",
-      "note": "Drier"
+      "note": "Drier",
+      "temp": 29
     }
   },
   "when_to_go": "February to April is driest, the trails are less muddy and whale sightings are good. Dominica is a rainforest island, so expect showers at any time of year. The hurricane season runs from June to November, with August to October the riskiest.",

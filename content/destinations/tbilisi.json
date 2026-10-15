@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 7
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 9
     },
     "mar": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 14
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 19
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 29
     },
     "jul": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 32
     },
     "aug": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 32
     },
     "sep": {
       "rating": "best",
-      "note": "Grape harvest"
+      "note": "Grape harvest",
+      "temp": 27
     },
     "oct": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 21
     },
     "nov": {
       "rating": "good",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 13
     },
     "dec": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 8
     }
   },
   "when_to_go": "May, June, September and October are warm and pleasant for walking the old town. July and August are hot, so plan sightseeing for mornings and evenings. Winter is cold but quiet and cheap.",

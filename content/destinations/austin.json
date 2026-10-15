@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     },
     "feb": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 19
     },
     "mar": {
       "rating": "good",
-      "note": "Busy (SXSW)"
+      "note": "Busy (SXSW)",
+      "temp": 23
     },
     "apr": {
       "rating": "best",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 27
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 31
     },
     "jun": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 34
     },
     "jul": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 36
     },
     "aug": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 36
     },
     "sep": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 33
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 28
     },
     "nov": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 22
     },
     "dec": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     }
   },
   "when_to_go": "Spring and autumn are perfect, with warm days and wildflowers in April. July and August are very hot, so plan pool time and indoor afternoons. Hotel prices jump during big events like SXSW in March and the Formula 1 race in autumn.",

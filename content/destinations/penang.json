@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Dry, sunny"
+      "note": "Dry, sunny",
+      "temp": 32
     },
     "feb": {
       "rating": "best",
-      "note": "Dry, sunny"
+      "note": "Dry, sunny",
+      "temp": 32
     },
     "mar": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 32
     },
     "apr": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 32
     },
     "may": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 32
     },
     "jun": {
       "rating": "good",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 31
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 31
     },
     "aug": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 31
     },
     "sep": {
       "rating": "quiet",
-      "note": "Wet"
+      "note": "Wet",
+      "temp": 31
     },
     "oct": {
       "rating": "quiet",
-      "note": "Wettest"
+      "note": "Wettest",
+      "temp": 31
     },
     "nov": {
       "rating": "quiet",
-      "note": "Wet"
+      "note": "Wet",
+      "temp": 31
     },
     "dec": {
       "rating": "best",
-      "note": "Drier"
+      "note": "Drier",
+      "temp": 31
     }
   },
   "when_to_go": "December to February is the driest and most comfortable time. It's hot and humid all year, with short tropical downpours most afternoons. September to November is the wettest stretch. Chinese New Year, in January or February, is lively but busy.",

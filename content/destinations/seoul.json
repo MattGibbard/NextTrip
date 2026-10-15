@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Freezing"
+      "note": "Freezing",
+      "temp": 2
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 5
     },
     "mar": {
       "rating": "good",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 11
     },
     "apr": {
       "rating": "best",
-      "note": "Blossom"
+      "note": "Blossom",
+      "temp": 18
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "jun": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 28
     },
     "jul": {
       "rating": "quiet",
-      "note": "Monsoon"
+      "note": "Monsoon",
+      "temp": 29
     },
     "aug": {
       "rating": "quiet",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 30
     },
     "sep": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 26
     },
     "oct": {
       "rating": "best",
-      "note": "Autumn colour"
+      "note": "Autumn colour",
+      "temp": 20
     },
     "nov": {
       "rating": "good",
-      "note": "Crisp"
+      "note": "Crisp",
+      "temp": 12
     },
     "dec": {
       "rating": "good",
-      "note": "Cold, festive"
+      "note": "Cold, festive",
+      "temp": 4
     }
   },
   "when_to_go": "April and May bring cherry blossom and warm days, and October has clear skies and autumn leaves on the hills. July and August are hot, humid and rainy. Winter is very cold but dry and sunny, with ice rinks and winter lights.",

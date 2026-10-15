@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Snowcoach only"
+      "note": "Snowcoach only",
+      "temp": -2
     },
     "feb": {
       "rating": "quiet",
-      "note": "Snowcoach only"
+      "note": "Snowcoach only",
+      "temp": 1
     },
     "mar": {
       "rating": "quiet",
-      "note": "Snowcoach only"
+      "note": "Snowcoach only",
+      "temp": 5
     },
     "apr": {
       "rating": "quiet",
-      "note": "Roads closed"
+      "note": "Roads closed",
+      "temp": 10
     },
     "may": {
       "rating": "good",
-      "note": "Roads open, baby animals"
+      "note": "Roads open, baby animals",
+      "temp": 16
     },
     "jun": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 21
     },
     "jul": {
       "rating": "best",
-      "note": "Summer, busy"
+      "note": "Summer, busy",
+      "temp": 27
     },
     "aug": {
       "rating": "best",
-      "note": "Summer, busy"
+      "note": "Summer, busy",
+      "temp": 26
     },
     "sep": {
       "rating": "best",
-      "note": "Quieter"
+      "note": "Quieter",
+      "temp": 20
     },
     "oct": {
       "rating": "good",
-      "note": "Cold, closing"
+      "note": "Cold, closing",
+      "temp": 12
     },
     "nov": {
       "rating": "quiet",
-      "note": "Roads closed"
+      "note": "Roads closed",
+      "temp": 3
     },
     "dec": {
       "rating": "quiet",
-      "note": "Snowcoach only"
+      "note": "Snowcoach only",
+      "temp": -2
     }
   },
   "when_to_go": "June to September is when all roads and lodges are open, with July and August busiest. Late May has baby bison, and September is quieter with wildlife on the move. From November to April most roads close to cars.",

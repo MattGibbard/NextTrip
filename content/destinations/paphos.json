@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     },
     "feb": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     },
     "mar": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 19
     },
     "apr": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 25
     },
     "jun": {
       "rating": "best",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 29
     },
     "jul": {
       "rating": "good",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 31
     },
     "aug": {
       "rating": "good",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 32
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 30
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 27
     },
     "nov": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 23
     },
     "dec": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 19
     }
   },
   "when_to_go": "April to June and September to October are best, sunny and hot without the peak heat. July and August are very hot. Winters are mild and sunny enough for walks and sightseeing, though too cool for most to swim.",

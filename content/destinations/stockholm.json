@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold, dark"
+      "note": "Cold, dark",
+      "temp": 1
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold, dark"
+      "note": "Cold, dark",
+      "temp": 1
     },
     "mar": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 4
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 10
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 16
     },
     "jun": {
       "rating": "best",
-      "note": "Midsummer"
+      "note": "Midsummer",
+      "temp": 20
     },
     "jul": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "aug": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 21
     },
     "sep": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 16
     },
     "oct": {
       "rating": "quiet",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 10
     },
     "nov": {
       "rating": "good",
-      "note": "Markets open"
+      "note": "Markets open",
+      "temp": 5
     },
     "dec": {
       "rating": "best",
-      "note": "Christmas, Lucia"
+      "note": "Christmas, Lucia",
+      "temp": 2
     }
   },
   "when_to_go": "Late November to Christmas brings markets and lights, with Lucia celebrations on 13 December. May to August is warm with very long days, perfect for island-hopping. January and February are cold, dark and quiet.",

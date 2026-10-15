@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 6
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 7
     },
     "mar": {
       "rating": "quiet",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 10
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 14
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 18
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 21
     },
     "jul": {
       "rating": "good",
-      "note": "Busy"
+      "note": "Busy",
+      "temp": 23
     },
     "aug": {
       "rating": "good",
-      "note": "Busy"
+      "note": "Busy",
+      "temp": 23
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 19
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 15
     },
     "nov": {
       "rating": "good",
-      "note": "Markets open"
+      "note": "Markets open",
+      "temp": 10
     },
     "dec": {
       "rating": "best",
-      "note": "Christmas markets"
+      "note": "Christmas markets",
+      "temp": 7
     }
   },
   "when_to_go": "Late November to early January brings Christmas markets, an ice rink and the Winter Glow light trail. May, June and September are warm and good for canal boats and cycling. Summer weekends are very busy with day-trippers.",

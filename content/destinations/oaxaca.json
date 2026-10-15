@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Dry, sunny"
+      "note": "Dry, sunny",
+      "temp": 28
     },
     "feb": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 30
     },
     "mar": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 32
     },
     "apr": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 33
     },
     "may": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 33
     },
     "jun": {
       "rating": "quiet",
-      "note": "Rainy season"
+      "note": "Rainy season",
+      "temp": 30
     },
     "jul": {
       "rating": "good",
-      "note": "Guelaguetza festival"
+      "note": "Guelaguetza festival",
+      "temp": 29
     },
     "aug": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 29
     },
     "sep": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 28
     },
     "oct": {
       "rating": "good",
-      "note": "Drying out"
+      "note": "Drying out",
+      "temp": 28
     },
     "nov": {
       "rating": "best",
-      "note": "Day of the Dead"
+      "note": "Day of the Dead",
+      "temp": 28
     },
     "dec": {
       "rating": "best",
-      "note": "Festive, dry"
+      "note": "Festive, dry",
+      "temp": 28
     }
   },
   "when_to_go": "November to March is dry and sunny, with warm days and cool nights. Day of the Dead in late October and early November is spectacular but busy, so book early. The rainy season runs from about June to September, though July brings the Guelaguetza dance festival.",

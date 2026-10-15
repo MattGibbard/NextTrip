@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Ski season"
+      "note": "Ski season",
+      "temp": 0
     },
     "feb": {
       "rating": "best",
-      "note": "Ski season"
+      "note": "Ski season",
+      "temp": 2
     },
     "mar": {
       "rating": "best",
-      "note": "Ski season"
+      "note": "Ski season",
+      "temp": 5
     },
     "apr": {
       "rating": "good",
-      "note": "Spring skiing"
+      "note": "Spring skiing",
+      "temp": 9
     },
     "may": {
       "rating": "quiet",
-      "note": "Between seasons"
+      "note": "Between seasons",
+      "temp": 14
     },
     "jun": {
       "rating": "good",
-      "note": "Hiking"
+      "note": "Hiking",
+      "temp": 18
     },
     "jul": {
       "rating": "best",
-      "note": "Hiking"
+      "note": "Hiking",
+      "temp": 21
     },
     "aug": {
       "rating": "best",
-      "note": "Hiking"
+      "note": "Hiking",
+      "temp": 20
     },
     "sep": {
       "rating": "good",
-      "note": "Hiking"
+      "note": "Hiking",
+      "temp": 16
     },
     "oct": {
       "rating": "quiet",
-      "note": "Between seasons"
+      "note": "Between seasons",
+      "temp": 11
     },
     "nov": {
       "rating": "quiet",
-      "note": "Quiet"
+      "note": "Quiet",
+      "temp": 4
     },
     "dec": {
       "rating": "best",
-      "note": "Christmas, snow"
+      "note": "Christmas, snow",
+      "temp": 0
     }
   },
   "when_to_go": "December to April is ski season, with snow very likely at Christmas thanks to the high slopes and glacier. July and August are good for walking and mountain lakes. May and November are quiet, with many hotels closed.",

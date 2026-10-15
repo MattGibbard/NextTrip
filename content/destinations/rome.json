@@ -42,51 +42,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 12
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 13
     },
     "mar": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 16
     },
     "apr": {
       "rating": "best",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 19
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "jun": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 28
     },
     "jul": {
       "rating": "good",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 31
     },
     "aug": {
       "rating": "quiet",
-      "note": "Hot, many closures"
+      "note": "Hot, many closures",
+      "temp": 31
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 27
     },
     "oct": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 22
     },
     "nov": {
       "rating": "good",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 17
     },
     "dec": {
       "rating": "good",
-      "note": "Festive"
+      "note": "Festive",
+      "temp": 13
     }
   },
   "when_to_go": "April, May, September and October are warm enough for gelato but cool enough for walking. July and August are very hot, and many Romans leave in August. Winter is mild and quiet, with shorter queues at the big sights.",

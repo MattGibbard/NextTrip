@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cool, wet"
+      "note": "Cool, wet",
+      "temp": 13
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cool, wet"
+      "note": "Cool, wet",
+      "temp": 14
     },
     "mar": {
       "rating": "quiet",
-      "note": "Mild, wet"
+      "note": "Mild, wet",
+      "temp": 15
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 16
     },
     "may": {
       "rating": "good",
-      "note": "Green"
+      "note": "Green",
+      "temp": 19
     },
     "jun": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 21
     },
     "jul": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "aug": {
       "rating": "best",
-      "note": "Warm, busy"
+      "note": "Warm, busy",
+      "temp": 24
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "oct": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 19
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 15
     },
     "dec": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 13
     }
   },
   "when_to_go": "June to September is warm but rarely too hot, which suits walking and the beach. August is busiest, as Spanish families escape the heat here. It rains all year, so pack waterproofs.",

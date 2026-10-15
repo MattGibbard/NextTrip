@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Quiet"
+      "note": "Quiet",
+      "temp": 14
     },
     "feb": {
       "rating": "quiet",
-      "note": "Quiet"
+      "note": "Quiet",
+      "temp": 15
     },
     "mar": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 16
     },
     "apr": {
       "rating": "quiet",
-      "note": "Cool sea"
+      "note": "Cool sea",
+      "temp": 19
     },
     "may": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "jun": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 26
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, windy"
+      "note": "Hot, windy",
+      "temp": 28
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 28
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 26
     },
     "oct": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 23
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 19
     },
     "dec": {
       "rating": "quiet",
-      "note": "Quiet"
+      "note": "Quiet",
+      "temp": 16
     }
   },
   "when_to_go": "June and September have warm sea and fewer crowds. July and August are hot and busy, and the strong meltemi wind can make some beaches choppy. Many hotels and tavernas close from November to April.",

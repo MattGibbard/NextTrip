@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Warm, windy"
+      "note": "Warm, windy",
+      "temp": 25
     },
     "feb": {
       "rating": "good",
-      "note": "Warm, windy"
+      "note": "Warm, windy",
+      "temp": 25
     },
     "mar": {
       "rating": "best",
-      "note": "Sunny"
+      "note": "Sunny",
+      "temp": 25
     },
     "apr": {
       "rating": "best",
-      "note": "Sunny"
+      "note": "Sunny",
+      "temp": 25
     },
     "may": {
       "rating": "best",
-      "note": "Sunny, calmer"
+      "note": "Sunny, calmer",
+      "temp": 26
     },
     "jun": {
       "rating": "best",
-      "note": "Hot, sunny"
+      "note": "Hot, sunny",
+      "temp": 27
     },
     "jul": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 27
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 29
     },
     "sep": {
       "rating": "quiet",
-      "note": "Rainy spells"
+      "note": "Rainy spells",
+      "temp": 30
     },
     "oct": {
       "rating": "good",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 29
     },
     "nov": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 28
     },
     "dec": {
       "rating": "good",
-      "note": "Winter sun"
+      "note": "Winter sun",
+      "temp": 26
     }
   },
   "when_to_go": "Cape Verde is warm and sunny all year, which makes it popular for winter sun. December to February can be very windy, which suits kitesurfers more than young children. Late summer is hottest and most humid, and September can bring short tropical downpours. Euros are widely accepted.",

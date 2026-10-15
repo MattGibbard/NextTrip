@@ -45,51 +45,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Snowy"
+      "note": "Snowy",
+      "temp": -1
     },
     "feb": {
       "rating": "quiet",
-      "note": "Snowy"
+      "note": "Snowy",
+      "temp": 0
     },
     "mar": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 4
     },
     "apr": {
       "rating": "quiet",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 9
     },
     "may": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 15
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 20
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 23
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 23
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 19
     },
     "oct": {
       "rating": "best",
-      "note": "Autumn colour"
+      "note": "Autumn colour",
+      "temp": 13
     },
     "nov": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 7
     },
     "dec": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 2
     }
   },
   "when_to_go": "June to October is best, with warm days, festivals and whale watching. Late September and October bring bright autumn colours. Winters are cold and snowy, and some sights close.",

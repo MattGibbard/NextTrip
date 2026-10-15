@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Summer, windy"
+      "note": "Summer, windy",
+      "temp": 15
     },
     "feb": {
       "rating": "best",
-      "note": "Summer, windy"
+      "note": "Summer, windy",
+      "temp": 15
     },
     "mar": {
       "rating": "best",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 13
     },
     "apr": {
       "rating": "good",
-      "note": "Autumn colour"
+      "note": "Autumn colour",
+      "temp": 9
     },
     "may": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 6
     },
     "jun": {
       "rating": "quiet",
-      "note": "Winter"
+      "note": "Winter",
+      "temp": 3
     },
     "jul": {
       "rating": "quiet",
-      "note": "Winter"
+      "note": "Winter",
+      "temp": 3
     },
     "aug": {
       "rating": "quiet",
-      "note": "Winter"
+      "note": "Winter",
+      "temp": 5
     },
     "sep": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 8
     },
     "oct": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 11
     },
     "nov": {
       "rating": "best",
-      "note": "Long days"
+      "note": "Long days",
+      "temp": 13
     },
     "dec": {
       "rating": "best",
-      "note": "Summer, windy"
+      "note": "Summer, windy",
+      "temp": 15
     }
   },
   "when_to_go": "November to March is summer, with long days but strong winds. April brings autumn colours and fewer people. Winter is cold and quiet, but clear and still, and a good time to track pumas.",

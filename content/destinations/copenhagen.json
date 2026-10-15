@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold, dark"
+      "note": "Cold, dark",
+      "temp": 3
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold, dark"
+      "note": "Cold, dark",
+      "temp": 3
     },
     "mar": {
       "rating": "quiet",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 6
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 11
     },
     "may": {
       "rating": "best",
-      "note": "Long days"
+      "note": "Long days",
+      "temp": 16
     },
     "jun": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 19
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 22
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 21
     },
     "sep": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 18
     },
     "oct": {
       "rating": "good",
-      "note": "Halloween at Tivoli"
+      "note": "Halloween at Tivoli",
+      "temp": 13
     },
     "nov": {
       "rating": "quiet",
-      "note": "Grey"
+      "note": "Grey",
+      "temp": 8
     },
     "dec": {
       "rating": "good",
-      "note": "Christmas markets"
+      "note": "Christmas markets",
+      "temp": 5
     }
   },
   "when_to_go": "May to August has long light evenings, harbour swimming and Tivoli in full swing. Tivoli also opens for Halloween and for Christmas, from mid-November into early January, when the city's Christmas markets are on too. January to March is cold, dark and quiet.",

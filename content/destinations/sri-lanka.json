@@ -45,51 +45,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Dry south & west"
+      "note": "Dry south & west",
+      "temp": 30
     },
     "feb": {
       "rating": "best",
-      "note": "Dry south & west"
+      "note": "Dry south & west",
+      "temp": 31
     },
     "mar": {
       "rating": "best",
-      "note": "Dry south & west"
+      "note": "Dry south & west",
+      "temp": 31
     },
     "apr": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 31
     },
     "may": {
       "rating": "good",
-      "note": "Monsoon south-west"
+      "note": "Monsoon south-west",
+      "temp": 31
     },
     "jun": {
       "rating": "good",
-      "note": "East coast dry"
+      "note": "East coast dry",
+      "temp": 30
     },
     "jul": {
       "rating": "good",
-      "note": "East coast dry"
+      "note": "East coast dry",
+      "temp": 30
     },
     "aug": {
       "rating": "good",
-      "note": "East coast dry"
+      "note": "East coast dry",
+      "temp": 30
     },
     "sep": {
       "rating": "good",
-      "note": "East coast dry"
+      "note": "East coast dry",
+      "temp": 30
     },
     "oct": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 30
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 30
     },
     "dec": {
       "rating": "best",
-      "note": "Dry south & west"
+      "note": "Dry south & west",
+      "temp": 30
     }
   },
   "when_to_go": "December to March is best for the south and west coasts and the hill country. May to September is the time for the east coast, while the south-west has its monsoon. October and November are wet across much of the island.",

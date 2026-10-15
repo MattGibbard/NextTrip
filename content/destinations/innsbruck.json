@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Ski season"
+      "note": "Ski season",
+      "temp": 3
     },
     "feb": {
       "rating": "best",
-      "note": "Ski season"
+      "note": "Ski season",
+      "temp": 6
     },
     "mar": {
       "rating": "good",
-      "note": "Spring skiing"
+      "note": "Spring skiing",
+      "temp": 12
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 16
     },
     "may": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 21
     },
     "jun": {
       "rating": "best",
-      "note": "Hiking"
+      "note": "Hiking",
+      "temp": 24
     },
     "jul": {
       "rating": "best",
-      "note": "Hiking"
+      "note": "Hiking",
+      "temp": 26
     },
     "aug": {
       "rating": "best",
-      "note": "Hiking"
+      "note": "Hiking",
+      "temp": 25
     },
     "sep": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 21
     },
     "oct": {
       "rating": "quiet",
-      "note": "Between seasons"
+      "note": "Between seasons",
+      "temp": 16
     },
     "nov": {
       "rating": "good",
-      "note": "Markets open"
+      "note": "Markets open",
+      "temp": 9
     },
     "dec": {
       "rating": "best",
-      "note": "Christmas, snow"
+      "note": "Christmas, snow",
+      "temp": 3
     }
   },
   "when_to_go": "Mid-November to 6 January is Christmas market season, and the ski season starts in December. January to March has the most reliable snow. June to September is good for hiking and mountain lakes.",

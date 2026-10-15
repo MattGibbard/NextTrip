@@ -41,51 +41,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 19
     },
     "feb": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 19
     },
     "mar": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 20
     },
     "apr": {
       "rating": "best",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 21
     },
     "may": {
       "rating": "good",
-      "note": "May Gray"
+      "note": "May Gray",
+      "temp": 21
     },
     "jun": {
       "rating": "good",
-      "note": "June Gloom"
+      "note": "June Gloom",
+      "temp": 23
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 25
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 26
     },
     "sep": {
       "rating": "best",
-      "note": "Warmest sea"
+      "note": "Warmest sea",
+      "temp": 26
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "nov": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 21
     },
     "dec": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 19
     }
   },
   "when_to_go": "San Diego is mild all year, so there's no bad time to go. Mornings in May and June are often cloudy by the coast. July to October brings the warmest sea and sunniest days, and September is quieter once US schools go back.",

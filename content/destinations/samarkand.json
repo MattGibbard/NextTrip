@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold, quiet"
+      "note": "Cold, quiet",
+      "temp": 7
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold, quiet"
+      "note": "Cold, quiet",
+      "temp": 9
     },
     "mar": {
       "rating": "good",
-      "note": "Mild, blossom"
+      "note": "Mild, blossom",
+      "temp": 15
     },
     "apr": {
       "rating": "best",
-      "note": "Warm, green"
+      "note": "Warm, green",
+      "temp": 22
     },
     "may": {
       "rating": "best",
-      "note": "Warm, sunny"
+      "note": "Warm, sunny",
+      "temp": 27
     },
     "jun": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 32
     },
     "jul": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 34
     },
     "aug": {
       "rating": "quiet",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 33
     },
     "sep": {
       "rating": "best",
-      "note": "Warm, harvest"
+      "note": "Warm, harvest",
+      "temp": 29
     },
     "oct": {
       "rating": "best",
-      "note": "Warm, clear"
+      "note": "Warm, clear",
+      "temp": 22
     },
     "nov": {
       "rating": "good",
-      "note": "Cool, quiet"
+      "note": "Cool, quiet",
+      "temp": 15
     },
     "dec": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 9
     }
   },
   "when_to_go": "April, May, September and October are the sweet spot, with warm days, clear skies and the bazaars full of fruit. July and August regularly pass 35°C, so sightseeing means early mornings and long lunches indoors. Winters are cold and grey but very quiet, with lower hotel prices.",

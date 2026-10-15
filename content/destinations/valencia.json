@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     },
     "feb": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     },
     "mar": {
       "rating": "good",
-      "note": "Fallas, busy"
+      "note": "Fallas, busy",
+      "temp": 19
     },
     "apr": {
       "rating": "best",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 21
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "jun": {
       "rating": "best",
-      "note": "Beach weather"
+      "note": "Beach weather",
+      "temp": 28
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 30
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 31
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 28
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 25
     },
     "nov": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 20
     },
     "dec": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     }
   },
   "when_to_go": "May, June and September are perfect, with warm sea and fewer crowds than midsummer. July and August are hot but the beach is right there. In mid-March the Fallas festival fills the streets with giant figures, fireworks and very loud firecrackers.",

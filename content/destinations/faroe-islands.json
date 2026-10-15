@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Dark, stormy"
+      "note": "Dark, stormy",
+      "temp": 6
     },
     "feb": {
       "rating": "quiet",
-      "note": "Dark, stormy"
+      "note": "Dark, stormy",
+      "temp": 5
     },
     "mar": {
       "rating": "quiet",
-      "note": "Windy"
+      "note": "Windy",
+      "temp": 6
     },
     "apr": {
       "rating": "quiet",
-      "note": "Changeable"
+      "note": "Changeable",
+      "temp": 7
     },
     "may": {
       "rating": "good",
-      "note": "Puffins arrive"
+      "note": "Puffins arrive",
+      "temp": 9
     },
     "jun": {
       "rating": "best",
-      "note": "Long days"
+      "note": "Long days",
+      "temp": 11
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 13
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 13
     },
     "sep": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 12
     },
     "oct": {
       "rating": "quiet",
-      "note": "Stormy"
+      "note": "Stormy",
+      "temp": 9
     },
     "nov": {
       "rating": "quiet",
-      "note": "Dark"
+      "note": "Dark",
+      "temp": 7
     },
     "dec": {
       "rating": "quiet",
-      "note": "Dark"
+      "note": "Dark",
+      "temp": 6
     }
   },
   "when_to_go": "June to August is the time to go, with long days, puffins and the calmest weather. May and September are quieter but more changeable. Winter is dark and stormy, and many boat trips don't run.",

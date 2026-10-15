@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Hot, cyclone risk"
+      "note": "Hot, cyclone risk",
+      "temp": 30
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cyclone risk"
+      "note": "Cyclone risk",
+      "temp": 30
     },
     "mar": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 30
     },
     "apr": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 29
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 27
     },
     "jun": {
       "rating": "good",
-      "note": "Cooler"
+      "note": "Cooler",
+      "temp": 26
     },
     "jul": {
       "rating": "good",
-      "note": "Cooler, windy"
+      "note": "Cooler, windy",
+      "temp": 25
     },
     "aug": {
       "rating": "good",
-      "note": "Cooler, windy"
+      "note": "Cooler, windy",
+      "temp": 25
     },
     "sep": {
       "rating": "best",
-      "note": "Warm, dry"
+      "note": "Warm, dry",
+      "temp": 26
     },
     "oct": {
       "rating": "best",
-      "note": "Warm, dry"
+      "note": "Warm, dry",
+      "temp": 27
     },
     "nov": {
       "rating": "best",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 28
     },
     "dec": {
       "rating": "best",
-      "note": "Hot, festive"
+      "note": "Hot, festive",
+      "temp": 29
     }
   },
   "when_to_go": "April to May and September to December are ideal, warm and fairly dry. June to August is the cooler winter, still in the mid-20s but breezier. January to March is hot and humid, with a chance of cyclones.",

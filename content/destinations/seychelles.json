@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Hot, showers"
+      "note": "Hot, showers",
+      "temp": 29
     },
     "feb": {
       "rating": "good",
-      "note": "Hot, showers"
+      "note": "Hot, showers",
+      "temp": 30
     },
     "mar": {
       "rating": "best",
-      "note": "Calm, warm"
+      "note": "Calm, warm",
+      "temp": 31
     },
     "apr": {
       "rating": "best",
-      "note": "Calm, warm"
+      "note": "Calm, warm",
+      "temp": 31
     },
     "may": {
       "rating": "best",
-      "note": "Calm, warm"
+      "note": "Calm, warm",
+      "temp": 30
     },
     "jun": {
       "rating": "good",
-      "note": "Breezy"
+      "note": "Breezy",
+      "temp": 29
     },
     "jul": {
       "rating": "good",
-      "note": "Breezy"
+      "note": "Breezy",
+      "temp": 28
     },
     "aug": {
       "rating": "good",
-      "note": "Breezy"
+      "note": "Breezy",
+      "temp": 28
     },
     "sep": {
       "rating": "good",
-      "note": "Breezy"
+      "note": "Breezy",
+      "temp": 29
     },
     "oct": {
       "rating": "best",
-      "note": "Calm, warm"
+      "note": "Calm, warm",
+      "temp": 29
     },
     "nov": {
       "rating": "best",
-      "note": "Calm, warm"
+      "note": "Calm, warm",
+      "temp": 30
     },
     "dec": {
       "rating": "good",
-      "note": "Christmas, showers"
+      "note": "Christmas, showers",
+      "temp": 30
     }
   },
   "when_to_go": "It's warm all year. April, May, October and November have the calmest seas for snorkelling. December and January are hot and humid with tropical showers, but still sunny much of the time. June to September is breezier and drier.",

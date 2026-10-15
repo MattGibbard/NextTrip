@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Mild, sunny"
+      "note": "Mild, sunny",
+      "temp": 19
     },
     "feb": {
       "rating": "good",
-      "note": "Mild, sunny"
+      "note": "Mild, sunny",
+      "temp": 19
     },
     "mar": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 20
     },
     "apr": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 20
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 21
     },
     "jun": {
       "rating": "good",
-      "note": "Breezy, festival"
+      "note": "Breezy, festival",
+      "temp": 22
     },
     "jul": {
       "rating": "good",
-      "note": "Very windy"
+      "note": "Very windy",
+      "temp": 23
     },
     "aug": {
       "rating": "good",
-      "note": "Very windy"
+      "note": "Very windy",
+      "temp": 23
     },
     "sep": {
       "rating": "best",
-      "note": "Warm, calmer"
+      "note": "Warm, calmer",
+      "temp": 23
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "nov": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 21
     },
     "dec": {
       "rating": "good",
-      "note": "Mild, sunny"
+      "note": "Mild, sunny",
+      "temp": 20
     }
   },
   "when_to_go": "Essaouira stays mild all year, with highs of around 20°C in winter and mid-20s in summer, so it never gets as hot as Marrakech. Spring and autumn are the most pleasant. In summer the trade winds blow hard, which is great for kitesurfing but less so for lying on the beach. The Gnaoua music festival usually takes over the town in June.",

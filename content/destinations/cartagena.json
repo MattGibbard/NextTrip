@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Dry, breezy"
+      "note": "Dry, breezy",
+      "temp": 31
     },
     "feb": {
       "rating": "best",
-      "note": "Dry, breezy"
+      "note": "Dry, breezy",
+      "temp": 31
     },
     "mar": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 31
     },
     "apr": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 32
     },
     "may": {
       "rating": "good",
-      "note": "Showers start"
+      "note": "Showers start",
+      "temp": 32
     },
     "jun": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 32
     },
     "jul": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 32
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 32
     },
     "sep": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 32
     },
     "oct": {
       "rating": "quiet",
-      "note": "Wettest"
+      "note": "Wettest",
+      "temp": 31
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 31
     },
     "dec": {
       "rating": "best",
-      "note": "Dry, festive"
+      "note": "Dry, festive",
+      "temp": 31
     }
   },
   "when_to_go": "December to March is driest, with a sea breeze that takes the edge off the heat. It is hot all year, so plan sightseeing for mornings and evenings. September to November brings the heaviest rain, usually in short downpours. Christmas, New Year and Easter are busy with Colombian holidaymakers.",

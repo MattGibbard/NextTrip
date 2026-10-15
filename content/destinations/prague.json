@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 1
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 3
     },
     "mar": {
       "rating": "quiet",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 8
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 14
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 19
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 24
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 24
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 19
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 13
     },
     "nov": {
       "rating": "quiet",
-      "note": "Grey"
+      "note": "Grey",
+      "temp": 6
     },
     "dec": {
       "rating": "good",
-      "note": "Christmas markets"
+      "note": "Christmas markets",
+      "temp": 2
     }
   },
   "when_to_go": "May, June and September are warm without the summer crowds. July and August are busy on the bridge and in the old town. December brings Christmas markets with roasting chestnuts and a big tree in the Old Town Square.",

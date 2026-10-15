@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cool, closed"
+      "note": "Cool, closed",
+      "temp": 14
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cool, closed"
+      "note": "Cool, closed",
+      "temp": 15
     },
     "mar": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 16
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 18
     },
     "may": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "jun": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 26
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 29
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busiest"
+      "note": "Hot, busiest",
+      "temp": 30
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 27
     },
     "oct": {
       "rating": "good",
-      "note": "Season ends"
+      "note": "Season ends",
+      "temp": 23
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 18
     },
     "dec": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 15
     }
   },
   "when_to_go": "June and September have warm seas and fewer people in the coves. July and August are hot and busy, and beach car parks fill early. Many hotels close from November to April.",

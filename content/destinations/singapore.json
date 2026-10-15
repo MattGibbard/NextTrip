@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 30
     },
     "feb": {
       "rating": "best",
-      "note": "Drier"
+      "note": "Drier",
+      "temp": 31
     },
     "mar": {
       "rating": "best",
-      "note": "Drier"
+      "note": "Drier",
+      "temp": 32
     },
     "apr": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 32
     },
     "may": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 32
     },
     "jun": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 31
     },
     "jul": {
       "rating": "best",
-      "note": "Drier"
+      "note": "Drier",
+      "temp": 31
     },
     "aug": {
       "rating": "best",
-      "note": "National Day"
+      "note": "National Day",
+      "temp": 31
     },
     "sep": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 31
     },
     "oct": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 31
     },
     "nov": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 31
     },
     "dec": {
       "rating": "good",
-      "note": "Festive, showers"
+      "note": "Festive, showers",
+      "temp": 30
     }
   },
   "when_to_go": "Singapore is hot and humid all year, with short tropical downpours. February to April and July to August tend to be a little drier. Chinese New Year in January or February brings lanterns and parades.",

@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Northern lights"
+      "note": "Northern lights",
+      "temp": -2
     },
     "feb": {
       "rating": "best",
-      "note": "Snow, lights"
+      "note": "Snow, lights",
+      "temp": -2
     },
     "mar": {
       "rating": "best",
-      "note": "Snow, longer days"
+      "note": "Snow, longer days",
+      "temp": 0
     },
     "apr": {
       "rating": "good",
-      "note": "Spring snow"
+      "note": "Spring snow",
+      "temp": 3
     },
     "may": {
       "rating": "quiet",
-      "note": "Thaw"
+      "note": "Thaw",
+      "temp": 8
     },
     "jun": {
       "rating": "good",
-      "note": "Midnight sun"
+      "note": "Midnight sun",
+      "temp": 12
     },
     "jul": {
       "rating": "good",
-      "note": "Midnight sun"
+      "note": "Midnight sun",
+      "temp": 16
     },
     "aug": {
       "rating": "good",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 14
     },
     "sep": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 10
     },
     "oct": {
       "rating": "good",
-      "note": "Northern lights"
+      "note": "Northern lights",
+      "temp": 4
     },
     "nov": {
       "rating": "quiet",
-      "note": "Polar night"
+      "note": "Polar night",
+      "temp": 1
     },
     "dec": {
       "rating": "good",
-      "note": "Polar night"
+      "note": "Polar night",
+      "temp": -1
     }
   },
   "when_to_go": "January to March has snow for husky sledding and dark skies for the northern lights, with daylight coming back by February. From late November to mid-January the sun doesn't rise at all. In summer the sun never sets, which is great for hiking and fjord trips.",

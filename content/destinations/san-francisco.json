@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 14
     },
     "feb": {
       "rating": "good",
-      "note": "Showers"
+      "note": "Showers",
+      "temp": 16
     },
     "mar": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     },
     "apr": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 18
     },
     "may": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 19
     },
     "jun": {
       "rating": "good",
-      "note": "Foggy mornings"
+      "note": "Foggy mornings",
+      "temp": 21
     },
     "jul": {
       "rating": "good",
-      "note": "Cool, foggy"
+      "note": "Cool, foggy",
+      "temp": 21
     },
     "aug": {
       "rating": "good",
-      "note": "Cool, foggy"
+      "note": "Cool, foggy",
+      "temp": 22
     },
     "sep": {
       "rating": "best",
-      "note": "Warmest"
+      "note": "Warmest",
+      "temp": 23
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "nov": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 18
     },
     "dec": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 14
     }
   },
   "when_to_go": "September and October are the warmest, sunniest months. Summer is surprisingly cool and foggy, so pack jumpers. Winter is mild but brings most of the year's rain.",

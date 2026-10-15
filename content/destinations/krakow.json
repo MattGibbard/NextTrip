@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 1
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 3
     },
     "mar": {
       "rating": "quiet",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 8
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 14
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 20
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 25
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 24
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 19
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 14
     },
     "nov": {
       "rating": "quiet",
-      "note": "Grey"
+      "note": "Grey",
+      "temp": 7
     },
     "dec": {
       "rating": "good",
-      "note": "Christmas market"
+      "note": "Christmas market",
+      "temp": 2
     }
   },
   "when_to_go": "May to September is warm and lively, with outdoor cafés on the main square. December brings one of Europe's best-value Christmas markets. January and February are very cold.",

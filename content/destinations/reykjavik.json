@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Northern lights"
+      "note": "Northern lights",
+      "temp": 3
     },
     "feb": {
       "rating": "good",
-      "note": "Northern lights"
+      "note": "Northern lights",
+      "temp": 3
     },
     "mar": {
       "rating": "good",
-      "note": "Northern lights"
+      "note": "Northern lights",
+      "temp": 4
     },
     "apr": {
       "rating": "quiet",
-      "note": "Changeable"
+      "note": "Changeable",
+      "temp": 6
     },
     "may": {
       "rating": "good",
-      "note": "Light nights"
+      "note": "Light nights",
+      "temp": 9
     },
     "jun": {
       "rating": "best",
-      "note": "Midnight sun"
+      "note": "Midnight sun",
+      "temp": 12
     },
     "jul": {
       "rating": "best",
-      "note": "Midnight sun"
+      "note": "Midnight sun",
+      "temp": 14
     },
     "aug": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 13
     },
     "sep": {
       "rating": "good",
-      "note": "Northern lights"
+      "note": "Northern lights",
+      "temp": 11
     },
     "oct": {
       "rating": "good",
-      "note": "Northern lights"
+      "note": "Northern lights",
+      "temp": 7
     },
     "nov": {
       "rating": "quiet",
-      "note": "Dark, stormy"
+      "note": "Dark, stormy",
+      "temp": 4
     },
     "dec": {
       "rating": "good",
-      "note": "Festive"
+      "note": "Festive",
+      "temp": 3
     }
   },
   "when_to_go": "June to August has almost endless daylight, puffins and the best weather for touring. September to March is the season for northern lights, with short days and snow. Weather changes fast at any time of year, so pack layers.",

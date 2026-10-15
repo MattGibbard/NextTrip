@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Snow nearby"
+      "note": "Snow nearby",
+      "temp": 3
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 5
     },
     "mar": {
       "rating": "quiet",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 10
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 15
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 20
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "jul": {
       "rating": "good",
-      "note": "Festival, busy"
+      "note": "Festival, busy",
+      "temp": 25
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 24
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 20
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 15
     },
     "nov": {
       "rating": "good",
-      "note": "Markets open"
+      "note": "Markets open",
+      "temp": 8
     },
     "dec": {
       "rating": "best",
-      "note": "Christmas markets"
+      "note": "Christmas markets",
+      "temp": 4
     }
   },
   "when_to_go": "Late November to New Year's Day brings Christmas markets to the cathedral square and beyond, with snow often in the mountains nearby. May, June and September are warm and good for lakes and hiking. July and August are busy with the summer festival.",

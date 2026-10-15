@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 5
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 8
     },
     "mar": {
       "rating": "quiet",
-      "note": "Chilly"
+      "note": "Chilly",
+      "temp": 12
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 16
     },
     "may": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 21
     },
     "jun": {
       "rating": "best",
-      "note": "Warm lake"
+      "note": "Warm lake",
+      "temp": 26
     },
     "jul": {
       "rating": "best",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 29
     },
     "aug": {
       "rating": "best",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 29
     },
     "sep": {
       "rating": "best",
-      "note": "Warm lake"
+      "note": "Warm lake",
+      "temp": 24
     },
     "oct": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 18
     },
     "nov": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 11
     },
     "dec": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 6
     }
   },
   "when_to_go": "June to September is warm enough to swim in the lake. July and August are hottest and busiest, with the Ohrid Summer Festival. Spring and autumn are good for walking and sightseeing, but many lakeside cafés are quiet in winter.",

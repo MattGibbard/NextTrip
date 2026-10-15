@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Warm, dry"
+      "note": "Warm, dry",
+      "temp": 24
     },
     "feb": {
       "rating": "best",
-      "note": "Warm, dry"
+      "note": "Warm, dry",
+      "temp": 25
     },
     "mar": {
       "rating": "best",
-      "note": "Warm, dry"
+      "note": "Warm, dry",
+      "temp": 26
     },
     "apr": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 28
     },
     "may": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 30
     },
     "jun": {
       "rating": "good",
-      "note": "Hot, storms"
+      "note": "Hot, storms",
+      "temp": 31
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, storms"
+      "note": "Hot, storms",
+      "temp": 32
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, storms"
+      "note": "Hot, storms",
+      "temp": 32
     },
     "sep": {
       "rating": "quiet",
-      "note": "Hurricane risk"
+      "note": "Hurricane risk",
+      "temp": 31
     },
     "oct": {
       "rating": "good",
-      "note": "Hurricane risk"
+      "note": "Hurricane risk",
+      "temp": 29
     },
     "nov": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 27
     },
     "dec": {
       "rating": "best",
-      "note": "Warm, busy"
+      "note": "Warm, busy",
+      "temp": 25
     }
   },
   "when_to_go": "November to April is warm, dry and sunny, which makes it a winter sun favourite. Summer is hot and humid with afternoon storms. Hurricane season runs from June to November, peaking in September.",

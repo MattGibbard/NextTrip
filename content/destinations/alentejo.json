@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Mild, wet"
+      "note": "Mild, wet",
+      "temp": 14
     },
     "feb": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 16
     },
     "mar": {
       "rating": "good",
-      "note": "Wildflowers"
+      "note": "Wildflowers",
+      "temp": 19
     },
     "apr": {
       "rating": "best",
-      "note": "Wildflowers"
+      "note": "Wildflowers",
+      "temp": 21
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 25
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 30
     },
     "jul": {
       "rating": "good",
-      "note": "Very hot inland"
+      "note": "Very hot inland",
+      "temp": 33
     },
     "aug": {
       "rating": "good",
-      "note": "Very hot inland"
+      "note": "Very hot inland",
+      "temp": 33
     },
     "sep": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 29
     },
     "oct": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 24
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 18
     },
     "dec": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 15
     }
   },
   "when_to_go": "April to June and September are warm, green and good for both beaches and hill towns. July and August are very hot inland, so stay on the coast where the Atlantic breeze keeps it cooler. Winter is mild but wetter.",

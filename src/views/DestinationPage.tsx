@@ -280,7 +280,14 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
                 const page = monthHub(i);
                 return (
                 <li key={m.code} className={m.rating}>
-                  <span className="dg-month">{page ? <a href={destinationPath(page.slug)} title={page.title}>{m.code}</a> : m.code}</span>
+                  <span className="dg-month-head">
+                    <span className="dg-month">{page ? <a href={destinationPath(page.slug)} title={page.title}>{m.code}</a> : m.code}</span>
+                    {m.temp !== null && (
+                      <span className="dg-month-temp">
+                        {m.temp}°<span className="visually-hidden">C average daytime high</span>
+                      </span>
+                    )}
+                  </span>
                   <span className="dg-month-note">
                     {m.note}
                     <span className="visually-hidden">, {m.rating === "best" ? "best time to go" : m.rating === "good" ? "a good time to go" : "quieter"}</span>
@@ -289,6 +296,7 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
                 );
               })}
             </ol>
+            {d.months.some((m) => m.temp !== null) && <p className="muted small dg-temp-key">Temperatures are the average daytime high in °C.</p>}
             {d.when_to_go && <p className="dg-prose">{d.when_to_go}</p>}
           </section>
         )}

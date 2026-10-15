@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 6
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 7
     },
     "mar": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 10
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 14
     },
     "may": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 18
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 21
     },
     "jul": {
       "rating": "good",
-      "note": "Gentse Feesten"
+      "note": "Gentse Feesten",
+      "temp": 23
     },
     "aug": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 23
     },
     "sep": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 19
     },
     "oct": {
       "rating": "good",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 15
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 10
     },
     "dec": {
       "rating": "good",
-      "note": "Christmas market"
+      "note": "Christmas market",
+      "temp": 7
     }
   },
   "when_to_go": "May, June and September are mild and good for walking and boat trips. The Gentse Feesten festival fills the city for ten days in July, which is fun but busy. December has a Christmas market, and it can rain at any time of year.",

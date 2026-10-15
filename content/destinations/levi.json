@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Snow, lights"
+      "note": "Snow, lights",
+      "temp": -10
     },
     "feb": {
       "rating": "best",
-      "note": "Snow, lights"
+      "note": "Snow, lights",
+      "temp": -9
     },
     "mar": {
       "rating": "best",
-      "note": "Snow, sunnier"
+      "note": "Snow, sunnier",
+      "temp": -4
     },
     "apr": {
       "rating": "good",
-      "note": "Spring snow"
+      "note": "Spring snow",
+      "temp": 2
     },
     "may": {
       "rating": "quiet",
-      "note": "Thaw"
+      "note": "Thaw",
+      "temp": 9
     },
     "jun": {
       "rating": "good",
-      "note": "Midnight sun"
+      "note": "Midnight sun",
+      "temp": 16
     },
     "jul": {
       "rating": "good",
-      "note": "Midnight sun"
+      "note": "Midnight sun",
+      "temp": 19
     },
     "aug": {
       "rating": "good",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 16
     },
     "sep": {
       "rating": "good",
-      "note": "Autumn colours"
+      "note": "Autumn colours",
+      "temp": 9
     },
     "oct": {
       "rating": "quiet",
-      "note": "Before the snow"
+      "note": "Before the snow",
+      "temp": 1
     },
     "nov": {
       "rating": "good",
-      "note": "Christmas starts"
+      "note": "Christmas starts",
+      "temp": -5
     },
     "dec": {
       "rating": "best",
-      "note": "Christmas, busy"
+      "note": "Christmas, busy",
+      "temp": -8
     }
   },
   "when_to_go": "December is the magical, busiest and dearest time for a Santa trip, with snow almost certain. January to March is quieter and colder, with longer days for skiing and good odds of the northern lights. Summer has the midnight sun and hiking.",

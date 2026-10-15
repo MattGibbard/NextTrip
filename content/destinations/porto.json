@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 14
     },
     "feb": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 15
     },
     "mar": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     },
     "apr": {
       "rating": "best",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 19
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 21
     },
     "jun": {
       "rating": "best",
-      "note": "São João festival"
+      "note": "São João festival",
+      "temp": 24
     },
     "jul": {
       "rating": "good",
-      "note": "Warm, busy"
+      "note": "Warm, busy",
+      "temp": 26
     },
     "aug": {
       "rating": "good",
-      "note": "Warm, busy"
+      "note": "Warm, busy",
+      "temp": 26
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "oct": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 21
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 17
     },
     "dec": {
       "rating": "quiet",
-      "note": "Festive"
+      "note": "Festive",
+      "temp": 14
     }
   },
   "when_to_go": "April to June and September are warm and sunny without the summer crowds. July and August are busy but pleasant, and the Atlantic stays chilly for swimming. Winter is mild but wet. On the night of 23 June the São João festival fills the city with fireworks and squeaky hammers. For a weekend city break, spring and autumn are best, with mild, sunny days and lower hotel prices than in summer.",

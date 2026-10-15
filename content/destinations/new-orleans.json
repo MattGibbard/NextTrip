@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 17
     },
     "feb": {
       "rating": "good",
-      "note": "Mardi Gras, busy"
+      "note": "Mardi Gras, busy",
+      "temp": 19
     },
     "mar": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "apr": {
       "rating": "best",
-      "note": "Festivals"
+      "note": "Festivals",
+      "temp": 26
     },
     "may": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 29
     },
     "jun": {
       "rating": "good",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 32
     },
     "jul": {
       "rating": "quiet",
-      "note": "Very humid"
+      "note": "Very humid",
+      "temp": 33
     },
     "aug": {
       "rating": "quiet",
-      "note": "Hurricane risk"
+      "note": "Hurricane risk",
+      "temp": 33
     },
     "sep": {
       "rating": "quiet",
-      "note": "Hurricane risk"
+      "note": "Hurricane risk",
+      "temp": 31
     },
     "oct": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 27
     },
     "nov": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 22
     },
     "dec": {
       "rating": "good",
-      "note": "Festive"
+      "note": "Festive",
+      "temp": 18
     }
   },
   "when_to_go": "March, April, October and November are warm and dry, with lots of festivals. Mardi Gras in February or March is spectacular, with family-friendly parades away from the French Quarter. Summer is hot and sticky, and hurricane season peaks from August to October.",

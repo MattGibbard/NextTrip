@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold, baths"
+      "note": "Cold, baths",
+      "temp": 2
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold, baths"
+      "note": "Cold, baths",
+      "temp": 5
     },
     "mar": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 11
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 17
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "jun": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 26
     },
     "jul": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 28
     },
     "aug": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 28
     },
     "sep": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 22
     },
     "oct": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 16
     },
     "nov": {
       "rating": "good",
-      "note": "Markets open"
+      "note": "Markets open",
+      "temp": 8
     },
     "dec": {
       "rating": "best",
-      "note": "Christmas markets"
+      "note": "Christmas markets",
+      "temp": 3
     }
   },
   "when_to_go": "Mid-November to the end of December brings markets to Vörösmarty Square and St Stephen's Basilica, with a light show on the basilica's front. May, June and September are warm and good for the river. Winter is cold, but the outdoor baths are lovely in the snow.",

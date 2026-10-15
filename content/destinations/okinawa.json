@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Mild, windy"
+      "note": "Mild, windy",
+      "temp": 19
     },
     "feb": {
       "rating": "quiet",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 20
     },
     "mar": {
       "rating": "good",
-      "note": "Warming up"
+      "note": "Warming up",
+      "temp": 22
     },
     "apr": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 24
     },
     "may": {
       "rating": "good",
-      "note": "Rainy season"
+      "note": "Rainy season",
+      "temp": 27
     },
     "jun": {
       "rating": "good",
-      "note": "Rainy, then hot"
+      "note": "Rainy, then hot",
+      "temp": 30
     },
     "jul": {
       "rating": "best",
-      "note": "Hot, sunny"
+      "note": "Hot, sunny",
+      "temp": 32
     },
     "aug": {
       "rating": "good",
-      "note": "Typhoon risk"
+      "note": "Typhoon risk",
+      "temp": 31
     },
     "sep": {
       "rating": "good",
-      "note": "Typhoon risk"
+      "note": "Typhoon risk",
+      "temp": 30
     },
     "oct": {
       "rating": "best",
-      "note": "Warm sea"
+      "note": "Warm sea",
+      "temp": 28
     },
     "nov": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 24
     },
     "dec": {
       "rating": "quiet",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 21
     }
   },
   "when_to_go": "April and October are warm and settled, and July is hot and sunny once the rainy season ends. The rainy season runs from about mid-May to late June. Typhoons are most likely from July to September, so travel insurance matters. Winters are mild but too cool for most swimmers.",

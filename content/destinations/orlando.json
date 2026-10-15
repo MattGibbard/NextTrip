@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 22
     },
     "feb": {
       "rating": "good",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 24
     },
     "mar": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 26
     },
     "apr": {
       "rating": "best",
-      "note": "Warm, Easter busy"
+      "note": "Warm, Easter busy",
+      "temp": 28
     },
     "may": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 31
     },
     "jun": {
       "rating": "good",
-      "note": "Hot, storms"
+      "note": "Hot, storms",
+      "temp": 33
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 33
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, busy"
+      "note": "Hot, busy",
+      "temp": 33
     },
     "sep": {
       "rating": "quiet",
-      "note": "Hurricane season"
+      "note": "Hurricane season",
+      "temp": 32
     },
     "oct": {
       "rating": "good",
-      "note": "Halloween"
+      "note": "Halloween",
+      "temp": 29
     },
     "nov": {
       "rating": "best",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 26
     },
     "dec": {
       "rating": "good",
-      "note": "Festive, busy"
+      "note": "Festive, busy",
+      "temp": 23
     }
   },
   "when_to_go": "March to May and November are warm, with lower prices outside school holidays. Summer is hot and humid, with afternoon thunderstorms and big queues. Hurricane season runs from June to November, peaking in September.",

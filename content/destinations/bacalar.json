@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 28
     },
     "feb": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 29
     },
     "mar": {
       "rating": "best",
-      "note": "Sunny"
+      "note": "Sunny",
+      "temp": 31
     },
     "apr": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 32
     },
     "may": {
       "rating": "good",
-      "note": "Very hot"
+      "note": "Very hot",
+      "temp": 33
     },
     "jun": {
       "rating": "quiet",
-      "note": "Rains start"
+      "note": "Rains start",
+      "temp": 32
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, showers"
+      "note": "Hot, showers",
+      "temp": 32
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, showers"
+      "note": "Hot, showers",
+      "temp": 33
     },
     "sep": {
       "rating": "quiet",
-      "note": "Hurricane risk"
+      "note": "Hurricane risk",
+      "temp": 32
     },
     "oct": {
       "rating": "quiet",
-      "note": "Hurricane risk"
+      "note": "Hurricane risk",
+      "temp": 31
     },
     "nov": {
       "rating": "good",
-      "note": "Drier"
+      "note": "Drier",
+      "temp": 29
     },
     "dec": {
       "rating": "best",
-      "note": "Dry, warm"
+      "note": "Dry, warm",
+      "temp": 28
     }
   },
   "when_to_go": "December to March is dry and sunny, the best time for paddling and swimming. April and May get very hot. June to November is the rainy season, with the biggest hurricane risk in September and October. Summer showers are often short, but the lagoon looks its best on clear days. Sargassum seaweed, which can spoil the Caribbean beaches in summer, doesn't reach the lagoon.",

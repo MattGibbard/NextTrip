@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "best",
-      "note": "Dry, sunny"
+      "note": "Dry, sunny",
+      "temp": 32
     },
     "feb": {
       "rating": "best",
-      "note": "Dry, sunny"
+      "note": "Dry, sunny",
+      "temp": 33
     },
     "mar": {
       "rating": "best",
-      "note": "Hot, calm"
+      "note": "Hot, calm",
+      "temp": 34
     },
     "apr": {
       "rating": "good",
-      "note": "Hot"
+      "note": "Hot",
+      "temp": 34
     },
     "may": {
       "rating": "quiet",
-      "note": "Rains start"
+      "note": "Rains start",
+      "temp": 33
     },
     "jun": {
       "rating": "quiet",
-      "note": "Monsoon"
+      "note": "Monsoon",
+      "temp": 32
     },
     "jul": {
       "rating": "quiet",
-      "note": "Monsoon"
+      "note": "Monsoon",
+      "temp": 32
     },
     "aug": {
       "rating": "quiet",
-      "note": "Monsoon"
+      "note": "Monsoon",
+      "temp": 32
     },
     "sep": {
       "rating": "quiet",
-      "note": "Wettest"
+      "note": "Wettest",
+      "temp": 31
     },
     "oct": {
       "rating": "quiet",
-      "note": "Monsoon"
+      "note": "Monsoon",
+      "temp": 31
     },
     "nov": {
       "rating": "good",
-      "note": "Drying out"
+      "note": "Drying out",
+      "temp": 31
     },
     "dec": {
       "rating": "best",
-      "note": "Dry, sunny"
+      "note": "Dry, sunny",
+      "temp": 31
     }
   },
   "when_to_go": "December to March is dry, sunny and calm, the best time for swimming and boat trips. April is very hot. From May to October the monsoon brings rain and rough seas, many resorts close and island trips stop. November is the start of the season and quieter than Christmas.",

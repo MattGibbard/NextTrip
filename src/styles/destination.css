@@ -382,6 +382,20 @@
 .dg-month a:hover {
   text-decoration: underline;
 }
+.dg-month-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px;
+}
+.dg-month-temp {
+  font-family: var(--mono);
+  font-size: var(--text-4);
+  font-weight: 600;
+}
+.dg-temp-key {
+  margin-top: 10px;
+}
 .dg-month-note {
   font-size: var(--text-6);
   font-weight: 600;

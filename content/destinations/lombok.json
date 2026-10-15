@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Wet season"
+      "note": "Wet season",
+      "temp": 31
     },
     "feb": {
       "rating": "quiet",
-      "note": "Wet season"
+      "note": "Wet season",
+      "temp": 31
     },
     "mar": {
       "rating": "quiet",
-      "note": "Wet, easing"
+      "note": "Wet, easing",
+      "temp": 31
     },
     "apr": {
       "rating": "good",
-      "note": "Drying out"
+      "note": "Drying out",
+      "temp": 31
     },
     "may": {
       "rating": "good",
-      "note": "Dry, green"
+      "note": "Dry, green",
+      "temp": 31
     },
     "jun": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 31
     },
     "jul": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 30
     },
     "aug": {
       "rating": "best",
-      "note": "Dry, busy"
+      "note": "Dry, busy",
+      "temp": 31
     },
     "sep": {
       "rating": "best",
-      "note": "Dry"
+      "note": "Dry",
+      "temp": 31
     },
     "oct": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 32
     },
     "nov": {
       "rating": "quiet",
-      "note": "Rains start"
+      "note": "Rains start",
+      "temp": 32
     },
     "dec": {
       "rating": "quiet",
-      "note": "Wet season"
+      "note": "Wet season",
+      "temp": 31
     }
   },
   "when_to_go": "The dry season runs from May to October, with June to September the most reliable. It is hot and humid all year. The wet season, from November to March, brings heavy afternoon downpours and rougher seas for boat crossings. Mount Rinjani usually closes to trekkers in the wettest months.",

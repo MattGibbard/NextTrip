@@ -43,51 +43,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Dark, wet"
+      "note": "Dark, wet",
+      "temp": 4
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold"
+      "note": "Cold",
+      "temp": 4
     },
     "mar": {
       "rating": "quiet",
-      "note": "Wet"
+      "note": "Wet",
+      "temp": 6
     },
     "apr": {
       "rating": "good",
-      "note": "Spring"
+      "note": "Spring",
+      "temp": 10
     },
     "may": {
       "rating": "best",
-      "note": "Long days"
+      "note": "Long days",
+      "temp": 14
     },
     "jun": {
       "rating": "best",
-      "note": "Midsummer"
+      "note": "Midsummer",
+      "temp": 17
     },
     "jul": {
       "rating": "best",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 19
     },
     "aug": {
       "rating": "good",
-      "note": "Summer"
+      "note": "Summer",
+      "temp": 19
     },
     "sep": {
       "rating": "good",
-      "note": "Autumn"
+      "note": "Autumn",
+      "temp": 15
     },
     "oct": {
       "rating": "quiet",
-      "note": "Rainy"
+      "note": "Rainy",
+      "temp": 11
     },
     "nov": {
       "rating": "quiet",
-      "note": "Dark, wet"
+      "note": "Dark, wet",
+      "temp": 7
     },
     "dec": {
       "rating": "good",
-      "note": "Gingerbread town"
+      "note": "Gingerbread town",
+      "temp": 5
     }
   },
   "when_to_go": "May to July has the longest days and the best chance of dry weather. August and September are still good for fjord trips. Bergen is one of Europe's rainiest cities, so pack waterproofs whenever you go. In December the city builds a huge gingerbread town.",

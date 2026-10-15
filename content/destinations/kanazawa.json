@@ -44,51 +44,63 @@
   "months": {
     "jan": {
       "rating": "quiet",
-      "note": "Cold, snowy"
+      "note": "Cold, snowy",
+      "temp": 7
     },
     "feb": {
       "rating": "quiet",
-      "note": "Cold, snowy"
+      "note": "Cold, snowy",
+      "temp": 7
     },
     "mar": {
       "rating": "good",
-      "note": "Cool"
+      "note": "Cool",
+      "temp": 11
     },
     "apr": {
       "rating": "best",
-      "note": "Cherry blossom"
+      "note": "Cherry blossom",
+      "temp": 17
     },
     "may": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 22
     },
     "jun": {
       "rating": "good",
-      "note": "Rainy season"
+      "note": "Rainy season",
+      "temp": 25
     },
     "jul": {
       "rating": "good",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 29
     },
     "aug": {
       "rating": "good",
-      "note": "Hot, humid"
+      "note": "Hot, humid",
+      "temp": 31
     },
     "sep": {
       "rating": "good",
-      "note": "Warm"
+      "note": "Warm",
+      "temp": 27
     },
     "oct": {
       "rating": "best",
-      "note": "Mild"
+      "note": "Mild",
+      "temp": 21
     },
     "nov": {
       "rating": "best",
-      "note": "Autumn colour"
+      "note": "Autumn colour",
+      "temp": 15
     },
     "dec": {
       "rating": "quiet",
-      "note": "Cold, wet"
+      "note": "Cold, wet",
+      "temp": 10
     }
   },
   "when_to_go": "April and May bring cherry blossom and mild days, and October and November have crisp weather and autumn colour. June is the rainy season, and July and August are hot and sticky. Winter is grey, wet and often snowy, though the snow on the gardens is lovely.",

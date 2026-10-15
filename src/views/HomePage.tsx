@@ -1,7 +1,9 @@
 import { useRef, useState } from "react";
 import type { FormEvent } from "react";
 import { api } from "../api";
-import { HOME } from "../site";
+import { HOME, POPULAR } from "../site";
+import { destinationPath } from "../../shared/seo";
+import { photoProps } from "../photos";
 import { turnstileToken, warmTurnstile } from "../turnstile";
 import { FeaturedCreators, SiteFooter, SiteHeader } from "../components/SiteFrame";
 
@@ -173,6 +175,8 @@ export function HomePage() {
             </div>
           </div>
         </section>
+
+        <PopularGuides />
 
         <FeaturedCreators />
 
@@ -379,5 +383,48 @@ function CodeForm({ id, email }: { id: string; email: string }) {
       </div>
       {error && <p className="error-text">{error}</p>}
     </form>
+  );
+}
+
+const flag = (code: string) => (/^[A-Z]{2}$/.test(code) ? String.fromCodePoint(...[...code].map((c) => 0x1f1a5 + c.charCodeAt(0))) : "");
+
+/** A few guides picked in the editor (Site > Popular guides), linking into Inspire. Hidden when none are picked. */
+function PopularGuides() {
+  const { kicker, heading, link_text, guides } = POPULAR;
+  if (!guides.length) return null;
+  return (
+    <section id="guides" className="lp-wrap lp-section">
+      <div className="lp-heading">
+        {kicker && <span className="lp-kicker">{kicker}</span>}
+        {heading && <h2>{heading}</h2>}
+      </div>
+      <ul className="dx-grid lp-guides">
+        {guides.map((g) => (
+          <li key={g.slug} className="dx-card">
+            <div className="dx-card-photo">
+              {g.image ? (
+                <img {...photoProps(g.image, g.image_size, "(max-width: 759px) calc(100vw - 32px), 300px")} alt={g.image_alt} width={g.image_size?.[0]} height={g.image_size?.[1]} loading="lazy" />
+              ) : (
+                <span aria-hidden>{g.name.slice(0, 3).toUpperCase()}</span>
+              )}
+            </div>
+            <div className="dx-card-body">
+              <h3>
+                <a href={destinationPath(g.slug)}>
+                  {flag(g.country_code) && <span aria-hidden>{flag(g.country_code)} </span>}
+                  {g.name}
+                </a>
+              </h3>
+              {g.intro && <p className="muted small">{g.intro.match(/^.+?[.!?](?=\s|$)/)?.[0] ?? g.intro}</p>}
+            </div>
+          </li>
+        ))}
+      </ul>
+      {link_text && (
+        <a className="lp-guides-more" href="/destinations">
+          {link_text} →
+        </a>
+      )}
+    </section>
   );
 }

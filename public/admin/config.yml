@@ -805,6 +805,25 @@ collections:
               - { label: Photo, name: photo, widget: image, required: false, media_folder: /public/images/creators, public_folder: /images/creators, hint: "Square works best. Leave empty to show their first initial." }
               - { label: Quote, name: quote, widget: text, required: false, hint: "A sentence or two about somewhere🎉, in their words." }
 
+      - name: popular_guides
+        label: Popular guides (home page)
+        file: content/site/popular-guides.json
+        description: A row of guide cards on the home page, above the creators, linking to Inspire. Pick a few guides that are starting to show up in Google, so they get a link from the home page. The row stays hidden when no guides are picked.
+        fields:
+          - { label: Small heading, name: kicker, widget: string, required: false }
+          - { label: Heading, name: heading, widget: string, required: false }
+          - { label: Link to Inspire, name: link_text, widget: string, required: false, hint: "Under the cards. Leave empty for no link." }
+          - label: Guides
+            name: guides
+            widget: relation
+            collection: destinations
+            value_field: "{{slug}}"
+            search_fields: [name]
+            display_fields: [name]
+            multiple: true
+            required: false
+            hint: Shown in this order. Four or eight fill the rows neatly on a computer.
+
       - name: creators
         label: Creators page
         file: content/site/creators.json

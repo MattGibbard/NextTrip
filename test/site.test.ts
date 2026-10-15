@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { CREATORS, HOME, HOW, HOW_STEPS, ONBOARDING, bannerEnded, bannerKey, readBanner, readCreators, readFeatured, readHome, readHow, readOnboarding } from "../src/site";
+import { readFileSync } from "node:fs";
+import { CREATORS, HOME, HOW, HOW_STEPS, ONBOARDING, POPULAR, bannerEnded, bannerKey, readBanner, readCreators, readFeatured, readHome, readHow, readOnboarding } from "../src/site";
 
 describe("home page words", () => {
   it("come from the editor's file", () => {
@@ -117,5 +118,19 @@ describe("featured creators", () => {
     const [d] = readFeatured({ creators: [{ name: "Sam", handle: "sam", url: "https://instagram.com/p/abc", photo: "/images/creators/sam.webp" }] }).creators;
     expect(d.url).toBe("https://instagram.com/p/abc");
     expect(d.photo).toBe("/images/creators/sam.webp");
+  });
+});
+
+describe("popular guides", () => {
+  it("fills in each picked guide that's published, in the editor's order", () => {
+    const raw = JSON.parse(readFileSync("content/site/popular-guides.json", "utf8"));
+    expect(POPULAR.guides.map((g) => g.slug)).toEqual(raw.guides);
+    for (const g of POPULAR.guides) expect(g.name && g.intro).toBeTruthy();
+  });
+
+  it("drops guides that don't exist or aren't published", async () => {
+    const { popularGuides } = await import("../scripts/destination-cards.mjs");
+    const out = await popularGuides({ guides: ["matera", "no-such-guide", "../secrets", 3] });
+    expect(out.guides.map((g: { slug: string }) => g.slug)).toEqual(["matera"]);
   });
 });

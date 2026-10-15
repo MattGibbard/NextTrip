@@ -1,7 +1,8 @@
 // Site-wide words edited at /admin: the home page (content/site/home.json), the announcement
 // banner (content/site/banner.json), the welcome steps (content/site/onboarding.json), the creators
 // page (content/site/creators.json), the creators featured on the home page (content/site/featured-creators.json)
-// and the How it works page (content/site/how-it-works.json).
+// the How it works page (content/site/how-it-works.json) and the popular guides on the home page
+// (content/site/popular-guides.json).
 // Bundled at build time like the destination guides.
 import homeFile from "../content/site/home.json";
 import bannerFile from "../content/site/banner.json";
@@ -316,3 +317,39 @@ export function readFeatured(raw: unknown): FeaturedCreators {
 }
 
 export const FEATURED = readFeatured(featuredFile);
+
+export interface PopularGuide {
+  slug: string;
+  name: string;
+  country_code: string;
+  intro: string;
+  image: string;
+  image_alt: string;
+  image_size: [number, number] | null;
+}
+
+export interface PopularGuides {
+  kicker: string;
+  heading: string;
+  link_text: string;
+  guides: PopularGuide[];
+}
+
+/** Reads the popular guides, which scripts/destination-cards.mjs has already filled in from each guide. */
+export function readPopular(raw: unknown): PopularGuides {
+  const r = obj(raw);
+  const size = (v: unknown): [number, number] | null =>
+    Array.isArray(v) && v.length === 2 && v.every((n) => typeof n === "number") ? [v[0], v[1]] : null;
+  return {
+    kicker: str(r.kicker),
+    heading: str(r.heading),
+    link_text: str(r.link_text),
+    guides: list(r.guides)
+      .map((g) => ({ slug: str(g.slug), name: str(g.name), country_code: str(g.country_code), intro: str(g.intro), image: str(g.image), image_alt: str(g.image_alt), image_size: size(g.image_size) }))
+      .filter((g) => g.slug && g.name),
+  };
+}
+
+// Only the few cards the home page shows, not the list of every guide (see scripts/destination-cards.mjs).
+const popularFile = Object.values(import.meta.glob<unknown>("/content/site/popular-guides.json", { eager: true, query: "?card", import: "default" }))[0];
+export const POPULAR = readPopular(popularFile);

@@ -799,6 +799,35 @@
   line-height: 1.2;
 }
 
+/* Popular guides: Inspire's cards, with the whole card linking to its guide */
+.lp-guides {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lp-guides .dx-card {
+  position: relative;
+}
+.lp-guides h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card-lg);
+}
+.lp-guides h3 a:focus-visible {
+  outline: none;
+}
+.lp-guides h3 a:focus-visible::after {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.lp-guides-more {
+  display: inline-block;
+  margin-top: 24px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
 /* Final call to action */
 #signin {
   padding-top: 80px;

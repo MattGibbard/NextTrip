@@ -799,6 +799,52 @@
   line-height: 1.2;
 }
 
+/* Popular guides: Inspire's cards, with the whole card linking to its guide */
+.dx-grid.lp-guides {
+  grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lp-guides .dx-card {
+  position: relative;
+}
+.lp-guides h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card-lg);
+}
+.lp-guides h3 a:focus-visible {
+  outline: none;
+}
+.lp-guides h3 a:focus-visible::after {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+/* On a phone, two small cards a row, so eight guides don't fill several screens */
+@media (max-width: 759px) {
+  .dx-grid.lp-guides {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .lp-guides .dx-card-body {
+    padding: 10px 12px 12px;
+  }
+  .lp-guides .dx-card h3 {
+    font-size: var(--text-8);
+  }
+  .lp-guides .dx-card-body p {
+    display: none;
+  }
+}
+.lp-guides-more {
+  display: inline-block;
+  margin-top: 24px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
 /* Final call to action */
 #signin {
   padding-top: 80px;

@@ -82,6 +82,32 @@ export function guideCard(raw) {
   return card;
 }
 
+/**
+ * The home page's popular guides (content/site/popular-guides.json), with what each card shows filled
+ * in from its guide, so the home page doesn't carry the list of every guide. Guides that are missing
+ * or unpublished drop out.
+ */
+export async function popularGuides(raw) {
+  const sizes = (await readJson(IMAGE_SIZES)) ?? {};
+  const guides = [];
+  for (const slug of Array.isArray(raw.guides) ? raw.guides : []) {
+    if (typeof slug !== "string" || !/^[a-z0-9-]+$/.test(slug)) continue;
+    const g = await readJson(new URL(`${slug}.json`, GUIDES));
+    if (!g || g.published !== true) continue;
+    const image = typeof g.image === "string" ? g.image : "";
+    guides.push({
+      slug,
+      name: g.name,
+      country_code: typeof g.country === "string" ? g.country : "",
+      intro: typeof g.intro === "string" ? g.intro : "",
+      image,
+      image_alt: typeof g.image_alt === "string" ? g.image_alt : "",
+      ...(image && sizes[image] ? { image_size: sizes[image] } : {}),
+    });
+  }
+  return { kicker: raw.kicker ?? "", heading: raw.heading ?? "", link_text: raw.link_text ?? "", guides };
+}
+
 export function destinationCards() {
   return {
     name: "destination-cards",
@@ -91,7 +117,9 @@ export function destinationCards() {
       if (query !== "card" || !file.endsWith(".json")) return null;
       this.addWatchFile(file);
       const raw = JSON.parse(await readFile(file, "utf8"));
-      const card = /[\\/]content[\\/]hubs[\\/]/.test(file) ? hubCard(raw) : /[\\/]content[\\/]blog[\\/]/.test(file) ? await postCard(raw) : guideCard(raw);
+      const card = /[\\/]content[\\/]site[\\/]popular-guides\.json$/.test(file)
+        ? await popularGuides(raw)
+        : /[\\/]content[\\/]hubs[\\/]/.test(file) ? hubCard(raw) : /[\\/]content[\\/]blog[\\/]/.test(file) ? await postCard(raw) : guideCard(raw);
       return { code: `export default ${JSON.stringify(card)};`, moduleType: "js" };
     },
   };

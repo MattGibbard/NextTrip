@@ -138,20 +138,28 @@
   ],
   "faqs": [
     {
-      "question": "Is Mauritius good for a family holiday?",
-      "answer": "Yes. Lagoons protected by reefs make the sea calm and shallow, and many resorts have great kids clubs. English is widely spoken."
+      "question": "Is Mauritius good for a relaxing holiday?",
+      "answer": "Yes. Reefs keep the lagoons calm and shallow, and most hotels are beach resorts made for doing very little. It's a favourite for honeymoons, and many resorts have great kids' clubs for families. English is widely spoken."
     },
     {
       "question": "How many nights do you need?",
       "answer": "Ten to fourteen nights, as the flight is about twelve hours."
     },
     {
-      "question": "Do UK families need a visa?",
+      "question": "Do you need a visa from the UK?",
       "answer": "No, British passport holders can visit for a holiday without a visa. Check GOV.UK for the current rules."
     },
     {
       "question": "Which coast is best?",
       "answer": "The north and west are sunnier and calmer in winter. The east is breezier but cooler in summer. The south is wilder and less built-up."
+    },
+    {
+      "question": "How long is the flight to Mauritius?",
+      "answer": "About twelve hours direct from London. Mauritius is only three or four hours ahead of the UK, depending on the time of year, so jet lag is mild."
+    },
+    {
+      "question": "When is the best time to visit Mauritius?",
+      "answer": "April, May and September to December. They're warm and fairly dry, between the cyclone season and the cooler, windier winter."
     }
   ],
   "similar": [

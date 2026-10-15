@@ -2,10 +2,14 @@
   "published": true,
   "kind": "type",
   "holiday_type": "relax",
+  "country": "",
+  "month": "",
+  "guides": [],
+  "icon": "",
   "name": "Relax & spa",
   "title": "Relaxing holidays",
   "intro": "Pools, quiet beaches and nowhere you need to be. Here's where to go for a relaxing holiday, and the best months for each.",
-  "seo_title": "",
+  "seo_title": "Relaxing holidays: quiet places to unwind, and when to go",
   "seo_description": "",
   "faqs": [
     {

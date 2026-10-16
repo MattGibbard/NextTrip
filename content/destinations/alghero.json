@@ -1,0 +1,193 @@
+{
+  "name": "Alghero",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Alghero",
+  "intro": "Golden sea walls, Catalan-speaking lanes and some of Sardinia's best beaches a short bus ride away. Here's what Alghero is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/alghero-8029268_1280.webp",
+  "image_alt": "Villa Las Tronas on a rocky point above clear turquoise water in Alghero, with the headland of Capo Caccia in the distance",
+  "wikipedia": "https://en.wikipedia.org/wiki/Alghero",
+  "to_code": "AHO",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Flights from the UK are fewer in winter, so check the timetable. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm days",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quiet beaches",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sea warming",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild, sunny",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 15
+    }
+  },
+  "when_to_go": "June and September are the best months, with warm sea, long days and beaches that aren't packed. July and August are hot and lively, with Italian families filling the coast. May and October are lovely for walking the sea walls and day trips, though the sea is still cool in May. Winter is mild but many beach places close.",
+  "things": [
+    {
+      "name": "Sea walls and old town",
+      "tag": "Free",
+      "blurb": "Walk the honey-coloured bastions at sunset, then wander lanes where street signs are in Italian and Catalan.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Neptune's Grotto",
+      "tag": "Ticketed",
+      "blurb": "A huge sea cave at Capo Caccia, reached by boat from the harbour or down 654 steps cut into the cliff.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Le Bombarde and Lazzaretto",
+      "tag": "Outdoors",
+      "blurb": "Two sheltered sandy bays with clear, shallow water, a short drive or bus ride west of town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spiaggia di San Giovanni",
+      "tag": "Free",
+      "blurb": "The long town beach runs right from the edge of the old town, handy for a swim between sightseeing.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nuraghe di Palmavera",
+      "tag": "Ticketed",
+      "blurb": "The stone towers and village of a Bronze Age settlement, about ten minutes' drive from town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stintino and La Pelosa",
+      "tag": "Day trip",
+      "blurb": "One of Sardinia's most famous beaches, with shallow turquoise water. Numbers are capped in summer, so book a slot.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can you fly direct to Alghero from the UK?",
+      "answer": "Ryanair flies from London Stansted, with fewer flights in winter. Schedules change by season, so check the current timetable before you plan."
+    },
+    {
+      "question": "Is Alghero good for a beach holiday?",
+      "answer": "Yes. There's a town beach, calm sandy bays a short drive away and famous beaches like La Pelosa within day-trip distance."
+    },
+    {
+      "question": "Do you need a car in Alghero?",
+      "answer": "Not for the town itself, which is walkable. A car makes the bays, Capo Caccia and day trips much easier, though buses run in summer."
+    },
+    {
+      "question": "How many days do you need in Alghero?",
+      "answer": "Three days covers the town and Neptune's Grotto. A week gives time for beach days and trips along the coast."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Corsica",
+      "code": "AJA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Menorca",
+      "code": "MAH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Puglia",
+      "code": "BRI",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Gozo",
+      "code": "MLA",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-16T10:19:38Z",
+  "updated": "2026-10-16T10:19:38Z"
+}

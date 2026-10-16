@@ -43,8 +43,13 @@ collections:
     create: true
     identifier_field: name
     slug: "{{slug}}"
-    summary: "{{name}}, {{country}}"
-    sortable_fields: [name, country]
+    # The list shows when each guide was added. `date` and `updated` are only for the editor; the site
+    # doesn't show them. A field called `date` also stops the editor offering its own "Updated on" sort,
+    # which uses each file's last commit and so is no help after a change that touches every guide.
+    summary: "{{name}}, {{country}} · added {{date | date('D MMM YYYY')}}"
+    sortable_fields:
+      fields: [name, country, date, updated]
+      default: { field: date, direction: descending }
     preview_path: destinations/{{slug}}
     fields:
       - { label: Place name, name: name, widget: string, hint: "As people search for it, e.g. New York. The page address comes from this." }
@@ -508,6 +513,11 @@ collections:
           - { label: Place name, name: name, widget: string }
           - { label: Code, name: code, widget: string, hint: "Three letters, e.g. BOS." }
           - { label: Label, name: label, widget: string, required: false, hint: "e.g. 🏙️ City break" }
+
+      # Filled in by the editor when a guide is saved; anything that adds or changes guides outside the
+      # editor sets them too (a test checks every guide has both).
+      - { label: Added, name: date, widget: datetime, picker_utc: true, auto_now: [create], hint: "When the guide was added. Only shown here, not on the site." }
+      - { label: Updated, name: updated, widget: datetime, picker_utc: true, auto_now: true, hint: "When the guide was last saved. Only shown here, not on the site." }
 
   - name: hubs
     label: Hub pages

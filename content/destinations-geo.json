@@ -9,6 +9,11 @@
     "lat": 38.5714,
     "lon": -7.9087
   },
+  "alghero": {
+    "query": "Alghero|IT",
+    "lat": 40.5587,
+    "lon": 8.3153
+  },
   "ambergris-caye": {
     "query": "Ambergris Caye|BZ",
     "lat": 18,
@@ -534,6 +539,11 @@
     "lat": 44.8654,
     "lon": 15.582
   },
+  "plovdiv": {
+    "query": "Plovdiv|BG",
+    "lat": 42.1419,
+    "lon": 24.7499
+  },
   "porto": {
     "query": "Porto|PT",
     "lat": 41.15,
@@ -688,6 +698,11 @@
     "query": "Tenerife|ES",
     "lat": 28.2936,
     "lon": -16.6214
+  },
+  "tobago": {
+    "query": "Tobago|TT",
+    "lat": 11.2405,
+    "lon": -60.672
   },
   "tofino": {
     "query": "Tofino|CA",

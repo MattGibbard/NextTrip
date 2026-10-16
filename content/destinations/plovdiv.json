@@ -1,0 +1,193 @@
+{
+  "name": "Plovdiv",
+  "published": true,
+  "country": "BG",
+  "title": "Holidays in Plovdiv",
+  "intro": "A Roman theatre, colourful revival houses and a buzzing creative quarter in one of Europe's oldest cities. Here's what Plovdiv is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/old-town-4623955_1280.webp",
+  "image_alt": "A cobbled lane in Plovdiv's Old Town lined with white-walled revival houses with wooden balconies",
+  "wikipedia": "https://en.wikipedia.org/wiki/Plovdiv",
+  "to_code": "PDV",
+  "holiday_types": [
+    "city",
+    "culture",
+    "budget"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Bulgaria switched from the lev to the euro on 1 January 2026. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 6
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly",
+      "temp": 13
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, festivals",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, festivals",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild, autumn colour",
+      "temp": 19
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 13
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 7
+    }
+  },
+  "when_to_go": "May, June and September are ideal, warm enough for evenings outside without the heat of high summer. July and August often pass 30°C, so plan sightseeing for the morning and evening. Winters are cold and grey, but cheap and quiet.",
+  "things": [
+    {
+      "name": "Ancient Theatre",
+      "tag": "Ticketed",
+      "blurb": "A Roman theatre carved into the hillside, still used for concerts and opera in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old Town",
+      "tag": "Free",
+      "blurb": "Steep cobbled lanes of brightly painted 19th-century merchant houses, several open as small museums.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kapana",
+      "tag": "Free",
+      "blurb": "The creative quarter of narrow streets, with street art, craft shops, cafés and bars.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Roman Stadium",
+      "tag": "Free",
+      "blurb": "Part of a 2nd-century stadium is uncovered beneath the main shopping street, with seats you can sit on.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nebet Tepe",
+      "tag": "Free",
+      "blurb": "A hilltop with ancient ruins and the best sunset view over the city's rooftops.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bachkovo Monastery",
+      "tag": "Day trip",
+      "blurb": "One of Bulgaria's oldest monasteries, about half an hour south in the Rhodope Mountains.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can you fly direct to Plovdiv from the UK?",
+      "answer": "Yes, Ryanair has flown from London Stansted to Plovdiv, a little over three hours. Schedules change by season, and Sofia airport, about two hours away, has more flights."
+    },
+    {
+      "question": "Is Plovdiv worth visiting?",
+      "answer": "Yes. It has Roman ruins, a pretty old town and a lively café scene, with prices well below most European cities."
+    },
+    {
+      "question": "What currency does Bulgaria use?",
+      "answer": "The euro, since 1 January 2026. It replaced the Bulgarian lev."
+    },
+    {
+      "question": "How many days do you need in Plovdiv?",
+      "answer": "Two full days covers the main sights. Add a day for Bachkovo Monastery or the Rhodope Mountains."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Brasov",
+      "code": "OTP",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Lake Ohrid",
+      "code": "OHD",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Tbilisi",
+      "code": "TBS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Krakow",
+      "code": "KRK",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-16T10:19:38Z",
+  "updated": "2026-10-16T10:19:38Z"
+}

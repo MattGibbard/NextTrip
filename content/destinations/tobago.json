@@ -1,0 +1,193 @@
+{
+  "name": "Tobago",
+  "published": true,
+  "country": "TT",
+  "title": "Holidays in Tobago",
+  "intro": "Quiet Caribbean bays, rainforest walks and coral reefs on the smaller, slower half of Trinidad and Tobago. Here's what Tobago is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/tobago-4612257_1280.webp",
+  "image_alt": "A curved sandy bay with turquoise water, small boats and green forested hills on Tobago's coast",
+  "wikipedia": "https://en.wikipedia.org/wiki/Tobago",
+  "to_code": "TAB",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "relax"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 to 5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Trinidad and Tobago dollar (TT$)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 115V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Tobago drives on the left, like the UK. Your passport needs at least 6 months left on arrival. Check entry rules and the latest travel advice on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 29
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 29
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 30
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Dry, turtles",
+      "temp": 30
+    },
+    "may": {
+      "rating": "good",
+      "note": "Dry, hot",
+      "temp": 30
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Showers start",
+      "temp": 30
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Wettest, humid",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Humid, showers",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Humid, showers",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Showers ease",
+      "temp": 30
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry season starts",
+      "temp": 29
+    }
+  },
+  "when_to_go": "The dry season, from about December to May, is the best time, with sunshine and calm seas. Leatherback turtles nest on the beaches from around March to August. June to November is the wet season, with short heavy showers rather than all-day rain, and Tobago lies at the southern edge of the hurricane belt so direct hits are rare.",
+  "things": [
+    {
+      "name": "Pigeon Point",
+      "tag": "Ticketed",
+      "blurb": "The island's postcard beach, with a palm-thatched jetty and calm water. A small entry fee covers facilities.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Buccoo Reef",
+      "tag": "Tour",
+      "blurb": "Glass-bottom boats take you snorkelling over the reef and to the Nylon Pool, a shallow sandbar in the open sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Main Ridge Forest Reserve",
+      "tag": "Outdoors",
+      "blurb": "Protected rainforest with hummingbirds and waterfalls. A local guide helps you spot the birds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Argyle Waterfall",
+      "tag": "Ticketed",
+      "blurb": "A three-tiered waterfall with pools to swim in, reached by a short guided walk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Castara and Englishman's Bay",
+      "tag": "Free",
+      "blurb": "Quiet bays on the north coast with fishing boats, beach cafés and very few people.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Turtle watching",
+      "tag": "Tour",
+      "blurb": "Leatherback turtles nest on beaches like Turtle Beach and Grafton from around March to August. Go with an approved guide.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Tobago from the UK?",
+      "answer": "British Airways flies from London Gatwick, usually stopping at another Caribbean island on the way. Check the current routing when you book, as it changes by season."
+    },
+    {
+      "question": "Is Tobago safe for tourists?",
+      "answer": "Tobago is generally calm and relaxed. GOV.UK has advice on crime for parts of Trinidad, so read the latest travel advice before you go."
+    },
+    {
+      "question": "Is Tobago better than Barbados?",
+      "answer": "Tobago is quieter, less developed and more about nature, with fewer big hotels. Barbados has more resorts, nightlife and direct flights."
+    },
+    {
+      "question": "When do turtles nest in Tobago?",
+      "answer": "Leatherback turtles usually nest from around March to August, with hatchlings later in the season. Go with an approved guide to avoid disturbing them."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Grenada",
+      "code": "GND",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Dominica",
+      "code": "DOM",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "St Lucia",
+      "code": "UVF",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-16T10:19:38Z",
+  "updated": "2026-10-16T10:19:38Z"
+}

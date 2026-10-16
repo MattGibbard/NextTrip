@@ -5,11 +5,16 @@
   "icon": "🐣",
   "guides": [
     "alentejo",
+    "algarve",
     "amsterdam",
+    "athens",
     "cape-verde",
+    "florence",
     "jordan",
     "lisbon",
     "madeira",
+    "madrid",
+    "malaga",
     "malta",
     "marrakech",
     "new-york",
@@ -18,9 +23,11 @@
     "paris",
     "porto",
     "rome",
+    "seville",
     "tenerife",
     "tokyo",
-    "valencia"
+    "valencia",
+    "venice"
   ],
   "name": "Easter holidays",
   "title": "Easter holiday ideas",
@@ -38,7 +45,7 @@
     },
     {
       "question": "Where is good for a city break at Easter?",
-      "answer": "Rome, Lisbon, Porto, Valencia and Paris are lovely in spring, before the summer heat. Amsterdam's tulip season usually peaks in April, and in Tokyo the cherry blossom is often out in late March and early April."
+      "answer": "Rome, Florence, Lisbon, Porto, Seville, Madrid, Athens and Paris are lovely in spring, before the summer heat. Amsterdam's tulip season usually peaks in April, and in Tokyo the cherry blossom is often out in late March and early April."
     },
     {
       "question": "Is Easter a busy time to travel?",

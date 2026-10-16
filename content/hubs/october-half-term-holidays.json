@@ -4,8 +4,12 @@
   "month": "oct",
   "icon": "🎃",
   "guides": [
+    "algarve",
+    "antalya",
+    "athens",
     "cappadocia",
     "crete",
+    "fuerteventura",
     "gozo",
     "gran-canaria",
     "jordan",
@@ -13,13 +17,16 @@
     "lanzarote",
     "lisbon",
     "madeira",
+    "malaga",
     "malta",
     "marrakech",
     "matera",
     "new-york",
     "orlando",
     "paphos",
+    "rhodes",
     "rome",
+    "seville",
     "tenerife",
     "valencia"
   ],
@@ -35,7 +42,7 @@
     },
     {
       "question": "Where is still hot at October half term?",
-      "answer": "The Canary Islands are warm all year, around 25°C in late October. Paphos, Malta, Gozo, Crete and Kaş on Turkey's coast are still warm, with the sea at its warmest of the year. Marrakech and Jordan are pleasant for sightseeing after the summer heat."
+      "answer": "The Canary Islands are warm all year, around 25°C in late October. Paphos, Malta, Gozo, Crete, Rhodes, Antalya and Kaş on Turkey's coast are still warm, with the sea at its warmest of the year. Marrakech and Jordan are pleasant for sightseeing after the summer heat."
     },
     {
       "question": "Where is good for Halloween?",

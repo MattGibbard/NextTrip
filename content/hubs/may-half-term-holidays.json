@@ -4,22 +4,31 @@
   "month": "may",
   "icon": "🌼",
   "guides": [
+    "algarve",
+    "amalfi-coast",
+    "antalya",
     "barcelona",
     "budapest",
     "cappadocia",
     "copenhagen",
+    "corfu",
     "crete",
     "dubrovnik",
     "gozo",
     "kotor",
     "krakow",
+    "lake-como",
     "lake-garda",
     "lisbon",
     "ljubljana",
+    "mallorca",
     "malta",
     "matera",
     "porto",
     "prague",
+    "rhodes",
+    "santorini",
+    "split",
     "valencia",
     "vienna"
   ],
@@ -35,7 +44,7 @@
     },
     {
       "question": "Where is hot at May half term?",
-      "answer": "Crete, Malta and Gozo are usually warm, around 24 to 26°C, with the sea warming up. Barcelona, Valencia and Lisbon are in the low to mid twenties. For guaranteed heat, look further afield, as most of the Mediterranean is warm rather than hot."
+      "answer": "Crete, Rhodes, Malta, Gozo and Antalya are usually warm, around 24 to 26°C, with the sea warming up. Barcelona, Valencia and Lisbon are in the low to mid twenties. For guaranteed heat, look further afield, as most of the Mediterranean is warm rather than hot."
     },
     {
       "question": "Is May half term a good time for a city break?",

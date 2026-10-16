@@ -19,6 +19,11 @@ describe("destination guide files", () => {
     if (raw.published) expect(d.airport?.code, "To code should be an airport; run scripts/destination-airports.mjs").toBe(d.to_code);
     expect(d.months).toHaveLength(12);
     expect(publicPage(`/destinations/${slug}`)).toBe(`destination:${slug}`);
+    // When it was added and last changed, for the editor's list (public/admin/config.yml). UTC, to the second.
+    const when = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/;
+    expect(raw.date, "set date to when the guide was added, e.g. 2026-10-16T06:42:00Z").toMatch(when);
+    expect(raw.updated, "set updated to when the guide was last changed (the same as date for a new guide)").toMatch(when);
+    expect(raw.updated >= raw.date).toBe(true);
   });
 });
 

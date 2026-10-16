@@ -1,0 +1,193 @@
+{
+  "name": "Bodrum",
+  "published": true,
+  "country": "TR",
+  "title": "Holidays in Bodrum",
+  "intro": "A crusader castle over a yacht-filled harbour, whitewashed houses and lively beach bays on Turkey's Aegean coast. Here's what Bodrum is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/bodrum-2447872_1280.webp",
+  "image_alt": "A stone windmill on a hill above Bodrum, with more windmills and the sea behind under a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Bodrum",
+  "to_code": "BJV",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK (3 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Turkish lira (₺)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Your passport needs at least 150 days left on it when you arrive. Check entry rules and the latest travel advice on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm days",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 16
+    }
+  },
+  "when_to_go": "May, June, September and early October are the best times, hot and sunny with a warm sea. July and August are hot and busy, with a lively nightlife scene. The Aegean breeze keeps it a little cooler than the south coast. Winter is mild but quiet, and many hotels close.",
+  "things": [
+    {
+      "name": "Bodrum Castle",
+      "tag": "Ticketed",
+      "blurb": "A castle built by the Knights of St John, home to the Museum of Underwater Archaeology.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bodrum windmills",
+      "tag": "Free",
+      "blurb": "Old stone windmills on the hill between Bodrum and Gümbet, best at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gulet boat trip",
+      "tag": "Tour",
+      "blurb": "Day trips on traditional wooden boats stop at bays for swimming and lunch.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gümüşlük",
+      "tag": "Free",
+      "blurb": "A fishing village with seafood restaurants on the water and the ruins of ancient Myndos.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mausoleum of Halicarnassus",
+      "tag": "Ticketed",
+      "blurb": "The site of one of the Seven Wonders of the Ancient World, with a small museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ephesus",
+      "tag": "Day trip",
+      "blurb": "Turkey's greatest Roman city is a long day trip away, about three hours each way.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where is best to stay in Bodrum?",
+      "answer": "Bodrum town is lively, with the castle and harbour. Gümbet is for nightlife. Yalıkavak, Türkbükü and Gümüşlük are quieter and more upmarket."
+    },
+    {
+      "question": "Is Bodrum good for beaches?",
+      "answer": "The peninsula has lots of small bays with sun loungers and beach clubs rather than long sandy beaches."
+    },
+    {
+      "question": "How do you get to Bodrum from the UK?",
+      "answer": "Fly to Milas-Bodrum airport, about 40 minutes from town. There are direct flights from many UK airports in summer."
+    },
+    {
+      "question": "How many days do you need in Bodrum?",
+      "answer": "A week gives time for beaches, a boat trip and the castle. Add a few days for Ephesus."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kaş",
+      "code": "DLM",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Antalya",
+      "code": "AYT",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Rhodes",
+      "code": "RHO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Naxos",
+      "code": "JNX",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

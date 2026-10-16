@@ -1,0 +1,193 @@
+{
+  "name": "Corfu",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Corfu",
+  "intro": "Green hills, olive groves and a Venetian old town on the leafy Ionian island off Greece's west coast. Here's what Corfu is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/corfu-4434742_1280.webp",
+  "image_alt": "Vlacherna Monastery on its little islet joined by a causeway, with Mouse Island behind it in the calm sea off Corfu",
+  "wikipedia": "https://en.wikipedia.org/wiki/Corfu",
+  "to_code": "CFU",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "nature"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm days",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sea warming",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm, calmer",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    }
+  },
+  "when_to_go": "June and September are the best months, hot and sunny with warm sea and fewer crowds. July and August are hot and busy. May and October are good for walking and sightseeing, and the island is at its greenest in spring. Corfu gets more rain than other Greek islands in winter, when most resorts close.",
+  "things": [
+    {
+      "name": "Corfu Old Town",
+      "tag": "Free",
+      "blurb": "A UNESCO-listed maze of Venetian lanes, arcaded cafés on the Liston and two fortresses by the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paleokastritsa",
+      "tag": "Free",
+      "blurb": "Turquoise coves below a clifftop monastery. Boat trips run to nearby sea caves.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Achilleion Palace",
+      "tag": "Ticketed",
+      "blurb": "The summer palace of Empress Sisi, with gardens and statues looking over the coast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kanoni and Mouse Island",
+      "tag": "Free",
+      "blurb": "The view of Vlacherna Monastery and Pontikonisi is the island's most famous picture.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Corfu Trail",
+      "tag": "Outdoors",
+      "blurb": "A long-distance path the length of the island. Pick a section through olive groves and hill villages.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paxos and Antipaxos",
+      "tag": "Day trip",
+      "blurb": "Boat trips from Corfu Town and the east coast to tiny islands with clear blue water.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Which part of Corfu is best?",
+      "answer": "The north-east coast has pretty villages and clear water. The west has sandy beaches and sunsets. Kassiopi and Agios Stefanos are popular, quieter bases."
+    },
+    {
+      "question": "Is Corfu good for beaches?",
+      "answer": "Yes, from sandy bays on the west coast to pebbly coves in the north-east with very clear water."
+    },
+    {
+      "question": "Do you need a car in Corfu?",
+      "answer": "Buses link Corfu Town with the main resorts, but a car or scooter helps you explore. Roads are narrow and winding."
+    },
+    {
+      "question": "How long should you spend in Corfu?",
+      "answer": "A week is enough for beaches, the old town and a boat trip. Ten days lets you walk part of the Corfu Trail."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kefalonia",
+      "code": "EFL",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Zakynthos",
+      "code": "ZTH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Saranda",
+      "code": "TIA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Puglia",
+      "code": "BRI",
+      "label": "🍷 Food & drink"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

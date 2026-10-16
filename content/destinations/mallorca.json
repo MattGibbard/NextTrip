@@ -1,0 +1,193 @@
+{
+  "name": "Mallorca",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Mallorca",
+  "intro": "Sandy bays, mountain villages in the Serra de Tramuntana and a lively old town in Palma. Here's what Mallorca is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/mallorca-6967566_1280.webp",
+  "image_alt": "Sailing boats moored in a deep blue cove below rocky, pine-covered cliffs on Mallorca's coast",
+  "wikipedia": "https://en.wikipedia.org/wiki/Mallorca",
+  "to_code": "PMI",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "food"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm days",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sea warming",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm, calmer",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 16
+    }
+  },
+  "when_to_go": "May, June and September are the sweet spot, with warm sea and beaches that aren't packed. July and August are hot and busy, and prices peak. Spring is great for walking and cycling in the mountains, when the almond blossom has gone and the hills are green. Winter is mild and quiet, and Palma stays open all year, though many resort hotels close.",
+  "things": [
+    {
+      "name": "Palma Cathedral and old town",
+      "tag": "Ticketed",
+      "blurb": "La Seu towers over the bay. Wander the lanes, courtyards and tapas bars behind it afterwards.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Serra de Tramuntana",
+      "tag": "Outdoors",
+      "blurb": "A UNESCO-listed mountain range of stone villages, olive terraces and hairpin roads, with walks for every level.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Valldemossa and Deià",
+      "tag": "Day trip",
+      "blurb": "Two honey-stone villages in the mountains, with cafés, a monastery and sea views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Port de Sóller tram",
+      "tag": "Ticketed",
+      "blurb": "A wooden train runs from Palma to Sóller, and an old tram carries on down to the harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Caló des Moro and Es Trenc",
+      "tag": "Free",
+      "blurb": "A tiny turquoise cove and a long natural beach on the south-east coast. Go early to beat the crowds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Coves del Drac",
+      "tag": "Ticketed",
+      "blurb": "Huge caves near Porto Cristo with an underground lake and a short classical concert on the water.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Which part of Mallorca is best to stay in?",
+      "answer": "Alcúdia and Port de Pollença have long, shallow beaches. Palma suits a city and beach mix, and Sóller is best for walkers."
+    },
+    {
+      "question": "Do you need a car in Mallorca?",
+      "answer": "Not if you stay in a resort or Palma, as buses link the main towns. A car makes the coves and mountain villages much easier."
+    },
+    {
+      "question": "Is Mallorca good in winter?",
+      "answer": "It's mild and quiet, good for walking, cycling and Palma, but too cool for most people to swim and many resorts close."
+    },
+    {
+      "question": "How many days do you need in Mallorca?",
+      "answer": "A week gives time for beaches, Palma and a day in the mountains. Ten days lets you see both coasts at an easy pace."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Menorca",
+      "code": "MAH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Ibiza",
+      "code": "IBZ",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Corsica",
+      "code": "AJA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Malta",
+      "code": "MLA",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

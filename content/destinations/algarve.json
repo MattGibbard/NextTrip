@@ -1,0 +1,193 @@
+{
+  "name": "Algarve",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in the Algarve",
+  "intro": "Golden cliffs, sea caves and long sandy beaches on Portugal's sunny south coast. Here's what the Algarve is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/algarve-3029665_1280.webp",
+  "image_alt": "Sunlight pouring through the round opening in the roof of Benagil sea cave onto a small sandy beach",
+  "wikipedia": "https://en.wikipedia.org/wiki/Algarve",
+  "to_code": "FAO",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "food"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same time as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, sunny",
+      "temp": 16
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Almond blossom",
+      "temp": 17
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 19
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm days",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sunny",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, calmer",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm days",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 17
+    }
+  },
+  "when_to_go": "May, June and September are the best months, with hot sunny days and fewer crowds. July and August are busy and the Atlantic stays fresh, even in summer. Spring and autumn are lovely for coastal walks and golf. Winter is mild and sunny by UK standards, with quiet towns and low prices.",
+  "things": [
+    {
+      "name": "Benagil sea cave",
+      "tag": "Tour",
+      "blurb": "The famous cave with a hole in its roof. See it by boat or kayak from Benagil or Portimão, as you can't land on the beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Seven Hanging Valleys Trail",
+      "tag": "Outdoors",
+      "blurb": "A clifftop path between Praia da Marinha and Vale Centeanes with views over arches and coves.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lagos and Ponta da Piedade",
+      "tag": "Free",
+      "blurb": "A lively old town with sea stacks and grottoes just around the headland.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ria Formosa",
+      "tag": "Outdoors",
+      "blurb": "Lagoons and sandbar islands near Faro and Tavira, reached by little ferries.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sagres and Cape St Vincent",
+      "tag": "Day trip",
+      "blurb": "Wild Atlantic cliffs at Europe's south-west corner, with surf beaches and big sunsets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Silves",
+      "tag": "Day trip",
+      "blurb": "A red sandstone castle above an old Moorish town, half an hour inland.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the sea warm in the Algarve?",
+      "answer": "It's the Atlantic, so it stays fresh, usually reaching about 21 to 23°C in late summer. The east, near Tavira, tends to be a little warmer."
+    },
+    {
+      "question": "Where is best to stay in the Algarve?",
+      "answer": "Lagos and Carvoeiro suit cliffs and coves. Albufeira is busiest. Tavira is quieter and more traditional."
+    },
+    {
+      "question": "Do you need a car in the Algarve?",
+      "answer": "Buses and trains link the main towns, but a car makes it much easier to reach the beaches and the west coast."
+    },
+    {
+      "question": "How long should you spend in the Algarve?",
+      "answer": "A week is ideal for a beach holiday with a few day trips. Long weekends work well out of season."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Alentejo",
+      "code": "LIS",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Malaga",
+      "code": "AGP",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

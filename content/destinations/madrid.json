@@ -1,0 +1,193 @@
+{
+  "name": "Madrid",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Madrid",
+  "intro": "World-class art, a grand royal palace and late nights of tapas in Spain's sunny, lively capital. Here's what Madrid is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/madrid-3462249_1280.webp",
+  "image_alt": "The Royal Palace of Madrid with its pale stone façade and wide square in front",
+  "wikipedia": "https://en.wikipedia.org/wiki/Madrid",
+  "to_code": "MAD",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, sunny",
+      "temp": 10
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, sunny",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, fiestas",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot, quiet",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 20
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 14
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive",
+      "temp": 10
+    }
+  },
+  "when_to_go": "April, May, September and October are the best months, warm and sunny for walking and terrace drinks. May has the San Isidro fiestas. July and August are very hot and many locals leave in August. Winter is cold but often sunny and bright, with Christmas markets in December.",
+  "things": [
+    {
+      "name": "Prado Museum",
+      "tag": "Ticketed",
+      "blurb": "Velázquez, Goya and Bosch in one of the world's great galleries. Free entry in the last two hours most days.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Royal Palace",
+      "tag": "Ticketed",
+      "blurb": "Spain's official royal residence, with grand state rooms and an armoury.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Retiro Park",
+      "tag": "Free",
+      "blurb": "Formal gardens, a boating lake and the glass Crystal Palace.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Reina Sofía",
+      "tag": "Ticketed",
+      "blurb": "Modern art including Picasso's Guernica.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mercado de San Miguel and La Latina",
+      "tag": "Free",
+      "blurb": "A glass food market and a neighbourhood of tapas bars, busiest on Sundays.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Toledo",
+      "tag": "Day trip",
+      "blurb": "A walled hilltop city about half an hour away by fast train.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Madrid?",
+      "answer": "Three days covers the big galleries, the palace and the main neighbourhoods. Add a day for Toledo or Segovia."
+    },
+    {
+      "question": "Is Madrid good for a weekend break?",
+      "answer": "Yes, flights are short and the centre is walkable, with great food and nightlife."
+    },
+    {
+      "question": "What time do people eat in Madrid?",
+      "answer": "Late. Lunch is around 2pm and dinner rarely before 9pm, though tapas bars serve all day."
+    },
+    {
+      "question": "Is Madrid good in winter?",
+      "answer": "It's cold but usually sunny, and galleries and tapas bars are perfect for winter days."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Seville",
+      "code": "SVQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Barcelona",
+      "code": "BCN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Valencia",
+      "code": "VLC",
+      "label": "🍷 Food & drink"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

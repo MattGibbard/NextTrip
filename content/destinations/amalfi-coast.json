@@ -1,0 +1,193 @@
+{
+  "name": "Amalfi Coast",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays on the Amalfi Coast",
+  "intro": "Pastel villages stacked on cliffs, lemon groves and boat trips along Italy's most famous coastline. Here's what the Amalfi Coast is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/amalfi-coast-2254776_1280.webp",
+  "image_alt": "Pastel houses of Amalfi stacked up the steep green hillside above the harbour and a calm blue sea",
+  "wikipedia": "https://en.wikipedia.org/wiki/Amalfi_Coast",
+  "to_code": "NAP",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, many places shut",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Opening up",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild, green",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, flowers",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sea warming",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, crowded",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, crowded",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild, quieter",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy, quiet",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 14
+    }
+  },
+  "when_to_go": "May, June and September are the best months, warm enough to swim with fewer crowds than midsummer. July and August are hot and crowded, and the coast road gets very busy. April and October are good for walking. From November to March many hotels close and ferries run less often.",
+  "things": [
+    {
+      "name": "Positano",
+      "tag": "Free",
+      "blurb": "The coast's most photographed town, with steps winding down to a pebble beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Path of the Gods",
+      "tag": "Outdoors",
+      "blurb": "A cliffside trail from Bomerano to Nocelle with views over Positano and Capri. Allow about three hours.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Amalfi Cathedral",
+      "tag": "Ticketed",
+      "blurb": "A striped cathedral at the top of a grand staircase, with a peaceful cloister.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ravello",
+      "tag": "Free",
+      "blurb": "A hilltop town of gardens. Villa Rufolo and Villa Cimbrone have some of the best views in Italy.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Boat trip to Capri",
+      "tag": "Day trip",
+      "blurb": "Ferries and private boats run to Capri, with stops at sea caves and swimming spots.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pompeii",
+      "tag": "Day trip",
+      "blurb": "The Roman town buried by Vesuvius, reached by train from Sorrento.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where should you stay on the Amalfi Coast?",
+      "answer": "Positano is the most famous and priciest. Amalfi is central for ferries and buses. Sorrento, just outside the coast, is cheaper and has good transport."
+    },
+    {
+      "question": "How do you get around the Amalfi Coast?",
+      "answer": "Ferries are the easiest way between towns in season. SITA buses also run along the coast road. Driving and parking are hard."
+    },
+    {
+      "question": "Does the Amalfi Coast have sandy beaches?",
+      "answer": "Most beaches are pebbly and small. Many are run by beach clubs with sunbeds, with free sections alongside."
+    },
+    {
+      "question": "How many days do you need on the Amalfi Coast?",
+      "answer": "Four or five days covers the main towns, a hike and a boat trip. A week lets you add Capri and Pompeii."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Puglia",
+      "code": "BRI",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Syracuse",
+      "code": "CTA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Rome",
+      "code": "FCO",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Corsica",
+      "code": "AJA",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

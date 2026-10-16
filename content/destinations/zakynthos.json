@@ -1,0 +1,192 @@
+{
+  "name": "Zakynthos",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Zakynthos",
+  "intro": "Turquoise sea caves, a famous shipwreck beach and nesting turtles on the Ionian island also called Zante. Here's what Zakynthos is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/zakynthos-3302009_1280.webp",
+  "image_alt": "White limestone cliffs dropping into deep turquoise water on the coast of Zakynthos",
+  "wikipedia": "https://en.wikipedia.org/wiki/Zakynthos",
+  "to_code": "ZTH",
+  "holiday_types": [
+    "beach",
+    "nature"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm days",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sea warming",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm, calmer",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 16
+    }
+  },
+  "when_to_go": "June and September are the best months, hot with a warm sea and fewer crowds. July and August are hot and busy, especially around Laganas. May and October are warm enough for the beach on most days. In winter most resorts close and it can be rainy.",
+  "things": [
+    {
+      "name": "Navagio viewpoint",
+      "tag": "Outdoors",
+      "blurb": "The famous Shipwreck Beach from the clifftop above. Check before you go, as access to the beach itself has been closed for safety.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Caves",
+      "tag": "Tour",
+      "blurb": "Boat trips from Agios Nikolaos and Skinari visit sea caves with glowing blue water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Marathonisi",
+      "tag": "Tour",
+      "blurb": "Turtle Island in Laganas Bay, with a beach where loggerhead turtles nest. Boats must keep to strict rules.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Keri cliffs",
+      "tag": "Free",
+      "blurb": "Sunset from the cliffs and lighthouse at the island's southern tip.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zakynthos Town",
+      "tag": "Free",
+      "blurb": "The port town, with Solomos Square and the Bochali hill for views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gerakas beach",
+      "tag": "Free",
+      "blurb": "A protected turtle-nesting beach with soft sand. It closes at dusk in nesting season.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where is best to stay in Zakynthos?",
+      "answer": "Laganas is lively. Tsilivi and Alykes suit families. Vasilikos and Keri are quieter."
+    },
+    {
+      "question": "Can you visit Shipwreck Beach?",
+      "answer": "You can see it from the viewpoint above. Landing on the beach has been restricted for safety, so check the current rules before booking a boat trip."
+    },
+    {
+      "question": "When can you see turtles in Zakynthos?",
+      "answer": "Loggerhead turtles nest from about late May to August, with hatchlings later in summer. Book a boat trip that follows the park's rules."
+    },
+    {
+      "question": "How many days do you need in Zakynthos?",
+      "answer": "A week covers the beaches, a boat trip round the island and a few lazy days."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kefalonia",
+      "code": "EFL",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Corfu",
+      "code": "CFU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Milos",
+      "code": "MLO",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

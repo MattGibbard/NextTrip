@@ -1,0 +1,193 @@
+{
+  "name": "Ibiza",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Ibiza",
+  "intro": "A UNESCO-listed old town, quiet pine-fringed coves and famous sunsets, well beyond the big clubs. Here's what Ibiza is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/ibiza-7444451_1280.webp",
+  "image_alt": "The walls and houses of Dalt Vila, Ibiza's old town, rising above the sea under a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ibiza",
+  "to_code": "IBZ",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "food"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, many places shut",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Almond blossom",
+      "temp": 16
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 18
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Opening up",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sunny",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm days",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 17
+    }
+  },
+  "when_to_go": "May, June and September are the best months for beaches and coves without the peak crowds. July and August are hot, busy and pricey. The big clubs open from late spring to early October. Winter is mild and peaceful, good for walking and the old town, but many hotels and beach places close.",
+  "things": [
+    {
+      "name": "Dalt Vila",
+      "tag": "Free",
+      "blurb": "Walk up through the Renaissance walls of Ibiza Town's old quarter to the cathedral and views over the harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cala d'Hort and Es Vedrà",
+      "tag": "Free",
+      "blurb": "A beach facing the mysterious rock island of Es Vedrà. Come for sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Formentera",
+      "tag": "Day trip",
+      "blurb": "A short ferry to an island of white sand and very clear, shallow water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Las Dalias hippy market",
+      "tag": "Free",
+      "blurb": "A craft and fashion market in Sant Carles, held on Saturdays, with night markets in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Santa Gertrudis",
+      "tag": "Free",
+      "blurb": "A pretty inland village with a white church, cafés and art shops.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cala Comte",
+      "tag": "Free",
+      "blurb": "Turquoise water and rocks on the west coast. A favourite spot for sunset drinks.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Ibiza only for clubbing?",
+      "answer": "No. San Antonio and Playa d'en Bossa are the party areas, but the north and east are quiet, with coves, villages and rural hotels."
+    },
+    {
+      "question": "Is Ibiza expensive?",
+      "answer": "It's one of Spain's priciest islands in summer. Coming in May, June or September and staying outside the party areas helps."
+    },
+    {
+      "question": "Do you need a car in Ibiza?",
+      "answer": "Buses run between the main towns, but a car is the best way to reach the coves and villages."
+    },
+    {
+      "question": "How many days do you need in Ibiza?",
+      "answer": "Four or five days covers the old town, a few beaches and a day on Formentera. A week is more relaxed."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Mallorca",
+      "code": "PMI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Menorca",
+      "code": "MAH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Milos",
+      "code": "MLO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Malta",
+      "code": "MLA",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

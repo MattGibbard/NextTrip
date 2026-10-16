@@ -1,0 +1,193 @@
+{
+  "name": "Lake Como",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Lake Como",
+  "intro": "Grand villas, colourful lakeside villages and mountain views on Italy's most elegant lake. Here's what Lake Como is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/lake-como-7708582_1280.webp",
+  "image_alt": "Colourful lakeside houses and a church tower at the water's edge on Lake Como, with mountains behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lake_Como",
+  "to_code": "MXP",
+  "holiday_types": [
+    "nature",
+    "culture",
+    "food"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 7
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 10
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Gardens waking",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Gardens in bloom",
+      "temp": 17
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, azaleas",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, calmer",
+      "temp": 24
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 18
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Damp, closing",
+      "temp": 11
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 7
+    }
+  },
+  "when_to_go": "May, June and September are the best months, warm and sunny with the villa gardens at their best in spring. July and August are hot and busy, with packed ferries. October brings autumn colours and fewer people. From November to March many hotels close and ferries run less often.",
+  "things": [
+    {
+      "name": "Bellagio",
+      "tag": "Free",
+      "blurb": "The 'pearl of the lake', with stepped lanes, silk shops and views down all three arms of the lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Villa del Balbianello",
+      "tag": "Ticketed",
+      "blurb": "A villa and terraced gardens on a wooded point, seen in Star Wars and Casino Royale.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Villa Carlotta",
+      "tag": "Ticketed",
+      "blurb": "Grand gardens of azaleas and rhododendrons in Tremezzo, best in April and May.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Varenna",
+      "tag": "Free",
+      "blurb": "A pretty village with a lakeside walkway and a castle above it.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ferry hopping",
+      "tag": "Ticketed",
+      "blurb": "A day ferry pass lets you hop between Bellagio, Varenna, Menaggio and Tremezzo.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Greenway del Lago",
+      "tag": "Outdoors",
+      "blurb": "An easy walking path linking lakeside villages on the western shore.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where should you stay on Lake Como?",
+      "answer": "Bellagio, Varenna and Menaggio are the classic central bases, with ferries between them. Como town is cheaper and easy to reach by train."
+    },
+    {
+      "question": "Can you swim in Lake Como?",
+      "answer": "Yes, at lidos and small beaches in summer. The water is cool, usually around 22 to 24°C at its warmest."
+    },
+    {
+      "question": "How do you get to Lake Como from the UK?",
+      "answer": "Fly to Milan Malpensa, Linate or Bergamo, then take a train to Como or Varenna."
+    },
+    {
+      "question": "How many days do you need at Lake Como?",
+      "answer": "Three to four days covers the main villages and villas. A week lets you add hikes and a trip to Milan."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Annecy",
+      "code": "GVA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Venice",
+      "code": "VCE",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

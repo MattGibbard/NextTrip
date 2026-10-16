@@ -1,0 +1,193 @@
+{
+  "name": "Antalya",
+  "published": true,
+  "country": "TR",
+  "title": "Holidays in Antalya",
+  "intro": "Long beaches, a Roman old town and mountains behind on Turkey's sunny Turquoise Coast. Here's what Antalya is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/antalya-7572191_1280.webp",
+  "image_alt": "The long curve of Konyaaltı Beach in Antalya, with turquoise sea and mountains in the distance",
+  "wikipedia": "https://en.wikipedia.org/wiki/Antalya",
+  "to_code": "AYT",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK (3 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Turkish lira (₺)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Your passport needs at least 150 days left on it when you arrive. Check entry rules and the latest travel advice on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 16
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring",
+      "temp": 18
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 22
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 26
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot, busy",
+      "temp": 34
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot, busy",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Hot, warm sea",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 27
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 21
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 17
+    }
+  },
+  "when_to_go": "May, June, September and October are the best months, hot and sunny with a warm sea. July and August are very hot, often around 34°C, and the resorts are busy. The season runs late, and October is still warm enough for the beach. Winter is mild but rainy, and many resorts close.",
+  "things": [
+    {
+      "name": "Kaleiçi old town",
+      "tag": "Free",
+      "blurb": "Ottoman houses, boutique hotels and Hadrian's Gate inside the old walls above the harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Konyaaltı and Lara beaches",
+      "tag": "Free",
+      "blurb": "Konyaaltı is long and pebbly with mountain views. Lara has fine sand and big resorts.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Düden Waterfalls",
+      "tag": "Outdoors",
+      "blurb": "A river tumbles straight into the sea from a cliff. Boat trips go to see it from below.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Antalya Museum",
+      "tag": "Ticketed",
+      "blurb": "Statues and treasures from Perge and other ancient cities nearby.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Perge and Aspendos",
+      "tag": "Day trip",
+      "blurb": "A Roman city and one of the best-preserved Roman theatres anywhere, a short drive away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Olympos cable car",
+      "tag": "Ticketed",
+      "blurb": "A cable car rises to the top of Mount Tahtalı, more than 2,300 metres above the sea.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where is best to stay in Antalya?",
+      "answer": "Kaleiçi suits a city and culture trip. Lara and Belek are known for all-inclusive resorts. Side and Kemer are nearby beach towns."
+    },
+    {
+      "question": "Is Antalya good value?",
+      "answer": "Often, yes. All-inclusive deals can be good value, and eating out in the old town is usually cheaper than in Western Europe."
+    },
+    {
+      "question": "Is Antalya too hot in summer?",
+      "answer": "July and August are very hot. Many people prefer May, June, September or October."
+    },
+    {
+      "question": "How long is the flight to Antalya from the UK?",
+      "answer": "About four hours from most UK airports."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kaş",
+      "code": "DLM",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Bodrum",
+      "code": "BJV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Cappadocia",
+      "code": "NAV",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Paphos",
+      "code": "PFO",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

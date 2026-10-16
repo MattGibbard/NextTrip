@@ -1,0 +1,193 @@
+{
+  "name": "Florence",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Florence",
+  "intro": "Renaissance art, a famous red dome and Tuscan food in a compact, walkable city. Here's what Florence is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/florence-5208579_1280.webp",
+  "image_alt": "Florence Cathedral's red-tiled dome and Giotto's bell tower rising above the city's rooftops, with hills behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Florence",
+  "to_code": "FLR",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 11
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 13
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Mild, sunny",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm days",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot, busy",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot, busy",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, harvest",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild, wine season",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Damp, quiet",
+      "temp": 15
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive",
+      "temp": 11
+    }
+  },
+  "when_to_go": "April, May, September and October are the best months, warm enough for long days of walking without the heat and queues of high summer. July and August are very hot, often over 33°C. Winter is cool and quiet, with short queues for the galleries and Christmas lights in December.",
+  "things": [
+    {
+      "name": "Duomo and dome climb",
+      "tag": "Ticketed",
+      "blurb": "Climb 463 steps inside Brunelleschi's dome for a view across the city. Book a slot ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Uffizi Gallery",
+      "tag": "Ticketed",
+      "blurb": "Botticelli, Leonardo and Michelangelo in one gallery. Go first thing or book tickets well in advance.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Michelangelo's David",
+      "tag": "Ticketed",
+      "blurb": "The original statue stands in the Galleria dell'Accademia, a short walk from the Duomo.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ponte Vecchio and Oltrarno",
+      "tag": "Free",
+      "blurb": "Cross the old bridge to the artisans' quarter, then climb to Piazzale Michelangelo for sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mercato Centrale",
+      "tag": "Free",
+      "blurb": "A food market with Tuscan produce downstairs and a food hall upstairs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chianti and Siena",
+      "tag": "Day trip",
+      "blurb": "Wine estates and hill towns are an easy day out by bus, train or tour.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Florence?",
+      "answer": "Three days covers the main galleries and sights. Add a day or two for Siena, Pisa or the Chianti hills."
+    },
+    {
+      "question": "Do you need to book the Uffizi in advance?",
+      "answer": "It's a good idea, especially from spring to autumn, as queues for walk-up tickets can be long."
+    },
+    {
+      "question": "Is Florence walkable?",
+      "answer": "Yes, the historic centre is compact and mostly pedestrianised. You'll rarely need a bus."
+    },
+    {
+      "question": "Is there a tourist tax in Florence?",
+      "answer": "Yes, a nightly city tax is charged per person at hotels, usually paid when you check out."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Rome",
+      "code": "FCO",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Venice",
+      "code": "VCE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Puglia",
+      "code": "BRI",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Amalfi Coast",
+      "code": "NAP",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

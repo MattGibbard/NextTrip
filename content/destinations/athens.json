@@ -1,0 +1,193 @@
+{
+  "name": "Athens",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Athens",
+  "intro": "The Acropolis above a buzzing modern city, with ancient sites, rooftop bars and islands an hour away. Here's what Athens is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/athens-4513867_1280.webp",
+  "image_alt": "The Acropolis rising on its rocky hill above the white buildings of Athens",
+  "wikipedia": "https://en.wikipedia.org/wiki/Athens",
+  "to_code": "ATH",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 34
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot, calmer",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool, festive",
+      "temp": 15
+    }
+  },
+  "when_to_go": "April, May and October are the best months, warm and sunny for walking between sites. June and September are hot but good. July and August are very hot, often over 33°C, and heatwaves can close the Acropolis in the afternoon. Winter is mild with short queues, though it can rain.",
+  "things": [
+    {
+      "name": "Acropolis and Parthenon",
+      "tag": "Ticketed",
+      "blurb": "Book a timed slot and go at opening or late in the day to avoid the heat and crowds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Acropolis Museum",
+      "tag": "Ticketed",
+      "blurb": "Statues from the Parthenon in a light-filled museum, with ruins under the glass floor.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Plaka and Anafiotika",
+      "tag": "Free",
+      "blurb": "Old lanes under the Acropolis, with tavernas and a tiny village of island-style houses.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ancient Agora",
+      "tag": "Ticketed",
+      "blurb": "The ancient marketplace, with the well-preserved Temple of Hephaestus.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lycabettus Hill",
+      "tag": "Outdoors",
+      "blurb": "Walk or take the funicular to the city's highest point for sunset views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cape Sounion",
+      "tag": "Day trip",
+      "blurb": "The clifftop Temple of Poseidon, a short drive along the coast, best at sunset.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Athens?",
+      "answer": "Two to three days covers the main sites. Add a day for Sounion, Delphi or an island like Aegina."
+    },
+    {
+      "question": "Is Athens too hot in summer?",
+      "answer": "July and August are very hot. Visit sites early, rest in the afternoon and check for closures during heatwaves."
+    },
+    {
+      "question": "Can you combine Athens with an island?",
+      "answer": "Yes. Ferries from Piraeus reach Aegina in about an hour and the Cyclades in a few hours."
+    },
+    {
+      "question": "Is there a combined ticket for Athens' sites?",
+      "answer": "Yes, a combined ticket covers the Acropolis and several other sites. Check the latest price and rules on the official site."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Santorini",
+      "code": "JTR",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Rome",
+      "code": "FCO",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Naxos",
+      "code": "JNX",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

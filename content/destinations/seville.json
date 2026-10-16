@@ -1,0 +1,193 @@
+{
+  "name": "Seville",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Seville",
+  "intro": "Orange trees, Moorish palaces and flamenco in the warm, lively capital of Andalusia. Here's what Seville is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/seville-573805_1280.webp",
+  "image_alt": "The curved, tiled buildings and tower of Plaza de España in Seville, with a canal and bridges in front",
+  "wikipedia": "https://en.wikipedia.org/wiki/Seville",
+  "to_code": "SVQ",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, sunny",
+      "temp": 16
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild, sunny",
+      "temp": 18
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, orange blossom",
+      "temp": 22
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Fiestas",
+      "temp": 24
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 33
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 36
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 36
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild, festive",
+      "temp": 17
+    }
+  },
+  "when_to_go": "March to May and October are the best times, warm and sunny with orange blossom in spring. Holy Week and the April Fair fill the city with processions and parties, so book early. July and August are very hot, often around 36°C, and many locals leave. Winter is mild and sunny, ideal for sightseeing.",
+  "things": [
+    {
+      "name": "Real Alcázar",
+      "tag": "Ticketed",
+      "blurb": "A royal palace of tiled courtyards and gardens, still used by the Spanish royal family. Book ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cathedral and Giralda",
+      "tag": "Ticketed",
+      "blurb": "One of the world's largest cathedrals. Walk up the ramps of the old minaret for city views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Plaza de España",
+      "tag": "Free",
+      "blurb": "A huge semicircle of tiled alcoves for every Spanish province, with rowing boats on the canal.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Barrio Santa Cruz",
+      "tag": "Free",
+      "blurb": "The old Jewish quarter, a tangle of whitewashed lanes, squares and tapas bars.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Flamenco show",
+      "tag": "Ticketed",
+      "blurb": "Catch a small tablao show in Triana or Santa Cruz, or visit the Flamenco Dance Museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Setas de Sevilla",
+      "tag": "Ticketed",
+      "blurb": "A giant wooden canopy with a walkway on top and great views at sunset.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Seville?",
+      "answer": "Two to three days covers the main sights. Add more for day trips to Córdoba, Cádiz or the white villages."
+    },
+    {
+      "question": "Is Seville too hot in summer?",
+      "answer": "July and August are very hot, often around 36°C. Sightsee early, rest in the afternoon and go out late like the locals."
+    },
+    {
+      "question": "When is the April Fair in Seville?",
+      "answer": "The Feria de Abril follows two weeks after Easter, so dates change each year. Hotels get booked up and prices rise."
+    },
+    {
+      "question": "Can you do day trips from Seville?",
+      "answer": "Yes. Córdoba is under an hour by fast train, and Cádiz and Ronda are easy by train or bus."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Ronda",
+      "code": "AGP",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Malaga",
+      "code": "AGP",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Madrid",
+      "code": "MAD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Valencia",
+      "code": "VLC",
+      "label": "🍷 Food & drink"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

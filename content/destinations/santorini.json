@@ -1,0 +1,193 @@
+{
+  "name": "Santorini",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Santorini",
+  "intro": "White villages on the rim of a flooded volcano, with famous sunsets and black sand beaches. Here's what Santorini is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/santorini-416136_1280.webp",
+  "image_alt": "White houses, blue domes and pink bougainvillea in Oia, perched on Santorini's cliffs above the sea",
+  "wikipedia": "https://en.wikipedia.org/wiki/Santorini",
+  "to_code": "JTR",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, many places shut",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Opening up",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm days",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sunny",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, very busy",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, windy, busy",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Quieter",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Closing down",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 16
+    }
+  },
+  "when_to_go": "May, June, September and early October are the best times, warm enough to swim without the peak crowds. July and August are hot, windy and very busy, especially in Oia at sunset and when cruise ships call. From November to March many hotels and restaurants close, though Fira stays open.",
+  "things": [
+    {
+      "name": "Oia sunset",
+      "tag": "Free",
+      "blurb": "Watch the sun drop behind the caldera from the castle ruins. Arrive early, or find a quieter spot in Imerovigli.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fira to Oia walk",
+      "tag": "Outdoors",
+      "blurb": "A clifftop path of about 10 km along the caldera rim, best done in the morning.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Akrotiri",
+      "tag": "Ticketed",
+      "blurb": "A Bronze Age town buried by the eruption, with streets and houses preserved under a modern roof.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Caldera boat trip",
+      "tag": "Tour",
+      "blurb": "Sail to the volcanic islands, swim in the hot springs and stop for a sunset dinner.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Red and Perissa beaches",
+      "tag": "Free",
+      "blurb": "Dramatic red cliffs at one, a long black sand beach with sunbeds at the other.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wine tasting",
+      "tag": "Ticketed",
+      "blurb": "Santorini's vines grow in baskets on the ground. Try the crisp Assyrtiko at a winery with caldera views.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Santorini expensive?",
+      "answer": "Yes, it's one of the priciest Greek islands, especially caldera hotels. Staying in Kamari or Perissa costs less."
+    },
+    {
+      "question": "How many days do you need in Santorini?",
+      "answer": "Three to four days covers the main sights. Many people pair it with a quieter island like Naxos or Milos."
+    },
+    {
+      "question": "Is Santorini good for a beach holiday?",
+      "answer": "The beaches are volcanic sand or pebbles, which get very hot. Come for the views first; for long beach days, Naxos is better."
+    },
+    {
+      "question": "Can you fly direct to Santorini from the UK?",
+      "answer": "Yes, in summer several airlines fly direct. In winter you'll usually go via Athens."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Milos",
+      "code": "MLO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Naxos",
+      "code": "JNX",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Athens",
+      "code": "ATH",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

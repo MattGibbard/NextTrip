@@ -1,0 +1,193 @@
+{
+  "name": "Malaga",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Malaga",
+  "intro": "City beaches, Picasso's birthplace and a Moorish fortress, with year-round sunshine on the Costa del Sol. Here's what Malaga is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/malaga-7137958_1280.webp",
+  "image_alt": "Malaga's apartment blocks, round bullring and harbour along the sunny Mediterranean coast",
+  "wikipedia": "https://en.wikipedia.org/wiki/M%C3%A1laga",
+  "to_code": "AGP",
+  "holiday_types": [
+    "city",
+    "beach",
+    "food"
+  ],
+  "nights": "3 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, sunny",
+      "temp": 17
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild, sunny",
+      "temp": 18
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring, Easter",
+      "temp": 20
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sunny",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, fair",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild, festive",
+      "temp": 18
+    }
+  },
+  "when_to_go": "April to June, September and October are the best times, warm and sunny without the heat and crowds of high summer. Holy Week brings big processions. July and August are hot, and the August fair fills the streets. Winter is one of the mildest in mainland Europe, with highs around 17°C.",
+  "things": [
+    {
+      "name": "Alcazaba and Gibralfaro",
+      "tag": "Ticketed",
+      "blurb": "A Moorish fortress and a castle on the hill above, with views over the port and bullring.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Picasso Museum",
+      "tag": "Ticketed",
+      "blurb": "More than 200 works by Picasso in a palace close to the house where he was born.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Malagueta beach",
+      "tag": "Free",
+      "blurb": "A city beach of dark sand a short walk from the old town, lined with chiringuitos grilling sardines.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Atarazanas Market",
+      "tag": "Free",
+      "blurb": "A covered food market with stained glass, fresh fish and tapas bars.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Caminito del Rey",
+      "tag": "Ticketed",
+      "blurb": "A walkway pinned high on the walls of a gorge, about an hour away. Book ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nerja and Frigiliana",
+      "tag": "Day trip",
+      "blurb": "A seaside town with caves and the Balcón de Europa, and a white village in the hills.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Malaga good for a city break or a beach holiday?",
+      "answer": "Both. The city has museums and tapas bars, and the beach is a short walk away. The Costa del Sol resorts are close by train."
+    },
+    {
+      "question": "Is Malaga good in winter?",
+      "answer": "Yes, it's one of the mildest places in mainland Europe, often around 17°C and sunny in January."
+    },
+    {
+      "question": "How long should you spend in Malaga?",
+      "answer": "Three days covers the city. A week lets you add beaches, the Caminito del Rey and day trips to Ronda or Granada."
+    },
+    {
+      "question": "How do you get from Malaga airport to the city?",
+      "answer": "The train takes about 12 minutes to the centre. There's also a bus."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Seville",
+      "code": "SVQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Ronda",
+      "code": "AGP",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Algarve",
+      "code": "FAO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Valencia",
+      "code": "VLC",
+      "label": "🍷 Food & drink"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

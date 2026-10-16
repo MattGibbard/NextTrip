@@ -1,0 +1,193 @@
+{
+  "name": "Fuerteventura",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Fuerteventura",
+  "intro": "Endless golden beaches, sand dunes and turquoise lagoons on the windiest, wildest Canary Island. Here's what Fuerteventura is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/fuerteventura-4235666_1280.webp",
+  "image_alt": "Atlantic waves breaking on dark lava rocks below sandy hills on the coast of Fuerteventura",
+  "wikipedia": "https://en.wikipedia.org/wiki/Fuerteventura",
+  "to_code": "FUE",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same time as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The Canary Islands are part of the EU, and new entry checks are coming in, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Winter sun",
+      "temp": 20
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Winter sun",
+      "temp": 21
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 22
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 22
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Breezy",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, windy",
+      "temp": 26
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, windy",
+      "temp": 27
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warmest sea",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, calmer",
+      "temp": 26
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Winter sun",
+      "temp": 23
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Winter sun",
+      "temp": 21
+    }
+  },
+  "when_to_go": "Fuerteventura is warm all year, which makes it a favourite for winter sun, with highs of about 20 to 22°C from November to March. Summer is warm rather than scorching, but the trade winds blow hard in July and August, which is great for kitesurfers. September and October bring the warmest sea and calmer days.",
+  "things": [
+    {
+      "name": "Corralejo Dunes",
+      "tag": "Outdoors",
+      "blurb": "A natural park of rolling white sand dunes running down to the sea, just south of Corralejo.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sotavento lagoon",
+      "tag": "Outdoors",
+      "blurb": "A huge tidal lagoon on the Jandía coast, with shallow water and world-class windsurfing.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Isla de Lobos",
+      "tag": "Day trip",
+      "blurb": "A short ferry from Corralejo to a protected island with a volcano walk and a calm swimming bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cofete beach",
+      "tag": "Outdoors",
+      "blurb": "A wild, empty beach under steep mountains, reached by a rough track. Too rough for swimming.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Betancuria",
+      "tag": "Day trip",
+      "blurb": "The island's old capital, a tiny village of white houses in the hills.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Surf lessons",
+      "tag": "Tour",
+      "blurb": "Surf schools in Corralejo and El Cotillo teach beginners on gentler beaches.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Fuerteventura good in winter?",
+      "answer": "Yes, it's one of the warmest places within easy reach of the UK in winter, with sunny days around 20 to 22°C."
+    },
+    {
+      "question": "Is Fuerteventura very windy?",
+      "answer": "It can be, especially in summer, which is why it's popular for windsurfing. Sheltered beaches and the lagoons help on breezy days."
+    },
+    {
+      "question": "Corralejo or Jandía?",
+      "answer": "Corralejo in the north has the dunes, ferries and a lively town. Jandía in the south has long beaches and quieter resorts."
+    },
+    {
+      "question": "How long is the flight to Fuerteventura?",
+      "answer": "About four to four and a half hours from most UK airports."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lanzarote",
+      "code": "ACE",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Gran Canaria",
+      "code": "LPA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Tenerife",
+      "code": "TFS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Cape Verde",
+      "code": "SID",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

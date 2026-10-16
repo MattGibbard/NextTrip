@@ -1,0 +1,193 @@
+{
+  "name": "Venice",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Venice",
+  "intro": "Canals instead of streets, grand palaces and quiet backwaters in one of the world's most unusual cities. Here's what Venice is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/venice-2451047_1280.webp",
+  "image_alt": "Gondolas and grand palazzi along the Grand Canal in Venice under an orange sunset sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Venice",
+  "to_code": "VCE",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Day visitors pay an access fee on busy days in spring and summer, but overnight guests are exempt. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, misty",
+      "temp": 6
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Carnival",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 13
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Mild, sunny",
+      "temp": 17
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm days",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Hot, crowded",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hot, crowded",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, calmer",
+      "temp": 24
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 18
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Damp, high water",
+      "temp": 12
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cold, festive",
+      "temp": 7
+    }
+  },
+  "when_to_go": "April, May, September and October are the best times, mild enough to walk all day with fewer crowds than summer. July and August are hot, humid and packed. Carnival in February is magical but busy. Late autumn and winter bring misty mornings and the odd acqua alta flood, but also the quietest streets.",
+  "things": [
+    {
+      "name": "St Mark's Basilica",
+      "tag": "Ticketed",
+      "blurb": "Golden mosaics cover the domes. Book a timed slot to skip the queue.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Doge's Palace",
+      "tag": "Ticketed",
+      "blurb": "The seat of the old Venetian republic, with huge painted halls and the Bridge of Sighs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Canal by vaporetto",
+      "tag": "Ticketed",
+      "blurb": "Line 1 crawls the whole canal past palaces. It's far cheaper than a gondola.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cannaregio and Castello",
+      "tag": "Free",
+      "blurb": "The quieter neighbourhoods where Venetians live. Stop at a bacaro for cicchetti and a spritz.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Burano and Murano",
+      "tag": "Day trip",
+      "blurb": "Boat over to the glassworks of Murano and the brightly painted fishing houses of Burano.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gallerie dell'Accademia",
+      "tag": "Ticketed",
+      "blurb": "The best collection of Venetian paintings, from Bellini to Titian.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Venice?",
+      "answer": "Two to three days covers the main sights and an island trip. Stay overnight if you can, as the city empties out in the evening."
+    },
+    {
+      "question": "Do you have to pay to enter Venice?",
+      "answer": "Day visitors pay an access fee on set busy days, mostly in spring and summer. If you stay overnight you're exempt but still need to register through your hotel."
+    },
+    {
+      "question": "Is Venice expensive?",
+      "answer": "Hotels and canal-side restaurants are, but eating cicchetti at bars and riding the vaporetto keeps costs down."
+    },
+    {
+      "question": "How do you get from the airport to Venice?",
+      "answer": "Buses run to Piazzale Roma, or take the Alilaguna water bus straight into the city."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Florence",
+      "code": "FLR",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Como",
+      "code": "MXP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Ljubljana",
+      "code": "LJU",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

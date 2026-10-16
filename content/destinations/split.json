@@ -1,0 +1,193 @@
+{
+  "name": "Split",
+  "published": true,
+  "country": "HR",
+  "title": "Holidays in Split",
+  "intro": "A Roman emperor's palace turned old town, a palm-lined seafront and ferries to the Dalmatian islands. Here's what Split is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/split-7385443_1280.webp",
+  "image_alt": "Split's seafront with boats in the harbour and the old town buildings, with mountains behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Split,_Croatia",
+  "to_code": "SPU",
+  "holiday_types": [
+    "city",
+    "beach",
+    "culture"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 11
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sea warming",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Festive",
+      "temp": 12
+    }
+  },
+  "when_to_go": "May, June and September are the best months, warm enough to swim without the peak crowds. July and August are hot and very busy, with cruise passengers in the old town. April and October suit sightseeing and island trips, though some ferries are less frequent. Winter is quiet and cool.",
+  "things": [
+    {
+      "name": "Diocletian's Palace",
+      "tag": "Free",
+      "blurb": "Wander streets built into the walls of a Roman palace. The cellars and bell tower cost a small fee.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Riva promenade",
+      "tag": "Free",
+      "blurb": "The palm-lined seafront, packed with cafés, people and evening strolls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Marjan Hill",
+      "tag": "Outdoors",
+      "blurb": "Wooded paths and steps up the hill on the edge of the city, with views and small beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bačvice beach",
+      "tag": "Free",
+      "blurb": "The city beach, a sandy bay where locals play picigin in the shallows.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hvar and Brač",
+      "tag": "Day trip",
+      "blurb": "Catamarans and ferries run to Hvar Town and to Bol's famous Zlatni Rat beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Krka National Park",
+      "tag": "Day trip",
+      "blurb": "Waterfalls and wooden walkways about an hour's drive away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Split?",
+      "answer": "Two days covers the old town. Add three or four more for islands and Krka."
+    },
+    {
+      "question": "Is Split good for beaches?",
+      "answer": "The city beaches are handy but busy. The best beaches are on the islands, a short ferry ride away."
+    },
+    {
+      "question": "Split or Dubrovnik?",
+      "answer": "Split is livelier and better for island hopping. Dubrovnik has the famous walls but is busier and pricier."
+    },
+    {
+      "question": "Do you need a car in Split?",
+      "answer": "No, the old town is walkable and ferries and buses cover the islands and coast."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Dubrovnik",
+      "code": "DBV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Zadar",
+      "code": "ZAD",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Plitvice Lakes",
+      "code": "ZAG",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

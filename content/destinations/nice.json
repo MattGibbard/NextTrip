@@ -1,0 +1,193 @@
+{
+  "name": "Nice",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Nice",
+  "intro": "A long seafront promenade, a colourful old town and the whole French Riviera on the doorstep. Here's what Nice is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/nice-4265230_1280.webp",
+  "image_alt": "The Promenade des Anglais curving around the blue Baie des Anges in Nice, with a pebble beach below",
+  "wikipedia": "https://en.wikipedia.org/wiki/Nice",
+  "to_code": "NCE",
+  "holiday_types": [
+    "city",
+    "beach",
+    "food"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, sunny",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Carnival, mimosa",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sea warming",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 25
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy spells",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild, festive",
+      "temp": 14
+    }
+  },
+  "when_to_go": "May, June and September are the best months, warm enough to swim with fewer crowds than midsummer. July and August are hot and busy. Nice is mild in winter, with the Carnival and the Menton Lemon Festival in February. November is the wettest month.",
+  "things": [
+    {
+      "name": "Promenade des Anglais",
+      "tag": "Free",
+      "blurb": "Walk or cycle along seven kilometres of seafront beside the blue Baie des Anges.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vieux Nice",
+      "tag": "Free",
+      "blurb": "The old town's narrow lanes, baroque churches and the Cours Saleya flower and food market.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Castle Hill",
+      "tag": "Free",
+      "blurb": "Climb the steps or take the lift for the best views over the bay and old port.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Matisse Museum",
+      "tag": "Ticketed",
+      "blurb": "Matisse's work in a red villa among the olive groves of Cimiez.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Èze and Monaco",
+      "tag": "Day trip",
+      "blurb": "A medieval hilltop village and the glitz of Monte Carlo, both a short bus or train ride away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Antibes and Cannes",
+      "tag": "Day trip",
+      "blurb": "Old ramparts and Picasso in Antibes, and the famous Croisette in Cannes.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are the beaches in Nice sandy?",
+      "answer": "No, the city beaches are pebbly. For sand, head to Villefranche-sur-Mer, Antibes or Juan-les-Pins."
+    },
+    {
+      "question": "How many days do you need in Nice?",
+      "answer": "Two or three days covers the city. Add a few more for Monaco, Èze and Antibes."
+    },
+    {
+      "question": "Do you need a car on the French Riviera?",
+      "answer": "No. Trains and buses link Nice with Monaco, Antibes and Cannes, and the tram runs from the airport."
+    },
+    {
+      "question": "Is Nice good in winter?",
+      "answer": "Yes, it's mild and often sunny, with the Carnival in February. It's too cool for most people to swim."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Corsica",
+      "code": "AJA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Annecy",
+      "code": "GVA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Barcelona",
+      "code": "BCN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Lake Como",
+      "code": "MXP",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

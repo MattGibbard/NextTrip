@@ -1,0 +1,193 @@
+{
+  "name": "Rhodes",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Rhodes",
+  "intro": "A medieval walled town, a whitewashed village under an acropolis and long beaches on Greece's sunny south-eastern edge. Here's what Rhodes is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/rhodes-4373674_1280.webp",
+  "image_alt": "A turquoise bay with boats at anchor below a rocky headland at Lindos on Rhodes, with flowers in the foreground",
+  "wikipedia": "https://en.wikipedia.org/wiki/Rhodes",
+  "to_code": "RHO",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 16
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring",
+      "temp": 18
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm days",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sunny",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm days",
+      "temp": 25
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 17
+    }
+  },
+  "when_to_go": "May, June, September and October are the best times, with hot sunshine, a warm sea and fewer crowds. July and August are hot and busy but cooled by the meltemi wind. Rhodes is one of the sunniest Greek islands, and the season runs later into October than most. In winter Rhodes Town stays open but resorts close.",
+  "things": [
+    {
+      "name": "Rhodes Old Town",
+      "tag": "Free",
+      "blurb": "Europe's largest lived-in medieval town, inside walls built by the Knights of St John.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Palace of the Grand Master",
+      "tag": "Ticketed",
+      "blurb": "The knights' castle at the top of the Street of the Knights, with mosaic floors.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lindos",
+      "tag": "Day trip",
+      "blurb": "White houses below a clifftop acropolis, with St Paul's Bay just around the headland.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Anthony Quinn Bay",
+      "tag": "Free",
+      "blurb": "A small rocky cove with clear green water near Faliraki. Go early to get a spot.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Prasonisi",
+      "tag": "Outdoors",
+      "blurb": "At the island's southern tip, a sandbar splits calm water from waves. It's a windsurfing favourite.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Symi",
+      "tag": "Day trip",
+      "blurb": "Ferries run to this pretty island of pastel captains' houses around a harbour.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where is best to stay in Rhodes?",
+      "answer": "Lindos and Pefkos suit couples and quiet beach days. Faliraki is livelier. Rhodes Town is best for sightseeing and the evenings."
+    },
+    {
+      "question": "Is Rhodes good in October?",
+      "answer": "Yes, it's still warm, often around 25°C, with a warm sea. It's one of the best Greek islands for late sun."
+    },
+    {
+      "question": "Do you need a car in Rhodes?",
+      "answer": "Buses link Rhodes Town with Lindos and the main resorts. A car helps you reach quieter beaches and the south."
+    },
+    {
+      "question": "How many days do you need in Rhodes?",
+      "answer": "A week covers beaches, the old town, Lindos and a boat trip."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Kaş",
+      "code": "DLM",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Paphos",
+      "code": "PFO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Bodrum",
+      "code": "BJV",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-16T12:31:40Z",
+  "updated": "2026-10-16T12:31:40Z"
+}

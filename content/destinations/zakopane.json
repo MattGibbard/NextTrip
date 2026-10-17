@@ -1,0 +1,200 @@
+{
+  "name": "Zakopane",
+  "published": true,
+  "country": "PL",
+  "title": "Holidays in Zakopane",
+  "intro": "Wooden chalets, mountain lakes and cable cars in Poland's Tatra Mountains, a two-hour trip from Kraków. Here's what Zakopane is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/zakopane-3956852_1280.webp",
+  "image_alt": "Morskie Oko lake reflecting the forested slopes and rocky peaks of the Tatra Mountains near Zakopane",
+  "wikipedia": "https://en.wikipedia.org/wiki/Zakopane",
+  "to_code": "KRK",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "culture"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Polish złoty (zł)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Poland doesn't use the euro, so carry some złoty or a card without foreign fees. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Snow, ski season",
+      "temp": 1
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Snow, ski season",
+      "temp": 2
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Thaw, slushy",
+      "temp": 5
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Muddy, quiet",
+      "temp": 11
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring, green",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hiking season",
+      "temp": 19
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Hiking, busy",
+      "temp": 21
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Hiking, busy",
+      "temp": 21
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Clear, quieter",
+      "temp": 16
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 12
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Damp, grey",
+      "temp": 6
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Snow, festive",
+      "temp": 1
+    }
+  },
+  "when_to_go": "June to September is the best time for hiking, with long days and the high trails clear of snow. July and August are busiest, so start early. September is quieter, with clear views, and October brings autumn colour. December to February is ski and snow season, with Christmas lights in town. Spring can be muddy, with snow still on high paths.",
+  "things": [
+    {
+      "name": "Morskie Oko",
+      "tag": "Outdoors",
+      "blurb": "The Tatras' most famous lake, reached by a walk of about 8 km each way along a paved road, or by horse cart for part of the way. Go early.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kasprowy Wierch cable car",
+      "tag": "Ticketed",
+      "blurb": "A cable car to the ridge on the Polish–Slovak border, with high walks in summer and skiing in winter. Book ahead in season.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gubałówka",
+      "tag": "Ticketed",
+      "blurb": "A funicular from town to a hill with wide views of the Tatras, a market and easy walks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Krupówki",
+      "tag": "Free",
+      "blurb": "The lively main street, with wooden buildings, smoked oscypek cheese and highland restaurants.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dolina Kościeliska",
+      "tag": "Outdoors",
+      "blurb": "A gentle valley walk with caves and streams, good for all ages.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Thermal pools",
+      "tag": "Ticketed",
+      "blurb": "Several thermal spas near town have outdoor pools with mountain views, lovely after a day's walking.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zakopane style villas",
+      "tag": "Free",
+      "blurb": "Wooden villas and churches in the local highland style, including the Villa Koliba museum.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Zakopane from the UK?",
+      "answer": "Fly to Kraków, which has plenty of UK flights, then take a bus or train to Zakopane, about two hours or more depending on traffic."
+    },
+    {
+      "question": "Is Zakopane good in summer?",
+      "answer": "Yes. Summer is the main hiking season, with trails for every level and cable cars for big views without the climb."
+    },
+    {
+      "question": "Can you ski in Zakopane?",
+      "answer": "Yes, from about December to March, on Kasprowy Wierch and smaller slopes around town. It suits beginners and intermediates and is good value."
+    },
+    {
+      "question": "How many days do you need in Zakopane?",
+      "answer": "Three or four days covers Morskie Oko, a cable car and a valley walk. A week lets you add longer hikes and a day in Kraków."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kraków",
+      "code": "KRK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Lake Bled",
+      "code": "LJU",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Hallstatt",
+      "code": "SZG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Brașov",
+      "code": "OTP",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-17T05:45:20Z",
+  "updated": "2026-10-17T05:45:20Z"
+}

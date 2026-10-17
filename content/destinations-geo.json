@@ -144,6 +144,11 @@
     "lat": 47.4979,
     "lon": 19.0402
   },
+  "busan": {
+    "query": "Busan|KR",
+    "lat": 35.18,
+    "lon": 129.0752
+  },
   "cancun": {
     "query": "Cancún|MX",
     "lat": 21.1617,
@@ -498,6 +503,11 @@
     "query": "Menorca|ES",
     "lat": 39.9496,
     "lon": 4.1105
+  },
+  "messinia": {
+    "query": "Messinia|GR",
+    "lat": 37.0438,
+    "lon": 22.1134
   },
   "mexico-city": {
     "query": "Mexico City|MX",
@@ -858,6 +868,11 @@
     "query": "Zadar|HR",
     "lat": 44.1194,
     "lon": 15.2314
+  },
+  "zakopane": {
+    "query": "Zakopane|PL",
+    "lat": 49.2969,
+    "lon": 19.9505
   },
   "zakynthos": {
     "query": "Zakynthos|GR",

@@ -596,6 +596,15 @@ collections:
       - { label: Introduction, name: intro, widget: text, hint: "One or two sentences under the heading. Google also shows this under the page title in search results, cut off after about 155 characters, so put the most important part first." }
       - { label: Google title, name: seo_title, widget: string, required: false, hint: "Optional. The page title in search results, about 50 characters. Leave empty for \"Beach holidays: where to go and when\"." }
       - { label: Google description, name: seo_description, widget: text, required: false, hint: "Optional. Shown under the title in search results, cut off after about 155 characters. Leave empty to use the introduction." }
+      - label: Longer writing
+        name: sections
+        widget: list
+        required: false
+        summary: "{{heading}}"
+        hint: "Optional. Sections of writing under the guides, like a blog post's. A blank line starts a new paragraph, lines starting \"- \" make a list, **two stars** make bold and [words](/address) make a link."
+        fields:
+          - { label: Heading, name: heading, widget: string, required: false }
+          - { label: Text, name: text, widget: text }
       - label: Common questions
         name: faqs
         widget: list
@@ -698,7 +707,7 @@ collections:
 
   - name: site
     label: Site
-    description: The home page's words, the announcement banner across the top of every page, the creators page and the creators featured on the home page, and the welcome steps new people see when they first sign in.
+    description: The home page's words, the announcement banner across the top of every page, the creators page and the creators featured on the home page, the welcome steps new people see when they first sign in, and redirects from old addresses.
     format: json
     editor:
       preview: false
@@ -830,11 +839,11 @@ collections:
       - name: popular_guides
         label: Popular guides (home page)
         file: content/site/popular-guides.json
-        description: A row of guide cards on the home page, above the creators, linking to Inspire. Pick a few guides that are starting to show up in Google, so they get a link from the home page. The row stays hidden when no guides are picked.
+        description: A row of guide cards on the home page, above the creators, linking to Destinations. Pick a few guides that are starting to show up in Google, so they get a link from the home page. The row stays hidden when no guides are picked.
         fields:
           - { label: Small heading, name: kicker, widget: string, required: false }
           - { label: Heading, name: heading, widget: string, required: false }
-          - { label: Link to Inspire, name: link_text, widget: string, required: false, hint: "Under the cards. Leave empty for no link." }
+          - { label: Link to Destinations, name: link_text, widget: string, required: false, hint: "Under the cards. Leave empty for no link." }
           - label: Guides
             name: guides
             widget: relation
@@ -977,6 +986,20 @@ collections:
               - { label: Invite text, name: invite_text, widget: text, required: false }
               - { label: Share button, name: share_button, widget: string, required: false }
               - { label: Go to ideas button, name: ideas_button, widget: string, required: false }
+
+      - name: redirects
+        label: Redirects
+        file: content/site/redirects.json
+        description: Old addresses that now live somewhere else. Anyone who visits the old address, or follows an old link to it from Google, is sent straight on to the new one, and search engines move the page over. Add one when you delete, merge or rename a page. A redirect only starts working once nothing is left at the old address, so it can never hide a page that's still on the site. Check the new address opens before saving.
+        fields:
+          - label: Redirects
+            name: redirects
+            widget: list
+            required: false
+            summary: "{{from}} → {{to}}"
+            fields:
+              - { label: Old address, name: from, widget: string, hint: "The part after somewhere.party, e.g. /blog/old-post." }
+              - { label: New address, name: to, widget: string, hint: "Where it lives now, e.g. /destinations/where-to-go-in-december, or a full address starting https:// for another site." }
 
   - name: pages
     label: Pages

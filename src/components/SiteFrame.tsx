@@ -21,7 +21,7 @@ export type SiteSection = "how" | "inspire" | "blog";
 
 const NAV: { id: SiteSection; label: string; href: string }[] = [
   { id: "how", label: "How it works", href: "/how-it-works" },
-  { id: "inspire", label: "Inspire", href: "/destinations" },
+  { id: "inspire", label: "Destinations", href: "/destinations" },
   { id: "blog", label: "Blog", href: "/blog" },
 ];
 

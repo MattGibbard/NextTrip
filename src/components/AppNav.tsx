@@ -13,7 +13,7 @@ type Current = TabId | "guides";
 
 /**
  * A tab: inside the app a button that switches tabs in place, and on the guide pages a link back
- * into the app. Inspire is always a link, as it's its own page.
+ * into the app. Destinations is always a link, as it's its own page.
  */
 function Tab({ id, current, go, children }: { id: TabId; current: Current; go?: (t: TabId) => void; children: ReactNode }) {
   const active = current === id;
@@ -50,7 +50,7 @@ export function AppTopbar({ current, me, go }: { current: Current; me: Pick<Pers
               {t.label}
             </Tab>
           ))}
-          <GuidesTab current={current}>Inspire</GuidesTab>
+          <GuidesTab current={current}>Destinations</GuidesTab>
         </nav>
         <div className="topbar-right">
           {me && (
@@ -86,7 +86,7 @@ export function AppBottomNav({ current, go }: { current: Current; go?: (t: TabId
       ))}
       <GuidesTab current={current}>
         <span className="icon">🧭</span>
-        Inspire
+        Destinations
       </GuidesTab>
     </nav>
   );

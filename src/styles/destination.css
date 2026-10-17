@@ -493,6 +493,21 @@
   padding: 0 20px 18px;
   max-width: 75ch;
 }
+.dg-faqs a {
+  color: var(--accent);
+  font-weight: 600;
+}
+/* A hub's longer writing, under its guides: set like a blog post. */
+.dx .hb-article .lp-article h2 {
+  font-size: clamp(1.4rem, 2.6vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+.hb-article .lp-article p {
+  margin: 0 0 14px;
+}
 
 /* Similar places. */
 .dg-similar {

@@ -1,11 +1,13 @@
 import { OLD_HOST, SITE, isPrivatePath } from "../shared/seo";
+import { redirectFor } from "../shared/redirects";
 import type { Env } from "./env";
 
 /**
  * Everything that isn't the API. The public pages, built files and the 404 page come straight from
  * the build (see scripts/prerender.mjs). Family links get the bare app shell, kept out of search.
  * The content editor at /admin is kept out of search too.
- * The old workers.dev address sends visitors to the site's own domain so search engines see one site.
+ * The old workers.dev address sends visitors to the site's own domain so search engines see one site,
+ * and pages that are gone but have moved (Site > Redirects at /admin) send visitors on to where they are now.
  */
 export async function servePage(req: Request, env: Env): Promise<Response> {
   const url = new URL(req.url);
@@ -26,6 +28,9 @@ export async function servePage(req: Request, env: Env): Promise<Response> {
     return res;
   }
   const res = await env.ASSETS.fetch(req);
+  // A page that's gone may have moved. Only missing pages are redirected, so a redirect never hides a live one.
+  const moved = res.status === 404 && (req.method === "GET" || req.method === "HEAD") ? redirectFor(url.pathname) : null;
+  if (moved) return Response.redirect(/^https?:/.test(moved) ? moved : url.origin + moved + url.search, 301);
   const cache = cacheFor(url.pathname);
   if (!cache || !res.ok) return res;
   const cached = new Response(res.body, res);

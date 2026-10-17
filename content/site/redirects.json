@@ -1,0 +1,28 @@
+{
+  "redirects": [
+    {
+      "from": "/blog/where-is-hot-in-europe-in-february",
+      "to": "/destinations/where-to-go-in-february"
+    },
+    {
+      "from": "/blog/where-is-hot-at-christmas",
+      "to": "/destinations/where-to-go-in-december"
+    },
+    {
+      "from": "/blog/where-to-spend-new-years-eve-in-europe",
+      "to": "/destinations/new-year-holidays"
+    },
+    {
+      "from": "/blog/quiet-relaxing-holidays-abroad",
+      "to": "/destinations/relaxing-holidays"
+    },
+    {
+      "from": "/blog/where-to-go-for-february-half-term",
+      "to": "/destinations/february-half-term-holidays"
+    },
+    {
+      "from": "/blog/page/3",
+      "to": "/blog"
+    }
+  ]
+}

@@ -146,7 +146,7 @@ describe("New York", () => {
     expect(article).toMatchObject({ "@type": "Article", headline: "Holidays in New York", about: { "@id": place["@id"] } });
     expect(article.author.name).toBe("somewhere🎉");
     expect(article.image).toMatchObject({ url: place.image, width: d.image_size![0], height: d.image_size![1] });
-    expect(crumbs.itemListElement.map((i: { name: string }) => i.name)).toEqual(["Home", "Inspire", "New York"]);
+    expect(crumbs.itemListElement.map((i: { name: string }) => i.name)).toEqual(["Home", "Destinations", "New York"]);
     const tags = metaTags(meta);
     expect(tags).toContain('<meta property="og:type" content="article" />');
     expect(tags).toContain(`<meta property="og:image:width" content="${d.image_size![0]}" />`);

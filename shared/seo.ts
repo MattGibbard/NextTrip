@@ -91,14 +91,14 @@ export const PAGES: Record<FixedPage, Meta> = {
   },
   how: {
     path: "/how-it-works",
-    title: "How it works: decide where to go on holiday, fairly | somewhere🎉",
+    title: "How somewhere🎉 works: a fair holiday draw in five steps",
     description: "See how somewhere🎉 works: put holiday ideas on standby, spread points in secret, let a fair draw pick the winner, then plan the trip together.",
     index: true,
   },
   blog: {
     path: "/blog",
-    title: "Blog: deciding where to go on holiday | somewhere🎉",
-    description: "Ideas and advice for choosing where to go on holiday, agreeing as a family or group, and making the decision fair.",
+    title: "Holiday ideas and advice: the somewhere🎉 blog",
+    description: "Holiday ideas, comparisons and travel advice: where to go, when to go, and how to agree on it as a family or group.",
     index: true,
   },
   about: {

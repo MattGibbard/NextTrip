@@ -7,6 +7,7 @@ import { SiteFooter, SiteHeader } from "../components/SiteFrame";
 import { AppBottomNav, AppTopbar } from "../components/AppNav";
 import { PostCards } from "../components/PostCards";
 import { postsAboutHub } from "../blog";
+import { RichText, anchor } from "./InfoPage";
 import { GuideCard, HubLinks, Label, MONTH_NAMES, bestSet, useFamily } from "./DestinationPage";
 import type { Family } from "./DestinationPage";
 
@@ -55,7 +56,7 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
                   <span aria-hidden>›</span>
                 </>
               )}
-              <a href="/destinations">Inspire</a>
+              <a href="/destinations">Destinations</a>
               <span aria-hidden>›</span>
               <span aria-current="page">{hub.name}</span>
             </nav>
@@ -180,6 +181,19 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
         </section>
         )}
 
+        {hub.sections.length > 0 && (
+          <section className="lp-wrap dx-section hb-article" aria-label={`More about ${hub.title.charAt(0).toLowerCase()}${hub.title.slice(1)}`}>
+            <article className="lp-article">
+              {hub.sections.map((s, i) => (
+                <section key={i} id={s.heading ? anchor(s.heading) : undefined}>
+                  {s.heading && <h2>{s.heading}</h2>}
+                  <RichText text={s.text} />
+                </section>
+              ))}
+            </article>
+          </section>
+        )}
+
         {hub.faqs.length > 0 && (
           <section className="lp-wrap dx-section" aria-labelledby="hb-faq">
             <h2 id="hb-faq">{hub.title}: common questions</h2>
@@ -190,7 +204,7 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
                     {f.question}
                     <span aria-hidden>+</span>
                   </summary>
-                  <p>{f.answer}</p>
+                  <RichText text={f.answer} />
                 </details>
               ))}
             </div>

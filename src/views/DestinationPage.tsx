@@ -80,7 +80,7 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
                 <span aria-hidden>›</span>
               </>
             )}
-            <a href="/destinations">Inspire</a>
+            <a href="/destinations">Destinations</a>
             <span aria-hidden>›</span>
             {country && (
               <>

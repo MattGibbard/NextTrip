@@ -6,6 +6,8 @@ import { publicPage } from "../shared/seo";
 
 const dir = new URL("../content/hubs/", import.meta.url);
 const files = readdirSync(dir).filter((f) => f.endsWith(".json"));
+const posts = readdirSync(new URL("../content/blog/", import.meta.url)).filter((f) => f.endsWith(".json"));
+const pages = new Set(["/", "/destinations", "/blog", "/how-to-decide-where-to-go-on-holiday", ...DESTINATIONS.map((d) => `/destinations/${d.slug}`), ...HUBS.map((h) => `/destinations/${h.slug}`), ...posts.map((f) => `/blog/${f.replace(/\.json$/, "")}`)]);
 
 describe("hub files", () => {
   it.each(files)("%s is a usable hub", (file) => {
@@ -22,6 +24,11 @@ describe("hub files", () => {
     }
     else expect(h.country_code).toMatch(/^[A-Z]{2}$/);
     expect(h.intro).not.toBe("");
+    // Links in its writing and answers go to real pages, and never back to the hub itself.
+    for (const [, href] of [...h.sections.map((x) => x.text), ...h.faqs.map((f) => f.answer)].join("\n").matchAll(/\]\((\/[^)\s#]*)/g)) {
+      expect(pages.has(href), `${slug} links to ${href}, which isn't a page`).toBe(true);
+      expect(href, `${slug} links to itself`).not.toBe(`/destinations/${slug}`);
+    }
     if (raw.published) {
       expect(findHub(slug), "published hubs need at least one guide").toBeDefined();
       expect(publicPage(`/destinations/${slug}`)).toBe(`destination:${slug}`);
@@ -96,7 +103,7 @@ describe("hub pages", () => {
     expect(page.dateModified).toBe("2026-10-11");
     expect(page.mainEntity.numberOfItems).toBe(hubGuides(hub).length);
     expect(page.mainEntity.itemListElement[0].url).toMatch(/^https:\/\/somewhere\.party\/destinations\//);
-    expect(crumbs.itemListElement.map((i: { name: string }) => i.name)).toEqual(["Home", "Inspire", "Beach holidays"]);
+    expect(crumbs.itemListElement.map((i: { name: string }) => i.name)).toEqual(["Home", "Destinations", "Beach holidays"]);
     expect(faq["@type"]).toBe("FAQPage");
   });
 });
@@ -108,7 +115,7 @@ describe("a guide in a country with a hub", () => {
     const crumbs = (destinationMeta(d, { country: spain }).jsonLd as Record<string, any>[])[2];
     expect(crumbs.itemListElement.map((i: { name: string; position: number }) => [i.position, i.name])).toEqual([
       [1, "Home"],
-      [2, "Inspire"],
+      [2, "Destinations"],
       [3, "Spain"],
       [4, "Valencia"],
     ]);

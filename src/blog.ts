@@ -300,7 +300,7 @@ export function listingPath(tag: BlogTag | null, page: number): string {
 
 /** A page of posts' title in search results and the browser tab. */
 export function listingTitle(l: Pick<Listing, "tag" | "page">): string {
-  if (!l.tag) return l.page > 1 ? `Blog: deciding where to go on holiday, page ${l.page} | somewhere🎉` : PAGES.blog.title;
+  if (!l.tag) return l.page > 1 ? `Holiday ideas and advice: the somewhere🎉 blog, page ${l.page}` : PAGES.blog.title;
   return `${BLOG_TAGS[l.tag]}: articles and advice${l.page > 1 ? `, page ${l.page}` : ""} | somewhere🎉`;
 }
 

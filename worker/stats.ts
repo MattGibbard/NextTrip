@@ -163,7 +163,7 @@ function funnel(steps: { label: string; value: number | null }[]): string {
 /** Which part of the site a page belongs to. */
 export function section(path: string): string {
   if (path === "/") return "Home";
-  if (path === "/destinations" || path === "/destinations/") return "Inspire";
+  if (path === "/destinations" || path === "/destinations/") return "Destinations";
   const guide = path.match(/^\/destinations\/([^/]+)/);
   if (guide) return HUBS.has(guide[1]) ? "Holiday ideas pages" : "Destination guides";
   if (/^\/blog(\/|$)/.test(path)) return "Blog";

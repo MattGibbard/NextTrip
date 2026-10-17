@@ -104,6 +104,16 @@ export function infoJsonLd(page: InfoPage, updated?: string): unknown[] {
       author: { "@type": "Organization", name: "somewhere🎉", url: `${SITE}/` },
       publisher: { "@type": "Organization", name: "somewhere🎉", url: `${SITE}/`, logo: { "@type": "ImageObject", url: `${SITE}/icon-512.png` } },
     });
+    // It's the blog's main article, so it sits under the blog.
+    data.push({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+        { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE}/blog` },
+        { "@type": "ListItem", position: 3, name: c.hero.heading || infoTitle(page), item: url },
+      ],
+    });
   }
   if (c.faqs.items.length) {
     data.push({

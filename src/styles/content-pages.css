@@ -265,6 +265,17 @@
   margin: 0;
   line-height: 1.55;
 }
+/* The how-to-decide guide, pinned above the posts. */
+.bl-start-wrap {
+  padding-bottom: 16px;
+}
+.bl-start {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.bl-start p {
+  max-width: 640px;
+}
 .bl-date {
   font-size: var(--text-6);
   font-weight: 700;

@@ -36,11 +36,13 @@ export interface Hub {
   intro: string;
   seo_title: string;
   seo_description: string;
+  /** Longer writing under the guides, in the same form as a blog post's sections. */
+  sections: { heading: string; text: string }[];
   faqs: { question: string; answer: string }[];
 }
 
 /** What every page knows about each hub: enough to link to it. Its words load on its own page. */
-export type HubCard = Omit<Hub, "intro" | "seo_description" | "faqs">;
+export type HubCard = Omit<Hub, "intro" | "seo_description" | "sections" | "faqs">;
 
 const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
 
@@ -69,6 +71,10 @@ export function readHub(slug: string, raw: Record<string, unknown>): Hub {
     intro: str(raw.intro),
     seo_title: str(raw.seo_title),
     seo_description: str(raw.seo_description),
+    sections: (Array.isArray(raw.sections) ? raw.sections : [])
+      .filter((x): x is Record<string, unknown> => !!x && typeof x === "object")
+      .map((x) => ({ heading: str(x.heading), text: str(x.text) }))
+      .filter((x) => x.text),
     faqs: (Array.isArray(raw.faqs) ? raw.faqs : [])
       .filter((f): f is Record<string, unknown> => !!f && typeof f === "object")
       .map((f) => ({ question: str(f.question), answer: str(f.answer) }))
@@ -209,7 +215,7 @@ export function hubMeta(h: Hub, updated?: string): Meta {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
-        { "@type": "ListItem", position: 2, name: "Inspire", item: `${SITE}/destinations` },
+        { "@type": "ListItem", position: 2, name: "Destinations", item: `${SITE}/destinations` },
         { "@type": "ListItem", position: 3, name: h.name, item: url },
       ],
     },

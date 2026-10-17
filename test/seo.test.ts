@@ -69,6 +69,19 @@ describe("servePage", () => {
     expect(res.headers.get("Location")).toBe("https://somewhere.party/f/abc?x=1");
   });
 
+  it("sends a moved page on to where it is now, keeping the query", async () => {
+    const gone = { ASSETS: { fetch: async () => new Response("not found", { status: 404 }) } } as unknown as Env;
+    const res = await servePage(new Request("https://somewhere.party/blog/where-is-hot-at-christmas/?utm_source=x"), gone);
+    expect(res.status).toBe(301);
+    expect(res.headers.get("Location")).toBe("https://somewhere.party/destinations/where-to-go-in-december?utm_source=x");
+    expect((await servePage(new Request("https://somewhere.party/blog/nothing-here"), gone)).status).toBe(404);
+  });
+
+  it("never redirects away from a page that's still there", async () => {
+    const res = await servePage(new Request("https://somewhere.party/blog/where-is-hot-at-christmas"), env);
+    expect(res.status).toBe(200);
+  });
+
   it("serves family links the app shell with noindex", async () => {
     asked.length = 0;
     const res = await servePage(new Request("https://somewhere.party/f/abc"), env);

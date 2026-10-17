@@ -127,7 +127,7 @@
   color: var(--accent);
   background: var(--accent-soft);
 }
-/* On phones the header keeps just the Inspire link and the button; the rest come back on wider screens and are in the footer. */
+/* On phones the header keeps just the Destinations link and the button; the rest come back on wider screens and are in the footer. */
 .lp-nav a:not(.lp-nav-keep) {
   display: none;
 }
@@ -143,7 +143,20 @@
     font-size: var(--text-7);
   }
 }
-/* The narrowest phones drop the Inspire link too, so the button always fits; it's in the footer. */
+/* Smaller phones tighten the header so the Destinations link and the button both fit. */
+@media (max-width: 413px) {
+  .lp-top .lp-brand {
+    font-size: 1.05rem;
+  }
+  .lp-nav a {
+    padding: 10px 6px;
+    font-size: var(--text-7);
+  }
+  .lp-top .btn {
+    padding: 0.6rem;
+  }
+}
+/* The narrowest phones drop the Destinations link too, so the button always fits; it's in the footer. */
 @media (max-width: 374px) {
   .lp-nav {
     display: none;
@@ -799,7 +812,7 @@
   line-height: 1.2;
 }
 
-/* Popular guides: Inspire's cards, with the whole card linking to its guide */
+/* Popular guides: the Destinations page's cards, with the whole card linking to its guide */
 .dx-grid.lp-guides {
   grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
   list-style: none;

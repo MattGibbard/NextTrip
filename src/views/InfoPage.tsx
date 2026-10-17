@@ -6,7 +6,7 @@ import { InstagramIcon, SiteFooter, SiteHeader } from "../components/SiteFrame";
 /**
  * About, FAQ, Contact, How we make money and the how-to-decide guide: one layout, words edited at
  * /admin. A heading and introduction, then sections of text, an optional departures board of steps,
- * and optional questions and answers.
+ * and optional questions and answers. The how-to-decide guide is the blog's main article, so it sits in the Blog section.
  */
 export function InfoPage({ page }: { page: Page }) {
   const { hero, sections, board, faqs } = INFO[page];
@@ -15,10 +15,17 @@ export function InfoPage({ page }: { page: Page }) {
 
   return (
     <div className="lp lp-home lp-info">
-      <SiteHeader />
+      <SiteHeader current={page === "decide" ? "blog" : undefined} />
 
       <main>
         <header className="lp-wrap lp-info-head">
+          {page === "decide" && (
+            <nav aria-label="Breadcrumb" className="bl-crumbs">
+              <a href="/">Home</a>
+              <span aria-hidden>›</span>
+              <a href="/blog">Blog</a>
+            </nav>
+          )}
           {hero.kicker && <div className="lp-kicker">{hero.kicker}</div>}
           <h1>{hero.heading}</h1>
           {hero.lead && (

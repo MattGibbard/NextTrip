@@ -6,6 +6,8 @@ import { photoProps } from "../photos";
 import { SiteFooter, SiteHeader } from "../components/SiteFrame";
 import { PostCards, PostLink } from "../components/PostCards";
 import { RichText, anchor } from "./InfoPage";
+import { INFO } from "../infoPages";
+import { INFO_PAGES } from "../../shared/seo";
 
 /** How many other posts a post suggests at the bottom. */
 const MORE = 3;
@@ -65,6 +67,22 @@ function Pager({ listing: l }: { listing: Listing }) {
   );
 }
 
+/** The how-to-decide guide, the blog's main article, at the top of the blog and its deciding posts. */
+function StartHere() {
+  const { hero } = INFO.decide;
+  return (
+    <section className="lp-wrap bl-start-wrap" aria-label="Start here">
+      <article className="bl-card bl-start">
+        <span className="bl-date">Start here · Guide</span>
+        <h2>
+          <a href={INFO_PAGES.decide.path}>{hero.heading}</a>
+        </h2>
+        {hero.lead && <p className="muted">{hero.lead}</p>}
+      </article>
+    </section>
+  );
+}
+
 /** The blog's front page or a tag's page: a page of posts, newest first, with links to the other pages. */
 export function BlogList({ listing: l }: { listing: Listing }) {
   const label = l.tag ? BLOG_TAGS[l.tag] : null;
@@ -83,7 +101,7 @@ export function BlogList({ listing: l }: { listing: Listing }) {
             </nav>
           )}
           {!l.tag && <div className="lp-kicker">Blog</div>}
-          <h1>{label ?? "Deciding where to go"}</h1>
+          <h1>{label ?? "Holiday ideas and advice"}</h1>
           {l.tag ? (
             <p className="lp-lead">
               {l.total} {l.total === 1 ? "article" : "articles"} about {tagInSentence(l.tag)}, with ideas and advice for choosing where to go and planning the trip.{pageOf}
@@ -94,6 +112,8 @@ export function BlogList({ listing: l }: { listing: Listing }) {
         </header>
 
         <TagLinks current={l.tag ?? undefined} />
+
+        {l.page === 1 && (!l.tag || l.tag === "deciding-where-to-go") && <StartHere />}
 
         <section className="lp-wrap bl-list" aria-label="Posts">
           {l.posts.length === 0 ? <p className="muted">Nothing here yet. Come back soon.</p> : l.posts.map((p, i) => <PostLink key={p.slug} post={p} eager={i < 3} />)}

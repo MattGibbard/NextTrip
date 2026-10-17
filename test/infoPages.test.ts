@@ -42,7 +42,7 @@ describe("content pages", () => {
 
   it("give search engines the questions and the guide", () => {
     const types = infoJsonLd("decide", "2026-10-11").map((d) => (d as { "@type": string })["@type"]);
-    expect(types).toEqual(["Article", "FAQPage"]);
+    expect(types).toEqual(["Article", "BreadcrumbList", "FAQPage"]);
     expect(infoJsonLd("about")).toEqual([]);
     expect(plainText("See **this** and [that](/faq).\n- item")).toBe("See this and that. item");
     expect(headTags("faq", { jsonLd: infoJsonLd("faq") })).toContain('"@type":"FAQPage"');

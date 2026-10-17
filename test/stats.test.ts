@@ -253,7 +253,7 @@ it("still shows the site's numbers when page visits aren't connected", async () 
 it("sorts pages into parts of the site", async () => {
   const { section } = await import("../worker/stats");
   expect(section("/")).toBe("Home");
-  expect(section("/destinations")).toBe("Inspire");
+  expect(section("/destinations")).toBe("Destinations");
   expect(section("/destinations/levi")).toBe("Destination guides");
   expect(section("/destinations/beach-holidays")).toBe("Holiday ideas pages");
   expect(section("/blog/tag/europe")).toBe("Blog");

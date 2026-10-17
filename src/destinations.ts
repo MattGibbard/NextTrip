@@ -314,7 +314,7 @@ export function destinationMeta(d: Destination, { updated, published, country }:
       "@type": "BreadcrumbList",
       itemListElement: [
         { name: "Home", item: `${SITE}/` },
-        { name: "Inspire", item: `${SITE}/destinations` },
+        { name: "Destinations", item: `${SITE}/destinations` },
         ...(country ? [{ name: country.name, item: SITE + destinationPath(country.slug) }] : []),
         { name: d.name, item: url },
       ].map((crumb, i) => ({ "@type": "ListItem", position: i + 1, ...crumb })),

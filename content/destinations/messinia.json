@@ -1,0 +1,200 @@
+{
+  "name": "Messinia",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Messinia",
+  "intro": "Olive groves, sandy bays and Venetian castles in the quiet south-west corner of Greece's Peloponnese, around Kalamata. Here's what Messinia is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/messinia-1752729_1280.webp",
+  "image_alt": "Voidokilia beach, a perfect sandy horseshoe bay with turquoise water, seen from the hillside above near Pylos in Messinia",
+  "wikipedia": "https://en.wikipedia.org/wiki/Messenia",
+  "to_code": "KLX",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Most UK flights to Kalamata run from spring to autumn, so check the timetable. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring flowers",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm, green",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quiet beaches",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sea warming",
+      "temp": 30
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busier",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busier",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm, olive harvest starts",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, olive harvest",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 16
+    }
+  },
+  "when_to_go": "May, June and September are the best months, hot and sunny with a warm sea and quiet beaches. July and August are hot, often over 30°C, but still far calmer than the islands. April and October are lovely for walking and sightseeing. In winter the region is mild and green, and the olive harvest runs from late autumn.",
+  "things": [
+    {
+      "name": "Voidokilia beach",
+      "tag": "Free",
+      "blurb": "A near-perfect horseshoe of sand and shallow turquoise water, a short drive north of Pylos. Climb to the castle above for the famous view.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ancient Messene",
+      "tag": "Ticketed",
+      "blurb": "A huge, little-visited ancient city with a stadium, theatre and city walls in a quiet valley.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Methoni Castle",
+      "tag": "Ticketed",
+      "blurb": "A Venetian fortress on a headland, joined to a small sea tower by a stone bridge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pylos and Navarino Bay",
+      "tag": "Free",
+      "blurb": "A pretty harbour town on the bay where a famous naval battle helped win Greek independence. Boat trips run around the bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kardamyli and the Messinian Mani",
+      "tag": "Day trip",
+      "blurb": "Stone villages, pebble coves and walking paths below the Taygetos mountains, south of Kalamata.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Polylimnio waterfalls",
+      "tag": "Outdoors",
+      "blurb": "A string of green pools and small waterfalls in a gorge, reached by a short walk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kalamata",
+      "tag": "Free",
+      "blurb": "The region's easy-going capital, with a long town beach, an old town, a castle and the famous olives.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Messinia from the UK?",
+      "answer": "Fly to Kalamata. Several UK airlines fly direct from spring to autumn. In winter you'll usually go via Athens, about three hours' drive away."
+    },
+    {
+      "question": "Do you need a car in Messinia?",
+      "answer": "Yes, really. Buses link Kalamata with Pylos and the main towns, but the beaches, castles and villages are much easier with a car."
+    },
+    {
+      "question": "Is Messinia good for a beach holiday?",
+      "answer": "Yes. There are long sandy beaches on the west coast, sheltered bays around Pylos and pebble coves towards the Mani."
+    },
+    {
+      "question": "How many days do you need in Messinia?",
+      "answer": "A week gives time for beaches, castles and Ancient Messene. Ten days lets you add the Mani at an easy pace."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kefalonia",
+      "code": "EFL",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Zakynthos",
+      "code": "ZTH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Puglia",
+      "code": "BRI",
+      "label": "🍷 Food & drink"
+    }
+  ],
+  "date": "2026-10-17T05:45:20Z",
+  "updated": "2026-10-17T05:45:20Z"
+}

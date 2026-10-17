@@ -1,0 +1,200 @@
+{
+  "name": "Busan",
+  "published": true,
+  "country": "KR",
+  "title": "Holidays in Busan",
+  "intro": "City beaches, temples on the rocks and a colourful hillside village in South Korea's laid-back second city. Here's what Busan is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/busan-3476918_1280.webp",
+  "image_alt": "The brightly painted houses of Gamcheon Culture Village climbing a hillside in Busan, with green hills behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Busan",
+  "to_code": "PUS",
+  "holiday_types": [
+    "city",
+    "beach",
+    "food"
+  ],
+  "nights": "4 to 6",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs ahead of the UK (9 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "South Korean won (₩)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders are currently exempt from Korea's K-ETA, but the rules can change, so check GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, dry, sunny",
+      "temp": 8
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, dry",
+      "temp": 10
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Cherry blossom",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm, rainy season starts",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, humid, rainy",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, beach season",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm, typhoon risk",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Film festival, clear",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Crisp, autumn colour",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold, clear",
+      "temp": 11
+    }
+  },
+  "when_to_go": "April, May, October and November are the best months, with mild, clear days for walking the coast and hills. Cherry blossom usually peaks in early April, and the Busan International Film Festival is in early October. July and August are hot and humid, with the beaches at their busiest. The rainy season runs from late June into July, and typhoons can pass in late summer. Winter is cold but mostly dry and sunny.",
+  "things": [
+    {
+      "name": "Gamcheon Culture Village",
+      "tag": "Free",
+      "blurb": "A hillside of brightly painted houses, murals and little galleries. Pick up a stamp map and follow the trail.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Haeundae Beach",
+      "tag": "Free",
+      "blurb": "Busan's most famous city beach, with a seafront promenade and the coastal Blueline Park trains and sky capsules next door.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Haedong Yonggungsa Temple",
+      "tag": "Free",
+      "blurb": "A Buddhist temple perched on rocks above the sea, at its best in the early morning.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jagalchi Fish Market",
+      "tag": "Free",
+      "blurb": "Korea's biggest fish market. Choose seafood downstairs and have it cooked for you upstairs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gwangalli Beach",
+      "tag": "Free",
+      "blurb": "A sandy beach facing the Gwangan Bridge, which lights up after dark. Lined with cafés and bars.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Beomeosa Temple",
+      "tag": "Free",
+      "blurb": "A mountain temple on Geumjeongsan, with walking trails to the old fortress walls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gyeongju",
+      "tag": "Day trip",
+      "blurb": "The ancient capital of the Silla kingdom, with royal tombs and temples, a short fast-train ride away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Busan from the UK?",
+      "answer": "There are no direct flights from the UK. Fly to Seoul and take the KTX fast train, which takes under three hours, or connect through a hub to Busan's Gimhae airport."
+    },
+    {
+      "question": "Is Busan worth visiting as well as Seoul?",
+      "answer": "Yes. It's more relaxed than Seoul, with beaches, seafood, temples by the sea and a coastline you can walk."
+    },
+    {
+      "question": "How many days do you need in Busan?",
+      "answer": "Three to four days covers the main sights and a beach day. Add a day for Gyeongju."
+    },
+    {
+      "question": "When is the best time to visit Busan?",
+      "answer": "Spring and autumn are best, with mild, clear weather. Summer is hot and humid, with the busiest beaches."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Seoul",
+      "code": "ICN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Tokyo",
+      "code": "HND",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Okinawa",
+      "code": "OKA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Kanazawa",
+      "code": "KMQ",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-17T05:45:20Z",
+  "updated": "2026-10-17T05:45:20Z"
+}

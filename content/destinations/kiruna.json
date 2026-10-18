@@ -1,0 +1,192 @@
+{
+  "name": "Kiruna",
+  "published": true,
+  "country": "SE",
+  "title": "Holidays in Kiruna",
+  "intro": "Northern lights, the original Icehotel and the midnight sun in Swedish Lapland, far above the Arctic Circle. Here's what Kiruna is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/kiruna-225452_1280.webp",
+  "image_alt": "Green and violet northern lights in a starry sky above dark snowy hills near Abisko in Swedish Lapland",
+  "wikipedia": "https://en.wikipedia.org/wiki/Kiruna",
+  "to_code": "KRN",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Swedish krona (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Sweden is almost cashless, so a card without foreign fees is handy. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Very cold, short days",
+      "temp": -10
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Snow, northern lights",
+      "temp": -9
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Snow, longer days",
+      "temp": -5
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Snow, bright",
+      "temp": 0
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Thaw",
+      "temp": 6
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Midnight sun",
+      "temp": 14
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Midnight sun, hiking",
+      "temp": 17
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hiking",
+      "temp": 15
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn colour, lights",
+      "temp": 9
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Dark, little snow",
+      "temp": 1
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Dark, early snow",
+      "temp": -5
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Polar night, festive",
+      "temp": -8
+    }
+  },
+  "when_to_go": "February and March are the best time for a winter trip, with deep snow, longer days and good chances of the northern lights on clear nights. The Icehotel usually opens in December and lasts until spring. From late May to mid-July the sun doesn't set, and summer is lovely for hiking. The northern lights season runs from about September to March.",
+  "things": [
+    {
+      "name": "Icehotel",
+      "tag": "Ticketed",
+      "blurb": "The original ice hotel in Jukkasjärvi, rebuilt from river ice every winter. Stay a night or visit the art suites by day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Abisko National Park",
+      "tag": "Outdoors",
+      "blurb": "Famous for clear skies and northern lights, with a chairlift up to the Aurora Sky Station on winter nights.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Husky sledding",
+      "tag": "Tour",
+      "blurb": "Drive your own team through snowy forest, from a couple of hours to a few days.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sami culture",
+      "tag": "Tour",
+      "blurb": "Meet reindeer herders and learn about Sami life on a guided visit near Kiruna.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kungsleden",
+      "tag": "Outdoors",
+      "blurb": "Walk part of Sweden's most famous hiking trail from Abisko in summer, under the midnight sun.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kiruna's moving town",
+      "tag": "Free",
+      "blurb": "The town centre is being rebuilt a few kilometres east, as the iron ore mine beneath it grows. The new centre and old wooden church are worth a wander.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "When can you see the northern lights in Kiruna?",
+      "answer": "On clear, dark nights from about September to March. Abisko, an hour or so away, is known for clear skies."
+    },
+    {
+      "question": "How do you get to Kiruna from the UK?",
+      "answer": "There are no direct flights. Fly via Stockholm, or another hub with a seasonal route, to Kiruna airport."
+    },
+    {
+      "question": "How cold is Kiruna in winter?",
+      "answer": "Daytime highs are often around -10°C in January and can drop much lower at night. Tour companies usually lend warm outer clothing."
+    },
+    {
+      "question": "How many days do you need in Kiruna?",
+      "answer": "Four or five nights gives you several chances to see the northern lights, plus time for huskies and the Icehotel."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tromsø",
+      "code": "TOS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Levi",
+      "code": "KTT",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lofoten",
+      "code": "BOO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Rovaniemi",
+      "code": "RVN",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-18T05:45:55Z",
+  "updated": "2026-10-18T05:45:55Z"
+}

@@ -1,0 +1,200 @@
+{
+  "name": "Lyon",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Lyon",
+  "intro": "Roman ruins, hidden passageways and some of France's best food in a relaxed city where two rivers meet. Here's what Lyon is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/lyon-4392678_1280.webp",
+  "image_alt": "Lyon's Hôtel de Ville and old rooftops, with the white Basilica of Notre-Dame de Fourvière on the green hill behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lyon",
+  "to_code": "LYS",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 7
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 8
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, terraces",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, long evenings",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, quieter",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild, autumn food",
+      "temp": 18
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool, grey",
+      "temp": 12
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festival of Lights",
+      "temp": 8
+    }
+  },
+  "when_to_go": "April to June and September are the best months, warm enough for long lunches outside and evening walks by the rivers. July and August are hot and some restaurants close for the August holidays. The Festival of Lights in early December fills the city with light shows and crowds, so book early. Winter is cold and grey but cosy, with good food to hide from it in.",
+  "things": [
+    {
+      "name": "Vieux Lyon and the traboules",
+      "tag": "Free",
+      "blurb": "Renaissance lanes in the old town, with hidden covered passageways that cut between the streets. Some courtyards are open to walk through.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fourvière Hill",
+      "tag": "Free",
+      "blurb": "Ride the funicular up to the basilica for a view over the city, then walk down past the Roman theatres.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Les Halles de Lyon Paul Bocuse",
+      "tag": "Free",
+      "blurb": "The city's covered food market, with cheese, charcuterie, oysters and places to eat at the counter.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Eat in a bouchon",
+      "tag": "Indoors",
+      "blurb": "Lyon's traditional bistros serve hearty local dishes. Look for the Bouchons Lyonnais plaque.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Musée des Confluences",
+      "tag": "Ticketed",
+      "blurb": "A striking science and anthropology museum where the Rhône and Saône meet.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Parc de la Tête d'Or",
+      "tag": "Free",
+      "blurb": "A huge city park with a lake, rose gardens, glasshouses and a free zoo.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Croix-Rousse",
+      "tag": "Free",
+      "blurb": "The old silk-weavers' hill, with steep stairways, murals and a lively morning market.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Lyon from the UK?",
+      "answer": "Direct flights run from several UK airports. You can also take the Eurostar to Paris and a fast TGV from there, about two hours."
+    },
+    {
+      "question": "Is Lyon worth visiting?",
+      "answer": "Yes, especially if you love food. It's easier going than Paris, with a beautiful old town, Roman sites and easy day trips to the Alps and Beaujolais."
+    },
+    {
+      "question": "How many days do you need in Lyon?",
+      "answer": "Two to three days covers the old town, Fourvière, the markets and a few long meals. Add a day for Annecy or the Beaujolais vineyards."
+    },
+    {
+      "question": "When is the Lyon Festival of Lights?",
+      "answer": "The Fête des Lumières is held over four nights around 8 December, with light shows on buildings across the city."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Annecy",
+      "code": "GVA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Strasbourg",
+      "code": "SXB",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Dordogne",
+      "code": "EGC",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Colmar",
+      "code": "BSL",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-18T05:45:55Z",
+  "updated": "2026-10-18T05:45:55Z"
+}

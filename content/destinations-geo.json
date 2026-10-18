@@ -309,6 +309,11 @@
     "lat": 12.1165,
     "lon": -61.679
   },
+  "guadeloupe": {
+    "query": "Guadeloupe|GP",
+    "lat": 16.2529,
+    "lon": -61.5687
+  },
   "halifax": {
     "query": "Halifax|CA",
     "lat": 44.6476,
@@ -368,6 +373,11 @@
     "query": "Kerala|IN",
     "lat": 10.1632,
     "lon": 76.6413
+  },
+  "kiruna": {
+    "query": "Kiruna|SE",
+    "lat": 67.8496,
+    "lon": 20.3063
   },
   "koh-lanta": {
     "query": "Koh Lanta|TH",
@@ -443,6 +453,11 @@
     "query": "Luang Prabang|LA",
     "lat": 19.8856,
     "lon": 102.1347
+  },
+  "lyon": {
+    "query": "Lyon|FR",
+    "lat": 45.7578,
+    "lon": 4.832
   },
   "maasai-mara": {
     "query": "Maasai Mara|KE",

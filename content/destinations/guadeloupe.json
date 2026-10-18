@@ -1,0 +1,200 @@
+{
+  "name": "Guadeloupe",
+  "published": true,
+  "country": "GP",
+  "title": "Holidays in Guadeloupe",
+  "intro": "Butterfly-shaped French islands in the Caribbean, with rainforest waterfalls, a volcano and long sandy beaches. Here's what Guadeloupe is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/guadeloupe-1656604_1280.webp",
+  "image_alt": "Waves rolling onto a sandy beach at Pointe des Châteaux in Guadeloupe, with rock stacks and a green headland topped by a cross",
+  "wikipedia": "https://en.wikipedia.org/wiki/Guadeloupe",
+  "to_code": "PTP",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "food"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 to 5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Your passport needs at least 3 months left after you leave. There are no direct flights from the UK, so most people change in Paris. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 28
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 28
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Driest month",
+      "temp": 29
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Dry, warm",
+      "temp": 29
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm, showers start",
+      "temp": 30
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, showers",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, showers",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Wettest",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Showers ease",
+      "temp": 30
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry season starts",
+      "temp": 29
+    }
+  },
+  "when_to_go": "December to April is the best time, the dry season, with sunshine, trade winds and calm seas. May to July is hotter with more showers but quieter. August to October is the peak of the Atlantic hurricane season and the wettest time, so many places close for a break. Carnival brings parades on most weekends from January until Lent.",
+  "things": [
+    {
+      "name": "Pointe des Châteaux",
+      "tag": "Free",
+      "blurb": "Wild rocks and a lookout cross at the eastern tip of Grande-Terre, with beaches either side.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Deshaies",
+      "tag": "Free",
+      "blurb": "A pretty fishing village on Basse-Terre where Death in Paradise is filmed, close to the long golden beach at Grande Anse.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Carbet Falls",
+      "tag": "Outdoors",
+      "blurb": "Waterfalls in the rainforest of Guadeloupe National Park. The second fall is an easy walk from the car park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "La Soufrière",
+      "tag": "Outdoors",
+      "blurb": "Climb the steaming volcano, the highest point in the Lesser Antilles. Go early before the cloud rolls in.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cousteau Reserve",
+      "tag": "Tour",
+      "blurb": "Snorkel or dive with turtles and fish around the Pigeon Islands, by boat from Malendure beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Les Saintes",
+      "tag": "Day trip",
+      "blurb": "A ferry ride to a tiny group of islands with a pretty bay, a fort and a very French village.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sainte-Anne",
+      "tag": "Free",
+      "blurb": "A lively beach town on Grande-Terre with calm, shallow water and a busy market.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Guadeloupe from the UK?",
+      "answer": "There are no direct flights. Most people fly via Paris with Air France, or via another Caribbean island. Allow most of a day each way."
+    },
+    {
+      "question": "Is Guadeloupe part of France?",
+      "answer": "Yes. It's an overseas region of France, so it uses the euro, French is the main language and many shops and restaurants keep French hours."
+    },
+    {
+      "question": "Which island is best to stay on in Guadeloupe?",
+      "answer": "Grande-Terre has the white-sand beaches and resorts. Basse-Terre has the rainforest, the volcano and quieter black and golden beaches. Many people split their stay."
+    },
+    {
+      "question": "Do you need a car in Guadeloupe?",
+      "answer": "Yes, really. Buses are limited, and a car makes the beaches, waterfalls and villages much easier to reach. They drive on the right."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Dominica",
+      "code": "DOM",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "St Lucia",
+      "code": "UVF",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Antigua",
+      "code": "ANU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Grenada",
+      "code": "GND",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-18T05:45:55Z",
+  "updated": "2026-10-18T05:45:55Z"
+}

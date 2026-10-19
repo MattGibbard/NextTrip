@@ -168,6 +168,7 @@ export function section(path: string): string {
   if (guide) return HUBS.has(guide[1]) ? "Holiday ideas pages" : "Destination guides";
   if (/^\/blog(\/|$)/.test(path)) return "Blog";
   if (path.startsWith("/how-it-works")) return "How it works";
+  if (path.startsWith("/holiday-picker")) return "Holiday picker";
   if (/^\/(signin|f\/|p\/)/.test(path)) return "Sign-in and family links";
   return "Other pages";
 }
@@ -178,6 +179,7 @@ const BOOK_PLACE_NAMES: Record<string, string> = {
   idea_page: "Idea pages",
   been_page: "Been trip pages",
   trip_plan: "Trip plans",
+  holiday_picker: "Holiday picker",
 };
 
 /** Google's thresholds for a good, middling and poor page experience. */

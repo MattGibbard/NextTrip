@@ -1,0 +1,877 @@
+/* The holiday picker (src/views/HolidayPicker.tsx): ticket-stub questions, a full-screen draw on the
+   departures board, and the result page with its sign-up nudge. */
+.hp h1,
+.hp h2,
+.hp h3,
+.hp p {
+  margin: 0;
+}
+.hp-crumbs {
+  font-size: var(--text-7);
+  color: var(--muted);
+}
+.hp-crumbs a {
+  color: var(--muted);
+}
+
+/* ---------- The questions ---------- */
+.hp-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  max-width: 880px;
+  padding-top: 40px;
+  padding-bottom: 28px;
+  text-align: center;
+}
+.hp-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  max-width: 14em;
+}
+.hp-hero .lp-lead {
+  max-width: 34em;
+}
+.hp-quiz {
+  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 64px;
+}
+
+/* The four questions as ticket stubs: a number stub, a perforation, then the answer. */
+.hp-stubs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.hp-stub {
+  display: flex;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.hp-stub-num {
+  flex: 0 0 40px;
+  display: grid;
+  place-items: center;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font: 500 var(--text-8) var(--mono);
+}
+.hp-stub-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 0;
+  border-left: 2px dashed var(--border);
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text);
+}
+.hp-stub-body strong {
+  font-size: var(--text-7);
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hp-stub-label {
+  font: 500 var(--text-3) var(--mono);
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+.hp-stub.now {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.hp-stub.now .hp-stub-num,
+.hp-stub.now .hp-stub-body,
+.hp-stub.now .hp-stub-label {
+  background: none;
+  color: var(--accent-text);
+}
+.hp-stub.now .hp-stub-body {
+  border-left-color: color-mix(in srgb, var(--accent-text) 50%, transparent);
+  cursor: default;
+}
+.hp-stub.next {
+  background: var(--surface-2);
+  border-style: dashed;
+}
+.hp-stub.next .hp-stub-num {
+  background: none;
+  color: var(--muted);
+}
+.hp-stub.next strong {
+  color: var(--muted);
+}
+.hp-stub-body:hover strong {
+  color: var(--accent);
+}
+.hp-stub.now .hp-stub-body:hover strong {
+  color: var(--accent-text);
+}
+
+/* Phones: a progress line, then the answers so far with Change buttons. */
+.hp-phone-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hp-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font: 500 var(--text-4) var(--mono);
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+.hp-dots {
+  display: flex;
+  gap: 4px;
+}
+.hp-dots span {
+  width: 28px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--border);
+}
+.hp-dots span.on {
+  background: var(--accent);
+}
+.hp-done {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 8px 8px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-row);
+}
+.hp-done-tick {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-round);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: var(--text-7);
+}
+.hp-done-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.hp-done-text strong {
+  font-size: var(--text-8);
+}
+@media (min-width: 760px) {
+  .hp-stubs {
+    display: grid;
+  }
+  .hp-phone-steps {
+    display: none;
+  }
+}
+
+/* The question being answered. */
+.hp-card {
+  margin: 0;
+  min-width: 0;
+  padding: 24px 18px 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pass);
+  box-shadow: var(--shadow-pass);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  scroll-margin-top: 16px;
+}
+.hp-card-head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hp-ticket {
+  font: 500 var(--text-4) var(--mono);
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+.hp-card h2 {
+  font-size: var(--text-15);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+@media (min-width: 760px) {
+  .hp-card {
+    padding: 32px 32px 0;
+    gap: 22px;
+  }
+  .hp-card h2 {
+    font-size: var(--text-18);
+  }
+}
+
+.hp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.hp-chip {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+}
+.hp-chip:hover {
+  border-color: var(--accent);
+}
+.hp-chip.on {
+  background: var(--accent-soft);
+  border: 2px solid var(--accent);
+  padding: 0 15px;
+}
+
+/* Radio buttons drawn as cards (budget, trip length) or tiles (months). */
+.hp-months {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+@media (min-width: 760px) {
+  .hp-months {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+.hp-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+.hp-choice {
+  position: relative;
+  display: flex;
+  border-radius: var(--radius-row);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+}
+.hp-choice:hover {
+  border-color: var(--accent);
+}
+.hp-choice input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.hp-choice:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.hp-choice-body {
+  flex: 1;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+.hp-choice.wide {
+  grid-column: 1 / -1;
+}
+.hp-choice.big {
+  border-radius: var(--radius-card-lg);
+}
+.hp-choice.big .hp-choice-body {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 6px;
+  padding: 16px 18px;
+}
+.hp-choice.big strong {
+  font-size: var(--text-10);
+}
+.hp-option-mark {
+  font: 500 var(--text-15) var(--mono);
+}
+.hp-choice.on {
+  border: 2px solid var(--accent);
+  background: var(--accent-soft);
+}
+.hp-choice.on .hp-choice-body {
+  padding: 7px;
+}
+.hp-choice.big.on .hp-choice-body {
+  padding: 15px 17px;
+}
+.hp-choice.on .muted {
+  color: var(--text);
+}
+@media (min-width: 760px) {
+  .hp-choice.big .hp-choice-body {
+    min-height: 130px;
+  }
+}
+.hp-from {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 360px;
+}
+.hp-from select {
+  min-height: 48px;
+}
+
+.hp-none {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: var(--radius-row);
+  background: var(--surface-2);
+}
+.hp-none-fixes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Back, the running count and Next. On phones it sticks to the bottom of the screen. */
+.hp-actions {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 -18px;
+  padding: 14px 18px calc(14px + env(safe-area-inset-bottom));
+  background: var(--surface);
+  border-top: 1px dashed var(--border);
+  border-radius: 0 0 var(--radius-pass) var(--radius-pass);
+}
+.hp-count {
+  flex: 1;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.hp-count-n {
+  color: var(--accent);
+  font-size: var(--text-15);
+  font-weight: 800;
+}
+.hp-back,
+.hp-next {
+  min-height: 48px;
+}
+.hp-back-word,
+.hp-next-word,
+.hp-count-sub {
+  display: none;
+}
+@media (min-width: 760px) {
+  .hp-actions {
+    position: static;
+    margin: 0 -32px;
+    padding: 20px 32px 24px;
+  }
+  .hp-back-word,
+  .hp-next-word,
+  .hp-count-sub {
+    display: inline;
+  }
+  .hp-next {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+/* How it works, holiday types and questions, under the quiz. */
+.hp-more {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 72px;
+}
+.hp-more-col {
+  flex: 1 1 380px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.hp-more h2 {
+  font-size: var(--text-18);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.hp-more h3 {
+  margin-top: 8px;
+  font-size: var(--text-11);
+}
+.hp-hubs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.hp-hub {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+.hp-hub:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.hp-more details {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-row);
+  padding: 16px;
+}
+.hp-more summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+.hp-more details p {
+  margin-top: 8px;
+}
+
+/* ---------- The draw ---------- */
+body.hp-locked {
+  overflow: hidden;
+}
+.hp-draw {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  overflow-y: auto;
+  background: var(--board);
+  color: var(--on-photo);
+}
+.hp-draw-inner {
+  max-width: 1080px;
+  min-height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 16px 16px calc(28px + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.hp-draw-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.hp-draw-top .lp-brand {
+  color: var(--on-photo);
+  display: none;
+}
+.hp-draw-meta {
+  font: 500 var(--text-4) var(--mono);
+  letter-spacing: 0.14em;
+  color: var(--board-muted);
+}
+.hp-draw-close {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--board-line);
+  background: transparent;
+  color: var(--on-photo);
+  font-size: var(--text-12);
+  cursor: pointer;
+}
+.hp-draw-word {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0 4px;
+  text-align: center;
+}
+.hp-draw-status {
+  font: 500 var(--text-4) var(--mono);
+  letter-spacing: 0.16em;
+  color: #fbbf24;
+}
+.hp-draw-status.lit {
+  color: var(--board-lit);
+}
+.hp-draw-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px 20px;
+  margin-top: auto;
+}
+.hp-draw-progress {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hp-draw-progress-text {
+  display: flex;
+  justify-content: space-between;
+  font: 500 var(--text-3) var(--mono);
+  letter-spacing: 0.14em;
+  color: var(--board-dim);
+}
+.hp-draw-bar {
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--board-line);
+}
+.hp-draw-bar div {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  background: var(--board-lit);
+  transition: width 0.3s ease;
+}
+.hp-draw-skip {
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--board-line);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--board-dim);
+  font-weight: 600;
+  cursor: pointer;
+}
+@media (min-width: 760px) {
+  .hp-draw-inner {
+    padding-top: 28px;
+    gap: 28px;
+  }
+  .hp-draw-top .lp-brand {
+    display: inline;
+  }
+}
+
+/* A word in big split flaps: the winner's name. */
+.hp-flaps {
+  --flap: min(52px, calc((100vw - 32px) / var(--n) - 4px));
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.hp-flap {
+  position: relative;
+  width: var(--flap);
+  height: calc(var(--flap) * 1.38);
+  display: inline-grid;
+  place-items: center;
+  border-radius: var(--radius-flap);
+  border: 1px solid #222b27;
+  background: #161d1a;
+  font: 500 calc(var(--flap) * 0.8) / 1 var(--mono);
+  color: var(--board-dim);
+  overflow: hidden;
+}
+.hp-flap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px solid rgb(0 0 0 / 0.6);
+}
+.hp-flaps.lit .hp-flap {
+  color: var(--board-lit);
+}
+@media (min-width: 760px) {
+  .hp-flaps {
+    --flap: min(64px, calc((100vw - 64px) / var(--n) - 6px));
+    gap: 6px;
+  }
+  .hp-flaps.small {
+    --flap: min(54px, calc((100vw - 64px) / var(--n) - 6px));
+    gap: 5px;
+  }
+}
+
+/* ---------- The result ---------- */
+.hp-band {
+  background: var(--board);
+  color: var(--on-photo);
+}
+.hp-band-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.hp-band-word {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 100%;
+}
+.hp-band-word .hp-flaps {
+  justify-content: flex-start;
+}
+.hp-band-kicker {
+  font: 500 var(--text-4) var(--mono);
+  letter-spacing: 0.16em;
+  color: var(--board-lit);
+}
+.hp-band-facts {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  font-family: var(--mono);
+}
+.hp-band-facts dt {
+  font-size: var(--text-3);
+  letter-spacing: 0.14em;
+  color: var(--board-muted);
+}
+.hp-band-facts dd {
+  margin: 4px 0 0;
+  font-size: var(--text-13);
+}
+
+.hp-result {
+  display: grid;
+  gap: 32px 40px;
+  padding-top: 28px;
+  padding-bottom: 72px;
+}
+.hp-result-main,
+.hp-result-side {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.hp-result-head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hp-result h1 {
+  font-size: clamp(1.9rem, 4.5vw, 2.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.hp-photo {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-sheet);
+  overflow: hidden;
+  background: var(--accent);
+  box-shadow: var(--shadow-pass-card);
+  display: grid;
+  place-items: center;
+  color: var(--accent-text);
+  font: 500 var(--text-22) var(--mono);
+}
+.hp-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hp-why {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hp-why h2,
+.hp-also h2 {
+  font-size: var(--text-16);
+  font-weight: 800;
+  line-height: 1.2;
+}
+.hp-why p {
+  font-size: var(--text-10);
+  line-height: 1.6;
+}
+.hp-guide-link {
+  font-weight: 700;
+  color: var(--accent);
+}
+.hp-share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.hp-share strong {
+  flex: 1 1 200px;
+}
+.hp-share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.hp-nudge {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  border-radius: var(--radius-card-lg);
+  background: var(--accent-soft);
+}
+.hp-nudge h2,
+.hp-book h2 {
+  font-size: var(--text-15);
+  font-weight: 800;
+  line-height: 1.2;
+}
+.hp-nudge ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: var(--text-8);
+}
+.hp-nudge-note {
+  text-align: center;
+}
+.hp-book {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card-lg);
+}
+.hp-book-link {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: var(--radius-row);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+.hp-book-link:hover {
+  border-color: var(--accent);
+}
+.hp-book-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+.hp-book-text .muted {
+  font-weight: 500;
+}
+
+.hp-also {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.hp-also ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+.hp-also a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-row);
+  color: var(--text);
+  text-decoration: none;
+}
+.hp-also a:hover {
+  border-color: var(--accent);
+}
+.hp-also a span {
+  font-size: var(--text-15);
+}
+
+/* Phones keep "Save to my ideas" in reach at the bottom of the screen. */
+.hp-sticky {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -8px 24px rgb(0 0 0 / 0.08);
+}
+@media (min-width: 760px) {
+  .hp-sticky {
+    display: none;
+  }
+}
+@media (min-width: 960px) {
+  .hp-result {
+    grid-template-columns: minmax(0, 1fr) 360px;
+    align-items: start;
+  }
+  .hp-also {
+    grid-column: 1 / -1;
+  }
+}

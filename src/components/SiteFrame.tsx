@@ -17,11 +17,12 @@ export function Frame({ children }: { children: ReactNode }) {
 }
 
 /** The sections the header links to, so a page can light up the one it belongs to. */
-export type SiteSection = "how" | "inspire" | "blog";
+export type SiteSection = "how" | "inspire" | "picker" | "blog";
 
 const NAV: { id: SiteSection; label: string; href: string }[] = [
   { id: "how", label: "How it works", href: "/how-it-works" },
   { id: "inspire", label: "Destinations", href: "/destinations" },
+  { id: "picker", label: "Holiday picker", href: "/holiday-picker" },
   { id: "blog", label: "Blog", href: "/blog" },
 ];
 
@@ -253,6 +254,11 @@ export function SiteFooter({ sections = false, signedIn = false }: { sections?: 
                     </a>
                   </li>
                 ))}
+                <li>
+                  <a href="/holiday-picker">
+                    <span aria-hidden>🎟️</span> Random holiday picker
+                  </a>
+                </li>
                 <li>
                   <a className="lp-foot-all" href="/destinations">
                     All destinations →

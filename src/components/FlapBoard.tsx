@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import { useMedia } from "../useMedia";
+import "../styles/flap-board.css";
 
 /** One idea on the departures board. */
 export interface BoardRow {

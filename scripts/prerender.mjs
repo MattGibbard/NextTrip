@@ -64,7 +64,8 @@ try {
     if (!file) throw new Error(`No ${name} styles in the build`);
     return `\n    <link rel="stylesheet" crossorigin href="/assets/${file}">`;
   };
-  const pageStyles = { how: ownStyles("HowItWorks") };
+  const pageStyles = { how: ownStyles("HowItWorks"), picker: ownStyles("HolidayPicker") };
+  const pageStyle = (page) => pageStyles[page.startsWith("pick:") ? "picker" : page] ?? "";
   // The Guides pages' code (every guide's card) loads on its own too, so those pages start fetching it
   // alongside the site's own code instead of after it.
   const guidesCode = assets.find((f) => f.startsWith("GuideView-") && f.endsWith(".js"));
@@ -76,7 +77,7 @@ try {
   const preload = (page) =>
     (guidePage(page) ? `\n    <link rel="modulepreload" crossorigin href="/assets/${guidesCode}">` : "") +
     (passPage(page) ? `\n    <link rel="preload" href="/fonts/dm-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin>` : "");
-  const styled = (page) => base.replace(cssLink[0], () => `\n    <style>${css}</style>${pageStyles[page] ?? ""}${preload(page)}`);
+  const styled = (page) => base.replace(cssLink[0], () => `\n    <style>${css}</style>${pageStyle(page)}${preload(page)}`);
 
   const list = pages().map((p) => ({ ...p, updated: gitDate(p.source), published: gitDate(p.source, true) }));
   for (const { page, file, updated, published } of list) {

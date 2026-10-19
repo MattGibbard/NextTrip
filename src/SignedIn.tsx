@@ -14,10 +14,12 @@ import "./styles/draw.css";
 import "./styles/onboarding.css";
 import "./styles/postcard.css";
 import "./styles/share.css";
-import type { FamilyData, Person } from "../shared/types";
+import type { FamilyData, IdeaInput, Person } from "../shared/types";
 import type { SignedInSession } from "./lastFamily";
 import { DataProvider, useData } from "./data";
-import { findDestination } from "./destinations";
+import { findDestination, ideaFromDestination } from "./destinations";
+import { PICKED_IDEA } from "./picker";
+import { api } from "./api";
 import { TripsView } from "./views/TripsView";
 import { PlacesView } from "./views/PlacesView";
 import { ShareMapView } from "./views/ShareMapView";
@@ -36,7 +38,7 @@ import { AppBottomNav, AppTopbar } from "./components/AppNav";
 import type { TabId } from "./components/AppNav";
 import { isGuidePath } from "./navigate";
 import { LAST_ME, PageSkeleton } from "./components/AppSkeleton";
-import { load, save } from "./storage";
+import { forget, load, save } from "./storage";
 
 // The signed-in app. App.tsx loads this on its own, once someone is signed in, so visitors to the
 // public pages never download it.
@@ -70,6 +72,23 @@ function Shell({ path }: { path: string }) {
   // Someone new sees the welcome steps once; the server remembers when they've been through them.
   const [welcomed, setWelcomed] = useState(false);
   const tab = route.tab;
+
+  // A guide saved from the holiday picker before signing in goes on the Next list once they're in.
+  useEffect(() => {
+    if (loading || error || !me) return;
+    const d = findDestination(load<string>(PICKED_IDEA, ""));
+    forget(PICKED_IDEA);
+    if (!d || ideas.some((i) => i.status === "active" && i.title === d.name)) return;
+    void api
+      .createIdea({ ...ideaFromDestination(d), title: d.name, description: null, created_by: me.id, depart: null, travel_time: null } as IdeaInput)
+      .then(() => reload(["ideas"]))
+      .then(() => {
+        // Someone new sees the welcome steps first, which end on the Next list anyway.
+        if (me.onboarded) location.hash = "/next";
+      })
+      .catch(() => {});
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading, error, me?.id]);
 
   // Remembered so the header shows who you are straight away next time, while the app loads.
   useEffect(() => {

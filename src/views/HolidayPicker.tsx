@@ -28,6 +28,7 @@ import {
   readAlso,
   readAnswers,
   resultHref,
+  shuffled,
 } from "../picker";
 import type { Answers, Question } from "../picker";
 import { flightLink } from "../../shared/flights";
@@ -379,7 +380,10 @@ function Draw({ winner, also, answers, onLanded, onClose }: { winner: Destinatio
     // The winner sits somewhere among the others, not always first.
     const board = [...also];
     board.splice(Math.floor(Math.random() * (also.length + 1)), 0, winner);
-    return board.map((d, i) => ({ id: i + 1, code: boardCode(d), title: d.name, tickets: 1, win: d === winner }));
+    // The board drops the fewest tickets first. Nobody holds tickets here, so each place gets a
+    // shuffled count instead and the losers go to DELAYED in a random order, not top to bottom.
+    const order = shuffled(board.map((_, i) => i + 1));
+    return board.map((d, i) => ({ id: i + 1, code: boardCode(d), title: d.name, tickets: order[i], win: d === winner }));
   }, [winner, also]);
   const { at, end } = useMemo(() => boardTimeline(rows), [rows]);
   const [tick, setTick] = useState(0);

@@ -1,0 +1,192 @@
+{
+  "name": "Norwegian fjords",
+  "published": true,
+  "country": "NO",
+  "title": "Norwegian fjords cruises",
+  "intro": "Sheer cliffs, waterfalls and tiny villages along deep, still fjords on Norway's west coast, with Bergen as the gateway. Here's what a Norwegian fjords cruise is like, when to go and how long to stay.",
+  "seo_title": "Norwegian fjords cruises: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/norwegian-fjords-5240138_1280.webp",
+  "image_alt": "A cruise ship in the Geirangerfjord, seen from a green mountainside above the village of Geiranger",
+  "wikipedia": "https://en.wikipedia.org/wiki/West_Norwegian_Fjords",
+  "to_code": "BGO",
+  "holiday_types": [
+    "cruise",
+    "nature"
+  ],
+  "nights": "7 to 12",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Norwegian krone (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Norway is part of the new European entry checks, so check the rules on GOV.UK before you book. Pack layers and a waterproof, as it can be cool and wet on deck even in summer.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Few sailings, dark",
+      "temp": 3
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Few sailings, dark",
+      "temp": 3
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Few sailings",
+      "temp": 6
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Season starts",
+      "temp": 10
+    },
+    "may": {
+      "rating": "best",
+      "note": "Waterfalls in full flow",
+      "temp": 14
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long light days",
+      "temp": 17
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warmest, busiest",
+      "temp": 19
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm, busy",
+      "temp": 18
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Quieter, cooler",
+      "temp": 15
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Season ends",
+      "temp": 11
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Few sailings, dark",
+      "temp": 7
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Few sailings, dark",
+      "temp": 4
+    }
+  },
+  "when_to_go": "The main fjord cruise season runs from May to September, when the days are long, the villages are open and the scenery is green. May and June are lovely, with snow still on the peaks and waterfalls at their fullest from the melt. July and August are the warmest and busiest months, with several big ships in Geiranger or Flåm on the same day. September is quieter, with autumn colours, but the weather turns. Expect rain at any time, as Bergen is one of Europe's wettest cities. The coastal ferry-cruise ships from Bergen sail all year, and winter trips north are the ones to pick for the Northern Lights.",
+  "things": [
+    {
+      "name": "Geirangerfjord",
+      "tag": "Outdoors",
+      "blurb": "A UNESCO-listed fjord with the Seven Sisters waterfall tumbling down one side. Ships sail in slowly, and the road up to the Ørnesvingen viewpoint gives the classic view back down.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Flåm and the Flåm Railway",
+      "tag": "Ticketed",
+      "blurb": "A small village at the end of the long Sognefjord, where one of the world's steepest standard-gauge railways climbs up to Myrdal past waterfalls. Book the train ahead in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nærøyfjord",
+      "tag": "Outdoors",
+      "blurb": "The narrowest arm of the Sognefjord, only a few hundred metres wide in places, with farms clinging to the slopes. Often seen by smaller ships or on a boat trip from Flåm.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bryggen in Bergen",
+      "tag": "Free",
+      "blurb": "The old wooden Hanseatic wharf in Bergen, with leaning warehouses and narrow alleys. Ride the Fløibanen funicular up Mount Fløyen for views over the harbour before you sail.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ålesund",
+      "tag": "Free",
+      "blurb": "A harbour town rebuilt in Art Nouveau style after a fire in 1904. Climb the steps up Aksla hill for a view over the town and the islands.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pulpit Rock from Stavanger",
+      "tag": "Outdoors",
+      "blurb": "A flat-topped cliff 604 metres above the Lysefjord. The hike there and back takes about four hours, so it suits a full day in Stavanger, or take a fjord boat trip to see it from below.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a Norwegian fjords cruise good for a family holiday?",
+      "answer": "Yes. Big ships have kids' clubs and pools, and the scenery, waterfalls and the Flåm Railway go down well with children. Smaller expedition and coastal ships have fewer facilities, so they suit older children and teens better."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "Most fjord cruises are 7 nights, calling at four or five places such as Geiranger, Flåm, Ålesund and Stavanger. The coastal ferry-cruise route from Bergen to Kirkenes and back takes about 12 nights, or you can do just one leg."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Bergen Airport, Flesland, then take the Flybussen airport bus into the city, about 30 minutes. Many big-ship fjord cruises also start from Southampton, Amsterdam, Copenhagen or Kiel, so check where yours sets off."
+    },
+    {
+      "question": "Can you see the Northern Lights on a fjord cruise?",
+      "answer": "Only on winter voyages that sail north of the Arctic Circle, roughly from late September to March, and even then you need clear skies. Summer cruises have light nights instead, with the midnight sun in the far north."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Alaska's Inside Passage",
+      "code": "SEA",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Bergen",
+      "code": "BGO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Lofoten",
+      "code": "BOO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Faroe Islands",
+      "code": "FAE",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-19T21:02:40Z",
+  "updated": "2026-10-19T21:02:40Z"
+}

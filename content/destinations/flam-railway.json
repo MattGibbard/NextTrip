@@ -1,0 +1,192 @@
+{
+  "name": "Flåm Railway",
+  "published": true,
+  "country": "NO",
+  "title": "The Flåm Railway",
+  "intro": "One of the world's steepest standard-gauge railways, dropping from the mountains at Myrdal past waterfalls to the fjord village of Flåm, on the classic Norway in a Nutshell route. Here's what the Flåm Railway is like, when to go and how long to stay.",
+  "seo_title": "Flåm Railway: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/flam-railway-865939_1280.webp",
+  "image_alt": "A view from the Flåm Railway train window of a rushing river and green valley below steep mountains",
+  "wikipedia": "https://en.wikipedia.org/wiki/Fl%C3%A5m_Line",
+  "to_code": "BGO",
+  "holiday_types": [
+    "rail",
+    "nature"
+  ],
+  "nights": "2 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Norwegian krone (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Norway is pricey, so budget extra for food. Norway is part of the new European entry checks, so check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Dark, snowy",
+      "temp": 1
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 2
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold, snow",
+      "temp": 6
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Thaw, quieter",
+      "temp": 11
+    },
+    "may": {
+      "rating": "best",
+      "note": "Waterfalls in full flow",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days",
+      "temp": 19
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Peak season",
+      "temp": 21
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Peak season",
+      "temp": 20
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Calmer, autumn colour",
+      "temp": 16
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Quiet, cool",
+      "temp": 10
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Dark, wet",
+      "temp": 5
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Short days",
+      "temp": 2
+    }
+  },
+  "when_to_go": "The Flåm Railway runs all year. May to September is the best time, with long days, roaring waterfalls and fjord boats running often. May and June are especially good, when snowmelt makes the waterfalls at their most dramatic and the summer crowds haven't fully arrived. July and August are busiest, with cruise ships in Flåm, so book train seats early. Winter rides through deep snow are beautiful, but the days are short and there are fewer boats and buses on the rest of the route.",
+  "things": [
+    {
+      "name": "Kjosfossen waterfall",
+      "tag": "Free",
+      "blurb": "The train stops for a few minutes at this huge waterfall, where in summer a costumed dancer appears on the rocks as the legendary huldra.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nærøyfjord cruise",
+      "tag": "Ticketed",
+      "blurb": "Part of Norway in a Nutshell, the boat from Flåm to Gudvangen sails through a narrow, UNESCO-listed arm of the fjord with cliffs and waterfalls on both sides.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stegastein viewpoint",
+      "tag": "Outdoors",
+      "blurb": "A wooden platform jutting out 650 metres above the Aurlandsfjord, reached by bus or car from Flåm.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bergen Line",
+      "tag": "Ticketed",
+      "blurb": "The main line from Bergen or Oslo to Myrdal, where you change for Flåm, crossing bare mountain plateau and lakes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Flåm Railway Museum",
+      "tag": "Free",
+      "blurb": "A small museum by Flåm station on how the line was dug into the mountains, with old carriages and tools.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bryggen in Bergen",
+      "tag": "Culture",
+      "blurb": "The coloured wooden wharf buildings in Bergen, where most Norway in a Nutshell trips start and finish.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long is the train ride?",
+      "answer": "About an hour for the 20 km between Myrdal and Flåm, dropping around 860 metres. The full Norway in a Nutshell loop from Bergen takes a long day, or you can stay a night in Flåm."
+    },
+    {
+      "question": "Is the Flåm Railway good for a family holiday?",
+      "answer": "Yes. The ride is short, the waterfall stop breaks it up, and Flåm has easy walks, kayaking and boat trips. A night in Flåm makes the day less rushed."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Bergen, take the airport bus or light rail into the city, then the Bergen Line train to Myrdal and change for Flåm. From Oslo, the train to Myrdal takes around five hours."
+    },
+    {
+      "question": "What is Norway in a Nutshell?",
+      "answer": "A popular one-day route linking the Bergen Line, the Flåm Railway, a fjord boat to Gudvangen and a bus to Voss. You can buy it as a package or book each leg yourself."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bergen",
+      "code": "BGO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Norwegian fjords",
+      "code": "BGO",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Lofoten",
+      "code": "BOO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Glacier Express",
+      "code": "ZRH",
+      "label": "🚆 By train"
+    }
+  ],
+  "date": "2026-10-19T21:08:42Z",
+  "updated": "2026-10-19T21:08:42Z"
+}

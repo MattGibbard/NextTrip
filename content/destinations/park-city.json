@@ -1,0 +1,193 @@
+{
+  "name": "Park City",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Park City",
+  "intro": "An old silver-mining town in Utah's Wasatch mountains, with two big ski resorts, a lively Main Street and light, dry snow. Here's what Park City is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/park-city-1136596_1280.webp",
+  "image_alt": "Colourful wooden-fronted buildings lining a snowy pedestrian street in Park City",
+  "wikipedia": "https://en.wikipedia.org/wiki/Park_City,_Utah",
+  "to_code": "SLC",
+  "holiday_types": [
+    "ski",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "British passport holders need an approved ESTA before flying. Lift tickets bought on the day are very expensive, so buy passes online in advance. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry powder",
+      "temp": 2
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Ski season",
+      "temp": 3
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Sunny skiing",
+      "temp": 8
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring skiing, season ends",
+      "temp": 12
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Between seasons",
+      "temp": 18
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hiking, biking",
+      "temp": 24
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, summer events",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, sunny",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn colours",
+      "temp": 23
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Between seasons",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Season opens",
+      "temp": 7
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas skiing",
+      "temp": 1
+    }
+  },
+  "when_to_go": "The ski season runs from late November to around mid-April, with the most reliable snow from January to March. Christmas, New Year and the US Presidents' Day weekend in February are the busiest. March has long, sunny days and plenty of snow. Summer is hot and dry, great for hiking, mountain biking and outdoor concerts, and September brings golden aspens. October, November and May are quiet.",
+  "things": [
+    {
+      "name": "Park City Mountain",
+      "tag": "Ticketed",
+      "blurb": "One of the biggest ski areas in the USA, linked to the Canyons side by gondola. It's on the Epic Pass, and the Town Lift starts right by Main Street.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Deer Valley",
+      "tag": "Ticketed",
+      "blurb": "A smart, skiers-only resort next door, known for perfectly groomed runs and limited daily tickets. It's on the Ikon Pass.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ski school",
+      "tag": "Ticketed",
+      "blurb": "Both resorts run children's ski schools and have dedicated beginner areas near their bases. Book well ahead for holiday weeks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Historic Main Street",
+      "tag": "Free",
+      "blurb": "Restored miners' buildings full of restaurants, galleries and shops, lit up in the evenings. The town's free buses make it easy to get around.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Utah Olympic Park",
+      "tag": "Ticketed",
+      "blurb": "Built for the 2002 Winter Olympics, with a free museum, ski jumps where athletes train, and bobsled rides for older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Summer in the mountains",
+      "tag": "Outdoors",
+      "blurb": "Hundreds of miles of trails for hiking and mountain biking, plus an alpine coaster at Park City Mountain.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Park City good for a family holiday?",
+      "answer": "Yes. The ski schools are excellent, the snow is soft and dry, and the town has plenty to do in the evenings. It's expensive, though, so look at multi-day passes and self-catering condos."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week, with five or six days of skiing. Many people stay longer to get over the jet lag."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Salt Lake City International Airport, then drive or take a shuttle about 40 minutes into the mountains. You don't need a car once you're in town, thanks to free local buses."
+    },
+    {
+      "question": "Is Park City expensive?",
+      "answer": "Yes. Daily lift tickets bought at the window are among the priciest anywhere. An Epic or Ikon pass, or tickets bought online well ahead, cut the cost a lot."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Whistler",
+      "code": "YVR",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Niseko",
+      "code": "CTS",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Banff",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Zermatt",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    }
+  ],
+  "date": "2026-10-19T21:00:23Z",
+  "updated": "2026-10-19T21:00:23Z"
+}

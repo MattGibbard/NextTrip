@@ -4,6 +4,11 @@
     "lat": 44.3386,
     "lon": -68.2733
   },
+  "alaska-inside-passage": {
+    "query": "Alaska's Inside Passage|US",
+    "lat": 58.3019,
+    "lon": -134.4197
+  },
   "alentejo": {
     "query": "Alentejo|PT",
     "lat": 38.5714,
@@ -33,6 +38,11 @@
     "query": "Amsterdam|NL",
     "lat": 52.3731,
     "lon": 4.8925
+  },
+  "andorra": {
+    "query": "Andorra|AD",
+    "lat": 42.5069,
+    "lon": 1.5212
   },
   "annecy": {
     "query": "Annecy|FR",
@@ -94,6 +104,11 @@
     "lat": 13.7525,
     "lon": 100.4935
   },
+  "bansko": {
+    "query": "Bansko|BG",
+    "lat": 41.8344,
+    "lon": 23.4842
+  },
   "barbados": {
     "query": "Barbados|BB",
     "lat": 13.15,
@@ -113,6 +128,11 @@
     "query": "Berlin|DE",
     "lat": 52.517,
     "lon": 13.3889
+  },
+  "bernina-express": {
+    "query": "Bernina Express|CH",
+    "lat": 46.792,
+    "lon": 9.8213
   },
   "bodrum": {
     "query": "Bodrum|TR",
@@ -169,6 +189,11 @@
     "lat": 38.6431,
     "lon": 34.8289
   },
+  "caribbean-cruises": {
+    "query": "Caribbean cruises|BB",
+    "lat": 13.0975,
+    "lon": -59.6167
+  },
   "cartagena": {
     "query": "Cartagena|CO",
     "lat": 10.391,
@@ -183,6 +208,11 @@
     "query": "Chicago|US",
     "lat": 41.8756,
     "lon": -87.6244
+  },
+  "cinque-terre": {
+    "query": "Cinque Terre|IT",
+    "lat": 44.1222,
+    "lon": 9.7133
   },
   "colmar": {
     "query": "Colmar|FR",
@@ -224,6 +254,21 @@
     "lat": -13.5226,
     "lon": -71.9673
   },
+  "dalmatian-coast-cruise": {
+    "query": "Dalmatian coast|HR",
+    "lat": 43.5081,
+    "lon": 16.4402
+  },
+  "darjeeling": {
+    "query": "Darjeeling|IN",
+    "lat": 27.0378,
+    "lon": 88.2632
+  },
+  "dolomites": {
+    "query": "Dolomites|IT",
+    "lat": 46.2946,
+    "lon": 12.0513
+  },
   "dominica": {
     "query": "Dominica|DM",
     "lat": 15.415,
@@ -233,6 +278,11 @@
     "query": "Dordogne|FR",
     "lat": 45.1047,
     "lon": 0.7417
+  },
+  "douro-valley": {
+    "query": "Douro Valley|PT",
+    "lat": 41.2878,
+    "lon": -7.7402
   },
   "dresden": {
     "query": "Dresden|DE",
@@ -259,6 +309,11 @@
     "lat": 62.0107,
     "lon": -6.7741
   },
+  "flam-railway": {
+    "query": "Flåm Railway|NO",
+    "lat": 60.8631,
+    "lon": 7.1145
+  },
   "florence": {
     "query": "Florence|IT",
     "lat": 43.7698,
@@ -274,6 +329,11 @@
     "lat": -0.9538,
     "lon": -90.9656
   },
+  "garden-route": {
+    "query": "Garden Route|ZA",
+    "lat": -33.9597,
+    "lon": 22.4587
+  },
   "gdansk": {
     "query": "Gdańsk|PL",
     "lat": 54.352,
@@ -284,10 +344,20 @@
     "lat": 51.0543,
     "lon": 3.7174
   },
+  "glacier-express": {
+    "query": "Glacier Express|CH",
+    "lat": 46.3191,
+    "lon": 7.9883
+  },
   "goa": {
     "query": "Goa|IN",
     "lat": 15.2993,
     "lon": 74.124
+  },
+  "goldenpass-express": {
+    "query": "GoldenPass Express|CH",
+    "lat": 46.4312,
+    "lon": 6.9107
   },
   "gozo": {
     "query": "Gozo|MT",
@@ -304,6 +374,16 @@
     "lat": 36.0544,
     "lon": -112.1401
   },
+  "great-ocean-road": {
+    "query": "Great Ocean Road|AU",
+    "lat": -38.3383,
+    "lon": 144.2835
+  },
+  "greek-islands-cruises": {
+    "query": "Greek islands|GR",
+    "lat": 37,
+    "lon": 25.2
+  },
   "grenada": {
     "query": "Grenada|GD",
     "lat": 12.1165,
@@ -313,6 +393,11 @@
     "query": "Guadeloupe|GP",
     "lat": 16.2529,
     "lon": -61.5687
+  },
+  "ha-long-bay": {
+    "query": "Ha Long Bay|VN",
+    "lat": 20.9084,
+    "lon": 107.0683
   },
   "halifax": {
     "query": "Halifax|CA",
@@ -333,6 +418,11 @@
     "query": "Ibiza|ES",
     "lat": 38.9101,
     "lon": 1.4305
+  },
+  "iceland-ring-road": {
+    "query": "Iceland's Ring Road|IS",
+    "lat": 64.9631,
+    "lon": -19.0208
   },
   "innsbruck": {
     "query": "Innsbruck|AT",
@@ -584,10 +674,25 @@
     "lat": 43.7009,
     "lon": 7.2684
   },
+  "nile-cruise": {
+    "query": "Nile cruise|EG",
+    "lat": 26.5645,
+    "lon": 31.7062
+  },
   "ninh-binh": {
     "query": "Ninh Binh|VN",
     "lat": 20.2539,
     "lon": 105.975
+  },
+  "niseko": {
+    "query": "Niseko|JP",
+    "lat": 42.8049,
+    "lon": 140.688
+  },
+  "norwegian-fjords": {
+    "query": "Norwegian fjords|NO",
+    "lat": 62.1266,
+    "lon": 7.1658
   },
   "nuremberg": {
     "query": "Nuremberg|DE",
@@ -614,6 +719,11 @@
     "lat": 28.5421,
     "lon": -81.379
   },
+  "pacific-coast-highway": {
+    "query": "Pacific Coast Highway|US",
+    "lat": 36.2704,
+    "lon": -121.8081
+  },
   "paphos": {
     "query": "Paphos|CY",
     "lat": 34.7754,
@@ -623,6 +733,11 @@
     "query": "Paris|FR",
     "lat": 48.8535,
     "lon": 2.3484
+  },
+  "park-city": {
+    "query": "Park City|US",
+    "lat": 40.6461,
+    "lon": -111.498
   },
   "penang": {
     "query": "Penang|MY",
@@ -679,6 +794,11 @@
     "lat": 64.1466,
     "lon": -21.9426
   },
+  "rhine-river-cruise": {
+    "query": "Rhine river cruise|DE",
+    "lat": 50.0833,
+    "lon": 7.7667
+  },
   "rhodes": {
     "query": "Rhodes|GR",
     "lat": 36.4437,
@@ -694,6 +814,16 @@
     "lat": -22.9068,
     "lon": -43.1729
   },
+  "rocky-mountaineer": {
+    "query": "Rocky Mountaineer|CA",
+    "lat": 51.4178,
+    "lon": -116.2161
+  },
+  "romantic-road": {
+    "query": "Romantic Road|DE",
+    "lat": 49.1678,
+    "lon": 10.3312
+  },
   "rome": {
     "query": "Rome|IT",
     "lat": 41.8933,
@@ -703,6 +833,11 @@
     "query": "Ronda|ES",
     "lat": 36.7423,
     "lon": -5.1671
+  },
+  "route-66": {
+    "query": "Route 66|US",
+    "lat": 41.8781,
+    "lon": -87.6298
   },
   "rovaniemi": {
     "query": "Rovaniemi|FI",
@@ -784,6 +919,11 @@
     "lat": 7.8731,
     "lon": 80.7718
   },
+  "st-anton": {
+    "query": "St Anton|AT",
+    "lat": 47.1297,
+    "lon": 10.2685
+  },
   "st-lucia": {
     "query": "St Lucia|LC",
     "lat": 13.9094,
@@ -859,6 +999,11 @@
     "lat": 69.6496,
     "lon": 18.956
   },
+  "val-thorens": {
+    "query": "Val Thorens|FR",
+    "lat": 45.2979,
+    "lon": 6.5823
+  },
   "valencia": {
     "query": "Valencia|ES",
     "lat": 39.4698,
@@ -873,6 +1018,11 @@
     "query": "Venice|IT",
     "lat": 45.4372,
     "lon": 12.3346
+  },
+  "verbier": {
+    "query": "Verbier|CH",
+    "lat": 46.0961,
+    "lon": 7.2287
   },
   "vienna": {
     "query": "Vienna|AT",

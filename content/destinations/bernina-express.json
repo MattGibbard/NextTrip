@@ -1,0 +1,192 @@
+{
+  "name": "Bernina Express",
+  "published": true,
+  "country": "CH",
+  "title": "The Bernina Express",
+  "intro": "A red panoramic train that climbs over the Bernina Pass and drops past glaciers to Tirano in Italy, on a UNESCO-listed line through the Swiss Alps. Here's what the Bernina Express is like, when to go and how long to stay.",
+  "seo_title": "Bernina Express: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/bernina-express-4183956_1280.webp",
+  "image_alt": "A red Bernina Express train curving onto a tall stone viaduct over a deep gorge, seen from a window",
+  "wikipedia": "https://en.wikipedia.org/wiki/Bernina_Express",
+  "to_code": "ZRH",
+  "holiday_types": [
+    "rail",
+    "nature"
+  ],
+  "nights": "2 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Swiss franc (CHF)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / J · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The train ends in Tirano, Italy, where prices are in euros. Switzerland is in the Schengen area, so the new EU entry checks apply. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Snowy pass",
+      "temp": 0
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Snowy pass",
+      "temp": 1
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Late winter snow",
+      "temp": 4
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Snow melting",
+      "temp": 8
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring in Tirano",
+      "temp": 13
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long, green days",
+      "temp": 17
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Peak season",
+      "temp": 19
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Peak season",
+      "temp": 19
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Clear, calmer",
+      "temp": 15
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 10
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey, quiet",
+      "temp": 4
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Snowy, festive",
+      "temp": 1
+    }
+  },
+  "when_to_go": "The Bernina Express runs all year. June to September is the best time, with green meadows, glaciers in full view and walking paths open from the stations at the top, but trains get busy, so book ahead. Winter is a real treat, with deep snow on the Bernina Pass and frozen lakes, and the train keeps running through it. April and November are the quietest months, with melting snow or grey skies. At the Italian end, Tirano is much warmer than the pass, so pack layers whatever the season.",
+  "things": [
+    {
+      "name": "Landwasser Viaduct",
+      "tag": "Free",
+      "blurb": "The famous curved viaduct on the Albula section from Chur, where the train runs straight into a cliff tunnel. A short walk from Filisur leads to a viewpoint.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Morteratsch Glacier",
+      "tag": "Outdoors",
+      "blurb": "Take a regional train to Morteratsch for an easy walk up the valley to the glacier snout, with signs marking how far the ice has shrunk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alp Grüm",
+      "tag": "Food",
+      "blurb": "A tiny station with a restaurant terrace looking straight at the Palü Glacier and down into the Poschiavo valley.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ospizio Bernina",
+      "tag": "Outdoors",
+      "blurb": "The highest point of the line at 2,253 metres, beside the Lago Bianco. Good for summer walks or a snowy stop in winter.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Brusio spiral viaduct",
+      "tag": "Free",
+      "blurb": "A stone viaduct where the line loops in a full circle to lose height. It's best seen from the train window or from the path beside it.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Poschiavo",
+      "tag": "Culture",
+      "blurb": "An Italian-speaking Swiss town near the end of the line, with a pretty main square and grand old houses built by returning emigrants.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long is the train ride?",
+      "answer": "About four hours from Chur to Tirano, or around two and a half hours from St Moritz. Many people ride one way and return by regional train or the Bernina Express bus to Lugano, which runs in the warmer months."
+    },
+    {
+      "question": "Is the Bernina Express good for a family holiday?",
+      "answer": "Yes. The ride is short enough for children, and stops like Morteratsch and Alp Grüm have easy walks. Regional trains on the same line let you hop on and off without reservations."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Zurich, then take a direct train to Chur in about an hour and a half. To start in St Moritz, change in Chur. Milan Malpensa or Bergamo work too if you start from Tirano."
+    },
+    {
+      "question": "Do you need to book?",
+      "answer": "The panoramic Bernina Express needs a seat reservation on top of the fare, even with a Swiss Travel Pass. Ordinary regional trains on the line don't, and their windows open for photos."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Glacier Express",
+      "code": "ZRH",
+      "label": "🚆 By train"
+    },
+    {
+      "name": "GoldenPass Express",
+      "code": "GVA",
+      "label": "🚆 By train"
+    },
+    {
+      "name": "Lake Como",
+      "code": "MXP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-19T21:08:42Z",
+  "updated": "2026-10-19T21:08:42Z"
+}

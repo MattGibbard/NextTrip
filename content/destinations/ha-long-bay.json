@@ -1,0 +1,193 @@
+{
+  "name": "Ha Long Bay",
+  "published": true,
+  "country": "VN",
+  "title": "Ha Long Bay cruises",
+  "intro": "Thousands of limestone islands rising from emerald water in north-east Vietnam, best seen from an overnight junk boat. Here's what a Ha Long Bay cruise is like, when to go and how long to stay.",
+  "seo_title": "Ha Long Bay cruises: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/ha-long-bay-6398256_1280.webp",
+  "image_alt": "Junk boats with orange sails on the calm water of Ha Long Bay, with limestone islands in the distance",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ha_Long_Bay",
+  "to_code": "HAN",
+  "holiday_types": [
+    "cruise",
+    "nature",
+    "adventure"
+  ],
+  "nights": "1 to 2",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Vietnamese dong (₫)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 45 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Boats can be cancelled at short notice if a storm is forecast, so keep a spare day in your plans. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cool, often misty",
+      "temp": 20
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cool, drizzly",
+      "temp": 20
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warming, calm",
+      "temp": 22
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, clear",
+      "temp": 27
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot, some showers",
+      "temp": 31
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, humid",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Storms can cancel",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Wettest, storms",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Storms can cancel",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Dry, clear",
+      "temp": 29
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Dry, pleasant",
+      "temp": 26
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cool, dry",
+      "temp": 22
+    }
+  },
+  "when_to_go": "Cruises run all year, but March, April, October and November are the best months, with warm, fairly dry weather and clearer views. December to February is cool and often misty or drizzly, which gives the bay a moody look but hides the views and makes swimming chilly. May to September is hot and humid with heavy showers. July to September is storm season, and the authorities stop all boats when a typhoon is near, so trips can be cancelled or cut short.",
+  "things": [
+    {
+      "name": "Sung Sot Cave",
+      "tag": "Ticketed",
+      "blurb": "The Surprise Cave, one of the biggest caves in the bay, with huge chambers full of stalactites. It's lit up and reached by steps from a landing stage, and included on most cruises.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kayaking",
+      "tag": "Outdoors",
+      "blurb": "Paddle through low caves and arches into hidden lagoons ringed by cliffs, such as Luon Cave. Most overnight cruises include kayaking, weather allowing.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ti Top Island",
+      "tag": "Outdoors",
+      "blurb": "Climb a few hundred steps to a viewpoint over the bay's islands, then cool off on the small beach below. It gets busy in the middle of the day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Floating fishing villages",
+      "tag": "Culture",
+      "blurb": "Visit a fishing village of houses on rafts, where families once lived on the water. Local rowers take you around in small bamboo boats.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lan Ha Bay",
+      "tag": "Outdoors",
+      "blurb": "A quieter neighbouring bay off Cat Ba Island, with the same limestone scenery, sandy coves and far fewer boats. Some cruises spend part or all of their time here.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cooking class on deck",
+      "tag": "Food",
+      "blurb": "Many junks run a spring roll cooking class, and some offer tai chi on the sundeck at sunrise. Seafood is a big part of the meals on board.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a Ha Long Bay cruise good for a family holiday?",
+      "answer": "Yes. Children enjoy the caves, kayaking and sleeping on a boat, and one night is the right length for younger ones. Check each boat's age rules, as some smaller luxury junks don't take young children."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "Most people take a 1 night cruise, which gives you sunset, sunrise and the main sights. Two nights lets you reach quieter areas such as Lan Ha Bay or Bai Tu Long Bay. Day trips are possible but feel rushed."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Hanoi's Noi Bai International Airport. Most cruises include a shuttle bus from hotels in Hanoi's Old Quarter to the harbour, taking about two and a half to three hours by expressway. Van Don Airport is closer but has fewer flights."
+    },
+    {
+      "question": "Ha Long Bay or Lan Ha Bay?",
+      "answer": "Ha Long Bay has the famous caves and the most boats. Lan Ha Bay, reached from Cat Ba Island, feels quieter and has good swimming and kayaking. Bai Tu Long Bay, to the north-east, is another quieter choice."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Ninh Binh",
+      "code": "HAN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Hoi An",
+      "code": "DAD",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Luang Prabang",
+      "code": "LPQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Nile cruise",
+      "code": "LXR",
+      "label": "🛳️ Cruise"
+    }
+  ],
+  "date": "2026-10-19T21:02:40Z",
+  "updated": "2026-10-19T21:02:40Z"
+}

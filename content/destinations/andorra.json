@@ -1,0 +1,193 @@
+{
+  "name": "Andorra",
+  "published": true,
+  "country": "AD",
+  "title": "Holidays in Andorra",
+  "intro": "A tiny mountain country in the Pyrenees between France and Spain, with good-value skiing at Grandvalira, Pal Arinsal and Ordino Arcalís, plus duty-free shopping. Here's what Andorra is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/andorra-4445550_1280.webp",
+  "image_alt": "Skiers on groomed pistes at Arinsal in Andorra, with snowy Pyrenees peaks under a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Andorra",
+  "to_code": "BCN",
+  "holiday_types": [
+    "ski",
+    "nature",
+    "relax"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Andorra isn't in the EU or Schengen, but you'll enter through Spain or France, so Schengen entry checks apply on the way. Duty-free allowances apply when you leave. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Ski season",
+      "temp": 3
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Ski season",
+      "temp": 4
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Sunny skiing",
+      "temp": 7
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring snow, season ends",
+      "temp": 10
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Between seasons",
+      "temp": 14
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hiking",
+      "temp": 19
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hiking, biking",
+      "temp": 23
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hiking, busy",
+      "temp": 22
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Quiet trails",
+      "temp": 18
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Between seasons",
+      "temp": 13
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Waiting for snow",
+      "temp": 7
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Season opens",
+      "temp": 4
+    }
+  },
+  "when_to_go": "The ski season usually runs from early December to around mid-April. January is good value and quieter after New Year, February half-term is the busiest time, and March brings sunny days with snow still good up high. Easter can be lovely if it falls early. In summer the valleys turn green, with walking, mountain biking and lakes to swim in. Spring and autumn between seasons are quiet.",
+  "things": [
+    {
+      "name": "Grandvalira",
+      "tag": "Ticketed",
+      "blurb": "The biggest ski area in the Pyrenees, linking Pas de la Casa, Grau Roig, Soldeu, El Tarter, Canillo and Encamp. Soldeu is popular with British families.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pal Arinsal and Ordino Arcalís",
+      "tag": "Ticketed",
+      "blurb": "Smaller areas once called Vallnord, now part of the Grandvalira Resorts pass. Pal's tree-lined slopes are good for beginners and children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ski schools",
+      "tag": "Ticketed",
+      "blurb": "Many instructors speak English, and lessons, hire and passes are often cheaper than in the Alps. Package deals bundle them together.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Caldea",
+      "tag": "Ticketed",
+      "blurb": "A huge thermal spa in Escaldes-Engordany, with warm indoor and outdoor lagoons for a rest day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Naturlandia",
+      "tag": "Ticketed",
+      "blurb": "An activity park near Sant Julià de Lòria with the Tobotronc, one of the world's longest alpine coasters, plus sledging in winter.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Andorra la Vella",
+      "tag": "Free",
+      "blurb": "The little capital is all about duty-free shopping, with a small old quarter and Romanesque churches nearby.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Andorra good for a family holiday?",
+      "answer": "Yes. It's one of the best-value ski choices in Europe, with good beginner slopes, English-speaking ski schools and plenty to do off the slopes. The resorts are less pretty than Alpine villages, and Pas de la Casa is lively at night."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week, with six days on the slopes, is standard. Long weekends work too, given the transfer time."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Andorra has no big airport. Fly to Barcelona or Toulouse, then take a transfer or bus of about three hours. Soldeu and Pas de la Casa are on the main road from the French side."
+    },
+    {
+      "question": "Which resort is best for beginners?",
+      "answer": "Soldeu and El Tarter in Grandvalira have wide, easy slopes and many British-run ski schools, and Pal is sheltered by trees, which helps in bad weather."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bansko",
+      "code": "SOF",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Val Thorens",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Barcelona",
+      "code": "BCN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "St Anton",
+      "code": "INN",
+      "label": "⛷️ Skiing"
+    }
+  ],
+  "date": "2026-10-19T21:00:23Z",
+  "updated": "2026-10-19T21:00:23Z"
+}

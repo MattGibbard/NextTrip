@@ -1,0 +1,193 @@
+{
+  "name": "Pacific Coast Highway",
+  "published": true,
+  "country": "US",
+  "title": "Holidays on the Pacific Coast Highway",
+  "intro": "California's coast road from San Francisco to Los Angeles, winding past the cliffs and redwoods of Big Sur, sea lion beaches and Spanish mission towns. Here's what the Pacific Coast Highway is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/pacific-coast-highway-1597725_1280.webp",
+  "image_alt": "Bixby Creek Bridge arching over a green canyon on the Big Sur coast, with turquoise sea and a sandy cove below",
+  "wikipedia": "https://en.wikipedia.org/wiki/California_State_Route_1",
+  "to_code": "SFO",
+  "holiday_types": [
+    "road-trip",
+    "nature",
+    "beach"
+  ],
+  "nights": "5 to 10",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Drive on the right. A UK photocard licence is fine for hiring a car, and one-way hire from San Francisco to Los Angeles usually costs extra. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Rainy season",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Rain, landslide risk",
+      "temp": 16
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Green hills, showers",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Wildflowers",
+      "temp": 18
+    },
+    "may": {
+      "rating": "good",
+      "note": "Morning fog",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "good",
+      "note": "June gloom fog",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Busy, coastal fog",
+      "temp": 21
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Busiest month",
+      "temp": 22
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Clear and warm",
+      "temp": 23
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Sunny, quieter",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cooler, quiet",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rain, short days",
+      "temp": 15
+    }
+  },
+  "when_to_go": "September and October are the best months for the drive, with the clearest skies, the warmest sea air and fewer crowds once the school holidays are over. Spring brings green hills and wildflowers, while May to August is busy and often starts with thick coastal fog that burns off by lunchtime, known locally as June gloom. Winter is mild but it's the rainy season, and storms can bring landslides that close parts of Highway 1 through Big Sur, sometimes for months. Always check the Caltrans road conditions before you set off.",
+  "things": [
+    {
+      "name": "Bixby Creek Bridge",
+      "tag": "Free",
+      "blurb": "The famous concrete arch bridge on the Big Sur coast. Pull in at the small lay-bys just north of it for the classic view, and go early before the crowds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "McWay Falls",
+      "tag": "Outdoors",
+      "blurb": "A waterfall that drops straight onto a sandy cove in Julia Pfeiffer Burns State Park, seen from a short, easy path above the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monterey Bay Aquarium",
+      "tag": "Ticketed",
+      "blurb": "One of the best aquariums in the world, with a towering kelp forest tank and sea otters, on Cannery Row in Monterey.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hearst Castle",
+      "tag": "Ticketed",
+      "blurb": "A newspaper tycoon's hilltop palace above San Simeon, with grand rooms and a famous outdoor pool. Visits are by guided tour, so book ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Piedras Blancas elephant seals",
+      "tag": "Free",
+      "blurb": "A boardwalk just north of San Simeon looks over a beach covered in huge elephant seals. There are seals here all year, with pups in winter.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Santa Barbara",
+      "tag": "Culture",
+      "blurb": "A relaxed beach town of white walls and red roofs, with an old Spanish mission, a long pier and wine tasting rooms near the waterfront.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Pacific Coast Highway good for a family holiday?",
+      "answer": "Yes, if you keep the driving days short. Big Sur has easy walks and beaches, Monterey has the aquarium, and the elephant seals near San Simeon are a hit with children. The road is narrow and twisty in places, so allow time for car sickness stops."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Allow at least five nights to drive from San Francisco to Los Angeles without rushing, stopping in Monterey or Carmel, Big Sur or Cambria, and Santa Barbara. A week or more lets you add a few nights in San Francisco or Los Angeles."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into San Francisco International Airport, pick up a hire car and head south via Half Moon Bay or Santa Cruz to Monterey. The drive ends in Los Angeles, so drop the car at LAX and fly home from there."
+    },
+    {
+      "question": "Which way should you drive?",
+      "answer": "Most people drive north to south, from San Francisco to Los Angeles. That puts you in the lane next to the sea, so the views are better and it's easier to pull into the lay-bys."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Route 66",
+      "code": "ORD",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "San Francisco",
+      "code": "SFO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Los Angeles",
+      "code": "LAX",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Grand Canyon",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-19T21:03:37Z",
+  "updated": "2026-10-19T21:03:37Z"
+}

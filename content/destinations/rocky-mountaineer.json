@@ -1,0 +1,193 @@
+{
+  "name": "Rocky Mountaineer",
+  "published": true,
+  "country": "CA",
+  "title": "The Rocky Mountaineer",
+  "intro": "A luxury daylight train from Vancouver through canyons and over the Rocky Mountains to Banff or Jasper, with a night in a hotel on the way. Here's what the Rocky Mountaineer is like, when to go and how long to stay.",
+  "seo_title": "Rocky Mountaineer: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/rocky-mountaineer-7071031_1280.webp",
+  "image_alt": "A red train curving beside the Bow River through pine forest, with jagged Rocky Mountain peaks behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Rocky_Mountaineer",
+  "to_code": "YVR",
+  "holiday_types": [
+    "rail",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7 to 12",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 to 8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The train only runs in daylight, so the two-day trip includes a hotel night in Kamloops. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "No trains",
+      "temp": 1
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "No trains",
+      "temp": 4
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "No trains",
+      "temp": 9
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Season starts",
+      "temp": 13
+    },
+    "may": {
+      "rating": "good",
+      "note": "Waterfalls in spate",
+      "temp": 18
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days",
+      "temp": 21
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Peak season",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Peak season",
+      "temp": 25
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 19
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Season ends",
+      "temp": 11
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "No trains",
+      "temp": 4
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "No trains",
+      "temp": 1
+    }
+  },
+  "when_to_go": "The Rocky Mountaineer runs from spring to autumn, roughly mid-April to mid-October, with no trains in winter. July and August are the busiest and warmest months, and the best for hiking in Banff and Jasper afterwards, though prices are at their highest. June has the longest days and rivers full of snowmelt. September brings golden larches, fewer crowds and a good chance of spotting wildlife. Early and late season trips are cheaper, but some high trails and lakes may still be snowy.",
+  "things": [
+    {
+      "name": "Fraser Canyon and Hell's Gate",
+      "tag": "Outdoors",
+      "blurb": "On the first day the train follows the Fraser River through a narrow canyon of rapids and rock walls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spiral Tunnels",
+      "tag": "Free",
+      "blurb": "On the Banff route, the line loops through two tunnels inside the mountains near Field to climb the Kicking Horse Pass.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake Louise",
+      "tag": "Outdoors",
+      "blurb": "The glacier-fed turquoise lake near the Banff end of the line. Go early, as parking fills fast, or take the shuttle.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Banff Gondola",
+      "tag": "Ticketed",
+      "blurb": "A gondola up Sulphur Mountain for wide views over Banff town and the Bow Valley. Pair it with a dip in the Banff Upper Hot Springs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Icefields Parkway",
+      "tag": "Outdoors",
+      "blurb": "The mountain road linking Banff and Jasper, lined with glaciers, lakes and viewpoints. Hire a car or join a tour to drive it after the train.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stanley Park",
+      "tag": "Free",
+      "blurb": "Spend a day in Vancouver before you leave, cycling or walking the seawall around this huge city park.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long is the train ride?",
+      "answer": "Two days. Both the Vancouver to Banff and Vancouver to Jasper routes stop overnight in Kamloops, with a hotel included. Most people add a few nights in Vancouver and the Rockies."
+    },
+    {
+      "question": "Is the Rocky Mountaineer good for a family holiday?",
+      "answer": "It suits older children who enjoy scenery, but it's expensive and the days on board are long. Families with young children may prefer to drive and take shorter scenic rides."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Vancouver International, which has flights from around the world. The train leaves from Vancouver's Rocky Mountaineer station, a short taxi ride from downtown. You can also ride in reverse, flying into Calgary for Banff."
+    },
+    {
+      "question": "What's the difference between the classes?",
+      "answer": "SilverLeaf has a glass-domed coach with meals served at your seat. GoldLeaf adds a two-level coach with a dining room downstairs and an outdoor viewing platform."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Banff",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Vancouver",
+      "code": "YVR",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Whistler",
+      "code": "YVR",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Glacier Express",
+      "code": "ZRH",
+      "label": "🚆 By train"
+    }
+  ],
+  "date": "2026-10-19T21:08:42Z",
+  "updated": "2026-10-19T21:08:42Z"
+}

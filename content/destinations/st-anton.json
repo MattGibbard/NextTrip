@@ -1,0 +1,193 @@
+{
+  "name": "St Anton",
+  "published": true,
+  "country": "AT",
+  "title": "Holidays in St Anton",
+  "intro": "A lively Tyrolean village at the heart of the huge Ski Arlberg area, famous for big, challenging slopes and loud après-ski. Here's what St Anton is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/st-anton-4604908_1280.webp",
+  "image_alt": "Big red letters spelling St. Anton on a snowy ridge, with skiers and snow-covered mountains behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/St._Anton_am_Arlberg",
+  "to_code": "INN",
+  "holiday_types": [
+    "ski",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Austria is in the Schengen area, so the new EU entry checks apply. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Reliable snow",
+      "temp": 1
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Ski season",
+      "temp": 2
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Sunny skiing",
+      "temp": 6
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring snow, season ends",
+      "temp": 10
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Between seasons",
+      "temp": 15
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hiking",
+      "temp": 18
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hiking, warm",
+      "temp": 21
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hiking, warm",
+      "temp": 20
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Quiet trails",
+      "temp": 16
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Between seasons",
+      "temp": 12
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Most hotels shut",
+      "temp": 5
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Season opens",
+      "temp": 1
+    }
+  },
+  "when_to_go": "The ski season runs from early December to late April. January is cold and quieter outside New Year, February half-term is the busiest and dearest week, and March brings longer, sunnier days with snow still good up high. In summer, from late June to September, some lifts reopen for walking in the Verwall valley and the mountains around the village. May, October and November are quiet, with many hotels and restaurants closed.",
+  "things": [
+    {
+      "name": "Ski Arlberg",
+      "tag": "Ticketed",
+      "blurb": "One lift pass covers St Anton, Stuben, Lech, Zürs and Warth-Schröcken, one of the biggest linked areas in the Alps. Best for confident intermediates and experts.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ski school and beginner slopes",
+      "tag": "Ticketed",
+      "blurb": "Ski School Arlberg has taught here since the 1920s. Children and beginners start on the gentler slopes at Nasserein and on the Rendl side, away from the busy main runs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "ARLBERG-well.com",
+      "tag": "Ticketed",
+      "blurb": "A leisure centre in the village with indoor and outdoor pools, saunas and, in winter, an ice rink. A good rest day for tired legs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tobogganing and winter walks",
+      "tag": "Outdoors",
+      "blurb": "Cleared winter paths and toboggan runs give non-skiers and younger children their own way to enjoy the snow.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Après-ski",
+      "tag": "Food",
+      "blurb": "St Anton is known for its loud slope-side bars at the end of the day. Families may prefer a hot chocolate in the village instead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Summer in the Verwall",
+      "tag": "Free",
+      "blurb": "Walks along rivers and up to mountain huts and lakes, with some lifts open to save the climb.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is St Anton good for a family holiday?",
+      "answer": "It works best for families with confident skiers. There are good ski schools, kids' clubs and beginner areas at Nasserein and Rendl, but much of the skiing is steep and the après-ski is lively. Total beginners may find gentler resorts more relaxing."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week is standard, with six days on the slopes. Most chalets and hotels run Saturday to Saturday."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Innsbruck, about 90 minutes away by road, or to Zurich, about two and a half hours. St Anton has its own railway station on the Arlberg line, with direct trains from Innsbruck and Zurich."
+    },
+    {
+      "question": "Is St Anton expensive?",
+      "answer": "Yes, it's one of Austria's pricier resorts, especially in February half-term. January and March weeks outside school holidays are better value."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Innsbruck",
+      "code": "INN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Zermatt",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Val Thorens",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Verbier",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    }
+  ],
+  "date": "2026-10-19T21:00:23Z",
+  "updated": "2026-10-19T21:00:23Z"
+}

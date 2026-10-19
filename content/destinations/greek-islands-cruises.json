@@ -1,0 +1,193 @@
+{
+  "name": "Greek islands",
+  "published": true,
+  "country": "GR",
+  "title": "Greek islands cruises",
+  "intro": "Whitewashed villages, ancient ruins and clear blue water across the Aegean, hopping between islands from Athens' port of Piraeus. Here's what a Greek islands cruise is like, when to go and how long to stay.",
+  "seo_title": "Greek islands cruises: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/greek-islands-cruises-1788636_1280.webp",
+  "image_alt": "A white cruise ship anchored below the steep volcanic cliffs of Santorini, with white houses along the top",
+  "wikipedia": "https://en.wikipedia.org/wiki/Aegean_Islands",
+  "to_code": "ATH",
+  "holiday_types": [
+    "cruise",
+    "beach",
+    "culture"
+  ],
+  "nights": "3 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book. Bring a hat and sun cream, as there's little shade on island walks in summer.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Few sailings",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Few sailings",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Few sailings",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Season starts, mild",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, flowers out",
+      "temp": 26
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, long days",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot, busy",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot, busy",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea, quieter",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild, last sailings",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Few sailings",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Few sailings",
+      "temp": 15
+    }
+  },
+  "when_to_go": "The Greek islands cruise season runs from April to October, with only a few sailings in winter. May, June and September are the best months, warm enough to swim but not as hot or crowded as high summer. July and August are very hot, often above 33°C, and the busiest time in Santorini and Mykonos, when several ships can call on the same day. The meltemi wind blows in July and August too, which can make the sea choppy. October is mild and quieter, though some island businesses start to close.",
+  "things": [
+    {
+      "name": "Santorini",
+      "tag": "Outdoors",
+      "blurb": "Ships anchor in the flooded volcanic caldera and take you ashore by tender boat. Ride the cable car up to Fira, then walk or take the bus to Oia for the views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mykonos",
+      "tag": "Free",
+      "blurb": "Wander the white lanes of Mykonos Town to the windmills and the waterfront houses of Little Venice. Ships often stay into the evening, so you can see the sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rhodes Old Town",
+      "tag": "Culture",
+      "blurb": "A walled medieval town built by the Knights of St John, with the Palace of the Grand Master and the cobbled Street of the Knights. It's a short walk from where ships dock.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Knossos in Crete",
+      "tag": "Ticketed",
+      "blurb": "The ruins of a Bronze Age Minoan palace, a short drive from the port of Heraklion. Pair it with the city's excellent archaeological museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Patmos",
+      "tag": "Culture",
+      "blurb": "A quiet island with a hilltop monastery and the cave where St John is said to have written the Book of Revelation. It's a regular stop on smaller ships and shorter cruises.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Acropolis in Athens",
+      "tag": "Ticketed",
+      "blurb": "Spend a day in Athens before or after your cruise to see the Parthenon and the Acropolis Museum. Book a timed ticket and go early to beat the heat.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a Greek islands cruise good for a family holiday?",
+      "answer": "Yes. Big ships have pools and kids' clubs, and children enjoy beaches, boat rides and castles. Short cruises are a good way to try a cruise with children. Avoid the hottest weeks of July and August with young ones."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "Short cruises from Piraeus take 3 or 4 nights and visit islands such as Mykonos, Santorini, Crete and Patmos. Seven-night trips add more islands and often Turkey. Small ships and motor yachts usually sail for a week."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Athens International Airport. The X96 express bus runs from the airport to the port of Piraeus, or take a taxi, which takes about 45 minutes to an hour. Allow plenty of time, as traffic in Athens can be slow."
+    },
+    {
+      "question": "Will you need a tender boat?",
+      "answer": "At Santorini, yes. Big ships anchor in the caldera and small boats take you to the shore, so queues can be long on busy days. Most other big islands, such as Mykonos, Rhodes and Crete, have docks for ships."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Santorini",
+      "code": "JTR",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Athens",
+      "code": "ATH",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Dalmatian coast",
+      "code": "SPU",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Rhodes",
+      "code": "RHO",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-19T21:02:40Z",
+  "updated": "2026-10-19T21:02:40Z"
+}

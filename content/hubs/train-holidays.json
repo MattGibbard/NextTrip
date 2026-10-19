@@ -1,0 +1,46 @@
+{
+  "published": true,
+  "kind": "type",
+  "holiday_type": "rail",
+  "country": "",
+  "month": "",
+  "guides": [],
+  "icon": "",
+  "name": "By train",
+  "title": "Train holidays",
+  "intro": "Big windows, mountain passes and nobody stuck at the wheel. Here's where to go for a holiday by train, how long you'll need and when to go.",
+  "seo_title": "Train holidays: the most scenic rail journeys, and when to go",
+  "seo_description": "",
+  "sections": [
+    {
+      "heading": "The short list",
+      "text": "- **Swiss mountain trains:** the [Glacier Express](/destinations/glacier-express), the [Bernina Express](/destinations/bernina-express) and the [GoldenPass Express](/destinations/goldenpass-express), with [Interlaken](/destinations/interlaken) as a base.\n- **Short and spectacular:** the [Flåm Railway](/destinations/flam-railway) in Norway.\n- **Coast and vineyards:** the [Cinque Terre](/destinations/cinque-terre) and the [Douro Valley](/destinations/douro-valley).\n- **Far away, worth it:** the [Rocky Mountaineer](/destinations/rocky-mountaineer) in Canada and the toy train in [Darjeeling](/destinations/darjeeling).\n\nFor more, see all the train guides above, with the best months for each."
+    },
+    {
+      "heading": "Why go by train",
+      "text": "On a train the journey is part of the holiday. Everyone gets the view, children can move about, and you arrive in the middle of town. Many of the best routes climb through mountains or run along coasts that roads can't reach, so you see things you wouldn't from a car."
+    },
+    {
+      "heading": "Booking tips",
+      "text": "- **Reserve seats on the famous trains.** The Glacier Express, Bernina Express and Rocky Mountaineer sell out in summer.\n- **Look at rail passes.** In Switzerland, a travel pass can cover the train fare, with just a seat reservation on top.\n- **Sit on the right side.** Each guide says which side has the best views where it matters.\n- **Break the journey.** Stopping a night or two along the way is more relaxing than doing it all in one day."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What are the most scenic train journeys?",
+      "answer": "The Glacier Express and Bernina Express in Switzerland, the Flåm Railway in Norway and the Rocky Mountaineer in Canada are among the most famous."
+    },
+    {
+      "question": "Are train holidays good for children?",
+      "answer": "Yes. There's room to move about and lots to look at. Short, dramatic rides like the Flåm Railway or the Cinque Terre trains suit younger children best."
+    },
+    {
+      "question": "How long do you need for a train holiday?",
+      "answer": "A long weekend is enough for the Cinque Terre or the Flåm Railway. Allow a week for the Swiss trains with stops, and ten days or more for the Rocky Mountaineer."
+    },
+    {
+      "question": "When is the best time for a train holiday?",
+      "answer": "Summer has the longest days and the most trains, but the Swiss mountain trains run all year and are lovely in the snow."
+    }
+  ]
+}

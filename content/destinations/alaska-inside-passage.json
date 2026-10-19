@@ -1,0 +1,193 @@
+{
+  "name": "Alaska's Inside Passage",
+  "published": true,
+  "country": "US",
+  "title": "Alaska's Inside Passage cruises",
+  "intro": "A sheltered sea route past forested islands, glaciers and small frontier towns along the coast of south-east Alaska, with whales and bald eagles along the way. Here's what an Inside Passage cruise is like, when to go and how long to stay.",
+  "seo_title": "Alaska's Inside Passage cruises: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/alaska-inside-passage-979526_1280.webp",
+  "image_alt": "Passengers on the deck of a cruise ship looking out at a glacier and mountains in Alaska",
+  "wikipedia": "https://en.wikipedia.org/wiki/Inside_Passage",
+  "to_code": "SEA",
+  "holiday_types": [
+    "cruise",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 to 9 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Cruises from Vancouver also need a Canadian eTA, and Seattle sailings usually stop in Canada too, so bring your passport. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 0
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 1
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 4
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "First sailings",
+      "temp": 9
+    },
+    "may": {
+      "rating": "good",
+      "note": "Drier, fewer crowds",
+      "temp": 13
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Longest days",
+      "temp": 16
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warmest, busiest",
+      "temp": 18
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Salmon runs, bears",
+      "temp": 17
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Wetter, cheaper",
+      "temp": 13
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 8
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 3
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 1
+    }
+  },
+  "when_to_go": "The cruise season runs from May to September, with a handful of sailings in late April and early October. June to August is peak time, with the warmest weather, the longest days and the most excursions running, but also the highest prices. May is often the driest month and a good deal cheaper. August and September bring salmon runs and bears feeding at the rivers, though September is wetter. Whales are around all season. Pack layers and a waterproof whatever the month, as it rains a lot in the Inside Passage and it's chilly near the glaciers.",
+  "things": [
+    {
+      "name": "Juneau and Mendenhall Glacier",
+      "tag": "Outdoors",
+      "blurb": "Alaska's capital can only be reached by sea or air. A short bus ride takes you to Mendenhall Glacier, with an easy trail to a waterfall beside the ice.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Ticketed",
+      "blurb": "Humpback whales feed in the waters around Juneau all summer, and boat trips from the harbour see them most days. You may spot orcas and sea lions too.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Skagway and the White Pass railway",
+      "tag": "Ticketed",
+      "blurb": "A gold rush town of wooden boardwalks, where a narrow-gauge railway climbs steeply into the mountains towards Canada. Book early, as it fills up on busy ship days.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Glacier Bay National Park",
+      "tag": "Outdoors",
+      "blurb": "A full day of scenic cruising past tidewater glaciers that crack and drop ice into the sea. Park rangers come aboard to explain what you're seeing. Only some ships have permits, so check your itinerary.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ketchikan",
+      "tag": "Culture",
+      "blurb": "A rainy fishing town known for its totem poles, with collections at Saxman Village and Totem Bight. Walk along Creek Street, a row of old houses on stilts over the river.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Victoria, British Columbia",
+      "tag": "Free",
+      "blurb": "Round trips from Seattle usually call at Victoria for an evening, with its harbour, grand Parliament Buildings and gardens. Butchart Gardens is a short drive away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is an Inside Passage cruise good for a family holiday?",
+      "answer": "Yes. Big ships have kids' clubs and plenty to do on sea days, and children love the whales, glaciers and train rides. Excursions are pricey for a family, so pick one or two big ones. Small expedition ships suit older children who like being outdoors."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "Most Inside Passage cruises are 7 nights, round trip from Seattle or Vancouver, calling at three ports and spending a day near a glacier. One-way cruises between Vancouver and Seward or Whittier are also 7 nights. Small-ship trips from Juneau or Ketchikan are usually a week."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Seattle-Tacoma Airport for Seattle sailings, which leave from Pier 66 downtown or Pier 91, both a taxi ride away. For Vancouver sailings, fly into Vancouver International and take the Canada Line SkyTrain to Waterfront, next to the Canada Place cruise terminal."
+    },
+    {
+      "question": "Should you sail from Seattle or Vancouver?",
+      "answer": "Seattle has the most round trips, usually with a stop in Victoria. Vancouver offers round trips and one-way trips north across the Gulf of Alaska, which suit you if you want to add Denali National Park by land afterwards."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Norwegian fjords",
+      "code": "BGO",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Vancouver",
+      "code": "YVR",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Tofino",
+      "code": "YAZ",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Banff",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-19T21:02:40Z",
+  "updated": "2026-10-19T21:02:40Z"
+}

@@ -1,0 +1,193 @@
+{
+  "name": "Niseko",
+  "published": true,
+  "country": "JP",
+  "title": "Holidays in Niseko",
+  "intro": "Hokkaido's best-known ski area, famous for deep, light powder snow, views of the cone-shaped Mount Yotei and steaming hot springs. Here's what Niseko is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/niseko-846008_1280.webp",
+  "image_alt": "The snow-capped cone of Mount Yotei rising above snowy fir trees near Niseko",
+  "wikipedia": "https://en.wikipedia.org/wiki/Niseko,_Hokkaido",
+  "to_code": "CTS",
+  "holiday_types": [
+    "ski",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "9 hrs ahead of the UK (8 in summer)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Japanese yen (¥)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 100V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Japanese sockets take two flat pins, so bring an adaptor. Cash is still handy for small restaurants and onsen. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Deepest powder",
+      "temp": -3
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Powder, snow festival",
+      "temp": -2
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring skiing",
+      "temp": 2
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Season winds down",
+      "temp": 9
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Between seasons",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Green season",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Rafting, hiking",
+      "temp": 24
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warmest month",
+      "temp": 25
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm, quieter",
+      "temp": 21
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Autumn colours",
+      "temp": 14
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Waiting for snow",
+      "temp": 6
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Season starts",
+      "temp": -1
+    }
+  },
+  "when_to_go": "The ski season runs from about early December to early May, but the famous powder is best from mid-December to February, when it snows almost every day. Christmas, New Year and Chinese New Year are the busiest and dearest weeks. March brings sunnier spring skiing and lower prices. In summer Niseko turns green and is a base for rafting, hiking and cycling, with warm, pleasant days. October and November are quiet between seasons.",
+  "things": [
+    {
+      "name": "Niseko United",
+      "tag": "Ticketed",
+      "blurb": "Four linked resorts, Grand Hirafu, Hanazono, Niseko Village and Annupuri, share the slopes of Mount Niseko Annupuri. One pass covers them all.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ski school and kids' areas",
+      "tag": "Ticketed",
+      "blurb": "Several ski schools teach in English, with children's programmes and gentle beginner slopes at each resort. Book early for the Christmas and New Year weeks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Night skiing",
+      "tag": "Ticketed",
+      "blurb": "Some runs are floodlit in the evening, so you can ski fresh snow under the lights after dinner.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Onsen hot springs",
+      "tag": "Ticketed",
+      "blurb": "Soaking in an outdoor hot spring pool while snow falls is a highlight. Check each onsen's rules, as many still ask guests with tattoos to cover up.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sapporo and Otaru",
+      "tag": "Culture",
+      "blurb": "Day trips to Otaru's canal and glass workshops, or to Sapporo, whose Snow Festival in early February fills the city with ice sculptures.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Summer rafting",
+      "tag": "Outdoors",
+      "blurb": "In the green season, raft the Shiribetsu River, hike round Mount Yotei or cycle quiet farm roads.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Niseko good for a family holiday?",
+      "answer": "Yes. English is widely spoken, ski schools are good and the snow is soft and forgiving for learners. It's a long way from Europe, and very cold in midwinter, so it suits families with older children best."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "At least a week, ideally ten nights, to get over the jet lag and make the long trip worthwhile. Many people add a few days in Sapporo or Tokyo."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to New Chitose Airport near Sapporo, then take a shuttle bus or transfer to Niseko, about two and a half to three hours. Trains also run to Kutchan, the nearest town."
+    },
+    {
+      "question": "When is the best powder?",
+      "answer": "From mid-December to the end of February, when cold winds from Siberia bring frequent heavy snowfalls."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Whistler",
+      "code": "YVR",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Park City",
+      "code": "SLC",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Tokyo",
+      "code": "HND",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Kanazawa",
+      "code": "KMQ",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-19T21:00:23Z",
+  "updated": "2026-10-19T21:00:23Z"
+}

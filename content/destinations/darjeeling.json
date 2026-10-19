@@ -1,0 +1,193 @@
+{
+  "name": "Darjeeling",
+  "published": true,
+  "country": "IN",
+  "title": "Holidays in Darjeeling",
+  "intro": "A hill town of tea gardens and Himalayan views in north-east India, reached by a tiny steam-hauled toy train that zigzags up from the plains. Here's what Darjeeling is like, when to go and how long to stay.",
+  "seo_title": "Darjeeling toy train: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/darjeeling-197611_1280.webp",
+  "image_alt": "A small steam engine pulling a blue carriage along narrow tracks between tea bushes, puffing smoke under a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Darjeeling_Himalayan_Railway",
+  "to_code": "IXB",
+  "holiday_types": [
+    "rail",
+    "culture",
+    "nature"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4½ to 5½ hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Indian rupee (₹)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eVisa needed",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / D / M · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Ask your GP or a travel clinic about jabs before you go. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cold, clear views",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cool, clear",
+      "temp": 11
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Spring, first flush tea",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Rhododendrons bloom",
+      "temp": 18
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm, hazier",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Monsoon starts",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Monsoon, landslides",
+      "temp": 20
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Monsoon",
+      "temp": 20
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Rain easing",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Clear Himalayan views",
+      "temp": 18
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Clear, crisp",
+      "temp": 15
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cold, clear",
+      "temp": 12
+    }
+  },
+  "when_to_go": "October and November are the best months, with fresh, clear air after the monsoon and the best chance of seeing Kanchenjunga from Tiger Hill. March to May is also lovely, with spring tea picking, flowering rhododendrons and mild days, though views can be hazier. June to September is monsoon season, with heavy rain, cloud and landslides that sometimes suspend the full train route. December to February is cold, close to freezing at night, but often clear and quiet.",
+  "things": [
+    {
+      "name": "Darjeeling Himalayan Railway",
+      "tag": "Ticketed",
+      "blurb": "The UNESCO-listed narrow-gauge line climbs from New Jalpaiguri on the plains, looping and zigzagging up to Darjeeling. The full run takes most of a day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Steam joy ride and Batasia Loop",
+      "tag": "Ticketed",
+      "blurb": "A two-hour steam round trip from Darjeeling to Ghum, one of the highest stations in India, pausing at the Batasia Loop with its war memorial and gardens.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tiger Hill sunrise",
+      "tag": "Outdoors",
+      "blurb": "Leave before dawn for the drive to Tiger Hill, where on clear days the sun lights up Kanchenjunga, the world's third-highest mountain.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tea estate tour",
+      "tag": "Food",
+      "blurb": "Visit a tea garden such as Happy Valley to see the leaves picked and processed, then taste the famous Darjeeling tea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Himalayan Mountaineering Institute",
+      "tag": "Culture",
+      "blurb": "A museum on Everest climbs and Tenzing Norgay, next to the Padmaja Naidu Himalayan Zoological Park with red pandas and snow leopards.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Mall and Chowrasta",
+      "tag": "Free",
+      "blurb": "The town's open square and promenade, perfect for a stroll, people-watching and a cup of tea at one of the old cafés.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long is the train ride?",
+      "answer": "The full journey from New Jalpaiguri to Darjeeling covers about 88 km and takes around seven to eight hours. Many visitors drive up and take the two-hour steam joy ride from Darjeeling instead."
+    },
+    {
+      "question": "Is Darjeeling good for a family holiday?",
+      "answer": "Yes, for children who enjoy steam trains, the zoo and tea gardens. The town is steep and roads are slow, so allow time for travelling and pack warm clothes."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Bagdogra, which has flights from Delhi, Kolkata and other Indian cities. From there it's about three hours by taxi or shared jeep up to Darjeeling, or join the toy train at nearby New Jalpaiguri station."
+    },
+    {
+      "question": "Do you need to book the toy train?",
+      "answer": "Yes, book ahead, especially in October, November and spring. Tickets are sold through Indian Railways, and joy rides fill up in busy holiday weeks."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Nepal",
+      "code": "KTM",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Kerala",
+      "code": "COK",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Bernina Express",
+      "code": "ZRH",
+      "label": "🚆 By train"
+    }
+  ],
+  "date": "2026-10-19T21:08:42Z",
+  "updated": "2026-10-19T21:08:42Z"
+}

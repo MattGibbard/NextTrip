@@ -1,0 +1,193 @@
+{
+  "name": "Garden Route",
+  "published": true,
+  "country": "ZA",
+  "title": "Holidays on the Garden Route",
+  "intro": "A green stretch of South Africa's south coast between Mossel Bay and Storms River, with lagoons, forests, whale-watching bays and long sandy beaches. Here's what the Garden Route is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/garden-route-458074_1280.webp",
+  "image_alt": "The turquoise Knysna lagoon opening to the sea between green headlands, with the town and mountains beyond",
+  "wikipedia": "https://en.wikipedia.org/wiki/Garden_Route",
+  "to_code": "CPT",
+  "holiday_types": [
+    "road-trip",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 to 2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "South African rand (R)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type M / N / C · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Drive on the left, as in the UK. Passports need two blank pages. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Hot, busy holidays",
+      "temp": 26
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 26
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, settled",
+      "temp": 25
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Mild, quiet",
+      "temp": 23
+    },
+    "may": {
+      "rating": "good",
+      "note": "Cooler, quiet",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Cool, short days",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Coolest month",
+      "temp": 19
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Cool, whales arrive",
+      "temp": 19
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Spring, whales",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Whales, flowers",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm, quiet",
+      "temp": 23
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Busy holidays",
+      "temp": 25
+    }
+  },
+  "when_to_go": "The Garden Route is mild all year and rain falls in every season, so there's no bad time to go. February to April and October to November are the sweet spots, with warm days and fewer crowds. Mid-December to mid-January is the main South African summer holiday, when beach towns like Plettenberg Bay fill up and prices rise. June to August is cooler with shorter days, but it's quiet and good value, and whales arrive along the coast from around June, staying into spring.",
+  "things": [
+    {
+      "name": "Knysna lagoon and the Heads",
+      "tag": "Free",
+      "blurb": "A huge tidal lagoon guarded by two sandstone cliffs. Drive up to the viewpoint on the eastern Head, then take a boat trip on the lagoon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Storms River Mouth",
+      "tag": "Ticketed",
+      "blurb": "A swaying suspension bridge over the river mouth in the Tsitsikamma section of the Garden Route National Park, reached by a short coastal boardwalk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Robberg Nature Reserve",
+      "tag": "Ticketed",
+      "blurb": "A rocky peninsula near Plettenberg Bay with cliff-top trails, a seal colony and quiet coves. The full loop takes about four hours.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bloukrans Bridge bungee",
+      "tag": "Ticketed",
+      "blurb": "One of the highest bridge bungee jumps in the world, from the arch of the Bloukrans Bridge. You can also just watch from the viewpoint.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wilderness",
+      "tag": "Outdoors",
+      "blurb": "A small village with a long empty beach, lakes and forest trails, and canoeing on the Touws River.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Oudtshoorn and the Cango Caves",
+      "tag": "Ticketed",
+      "blurb": "Over the Outeniqua Pass from George, a dry inland town known for ostrich farms and huge limestone caves with guided tours.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Garden Route good for a family holiday?",
+      "answer": "Yes. Driving distances are short, there are safe beaches, gentle forest walks and boat trips, and wildlife and bird parks near Plettenberg Bay. Many places to stay have self-catering cottages, which works well for families."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Allow a week to ten days. The Garden Route itself is only about 300 km, but you'll want two or three nights each in places like Wilderness, Knysna and Plettenberg Bay. Add a few nights in Cape Town if you're starting there."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Cape Town International Airport and drive east on the N2, about four hours to Mossel Bay. To save time, fly into George, which is in the middle of the route, or into Gqeberha (Port Elizabeth) at the eastern end."
+    },
+    {
+      "question": "Is it safe to drive the Garden Route?",
+      "answer": "The N2 is a good road and the Garden Route is one of the easier parts of South Africa to drive. Avoid driving after dark, keep valuables out of sight, and watch for minibus taxis stopping suddenly."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cape Town",
+      "code": "CPT",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Namibia",
+      "code": "WDH",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Great Ocean Road",
+      "code": "MEL",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Tasmania",
+      "code": "HBA",
+      "label": "🚗 Road trip"
+    }
+  ],
+  "date": "2026-10-19T21:03:37Z",
+  "updated": "2026-10-19T21:03:37Z"
+}

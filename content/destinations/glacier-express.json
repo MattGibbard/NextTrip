@@ -1,0 +1,192 @@
+{
+  "name": "Glacier Express",
+  "published": true,
+  "country": "CH",
+  "title": "The Glacier Express",
+  "intro": "A slow, panoramic train across the Swiss Alps from Zermatt to St Moritz, over the Oberalp Pass, through the Rhine Gorge and across hundreds of bridges. Here's what the Glacier Express is like, when to go and how long to stay.",
+  "seo_title": "Glacier Express: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/glacier-express-3310132_1280.webp",
+  "image_alt": "A red and white Glacier Express train crossing a stone viaduct above a rushing mountain stream in a green Swiss valley",
+  "wikipedia": "https://en.wikipedia.org/wiki/Glacier_Express",
+  "to_code": "ZRH",
+  "holiday_types": [
+    "rail",
+    "nature"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Swiss franc (CHF)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / J · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The Swiss Travel Pass covers the fare, but you still pay for a compulsory seat reservation on the Glacier Express. Switzerland is in the Schengen area, so the new EU entry checks apply. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Snowy scenery",
+      "temp": 1
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Snowy scenery",
+      "temp": 2
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Late winter snow",
+      "temp": 5
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Snow melting",
+      "temp": 9
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring in the valleys",
+      "temp": 13
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long, green days",
+      "temp": 17
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Peak season",
+      "temp": 19
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Peak season",
+      "temp": 19
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Clear, calmer",
+      "temp": 15
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 10
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Seasonal break",
+      "temp": 4
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Snowy, festive",
+      "temp": 1
+    }
+  },
+  "when_to_go": "The Glacier Express runs for most of the year, with a break of several weeks in late autumn, usually from mid-October into December, so check dates before you plan. June to September is the most popular time, with green valleys, open mountain paths and long days, so book seats well ahead. September is often the sweet spot, with clear skies and fewer people. Winter trips are just as beautiful, with deep snow on the passes and cosy villages, and you can pair the ride with skiing in Zermatt or St Moritz. April and early May are the dullest months, when the snow is melting and some lifts close.",
+  "things": [
+    {
+      "name": "Matterhorn and Gornergrat",
+      "tag": "Ticketed",
+      "blurb": "Before you leave Zermatt, ride the Gornergrat rack railway for the classic view of the Matterhorn above a ring of glaciers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Landwasser Viaduct",
+      "tag": "Free",
+      "blurb": "The curved stone viaduct near Filisur, where the train runs straight into a tunnel in a cliff. Walk to the viewpoint below to watch trains cross.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rhine Gorge",
+      "tag": "Outdoors",
+      "blurb": "The train runs through the Ruinaulta, a white limestone canyon carved by the Rhine. Regional trains stop at Versam-Safien and Trin for walking trails and viewing platforms.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Oberalp Pass",
+      "tag": "Outdoors",
+      "blurb": "The highest point of the route at 2,033 metres. In summer, hop on a regional train that stops at the pass and walk to the source of the Rhine at Lake Toma.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Andermatt",
+      "tag": "Culture",
+      "blurb": "A mountain village halfway along the route, good for breaking the journey with a night, a hike or a winter ski day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "St Moritz",
+      "tag": "Food",
+      "blurb": "The glamorous lakeside resort at the eastern end, with smart cafés, lake walks and the Engadin valley on the doorstep.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long is the train ride?",
+      "answer": "About eight hours from Zermatt to St Moritz, covering 291 km. You can also ride shorter sections, or break the trip in Andermatt or Disentis."
+    },
+    {
+      "question": "Is the Glacier Express good for a family holiday?",
+      "answer": "Yes, for children who like trains and views. Eight hours is long for small children, so think about doing part of the route and adding stops in Zermatt or Andermatt."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Zurich or Geneva. From either airport, Swiss trains reach Zermatt in about three and a half to four hours, changing at Visp. From Zurich it's also easy to start at the St Moritz end."
+    },
+    {
+      "question": "Do you need to book the Glacier Express?",
+      "answer": "Yes. Seat reservations are compulsory and summer trains sell out, so book as soon as dates open. Excellence Class, with a set menu and guaranteed window seat, costs much more."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bernina Express",
+      "code": "ZRH",
+      "label": "🚆 By train"
+    },
+    {
+      "name": "Zermatt",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "GoldenPass Express",
+      "code": "GVA",
+      "label": "🚆 By train"
+    },
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-19T21:08:42Z",
+  "updated": "2026-10-19T21:08:42Z"
+}

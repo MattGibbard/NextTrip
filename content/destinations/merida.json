@@ -1,0 +1,200 @@
+{
+  "name": "Mérida",
+  "published": true,
+  "country": "MX",
+  "title": "Holidays in Mérida",
+  "intro": "Colonial squares, Maya ruins and swimming cenotes around the relaxed, colourful capital of Mexico's Yucatán. Here's what Mérida is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/merida-8043489_1280.webp",
+  "image_alt": "Horse-drawn carriages on a street of colonial buildings in the centre of Mérida, Yucatán, in warm evening light",
+  "wikipedia": "https://en.wikipedia.org/wiki/M%C3%A9rida,_Yucat%C3%A1n",
+  "to_code": "MID",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "5 to 8",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 hrs behind the UK (7 in summer)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Mexican peso ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for tourist visits",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 127V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Bring a plug adaptor that takes flat two-pin plugs. Mexico stamps the number of days you can stay in your passport, so check GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 29
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 31
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Hot, dry",
+      "temp": 33
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 35
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Hottest month",
+      "temp": 36
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Hot, rains start",
+      "temp": 34
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Hot, showers",
+      "temp": 34
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hot, showers",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Wettest month",
+      "temp": 33
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm, rains easing",
+      "temp": 32
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm, drier",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Warm, festive",
+      "temp": 29
+    }
+  },
+  "when_to_go": "November to March is the best time to go, warm and mostly dry, with highs around 29 to 33°C. April and May are the hottest months, often reaching 35°C or more, so plan sightseeing for early morning. The rainy season runs from about June to October, usually with short afternoon storms, and September is the wettest month. Hurricanes are possible in late summer and autumn.",
+  "things": [
+    {
+      "name": "Plaza Grande and the cathedral",
+      "tag": "Free",
+      "blurb": "The city's main square, with one of the oldest cathedrals in the Americas, the colourful Palacio de Gobierno and shady benches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paseo de Montejo",
+      "tag": "Free",
+      "blurb": "A grand boulevard of mansions built in the henequen boom, now museums, cafés and restaurants. Lovely by bike on a Sunday morning.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Uxmal",
+      "tag": "Day trip",
+      "blurb": "One of the finest Maya cities, with the tall Pyramid of the Magician and carved palaces, about an hour's drive south.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chichén Itzá",
+      "tag": "Day trip",
+      "blurb": "The famous Maya pyramid of El Castillo, about two hours away. Arrive at opening time to beat the heat and the coach tours.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cenotes",
+      "tag": "Outdoors",
+      "blurb": "Swim in clear underground pools in limestone caves and sinkholes, scattered through the countryside around the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Celestún",
+      "tag": "Day trip",
+      "blurb": "A fishing village on the Gulf coast where boats take you out to see flamingos in the mangrove lagoon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Izamal",
+      "tag": "Day trip",
+      "blurb": "The 'yellow city', with a huge convent, ochre-painted streets and Maya pyramids right in the town.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Mérida from the UK?",
+      "answer": "There are no direct flights. Connect through a US city or Mexico City to Mérida's airport, or fly direct to Cancún and take the bus, the Tren Maya or a hire car west."
+    },
+    {
+      "question": "Is Mérida worth visiting instead of Cancún?",
+      "answer": "They're different. Mérida is a historic city with ruins, food and cenotes close by, while Cancún is a beach resort. Many people combine the two."
+    },
+    {
+      "question": "How many days do you need in Mérida?",
+      "answer": "Four or five days covers the city plus day trips to Uxmal, a cenote and Celestún. A week lets you add Chichén Itzá and Izamal."
+    },
+    {
+      "question": "When is the best time to visit Mérida?",
+      "answer": "November to March, when it's warm and mostly dry. April and May are very hot, and summer brings afternoon storms."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bacalar",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Oaxaca",
+      "code": "OAX",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Mexico City",
+      "code": "MEX",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Cancún",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-19T05:45:57Z",
+  "updated": "2026-10-19T05:45:57Z"
+}

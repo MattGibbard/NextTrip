@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { DESTINATIONS, findDestination } from "../src/destinations";
 import { boardTimeline } from "../src/components/FlapBoard";
-import { BOARD_SIZE, shuffled, NO_ANSWERS, answersSummary, draw, fits, loosen, matches, nextMonth, pickMeta, pickerStay, readAlso, readAnswers, resultHref } from "../src/picker";
+import { BOARD_SIZE, shuffled, NO_ANSWERS, answersSummary, draw, fits, loosen, matches, nextMonth, pickMeta, pickerStay, readAlso, readAnswers, readWinner, resultHref, revealHref } from "../src/picker";
 import type { Answers } from "../src/picker";
-import { metaTags, publicPage } from "../shared/seo";
+import { PAGES, metaTags, publicPage } from "../shared/seo";
 
 const lisbon = findDestination("lisbon")!;
 const answers = (a: Partial<Answers>): Answers => ({ ...NO_ANSWERS, ...a });
@@ -85,6 +85,28 @@ describe("result links", () => {
     expect(readAlso(q, DESTINATIONS, "lisbon").map((d) => d.slug)).toEqual(["nice"]);
     expect(publicPage("/holiday-picker/lisbon")).toBe("pick:lisbon");
     expect(publicPage("/holiday-picker")).toBe("picker");
+  });
+
+  it("share a reveal link that doesn't give the winner away", () => {
+    const a = answers({ types: ["city"], month: "sep" });
+    const href = revealHref("lisbon", a, ["vienna", "nice"]);
+    expect(href).toBe("/holiday-picker/reveal?t=city&m=sep&also=lisbon,nice,vienna&w=bGlzYm9u");
+    expect(href.replace(/also=[^&]*/, "")).not.toContain("lisbon");
+    expect(publicPage("/holiday-picker/reveal")).toBe("reveal");
+    expect(findDestination("reveal")).toBeUndefined();
+    const q = new URL(href, "https://somewhere.party").searchParams;
+    expect(readWinner(q, DESTINATIONS)).toBe(lisbon);
+    expect(readAnswers(q)).toEqual(a);
+    expect(readAlso(q, DESTINATIONS, "lisbon").map((d) => d.slug)).toEqual(["nice", "vienna"]);
+    expect(readWinner(new URLSearchParams("w=%%%"), DESTINATIONS)).toBeUndefined();
+    expect(readWinner(new URLSearchParams(""), DESTINATIONS)).toBeUndefined();
+  });
+
+  it("preview a reveal link without naming the winner", () => {
+    const tags = metaTags(PAGES.reveal);
+    expect(tags).toContain('<meta name="robots" content="noindex" />');
+    expect(tags).toContain("og:title");
+    expect(tags).toContain("picked a holiday! Watch the board");
   });
 
   it("drop anything that isn't a real answer", () => {

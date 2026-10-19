@@ -1,0 +1,193 @@
+{
+  "name": "Rotorua",
+  "published": true,
+  "country": "NZ",
+  "title": "Holidays in Rotorua",
+  "intro": "A lakeside town on New Zealand's North Island, full of geysers, bubbling mud, hot pools and Māori culture, with forests and lakes all around. Here's what Rotorua is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/rotorua-3078176_1280.webp",
+  "image_alt": "The Tudor-style former bath house in Rotorua, now the town's museum, behind a green lawn and palm trees",
+  "wikipedia": "https://en.wikipedia.org/wiki/Rotorua",
+  "to_code": "ROT",
+  "holiday_types": [
+    "relax",
+    "nature",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "11 to 13 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "New Zealand dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "NZeTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type I · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders need an NZeTA before they fly, applied for online, plus a small tourist levy. New Zealand has strict rules on bringing food and outdoor gear into the country. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 24
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 24
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, calm",
+      "temp": 22
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 19
+    },
+    "may": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot pool weather",
+      "temp": 13
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot pool weather",
+      "temp": 13
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 14
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 16
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 22
+    }
+  },
+  "when_to_go": "Rotorua is good all year. Summer, from December to March, is warm and best for the lakes and mountain biking, though it's busiest in the school holidays from Christmas to late January. Winter, from June to August, is cool, around 13°C, but the hot pools feel even better in chilly air. The geothermal sights are the same in any season.",
+  "things": [
+    {
+      "name": "Te Puia",
+      "tag": "Ticketed",
+      "blurb": "See the Pōhutu geyser erupt, kiwi birds, and Māori carving and weaving schools in the Whakarewarewa valley.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wai-O-Tapu",
+      "tag": "Ticketed",
+      "blurb": "The bright orange and green Champagne Pool and the Lady Knox geyser, which erupts every morning at 10:15.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Polynesian Spa",
+      "tag": "Ticketed",
+      "blurb": "Lakeside hot mineral pools, including a family pool area, open into the evening.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Redwoods Treewalk",
+      "tag": "Ticketed",
+      "blurb": "Suspension bridges strung between giant redwoods, lit with lanterns after dark.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Skyline gondola and luge",
+      "tag": "Ticketed",
+      "blurb": "A gondola up the hill, then race down on a luge cart. Children love it.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Māori cultural evening",
+      "tag": "Tour",
+      "blurb": "An evening of song, dance and a hāngī meal cooked in an earth oven.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Rotorua good for a family holiday?",
+      "answer": "Very. Geysers, mud pools, luge rides, treewalks and hot pools make it one of the best family stops in New Zealand. The sulphur smell takes a day or so to get used to."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights covers the main sights. Most visitors include it on a North Island road trip with Auckland, Waitomo's glowworm caves and Lake Taupō."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Rotorua Airport, a short drive from town, with domestic flights from Auckland, Wellington and Christchurch. From Auckland Airport, which has the international flights, it's about three hours by car."
+    },
+    {
+      "question": "Can you bathe in the hot springs?",
+      "answer": "Yes, in spas and hot pools such as the Polynesian Spa, Kerosene Creek or Hell's Gate's mud baths. Never swim in the wild geothermal pools in the parks, which are boiling."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Queenstown",
+      "code": "ZQN",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Beppu",
+      "code": "OIT",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Iceland's Ring Road",
+      "code": "KEF",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Tasmania",
+      "code": "HBA",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-19T22:48:56Z",
+  "updated": "2026-10-19T22:48:56Z"
+}

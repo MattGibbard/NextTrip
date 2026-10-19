@@ -1,0 +1,193 @@
+{
+  "name": "Belgrade to Bar railway",
+  "published": true,
+  "country": "RS",
+  "title": "The Belgrade to Bar railway",
+  "intro": "A spectacular and very cheap train ride from Serbia's capital to Montenegro's Adriatic coast, through more than 250 tunnels and over the soaring Mala Rijeka viaduct. Here's what the Belgrade to Bar railway is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/belgrade-bar-railway-824554_1280.webp",
+  "image_alt": "Lake Skadar in Montenegro, with an old stone fortress on a small island and mountains behind, near the end of the Belgrade to Bar railway",
+  "wikipedia": "https://en.wikipedia.org/wiki/Belgrade%E2%80%93Bar_railway",
+  "to_code": "BEG",
+  "holiday_types": [
+    "rail",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Serbian dinar, euro in Montenegro",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Serbia and Montenegro are not in the EU or Schengen, so you'll go through passport checks on the train at the border. Montenegro uses the euro. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, snowy hills",
+      "temp": 4
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 7
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 12
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, green",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, beach",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 25
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 19
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 12
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 6
+    }
+  },
+  "when_to_go": "The train runs all year, with extra sleeper trains in summer. May, June and September are the best months, warm enough for the beach at the Montenegro end but not too hot for Belgrade. July and August are hot and the coast is busy. Winter brings snow to the mountain section, which is beautiful, but some services are cut and the coast is quiet. Temperatures shown are for Belgrade.",
+  "things": [
+    {
+      "name": "Mala Rijeka viaduct",
+      "tag": "Free",
+      "blurb": "Once the world's highest railway bridge, nearly 200 metres above the river. Look out about an hour before Podgorica.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake Skadar",
+      "tag": "Free",
+      "blurb": "The line crosses the Balkans' largest lake on a causeway near the end. Boat trips leave from Virpazar.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Belgrade fortress",
+      "tag": "Free",
+      "blurb": "Kalemegdan park and fortress above where the Sava meets the Danube, with views and a military museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Night train",
+      "tag": "Ticketed",
+      "blurb": "The overnight train has sleeper and couchette cars, so you wake up in the mountains.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kotor",
+      "tag": "Day trip",
+      "blurb": "From Bar, it's under two hours by bus to the walled town at the head of the Bay of Kotor.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old Bar",
+      "tag": "Free",
+      "blurb": "The ruins of a hilltop town above Bar, with an olive tree said to be 2,000 years old nearby.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Belgrade to Bar railway good for a family holiday?",
+      "answer": "For an adventurous family, yes. The scenery is stunning and tickets cost very little, but trains are old and can run late, so bring snacks, water and plenty to do."
+    },
+    {
+      "question": "How long is the train ride?",
+      "answer": "About 11 to 12 hours by day, or overnight on the sleeper train. Many people stop in Podgorica or at Lake Skadar on the way."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Belgrade Nikola Tesla Airport, then take a taxi or bus to Belgrade Centre station, about 20 minutes. At the other end, fly home from Podgorica or Tivat in Montenegro."
+    },
+    {
+      "question": "Should you book ahead?",
+      "answer": "For the sleeper in summer, yes, as cabins are limited. Day seats can usually be bought at the station a day or two before."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Sarajevo",
+      "code": "SJJ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Lake Ohrid",
+      "code": "OHD",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Saranda",
+      "code": "TIA",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-19T22:50:53Z",
+  "updated": "2026-10-19T22:50:53Z"
+}

@@ -1,0 +1,193 @@
+{
+  "name": "Beppu",
+  "published": true,
+  "country": "JP",
+  "title": "Holidays in Beppu",
+  "intro": "Japan's hot spring capital on the island of Kyushu, where steam rises from the streets and thousands of springs fill everything from mud baths to sand baths. Here's what Beppu is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/beppu-1818104_1280.webp",
+  "image_alt": "A steaming turquoise hot spring pool at one of Beppu's hells, with a red railing and green hillside behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Beppu,_%C5%8Cita",
+  "to_code": "OIT",
+  "holiday_types": [
+    "relax",
+    "culture",
+    "nature"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 to 9 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Japanese yen (¥)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A · 100V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders don't need a visa for short stays. Many onsen don't allow tattoos, so look for ones that do or book a private bath. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cold, steamy",
+      "temp": 10
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cold, plum blossom",
+      "temp": 11
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Cherry blossom",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Rainy season",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, humid",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, humid",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Typhoon risk",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Pleasant",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cold, onsen weather",
+      "temp": 12
+    }
+  },
+  "when_to_go": "Spring and autumn are the best seasons, with cherry blossom in late March and early April, and autumn colour in November. Winter is cold, around 10°C by day, but that's when hot springs are most inviting, and the steam over the town looks wonderful. June and early July bring the rainy season, and late summer is hot and humid, with a risk of typhoons in August and September.",
+  "things": [
+    {
+      "name": "The hells of Beppu",
+      "tag": "Ticketed",
+      "blurb": "Seven colourful hot springs for looking, not bathing, from the cobalt-blue Sea Hell to the blood-red Blood Pond Hell.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sand bath",
+      "tag": "Ticketed",
+      "blurb": "Lie on the beach while staff bury you in sand warmed by hot springs, then rinse off in an onsen.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Takegawara Onsen",
+      "tag": "Cheap",
+      "blurb": "A wooden bathhouse from 1879 near the station, with a sand bath and simple hot baths.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Yufuin",
+      "tag": "Day trip",
+      "blurb": "A pretty onsen village under a twin-peaked mountain, with a misty lake and craft shops.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Tsurumi ropeway",
+      "tag": "Ticketed",
+      "blurb": "A cable car up to views over Beppu Bay and the steaming town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jigoku-mushi steam cooking",
+      "tag": "Food",
+      "blurb": "Cook eggs, vegetables and seafood in baskets over natural steam vents in the Kannawa area.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Beppu good for a family holiday?",
+      "answer": "Yes. Children love the bubbling hells, the steam-cooked eggs and being buried in hot sand. Many ryokan have private family baths, which is easier than public bathing with young children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights covers Beppu and a day in Yufuin. It fits well into a longer Japan trip by bullet train through Kyushu."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Oita Airport, about 45 minutes from Beppu by airport bus, with domestic flights from Tokyo and Osaka. Or take the train from Fukuoka, about two hours on the Sonic express."
+    },
+    {
+      "question": "How do onsen work?",
+      "answer": "Wash and rinse at the taps before you get in, don't wear swimwear in most baths, and keep your small towel out of the water. Men's and women's baths are usually separate."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tokyo",
+      "code": "HND",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Kanazawa",
+      "code": "KMQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Rotorua",
+      "code": "ROT",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Japan by bullet train",
+      "code": "HND",
+      "label": "🚆 By train"
+    }
+  ],
+  "date": "2026-10-19T22:48:56Z",
+  "updated": "2026-10-19T22:48:56Z"
+}

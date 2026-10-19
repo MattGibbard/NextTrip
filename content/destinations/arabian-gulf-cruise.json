@@ -1,0 +1,193 @@
+{
+  "name": "Arabian Gulf cruise",
+  "published": true,
+  "country": "AE",
+  "title": "Arabian Gulf cruises from Dubai",
+  "intro": "A week of winter sunshine between Dubai, Abu Dhabi, Doha and Muscat, with desert dunes, gleaming skylines, souks and old dhow harbours. Here's what an Arabian Gulf cruise is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/arabian-gulf-cruise-7767575_1280.webp",
+  "image_alt": "A wooden abra water taxi crossing Dubai Creek in front of old waterside buildings and a minaret at sunset",
+  "wikipedia": "https://en.wikipedia.org/wiki/Persian_Gulf",
+  "to_code": "DXB",
+  "holiday_types": [
+    "cruise",
+    "city",
+    "culture"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "UAE dirham (AED)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Each country on the route has its own entry rules. UK passport holders get a free visa on arrival in the UAE and Qatar, and Oman usually offers visa-free short stays to cruise passengers. Dress modestly ashore at mosques and in old towns. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 24
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 25
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, last sailings",
+      "temp": 29
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Season ends, hot",
+      "temp": 33
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 38
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 40
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 41
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 41
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 39
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Hot",
+      "temp": 35
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Season starts",
+      "temp": 30
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 26
+    }
+  },
+  "when_to_go": "Cruises run from about November to March, when days are a warm 24 to 30°C and nights are cool. From April it gets too hot to enjoy sightseeing ashore, and by summer daytime highs are over 40°C, so the ships move elsewhere. December and January are the most pleasant, though Christmas and New Year are busy and dear. Ramadan changes opening hours in the region, so check its dates if you're going in early spring.",
+  "things": [
+    {
+      "name": "Burj Khalifa",
+      "tag": "Ticketed",
+      "blurb": "The view from the world's tallest building is the classic Dubai sight. Book a sunset slot ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sheikh Zayed Grand Mosque",
+      "tag": "Free",
+      "blurb": "Abu Dhabi's huge white marble mosque is free to visit outside prayer times, with modest clothes for everyone.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Museum of Islamic Art, Doha",
+      "tag": "Free",
+      "blurb": "A striking building on the waterfront in Doha with a park and playground outside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mutrah Souq, Muscat",
+      "tag": "Free",
+      "blurb": "Muscat's old market by the harbour, for frankincense, silver and lanterns, with mountains rising behind.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Desert safari",
+      "tag": "Tour",
+      "blurb": "An afternoon dune drive in a 4x4, with camel rides and a barbecue in a desert camp.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Abra across Dubai Creek",
+      "tag": "Cheap",
+      "blurb": "A ride on a wooden water taxi costs a single dirham and drops you near the gold and spice souks.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a Gulf cruise good for a family holiday?",
+      "answer": "Yes, in winter. The ports have big attractions children love, from aquariums to water parks, and the weather is warm but not too hot. Sea days are calm, and the ship is a cool break from sightseeing."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "Most are seven nights from Dubai, calling at Abu Dhabi, Doha or Muscat, and often Sir Bani Yas Island for a beach day. Add a night or two in Dubai before you sail."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Dubai International Airport, one of the world's busiest hubs with direct flights from most of the world. The cruise terminal at Port Rashid is about 20 minutes away by taxi."
+    },
+    {
+      "question": "Is it safe?",
+      "answer": "The usual ports in the UAE, Qatar and Oman are some of the safest places in the region. Itineraries can change at short notice if the situation around the Gulf changes, so check advice before you travel."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Dubai",
+      "code": "DXB",
+      "label": "☀️ Winter sun"
+    },
+    {
+      "name": "Oman",
+      "code": "MCT",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Nile cruise",
+      "code": "LXR",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Jordan",
+      "code": "AMM",
+      "label": "🧗 Adventure"
+    }
+  ],
+  "date": "2026-10-19T22:46:39Z",
+  "updated": "2026-10-19T22:46:39Z"
+}

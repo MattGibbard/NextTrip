@@ -14,11 +14,11 @@
   "faqs": [
     {
       "question": "Where is good for a road trip in Europe?",
-      "answer": "The Romantic Road in Germany, the Dolomites, Istria, the Alentejo and the hill towns around Ronda make easy road trips, with short drives between stops. Iceland's Ring Road is a bigger adventure."
+      "answer": "The Romantic Road in Germany, the Dolomites, Istria, the Alentejo and the hill towns around Ronda make easy road trips, with short drives between stops. Iceland's Ring Road, Ireland's Wild Atlantic Way and a loop round Sicily are bigger adventures."
     },
     {
       "question": "Where are the best road trips in North America?",
-      "answer": "The Pacific Coast Highway, Route 66, Yellowstone, the Grand Canyon, Banff, Acadia National Park and Nova Scotia from Halifax are all great by car."
+      "answer": "The Pacific Coast Highway, Route 66, Yellowstone, the Grand Canyon, Banff, Utah's national parks, the Florida Keys, Acadia National Park and the Cabot Trail in Nova Scotia are all great by car."
     },
     {
       "question": "How long do you need for a road trip?",
@@ -26,7 +26,11 @@
     },
     {
       "question": "Where are the best road trips further afield?",
-      "answer": "The Great Ocean Road in Australia, the Garden Route in South Africa and Tasmania are all easy, scenic drives, with plenty of places to stop."
+      "answer": "The Great Ocean Road in Australia, the Garden Route in South Africa and Tasmania are all easy, scenic drives, with plenty of places to stop. Rajasthan and Morocco's desert road from Marrakech are more adventurous, and most people take a driver."
+    },
+    {
+      "question": "Where is good for a road trip in winter?",
+      "answer": "The Florida Keys, Rajasthan and the drive from Marrakech to the Sahara are at their best from about November to March. In Europe, Sicily is mild in winter, though spring and autumn are better for the beaches."
     }
   ]
 }

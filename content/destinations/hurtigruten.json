@@ -1,0 +1,193 @@
+{
+  "name": "Hurtigruten coastal voyage",
+  "published": true,
+  "country": "NO",
+  "title": "The Hurtigruten coastal voyage",
+  "intro": "Norway's famous coastal ships sail every day from Bergen up past the Arctic Circle to Kirkenes near the Russian border, calling at more than 30 ports among fjords and islands. Here's what the Hurtigruten coastal voyage is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/hurtigruten-3587449_1280.webp",
+  "image_alt": "A red, black and white Hurtigruten ship sailing along the calm Norwegian coast under a pale sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Hurtigruten",
+  "to_code": "BGO",
+  "holiday_types": [
+    "cruise",
+    "nature",
+    "adventure"
+  ],
+  "nights": "6 to 12",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Norwegian krone (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Norway is in the Schengen area, so the new EU entry checks apply. Prices are high, and alcohol on board is expensive. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Northern lights",
+      "temp": -2
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Northern lights",
+      "temp": -2
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Lights, more daylight",
+      "temp": 1
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 5
+    },
+    "may": {
+      "rating": "good",
+      "note": "Light nights",
+      "temp": 10
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Midnight sun",
+      "temp": 14
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Midnight sun",
+      "temp": 16
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Summer",
+      "temp": 15
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 11
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Lights return",
+      "temp": 6
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Dark, lights",
+      "temp": 2
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Polar night, lights",
+      "temp": 0
+    }
+  },
+  "when_to_go": "The ships sail all year, and each season is different. From late September to March, long dark nights bring a good chance of the northern lights, and snow covers the coast. From mid May to late July the sun never sets in the far north. Summer is mildest, around 15°C, while winter in the Arctic is often near freezing, though the coast stays milder than you might expect thanks to the Gulf Stream.",
+  "things": [
+    {
+      "name": "Northern lights",
+      "tag": "Free",
+      "blurb": "On winter nights the crew announce sightings over the speakers, and some voyages promise another trip if you see none.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lofoten Islands",
+      "tag": "Free",
+      "blurb": "The ships wind through the Lofoten islands, with red fishing huts below jagged peaks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Trollfjord",
+      "tag": "Free",
+      "blurb": "In good weather the ship squeezes into this narrow fjord with cliffs on both sides, and turns round at the end.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tromsø",
+      "tag": "Day trip",
+      "blurb": "The Arctic Cathedral, a cable car and, in winter, husky sledding and reindeer tours.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "North Cape",
+      "tag": "Tour",
+      "blurb": "A coach trip to the cliffs at Europe's northern tip, from the port at Honningsvåg.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kirkenes snow hotel",
+      "tag": "Ticketed",
+      "blurb": "At the end of the line, a hotel built of snow and ice, with husky rides nearby.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Hurtigruten good for a family holiday?",
+      "answer": "Yes for children who love wildlife, snow or the idea of the northern lights. These are working ships rather than resort cruise ships, so there are no water slides, but there's lots to see from the deck."
+    },
+    {
+      "question": "How long is the voyage?",
+      "answer": "The full round trip from Bergen to Kirkenes and back takes 12 nights. Many people sail one way in six or seven nights and fly home, or take a shorter section such as Tromsø to Kirkenes."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Bergen Airport, then take the airport bus or a taxi to the Hurtigruten terminal in the city, about 30 minutes away. Many people spend a night in Bergen before sailing."
+    },
+    {
+      "question": "Will you see the northern lights?",
+      "answer": "There's a good chance on a winter voyage, but it depends on clear skies. Sailing north of the Arctic Circle for most of a week gives you more chances than a few nights in one place."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Norwegian fjords",
+      "code": "BGO",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Tromsø",
+      "code": "TOS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lofoten",
+      "code": "BOO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Bergen",
+      "code": "BGO",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-19T22:46:39Z",
+  "updated": "2026-10-19T22:46:39Z"
+}

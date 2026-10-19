@@ -1,0 +1,193 @@
+{
+  "name": "Sicily",
+  "published": true,
+  "country": "IT",
+  "title": "Sicily road trips",
+  "intro": "A drive round the Mediterranean's largest island, from Palermo's markets to smoking Mount Etna, Greek temples, baroque hill towns and beaches with water like glass. Here's what Sicily is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/sicily-road-trip-7471359_1280.webp",
+  "image_alt": "The dark, barren slopes and summit crater of Mount Etna in Sicily, with snow and clouds near the top",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sicily",
+  "to_code": "CTA",
+  "holiday_types": [
+    "road-trip",
+    "culture",
+    "food"
+  ],
+  "nights": "7 to 14",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Italy is in the Schengen area, so the new EU entry checks apply. Drive on the right. Many old town centres are limited traffic zones (ZTL), where cameras fine cars without a permit. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, Etna snow",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Almond blossom",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, beaches",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busiest",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 16
+    }
+  },
+  "when_to_go": "April, May, June, September and October are the best months to drive round Sicily, warm enough for the beach by late May but not too hot for sightseeing. July and August are hot and the coast gets busy with Italian holidaymakers. Winter is mild for Europe, around 15°C, with snow on Etna and quiet towns, though some beach hotels close. Temperatures shown are for Palermo.",
+  "things": [
+    {
+      "name": "Mount Etna",
+      "tag": "Tour",
+      "blurb": "Drive up to Rifugio Sapienza, then take a cable car and 4x4 buses towards the summit craters.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Valley of the Temples",
+      "tag": "Ticketed",
+      "blurb": "Ancient Greek temples near Agrigento, among olive and almond trees. Go early in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Taormina",
+      "tag": "Free",
+      "blurb": "A hill town above the sea, with a Greek theatre looking out to Etna.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Noto, Ragusa and Modica",
+      "tag": "Free",
+      "blurb": "Baroque hill towns in the southeast, rebuilt after an earthquake in 1693. Try Modica's chocolate.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Palermo street food",
+      "tag": "Food",
+      "blurb": "Arancini, panelle and cannoli in the Ballarò and Vucciria markets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Scala dei Turchi",
+      "tag": "Free",
+      "blurb": "A white limestone cliff shaped like a staircase, above sandy beaches near Agrigento.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Sicily good for a family holiday?",
+      "answer": "Yes. There are beaches all round the island, volcano trips, Greek ruins and plenty of pizza and gelato. Stay in two or three bases rather than moving every night."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week covers the east, with Etna, Taormina, Syracuse and the baroque towns. Two weeks lets you drive the whole island, adding Agrigento, the west coast and Palermo."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Catania Fontanarossa Airport for the east, or Palermo Falcone Borsellino Airport for the west, both with direct flights from across Europe. Flying into one and out of the other saves backtracking."
+    },
+    {
+      "question": "Is driving in Sicily difficult?",
+      "answer": "Motorways and country roads are fine, but city driving in Palermo and Catania is chaotic, and town centres have narrow streets and ZTL zones. Park outside the old towns and walk in."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Syracuse",
+      "code": "CTA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Puglia",
+      "code": "BRI",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Malta",
+      "code": "MLA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Amalfi Coast",
+      "code": "NAP",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-19T22:52:57Z",
+  "updated": "2026-10-19T22:52:57Z"
+}

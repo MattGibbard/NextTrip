@@ -1,0 +1,193 @@
+{
+  "name": "Danube river cruise",
+  "published": true,
+  "country": "HU",
+  "title": "Danube river cruises",
+  "intro": "A relaxed week on the Danube between Budapest, Bratislava, Vienna and the Wachau Valley, with castles, vineyards and, in December, Christmas markets at every stop. Here's what a Danube river cruise is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/danube-river-cruise-2637906_1280.webp",
+  "image_alt": "A long river cruise boat on the Danube in Budapest, below Buda Castle on the hill",
+  "wikipedia": "https://en.wikipedia.org/wiki/Danube",
+  "to_code": "BUD",
+  "holiday_types": [
+    "cruise",
+    "culture",
+    "food"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Forint, euro in Austria and Slovakia",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Hungary, Slovakia, Austria and Germany are all in the Schengen area, so the new EU entry checks apply. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 2
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 4
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Season starts, cool",
+      "temp": 10
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring blossom",
+      "temp": 16
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, long days",
+      "temp": 24
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 27
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 27
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Wine harvest",
+      "temp": 22
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Christmas markets start",
+      "temp": 8
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas markets",
+      "temp": 3
+    }
+  },
+  "when_to_go": "River cruises sail from late March to December. May, June and September are warm without the summer crowds, and early autumn brings the grape harvest in the Wachau Valley. In a dry summer, low water can force changes to the route. From late November to Christmas, special market cruises call at Vienna, Budapest, Bratislava and Passau, with cold days around 3°C, mulled wine and lights on every square.",
+  "things": [
+    {
+      "name": "Budapest by night",
+      "tag": "Free",
+      "blurb": "Sailing in or out of Budapest after dark, past the lit-up Parliament and Chain Bridge, is the highlight of many trips.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wachau Valley",
+      "tag": "Free",
+      "blurb": "Vineyards, apricot orchards and the hilltop abbey at Melk on one of the prettiest stretches of the river.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vienna",
+      "tag": "Ticketed",
+      "blurb": "Schönbrunn Palace, coffee and cake, and in winter the Christmas market outside the City Hall.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bratislava old town",
+      "tag": "Free",
+      "blurb": "A small, walkable old town below a castle, often a half-day stop between Vienna and Budapest.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Széchenyi Baths",
+      "tag": "Ticketed",
+      "blurb": "Budapest's huge outdoor thermal pools, steaming even in winter, for a soak before you board.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Passau",
+      "tag": "Free",
+      "blurb": "A pretty German town where three rivers meet, with a baroque cathedral and one of the world's largest church organs.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a Danube cruise good for a family holiday?",
+      "answer": "It can be, though river cruises are quieter and more grown-up than sea cruises. Some lines run family sailings in the summer holidays with activities for children, which are worth looking out for."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "Seven nights between Budapest and Passau or Nuremberg is the classic trip. Shorter four or five-night Christmas market cruises are popular in December."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Budapest Ferenc Liszt International Airport. The river cruise piers are in the city centre, about 30 minutes away by taxi. At the other end, fly home from Munich, Vienna or Nuremberg."
+    },
+    {
+      "question": "What is included?",
+      "answer": "Most river cruises include meals, drinks with dinner and a guided walk in each town. The boats moor right in town centres, so you can easily explore on your own as well."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Budapest",
+      "code": "BUD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Vienna",
+      "code": "VIE",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Rhine river cruise",
+      "code": "BSL",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Salzburg",
+      "code": "SZG",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-19T22:46:39Z",
+  "updated": "2026-10-19T22:46:39Z"
+}

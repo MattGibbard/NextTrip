@@ -1,0 +1,193 @@
+{
+  "name": "Morocco desert road trip",
+  "published": true,
+  "country": "MA",
+  "title": "Morocco desert road trips",
+  "intro": "A journey from Marrakech over the High Atlas mountains to film-set kasbahs, deep gorges and the golden dunes of the Sahara at Merzouga, with a night in a desert camp. Here's what a Morocco desert road trip is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/morocco-desert-road-trip-2349647_1280.webp",
+  "image_alt": "The clay-walled ksar of Aït Benhaddou on a hillside in southern Morocco, with palms below",
+  "wikipedia": "https://en.wikipedia.org/wiki/Erg_Chebbi",
+  "to_code": "RAK",
+  "holiday_types": [
+    "road-trip",
+    "adventure",
+    "culture"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK or 1 hr ahead",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Moroccan dirham (MAD)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders don't need a visa. Drive on the right, and take care on mountain roads and at night. Many visitors hire a driver or join a small-group tour instead of driving. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cold desert nights",
+      "temp": 19
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cool nights",
+      "temp": 21
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm days",
+      "temp": 23
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 25
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 29
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Hot",
+      "temp": 33
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 37
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 37
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot, cooling",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm days",
+      "temp": 28
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Pleasant",
+      "temp": 23
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cold desert nights",
+      "temp": 20
+    }
+  },
+  "when_to_go": "March to May and October to November are the best times, warm by day and comfortable in the desert. Winter days are sunny and mild, but desert nights drop close to freezing and snow can close the high Atlas pass for a day or two. From June to September the desert is fiercely hot, often over 40°C at Merzouga. Ramadan changes opening hours, so check its dates. Temperatures shown are for Marrakech.",
+  "things": [
+    {
+      "name": "Tizi n'Tichka pass",
+      "tag": "Free",
+      "blurb": "The road climbs to 2,260 metres over the High Atlas, with Berber villages clinging to the slopes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Aït Benhaddou",
+      "tag": "Ticketed",
+      "blurb": "A UNESCO-listed fortified village of clay houses, used in Gladiator and Game of Thrones.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dades and Todra gorges",
+      "tag": "Free",
+      "blurb": "Hairpin roads through rose-coloured valleys, and a walk between the 300-metre walls of the Todra Gorge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Erg Chebbi dunes",
+      "tag": "Tour",
+      "blurb": "Ride camels into the dunes at Merzouga at sunset, then spend the night in a desert camp.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ouarzazate film studios",
+      "tag": "Ticketed",
+      "blurb": "Walk round sets from famous films at Atlas Studios, a fun stop for children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Marrakech medina",
+      "tag": "Free",
+      "blurb": "Before or after the trip, the souks and the evening food stalls of Jemaa el-Fnaa.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a Morocco desert road trip good for a family holiday?",
+      "answer": "Yes, for families who don't mind long days in the car. Camel rides, desert camps and film sets make it an adventure children remember. Break the drive with nights in the Dades Valley."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "At least a week, with a night or two in Marrakech, one in Aït Benhaddou or Ouarzazate, one in the gorges and one or two in the desert. Merzouga is about nine hours' drive from Marrakech."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Marrakech Menara Airport, about 15 minutes from the medina, with direct flights from across Europe. You can end the trip in Fes and fly home from there."
+    },
+    {
+      "question": "Do you need a 4x4?",
+      "answer": "No, the main roads are paved. A 4x4 helps for remote tracks, but most people use an ordinary car or a driver with a minibus."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Marrakech",
+      "code": "RAK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Essaouira",
+      "code": "ESU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Jordan",
+      "code": "AMM",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Oman",
+      "code": "MCT",
+      "label": "🧗 Adventure"
+    }
+  ],
+  "date": "2026-10-19T22:52:57Z",
+  "updated": "2026-10-19T22:52:57Z"
+}

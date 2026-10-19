@@ -1,0 +1,193 @@
+{
+  "name": "Florida Keys",
+  "published": true,
+  "country": "US",
+  "title": "Florida Keys road trips",
+  "intro": "A drive down the Overseas Highway from Miami to Key West, hopping across 42 bridges between coral islands with turquoise water on both sides. Here's what the Florida Keys are like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/florida-keys-287156_1280.webp",
+  "image_alt": "The old Seven Mile Bridge in the Florida Keys stretching away across shallow turquoise water",
+  "wikipedia": "https://en.wikipedia.org/wiki/Florida_Keys",
+  "to_code": "MIA",
+  "holiday_types": [
+    "road-trip",
+    "beach",
+    "relax"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Drive on the right. A UK photocard licence is fine for hiring a car, and hotels in the Keys are pricey, so book early for winter. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, warm",
+      "temp": 24
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, warm",
+      "temp": 25
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 26
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 28
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot, rains start",
+      "temp": 30
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, showers",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, showers",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane peak",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Hurricane risk",
+      "temp": 29
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Dry season",
+      "temp": 27
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Warm winter sun",
+      "temp": 25
+    }
+  },
+  "when_to_go": "December to April is the dry season and the best time to go, with sunny days around 24 to 28°C, though it's busiest and dearest, especially around Christmas, Easter and spring break in March. May to October is hot and humid with afternoon storms. The hurricane season runs from June to November, peaking in August and September, so get insurance that covers it if you go then.",
+  "things": [
+    {
+      "name": "Seven Mile Bridge",
+      "tag": "Free",
+      "blurb": "Drive the famous bridge near Marathon, with water to the horizon on both sides. The old bridge alongside is open to walk on.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "John Pennekamp Coral Reef State Park",
+      "tag": "Ticketed",
+      "blurb": "Snorkel trips and glass-bottom boats over the reef at Key Largo.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bahia Honda State Park",
+      "tag": "Ticketed",
+      "blurb": "One of the best beaches in the Keys, with calm, clear water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Turtle Hospital",
+      "tag": "Ticketed",
+      "blurb": "In Marathon, a rescue centre for injured sea turtles, with guided tours.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mallory Square sunset",
+      "tag": "Free",
+      "blurb": "Key West's nightly sunset gathering, with street performers and food stalls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dry Tortugas National Park",
+      "tag": "Day trip",
+      "blurb": "A ferry or seaplane from Key West to a huge island fort with snorkelling off the beach.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are the Florida Keys good for a family holiday?",
+      "answer": "Yes. Calm, shallow water, snorkelling, turtle rescues and tarpon feeding at Robbie's in Islamorada keep children busy. Key West's Duval Street gets rowdy at night, so families often stay further up the Keys."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "The drive takes about four hours without stops, but give it four to seven nights, with a couple of bases such as Islamorada or Marathon and Key West. It pairs well with Miami or Orlando."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Miami International Airport, pick up a car and head south on US-1. Key West has its own small airport, so you can fly home from there, though one-way car hire costs more."
+    },
+    {
+      "question": "Are there good beaches?",
+      "answer": "The Keys are surrounded by reef, so there are fewer big sandy beaches than you might think. Bahia Honda, Sombrero Beach in Marathon and Smathers Beach in Key West are the best."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Miami",
+      "code": "MIA",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Orlando",
+      "code": "MCO",
+      "label": "🎢 Theme parks"
+    },
+    {
+      "name": "Pacific Coast Highway",
+      "code": "SFO",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Caribbean cruises",
+      "code": "BGI",
+      "label": "🛳️ Cruise"
+    }
+  ],
+  "date": "2026-10-19T22:52:57Z",
+  "updated": "2026-10-19T22:52:57Z"
+}

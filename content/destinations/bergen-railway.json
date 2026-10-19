@@ -1,0 +1,192 @@
+{
+  "name": "Bergen Railway",
+  "published": true,
+  "country": "NO",
+  "title": "The Bergen Railway",
+  "intro": "Norway's great mountain railway runs between Oslo and Bergen in about seven hours, climbing over the snowy Hardangervidda plateau to the highest station on the line at Finse. Here's what the Bergen Railway is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/bergen-railway-2735346_1280.webp",
+  "image_alt": "A snow-dusted mountain plateau above the lake at Finse, the highest station on the Bergen Railway",
+  "wikipedia": "https://en.wikipedia.org/wiki/Bergen_Line",
+  "to_code": "OSL",
+  "holiday_types": [
+    "rail",
+    "nature"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Norwegian krone (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Norway is in the Schengen area, so the new EU entry checks apply. Book early for the cheapest fares, which can be a fraction of the walk-up price. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Deep snow",
+      "temp": -2
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Deep snow",
+      "temp": -1
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Snow, skiing",
+      "temp": 3
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Snow on top",
+      "temp": 9
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring thaw",
+      "temp": 15
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days",
+      "temp": 19
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 21
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 20
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 15
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 9
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Dark, grey",
+      "temp": 4
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Snow, Christmas",
+      "temp": 0
+    }
+  },
+  "when_to_go": "The trains run all year, and both seasons are spectacular. From December to April the plateau is deep in snow and Finse is a ski touring base. June to August brings long light evenings, green valleys and mountain walks, plus the Flåm Railway connection at its busiest. November is grey and dark. Heavy snowstorms occasionally close the line for a day in winter. Temperatures shown are for Oslo.",
+  "things": [
+    {
+      "name": "Finse",
+      "tag": "Free",
+      "blurb": "At 1,222 metres, the line's highest station sits by a glacier. Film crews used it as the ice planet Hoth in Star Wars.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hardangervidda",
+      "tag": "Free",
+      "blurb": "Europe's largest mountain plateau, a vast white or brown-green wilderness seen from the train.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Flåm Railway",
+      "tag": "Day trip",
+      "blurb": "Change at Myrdal for the steep branch line down to the fjord at Flåm.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rallarvegen cycle route",
+      "tag": "Outdoors",
+      "blurb": "In summer, hire bikes at Finse or Haugastøl and ride the old navvies' road downhill.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bergen",
+      "tag": "Free",
+      "blurb": "The colourful wooden wharf of Bryggen, the fish market and the funicular up Mount Fløyen.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Oslo",
+      "tag": "Free",
+      "blurb": "The Opera House roof, the Viking ships and Vigeland's sculpture park before you board.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Bergen Railway good for a family holiday?",
+      "answer": "Yes. The trains have a family carriage with a play area, the snow or mountain scenery is spectacular, and you can stop off at Finse or Geilo for skiing or walks."
+    },
+    {
+      "question": "How long is the train ride?",
+      "answer": "About seven hours from Oslo to Bergen. Many people break the trip with the Flåm Railway and a fjord boat to Gudvangen, an easy day known as Norway in a Nutshell."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Oslo Gardermoen Airport, where trains reach Oslo Central Station in about 20 minutes. Bergen-bound trains leave from there several times a day. Fly home from Bergen."
+    },
+    {
+      "question": "Can you ski from the train?",
+      "answer": "Yes. Geilo, on the line, is a family ski resort, and Finse is a base for cross-country skiing. Skis travel free on the train, but book space for them."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Flåm Railway",
+      "code": "BGO",
+      "label": "🚆 By train"
+    },
+    {
+      "name": "Norwegian fjords",
+      "code": "BGO",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Bergen",
+      "code": "BGO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Glacier Express",
+      "code": "ZRH",
+      "label": "🚆 By train"
+    }
+  ],
+  "date": "2026-10-19T22:50:53Z",
+  "updated": "2026-10-19T22:50:53Z"
+}

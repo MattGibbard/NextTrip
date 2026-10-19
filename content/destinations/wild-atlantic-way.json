@@ -1,0 +1,193 @@
+{
+  "name": "Wild Atlantic Way",
+  "published": true,
+  "country": "IE",
+  "title": "Wild Atlantic Way road trips",
+  "intro": "Ireland's west coast route runs some 2,500 km from Donegal to Cork, past sea cliffs, sandy beaches, islands and villages with music in the pubs. Here's what the Wild Atlantic Way is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/wild-atlantic-way-10292182_1280.webp",
+  "image_alt": "The Cliffs of Moher in County Clare dropping into the Atlantic, with green clifftops and a sea stack",
+  "wikipedia": "https://en.wikipedia.org/wiki/Wild_Atlantic_Way",
+  "to_code": "SNN",
+  "holiday_types": [
+    "road-trip",
+    "nature",
+    "culture"
+  ],
+  "nights": "7 to 14",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No passport checks from the UK",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Ireland and the UK share the Common Travel Area, so British citizens don't need a passport, though airlines ask for photo ID. Drive on the left. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Wet, windy",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Wet, windy",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring, quiet",
+      "temp": 11
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 13
+    },
+    "may": {
+      "rating": "best",
+      "note": "Long days",
+      "temp": 15
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days",
+      "temp": 18
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer, busy",
+      "temp": 19
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer, busy",
+      "temp": 19
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Quieter",
+      "temp": 17
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn storms",
+      "temp": 14
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Wet, short days",
+      "temp": 11
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Wet, Christmas",
+      "temp": 9
+    }
+  },
+  "when_to_go": "May to September is the best time, with long light evenings, ferries to the islands running and the most places open. July and August are the warmest but busiest, though rarely above 20°C. April and October are quieter and still pleasant on good days. Winter brings wild Atlantic storms, short days and many places shut. Whatever the month, pack waterproofs.",
+  "things": [
+    {
+      "name": "Cliffs of Moher",
+      "tag": "Ticketed",
+      "blurb": "Cliffs rising more than 200 metres above the Atlantic, with a visitor centre and clifftop paths.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Slea Head Drive",
+      "tag": "Free",
+      "blurb": "A loop round the tip of the Dingle Peninsula, with beehive huts, beaches and views of the Blasket Islands.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Connemara",
+      "tag": "Free",
+      "blurb": "Bogs, mountains and lakes, with Kylemore Abbey and its walled garden.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Skellig Michael",
+      "tag": "Tour",
+      "blurb": "Boats from May to September to a rocky island with a monastery at the top. Book well ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Achill Island",
+      "tag": "Free",
+      "blurb": "Ireland's largest island, joined by a bridge, with Keem Bay one of the country's prettiest beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Traditional music",
+      "tag": "Free",
+      "blurb": "Pubs in towns like Doolin, Westport and Dingle have live music sessions most evenings.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Wild Atlantic Way good for a family holiday?",
+      "answer": "Yes. There are beaches, castles, farm parks, surf schools and boat trips, and Irish pubs welcome families during the day. Plan short driving days, as the roads are slow and twisty."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "The whole route takes at least two weeks. With a week, pick one section, such as Galway, Connemara and the Burren, or Kerry and the Dingle Peninsula."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Shannon Airport, in the middle of the route, or Dublin and drive across the country in about three hours. Ireland West Airport Knock and Kerry Airport are good for the north and south."
+    },
+    {
+      "question": "Is it easy to drive?",
+      "answer": "Mostly, though many roads are narrow, with stone walls and tight bends. Driving is on the left, which is easy if you're used to the UK."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Iceland's Ring Road",
+      "code": "KEF",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Asturias",
+      "code": "OVD",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Faroe Islands",
+      "code": "FAE",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Cabot Trail",
+      "code": "YHZ",
+      "label": "🚗 Road trip"
+    }
+  ],
+  "date": "2026-10-19T22:52:57Z",
+  "updated": "2026-10-19T22:52:57Z"
+}

@@ -1,0 +1,193 @@
+{
+  "name": "The Canadian",
+  "published": true,
+  "country": "CA",
+  "title": "The Canadian train",
+  "intro": "VIA Rail's long-distance train from Toronto to Vancouver crosses forests, lakes, prairies and the Rockies in four nights, with glass-domed cars for watching the scenery roll by. Here's what The Canadian is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/the-canadian-5819878_1280.webp",
+  "image_alt": "The Athabasca River winding through pine forest towards snow-capped peaks in Jasper National Park, a stop on The Canadian",
+  "wikipedia": "https://en.wikipedia.org/wiki/The_Canadian",
+  "to_code": "YYZ",
+  "holiday_types": [
+    "rail",
+    "nature",
+    "adventure"
+  ],
+  "nights": "4 to 10",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 to 8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders need an eTA before they fly to Canada, applied for online. Sleeper fares include meals in the dining car. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Snowy scenery",
+      "temp": -3
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Snowy scenery",
+      "temp": -2
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Snow, quiet",
+      "temp": 3
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 11
+    },
+    "may": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 18
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer, busy",
+      "temp": 26
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer, busy",
+      "temp": 25
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 13
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 6
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Snowy, Christmas",
+      "temp": 0
+    }
+  },
+  "when_to_go": "The Canadian runs all year, usually twice a week. Summer, from June to September, has the longest days for watching the scenery, and Jasper is at its best, but it's busy and dearest. Late September brings autumn colour in the forests of Ontario. Winter turns the whole route snowy and is cheaper, though days are short and the prairies are bitterly cold. Temperatures shown are for Toronto.",
+  "things": [
+    {
+      "name": "Skyline dome car",
+      "tag": "Free",
+      "blurb": "Climb the stairs to the glass dome for 360-degree views of lakes, prairie and mountains.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jasper",
+      "tag": "Day trip",
+      "blurb": "Break the journey for a few days of mountain lakes, wildlife and the Icefields Parkway.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Canadian Shield",
+      "tag": "Free",
+      "blurb": "A day and a half of lakes, rivers and forest across northern Ontario, with moose to look out for.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Robson",
+      "tag": "Free",
+      "blurb": "The highest peak in the Canadian Rockies, best seen from the dome car west of Jasper.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dining car",
+      "tag": "Food",
+      "blurb": "Three-course meals for sleeper passengers, shared with fellow travellers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vancouver",
+      "tag": "Free",
+      "blurb": "At the end of the line, Stanley Park, Granville Island and the mountains over the harbour.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is The Canadian good for a family holiday?",
+      "answer": "For children who love trains and can enjoy long days of scenery, yes. Sleeper cabins with bunks suit families, and many people break the trip in Jasper to stretch their legs."
+    },
+    {
+      "question": "How long is the train ride?",
+      "answer": "About four nights and four days, covering roughly 4,500 km. The train often runs late, as freight trains have priority, so don't book a tight onward flight."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Toronto Pearson International Airport. The UP Express train reaches Union Station, where The Canadian leaves, in about 25 minutes. Fly home from Vancouver International Airport."
+    },
+    {
+      "question": "Which class should you book?",
+      "answer": "Economy has reclining seats, fine for a short section but tiring over four nights. Sleeper Plus gives you a cabin or berth with meals, and Prestige has bigger cabins with a window seat and lounge."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Rocky Mountaineer",
+      "code": "YVR",
+      "label": "🚆 By train"
+    },
+    {
+      "name": "Banff",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Vancouver",
+      "code": "YVR",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Toronto",
+      "code": "YYZ",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-19T22:50:53Z",
+  "updated": "2026-10-19T22:50:53Z"
+}

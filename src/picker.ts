@@ -103,7 +103,7 @@ export function matches(all: DestinationCard[], a: Answers): DestinationCard[] {
 export const BOARD_SIZE = 8;
 
 /** A copy of the list in a random order (Fisher-Yates). */
-function shuffled<T>(items: readonly T[], random: () => number): T[] {
+export function shuffled<T>(items: readonly T[], random: () => number = Math.random): T[] {
   const out = [...items];
   for (let i = out.length - 1; i > 0; i--) {
     const j = Math.floor(random() * (i + 1));

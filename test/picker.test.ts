@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { DESTINATIONS, findDestination } from "../src/destinations";
-import { BOARD_SIZE, NO_ANSWERS, answersSummary, draw, fits, loosen, matches, nextMonth, pickMeta, pickerStay, readAlso, readAnswers, resultHref } from "../src/picker";
+import { boardTimeline } from "../src/components/FlapBoard";
+import { BOARD_SIZE, shuffled, NO_ANSWERS, answersSummary, draw, fits, loosen, matches, nextMonth, pickMeta, pickerStay, readAlso, readAnswers, resultHref } from "../src/picker";
 import type { Answers } from "../src/picker";
 import { metaTags, publicPage } from "../shared/seo";
 
@@ -56,6 +57,16 @@ describe("the draw", () => {
     expect(picked.also).toHaveLength(BOARD_SIZE - 1);
     expect(picked.also).not.toContain(picked.winner);
     expect(new Set(picked.also.map((d) => d.slug)).size).toBe(picked.also.length);
+  });
+
+  it("knocks the losers out in the shuffled order, not top to bottom", () => {
+    const order = shuffled([1, 2, 3, 4, 5], () => 0.1);
+    expect([...order].sort()).toEqual([1, 2, 3, 4, 5]);
+    expect(order).not.toEqual([1, 2, 3, 4, 5]);
+    const rows = order.map((tickets, i) => ({ id: i + 1, code: "AAA", title: `Place ${i}`, tickets, win: false }));
+    const { at } = boardTimeline(rows);
+    const dropped = [...rows].sort((a, b) => at.get(a.id)! - at.get(b.id)!).map((r) => r.tickets);
+    expect(dropped).toEqual([1, 2, 3, 4, 5]);
   });
 
   it("draws nothing when nothing fits, and the only match when one does", () => {

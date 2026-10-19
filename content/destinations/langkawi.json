@@ -1,0 +1,200 @@
+{
+  "name": "Langkawi",
+  "published": true,
+  "country": "MY",
+  "title": "Holidays in Langkawi",
+  "intro": "Rainforest mountains, mangrove rivers and easy-going sandy beaches on a duty-free island off Malaysia's north-west coast. Here's what Langkawi is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/langkawi-4175331_1280.webp",
+  "image_alt": "The Langkawi cable car rising over a forested hill, with green islands in a turquoise sea below",
+  "wikipedia": "https://en.wikipedia.org/wiki/Langkawi",
+  "to_code": "LGK",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs ahead of the UK (8 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Malaysian ringgit (RM)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 240V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You must fill in the Malaysia Digital Arrival Card online within three days before you arrive. UK-style plugs work, so you don't need an adaptor.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 32
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Driest month",
+      "temp": 33
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Hot, dry season ends",
+      "temp": 33
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot, some showers",
+      "temp": 33
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot, showers",
+      "temp": 32
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, showers",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Rainy season",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Wet",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Wettest months",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Wet",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drying out",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry season starts",
+      "temp": 31
+    }
+  },
+  "when_to_go": "December to March is the best time to go, with dry, sunny days and calm seas, so it's a great winter-sun escape. January and February are the driest months. April to June is hot with more showers. August to October is the wettest time, with heavy rain and rougher seas, though it's quieter and cheaper. The sea stays warm, around 29°C, all year.",
+  "things": [
+    {
+      "name": "Langkawi Cable Car and Sky Bridge",
+      "tag": "Ticketed",
+      "blurb": "A steep cable car up Gunung Mat Cincang to a curved walkway hanging over the rainforest. Go early for clear views and shorter queues.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kilim Geoforest Park",
+      "tag": "Tour",
+      "blurb": "Boat trips through mangroves and limestone cliffs, with caves, eagles and monkeys along the way.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pantai Cenang",
+      "tag": "Free",
+      "blurb": "The island's liveliest beach, with water sports by day and beach bars and night markets after dark.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Island hopping",
+      "tag": "Tour",
+      "blurb": "Half-day boat trips to the Lake of the Pregnant Maiden, sea eagle feeding and quiet beaches on the southern islands.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pulau Payar Marine Park",
+      "tag": "Day trip",
+      "blurb": "Snorkelling over coral reefs with reef fish and baby sharks, reached by a boat trip from Langkawi.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Seven Wells waterfall",
+      "tag": "Outdoors",
+      "blurb": "A string of rock pools and falls in the forest, reached up a steep staircase. Swim in the pools at the top.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tanjung Rhu",
+      "tag": "Free",
+      "blurb": "A quieter beach in the north, with white sand, clear water and views of limestone islands.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Langkawi from the UK?",
+      "answer": "There are no direct flights. Fly to Kuala Lumpur or Singapore and connect to Langkawi's airport. Ferries also run from Penang and the mainland."
+    },
+    {
+      "question": "Is Langkawi good for a beach holiday?",
+      "answer": "Yes. Pantai Cenang is lively, while Tanjung Rhu and the northern bays are quieter. The sea is warm all year, calmest from December to March."
+    },
+    {
+      "question": "Do you need a car in Langkawi?",
+      "answer": "It helps. Hire cars and Grab taxis are cheap, and the island is easy to drive around. There's little public transport."
+    },
+    {
+      "question": "How many days do you need in Langkawi?",
+      "answer": "Four or five days covers the cable car, a mangrove trip and island hopping. A week or more leaves plenty of beach time."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Penang",
+      "code": "PEN",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Phuket",
+      "code": "HKT",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Koh Lanta",
+      "code": "KBV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lombok",
+      "code": "LOP",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-19T05:45:57Z",
+  "updated": "2026-10-19T05:45:57Z"
+}

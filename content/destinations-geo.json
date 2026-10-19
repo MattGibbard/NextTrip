@@ -414,6 +414,11 @@
     "lat": 41,
     "lon": 20.75
   },
+  "langkawi": {
+    "query": "Langkawi|MY",
+    "lat": 6.37,
+    "lon": 99.7929
+  },
   "lanzarote": {
     "query": "Lanzarote|ES",
     "lat": 29.0469,
@@ -518,6 +523,11 @@
     "query": "Menorca|ES",
     "lat": 39.9496,
     "lon": 4.1105
+  },
+  "merida": {
+    "query": "Mérida|MX",
+    "lat": 20.9671,
+    "lon": -89.6237
   },
   "messinia": {
     "query": "Messinia|GR",
@@ -728,6 +738,11 @@
     "query": "Santorini|GR",
     "lat": 36.4071,
     "lon": 25.4567
+  },
+  "sarajevo": {
+    "query": "Sarajevo|BA",
+    "lat": 43.8571,
+    "lon": 18.4126
   },
   "saranda": {
     "query": "Saranda|AL",

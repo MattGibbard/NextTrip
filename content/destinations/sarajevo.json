@@ -1,0 +1,200 @@
+{
+  "name": "Sarajevo",
+  "published": true,
+  "country": "BA",
+  "title": "Holidays in Sarajevo",
+  "intro": "Ottoman bazaars, Austro-Hungarian streets and wooded hills in Bosnia and Herzegovina's friendly, great-value capital. Here's what Sarajevo is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/sarajevo-6519389_1280.webp",
+  "image_alt": "People walking past the wooden Sebilj fountain in Baščaršija, the old Ottoman bazaar quarter of Sarajevo",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sarajevo",
+  "to_code": "SJJ",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Convertible mark (KM)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Bosnia and Herzegovina isn't in the EU and uses the convertible mark, not the euro. Direct flights from the UK are limited, so check the timetable before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, snowy",
+      "temp": 3
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, snowy",
+      "temp": 5
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool, thawing",
+      "temp": 10
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 14
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, green",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, long days",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 26
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, film festival",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 21
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 16
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool, damp",
+      "temp": 10
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold, festive",
+      "temp": 5
+    }
+  },
+  "when_to_go": "May, June, September and October are the best months, warm enough to sit out in the cafés and explore the hills, without the summer crowds. July and August are hot and busier, and the Sarajevo Film Festival fills the city in August. Winter is cold, often snowy, with skiing on the nearby Olympic mountains.",
+  "things": [
+    {
+      "name": "Baščaršija",
+      "tag": "Free",
+      "blurb": "The old Ottoman bazaar, with copper workshops, the Sebilj fountain, mosques and little places serving ćevapi and Bosnian coffee.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Latin Bridge",
+      "tag": "Free",
+      "blurb": "The old stone bridge near the spot where Archduke Franz Ferdinand was shot in 1914. A small museum on the corner tells the story.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vijećnica",
+      "tag": "Ticketed",
+      "blurb": "The striking striped city hall, burned in the 1992 siege and since restored, with an exhibition on the city's history.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Yellow Fortress",
+      "tag": "Free",
+      "blurb": "A short climb from the old town to the best view over the city, especially at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tunnel of Hope",
+      "tag": "Ticketed",
+      "blurb": "The museum at the end of the tunnel dug under the airport runway during the siege, the city's lifeline to the outside world. Tours run from town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Trebević cable car",
+      "tag": "Ticketed",
+      "blurb": "A cable car up Mount Trebević, with forest walks and the old 1984 Olympic bobsleigh track covered in graffiti.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mostar",
+      "tag": "Day trip",
+      "blurb": "The famous Old Bridge and Ottoman old town, with stops at Blagaj and Počitelj on the way. Tours and trains run from Sarajevo.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Sarajevo from the UK?",
+      "answer": "Wizz Air has flown direct from London Luton, so check the current timetable. Otherwise connect through Vienna, Istanbul or another hub."
+    },
+    {
+      "question": "Is Sarajevo safe to visit?",
+      "answer": "Check the latest FCDO travel advice before you go. Stay on marked paths in the countryside, as landmines remain in some rural areas."
+    },
+    {
+      "question": "How many days do you need in Sarajevo?",
+      "answer": "Two or three days covers the old town, the history and a cable car ride. Add a day for Mostar."
+    },
+    {
+      "question": "Is Sarajevo expensive?",
+      "answer": "No. Food, coffee and getting around are good value compared with most European capitals."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Dubrovnik",
+      "code": "DBV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Lake Ohrid",
+      "code": "OHD",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Plovdiv",
+      "code": "PDV",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-19T05:45:57Z",
+  "updated": "2026-10-19T05:45:57Z"
+}

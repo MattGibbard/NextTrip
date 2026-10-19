@@ -24,6 +24,7 @@ const HowItWorksPage = lazyView(() => import("./views/HowItWorks").then((m) => m
 const InfoPage = lazyView(() => import("./views/InfoPage").then((m) => m.InfoPage));
 const BlogList = lazyView(() => import("./views/Blog").then((m) => m.BlogList));
 const BlogPost = lazyView(() => import("./views/Blog").then((m) => m.BlogPost));
+const HolidayPicker = lazyView(() => import("./views/HolidayPicker").then((m) => m.HolidayPicker));
 
 
 /** Fetches the code for the page at this address, if it's one that loads on its own. */
@@ -33,6 +34,7 @@ export function preloadPage(pathname: string): Promise<unknown> {
   if (page === "privacy" || page === "terms") return LegalView.preload();
   if (page === "creators") return CreatorsPage.preload();
   if (page === "how") return HowItWorksPage.preload();
+  if (page === "picker" || page?.startsWith("pick:")) return HolidayPicker.preload();
   if (listing(page)) return BlogList.preload();
   if (page?.startsWith("post:")) return BlogPost.preload();
   if (infoPage(pathname)) return InfoPage.preload();
@@ -83,14 +85,17 @@ export function App() {
   }, []);
 
   useEffect(() => {
-    // A guide or hub names itself (GuideView), as only the Guides pages know every guide.
-    if (!publicPage(path)?.startsWith("destination:")) document.title = pageTitle(path);
+    // A guide or hub names itself (GuideView), as only the Guides pages know every guide. So does the holiday picker.
+    const page = publicPage(path);
+    if (!page?.startsWith("destination:") && page !== "picker" && !page?.startsWith("pick:")) document.title = pageTitle(path);
   }, [path]);
 
   const page = publicPage(path);
   if (page === "privacy" || page === "terms") return <LegalView page={page} />;
   if (page === "creators") return <CreatorsPage />;
   if (page === "how") return <HowItWorksPage />;
+  if (page === "picker") return <HolidayPicker />;
+  if (page?.startsWith("pick:")) return <HolidayPicker slug={page.slice("pick:".length)} />;
   const info = infoPage(path);
   if (info) return <InfoPage page={info} />;
   if (page === "blog" || page?.startsWith("blog:") || page?.startsWith("tag:")) {

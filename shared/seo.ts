@@ -8,7 +8,7 @@ export const SITE = "https://somewhere.party";
 export const OLD_HOST = "nexttrip.matt-gibbard.workers.dev";
 
 /** The fixed pages. */
-export type FixedPage = "home" | "privacy" | "terms" | "notfound" | "destinations" | "creators" | "blog" | "how" | InfoPage;
+export type FixedPage = "home" | "privacy" | "terms" | "notfound" | "destinations" | "creators" | "blog" | "how" | "picker" | InfoPage;
 /** The plain content pages, whose words are edited at /admin (content/pages). */
 export type InfoPage = "about" | "faq" | "contact" | "money" | "decide";
 
@@ -30,9 +30,10 @@ export function infoPage(pathname: string): InfoPage | null {
 /**
  * Every prerendered page: the fixed ones plus one per destination guide, as "destination:new-york", one
  * per blog post, as "post:my-post", and one per blog tag in use, as "tag:city-breaks". The blog's later
- * pages are "blog:2" and so on, and a tag's are "tag:city-breaks:2".
+ * pages are "blog:2" and so on, and a tag's are "tag:city-breaks:2". Each guide also has a holiday
+ * picker result page, as "pick:new-york", kept out of search.
  */
-export type PublicPage = FixedPage | `destination:${string}` | `post:${string}` | `tag:${string}` | `blog:${number}`;
+export type PublicPage = FixedPage | `destination:${string}` | `post:${string}` | `tag:${string}` | `blog:${number}` | `pick:${string}`;
 
 /** The blog's RSS feed, written by scripts/prerender.mjs. */
 export const FEED_PATH = "/blog/feed.xml";
@@ -54,6 +55,8 @@ export type Meta = {
   updated?: string;
   /** schema.org data for search results. */
   jsonLd?: unknown[];
+  /** Kept out of search but shared by link, so it still gets share-preview tags. */
+  preview?: boolean;
 };
 
 export const PAGES: Record<FixedPage, Meta> = {
@@ -93,6 +96,13 @@ export const PAGES: Record<FixedPage, Meta> = {
     path: "/how-it-works",
     title: "How somewhere🎉 works: a fair holiday draw in five steps",
     description: "See how somewhere🎉 works: put holiday ideas on standby, spread points in secret, let a fair draw pick the winner, then plan the trip together.",
+    index: true,
+  },
+  picker: {
+    path: "/holiday-picker",
+    title: "Random holiday picker: let the board decide where to go | somewhere🎉",
+    description:
+      "Can't pick a holiday? Answer four quick questions and our random holiday picker draws a destination from our guides. Free, and no account needed.",
     index: true,
   },
   blog: {
@@ -145,6 +155,9 @@ export function publicPage(pathname: string): PublicPage | null {
   const m = pathname.match(/^\/(privacy|terms|destinations|creators|blog)\/?$/);
   if (m) return m[1] as FixedPage;
   if (/^\/how-it-works\/?$/.test(pathname)) return "how";
+  if (/^\/holiday-picker\/?$/.test(pathname)) return "picker";
+  const pick = pathname.match(/^\/holiday-picker\/([a-z0-9-]+)\/?$/);
+  if (pick) return `pick:${pick[1]}`;
   const info = infoPage(pathname);
   if (info) return info;
   const d = pathname.match(/^\/destinations\/([a-z0-9-]+)\/?$/);
@@ -165,6 +178,11 @@ export function postPath(slug: string): string {
 /** The address of a destination guide. */
 export function destinationPath(slug: string): string {
   return `/destinations/${slug}`;
+}
+
+/** The holiday picker's result page for a guide. Its answers ride along in the query string. */
+export function pickPath(slug: string): string {
+  return `/holiday-picker/${slug}`;
 }
 
 /** Family links, people's own links and sign-in links: real pages, but private, so kept out of search. */
@@ -193,10 +211,11 @@ export function metaTags(m: Meta): string {
   ];
   if (!m.index) {
     tags.push(`<meta name="robots" content="noindex" />`);
-    return tags.join("\n    ");
+    if (!m.preview) return tags.join("\n    ");
+  } else {
+    tags.push(`<link rel="canonical" href="${url}" />`);
   }
   tags.push(
-    `<link rel="canonical" href="${url}" />`,
     `<meta property="og:type" content="${m.type ?? "website"}" />`,
     `<meta property="og:site_name" content="somewhere🎉" />`,
     `<meta property="og:locale" content="en_GB" />`,

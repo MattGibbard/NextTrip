@@ -13,6 +13,8 @@ import { HUBS, countryHub, hubMeta, readHub } from "./hubs";
 import { CREATORS, HOME, HOW } from "./site";
 import { CreatorsPage } from "./views/Creators";
 import { HowItWorksPage } from "./views/HowItWorks";
+import { HolidayPicker } from "./views/HolidayPicker";
+import { pickMeta } from "./picker";
 import { InfoPage } from "./views/InfoPage";
 import { BlogList, BlogPost } from "./views/Blog";
 import { POSTS, listing, listingMeta, listingPath, listings, postMeta, readPost, withCard } from "./blog";
@@ -34,6 +36,7 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
     { page: "destinations", file: "destinations.html" },
     { page: "creators", file: "creators.html", source: "content/site/creators.json" },
     { page: "how", file: "how-it-works.html", source: "content/site/how-it-works.json" },
+    { page: "picker", file: "holiday-picker.html" },
     ...(Object.keys(INFO_PAGES) as Info[]).map((page) => ({ page, file: `${INFO_PAGES[page].path.slice(1)}.html`, source: infoSource(page) })),
     { page: "notfound", file: "404.html" },
   ];
@@ -42,6 +45,8 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
     ...DESTINATIONS.map((d) => ({ page: `destination:${d.slug}` as const, file: `destinations/${d.slug}.html`, path: `/destinations/${d.slug}`, index: true, source: `content/destinations/${d.slug}.json` })),
     // Hubs share the guides' addresses, and their page names.
     ...HUBS.map((h) => ({ page: `destination:${h.slug}` as const, file: `destinations/${h.slug}.html`, path: `/destinations/${h.slug}`, index: true, source: `content/hubs/${h.slug}.json` })),
+    // Each guide's holiday picker result, kept out of search.
+    ...DESTINATIONS.map((d) => ({ page: `pick:${d.slug}` as const, file: `holiday-picker/${d.slug}.html`, path: `/holiday-picker/${d.slug}`, index: false })),
     ...POSTS.map((p) => ({ page: `post:${p.slug}` as const, file: `blog/${p.slug}.html`, path: `/blog/${p.slug}`, index: true, source: `content/blog/${p.slug}.json` })),
     // The blog's pages of posts, and each tag's. Nearly empty tags are kept out of search results until they fill up.
     ...listings().map((l) => {
@@ -78,6 +83,11 @@ function post(page: PublicPage) {
   return raw ? withCard(readPost(slug, raw)) : undefined;
 }
 
+/** The guide a holiday picker result page is for. */
+function pick(page: PublicPage) {
+  return page.startsWith("pick:") ? DESTINATIONS.find((d) => d.slug === page.slice("pick:".length)) : undefined;
+}
+
 /** The blog's RSS feed. */
 export function feed(): string {
   return feedXml();
@@ -91,6 +101,8 @@ export function headTags(page: PublicPage, updated?: string, published?: string)
   if (h) return metaTags(hubMeta(h, updated));
   const p = post(page);
   if (p) return metaTags(postMeta(p, updated));
+  const picked = pick(page);
+  if (picked) return metaTags(pickMeta(picked));
   const l = listing(page);
   if (l) return metaTags(listingMeta(l));
   if (page === "home") return fixedTags("home", { title: HOME.seo_title, description: HOME.seo_description });
@@ -118,6 +130,9 @@ function pageBody(page: PublicPage) {
   if (h) return <HubPage hub={h} />;
   const p = post(page);
   if (p) return <BlogPost post={p} />;
+  const picked = pick(page);
+  if (picked) return <HolidayPicker slug={picked.slug} />;
+  if (page === "picker") return <HolidayPicker />;
   const l = listing(page);
   if (l) return <BlogList listing={l} />;
   if (page === "home") return <HomePage />;

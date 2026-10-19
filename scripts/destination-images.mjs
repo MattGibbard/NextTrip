@@ -1,13 +1,16 @@
-// Runs before the build. Notes each guide photo's width and height in content/destination-images.json,
-// so guide pages can give the browser the photo's shape before it arrives (no jump as it loads) and
+// Runs before the build. Notes each guide photo's (and each blog post's own cover photo's) width and
+// height in content/destination-images.json, so guide pages can give the browser the photo's shape before it arrives (no jump as it loads) and
 // tell search engines and link previews its size. Photos are WebP (the editor converts uploads); PNG
 // and JPEG are read too, and anything else is skipped with a warning.
-// It also makes smaller WebP copies of each photo in public/images/sized/<width>/ (not kept in git), so
+// It also makes smaller WebP copies of each photo in public/images/sized/<width>/ (blog photos in a blog/
+// folder under that; not kept in git), so
 // phones download a photo the size they show it rather than the full 1280px one. See photoProps in
 // src/photos.ts, which must list the same widths.
 import { mkdir, readdir, readFile, stat, writeFile } from "node:fs/promises";
 
-const DIR = new URL("../public/images/destinations/", import.meta.url);
+const IMAGES = new URL("../public/images/", import.meta.url);
+/** The photo folders, and where under images/sized/<width>/ their smaller copies go. */
+const FOLDERS = { destinations: "", blog: "blog/" };
 const OUT = new URL("../content/destination-images.json", import.meta.url);
 const SIZED = new URL("../public/images/sized/", import.meta.url);
 export const PHOTO_WIDTHS = [480, 800];
@@ -42,26 +45,30 @@ export function imageSize(b) {
 if (import.meta.url === `file://${process.argv[1]}`) {
   const sizes = {};
   const unread = [];
-  for (const file of (await readdir(DIR)).filter((f) => !f.startsWith(".")).sort()) {
-    const size = imageSize(await readFile(new URL(file, DIR)));
-    if (size) sizes[`/images/destinations/${file}`] = size;
-    else unread.push(file);
+  for (const folder of Object.keys(FOLDERS)) {
+    const dir = new URL(`${folder}/`, IMAGES);
+    const files = await readdir(dir).catch(() => []);
+    for (const file of files.filter((f) => !f.startsWith(".")).sort()) {
+      const size = imageSize(await readFile(new URL(file, dir)));
+      if (size) sizes[`/images/${folder}/${file}`] = size;
+      else unread.push(`${folder}/${file}`);
+    }
   }
   await writeFile(OUT, JSON.stringify(sizes) + "\n");
 
   const { default: sharp } = await import("sharp");
   const jobs = [];
   for (const [path, [width]] of Object.entries(sizes)) {
-    const file = path.slice("/images/destinations/".length);
-    const source = new URL(file, DIR);
+    const [, folder, file] = path.match(/^\/images\/([^/]+)\/(.+)$/);
+    const source = new URL(`${folder}/${file}`, IMAGES);
     const sourceTime = (await stat(source)).mtimeMs;
     for (const w of PHOTO_WIDTHS.filter((w) => w < width)) {
-      const out = new URL(`${w}/${file.replace(/\.\w+$/, ".webp")}`, SIZED);
+      const out = new URL(`${w}/${FOLDERS[folder]}${file.replace(/\.\w+$/, ".webp")}`, SIZED);
       const done = await stat(out).then((s) => s.mtimeMs >= sourceTime, () => false);
       if (!done) jobs.push({ source, w, out });
     }
   }
-  for (const w of PHOTO_WIDTHS) await mkdir(new URL(`${w}/`, SIZED), { recursive: true });
+  for (const w of PHOTO_WIDTHS) for (const sub of Object.values(FOLDERS)) await mkdir(new URL(`${w}/${sub}`, SIZED), { recursive: true });
   // A few at a time: quicker than one by one, without holding every photo in memory at once.
   const made = jobs.length;
   await Promise.all(
@@ -71,7 +78,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       }
     }),
   );
-  if (made) console.log(`Made ${made} smaller copies of guide photos.`);
+  if (made) console.log(`Made ${made} smaller copies of photos.`);
   if (unread.length) console.warn(`Photos whose size couldn't be read, shown without one:\n  ${unread.join("\n  ")}`);
-  console.log(`Sizes noted for ${Object.keys(sizes).length} guide photos.`);
+  console.log(`Sizes noted for ${Object.keys(sizes).length} photos.`);
 }

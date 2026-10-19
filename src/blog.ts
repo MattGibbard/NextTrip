@@ -11,8 +11,9 @@ import type { BlogTag } from "./blogTags";
 /** The people who write the posts. */
 export const AUTHORS = ["Matt", "Brogan"] as const;
 
-/** A post's cover photo: a guide's photo, with the guide it came from. */
+/** A post's cover photo: its own, or a guide's photo with the guide it came from. */
 export interface Cover {
+  /** The guide the photo came from, or empty for the post's own photo. */
   guide: string;
   image: string;
   alt: string;

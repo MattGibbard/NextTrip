@@ -45,8 +45,8 @@ async function readJson(url) {
 
 /**
  * A blog post's card fields, plus the guides and hubs it links to (for "From the blog" on their pages
- * and for related posts) and its cover photo: the guide picked in the editor, or else the first guide
- * it links to that has a photo.
+ * and for related posts) and its cover photo: its own photo if it has one, else the guide picked in the
+ * editor, or else the first guide it links to that has a photo.
  */
 export async function postCard(raw) {
   const card = Object.fromEntries(POST_CARD_FIELDS.filter((k) => k in raw).map((k) => [k, raw[k]]));
@@ -55,6 +55,11 @@ export async function postCard(raw) {
   const guides = [];
   const hubs = [];
   let cover;
+  if (typeof raw.cover_image === "string" && raw.cover_image.trim()) {
+    const image = raw.cover_image.trim();
+    const size = (await readJson(IMAGE_SIZES))?.[image];
+    cover = { guide: "", image, alt: typeof raw.cover_image_alt === "string" ? raw.cover_image_alt.trim() : "", ...(size ? { size } : {}) };
+  }
   for (const slug of [...new Set([typeof raw.cover === "string" ? raw.cover.trim() : "", ...linked].filter(Boolean))]) {
     const guide = await readJson(new URL(`${slug}.json`, GUIDES));
     if (guide) {

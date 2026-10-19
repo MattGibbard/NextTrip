@@ -1,4 +1,4 @@
-// Guide photos: their full address, and the smaller copies the browser can pick from. Kept apart from
+// Guide photos (and blog posts' own cover photos): their full address, and the smaller copies the browser can pick from. Kept apart from
 // destinations.ts so pages that show a photo (blog posts) don't carry every guide's card.
 import { SITE } from "../shared/seo";
 
@@ -14,9 +14,10 @@ const PHOTO_WIDTHS = [480, 800];
  * `sizes` is roughly how wide the photo is drawn. Photos from elsewhere, or of unknown size, are used as they are.
  */
 export function photoProps(path: string, size: [number, number] | null | undefined, sizes: string) {
-  const file = path.match(/^\/?images\/destinations\/([^/]+)\.\w+$/)?.[1];
+  const [, folder, file] = path.match(/^\/?images\/(destinations|blog)\/([^/]+)\.\w+$/) ?? [];
   if (!file || !size) return { src: imageUrl(path) };
-  const src = `/images/destinations/${path.split("/").pop()}`;
-  const smaller = PHOTO_WIDTHS.filter((w) => w < size[0]).map((w) => `/images/sized/${w}/${file}.webp ${w}w`);
+  const src = `/images/${folder}/${path.split("/").pop()}`;
+  const sub = folder === "blog" ? "blog/" : "";
+  const smaller = PHOTO_WIDTHS.filter((w) => w < size[0]).map((w) => `/images/sized/${w}/${sub}${file}.webp ${w}w`);
   return { src, srcSet: [...smaller, `${src} ${size[0]}w`].join(", "), sizes };
 }

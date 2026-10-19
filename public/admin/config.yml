@@ -684,6 +684,8 @@ collections:
         display_fields: [name]
         required: false
         hint: "Optional. Uses this guide's photo at the top of the post and when it's shared. Leave empty to use the photo from the first guide the post links to."
+      - { label: Custom photo, name: cover_image, widget: image, required: false, media_folder: /public/images/blog, public_folder: /images/blog, hint: "Optional. Your own photo for the top of the post and when it's shared, for posts no guide photo suits (airports, planes, packing). Used instead of the Cover photo above. Landscape, about 1280 pixels wide, e.g. from Pixabay (download it, don't link to it)." }
+      - { label: Custom photo description, name: cover_image_alt, widget: string, required: false, hint: "What's in your custom photo, for people who can't see it and for Google." }
       - { label: Introduction, name: intro, widget: text, hint: "One or two sentences under the heading, also on the blog's front page. Google shows this under the page title in search results, cut off after about 155 characters, so put the most important part first." }
       - { label: Google title, name: seo_title, widget: string, required: false, hint: "Optional. The page title in search results, about 50 characters. Leave empty to use the title." }
       - { label: Google description, name: seo_description, widget: text, required: false, hint: "Optional. Shown under the title in search results. Leave empty to use the introduction." }

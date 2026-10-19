@@ -185,6 +185,7 @@ describe("photoProps", () => {
       sizes: "100vw",
     });
     expect(photoProps("images/destinations/b.jpg", [600, 400], "100vw").srcSet).toBe("/images/sized/480/b.webp 480w, /images/destinations/b.jpg 600w");
+    expect(photoProps("/images/blog/c_1280.webp", [1280, 720], "100vw").srcSet).toBe("/images/sized/480/blog/c_1280.webp 480w, /images/sized/800/blog/c_1280.webp 800w, /images/blog/c_1280.webp 1280w");
   });
 
   it("uses other photos as they are", () => {

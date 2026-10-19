@@ -105,6 +105,19 @@ describe("links between posts and guides", () => {
     expect(postsAboutGuide("lisbon", 3)).toContainEqual(lisbon);
   });
 
+  it("uses a post's own photo instead of a guide's when it has one", () => {
+    const p = findPost("how-early-should-you-arrive-at-gatwick-airport")!;
+    expect(p.cover).toMatchObject({ guide: "", image: expect.stringMatching(/^\/images\/blog\//), alt: expect.any(String), size: [expect.any(Number), expect.any(Number)] });
+    expect(p.cover!.alt).not.toBe("");
+  });
+
+  it("only points own photos at files that are there", () => {
+    for (const f of files) {
+      const raw = JSON.parse(readFileSync(new URL(f, dir), "utf8"));
+      if (raw.cover_image) expect(readdirSync(new URL("../public/images/blog/", import.meta.url)), f).toContain(raw.cover_image.replace("/images/blog/", ""));
+    }
+  });
+
   it("suggests related posts first, then the newest", () => {
     for (const p of POSTS) {
       const more = relatedPosts(p, 3);

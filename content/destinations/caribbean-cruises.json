@@ -1,0 +1,193 @@
+{
+  "name": "Caribbean cruises",
+  "published": true,
+  "country": "BB",
+  "title": "Caribbean cruises from Barbados",
+  "intro": "A week of island hopping round the southern Caribbean from Barbados, with white beaches, green volcanic peaks and a different island every day. Here's what a Caribbean cruise is like, when to go and how long to stay.",
+  "seo_title": "Caribbean cruises from Barbados: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/caribbean-cruises-334846_1280.webp",
+  "image_alt": "A large cruise ship docked at Bridgetown in Barbados, with turquoise water and blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lesser_Antilles",
+  "to_code": "BGI",
+  "holiday_types": [
+    "cruise",
+    "beach",
+    "relax"
+  ],
+  "nights": "7 to 14",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 to 5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Barbados and EC dollars, US$ taken",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 115V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Each island has its own entry rules, but UK passport holders don't need a visa for the usual ports. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 29
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Driest month",
+      "temp": 29
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 30
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Hot, dry",
+      "temp": 30
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Season ends",
+      "temp": 31
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Few sailings",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Few sailings, showers",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hurricane season",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane season",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Few sailings, wet",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Season starts",
+      "temp": 30
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry season starts",
+      "temp": 29
+    }
+  },
+  "when_to_go": "Most cruise ships based in Barbados sail from November to April, the dry season, with sunny days, cooling trade winds and temperatures around 29 to 30°C. Christmas, New Year and February half-term are the busiest and priciest times. From May many ships move to Europe or Alaska, so there are far fewer sailings from Barbados in summer. June to November is hurricane season, with the highest risk from August to October, when storms can change your ports or route.",
+  "things": [
+    {
+      "name": "Carlisle Bay, Barbados",
+      "tag": "Free",
+      "blurb": "A calm, sandy bay just south of Bridgetown, with clear water and shipwrecks to snorkel over. Ideal for a swim on the day you arrive or before your flight home.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Pitons, St Lucia",
+      "tag": "Outdoors",
+      "blurb": "Two steep volcanic peaks rising from the sea near Soufrière. Tours combine the views with the drive-in volcano, mud baths and waterfalls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nelson's Dockyard, Antigua",
+      "tag": "Culture",
+      "blurb": "A restored Georgian naval dockyard in English Harbour, now full of yachts, cafés and museums. Antigua's beaches are a short drive away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Anse Beach, Grenada",
+      "tag": "Free",
+      "blurb": "A long sweep of soft white sand close to the port of St George's. Grenada is the Spice Island, so try nutmeg ice cream or visit a spice plantation.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dominica's rainforest",
+      "tag": "Outdoors",
+      "blurb": "A wild, mountainous island of rainforest, hot springs and waterfalls such as Trafalgar Falls. One of the best stops for hiking and nature.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Willemstad, Curaçao",
+      "tag": "Culture",
+      "blurb": "A UNESCO-listed Dutch colonial harbour town with a waterfront of brightly painted houses and a floating pontoon bridge. Longer Southern Caribbean cruises often include Curaçao and Aruba.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a Caribbean cruise good for a family holiday?",
+      "answer": "Yes. Big ships have kids' clubs, water slides and family cabins, and there's a beach at almost every stop. School holidays are the busiest and priciest times to sail."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "Most Southern Caribbean cruises from Barbados are 7 nights, visiting five or six islands such as St Lucia, Antigua, Grenada and Dominica. Fourteen-night trips combine two different routes or go further south to Aruba and Curaçao."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Grantley Adams International Airport in Barbados, which has direct flights from the UK, the US and Canada. The cruise terminal at Bridgetown's Deep Water Harbour is about 30 minutes by taxi. Many fly-cruise packages include the transfer."
+    },
+    {
+      "question": "Are there small-ship options?",
+      "answer": "Yes. Tall ships and small luxury yachts also sail from Barbados in winter, carrying from about 100 to a few hundred passengers. They can call at smaller islands such as Bequia and the Tobago Cays that big ships can't reach."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "St Lucia",
+      "code": "UVF",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Antigua",
+      "code": "ANU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Grenada",
+      "code": "GND",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-19T21:02:40Z",
+  "updated": "2026-10-19T21:02:40Z"
+}

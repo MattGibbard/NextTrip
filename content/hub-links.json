@@ -35,6 +35,21 @@
     "icon": "🚗"
   },
   {
+    "slug": "cruise-holidays",
+    "name": "Cruise",
+    "icon": "🛳️"
+  },
+  {
+    "slug": "train-holidays",
+    "name": "By train",
+    "icon": "🚆"
+  },
+  {
+    "slug": "ski-holidays",
+    "name": "Skiing",
+    "icon": "⛷️"
+  },
+  {
     "slug": "relaxing-holidays",
     "name": "Relax & spa",
     "icon": "🧘"

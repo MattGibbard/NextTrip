@@ -1,0 +1,50 @@
+{
+  "published": true,
+  "kind": "type",
+  "holiday_type": "ski",
+  "country": "",
+  "month": "",
+  "guides": [],
+  "icon": "",
+  "name": "Skiing",
+  "title": "Ski holidays",
+  "intro": "Ski school in the morning, hot chocolate at lunch and snow on the balcony. Here's where to go for a ski holiday, how long you'll need and when the snow is best.",
+  "seo_title": "Ski holidays: the best resorts for families, and when to go",
+  "seo_description": "",
+  "sections": [
+    {
+      "heading": "The short list",
+      "text": "- **First time on skis:** [Andorra](/destinations/andorra) and [Bansko](/destinations/bansko) for good-value ski school, or [Saariselkä](/destinations/saariselka) and [Levi](/destinations/levi) for gentle slopes in Lapland.\n- **Big Alpine names:** [Zermatt](/destinations/zermatt), [Chamonix](/destinations/chamonix), [St Anton](/destinations/st-anton), [Verbier](/destinations/verbier) and [Val Thorens](/destinations/val-thorens).\n- **City plus slopes:** [Innsbruck](/destinations/innsbruck), with resorts a short bus ride from town.\n- **Far away, worth it:** [Niseko](/destinations/niseko) for deep powder, [Whistler](/destinations/whistler), [Banff](/destinations/banff), [Park City](/destinations/park-city) and [Queenstown](/destinations/queenstown) for skiing in July and August.\n\nFor more, see all the ski guides above, with the best months for each."
+    },
+    {
+      "heading": "Picking a resort",
+      "text": "For beginners and young children, what matters most is a good ski school, easy slopes near the village and a short walk from your room to the lift. Big-name resorts aren't always the best for this. Andorra, Bansko and the Lapland resorts are cheaper and gentler, while high resorts like Val Thorens and Zermatt have the most reliable snow early and late in the season."
+    },
+    {
+      "heading": "When to go",
+      "text": "In the Alps and Pyrenees the season runs from about mid December to mid April. January is quiet and cold with good snow, February is busiest because of school holidays across Europe, and March brings longer, sunnier days. In Japan and North America, January and February have the deepest snow. In the southern hemisphere, [Queenstown](/destinations/queenstown) skis from June to September."
+    },
+    {
+      "heading": "How to keep costs down",
+      "text": "- **Book ski school and lift passes early.** Many resorts offer online discounts, and classes fill up in the holidays.\n- **Hire kit in the resort,** or bring your own helmets and goggles.\n- **Go outside the school holidays** if you can. Early January and late March are often much cheaper.\n- **Look east.** Bansko in Bulgaria and Andorra cost far less than the big Alpine resorts."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where is good for a first ski holiday?",
+      "answer": "Andorra, Bansko, Levi and Saariselkä have gentle slopes and good-value ski schools. In the Alps, Innsbruck and the lower slopes of Zermatt and Val Thorens suit beginners too."
+    },
+    {
+      "question": "When is the best time to go skiing?",
+      "answer": "January to March in Europe, North America and Japan. February has the most snow but is busiest. Queenstown in New Zealand skis from June to September."
+    },
+    {
+      "question": "How long should a ski holiday be?",
+      "answer": "A week is usual, with five or six days on the slopes. Long-haul trips to Niseko, Whistler or Park City are better as ten days to two weeks."
+    },
+    {
+      "question": "What age can children start skiing?",
+      "answer": "Most ski schools take children from about four, and many have snow gardens for three-year-olds. Younger children can join resort nurseries."
+    }
+  ]
+}

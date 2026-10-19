@@ -1,0 +1,193 @@
+{
+  "name": "Cinque Terre",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in the Cinque Terre",
+  "intro": "Five colourful fishing villages clinging to cliffs on the Italian Riviera, linked by a little coastal train, hiking paths and boats. Here's what the Cinque Terre is like, when to go and how long to stay.",
+  "seo_title": "Cinque Terre by train: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/cinque-terre-4093227_1280.webp",
+  "image_alt": "Colourful houses stacked on a cliff above the sea at Manarola, framed by pine branches",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cinque_Terre",
+  "to_code": "PSA",
+  "holiday_types": [
+    "rail",
+    "beach",
+    "nature"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The Cinque Terre Card covers the main coast path and, in the train version, unlimited local trains. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, many places shut",
+      "temp": 12
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 13
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring flowers",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, good hiking",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, swimming",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, crowded",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busiest",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea, calmer",
+      "temp": 25
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Grape harvest",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 13
+    }
+  },
+  "when_to_go": "May, June and September are the best months, warm enough to swim but cooler for hiking, with fewer crowds than midsummer. July and August are hot and very busy, with packed trains and paths, so start early and stay overnight to enjoy the villages after day-trippers leave. October is quieter, with the grape harvest and warm sea, though storms can close paths. Winter is calm and cheap, but many restaurants and hotels close and some coastal paths shut after heavy rain.",
+  "things": [
+    {
+      "name": "Cinque Terre Express",
+      "tag": "Ticketed",
+      "blurb": "The local train between La Spezia, the five villages and Levanto, running often in season. Most of the line is in tunnels, with flashes of sea between.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monterosso to Vernazza path",
+      "tag": "Outdoors",
+      "blurb": "The most famous stretch of the Sentiero Azzurro, a steep two-hour hike with views over terraced vineyards. You need a Cinque Terre Card.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Via dell'Amore",
+      "tag": "Ticketed",
+      "blurb": "The easy cliffside path from Riomaggiore to Manarola, reopened in 2024 after years of repairs. You need to book a time slot.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vernazza",
+      "tag": "Free",
+      "blurb": "Perhaps the prettiest village, with a tiny harbour, a castle tower and a square full of cafés. Climb to the path above town for the classic view.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monterosso beach",
+      "tag": "Outdoors",
+      "blurb": "The only proper sandy beach in the Cinque Terre, with sunbeds, clear water and the liveliest seafront.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pesto and focaccia",
+      "tag": "Food",
+      "blurb": "Liguria is the home of pesto. Try trofie al pesto, fresh focaccia and the local sweet wine, Sciacchetrà.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three nights lets you ride the train between all five villages, hike one or two paths and spend an evening in each of a couple of them. Add a night or two for beach time or a trip to Portovenere."
+    },
+    {
+      "question": "Is the Cinque Terre good for a family holiday?",
+      "answer": "Yes, for older children who can manage stairs and hills. The villages are steep and there's little space for pushchairs. Monterosso, with its beach and flatter seafront, is the easiest base."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Pisa, then take a train to La Spezia in around an hour and a half and change for the Cinque Terre line. Genoa and Florence airports also work, with trains to La Spezia or Levanto."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "No. Cars are a hassle, with narrow roads and tiny car parks. The train links all five villages in a few minutes, and boats run between most of them in summer."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Amalfi Coast",
+      "code": "NAP",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lake Como",
+      "code": "MXP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Florence",
+      "code": "FLR",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Douro Valley",
+      "code": "OPO",
+      "label": "🚆 By train"
+    }
+  ],
+  "date": "2026-10-19T21:08:42Z",
+  "updated": "2026-10-19T21:08:42Z"
+}

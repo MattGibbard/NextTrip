@@ -1,0 +1,193 @@
+{
+  "name": "Douro Valley",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in the Douro Valley",
+  "intro": "Terraced vineyards and port wine estates line a winding river in northern Portugal, and the Douro railway follows the water almost all the way from Porto. Here's what the Douro Valley is like, when to go and how long to stay.",
+  "seo_title": "Douro Valley by train: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/douro-valley-5649128_1280.webp",
+  "image_alt": "Terraced vineyards on rolling hills above a bend in the Douro River",
+  "wikipedia": "https://en.wikipedia.org/wiki/Douro_line",
+  "to_code": "OPO",
+  "holiday_types": [
+    "rail",
+    "food",
+    "nature"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same time as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Train tickets on the Douro line are cheap and sold at the station or online. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, bare vines",
+      "temp": 12
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, almond blossom",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Almond blossom",
+      "temp": 18
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Green, mild",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, green",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, long days",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Grape harvest",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Harvest, autumn colour",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy, golden vines",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 12
+    }
+  },
+  "when_to_go": "Late spring and early autumn are the best times. May and June are warm and green, and September and early October bring the grape harvest, when some quintas let you help pick or tread grapes. July and August are very hot inland, often well over 35°C, so plan for early starts and long lunches. Late October and November turn the vines gold and red. Winter is cool and quiet, with some quintas closed, though the train runs all year. A historic steam train runs between Régua and Tua on some summer days.",
+  "things": [
+    {
+      "name": "The Douro line",
+      "tag": "Ticketed",
+      "blurb": "The train from Porto São Bento to Pocinho takes around three and a half hours. The best stretch is after Régua, where the line hugs the river. Sit on the right heading upstream.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pinhão station",
+      "tag": "Free",
+      "blurb": "A small station covered in blue and white tiles showing the valley and the harvest, in the heart of port country.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Quinta tastings",
+      "tag": "Food",
+      "blurb": "Many port and wine estates near Pinhão and Régua offer tours and tastings. Some are walkable from the station, others need a taxi, so book ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Douro river cruise",
+      "tag": "Ticketed",
+      "blurb": "Short boat trips from Pinhão or Régua, or day cruises from Porto, give you the valley from the water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Côa Valley rock art",
+      "tag": "Culture",
+      "blurb": "Near Pocinho at the end of the line, a UNESCO site of open-air Stone Age rock carvings, with a museum and guided visits.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Port cellars in Gaia",
+      "tag": "Food",
+      "blurb": "Before or after the trip, tour the old port lodges across the river from Porto's Ribeira district.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many nights do you need?",
+      "answer": "You can ride the line as a day trip from Porto, but two or three nights in Pinhão or Régua lets you visit quintas, walk among the vines and see the valley at sunset."
+    },
+    {
+      "question": "Is the Douro Valley good for a family holiday?",
+      "answer": "It suits older children who enjoy the train and boat rides, but much of the area is about wine. Families might prefer a quinta with a pool and day trips by train."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Porto, then take the metro into the city and walk to São Bento or Campanhã station. Direct trains run up the Douro line to Régua, Pinhão and Pocinho several times a day."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "No, the train reaches the main towns. A car or taxi helps to reach hilltop quintas and viewpoints, but the roads are winding and you'll want to taste wine."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Porto",
+      "code": "OPO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Cinque Terre",
+      "code": "PSA",
+      "label": "🚆 By train"
+    },
+    {
+      "name": "Alentejo",
+      "code": "LIS",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-19T21:08:42Z",
+  "updated": "2026-10-19T21:08:42Z"
+}

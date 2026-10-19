@@ -1,0 +1,193 @@
+{
+  "name": "Verbier",
+  "published": true,
+  "country": "CH",
+  "title": "Holidays in Verbier",
+  "intro": "A smart chalet village on a sunny balcony in the Swiss Valais, with big views and some of the most famous off-piste skiing in the Alps. Here's what Verbier is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/verbier-1130174_1280.webp",
+  "image_alt": "Wide snowy slopes above Verbier with a long line of snow-capped Alpine peaks under a deep blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Verbier",
+  "to_code": "GVA",
+  "holiday_types": [
+    "ski",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Swiss franc (CHF)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / J · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Switzerland is in the Schengen area, so the new EU entry checks apply. Swiss plugs are slim, so bring the right adaptor. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Ski season",
+      "temp": 1
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Ski season",
+      "temp": 2
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Sunny skiing",
+      "temp": 5
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring skiing",
+      "temp": 9
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Between seasons",
+      "temp": 13
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hiking",
+      "temp": 17
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Music festival",
+      "temp": 20
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hiking, biking",
+      "temp": 19
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Quiet trails",
+      "temp": 15
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Between seasons",
+      "temp": 11
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 5
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Season opens",
+      "temp": 1
+    }
+  },
+  "when_to_go": "The ski season runs from early December to about the end of April. Christmas, New Year and February are the busiest and most expensive weeks. January is often quieter with cold, crisp snow, and March brings long, sunny days on the south-facing slopes. In summer Verbier is a walking and mountain-biking base, and in July the Verbier Festival brings classical concerts to the village. May, October and November are quiet, with many places closed.",
+  "things": [
+    {
+      "name": "The 4 Vallées",
+      "tag": "Ticketed",
+      "blurb": "Verbier's lifts link to Nendaz, Veysonnaz and Thyon, with a pass for the whole area or just Verbier. Mont Fort tops out at about 3,300 metres.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Beginner slopes at Savoleyres",
+      "tag": "Ticketed",
+      "blurb": "The gentler, sunny Savoleyres and La Tzoumaz side suits beginners and young children, away from the steeper main area. Several ski schools run children's classes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Toboggan run to La Tzoumaz",
+      "tag": "Ticketed",
+      "blurb": "A long sledge run winds through the forest from Savoleyres down to La Tzoumaz, using the lift to get back up.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sports centre",
+      "tag": "Ticketed",
+      "blurb": "An indoor pool and ice rink in the village, good for a rest day or bad weather.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Verbier Festival",
+      "tag": "Ticketed",
+      "blurb": "Two weeks of classical concerts and masterclasses each July, with some free events in the village.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Summer hiking and biking",
+      "tag": "Outdoors",
+      "blurb": "Lifts carry walkers and mountain bikers up to high trails with views of the Grand Combin and Mont Blanc ranges.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Verbier good for a family holiday?",
+      "answer": "Yes, if the budget allows. There are good ski schools and gentle slopes at Savoleyres and La Tzoumaz, but the main area is better known for experts and off-piste, and the village is spread out on a hillside, so stay near the lifts."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week is ideal. Long weekends are popular too, as Verbier is only about two hours from Geneva."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Geneva, then drive or take the train to Le Châble, about two hours. From Le Châble station a gondola goes straight up to Verbier."
+    },
+    {
+      "question": "Is Verbier expensive?",
+      "answer": "Yes. Switzerland is dear and Verbier is one of its smartest resorts. Self-catering, picnic lunches and a Verbier-only pass for beginners help keep costs down."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Zermatt",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Chamonix",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Val Thorens",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Annecy",
+      "code": "GVA",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-19T21:00:23Z",
+  "updated": "2026-10-19T21:00:23Z"
+}

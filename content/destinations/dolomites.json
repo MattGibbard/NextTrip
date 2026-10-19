@@ -1,0 +1,193 @@
+{
+  "name": "Dolomites",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in the Dolomites",
+  "intro": "Jagged pale peaks in north-east Italy, crossed by the Great Dolomite Road and a web of high mountain passes with hairpins, meadows and mountain huts. Here's what the Dolomites are like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/dolomites-1648108_1280.webp",
+  "image_alt": "A mountain pass road zigzagging through bright green alpine meadows in the Dolomites",
+  "wikipedia": "https://en.wikipedia.org/wiki/Dolomites",
+  "to_code": "VCE",
+  "holiday_types": [
+    "road-trip",
+    "nature",
+    "adventure"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Drive on the right. Winter tyres or snow chains are required on many mountain roads in winter. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Skiing, cold",
+      "temp": 3
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Skiing, sunny",
+      "temp": 5
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring skiing",
+      "temp": 8
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Between seasons",
+      "temp": 12
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Lifts shut, snow lingers",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Lifts open, quieter",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Hiking, warm",
+      "temp": 23
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Busiest, warm",
+      "temp": 23
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Clear, quieter",
+      "temp": 18
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 13
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Lifts closed",
+      "temp": 7
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Ski season starts",
+      "temp": 3
+    }
+  },
+  "when_to_go": "For driving the passes, late June to September is best, when the high roads are clear of snow, the cable cars and mountain huts are open and the meadows are full of flowers. July and August are the busiest months, with heavy traffic on the passes, so set off early. September is often the clearest and calmest month. Most lifts and huts close from October to mid-June outside the ski season. In winter the Dolomites are a big ski area, but snow can close the high passes and winter tyres or chains are needed.",
+  "things": [
+    {
+      "name": "Passo Giau",
+      "tag": "Free",
+      "blurb": "One of the most beautiful passes, a road of hairpins climbing to a meadow below the Nuvolau peaks near Cortina. Have lunch at the hut at the top.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tre Cime di Lavaredo",
+      "tag": "Outdoors",
+      "blurb": "Three huge rock towers reached by a toll road from Lake Misurina. The loop walk around them takes about three to four hours and is fairly easy.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lago di Braies",
+      "tag": "Free",
+      "blurb": "An emerald lake below steep cliffs, with rowing boats and a flat path around the shore. Access by car is restricted in summer, so check before you go.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Seceda",
+      "tag": "Ticketed",
+      "blurb": "A cable car from Ortisei in Val Gardena climbs to a ridge with sweeping views of sharp grassy peaks. Great for an easy walk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alpe di Siusi",
+      "tag": "Outdoors",
+      "blurb": "Europe's largest high alpine meadow, with gentle walks and huts below the Sassolungo peaks. Take the cable car up from Siusi.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mountain hut lunches",
+      "tag": "Food",
+      "blurb": "The rifugi on the passes serve hearty South Tyrolean and Ladin food, like dumplings, speck and apple strudel, on terraces with huge views.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are the Dolomites good for a family holiday?",
+      "answer": "Yes. Cable cars take the effort out of reaching the views, there are easy walks around lakes and meadows, and many huts have play areas. Valley bases like Val Gardena and Alta Badia have plenty of family hotels and apartments."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights lets you drive the Great Dolomite Road from Bolzano to Cortina d'Ampezzo and the Sella Ronda passes, with time for a few walks. Base yourself in one or two valleys rather than moving every night."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Venice Marco Polo Airport and drive about two hours to Cortina d'Ampezzo. Verona, Innsbruck and Bolzano airports are other good options, and Bolzano is the western start of the Great Dolomite Road."
+    },
+    {
+      "question": "Is it hard to drive the passes?",
+      "answer": "The roads are well kept but steep and twisty, with tight hairpins and lots of cyclists and motorbikes in summer. Use a low gear on the way down, pull over to let faster traffic pass and go early to avoid the busiest hours."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Innsbruck",
+      "code": "INN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Lake Bled",
+      "code": "LJU",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Romantic Road",
+      "code": "FRA",
+      "label": "🚗 Road trip"
+    }
+  ],
+  "date": "2026-10-19T21:03:37Z",
+  "updated": "2026-10-19T21:03:37Z"
+}

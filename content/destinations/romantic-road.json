@@ -1,0 +1,193 @@
+{
+  "name": "Romantic Road",
+  "published": true,
+  "country": "DE",
+  "title": "Holidays on the Romantic Road",
+  "intro": "A route through southern Germany from the wine town of Würzburg to the Alps at Füssen, linking walled medieval towns, baroque palaces and fairytale castles. Here's what the Romantic Road is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/romantic-road-1622693_1280.webp",
+  "image_alt": "The Plönlein in Rothenburg ob der Tauber, a cobbled fork with a half-timbered house between two medieval gate towers",
+  "wikipedia": "https://en.wikipedia.org/wiki/Romantic_Road",
+  "to_code": "FRA",
+  "holiday_types": [
+    "road-trip",
+    "culture",
+    "food"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Drive on the right. Some motorway stretches have no speed limit, but many do, so watch the signs. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 3
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, grey",
+      "temp": 5
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly, early spring",
+      "temp": 10
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring blossom",
+      "temp": 15
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild, green",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busiest",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 25
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Wine harvest",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colours",
+      "temp": 14
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey, damp",
+      "temp": 8
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas markets",
+      "temp": 4
+    }
+  },
+  "when_to_go": "May, June and September are the best months for the Romantic Road, with mild weather, long days and the countryside at its greenest. July and August are warm but busy, especially in Rothenburg and at Neuschwanstein, where coach tours arrive by mid-morning. September and October bring the Franconian wine harvest and autumn colours. Winter is cold and many towns are quiet, but December is lovely for the Christmas markets in Würzburg, Rothenburg and Augsburg.",
+  "things": [
+    {
+      "name": "Würzburg Residence",
+      "tag": "Ticketed",
+      "blurb": "A vast baroque palace with a grand staircase under one of the world's largest ceiling frescoes, and formal gardens behind. It's a UNESCO World Heritage Site.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rothenburg ob der Tauber",
+      "tag": "Free",
+      "blurb": "Germany's best-known medieval town, with half-timbered houses and cobbled lanes. Walk the covered town walls and join the night watchman's evening tour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dinkelsbühl",
+      "tag": "Free",
+      "blurb": "A quieter walled town with colourful gabled houses and towers, and fewer crowds than Rothenburg.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nördlingen",
+      "tag": "Culture",
+      "blurb": "A round walled town built inside a meteorite crater. Climb the Daniel tower of St George's Church to see the circle of the crater around you.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wieskirche",
+      "tag": "Free",
+      "blurb": "A pilgrimage church in the meadows near Steingaden with a dazzling white and gold rococo interior. It's a UNESCO World Heritage Site.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Neuschwanstein Castle",
+      "tag": "Ticketed",
+      "blurb": "King Ludwig II's fairytale castle on a crag above Füssen. Entry is by timed guided tour, so book online well ahead, especially in summer.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Romantic Road good for a family holiday?",
+      "answer": "Yes. Children love the castles and town walls, Rothenburg's medieval crime museum and the Christmas shop, and the drives between towns are short. Füssen also has lakes for swimming and summer toboggan runs nearby."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "The road is about 400 km, so five to seven nights works well. Good places to stay are Würzburg, Rothenburg, Dinkelsbühl or Nördlingen, Augsburg and Füssen."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Frankfurt Airport, hire a car and drive about an hour and a half to Würzburg, where the route begins. At the southern end, Munich Airport is around two hours from Füssen, so a one-way hire is handy."
+    },
+    {
+      "question": "Can you do the Romantic Road without a car?",
+      "answer": "Yes, though it's slower. Trains reach Würzburg, Rothenburg, Augsburg and Füssen, with local buses filling some gaps. A car makes it much easier to stop in the smaller towns and villages."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Nuremberg",
+      "code": "NUE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Salzburg",
+      "code": "SZG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Hallstatt",
+      "code": "SZG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Dolomites",
+      "code": "VCE",
+      "label": "🚗 Road trip"
+    }
+  ],
+  "date": "2026-10-19T21:03:37Z",
+  "updated": "2026-10-19T21:03:37Z"
+}

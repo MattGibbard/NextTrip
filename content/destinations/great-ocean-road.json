@@ -1,0 +1,193 @@
+{
+  "name": "Great Ocean Road",
+  "published": true,
+  "country": "AU",
+  "title": "Holidays on the Great Ocean Road",
+  "intro": "A coast road west of Melbourne that hugs surf beaches, rainforest and towering limestone cliffs on its way to the Twelve Apostles. Here's what the Great Ocean Road is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/great-ocean-road-7539628_1280.webp",
+  "image_alt": "Limestone stacks of the Twelve Apostles standing in the surf below golden cliffs and a sandy beach",
+  "wikipedia": "https://en.wikipedia.org/wiki/Great_Ocean_Road",
+  "to_code": "MEL",
+  "holiday_types": [
+    "road-trip",
+    "nature",
+    "beach"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "9 to 11 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Australian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eVisitor for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type I · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Drive on the left, as in the UK, and you can hire a car on a UK licence. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Warm, busy holidays",
+      "temp": 24
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 24
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Settled, mild",
+      "temp": 22
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild autumn",
+      "temp": 19
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Cool, showers",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Cold, whales arrive",
+      "temp": 14
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Coldest, wettest",
+      "temp": 13
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Cold, windy",
+      "temp": 14
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Spring, whales",
+      "temp": 15
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Spring, mild",
+      "temp": 17
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Warming up",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Summer, busy",
+      "temp": 22
+    }
+  },
+  "when_to_go": "December to March is the best time for the Great Ocean Road, with warm days, long evenings and the best weather for the beaches. January is the busiest month because of the Australian school holidays, so February and March are calmer. Autumn and spring are mild and quieter, though the weather can change fast. Winter, from June to August, is cold, wet and windy, but the seas look dramatic and southern right whales visit the coast near Warrnambool.",
+  "things": [
+    {
+      "name": "Twelve Apostles",
+      "tag": "Free",
+      "blurb": "Limestone stacks rising from the sea off Port Campbell National Park. Walk the boardwalk from the visitor centre, ideally at sunset, or go down the Gibson Steps to the beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Loch Ard Gorge",
+      "tag": "Free",
+      "blurb": "A sheltered cove between high cliffs just along from the Twelve Apostles, named after a famous shipwreck, with short walks and a sandy beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kennett River koalas",
+      "tag": "Free",
+      "blurb": "Wild koalas dozing in the gum trees along Grey River Road at Kennett River, with colourful parrots around the campsite.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Great Otway National Park",
+      "tag": "Outdoors",
+      "blurb": "Cool rainforest with giant tree ferns and waterfalls inland from Apollo Bay. The short Maits Rest walk is an easy taste of it.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cape Otway Lightstation",
+      "tag": "Ticketed",
+      "blurb": "Mainland Australia's oldest surviving lighthouse, on a wild headland at the end of a road where you often spot koalas.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bells Beach and Torquay",
+      "tag": "Outdoors",
+      "blurb": "The surfing start of the road, with a famous surf break at Bells Beach and surf schools and shops in Torquay.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Great Ocean Road good for a family holiday?",
+      "answer": "Yes. Distances between stops are short, there are sheltered beaches at Lorne and Apollo Bay, and children love spotting wild koalas. Port Campbell and Apollo Bay have plenty of family-friendly places to stay."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "The road can be done as a long day trip from Melbourne, but it's much better with three to five nights. Stop in Lorne or Apollo Bay, then Port Campbell, and return to Melbourne on the faster inland road."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Melbourne Airport and hire a car. Torquay, where the Great Ocean Road begins, is about an hour and a half's drive away. Coach tours run from Melbourne if you'd rather not drive."
+    },
+    {
+      "question": "Is the road difficult to drive?",
+      "answer": "Not difficult, but it's narrow and twisty with sharp bends along the cliffs, and busy at weekends. Take it slowly, use the pull-ins to let faster traffic pass, and watch out for wildlife at dawn and dusk."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tasmania",
+      "code": "HBA",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Sydney",
+      "code": "SYD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Queenstown",
+      "code": "ZQN",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Garden Route",
+      "code": "CPT",
+      "label": "🚗 Road trip"
+    }
+  ],
+  "date": "2026-10-19T21:03:37Z",
+  "updated": "2026-10-19T21:03:37Z"
+}

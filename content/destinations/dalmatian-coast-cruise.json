@@ -1,0 +1,193 @@
+{
+  "name": "Dalmatian coast",
+  "published": true,
+  "country": "HR",
+  "title": "Dalmatian coast cruises",
+  "intro": "Pine-covered islands, walled stone towns and clear Adriatic water along Croatia's coast, explored by small ship from Split. Here's what a Dalmatian coast cruise is like, when to go and how long to stay.",
+  "seo_title": "Dalmatian coast cruises: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/dalmatian-coast-cruise-419816_1280.webp",
+  "image_alt": "Looking through pine trees over Hvar's harbour full of yachts, with small wooded islands in a blue sea",
+  "wikipedia": "https://en.wikipedia.org/wiki/Dalmatia",
+  "to_code": "SPU",
+  "holiday_types": [
+    "cruise",
+    "beach",
+    "culture"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book. Small ships moor in town harbours overnight, so you can go ashore for dinner.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 11
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "First sailings",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quiet",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sea warming",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busiest",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea, quieter",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Last sailings",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 12
+    }
+  },
+  "when_to_go": "Small-ship island cruises from Split run from around late April to October. June and September are the sweet spot, with hot sunny days, a warm sea and fewer crowds than high summer. May is pleasant and quiet, though the sea is still cool for swimming. July and August are hot and very busy, especially in Hvar and Dubrovnik, and prices are highest. By October the weather is still mild but some sailings and island restaurants wind down.",
+  "things": [
+    {
+      "name": "Diocletian's Palace in Split",
+      "tag": "Free",
+      "blurb": "A Roman emperor's palace that became Split's old town, with shops and cafés tucked inside its ancient walls. Explore it before you board, as ships leave from the harbour right outside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hvar Town",
+      "tag": "Free",
+      "blurb": "A glamorous harbour town with a Venetian square and a hilltop fortress. Walk up to the Fortica for views over the Pakleni islands, and stay for the lively evenings.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zlatni Rat beach on Brač",
+      "tag": "Free",
+      "blurb": "A long spit of white pebbles near the town of Bol that changes shape with the wind and currents. It's one of Croatia's best-known beaches and a popular windsurfing spot.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Korčula Old Town",
+      "tag": "Free",
+      "blurb": "A small walled town on a peninsula, with streets laid out like a fish skeleton to catch the breeze. It's said to be the birthplace of Marco Polo.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mljet National Park",
+      "tag": "Ticketed",
+      "blurb": "A green island with two saltwater lakes and a medieval monastery on a tiny islet. Swim, hire a bike or take the boat out to the monastery.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dubrovnik's city walls",
+      "tag": "Ticketed",
+      "blurb": "A walk of about 2 km around the top of Dubrovnik's old walls, with views over terracotta roofs and the sea. Go early or late to avoid the heat and crowds.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a Dalmatian coast cruise good for a family holiday?",
+      "answer": "It can be. Days of swimming, island towns and short sails suit families with older children. Check before booking, as some small ships are aimed at young adults and party crowds, and others don't take young children."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "Most small-ship cruises last 7 nights, either round trip from Split or one way between Split and Dubrovnik, often starting on a Saturday. Ships sail for a few hours each day and moor in a different harbour each night."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Split Airport, then take the airport shuttle bus to the harbour near the old town, about 30 to 40 minutes. For cruises starting in Dubrovnik, fly into Dubrovnik Airport instead. Big ships on Mediterranean cruises also call at both cities."
+    },
+    {
+      "question": "Is there time to swim?",
+      "answer": "Yes, that's a big part of it. Most small ships stop once or twice a day in a quiet bay so you can swim straight off the boat, and you'll often have afternoons free on the islands."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Split",
+      "code": "SPU",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Dubrovnik",
+      "code": "DBV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Greek islands",
+      "code": "ATH",
+      "label": "🛳️ Cruise"
+    }
+  ],
+  "date": "2026-10-19T21:02:40Z",
+  "updated": "2026-10-19T21:02:40Z"
+}

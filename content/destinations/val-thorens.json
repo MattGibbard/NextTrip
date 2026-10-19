@@ -1,0 +1,192 @@
+{
+  "name": "Val Thorens",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Val Thorens",
+  "intro": "The highest ski resort in the Alps, a purpose-built, mostly car-free village at the top of the vast Three Valleys area in Savoie. Here's what Val Thorens is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/val-thorens-1285952_1280.webp",
+  "image_alt": "Snow-covered chalet roofs in Val Thorens looking down on busy ski slopes and lifts under white mountains",
+  "wikipedia": "https://en.wikipedia.org/wiki/Val_Thorens",
+  "to_code": "GVA",
+  "holiday_types": [
+    "ski",
+    "adventure"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "France is in the Schengen area, so the new EU entry checks apply and your passport must be valid for at least three months after you leave. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Cold, snow-sure",
+      "temp": -4
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Ski season",
+      "temp": -4
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Longer, sunny days",
+      "temp": -1
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring snow",
+      "temp": 2
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Season ends",
+      "temp": 6
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Resort closed",
+      "temp": 11
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Summer walking",
+      "temp": 15
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Summer walking",
+      "temp": 14
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Resort closed",
+      "temp": 10
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Resort closed",
+      "temp": 5
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Season opens",
+      "temp": 0
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Snow-sure Christmas",
+      "temp": -3
+    }
+  },
+  "when_to_go": "At around 2,300 metres, Val Thorens usually opens in late November and stays open into early May, so it's one of the safest bets for snow at both ends of the season. January can be very cold and windy, so pack good layers for children. February half-term is the busiest time. March and April bring sunnier, milder days with snow still good, and Easter weeks are popular with families. The resort has a short summer season in July and August for walking and mountain biking. Out of season it's largely shut.",
+  "things": [
+    {
+      "name": "The Three Valleys",
+      "tag": "Ticketed",
+      "blurb": "Ski passes cover Val Thorens and Orelle, or all of the Three Valleys with Les Menuires, Méribel and Courchevel. That's one of the biggest linked ski areas in the world.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ski school and beginner areas",
+      "tag": "Ticketed",
+      "blurb": "Several ski schools, including ESF, teach children from about four. Beginners start on gentle slopes right by the village, so there's little walking in ski boots.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cime Caron",
+      "tag": "Ticketed",
+      "blurb": "A large cable car up to over 3,000 metres, with views across the Alps as far as Mont Blanc on a clear day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sledging and the toboggan run",
+      "tag": "Ticketed",
+      "blurb": "A long toboggan run and sledging areas give non-skiers and tired children plenty of fun in the snow.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sports centre",
+      "tag": "Ticketed",
+      "blurb": "An indoor pool, climbing wall and courts for days when the weather closes in at the top.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ski-in, ski-out village",
+      "tag": "Free",
+      "blurb": "Most accommodation sits right on the slopes, and the centre is mostly car-free, which makes getting small children out each morning much easier.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Val Thorens good for a family holiday?",
+      "answer": "Yes, especially for families who want guaranteed snow and doorstep skiing. The beginner areas are close to the village and ski schools are good. It's high, treeless and can be bitterly cold in midwinter, so it suits children who are already happy in the snow."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week, with six days of skiing. Most apartments and chalets run Saturday to Saturday, which also means busy roads on changeover day."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Geneva, Lyon or Chambéry, then take a transfer of about two and a half to three and a half hours. By train, travel to Moûtiers in the valley, then take a bus or taxi up, about an hour."
+    },
+    {
+      "question": "Is it too cold for young children?",
+      "answer": "It can be in January, when temperatures at the top often drop well below freezing. March and April are much milder and better for little ones."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Chamonix",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Verbier",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "St Anton",
+      "code": "INN",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Andorra",
+      "code": "BCN",
+      "label": "⛷️ Skiing"
+    }
+  ],
+  "date": "2026-10-19T21:00:23Z",
+  "updated": "2026-10-19T21:00:23Z"
+}

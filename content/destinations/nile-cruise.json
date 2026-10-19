@@ -1,0 +1,192 @@
+{
+  "name": "Nile cruise",
+  "published": true,
+  "country": "EG",
+  "title": "Nile cruises",
+  "intro": "A slow journey between Luxor and Aswan past palm-lined riverbanks, desert hills and some of the greatest temples of ancient Egypt. Here's what a Nile cruise is like, when to go and how long to stay.",
+  "seo_title": "Nile cruises: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/nile-cruise-4782137_1280.webp",
+  "image_alt": "Nile cruise boats moored side by side on the river at Luxor, with the columns of Luxor Temple behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Nile",
+  "to_code": "LXR",
+  "holiday_types": [
+    "cruise",
+    "culture"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Egyptian pound (E£)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Visa needed, e-visa or on arrival",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Your passport should have at least six months left. Buy your visa online before you go or on arrival at the airport. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Warm, sunny days",
+      "temp": 23
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm, sunny days",
+      "temp": 25
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, getting hotter",
+      "temp": 29
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 35
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 39
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 41
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Hottest, cheapest",
+      "temp": 41
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 41
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Still very hot",
+      "temp": 38
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Hot, cooling",
+      "temp": 35
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm, sunny days",
+      "temp": 29
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Busiest, warm",
+      "temp": 24
+    }
+  },
+  "when_to_go": "Nile cruises run all year, but the best time to go is October to April, when days are warm and sunny and you can explore temples in comfort. December and January are the busiest months, with the highest prices, and nights can feel cool on deck. From May to September it's extremely hot, often over 40°C in Luxor and Aswan, so sightseeing starts at dawn and stops by late morning. Summer is much cheaper and quieter if you can handle the heat.",
+  "things": [
+    {
+      "name": "Karnak and Luxor temples",
+      "tag": "Ticketed",
+      "blurb": "Karnak is a vast temple complex with a forest of giant columns in its Great Hypostyle Hall. Luxor Temple is right on the riverbank and looks magical lit up after dark.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Valley of the Kings",
+      "tag": "Ticketed",
+      "blurb": "Royal tombs cut into the desert hills on Luxor's west bank, their walls covered in painted carvings. Your ticket covers three tombs, and Tutankhamun's needs an extra ticket.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Temple of Horus at Edfu",
+      "tag": "Ticketed",
+      "blurb": "One of the best preserved temples in Egypt, still with its roof and huge entrance towers. Boats moor in town and you usually reach it by horse and carriage.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kom Ombo",
+      "tag": "Ticketed",
+      "blurb": "An unusual double temple on a bend in the river, dedicated to the crocodile god Sobek and the falcon god Horus. A small museum next door displays mummified crocodiles.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Philae Temple",
+      "tag": "Ticketed",
+      "blurb": "A beautiful temple to the goddess Isis on an island near Aswan, moved stone by stone when the Aswan dams raised the river. You reach it by small motorboat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Abu Simbel",
+      "tag": "Ticketed",
+      "blurb": "Ramses II's colossal rock-cut temples near the Sudan border, about three hours by road south of Aswan or a short flight. It's an early start, but worth it.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a Nile cruise good for a family holiday?",
+      "answer": "Yes, for children who are curious about ancient Egypt and can cope with early starts and heat. Most boats have a small pool on the sun deck. Very young children may find long temple visits tiring, so pick a boat with shorter excursions."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "Cruises from Luxor to Aswan usually take 4 nights, and Aswan to Luxor takes 3 nights, as you sail with the current. Traditional sailing boats called dahabiyas take about 5 nights. Many people add a few nights in Cairo for the pyramids."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Luxor Airport, usually via Cairo, though there are direct flights from Europe in winter. Boats moor along the riverside Corniche, about 20 minutes by taxi. For cruises starting at the other end, fly into Aswan instead."
+    },
+    {
+      "question": "Should you pick a big boat or a dahabiya?",
+      "answer": "Standard cruise boats carry around 100 to 150 passengers, with a pool and a set programme of tours. Dahabiyas are sailing boats with a handful of cabins, moor at quieter spots and cost more. Both visit the main temples."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Jordan",
+      "code": "AMM",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Oman",
+      "code": "MCT",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Greek islands",
+      "code": "ATH",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Rhine river cruise",
+      "code": "BSL",
+      "label": "🛳️ Cruise"
+    }
+  ],
+  "date": "2026-10-19T21:02:40Z",
+  "updated": "2026-10-19T21:02:40Z"
+}

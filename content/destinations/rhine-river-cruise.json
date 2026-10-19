@@ -1,0 +1,193 @@
+{
+  "name": "Rhine river cruise",
+  "published": true,
+  "country": "DE",
+  "title": "Rhine river cruises",
+  "intro": "A week sailing down one of Europe's great rivers from Switzerland to the Netherlands, past vineyards, hilltop castles and old cathedral cities. Here's what a Rhine river cruise is like, when to go and how long to stay.",
+  "seo_title": "Rhine river cruises: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/rhine-river-cruise-6670565_1280.webp",
+  "image_alt": "Pfalzgrafenstein Castle on its island in the Rhine, with a river boat passing and vineyards on the hills behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Rhine",
+  "to_code": "BSL",
+  "holiday_types": [
+    "cruise",
+    "culture",
+    "food"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€), Swiss franc in Basel",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book. Most river cruise fares include meals on board, so check what drinks and tours are included.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 5
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 7
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Season starts",
+      "temp": 12
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Tulips in Holland",
+      "temp": 16
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild, blossom",
+      "temp": 20
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long, warm days",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, low water risk",
+      "temp": 25
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Wine harvest",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colours",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Christmas markets",
+      "temp": 9
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas markets",
+      "temp": 5
+    }
+  },
+  "when_to_go": "Rhine cruises run from around March to October, with festive Christmas market sailings from late November to December. May, June and September are the best months, with mild weather and green or golden vineyards; September and October bring the wine harvest. April is tulip time at the Dutch end of the trip. July and August are warm and busy, and in very dry summers low water can occasionally force changes, such as a coach transfer around a shallow stretch. Christmas cruises are cold but cosy, with markets in Strasbourg, Cologne and smaller towns along the way.",
+  "things": [
+    {
+      "name": "Middle Rhine Gorge",
+      "tag": "Outdoors",
+      "blurb": "A UNESCO-listed stretch between Rüdesheim and Koblenz, lined with steep vineyards and dozens of castles. Ships sail it in daylight so you can watch from the deck as you pass the Lorelei rock.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Strasbourg",
+      "tag": "Free",
+      "blurb": "Walk through Petite France, with its half-timbered houses along the canals, to the soaring pink sandstone cathedral. Boats usually moor a short coach ride from the centre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Heidelberg",
+      "tag": "Ticketed",
+      "blurb": "A university town with a red sandstone castle ruin above the old town and the river Neckar. It's a regular excursion from Mannheim or Speyer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rüdesheim",
+      "tag": "Food",
+      "blurb": "A pretty wine town known for the Drosselgasse, a narrow lane full of wine taverns. Try a Rüdesheimer coffee, made with local brandy, or take the cable car up through the vineyards.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cologne Cathedral",
+      "tag": "Free",
+      "blurb": "A huge Gothic cathedral right by the river, which took more than 600 years to finish. Climb the 533 steps of the south tower for views over the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kinderdijk windmills",
+      "tag": "Ticketed",
+      "blurb": "A row of 19 old windmills along the canals near Rotterdam, often visited on the last day before Amsterdam. Some mills are open so you can see inside.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a Rhine river cruise good for a family holiday?",
+      "answer": "It's best for adults and older children who enjoy history and towns. River ships have few facilities for children, though a few lines run family sailings in the summer holidays with activities and family cabins."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "The classic Basel to Amsterdam cruise is 7 nights, or the same trip in reverse. Shorter 4 or 5 night trips cover just part of the river, and longer cruises add the Moselle or the Main."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into EuroAirport Basel-Mulhouse-Freiburg and take the number 50 bus to Basel SBB station, then a short taxi ride to the river quay. Zurich Airport is about an hour away by train. The cruise ends in Amsterdam, a short train ride from Schiphol Airport."
+    },
+    {
+      "question": "How big are Rhine cruise ships?",
+      "answer": "River ships are all small compared with ocean ships, usually carrying around 100 to 190 passengers. There's no big-ship or small-ship choice here; the differences are in cabin size, food and what's included in the fare."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cologne",
+      "code": "CGN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Strasbourg",
+      "code": "SXB",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Amsterdam",
+      "code": "AMS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Nile cruise",
+      "code": "LXR",
+      "label": "🛳️ Cruise"
+    }
+  ],
+  "date": "2026-10-19T21:02:40Z",
+  "updated": "2026-10-19T21:02:40Z"
+}

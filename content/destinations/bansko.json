@@ -1,0 +1,193 @@
+{
+  "name": "Bansko",
+  "published": true,
+  "country": "BG",
+  "title": "Holidays in Bansko",
+  "intro": "A cheerful old Bulgarian town at the foot of the Pirin mountains, with cheap skiing, cosy taverns and a gondola straight up to the slopes. Here's what Bansko is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/bansko-5136871_1280.webp",
+  "image_alt": "Snow-covered pine forest and mountain slopes in the Pirin mountains above Bansko",
+  "wikipedia": "https://en.wikipedia.org/wiki/Bansko",
+  "to_code": "SOF",
+  "holiday_types": [
+    "ski",
+    "culture",
+    "nature"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Bulgaria switched from the lev to the euro in 2026 and is in the Schengen area, so the new EU entry checks apply. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Ski season",
+      "temp": 3
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Ski season",
+      "temp": 5
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Spring snow",
+      "temp": 10
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Season ends",
+      "temp": 15
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Between seasons",
+      "temp": 20
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hiking",
+      "temp": 24
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hiking, hot",
+      "temp": 27
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Jazz festival",
+      "temp": 27
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm, quieter",
+      "temp": 23
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Autumn",
+      "temp": 17
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Waiting for snow",
+      "temp": 10
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Season opens",
+      "temp": 4
+    }
+  },
+  "when_to_go": "The ski season runs from mid-December to around mid-April, with the best snow usually from January to March. The town sits low, at about 900 metres, so snow in the streets isn't guaranteed, but the slopes higher up are more reliable. February is busiest. In summer Bansko is a base for hiking in Pirin National Park, and the town hosts a popular jazz festival in August. Spring and autumn are quiet.",
+  "things": [
+    {
+      "name": "Skiing in the Pirin mountains",
+      "tag": "Ticketed",
+      "blurb": "A gondola rises from the edge of town to Banderishka Polyana, where most of the runs are. Get there early, as queues at the bottom can be long in the morning.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ski school and nursery slopes",
+      "tag": "Ticketed",
+      "blurb": "Lessons, ski hire and passes are cheap by Alpine standards, with many English-speaking instructors and gentle beginner slopes at the top of the gondola.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old town and mehanas",
+      "tag": "Food",
+      "blurb": "Cobbled lanes of stone houses and wooden gates, full of traditional taverns serving grilled meats, slow-cooked stews and live folk music.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Holy Trinity Church",
+      "tag": "Culture",
+      "blurb": "A big 19th-century church in the old town, with painted walls and a tall bell tower.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Banya hot springs",
+      "tag": "Ticketed",
+      "blurb": "The nearby village of Banya has warm mineral pools and spas, a short drive from Bansko.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rila Monastery",
+      "tag": "Culture",
+      "blurb": "Bulgaria's most famous monastery, with striped arches and painted chapels in a forested valley, a full-day trip from Bansko.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Bansko good for a family holiday?",
+      "answer": "Yes, especially on a budget. Lessons, hire and food cost far less than in the Alps, and the old town is fun to explore. The ski area is smaller, and gondola queues can test children's patience, so start early or ski later in the day."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week, with five or six days of skiing, is about right. The ski area is small enough that a longer stay can feel repetitive."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Sofia, then take a transfer or bus of about two and a half hours to Bansko. Plovdiv is another option, a little further away."
+    },
+    {
+      "question": "Is Bansko cheap?",
+      "answer": "Yes, it's one of the cheapest ski resorts in Europe, with good-value hotels, ski packages and meals out."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Andorra",
+      "code": "BCN",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Plovdiv",
+      "code": "PDV",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Zakopane",
+      "code": "KRK",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "St Anton",
+      "code": "INN",
+      "label": "⛷️ Skiing"
+    }
+  ],
+  "date": "2026-10-19T21:00:23Z",
+  "updated": "2026-10-19T21:00:23Z"
+}

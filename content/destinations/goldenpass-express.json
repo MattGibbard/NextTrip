@@ -1,0 +1,193 @@
+{
+  "name": "GoldenPass Express",
+  "published": true,
+  "country": "CH",
+  "title": "The GoldenPass Express",
+  "intro": "A scenic train from Montreux on Lake Geneva through the chalet country of Gstaad to Interlaken, then over the Brünig Pass to Lucerne. Here's what the GoldenPass Express is like, when to go and how long to stay.",
+  "seo_title": "GoldenPass Express: best time to go and things to do",
+  "seo_description": "",
+  "image": "/images/destinations/goldenpass-express-9661468_1280.webp",
+  "image_alt": "Looking down on Lake Geneva at Montreux, with Chillon Castle on the shore and green mountains around",
+  "wikipedia": "https://en.wikipedia.org/wiki/Montreux_Oberland_Bernois_Railway",
+  "to_code": "GVA",
+  "holiday_types": [
+    "rail",
+    "nature",
+    "culture"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Swiss franc (CHF)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / J · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The Swiss Travel Pass covers the fare, with an extra charge for a seat reservation. Switzerland is in the Schengen area, so the new EU entry checks apply. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Snowy chalets",
+      "temp": 3
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Snowy chalets",
+      "temp": 5
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring at the lakes",
+      "temp": 10
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Blossom, quiet",
+      "temp": 14
+    },
+    "may": {
+      "rating": "best",
+      "note": "Green meadows",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Peak season",
+      "temp": 24
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Peak season",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Clear, calmer",
+      "temp": 19
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 14
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey, quiet",
+      "temp": 8
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas markets",
+      "temp": 4
+    }
+  },
+  "when_to_go": "The GoldenPass Express runs all year. May to September is the best time, with green meadows, cows in the high pastures, boats on the lakes and mountain trains running to the summits. July and August are busiest, so book seats ahead. September and early October bring clear air and autumn colour. Winter turns the Saanen valley and Gstaad into a snowy chalet scene, and Montreux holds a big Christmas market in December. November is the greyest, quietest month, when some mountain lifts close for maintenance.",
+  "things": [
+    {
+      "name": "Chillon Castle",
+      "tag": "Ticketed",
+      "blurb": "A medieval castle on a rock in Lake Geneva, a short bus ride or lakeside walk from Montreux.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rochers de Naye",
+      "tag": "Ticketed",
+      "blurb": "A cog railway from Montreux up to 2,042 metres, with views over Lake Geneva and the Alps.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gstaad",
+      "tag": "Food",
+      "blurb": "A smart chalet resort along the line, good for a lunch stop, walks in summer and skiing in winter.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Interlaken and Jungfrau region",
+      "tag": "Outdoors",
+      "blurb": "The halfway point between two lakes, and the gateway to Grindelwald, Lauterbrunnen and the Jungfraujoch.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Brünig Pass and Lake Brienz",
+      "tag": "Free",
+      "blurb": "On the way to Lucerne, the train runs along turquoise Lake Brienz before climbing over the Brünig Pass.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lucerne",
+      "tag": "Culture",
+      "blurb": "The lakeside city at the end of the route, with the wooden Chapel Bridge, an old town and boat trips on Lake Lucerne.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long is the train ride?",
+      "answer": "About three hours fifteen minutes from Montreux to Interlaken, with no change of train. Interlaken to Lucerne takes about two more hours on the Luzern-Interlaken Express."
+    },
+    {
+      "question": "Is the GoldenPass Express good for a family holiday?",
+      "answer": "Yes. The legs are short enough for children, and the stops at Montreux, Interlaken and Lucerne have lake boats, mountain trains and plenty to do."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Geneva, then take a direct train to Montreux in about an hour and ten minutes. To ride from the other end, fly into Zurich and take the train to Lucerne in about an hour."
+    },
+    {
+      "question": "What makes the train special?",
+      "answer": "Since 2022 its carriages can change gauge at Zweisimmen, so you stay in your seat for the whole run from Montreux to Interlaken. Prestige class has raised seats and big windows."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Glacier Express",
+      "code": "ZRH",
+      "label": "🚆 By train"
+    },
+    {
+      "name": "Bernina Express",
+      "code": "ZRH",
+      "label": "🚆 By train"
+    },
+    {
+      "name": "Zermatt",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    }
+  ],
+  "date": "2026-10-19T21:08:42Z",
+  "updated": "2026-10-19T21:08:42Z"
+}

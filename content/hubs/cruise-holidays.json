@@ -1,0 +1,50 @@
+{
+  "published": true,
+  "kind": "type",
+  "holiday_type": "cruise",
+  "country": "",
+  "month": "",
+  "guides": [],
+  "icon": "",
+  "name": "Cruise",
+  "title": "Cruise holidays",
+  "intro": "Unpack once and wake up somewhere new each morning. Here's where to go for a cruise holiday, how long you'll need and when the sailing season is.",
+  "seo_title": "Cruise holidays: the best places to sail, and when to go",
+  "seo_description": "",
+  "sections": [
+    {
+      "heading": "The short list",
+      "text": "- **Big scenery:** the [Norwegian fjords](/destinations/norwegian-fjords) and [Alaska's Inside Passage](/destinations/alaska-inside-passage) for glaciers, waterfalls and wildlife.\n- **Sun and islands:** the [Greek islands](/destinations/greek-islands-cruises), the [Dalmatian coast](/destinations/dalmatian-coast-cruise) and the [Caribbean](/destinations/caribbean-cruises).\n- **Rivers:** the [Rhine](/destinations/rhine-river-cruise) for castles and old towns, and the [Nile](/destinations/nile-cruise) for ancient Egypt.\n- **Short and different:** a night or two on [Ha Long Bay](/destinations/ha-long-bay) in Vietnam.\n\nFor more, see all the cruise guides above, with the best months for each."
+    },
+    {
+      "heading": "Big ship, small ship or river boat",
+      "text": "Big ships have kids' clubs, pools, shows and lots of places to eat, which makes them easy for families. Small ships and river boats carry fewer people, get into smaller harbours and feel more relaxed, but have fewer things to do on board. On a river cruise you're never far from land, and you often moor right in the middle of town."
+    },
+    {
+      "heading": "When to sail",
+      "text": "Northern cruises, like Norway and Alaska, mostly sail from May to September. The Mediterranean season runs from about April to October. The Caribbean is best from December to April, before the hurricane season. Nile cruises are most comfortable from October to April, when it isn't too hot."
+    },
+    {
+      "heading": "Tips for a first cruise",
+      "text": "- **Fly in a day early.** If your flight is late, the ship won't wait.\n- **Check what's included.** Drinks, tips, excursions and Wi-Fi often cost extra.\n- **Book excursions you really want early,** or explore ports on foot for free.\n- **Choose your cabin carefully.** Mid-ship and lower decks rock least if anyone gets seasick."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where is good for a first cruise?",
+      "answer": "The Greek islands, the Caribbean and the Norwegian fjords are easy first cruises, with calm seas in season and lots to see. A short Ha Long Bay cruise is a good taster."
+    },
+    {
+      "question": "How long is a typical cruise?",
+      "answer": "Seven nights is the most common. Ha Long Bay cruises are one or two nights, Nile cruises three to seven, and Rhine cruises usually a week."
+    },
+    {
+      "question": "Are cruises good for families?",
+      "answer": "Big ships are, with kids' clubs, pools and plenty of food. Small ships and river cruises suit older children who enjoy sightseeing."
+    },
+    {
+      "question": "When is the best time to cruise?",
+      "answer": "May to September for Norway and Alaska, April to October for the Mediterranean, and December to April for the Caribbean."
+    }
+  ]
+}

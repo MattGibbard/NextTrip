@@ -1,0 +1,193 @@
+{
+  "name": "Route 66",
+  "published": true,
+  "country": "US",
+  "title": "Holidays on Route 66",
+  "intro": "America's Mother Road runs about 2,400 miles from Chicago to Santa Monica through eight states, past neon motels, old diners, desert and small-town America. Here's what Route 66 is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/route-66-3780258_1280.webp",
+  "image_alt": "A Route 66 shield for Kingman, Arizona, below a railroad crossing sign, with an old steam locomotive behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/U.S._Route_66",
+  "to_code": "ORD",
+  "holiday_types": [
+    "road-trip",
+    "culture",
+    "nature"
+  ],
+  "nights": "14 to 21",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Drive on the right. A UK photocard licence is fine for hiring a car, but one-way hire from Chicago to Los Angeles carries a big drop-off fee. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, snow possible",
+      "temp": 8
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 11
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly, changeable",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring, mild",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, green",
+      "temp": 26
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long, warm days",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot in the desert",
+      "temp": 34
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild, autumn colour",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cooling, quiet",
+      "temp": 15
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold, snow possible",
+      "temp": 9
+    }
+  },
+  "when_to_go": "May, June, September and October are the best months to drive Route 66, with warm, settled weather across most of the route and everything open. July and August are popular but very hot in the deserts of Arizona and California, and storms can roll across the plains. Winter is cold and quiet, with snow possible in Illinois, Missouri and the high country around Flagstaff, and some motels and attractions close. 2026 marks 100 years of Route 66, so expect special events and busier roads.",
+  "things": [
+    {
+      "name": "Chicago start sign",
+      "tag": "Free",
+      "blurb": "The 'Begin Route 66' sign on Adams Street in downtown Chicago. Have breakfast at a classic diner nearby before heading for the open road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cadillac Ranch",
+      "tag": "Free",
+      "blurb": "Ten old Cadillacs buried nose-down in a field outside Amarillo, Texas, covered in layers of spray paint. Bring a can and add your own.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Petrified Forest National Park",
+      "tag": "Ticketed",
+      "blurb": "Fossilised logs scattered across the colourful Painted Desert in Arizona. It's the only national park that Route 66 passes through.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Canyon detour",
+      "tag": "Ticketed",
+      "blurb": "Williams and Flagstaff, right on the route, are about an hour and a half's drive from the canyon's South Rim, so it's an easy detour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Oatman",
+      "tag": "Free",
+      "blurb": "An old gold-mining town in the Arizona hills where wild burros wander the main street, reached by a steep, twisting stretch of the old road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Santa Monica Pier",
+      "tag": "Free",
+      "blurb": "The official end of the trail, with a sign to prove it, a funfair on the pier and the Pacific Ocean at last.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Route 66 good for a family holiday?",
+      "answer": "It can be, but there are long days in the car. Older children enjoy the quirky roadside stops, retro motels and the Grand Canyon. Doing just one section, such as Arizona and California, makes it easier."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two weeks is the minimum to drive the whole route without rushing, and three weeks is better. Good overnight stops include Springfield, St Louis, Tulsa, Amarillo, Santa Fe or Albuquerque, Flagstaff and Kingman."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Chicago O'Hare International Airport and start in downtown Chicago, about 30 minutes away. Most people drive east to west and fly home from Los Angeles International Airport, close to the end at Santa Monica."
+    },
+    {
+      "question": "Can you still drive the original road?",
+      "answer": "Route 66 was taken off the US highway system in 1985, but about 85 percent of it is still drivable, much of it next to the interstates. Brown 'Historic Route 66' signs mark the way, and a good guidebook or app helps you follow the old alignments."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Pacific Coast Highway",
+      "code": "SFO",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Grand Canyon",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Chicago",
+      "code": "ORD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "New Orleans",
+      "code": "MSY",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-19T21:03:37Z",
+  "updated": "2026-10-19T21:03:37Z"
+}

@@ -40,7 +40,7 @@ describe("holiday picker filters", () => {
   });
 
   it("suggests which answer to loosen when nothing fits", () => {
-    const none = answers({ types: ["ski"], month: "jul", budget: 1 });
+    const none = answers({ types: ["ski"], month: "may", budget: 1 });
     expect(matches(DESTINATIONS, none)).toHaveLength(0);
     const fixes = loosen(DESTINATIONS, none);
     expect(fixes.length).toBeGreaterThan(0);

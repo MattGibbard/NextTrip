@@ -1,0 +1,193 @@
+{
+  "name": "Iceland's Ring Road",
+  "published": true,
+  "country": "IS",
+  "title": "Holidays on Iceland's Ring Road",
+  "intro": "Route 1 circles the whole of Iceland, linking waterfalls, black sand beaches, glacier lagoons and the volcanic north. Here's what Iceland's Ring Road is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/iceland-ring-road-7499281_1280.webp",
+  "image_alt": "A quiet road curving through golden grassland towards dark mountains under heavy cloud in Iceland",
+  "wikipedia": "https://en.wikipedia.org/wiki/Route_1_(Iceland)",
+  "to_code": "KEF",
+  "holiday_types": [
+    "road-trip",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "0 to 1 hr behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Icelandic króna (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Drive on the right, with headlights on at all times. Driving off-road is illegal, and mountain F-roads need a 4x4. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Icy, dark",
+      "temp": 2
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snow, Northern Lights",
+      "temp": 3
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Snow, longer days",
+      "temp": 3
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Thawing, quiet",
+      "temp": 6
+    },
+    "may": {
+      "rating": "good",
+      "note": "Light nights",
+      "temp": 10
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Midnight sun",
+      "temp": 12
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warmest, busiest",
+      "temp": 14
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm, busy",
+      "temp": 14
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn colours",
+      "temp": 11
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Storms, first snow",
+      "temp": 7
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Dark, icy",
+      "temp": 4
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Darkest month",
+      "temp": 2
+    }
+  },
+  "when_to_go": "June to August is the best time to drive the Ring Road, with long light nights, the mildest weather and every road and campsite open. It's also the busiest and priciest time, so book cars and rooms early. May and September are quieter, and September brings autumn colours and the first chance of the Northern Lights. From October to April snow, ice and strong winds can close stretches of the road, especially in the east and north, and daylight is short. A winter Ring Road trip is possible but only for confident drivers with flexible plans. Check road.is and safetravel.is every day.",
+  "things": [
+    {
+      "name": "Seljalandsfoss and Skógafoss",
+      "tag": "Free",
+      "blurb": "Two of Iceland's best-loved waterfalls on the south coast. You can walk behind Seljalandsfoss and climb steps to the top of Skógafoss.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Reynisfjara black sand beach",
+      "tag": "Free",
+      "blurb": "Basalt columns and sea stacks on a black beach near Vík. The waves here are dangerous, so stay well back from the water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jökulsárlón glacier lagoon",
+      "tag": "Free",
+      "blurb": "Icebergs drifting in a lagoon below a glacier, with Diamond Beach across the road where chunks of ice wash up on the black sand. Boat trips run in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake Mývatn",
+      "tag": "Outdoors",
+      "blurb": "A volcanic lake in the north with lava formations, steaming vents and craters, and the Mývatn Nature Baths for a soak.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dettifoss",
+      "tag": "Free",
+      "blurb": "Europe's most powerful waterfall, a thundering wall of grey glacial water in a deep canyon in the north-east.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Golden Circle",
+      "tag": "Outdoors",
+      "blurb": "Þingvellir National Park, the Geysir hot springs and Gullfoss waterfall, an easy loop to add at the start or end of the trip.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Iceland's Ring Road good for a family holiday?",
+      "answer": "Yes, in summer, if you allow enough time. There are long stretches with little to see, so break up the driving with waterfalls, geothermal pools and whale watching from Húsavík. Accommodation books up fast, so plan ahead."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Allow seven nights as a minimum for the full loop of about 1,300 km, and ten to fourteen if you want to add the Golden Circle, the Snæfellsnes peninsula or a few slower days. With less time, stick to the south coast."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Keflavík International Airport, about 50 km from Reykjavík, and pick up a hire car there. The Ring Road is easy to join just outside Reykjavík, and most people drive the loop anticlockwise along the south coast first."
+    },
+    {
+      "question": "What should you know about driving?",
+      "answer": "The speed limit is 90 km/h on paved roads and 80 km/h on gravel, and speed cameras are common. Many bridges are single lane, petrol stations are far apart in the east, and sheep wander onto the road. Gravel and wind damage insurance is worth having."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Reykjavik",
+      "code": "KEF",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Faroe Islands",
+      "code": "FAE",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lofoten",
+      "code": "BOO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Tromsø",
+      "code": "TOS",
+      "label": "🧗 Adventure"
+    }
+  ],
+  "date": "2026-10-19T21:03:37Z",
+  "updated": "2026-10-19T21:03:37Z"
+}

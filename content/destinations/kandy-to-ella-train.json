@@ -1,0 +1,193 @@
+{
+  "name": "Kandy to Ella train",
+  "published": true,
+  "country": "LK",
+  "title": "The Kandy to Ella train",
+  "intro": "One of the world's most beautiful train rides climbs through Sri Lanka's misty hill country, past tea estates, waterfalls and the famous Nine Arch Bridge. Here's what the Kandy to Ella train is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/kandy-to-ella-train-3621804_1280.webp",
+  "image_alt": "A blue Sri Lankan train crossing the stone Nine Arch Bridge near Ella, surrounded by thick green forest",
+  "wikipedia": "https://en.wikipedia.org/wiki/Main_Line_(Sri_Lanka)",
+  "to_code": "CMB",
+  "holiday_types": [
+    "rail",
+    "nature",
+    "culture"
+  ],
+  "nights": "7 to 14",
+  "trip_length": "two-weeks",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4.5 to 5.5 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Sri Lankan rupee (Rs)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ETA visa needed",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type D / G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders need an Electronic Travel Authorisation, applied for online before you fly. Train tickets are very cheap, but reserved seats sell out weeks ahead. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, clear",
+      "temp": 24
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, clear",
+      "temp": 25
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 26
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot, some rain",
+      "temp": 26
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Monsoon starts",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Windy, showers",
+      "temp": 24
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 24
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 24
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 23
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Drier",
+      "temp": 23
+    }
+  },
+  "when_to_go": "The hill country is driest and clearest from January to March, the best time for views from the train. April is hot with some afternoon storms. From May to September the southwest monsoon brings showers, more on the Kandy side than around Ella, and October and November are the wettest months. At around 1,000 to 2,000 metres up, it's much cooler than the coast. Temperatures shown are for Kandy.",
+  "things": [
+    {
+      "name": "The train ride",
+      "tag": "Ticketed",
+      "blurb": "About seven hours from Kandy to Ella. Sit on the right going uphill for the best tea-estate views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nine Arch Bridge",
+      "tag": "Free",
+      "blurb": "A stone viaduct in the jungle near Ella. Check the timetable and watch a train cross from the hillside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Little Adam's Peak",
+      "tag": "Free",
+      "blurb": "An easy hike from Ella through tea gardens to a viewpoint over Ella Gap.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Temple of the Tooth",
+      "tag": "Ticketed",
+      "blurb": "Kandy's most sacred temple, said to hold a tooth of the Buddha. Cover shoulders and knees.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tea factory tour",
+      "tag": "Tour",
+      "blurb": "See how tea is picked and processed near Nuwara Eliya, then taste it fresh.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Horton Plains",
+      "tag": "Day trip",
+      "blurb": "A high plateau with cloud forest and the cliff-edge viewpoint of World's End.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Kandy to Ella train good for a family holiday?",
+      "answer": "Yes, especially for older children. The views are spectacular, but trains can be crowded and toilets are basic, so a reserved seat makes a big difference. Some families ride just part of the way."
+    },
+    {
+      "question": "How long is the train ride?",
+      "answer": "About seven hours, though delays are common. Many people break it at Nanu Oya for Nuwara Eliya, or start at Nanu Oya to cut it to about three and a half hours."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Bandaranaike International Airport near Colombo, then take a car or train to Kandy, about three to four hours. From Ella, drivers reach the south coast beaches in about three hours."
+    },
+    {
+      "question": "How do you book tickets?",
+      "answer": "Reserved seats in first, second and third class go on sale about 30 days ahead on the Sri Lanka Railways website and at stations, and sell out fast. Unreserved tickets are sold on the day, but you may stand."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Sri Lanka",
+      "code": "CMB",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Darjeeling",
+      "code": "IXB",
+      "label": "🚆 By train"
+    },
+    {
+      "name": "Kerala",
+      "code": "COK",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Rajasthan",
+      "code": "DEL",
+      "label": "🚗 Road trip"
+    }
+  ],
+  "date": "2026-10-19T22:50:53Z",
+  "updated": "2026-10-19T22:50:53Z"
+}

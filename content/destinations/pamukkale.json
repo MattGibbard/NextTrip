@@ -1,0 +1,193 @@
+{
+  "name": "Pamukkale",
+  "published": true,
+  "country": "TR",
+  "title": "Holidays in Pamukkale",
+  "intro": "White terraces of warm, mineral-rich water spill down a hillside in western Turkey, beside the ruins of the ancient Roman spa city of Hierapolis. Here's what Pamukkale is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/pamukkale-14979_1280.webp",
+  "image_alt": "Turquoise pools of warm water on the bright white travertine terraces of Pamukkale",
+  "wikipedia": "https://en.wikipedia.org/wiki/Pamukkale",
+  "to_code": "DNZ",
+  "holiday_types": [
+    "relax",
+    "culture",
+    "nature"
+  ],
+  "nights": "1 to 3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 to 3 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Turkish lira (₺)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders don't need a visa for short stays. Your passport should have at least 150 days left on it. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 11
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 13
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring flowers",
+      "temp": 22
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 33
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot, busy",
+      "temp": 36
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot, busy",
+      "temp": 36
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Pleasant",
+      "temp": 25
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool, quiet",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 12
+    }
+  },
+  "when_to_go": "April, May, September and October are the most comfortable months, with warm days and fewer coach tours. July and August are very hot, often over 35°C, and the white terraces reflect the sun, so go early or late in the day. Winter is cool but much quieter, and the warm pools steam in the cold air. The springs run all year at about 35°C.",
+  "things": [
+    {
+      "name": "Travertine terraces",
+      "tag": "Ticketed",
+      "blurb": "Walk barefoot up the white terraces through shallow warm pools. Shoes aren't allowed, so bring a bag for them.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hierapolis",
+      "tag": "Ticketed",
+      "blurb": "The ruins of a Roman spa city on the same ticket, with a huge theatre and one of the largest ancient cemeteries in Turkey.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Antique Pool",
+      "tag": "Ticketed",
+      "blurb": "Swim in warm, fizzy water over fallen Roman columns, said to be where Cleopatra bathed.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Karahayıt red springs",
+      "tag": "Free",
+      "blurb": "A village nearby where iron-rich hot springs leave red, orange and green terraces.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paragliding",
+      "tag": "Tour",
+      "blurb": "Tandem flights glide over the terraces, best at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Aphrodisias",
+      "tag": "Day trip",
+      "blurb": "One of Turkey's best Roman sites, about 90 minutes away, with a stadium and a museum of marble statues.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Pamukkale good for a family holiday?",
+      "answer": "Yes, as part of a wider trip. Children love paddling in the warm pools and the Antique Pool is fun for confident swimmers. The terraces are slippery and bright, so bring sunglasses and sun cream."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "One or two nights is enough. Staying overnight means you can see the terraces at sunset and early morning, when the day-trip coaches have gone. Many people combine it with Ephesus or the coast."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Denizli Çardak Airport, usually via Istanbul, then transfer about an hour to Pamukkale village. It's also around three hours by road from Izmir or Antalya airports, which have more flights."
+    },
+    {
+      "question": "Can you still bathe in the terraces?",
+      "answer": "You can paddle in the shallow pools along the walkway, but many of the terraces are closed to protect them. For a proper swim, use the Antique Pool or your hotel's thermal pool."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cappadocia",
+      "code": "NAV",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Antalya",
+      "code": "AYT",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Kaş",
+      "code": "DLM",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Bodrum",
+      "code": "BJV",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-19T22:48:56Z",
+  "updated": "2026-10-19T22:48:56Z"
+}

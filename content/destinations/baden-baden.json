@@ -1,0 +1,193 @@
+{
+  "name": "Baden-Baden",
+  "published": true,
+  "country": "DE",
+  "title": "Holidays in Baden-Baden",
+  "intro": "A smart old spa town on the edge of Germany's Black Forest, with Roman baths, a grand casino and forest walks above the rooftops. Here's what Baden-Baden is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/baden-baden-5056216_1280.webp",
+  "image_alt": "A grand white hotel in Baden-Baden behind a lawn and the little river Oos, framed by bare spring branches",
+  "wikipedia": "https://en.wikipedia.org/wiki/Baden-Baden",
+  "to_code": "FKB",
+  "holiday_types": [
+    "relax",
+    "culture",
+    "nature"
+  ],
+  "nights": "2 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Germany is in the Schengen area, so the new EU entry checks apply. Bathing at the Friedrichsbad is nude, so check the rules before you go. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cold, spa weather",
+      "temp": 5
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cold, spa weather",
+      "temp": 7
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Quiet",
+      "temp": 12
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Blossom",
+      "temp": 17
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, green",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Summer festivals",
+      "temp": 26
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Wine harvest",
+      "temp": 21
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Quiet, misty",
+      "temp": 9
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas market",
+      "temp": 5
+    }
+  },
+  "when_to_go": "Baden-Baden is a year-round town. Spring and early autumn are lovely for walks along the Lichtentaler Allee and into the Black Forest, and September and October bring the wine harvest. Summer is warm and fairly busy with festivals. In winter the thermal baths feel at their best, and from late November to early January a Christmas market fills the park in front of the Kurhaus.",
+  "things": [
+    {
+      "name": "Caracalla Spa",
+      "tag": "Ticketed",
+      "blurb": "Indoor and outdoor thermal pools, whirlpools and saunas. Young children aren't let in, so check the age limits.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Friedrichsbad",
+      "tag": "Ticketed",
+      "blurb": "A 19th-century Roman-Irish bath, with a 17-step ritual of steam, warm and cold pools. Bathing here is nude.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lichtentaler Allee",
+      "tag": "Free",
+      "blurb": "A riverside park full of old trees, flowers and grand villas, perfect for a slow walk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Merkur funicular",
+      "tag": "Ticketed",
+      "blurb": "A steep funicular railway up the Merkur hill, for forest trails and views over the town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kurhaus and casino",
+      "tag": "Tour",
+      "blurb": "Germany's oldest casino, decorated like a French palace. Morning tours show it off without gambling.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Black Forest High Road",
+      "tag": "Day trip",
+      "blurb": "A scenic drive along the ridge to the Mummelsee lake and forest viewpoints.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Baden-Baden good for a family holiday?",
+      "answer": "It suits couples and families with older children best. The main spas have age limits, but there are forest walks, playgrounds, a small toy museum and the Black Forest on the doorstep."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two to four nights is plenty for the baths, the town and a day in the Black Forest. It also makes a relaxing stop on a longer German road trip."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Karlsruhe/Baden-Baden Airport, about 15 km away, or into Frankfurt or Stuttgart and take the train. Fast ICE trains stop at Baden-Baden station, a short bus ride from the centre."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "No. The town centre is walkable, buses connect the station and sights, and many hotels give guests a free bus pass. A car helps for the Black Forest."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Romantic Road",
+      "code": "FRA",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Strasbourg",
+      "code": "SXB",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Hévíz",
+      "code": "BUD",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Colmar",
+      "code": "BSL",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-19T22:48:56Z",
+  "updated": "2026-10-19T22:48:56Z"
+}

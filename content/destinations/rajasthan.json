@@ -1,0 +1,193 @@
+{
+  "name": "Rajasthan",
+  "published": true,
+  "country": "IN",
+  "title": "Rajasthan road trips",
+  "intro": "A journey through India's land of kings, from pink Jaipur to blue Jodhpur, golden Jaisalmer in the Thar Desert and the lakes of Udaipur, with forts and palaces all the way. Here's what Rajasthan is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/rajasthan-6156123_1280.webp",
+  "image_alt": "The pink, honeycombed facade of the Hawa Mahal, the Palace of Winds, in Jaipur",
+  "wikipedia": "https://en.wikipedia.org/wiki/Rajasthan",
+  "to_code": "DEL",
+  "holiday_types": [
+    "road-trip",
+    "culture",
+    "adventure"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4.5 to 5.5 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Indian rupee (₹)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "E-visa needed",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / D / M · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders need an e-visa, applied for online before you fly. Most visitors hire a car with a driver rather than driving themselves. GOV.UK advises against travel within 10 km of the border with Pakistan, which is well away from the usual route. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, cool nights",
+      "temp": 22
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, warm",
+      "temp": 26
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Holi, getting hot",
+      "temp": 31
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 37
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 40
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 39
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Monsoon",
+      "temp": 34
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Monsoon",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Monsoon ends",
+      "temp": 33
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Dry, Diwali",
+      "temp": 33
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Dry, warm",
+      "temp": 29
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, cool nights",
+      "temp": 24
+    }
+  },
+  "when_to_go": "October to March is the time to go, with warm, dry days and cool nights, especially in the desert, where it can be near freezing after dark in winter. Diwali in October or November and Holi in March are colourful but busy. From April to June it's fiercely hot, often over 40°C. The monsoon from July to September brings rain and green countryside, and the lakes at Udaipur fill up. Temperatures shown are for Jaipur.",
+  "things": [
+    {
+      "name": "Amber Fort",
+      "tag": "Ticketed",
+      "blurb": "A hilltop fort palace outside Jaipur, with mirrored halls and views over the old walls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mehrangarh Fort",
+      "tag": "Ticketed",
+      "blurb": "Jodhpur's huge fort rises above a city of blue houses. The audio guide is excellent.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jaisalmer and the desert",
+      "tag": "Tour",
+      "blurb": "A golden sandstone fort that people still live in, and camel rides to a desert camp at the Sam dunes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Udaipur",
+      "tag": "Ticketed",
+      "blurb": "The City Palace and a sunset boat trip on Lake Pichola past the Lake Palace.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ranthambore",
+      "tag": "Tour",
+      "blurb": "Jeep safaris in one of the best parks in India for seeing wild tigers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pushkar",
+      "tag": "Free",
+      "blurb": "A holy lakeside town with bathing ghats, temples and a famous camel fair in November.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Rajasthan good for a family holiday?",
+      "answer": "Yes, for families who don't mind long drives and busy streets. Forts, camel rides, desert camps and tiger safaris thrill children, and staying in heritage hotels and old palaces is part of the fun."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two weeks covers the classic loop of Jaipur, Jodhpur, Jaisalmer and Udaipur, with Ranthambore or Pushkar. With ten days, skip Jaisalmer, which is far out west."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Indira Gandhi International Airport in Delhi, then drive to Jaipur, about five hours, or take the train or a short flight. Jaipur, Jodhpur and Udaipur also have airports, which helps on the way home."
+    },
+    {
+      "question": "Should you drive yourself?",
+      "answer": "Most visitors don't. Indian roads are chaotic, and a car with a driver costs much less than you might think. Your driver knows the routes and good places to stop."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kerala",
+      "code": "COK",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Goa",
+      "code": "GOX",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Kandy to Ella train",
+      "code": "CMB",
+      "label": "🚆 By train"
+    },
+    {
+      "name": "Morocco desert road trip",
+      "code": "RAK",
+      "label": "🚗 Road trip"
+    }
+  ],
+  "date": "2026-10-19T22:52:57Z",
+  "updated": "2026-10-19T22:52:57Z"
+}

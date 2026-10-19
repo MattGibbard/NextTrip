@@ -1,0 +1,193 @@
+{
+  "name": "Japan by bullet train",
+  "published": true,
+  "country": "JP",
+  "title": "Japan by bullet train",
+  "intro": "A rail journey along Japan's classic route from Tokyo past Mount Fuji to Kyoto, Osaka and Hiroshima, on shinkansen trains that run at up to 300 km/h and leave to the minute. Here's what a bullet train trip is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/japan-bullet-train-6944600_1280.webp",
+  "image_alt": "A white shinkansen bullet train crossing a bridge below the snow-capped cone of Mount Fuji under a clear blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Shinkansen",
+  "to_code": "HND",
+  "holiday_types": [
+    "rail",
+    "culture",
+    "city"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 to 9 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Japanese yen (¥)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A · 100V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders don't need a visa for short stays. A Japan Rail Pass costs much more than it used to, so compare it with single tickets for your route. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cold, clear Fuji views",
+      "temp": 10
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cold, plum blossom",
+      "temp": 11
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Cherry blossom starts",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Cherry blossom",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, green",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Rainy season",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, humid",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, humid, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Typhoon risk",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Pleasant",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cold, clear",
+      "temp": 12
+    }
+  },
+  "when_to_go": "Spring and autumn are the best times. Cherry blossom season, from late March to early April, is beautiful but very busy, and autumn colour in Kyoto peaks in late November. Winter is cold but bright, with the clearest views of Mount Fuji from the train. June and early July bring the rainy season, while late summer is hot and humid with a chance of typhoons. Avoid Golden Week in early May and the mid-August Obon holiday, when trains are packed.",
+  "things": [
+    {
+      "name": "Mount Fuji from the train",
+      "tag": "Free",
+      "blurb": "Going west from Tokyo, sit on the right-hand side (seat E) for the best view of Fuji, around 40 minutes after leaving.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kyoto",
+      "tag": "Free",
+      "blurb": "Temples, shrines and gardens, from the red gates of Fushimi Inari to the bamboo grove at Arashiyama.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nara",
+      "tag": "Day trip",
+      "blurb": "Tame deer and the giant bronze Buddha at Tōdai-ji, an easy day out from Kyoto or Osaka.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Osaka street food",
+      "tag": "Food",
+      "blurb": "Takoyaki, okonomiyaki and neon lights in the Dōtonbori district.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hiroshima and Miyajima",
+      "tag": "Ticketed",
+      "blurb": "The Peace Memorial Museum, then a ferry to Miyajima island for its floating torii gate.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ekiben lunch",
+      "tag": "Food",
+      "blurb": "Station bento boxes to eat on the train, a Japanese tradition. Tokyo Station sells hundreds.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Japan by bullet train good for a family holiday?",
+      "answer": "Yes. The trains are fast, spotless and on time, and children love them. Big suitcases need a seat booking with luggage space, so many families send bags ahead with a luggage delivery service."
+    },
+    {
+      "question": "How long does the journey take?",
+      "answer": "Tokyo to Kyoto takes just over two hours on the fastest Nozomi trains, and Kyoto to Hiroshima under two more. Most people spend two weeks, with a few nights in each city."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Tokyo Haneda, or Narita, which is further out. Haneda is about 30 minutes from central Tokyo by train, and shinkansen leave from Tokyo and Shinagawa stations. Fly home from Osaka's Kansai Airport to avoid going back."
+    },
+    {
+      "question": "Do you need a Japan Rail Pass?",
+      "answer": "Not always. Since prices rose in 2023, it only pays off if you make several long trips in a week. Single tickets are easy to buy at stations and online, and seat reservations are worth it in busy seasons."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tokyo",
+      "code": "HND",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Kanazawa",
+      "code": "KMQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Beppu",
+      "code": "OIT",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Glacier Express",
+      "code": "ZRH",
+      "label": "🚆 By train"
+    }
+  ],
+  "date": "2026-10-19T22:50:53Z",
+  "updated": "2026-10-19T22:50:53Z"
+}

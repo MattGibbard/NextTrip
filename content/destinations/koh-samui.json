@@ -1,0 +1,192 @@
+{
+  "name": "Koh Samui",
+  "published": true,
+  "country": "TH",
+  "title": "Holidays in Koh Samui",
+  "intro": "An island of coconut palms, soft beaches and spa resorts in Thailand's Gulf, with jungle waterfalls inland and a marine park of 40 islands offshore. Here's what Koh Samui is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/koh-samui-4616178_1280.webp",
+  "image_alt": "A sea view on Koh Samui, with hotel roofs among green trees and small islands off the coast",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ko_Samui",
+  "to_code": "USM",
+  "holiday_types": [
+    "relax",
+    "beach"
+  ],
+  "nights": "7 to 14",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Thai baht (฿)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B / C · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders can stay in Thailand without a visa for short holidays, but the rules change, so check before you fly. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 29
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 30
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, hot",
+      "temp": 31
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Hot, dry",
+      "temp": 32
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 33
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Some showers",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Some showers",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Some showers",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Rainy season",
+      "temp": 30
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Wettest month",
+      "temp": 29
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Rains easing",
+      "temp": 29
+    }
+  },
+  "when_to_go": "Koh Samui's weather is different from the rest of Thailand. It's dry and sunny from January to April, and mostly good from May to September, with short showers, so it works well for summer holidays when Phuket is wet. The main rainy season is October to early December, with heavy downpours and rough seas. Christmas and New Year are busy and expensive.",
+  "things": [
+    {
+      "name": "Ang Thong Marine Park",
+      "tag": "Day trip",
+      "blurb": "Boat trips to a chain of limestone islands for kayaking, snorkelling and a climb to a viewpoint over an emerald lagoon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Big Buddha",
+      "tag": "Free",
+      "blurb": "A 12-metre golden Buddha on a small island joined to the coast by a causeway. Cover shoulders and knees.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fisherman's Village",
+      "tag": "Free",
+      "blurb": "The old part of Bophut, with wooden shophouses and a Friday night walking street market.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Na Muang waterfalls",
+      "tag": "Free",
+      "blurb": "Two jungle waterfalls with a natural pool for swimming at the foot of the first.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Thai massage and spas",
+      "tag": "Ticketed",
+      "blurb": "From beach massages to luxury hilltop spas, Samui has some of Thailand's best.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Koh Tao and Koh Phangan",
+      "tag": "Day trip",
+      "blurb": "Fast ferries reach the smaller islands for snorkelling and quieter beaches.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Koh Samui good for a family holiday?",
+      "answer": "Yes. Beaches like Bophut, Choeng Mon and Lamai have calm water much of the year, many resorts have kids' clubs and family villas, and there are elephant sanctuaries and waterfalls to visit."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week to relax, two weeks to explore the other islands as well. Many people pair a week on Samui with a few nights in Bangkok."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Samui International Airport, a small open-air airport with flights from Bangkok, Phuket and Singapore, usually by Bangkok Airways. A cheaper route is to fly to Surat Thani, then take a coach and ferry, about four hours in all."
+    },
+    {
+      "question": "Which beach should you stay on?",
+      "answer": "Chaweng is the busiest, with the most bars and shops. Bophut and Choeng Mon are calmer and better for families. Lamai is somewhere in between."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Phuket",
+      "code": "HKT",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Koh Lanta",
+      "code": "KBV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Bangkok",
+      "code": "BKK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Langkawi",
+      "code": "LGK",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-19T22:48:56Z",
+  "updated": "2026-10-19T22:48:56Z"
+}

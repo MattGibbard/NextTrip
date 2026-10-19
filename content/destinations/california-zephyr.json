@@ -1,0 +1,193 @@
+{
+  "name": "California Zephyr",
+  "published": true,
+  "country": "US",
+  "title": "The California Zephyr",
+  "intro": "Amtrak's long-distance train from Chicago to San Francisco Bay crosses the prairies, the Rocky Mountains, Utah's desert canyons and the Sierra Nevada in two nights. Here's what the California Zephyr is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/california-zephyr-980887_1280.webp",
+  "image_alt": "The red neon Union Station sign on the grand old station building in Denver, where the California Zephyr stops",
+  "wikipedia": "https://en.wikipedia.org/wiki/California_Zephyr",
+  "to_code": "ORD",
+  "holiday_types": [
+    "rail",
+    "nature",
+    "adventure"
+  ],
+  "nights": "2 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders need an ESTA before they fly. Book a roomette or bedroom early, as they sell out in summer, and prices rise as the train fills. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Snowy mountains",
+      "temp": -1
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Snowy mountains",
+      "temp": 2
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Snow in the Rockies",
+      "temp": 9
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 15
+    },
+    "may": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer, busy",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer, busy",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 24
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 17
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 8
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Snowy",
+      "temp": 1
+    }
+  },
+  "when_to_go": "The Zephyr runs every day of the year. Summer has the most daylight for the mountain and canyon sections, while late September brings golden aspens in the Rockies. Winter is beautiful, with snow in the Rockies and the Sierra Nevada, but storms can cause long delays. Temperatures shown are for Chicago, and range from snow in the mountains to desert heat in Utah.",
+  "things": [
+    {
+      "name": "Sightseer lounge car",
+      "tag": "Free",
+      "blurb": "Big windows that curve into the roof, for watching the scenery from a comfy seat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Glenwood and Gore canyons",
+      "tag": "Free",
+      "blurb": "The train follows the Colorado River through deep red-rock canyons only reachable by rail or raft.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Moffat Tunnel and the Rockies",
+      "tag": "Free",
+      "blurb": "Climb out of Denver into the mountains and through a 10 km tunnel under the Continental Divide.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Donner Pass",
+      "tag": "Free",
+      "blurb": "The train crosses the snowy Sierra Nevada on its last day, with views down to Donner Lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Denver",
+      "tag": "Day trip",
+      "blurb": "Break the journey in Denver for a few days, with Rocky Mountain National Park a short drive away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "San Francisco",
+      "tag": "Free",
+      "blurb": "The train ends in Emeryville, where a connecting bus crosses the Bay Bridge into San Francisco.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the California Zephyr good for a family holiday?",
+      "answer": "Yes for children who love trains. Family bedrooms on the Superliner double-deck cars sleep two adults and two children, and the scenery keeps people glued to the windows."
+    },
+    {
+      "question": "How long is the train ride?",
+      "answer": "About 51 hours, leaving Chicago in the afternoon and reaching the San Francisco Bay area two days later. Many people stop off in Denver or Salt Lake City."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Chicago O'Hare International Airport, then take the CTA Blue Line train to downtown, about 45 minutes, for Chicago Union Station. Fly home from San Francisco International Airport."
+    },
+    {
+      "question": "Should you book a sleeper?",
+      "answer": "Over two nights, yes if you can. Roomettes and bedrooms include meals in the dining car and showers. Coach seats are much cheaper and recline well, but sleep is harder."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Route 66",
+      "code": "ORD",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "San Francisco",
+      "code": "SFO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Grand Canyon",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Rocky Mountaineer",
+      "code": "YVR",
+      "label": "🚆 By train"
+    }
+  ],
+  "date": "2026-10-19T22:50:53Z",
+  "updated": "2026-10-19T22:50:53Z"
+}

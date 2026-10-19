@@ -1,0 +1,193 @@
+{
+  "name": "Canary Islands cruise",
+  "published": true,
+  "country": "ES",
+  "title": "Canary Islands cruises",
+  "intro": "A week of winter sunshine hopping between Tenerife, Gran Canaria, Lanzarote, La Palma and often Madeira, with volcanoes, black-sand beaches and warm seas. Here's what a Canary Islands cruise is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/canary-islands-cruise-406441_1280.webp",
+  "image_alt": "The long golden beach of Las Teresitas near Santa Cruz de Tenerife, with a calm breakwater lagoon and dry hills behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Canary_Islands",
+  "to_code": "TFS",
+  "holiday_types": [
+    "cruise",
+    "beach",
+    "relax"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The Canary Islands are part of Spain and the Schengen area, so the new EU entry checks apply. If your cruise calls at Madeira or Morocco, check those rules too. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Warm winter sun",
+      "temp": 21
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Mild, sunny",
+      "temp": 21
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 22
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Pleasant",
+      "temp": 23
+    },
+    "may": {
+      "rating": "good",
+      "note": "Fewer sailings",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Few sailings",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Few sailings, hot",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Few sailings, hot",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Season starts",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm winter sun",
+      "temp": 24
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas sun",
+      "temp": 22
+    }
+  },
+  "when_to_go": "Most ships base themselves in the Canaries from October to April, when the islands are the warmest place in Europe, with daytime highs of 21 to 24°C and the sea still warm enough to swim. Christmas, New Year and February half term are the busiest and dearest weeks. In summer most cruise lines move to the Mediterranean, though a few ships sail all year. The islands are breezy, so pack a jumper for evenings on deck.",
+  "things": [
+    {
+      "name": "Mount Teide",
+      "tag": "Day trip",
+      "blurb": "Spain's highest mountain rises out of a moonscape of old lava flows on Tenerife. A cable car runs most of the way up, weather permitting.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Timanfaya National Park",
+      "tag": "Ticketed",
+      "blurb": "On Lanzarote, a coach tour winds through fields of fire mountains, and guides pour water into the ground to make steam geysers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Las Palmas old town",
+      "tag": "Free",
+      "blurb": "Vegueta in Gran Canaria's capital has cobbled streets, a cathedral and the house where Columbus is said to have stayed.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Santa Cruz de La Palma",
+      "tag": "Free",
+      "blurb": "A pretty port town with wooden balconies, plus a replica of Columbus's ship in the main square.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Beach day",
+      "tag": "Free",
+      "blurb": "Las Teresitas near Santa Cruz de Tenerife and Las Canteras in Las Palmas are both an easy taxi ride from the ship.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Funchal, Madeira",
+      "tag": "Day trip",
+      "blurb": "Many routes call at Madeira, for the cable car to Monte and a toboggan ride back down in a wicker sledge.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a Canary Islands cruise good for a family holiday?",
+      "answer": "Yes. Sailing times between islands are short, the ports are walkable and there are beaches near most of them. Winter weather is mild rather than hot, which suits younger children."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "Most are seven nights, calling at four or five islands, sometimes with Madeira. Longer trips sail from northern Europe and spend the first and last few days at sea."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Tenerife South, then transfer to the port at Santa Cruz, about 45 minutes away. Many cruises start in Las Palmas on Gran Canaria instead, a short drive from Gran Canaria Airport. Both airports have direct flights from across Europe."
+    },
+    {
+      "question": "Which islands are best?",
+      "answer": "Tenerife and Lanzarote have the most dramatic volcanic scenery, Gran Canaria has the liveliest city, and La Palma is the greenest and quietest. A route with Madeira adds lush gardens and cliff-top views."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tenerife",
+      "code": "TFS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lanzarote",
+      "code": "ACE",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Caribbean cruises",
+      "code": "BGI",
+      "label": "🛳️ Cruise"
+    }
+  ],
+  "date": "2026-10-19T22:46:39Z",
+  "updated": "2026-10-19T22:46:39Z"
+}

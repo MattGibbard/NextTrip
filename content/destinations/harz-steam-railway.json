@@ -1,0 +1,193 @@
+{
+  "name": "Harz steam railway",
+  "published": true,
+  "country": "DE",
+  "title": "The Harz steam railway",
+  "intro": "Narrow-gauge steam trains puff up through the forests of Germany's Harz mountains to the summit of the Brocken, from half-timbered towns full of fairy-tale castles and witches' legends. Here's what the Harz steam railway is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/harz-steam-railway-2355021_1280.webp",
+  "image_alt": "A Harz narrow-gauge steam train climbing through snowy forest towards the Brocken, with clouds of smoke above",
+  "wikipedia": "https://en.wikipedia.org/wiki/Harz_Narrow_Gauge_Railways",
+  "to_code": "HAJ",
+  "holiday_types": [
+    "rail",
+    "nature",
+    "culture"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Germany is in the Schengen area, so the new EU entry checks apply. The Brocken line is the only part of the railway where you need to book in busy times. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Snowy summit",
+      "temp": 1
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Snowy summit",
+      "temp": 2
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Snow on top",
+      "temp": 6
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 12
+    },
+    "may": {
+      "rating": "best",
+      "note": "Witches' night",
+      "temp": 17
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, long days",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Summer, busy",
+      "temp": 22
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Summer, busy",
+      "temp": 22
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 18
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 13
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Misty",
+      "temp": 7
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas markets",
+      "temp": 3
+    }
+  },
+  "when_to_go": "The trains run every day of the year. Winter is the most magical, with snow on the Brocken from about November to April, though the summit is often foggy and windy, and very cold. In December, Wernigerode and Quedlinburg hold Christmas markets. Late April brings Walpurgis Night, when the Harz towns dress up for the witches' festival. Summer and autumn are best for walking, and autumn colour peaks in October.",
+  "things": [
+    {
+      "name": "Brocken railway",
+      "tag": "Ticketed",
+      "blurb": "From Wernigerode, the steam train takes about 100 minutes to climb to the 1,141-metre summit of the Brocken.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wernigerode",
+      "tag": "Free",
+      "blurb": "A colourful half-timbered town with a fairy-tale castle on the hill above, linked by a little road train.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Quedlinburg",
+      "tag": "Free",
+      "blurb": "A UNESCO-listed old town with more than 2,000 half-timbered houses and a castle hill.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Selke Valley line",
+      "tag": "Ticketed",
+      "blurb": "A quieter branch line through woods and meadows to Alexisbad and Gernrode.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Brocken summit",
+      "tag": "Free",
+      "blurb": "Walk the circular path at the top, home to the legends of witches gathering on Walpurgis Night.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bode Gorge",
+      "tag": "Free",
+      "blurb": "A dramatic rocky gorge near Thale, with cable cars and a chairlift up to the Hexentanzplatz viewpoint.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Harz steam railway good for a family holiday?",
+      "answer": "Yes. The steam trains, castles, witches' legends and forest walks suit all ages, and it's good value for Germany. Children can often watch the driver and fireman at work during stops."
+    },
+    {
+      "question": "How long is the train ride?",
+      "answer": "Wernigerode to the Brocken takes about 100 minutes each way. The whole network covers 140 km, and a three-day pass lets you ride all of it."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Hannover Airport, then drive or take the train to Wernigerode, about two hours. Berlin's airport is about three hours away by road or rail."
+    },
+    {
+      "question": "Can you walk up the Brocken instead?",
+      "answer": "Yes. Many people ride up and walk down through the forest to Schierke, about 2 to 3 hours. Wrap up, as it's much colder at the top than in town."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Saxon Switzerland",
+      "code": "DRS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Dresden",
+      "code": "DRS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Romantic Road",
+      "code": "FRA",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Bernina Express",
+      "code": "ZRH",
+      "label": "🚆 By train"
+    }
+  ],
+  "date": "2026-10-19T22:50:53Z",
+  "updated": "2026-10-19T22:50:53Z"
+}

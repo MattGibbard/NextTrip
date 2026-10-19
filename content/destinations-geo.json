@@ -54,10 +54,20 @@
     "lat": 36.8866,
     "lon": 30.703
   },
+  "antarctica-cruise": {
+    "query": "Antarctica cruise|AQ",
+    "lat": -54.8019,
+    "lon": -68.303
+  },
   "antigua": {
     "query": "Antigua|AG",
     "lat": 17.0747,
     "lon": -61.8175
+  },
+  "arabian-gulf-cruise": {
+    "query": "Arabian Gulf cruise|AE",
+    "lat": 25.2048,
+    "lon": 55.2708
   },
   "asheville": {
     "query": "Asheville|US",
@@ -89,6 +99,11 @@
     "lat": 18.6807,
     "lon": -88.3922
   },
+  "baden-baden": {
+    "query": "Baden-Baden|DE",
+    "lat": 48.7606,
+    "lon": 8.2398
+  },
   "bali": {
     "query": "Bali|ID",
     "lat": -8.3405,
@@ -118,6 +133,21 @@
     "query": "Barcelona|ES",
     "lat": 41.3829,
     "lon": 2.1774
+  },
+  "belgrade-bar-railway": {
+    "query": "Belgrade to Bar railway|RS",
+    "lat": 42.59,
+    "lon": 19.35
+  },
+  "beppu": {
+    "query": "Beppu|JP",
+    "lat": 33.2846,
+    "lon": 131.4914
+  },
+  "bergen-railway": {
+    "query": "Bergen Railway|NO",
+    "lat": 60.602,
+    "lon": 7.504
   },
   "bergen": {
     "query": "Bergen|NO",
@@ -168,6 +198,21 @@
     "query": "Busan|KR",
     "lat": 35.18,
     "lon": 129.0752
+  },
+  "cabot-trail": {
+    "query": "Cabot Trail|CA",
+    "lat": 46.7,
+    "lon": -60.65
+  },
+  "california-zephyr": {
+    "query": "California Zephyr|US",
+    "lat": 39.5505,
+    "lon": -107.3248
+  },
+  "canary-islands-cruise": {
+    "query": "Canary Islands cruise|ES",
+    "lat": 28.4636,
+    "lon": -16.2518
   },
   "cancun": {
     "query": "Cancún|MX",
@@ -259,6 +304,11 @@
     "lat": 43.5081,
     "lon": 16.4402
   },
+  "danube-river-cruise": {
+    "query": "Danube river cruise|HU",
+    "lat": 47.4979,
+    "lon": 19.0402
+  },
   "darjeeling": {
     "query": "Darjeeling|IN",
     "lat": 27.0378,
@@ -318,6 +368,11 @@
     "query": "Florence|IT",
     "lat": 43.7698,
     "lon": 11.2556
+  },
+  "florida-keys": {
+    "query": "Florida Keys|US",
+    "lat": 24.7136,
+    "lon": -81.0904
   },
   "fuerteventura": {
     "query": "Fuerteventura|ES",
@@ -409,10 +464,30 @@
     "lat": 47.5622,
     "lon": 13.6493
   },
+  "harz-steam-railway": {
+    "query": "Harz steam railway|DE",
+    "lat": 51.8352,
+    "lon": 10.7853
+  },
+  "hawaii-cruise": {
+    "query": "Hawaii cruise|US",
+    "lat": 21.3069,
+    "lon": -157.8583
+  },
+  "heviz": {
+    "query": "Hévíz|HU",
+    "lat": 46.7903,
+    "lon": 17.1844
+  },
   "hoi-an": {
     "query": "Hoi An|VN",
     "lat": 15.8801,
     "lon": 108.338
+  },
+  "hurtigruten": {
+    "query": "Hurtigruten coastal voyage|NO",
+    "lat": 60.3913,
+    "lon": 5.3221
   },
   "ibiza": {
     "query": "Ibiza|ES",
@@ -439,6 +514,11 @@
     "lat": 45.25,
     "lon": 13.9
   },
+  "japan-bullet-train": {
+    "query": "Japan by bullet train|JP",
+    "lat": 35.6812,
+    "lon": 139.7671
+  },
   "jordan": {
     "query": "Jordan|JO",
     "lat": 31.95,
@@ -448,6 +528,16 @@
     "query": "Kanazawa|JP",
     "lat": 36.5613,
     "lon": 136.6562
+  },
+  "kandy-to-ella-train": {
+    "query": "Kandy to Ella train|LK",
+    "lat": 7.2906,
+    "lon": 80.6337
+  },
+  "karlovy-vary": {
+    "query": "Karlovy Vary|CZ",
+    "lat": 50.2319,
+    "lon": 12.872
   },
   "kas": {
     "query": "Kaş|TR",
@@ -473,6 +563,11 @@
     "query": "Koh Lanta|TH",
     "lat": 7.5833,
     "lon": 99.05
+  },
+  "koh-samui": {
+    "query": "Koh Samui|TH",
+    "lat": 9.512,
+    "lon": 100.0136
   },
   "kotor": {
     "query": "Kotor|ME",
@@ -609,6 +704,11 @@
     "lat": -20.2759,
     "lon": 57.5704
   },
+  "mekong-river-cruise": {
+    "query": "Mekong river cruise|VN",
+    "lat": 10.36,
+    "lon": 106.36
+  },
   "menorca": {
     "query": "Menorca|ES",
     "lat": 39.9496,
@@ -643,6 +743,11 @@
     "query": "Montreal|CA",
     "lat": 45.5031,
     "lon": -73.5698
+  },
+  "morocco-desert-road-trip": {
+    "query": "Morocco desert road trip|MA",
+    "lat": 30.9189,
+    "lon": -6.8934
   },
   "namibia": {
     "query": "Namibia|NA",
@@ -724,6 +829,16 @@
     "lat": 36.2704,
     "lon": -121.8081
   },
+  "palm-springs": {
+    "query": "Palm Springs|US",
+    "lat": 33.8303,
+    "lon": -116.5453
+  },
+  "pamukkale": {
+    "query": "Pamukkale|TR",
+    "lat": 37.9204,
+    "lon": 29.1206
+  },
   "paphos": {
     "query": "Paphos|CY",
     "lat": 34.7754,
@@ -789,6 +904,11 @@
     "lat": -45.0322,
     "lon": 168.6625
   },
+  "rajasthan": {
+    "query": "Rajasthan|IN",
+    "lat": 26.2389,
+    "lon": 73.0243
+  },
   "reykjavik": {
     "query": "Reykjavik|IS",
     "lat": 64.1466,
@@ -833,6 +953,11 @@
     "query": "Ronda|ES",
     "lat": 36.7423,
     "lon": -5.1671
+  },
+  "rotorua": {
+    "query": "Rotorua|NZ",
+    "lat": -38.1368,
+    "lon": 176.2497
   },
   "route-66": {
     "query": "Route 66|US",
@@ -904,6 +1029,11 @@
     "lat": -4.6796,
     "lon": 55.492
   },
+  "sicily-road-trip": {
+    "query": "Sicily|IT",
+    "lat": 37.567,
+    "lon": 14.2795
+  },
   "singapore": {
     "query": "Singapore|SG",
     "lat": 1.2899,
@@ -969,6 +1099,11 @@
     "lat": 28.2936,
     "lon": -16.6214
   },
+  "the-canadian": {
+    "query": "The Canadian|CA",
+    "lat": 52.8737,
+    "lon": -118.0814
+  },
   "tobago": {
     "query": "Tobago|TT",
     "lat": 11.2405,
@@ -998,6 +1133,11 @@
     "query": "Tromsø|NO",
     "lat": 69.6496,
     "lon": 18.956
+  },
+  "utah-national-parks": {
+    "query": "Utah's national parks|US",
+    "lat": 37.593,
+    "lon": -112.1871
   },
   "val-thorens": {
     "query": "Val Thorens|FR",
@@ -1034,10 +1174,20 @@
     "lat": 38.8951,
     "lon": -77.0364
   },
+  "western-mediterranean-cruise": {
+    "query": "Western Mediterranean cruise|ES",
+    "lat": 41.3851,
+    "lon": 2.1734
+  },
   "whistler": {
     "query": "Whistler|CA",
     "lat": 50.1163,
     "lon": -122.9574
+  },
+  "wild-atlantic-way": {
+    "query": "Wild Atlantic Way|IE",
+    "lat": 52.9715,
+    "lon": -9.4309
   },
   "yellowstone": {
     "query": "Yellowstone|US",

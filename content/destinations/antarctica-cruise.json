@@ -1,0 +1,193 @@
+{
+  "name": "Antarctica cruise",
+  "published": true,
+  "country": "AQ",
+  "title": "Antarctica cruises",
+  "intro": "An expedition voyage from the tip of South America across the Drake Passage to the Antarctic Peninsula, for icebergs, glaciers, whales and penguins by the thousand. Here's what an Antarctica cruise is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/antarctica-cruise-337591_1280.webp",
+  "image_alt": "A small expedition ship anchored offshore behind a crowded colony of king penguins on a grassy sub-Antarctic beach",
+  "wikipedia": "https://en.wikipedia.org/wiki/Antarctic_Peninsula",
+  "to_code": "USH",
+  "holiday_types": [
+    "cruise",
+    "nature",
+    "adventure"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3 hrs behind the UK (Ushuaia)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Argentine peso, US$ on board",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / I · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Ships leave from Ushuaia in Argentina, and some fly over the Drake Passage from Punta Arenas in Chile. You need no visa for either as a UK passport holder, but you do need good travel insurance with medical evacuation cover. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Penguin chicks, long days",
+      "temp": 8
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Whales, chicks",
+      "temp": 8
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Whales, season ends",
+      "temp": 5
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 2
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 0
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": -2
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": -3
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": -3
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": -2
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "No sailings",
+      "temp": 0
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Season starts, snowy",
+      "temp": 3
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Penguins nesting",
+      "temp": 6
+    }
+  },
+  "when_to_go": "The season runs from about November to March, the Antarctic summer, with temperatures around freezing and up to 20 hours of daylight. November brings untouched snow and penguins courting, December and January bring the longest days and penguin chicks, and February and March are best for whales. Temperatures on the Peninsula hover around 0 to 8°C. Over the rest of the year the sea ice closes in and no ships sail.",
+  "things": [
+    {
+      "name": "Zodiac landings",
+      "tag": "Outdoors",
+      "blurb": "Small rubber boats take you ashore to walk among gentoo, chinstrap and Adélie penguins, usually twice a day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Iceberg cruising",
+      "tag": "Outdoors",
+      "blurb": "Zodiac trips weave between blue icebergs and ice floes where seals haul out to sleep.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lemaire Channel",
+      "tag": "Free",
+      "blurb": "A narrow passage between sheer, snowy cliffs, one of the most photographed places on the Peninsula.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Free",
+      "blurb": "Humpback and minke whales feed in the bays, often right next to the ship.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Polar plunge",
+      "tag": "Free",
+      "blurb": "Most ships offer a brave swim in water just above freezing, with a certificate and a hot drink afterwards.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ushuaia",
+      "tag": "Day trip",
+      "blurb": "Before you sail, see Tierra del Fuego National Park and the Beagle Channel from the world's southernmost city.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is an Antarctica cruise good for a family holiday?",
+      "answer": "For older children and teenagers with a real love of wildlife, it can be the trip of a lifetime. Some lines have minimum ages, often around eight, and the Drake Passage crossing can be rough for two days each way."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "The classic trip from Ushuaia to the Antarctic Peninsula takes 10 to 12 nights. Voyages that add the Falklands and South Georgia, with its huge king penguin colonies, take about three weeks."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Buenos Aires, then take a domestic flight of about three and a half hours to Ushuaia, where the ships leave from the town pier. Many lines include the Buenos Aires to Ushuaia flight in the price."
+    },
+    {
+      "question": "How rough is the Drake Passage?",
+      "answer": "It is one of the roughest seas in the world, and the crossing takes about two days each way. Bring seasickness tablets, or choose a fly-cruise from Punta Arenas that skips it."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Torres del Paine",
+      "code": "PUQ",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Galápagos Islands",
+      "code": "GPS",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Alaska's Inside Passage",
+      "code": "JNU",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Iceland's Ring Road",
+      "code": "KEF",
+      "label": "🚗 Road trip"
+    }
+  ],
+  "date": "2026-10-19T22:46:39Z",
+  "updated": "2026-10-19T22:46:39Z"
+}

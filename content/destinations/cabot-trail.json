@@ -1,0 +1,193 @@
+{
+  "name": "Cabot Trail",
+  "published": true,
+  "country": "CA",
+  "title": "Cabot Trail road trips",
+  "intro": "A 300 km loop round the northern tip of Nova Scotia's Cape Breton Island, past ocean cliffs, highland forests, whale-watching harbours and Celtic and Acadian villages. Here's what the Cabot Trail is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/cabot-trail-7521521_1280.webp",
+  "image_alt": "The Cabot Trail curving over green clifftops above the sea on Cape Breton Island at sunset",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cabot_Trail",
+  "to_code": "YHZ",
+  "holiday_types": [
+    "road-trip",
+    "nature",
+    "culture"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders need an eTA before they fly to Canada. Drive on the right. You need a pass for the Cape Breton Highlands National Park section, bought online or at the park gates. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy, closed",
+      "temp": -2
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy, closed",
+      "temp": -2
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 2
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 8
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring, quiet",
+      "temp": 15
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer, whales",
+      "temp": 24
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer, whales",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 13
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold, closing",
+      "temp": 7
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 2
+    }
+  },
+  "when_to_go": "July to mid October is the season. Summer is warm, around 24°C, and best for whale watching and swimming, though the sea is cold. Late September and the first half of October bring blazing autumn colour, and the Celtic Colours music festival, the busiest time of all. From November to May many places close, and snow can make the highland roads tricky.",
+  "things": [
+    {
+      "name": "Skyline Trail",
+      "tag": "Free",
+      "blurb": "An easy walk to a clifftop boardwalk high above the sea, famous at sunset. Moose are often seen.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Tour",
+      "blurb": "Boats from Pleasant Bay, Chéticamp and Ingonish look for pilot, minke and humpback whales.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chéticamp",
+      "tag": "Free",
+      "blurb": "An Acadian fishing village with French spoken, hooked rugs and a lively harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ingonish Beach",
+      "tag": "Free",
+      "blurb": "A sandy beach with a freshwater lake right behind it, for swimming if the sea's too cold.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Baddeck",
+      "tag": "Ticketed",
+      "blurb": "A pretty lakeside town and the Alexander Graham Bell museum, where he spent his summers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Celtic music",
+      "tag": "Free",
+      "blurb": "Céilidhs and fiddle music in village halls and pubs, especially around Inverness and Mabou.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Cabot Trail good for a family holiday?",
+      "answer": "Yes. Short trails, whale-watching trips, beaches and moose spotting keep children busy, and the loop splits into easy drives of a few hours a day."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "The loop takes about five hours without stops, but give it three or four nights. Add Halifax, Lunenburg and Peggy's Cove for a week in Nova Scotia."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Halifax Stanfield International Airport, then drive about four and a half hours to Baddeck, the usual start. There are direct flights to Halifax from London in summer."
+    },
+    {
+      "question": "Which way round should you drive?",
+      "answer": "Clockwise puts you on the inside lane on the cliff sections, which nervous drivers may prefer. Anticlockwise gives passengers the sea views. Both work well."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Halifax",
+      "code": "YHZ",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Acadia National Park",
+      "code": "BHB",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Quebec City",
+      "code": "YQB",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Wild Atlantic Way",
+      "code": "SNN",
+      "label": "🚗 Road trip"
+    }
+  ],
+  "date": "2026-10-19T22:52:57Z",
+  "updated": "2026-10-19T22:52:57Z"
+}

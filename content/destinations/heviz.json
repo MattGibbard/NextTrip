@@ -1,0 +1,192 @@
+{
+  "name": "Hévíz",
+  "published": true,
+  "country": "HU",
+  "title": "Holidays in Hévíz",
+  "intro": "A small Hungarian spa town built around Europe's largest swimmable thermal lake, warm enough to bathe in even when there's snow on the shore. Here's what Hévíz is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/heviz-1601660_1280.webp",
+  "image_alt": "Lake Hévíz in Hungary, with its thermal waters, a wooden pier and the spa pavilion standing out over the lake",
+  "wikipedia": "https://en.wikipedia.org/wiki/H%C3%A9v%C3%ADz",
+  "to_code": "BUD",
+  "holiday_types": [
+    "relax",
+    "nature"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Hungarian forint (Ft)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Hungary is in the Schengen area, so the new EU entry checks apply. Some places take euros, but you'll get a better deal paying in forints. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Lake still 24°C",
+      "temp": 2
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Lake still 24°C",
+      "temp": 5
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Quiet, mild",
+      "temp": 11
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 17
+    },
+    "may": {
+      "rating": "best",
+      "note": "Lilies, warm",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, calm",
+      "temp": 22
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 16
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Quiet, misty",
+      "temp": 9
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas fair",
+      "temp": 3
+    }
+  },
+  "when_to_go": "Hévíz works all year. The lake is fed by a hot spring, so the water stays around 23 to 26°C in winter and reaches 33 to 35°C in summer, and steaming water under a frosty sky is a winter highlight. Spring and early autumn are mild and calm, and the pink water lilies flower from late spring through summer. July and August are the busiest months, when nearby Lake Balaton fills up with holidaymakers.",
+  "things": [
+    {
+      "name": "Lake Hévíz",
+      "tag": "Ticketed",
+      "blurb": "Swim or float in the warm lake from the pavilion on stilts. Rubber rings are handy, as the lake is deep and there's no bottom to stand on.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spa hotels",
+      "tag": "Ticketed",
+      "blurb": "Most hotels have their own thermal pools, saunas and treatments, often included with the room.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Festetics Palace",
+      "tag": "Ticketed",
+      "blurb": "A grand baroque palace in nearby Keszthely, with a carriage museum and gardens.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake Balaton",
+      "tag": "Free",
+      "blurb": "Central Europe's largest lake is a short drive away, with beaches, ferries and cycle paths.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wine cellars",
+      "tag": "Tour",
+      "blurb": "Wine villages on the hills north of Balaton, such as Badacsony, sit on old volcanoes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Egregy",
+      "tag": "Free",
+      "blurb": "A hillside village above town with small wine bars and a Romanesque church.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Hévíz good for a family holiday?",
+      "answer": "It suits a relaxing break more than an action-packed one. Children enjoy floating in the warm lake, and Lake Balaton's beaches and the Keszthely palace are close by. Spa hotels often have family pools."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three to five nights is ideal for a relaxing spa break, or combine it with a few nights in Budapest for a week."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Budapest Ferenc Liszt International Airport, then drive or take a transfer of about two and a half hours. The small Hévíz-Balaton Airport, about 10 km away, has a few seasonal flights from Europe."
+    },
+    {
+      "question": "Is the lake good for you?",
+      "answer": "Many people visit Hévíz for the water's minerals and its gentle warmth, which can ease aching joints. Doctors advise bathing for no more than about 90 minutes at a time."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Budapest",
+      "code": "BUD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Karlovy Vary",
+      "code": "PRG",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Baden-Baden",
+      "code": "FKB",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Lake Bled",
+      "code": "LJU",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-19T22:48:56Z",
+  "updated": "2026-10-19T22:48:56Z"
+}

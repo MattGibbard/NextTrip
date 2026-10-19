@@ -1,0 +1,193 @@
+{
+  "name": "Western Mediterranean cruise",
+  "published": true,
+  "country": "ES",
+  "title": "Western Mediterranean cruises from Barcelona",
+  "intro": "A week from Barcelona round the western Mediterranean, with stops such as Marseille, Genoa, Rome, Naples and Palma in a single trip. Here's what a Western Mediterranean cruise is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/western-mediterranean-cruise-115420_1280.webp",
+  "image_alt": "A huge white cruise ship docked at the port of Barcelona, with cars parked on the quay below",
+  "wikipedia": "https://en.wikipedia.org/wiki/Western_Mediterranean",
+  "to_code": "BCN",
+  "holiday_types": [
+    "cruise",
+    "city",
+    "culture"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Spain, France and Italy are all in the Schengen area, so the new EU entry checks apply. Your cruise line will tell you which ID to carry ashore. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Few sailings, mild",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Few sailings, mild",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Season starts",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild, fewer crowds",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busiest",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cooler, last sailings",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Few sailings",
+      "temp": 14
+    }
+  },
+  "when_to_go": "The main season runs from April to November. May, June, September and October are the sweet spot, warm enough for the beach but not too hot for sightseeing in Rome or Florence. July and August are hot and crowded at every port, and prices peak in the school holidays. A few ships sail all winter, with cheaper fares and quieter cities, but cooler, changeable weather.",
+  "things": [
+    {
+      "name": "Sagrada Família",
+      "tag": "Ticketed",
+      "blurb": "Before or after the cruise, Gaudí's extraordinary basilica in Barcelona. Book timed tickets well ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rome from Civitavecchia",
+      "tag": "Day trip",
+      "blurb": "The port for Rome is about 90 minutes away. The Colosseum and Trevi Fountain fit into a long day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Naples and Pompeii",
+      "tag": "Day trip",
+      "blurb": "Walk the streets of the Roman town buried by Vesuvius, then have pizza in Naples, where it was invented.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Palma, Mallorca",
+      "tag": "Free",
+      "blurb": "A walkable old town around the Gothic cathedral, with beaches a short bus ride away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Florence or Pisa",
+      "tag": "Day trip",
+      "blurb": "From La Spezia or Livorno, take a trip to the Leaning Tower or the art and Duomo of Florence.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Marseille old port",
+      "tag": "Free",
+      "blurb": "Boats, fish markets and bouillabaisse, with the hilltop basilica of Notre-Dame de la Garde above.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a Western Mediterranean cruise good for a family holiday?",
+      "answer": "Very. Big family-friendly ships sail this route, with kids' clubs, water slides and family cabins, and nearly every port has a beach or famous sight within reach."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "Seven nights is typical, with five or six ports and one sea day. Ten and twelve-night trips add places like Malta, Sicily or the French Riviera."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Barcelona El Prat Airport. The cruise terminals are about 20 minutes away by taxi or shuttle bus. Some routes also start in Rome (Civitavecchia), Genoa or Marseille."
+    },
+    {
+      "question": "Should you do your own tours ashore?",
+      "answer": "In many ports you can. Barcelona, Palma and Marseille are easy on foot, but Rome, Florence and Pompeii are far from the ship, so a ship's tour means it won't leave without you."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Barcelona",
+      "code": "BCN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Mallorca",
+      "code": "PMI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Rome",
+      "code": "FCO",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Greek islands",
+      "code": "ATH",
+      "label": "🛳️ Cruise"
+    }
+  ],
+  "date": "2026-10-19T22:46:39Z",
+  "updated": "2026-10-19T22:46:39Z"
+}

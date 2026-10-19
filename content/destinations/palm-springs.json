@@ -1,0 +1,192 @@
+{
+  "name": "Palm Springs",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Palm Springs",
+  "intro": "A sunny desert resort in southern California, with palm-lined streets, mid-century houses, pool hotels and mountains rising straight out of the valley. Here's what Palm Springs is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/palm-springs-1587288_1280.webp",
+  "image_alt": "Palm trees lining a straight street in Palm Springs, with the bare San Jacinto mountains behind under a deep blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Palm_Springs,_California",
+  "to_code": "PSP",
+  "holiday_types": [
+    "relax",
+    "nature"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders need an ESTA before they fly. Hotels add resort fees and taxes on top of room prices, so check the total. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Sunny, warm",
+      "temp": 21
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Sunny, warm",
+      "temp": 23
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, wildflowers",
+      "temp": 27
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm, festivals",
+      "temp": 31
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 35
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 40
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 42
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 41
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 38
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 32
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Sunny, warm",
+      "temp": 25
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Sunny, mild",
+      "temp": 20
+    }
+  },
+  "when_to_go": "Palm Springs is a winter sun destination. From November to April it's sunny and around 20 to 27°C by day, ideal for pools, hiking and golf, though desert nights are cool. Spring brings wildflowers but also big festivals nearby in April. From June to September daytime highs are often over 40°C, so hotels are cheaper but it's too hot to do much outside.",
+  "things": [
+    {
+      "name": "Palm Springs Aerial Tramway",
+      "tag": "Ticketed",
+      "blurb": "A rotating cable car climbs to Mount San Jacinto, often 15 to 20 degrees cooler, with snow at the top in winter.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Joshua Tree National Park",
+      "tag": "Day trip",
+      "blurb": "Spiky Joshua trees and giant boulders to scramble on, about an hour's drive away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Indian Canyons",
+      "tag": "Ticketed",
+      "blurb": "Palm oases and streams in canyons on Agua Caliente land, with easy walks for families.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mid-century modern houses",
+      "tag": "Free",
+      "blurb": "Drive or cycle past the town's famous 1950s and 1960s homes, or take a guided tour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spa resorts",
+      "tag": "Ticketed",
+      "blurb": "Day passes at hotel pools and spas, some fed by natural hot mineral water in nearby Desert Hot Springs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Palm Springs Air Museum",
+      "tag": "Ticketed",
+      "blurb": "A big collection of old military planes, a good stop for a hot afternoon.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Palm Springs good for a family holiday?",
+      "answer": "Yes in winter and spring. Families can split their time between pool days, the tramway, easy canyon walks and Joshua Tree. Some hotels are adults-only, so check before you book."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights is enough for the town and Joshua Tree. It also makes a relaxing end to a southern California road trip from Los Angeles or San Diego."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Palm Springs International Airport, a small airport just a few minutes from downtown, with flights from US and Canadian cities. Or fly into Los Angeles and drive about two to three hours."
+    },
+    {
+      "question": "Do you need a car?",
+      "answer": "It helps. Downtown is walkable and there's a free shuttle bus, but you'll need a car for Joshua Tree, the canyons and nearby desert towns."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Los Angeles",
+      "code": "LAX",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Grand Canyon",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "San Diego",
+      "code": "SAN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Utah's national parks",
+      "code": "LAS",
+      "label": "🚗 Road trip"
+    }
+  ],
+  "date": "2026-10-19T22:48:56Z",
+  "updated": "2026-10-19T22:48:56Z"
+}

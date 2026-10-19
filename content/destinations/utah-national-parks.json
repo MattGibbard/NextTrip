@@ -1,0 +1,193 @@
+{
+  "name": "Utah's national parks",
+  "published": true,
+  "country": "US",
+  "title": "Utah's national parks road trips",
+  "intro": "A loop from Las Vegas through Utah's Mighty Five, from the canyons of Zion and the orange spires of Bryce to the stone arches near Moab, with some of America's wildest desert roads in between. Here's what Utah's national parks are like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/utah-national-parks-4625_1280.webp",
+  "image_alt": "Delicate Arch in Arches National Park, Utah, glowing orange in low sunlight with snowy mountains far behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States",
+  "to_code": "LAS",
+  "holiday_types": [
+    "road-trip",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7 to 14",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Drive on the right. A UK photocard licence is fine for car hire. An annual America the Beautiful pass covers entry to all five parks and usually works out cheaper than paying at each one. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, snowy Bryce",
+      "temp": 6
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 11
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring, cool",
+      "temp": 18
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 22
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 34
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot, storms",
+      "temp": 37
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot, storms",
+      "temp": 35
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 30
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool, quiet",
+      "temp": 13
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold, snowy Bryce",
+      "temp": 6
+    }
+  },
+  "when_to_go": "April, May, September and October are the best months, warm enough for hiking but not too hot in the desert. Summer is very hot, often over 35°C around Moab and in Zion, with afternoon thunderstorms that can cause flash floods in the canyons. Winter is cold and quiet, and snow on Bryce's red hoodoos is beautiful, but some roads and trails close. Temperatures shown are for Moab.",
+  "things": [
+    {
+      "name": "Zion National Park",
+      "tag": "Ticketed",
+      "blurb": "A free shuttle bus runs up the canyon, for walks like the Riverside Walk or wading up the Narrows.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bryce Canyon",
+      "tag": "Ticketed",
+      "blurb": "An amphitheatre of orange stone spires called hoodoos. Walk down among them on the Navajo Loop.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Capitol Reef",
+      "tag": "Ticketed",
+      "blurb": "The quietest of the five, with orchards where you can pick fruit in season and homemade pies at the Gifford House.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Arches National Park",
+      "tag": "Ticketed",
+      "blurb": "More than 2,000 stone arches. You may need a timed entry booking in the busy months.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Canyonlands",
+      "tag": "Ticketed",
+      "blurb": "Huge views over canyons carved by the Colorado and Green rivers, from Island in the Sky.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Scenic Byway 12",
+      "tag": "Free",
+      "blurb": "One of America's great drives, between Bryce and Capitol Reef, over a narrow ridge called the Hogsback.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are Utah's national parks good for a family holiday?",
+      "answer": "Very. Junior Ranger badges, short walks to arches, scrambles on slickrock and swimming in reservoirs make it a great adventure for children. Plan around the heat, with early starts and quiet afternoons."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Ten days to two weeks for all five parks, with a couple of nights near each. With a week, focus on Zion and Bryce, or on Arches and Canyonlands from Moab."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Harry Reid International Airport in Las Vegas, then drive about two and a half hours to Zion. Salt Lake City airport is closer to Arches and Moab, so you can fly into one and out of the other."
+    },
+    {
+      "question": "Do you need to book ahead?",
+      "answer": "Yes, in spring and autumn. Hotels near the parks fill up, Arches can need a timed entry slot, and popular hikes such as Angels Landing in Zion need a permit."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Grand Canyon",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Route 66",
+      "code": "ORD",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Yellowstone",
+      "code": "BZN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Palm Springs",
+      "code": "PSP",
+      "label": "🧘 Relax & spa"
+    }
+  ],
+  "date": "2026-10-19T22:52:57Z",
+  "updated": "2026-10-19T22:52:57Z"
+}

@@ -1,0 +1,193 @@
+{
+  "name": "Mekong river cruise",
+  "published": true,
+  "country": "VN",
+  "title": "Mekong river cruises",
+  "intro": "A slow boat between Ho Chi Minh City and Cambodia's capital Phnom Penh, past floating markets, stilt villages and temples on one of the world's great rivers. Here's what a Mekong river cruise is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/mekong-river-cruise-7022171_1280.webp",
+  "image_alt": "Small wooden boats laden with fruit and vegetables at a floating market on the Mekong Delta in Vietnam",
+  "wikipedia": "https://en.wikipedia.org/wiki/Mekong_Delta",
+  "to_code": "SGN",
+  "holiday_types": [
+    "cruise",
+    "culture",
+    "food"
+  ],
+  "nights": "7 to 8",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Vietnamese dong, Cambodian riel, US$",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "E-visas for both countries",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / C · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders can visit Vietnam visa-free for short stays, but the rules change, and you need a visa for Cambodia, easily bought online or at the border. The cruise line usually handles the river crossing. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 32
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 33
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Hot, dry, lower river",
+      "temp": 34
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hottest month",
+      "temp": 35
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Rains start",
+      "temp": 34
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Wet season",
+      "temp": 33
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Wet season",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "good",
+      "note": "High water, green",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "good",
+      "note": "High water, wet",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "good",
+      "note": "High water",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Dry season starts",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 31
+    }
+  },
+  "when_to_go": "Cruises run most of the year, but the dry season from November to March is the most comfortable, with sunny days around 31 to 33°C. From August to November the river is high, the scenery is greener and some boats can sail further upstream to Siem Reap. March to May is very hot, and from May to October there are heavy afternoon downpours, though rarely all day. Tết, Vietnamese New Year in late January or February, is colourful but busy.",
+  "things": [
+    {
+      "name": "Cai Be floating market",
+      "tag": "Free",
+      "blurb": "Boats sell fruit and vegetables from the water, each hanging a sample of what's for sale from a tall pole.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sa Dec",
+      "tag": "Free",
+      "blurb": "A Mekong town with flower nurseries, an old French-era house and a lively food market.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Phnom Penh",
+      "tag": "Free",
+      "blurb": "Cambodia's capital has the gold-roofed Royal Palace, Silver Pagoda and a riverside promenade.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rice paper and coconut workshops",
+      "tag": "Tour",
+      "blurb": "Family workshops on the delta show how rice paper, coconut sweets and puffed rice are made.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tonle Sap villages",
+      "tag": "Tour",
+      "blurb": "Floating villages, schools and fish farms on stilts, visited by small boat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Angkor Wat",
+      "tag": "Day trip",
+      "blurb": "Most cruises add a few nights in Siem Reap, for the temples of Angkor at sunrise.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a Mekong cruise good for a family holiday?",
+      "answer": "Yes for curious older children who enjoy markets, boats and temples. River boats are small, with few facilities for young children, and some lines set a minimum age, so check before you book."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "Most sail seven nights between the Ho Chi Minh City area and Phnom Penh. Many people add a few days in Ho Chi Minh City at one end and Angkor Wat at the other, for about two weeks in all."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Tan Son Nhat Airport in Ho Chi Minh City, then transfer by road to the boat at My Tho, about two hours away. At the Cambodian end, fly home from Phnom Penh or Siem Reap."
+    },
+    {
+      "question": "Is it very hot?",
+      "answer": "Yes. Even in the dry season it's over 30°C. Boats are air-conditioned and excursions are timed for the morning and late afternoon, so bring sun hats and plenty of water."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Ha Long Bay",
+      "code": "HAN",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Hoi An",
+      "code": "DAD",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Ninh Binh",
+      "code": "HAN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Luang Prabang",
+      "code": "LPQ",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-19T22:46:39Z",
+  "updated": "2026-10-19T22:46:39Z"
+}

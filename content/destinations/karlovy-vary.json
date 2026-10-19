@@ -1,0 +1,192 @@
+{
+  "name": "Karlovy Vary",
+  "published": true,
+  "country": "CZ",
+  "title": "Holidays in Karlovy Vary",
+  "intro": "A grand old Czech spa town in a wooded valley, where people stroll the colonnades sipping warm mineral water from porcelain cups. Here's what Karlovy Vary is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/karlovy-vary-6471535_1280.webp",
+  "image_alt": "Grand pastel-coloured spa buildings beside the river Teplá in Karlovy Vary, under a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Karlovy_Vary",
+  "to_code": "PRG",
+  "holiday_types": [
+    "relax",
+    "culture"
+  ],
+  "nights": "2 to 4",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Czech koruna (Kč)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The Czech Republic is in the Schengen area, so the new EU entry checks apply. Prices in the spa hotels are higher than in Prague's shops, but cheaper than western Europe. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Snowy, quiet",
+      "temp": 1
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cold, quiet",
+      "temp": 3
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 8
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 13
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 18
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Film festival, busy",
+      "temp": 23
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 23
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 18
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 12
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Quiet, misty",
+      "temp": 6
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas lights",
+      "temp": 2
+    }
+  },
+  "when_to_go": "Karlovy Vary is good all year, as most of the springs and spa hotels open year-round. May, June and September are the nicest for walks in the forests above town. The international film festival in early July fills hotels and raises prices. Winter is cold, often below freezing at night, but the warm water and quiet streets make it a cosy break.",
+  "things": [
+    {
+      "name": "Mill Colonnade",
+      "tag": "Free",
+      "blurb": "A long colonnade of stone columns housing five springs, each with a different temperature and taste.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hot Spring Colonnade",
+      "tag": "Free",
+      "blurb": "Watch the Vřídlo spring shoot hot water 12 metres high inside a modern hall.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spa cups",
+      "tag": "Cheap",
+      "blurb": "Buy a porcelain cup with a spout from a stall and try the springs as you stroll.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Diana lookout tower",
+      "tag": "Ticketed",
+      "blurb": "A funicular railway climbs through the forest to a tower with views, and a small zoo with deer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Becherovka museum",
+      "tag": "Ticketed",
+      "blurb": "The story of the town's herbal liqueur, with tastings for the grown-ups.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Moser glassworks",
+      "tag": "Ticketed",
+      "blurb": "Watch glassblowers make crystal at the famous factory, then look round its museum.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Karlovy Vary good for a family holiday?",
+      "answer": "It's quieter and more suited to adults, but children enjoy the geyser, the funicular, spa wafers and the pools at Hotel Thermal and the big spa hotels."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights for the town and a few spa treatments. Many people pair it with Prague for a week."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Václav Havel Airport Prague, then take a coach or drive about two hours west. Buses run often from Prague, and are cheaper and quicker than the train."
+    },
+    {
+      "question": "Do you have to drink the water?",
+      "answer": "No, but it's part of the fun. The water is warm and salty, and some springs are strong, so sip a little at a time."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Prague",
+      "code": "PRG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Hévíz",
+      "code": "BUD",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Saxon Switzerland",
+      "code": "DRS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Baden-Baden",
+      "code": "FKB",
+      "label": "🧘 Relax & spa"
+    }
+  ],
+  "date": "2026-10-19T22:48:56Z",
+  "updated": "2026-10-19T22:48:56Z"
+}

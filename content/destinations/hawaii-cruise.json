@@ -1,0 +1,193 @@
+{
+  "name": "Hawaii cruise",
+  "published": true,
+  "country": "US",
+  "title": "Hawaii cruises from Honolulu",
+  "intro": "A week sailing round four Hawaiian islands from Honolulu, with volcanoes, waterfalls, snorkelling and the soaring cliffs of Kauai's Na Pali Coast. Here's what a Hawaii cruise is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/hawaii-cruise-1244646_1280.webp",
+  "image_alt": "A boat sailing along the steep, green, folded cliffs of the Na Pali Coast on Kauai",
+  "wikipedia": "https://en.wikipedia.org/wiki/Hawaiian_Islands",
+  "to_code": "HNL",
+  "holiday_types": [
+    "cruise",
+    "beach",
+    "nature"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "10 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Hawaii is a US state, so UK passport holders need an ESTA before they fly. Cruise prices are higher than in the Caribbean, and so are drinks and tours. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Whales, some rain",
+      "temp": 27
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Whale season",
+      "temp": 27
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Whales",
+      "temp": 27
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 28
+    },
+    "may": {
+      "rating": "best",
+      "note": "Dry, warm",
+      "temp": 29
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Dry, busier",
+      "temp": 30
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Busy, hot",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Busy, hot",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Quieter, warm",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 30
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Rains start",
+      "temp": 29
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Whales arrive, busy",
+      "temp": 28
+    }
+  },
+  "when_to_go": "Hawaii is warm all year, around 27 to 31°C, so there's no bad time to sail. Humpback whales visit from December to April, which is also the wetter season with bigger waves on north shores. April, May, September and October are quieter and often cheaper. Summer and Christmas are the busiest. The Pride of America sails round the islands every week of the year, while other ships pass through on longer voyages.",
+  "things": [
+    {
+      "name": "Na Pali Coast",
+      "tag": "Free",
+      "blurb": "Ships sail along this wild stretch of Kauai's coast, where cliffs rise more than 1,000 metres straight from the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hawaii Volcanoes National Park",
+      "tag": "Day trip",
+      "blurb": "From Hilo, see steaming craters and walk through a lava tube on the Big Island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Haleakalā",
+      "tag": "Day trip",
+      "blurb": "Drive up Maui's huge volcano for sunrise above the clouds. Sunrise needs a booking.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pearl Harbor",
+      "tag": "Free",
+      "blurb": "The USS Arizona Memorial in Honolulu. Entry is free but you need to book a timed ticket.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Snorkelling at Molokini",
+      "tag": "Tour",
+      "blurb": "Boat trips from Maui to a sunken crater with clear water full of tropical fish.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Waikiki Beach",
+      "tag": "Free",
+      "blurb": "Learn to surf on gentle waves before or after the cruise.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a Hawaii cruise good for a family holiday?",
+      "answer": "Yes. It's an easy way to see four islands without packing up and flying between them, and the beaches, volcanoes and snorkelling suit all ages. The ship stays overnight in some ports, which gives you more time ashore."
+    },
+    {
+      "question": "How long is the cruise?",
+      "answer": "Seven nights from Honolulu, calling at Maui, the Big Island (Hilo and Kona) and Kauai, with overnight stays on Maui and Kauai. Add a few nights on Waikiki at the start."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly into Daniel K. Inouye International Airport in Honolulu, usually via the US mainland. The cruise terminal at Honolulu Harbor is about 15 minutes away. It's a long way from Europe, so allow a night to get over the jet lag."
+    },
+    {
+      "question": "Do you need to hire a car?",
+      "answer": "It helps on Maui and Kauai, where the ship stays overnight and the best sights are spread out. Book well ahead, as hire cars near the port run out."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Maui",
+      "code": "OGG",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Caribbean cruises",
+      "code": "BGI",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Galápagos Islands",
+      "code": "GPS",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Alaska's Inside Passage",
+      "code": "JNU",
+      "label": "🛳️ Cruise"
+    }
+  ],
+  "date": "2026-10-19T22:46:39Z",
+  "updated": "2026-10-19T22:46:39Z"
+}

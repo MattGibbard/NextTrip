@@ -77,7 +77,9 @@ export function HolidayPicker({ slug }: { slug?: string }) {
 
   const start = (a: Answers) => {
     const picked = draw(matches(DESTINATIONS, a));
-    if (picked) setDrawing(picked);
+    if (!picked) return;
+    preloadPhoto(picked.winner);
+    setDrawing(picked);
   };
   const landed = () => {
     if (!drawing) return;
@@ -590,7 +592,8 @@ function Result({ d, answers, also, onAgain, onChange }: { d: DestinationCard; a
 
           <div className="hp-photo">
             {d.image ? (
-              <img {...photoProps(d.image, d.image_size, "(max-width: 759px) calc(100vw - 32px), 680px")} alt={d.image_alt} width={d.image_size?.[0]} height={d.image_size?.[1]} />
+              // First in line on a shared result link, which opens straight on this page.
+              <img {...resultPhoto(d)} alt={d.image_alt} width={d.image_size?.[0]} height={d.image_size?.[1]} fetchPriority="high" />
             ) : (
               <span aria-hidden>{boardCode(d)}</span>
             )}
@@ -703,6 +706,29 @@ function BookLink({ href, kind, title, sub }: { href: string; kind: "flights" | 
       <span aria-hidden>↗</span>
     </a>
   );
+}
+
+/** The result's photo: the copy that suits the screen, as the browser picks from srcset. */
+function resultPhoto(d: DestinationCard) {
+  return photoProps(d.image, d.image_size, "(max-width: 759px) calc(100vw - 32px), 680px");
+}
+
+// Held so the downloads aren't dropped while the board runs.
+const preloading: HTMLImageElement[] = [];
+
+/**
+ * Starts downloading the winner's photo as the draw begins, the same copy the result page will ask
+ * for, so it's there when the board finishes rather than popping in after.
+ */
+function preloadPhoto(d: DestinationCard) {
+  if (!d.image) return;
+  const { src, srcSet, sizes } = resultPhoto(d);
+  const img = new Image();
+  // sizes before srcset, so the browser picks the same copy the page's <img> will.
+  if (sizes) img.sizes = sizes;
+  if (srcSet) img.srcset = srcSet;
+  img.src = src;
+  preloading.splice(0, preloading.length, img);
 }
 
 /** Remembers the guide so the signed-in app adds it to their ideas once they've signed up. */

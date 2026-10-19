@@ -26,6 +26,21 @@ describe("holiday picker filters", () => {
     expect(fits(lisbon, answers({ month: code(quiet) }))).toBe(false);
   });
 
+  it("only counts a ski resort's snowy months for skiing", () => {
+    const bansko = findDestination("bansko")!;
+    expect(bansko.months[6].rating).not.toBe("quiet");
+    expect(fits(bansko, answers({ types: ["ski"], month: "jul" }))).toBe(false);
+    expect(fits(bansko, answers({ types: ["ski"], month: "jan" }))).toBe(true);
+    expect(fits(bansko, answers({ types: ["ski", "nature"], month: "jul" }))).toBe(true);
+    expect(matches(DESTINATIONS, answers({ types: ["ski"], month: "jul" })).map((d) => d.slug)).toEqual(["queenstown"]);
+  });
+
+  it("offers cruises and train trips", () => {
+    expect(matches(DESTINATIONS, answers({ types: ["cruise"] })).length).toBeGreaterThan(0);
+    expect(matches(DESTINATIONS, answers({ types: ["rail"] })).length).toBeGreaterThan(0);
+    expect(readAnswers(new URLSearchParams("t=cruise,rail")).types).toEqual(["cruise", "rail"]);
+  });
+
   it("treats the budget as the most they'll spend", () => {
     expect(lisbon.budget).toBe(2);
     expect(fits(lisbon, answers({ budget: 1 }))).toBe(false);
@@ -40,7 +55,7 @@ describe("holiday picker filters", () => {
   });
 
   it("suggests which answer to loosen when nothing fits", () => {
-    const none = answers({ types: ["ski"], month: "may", budget: 1 });
+    const none = answers({ types: ["ski"], month: "jul", budget: 1 });
     expect(matches(DESTINATIONS, none)).toHaveLength(0);
     const fixes = loosen(DESTINATIONS, none);
     expect(fixes.length).toBeGreaterThan(0);

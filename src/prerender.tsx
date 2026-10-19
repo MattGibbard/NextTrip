@@ -37,6 +37,7 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
     { page: "creators", file: "creators.html", source: "content/site/creators.json" },
     { page: "how", file: "how-it-works.html", source: "content/site/how-it-works.json" },
     { page: "picker", file: "holiday-picker.html" },
+    { page: "reveal", file: "holiday-picker/reveal.html" },
     ...(Object.keys(INFO_PAGES) as Info[]).map((page) => ({ page, file: `${INFO_PAGES[page].path.slice(1)}.html`, source: infoSource(page) })),
     { page: "notfound", file: "404.html" },
   ];
@@ -133,6 +134,7 @@ function pageBody(page: PublicPage) {
   const picked = pick(page);
   if (picked) return <HolidayPicker slug={picked.slug} />;
   if (page === "picker") return <HolidayPicker />;
+  if (page === "reveal") return <HolidayPicker reveal />;
   const l = listing(page);
   if (l) return <BlogList listing={l} />;
   if (page === "home") return <HomePage />;

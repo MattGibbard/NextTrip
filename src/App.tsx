@@ -34,7 +34,7 @@ export function preloadPage(pathname: string): Promise<unknown> {
   if (page === "privacy" || page === "terms") return LegalView.preload();
   if (page === "creators") return CreatorsPage.preload();
   if (page === "how") return HowItWorksPage.preload();
-  if (page === "picker" || page?.startsWith("pick:")) return HolidayPicker.preload();
+  if (page === "picker" || page === "reveal" || page?.startsWith("pick:")) return HolidayPicker.preload();
   if (listing(page)) return BlogList.preload();
   if (page?.startsWith("post:")) return BlogPost.preload();
   if (infoPage(pathname)) return InfoPage.preload();
@@ -87,7 +87,7 @@ export function App() {
   useEffect(() => {
     // A guide or hub names itself (GuideView), as only the Guides pages know every guide. So does the holiday picker.
     const page = publicPage(path);
-    if (!page?.startsWith("destination:") && page !== "picker" && !page?.startsWith("pick:")) document.title = pageTitle(path);
+    if (!page?.startsWith("destination:") && page !== "picker" && page !== "reveal" && !page?.startsWith("pick:")) document.title = pageTitle(path);
   }, [path]);
 
   const page = publicPage(path);
@@ -95,6 +95,7 @@ export function App() {
   if (page === "creators") return <CreatorsPage />;
   if (page === "how") return <HowItWorksPage />;
   if (page === "picker") return <HolidayPicker />;
+  if (page === "reveal") return <HolidayPicker reveal />;
   if (page?.startsWith("pick:")) return <HolidayPicker slug={page.slice("pick:".length)} />;
   const info = infoPage(path);
   if (info) return <InfoPage page={info} />;

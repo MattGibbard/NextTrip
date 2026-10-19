@@ -8,7 +8,7 @@ export const SITE = "https://somewhere.party";
 export const OLD_HOST = "nexttrip.matt-gibbard.workers.dev";
 
 /** The fixed pages. */
-export type FixedPage = "home" | "privacy" | "terms" | "notfound" | "destinations" | "creators" | "blog" | "how" | "picker" | InfoPage;
+export type FixedPage = "home" | "privacy" | "terms" | "notfound" | "destinations" | "creators" | "blog" | "how" | "picker" | "reveal" | InfoPage;
 /** The plain content pages, whose words are edited at /admin (content/pages). */
 export type InfoPage = "about" | "faq" | "contact" | "money" | "decide";
 
@@ -105,6 +105,15 @@ export const PAGES: Record<FixedPage, Meta> = {
       "Can't pick a holiday? Answer four quick questions and our random holiday picker draws a destination from our guides. Free, and no account needed.",
     index: true,
   },
+  // A holiday picker result sent to someone, which plays the draw before showing it. The winner stays
+  // out of the address's path and the share preview, so the link doesn't spoil it.
+  reveal: {
+    path: "/holiday-picker/reveal",
+    title: "We've picked a holiday! Watch the board to see where | somewhere🎉",
+    description: "The somewhere🎉 holiday picker has drawn our next holiday. Tap to watch the departures board reveal where we're going.",
+    index: false,
+    preview: true,
+  },
   blog: {
     path: "/blog",
     title: "Holiday ideas and advice: the somewhere🎉 blog",
@@ -156,6 +165,7 @@ export function publicPage(pathname: string): PublicPage | null {
   if (m) return m[1] as FixedPage;
   if (/^\/how-it-works\/?$/.test(pathname)) return "how";
   if (/^\/holiday-picker\/?$/.test(pathname)) return "picker";
+  if (/^\/holiday-picker\/reveal\/?$/.test(pathname)) return "reveal";
   const pick = pathname.match(/^\/holiday-picker\/([a-z0-9-]+)\/?$/);
   if (pick) return `pick:${pick[1]}`;
   const info = infoPage(pathname);

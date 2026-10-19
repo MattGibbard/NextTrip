@@ -65,7 +65,7 @@ try {
     return `\n    <link rel="stylesheet" crossorigin href="/assets/${file}">`;
   };
   const pageStyles = { how: ownStyles("HowItWorks"), picker: ownStyles("HolidayPicker") };
-  const pageStyle = (page) => pageStyles[page.startsWith("pick:") ? "picker" : page] ?? "";
+  const pageStyle = (page) => pageStyles[page.startsWith("pick:") || page === "reveal" ? "picker" : page] ?? "";
   // The Guides pages' code (every guide's card) loads on its own too, so those pages start fetching it
   // alongside the site's own code instead of after it.
   const guidesCode = assets.find((f) => f.startsWith("GuideView-") && f.endsWith(".js"));

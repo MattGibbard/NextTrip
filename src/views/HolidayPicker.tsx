@@ -27,7 +27,9 @@ import {
   pickerStay,
   readAlso,
   readAnswers,
+  readWinner,
   resultHref,
+  revealHref,
   shuffled,
 } from "../picker";
 import type { Answers, Question } from "../picker";
@@ -47,10 +49,11 @@ const STEP_MS = 60;
  * The holiday picker at /holiday-picker, for visitors without an account: four questions, a draw on
  * the departures board, then the result at /holiday-picker/<guide>, which nudges them to sign up and
  * save it. `slug` is set on a result page. The answers come from the address once the page is up, so
- * the prerendered page and the first draw in the browser match.
+ * the prerendered page and the first draw in the browser match. A shared result (`reveal`, at
+ * /holiday-picker/reveal) opens on a start card and plays the draw before showing the result.
  */
-export function HolidayPicker({ slug }: { slug?: string }) {
-  const [page, setPage] = useState<{ slug: string | null; query: string }>({ slug: slug ?? null, query: "" });
+export function HolidayPicker({ slug, reveal = false }: { slug?: string; reveal?: boolean }) {
+  const [page, setPage] = useState<{ slug: string | null; query: string; reveal: boolean; ready: boolean }>({ slug: slug ?? null, query: "", reveal, ready: false });
   const [answers, setAnswers] = useState<Answers>(NO_ANSWERS);
   const [step, setStep] = useState(0);
   const [drawing, setDrawing] = useState<{ winner: DestinationCard; also: DestinationCard[] } | null>(null);
@@ -58,9 +61,10 @@ export function HolidayPicker({ slug }: { slug?: string }) {
   // Answers in the address: a shared result, or "Change answers" from one. Back and forward move between them.
   useEffect(() => {
     const read = () => {
+      const isReveal = /^\/holiday-picker\/reveal\/?$/.test(location.pathname);
       const m = location.pathname.match(/^\/holiday-picker\/([a-z0-9-]+)\/?$/);
       const q = new URLSearchParams(location.search);
-      setPage({ slug: m && findDestination(m[1]) ? m[1] : null, query: location.search });
+      setPage({ slug: !isReveal && m && findDestination(m[1]) ? m[1] : null, query: location.search, reveal: isReveal, ready: true });
       setAnswers(readAnswers(q));
       setDrawing(null);
       if (!m && q.toString()) setStep(QUESTIONS.length - 1);
@@ -71,9 +75,19 @@ export function HolidayPicker({ slug }: { slug?: string }) {
   }, []);
 
   const winner = page.slug ? findDestination(page.slug) : undefined;
+  const shared = useMemo(() => {
+    if (!page.reveal) return null;
+    const q = new URLSearchParams(page.query);
+    const w = readWinner(q, DESTINATIONS);
+    return w ? { winner: w, also: readAlso(q, DESTINATIONS, w.slug) } : null;
+  }, [page.reveal, page.query]);
   useEffect(() => {
-    document.title = winner ? pickMeta(winner).title : PAGES.picker.title;
-  }, [winner]);
+    document.title = winner ? pickMeta(winner).title : page.reveal ? PAGES.reveal.title : PAGES.picker.title;
+  }, [winner, page.reveal]);
+  // The photo downloads while they read the start card, ready for when the board lands.
+  useEffect(() => {
+    if (shared) preloadPhoto(shared.winner);
+  }, [shared]);
 
   const start = (a: Answers) => {
     const picked = draw(matches(DESTINATIONS, a));
@@ -88,15 +102,17 @@ export function HolidayPicker({ slug }: { slug?: string }) {
       answers,
       drawing.also.map((d) => d.slug),
     );
-    history.pushState(null, "", href);
-    setPage({ slug: drawing.winner.slug, query: href.slice(href.indexOf("?")) });
+    // A shared link becomes the plain result, so reloading it doesn't play the draw again.
+    if (page.reveal) history.replaceState(null, "", href);
+    else history.pushState(null, "", href);
+    setPage({ slug: drawing.winner.slug, query: href.slice(href.indexOf("?")), reveal: false, ready: true });
     setDrawing(null);
     window.scrollTo({ top: 0 });
   };
   const changeAnswers = () => {
     const q = answersQuery(answers).toString().replace(/%2C/g, ",");
     history.pushState(null, "", `/holiday-picker${q ? `?${q}` : ""}`);
-    setPage({ slug: null, query: q });
+    setPage({ slug: null, query: q, reveal: false, ready: true });
     setStep(0);
     window.scrollTo({ top: 0 });
   };
@@ -106,12 +122,66 @@ export function HolidayPicker({ slug }: { slug?: string }) {
       <SiteHeader current="picker" exact={!winner} />
       {winner ? (
         <Result key={winner.slug + page.query} d={winner} answers={answers} also={readAlso(new URLSearchParams(page.query), DESTINATIONS, winner.slug)} onAgain={() => start(answers)} onChange={changeAnswers} />
+      ) : page.reveal ? (
+        <Reveal shared={shared} ready={page.ready} answers={answers} onReveal={() => shared && setDrawing(shared)} />
       ) : (
         <Questions answers={answers} setAnswers={setAnswers} step={step} setStep={setStep} onDraw={() => start(answers)} />
       )}
       <SiteFooter />
       {drawing && <Draw winner={drawing.winner} also={drawing.also} answers={answers} onLanded={landed} onClose={() => setDrawing(null)} />}
     </div>
+  );
+}
+
+/* ---------- A shared result's start card ---------- */
+
+function Reveal({ shared, ready, answers, onReveal }: { shared: { winner: DestinationCard; also: DestinationCard[] } | null; ready: boolean; answers: Answers; onReveal: () => void }) {
+  const summary = answersSummary(answers);
+  const from = fromAirport(answers.from);
+  const places = shared ? shared.also.length + 1 : 0;
+  // The prerendered page doesn't know the link's winner, so it shows the card until the address is read.
+  if (ready && !shared) {
+    return (
+      <main className="hp-reveal">
+        <div className="lp-wrap hp-reveal-inner">
+          <h1>This holiday link is missing its destination</h1>
+          <p>It may have been cut short when it was copied. You can draw a holiday of your own instead.</p>
+          <a className="btn bright" href={PAGES.picker.path}>
+            Try the holiday picker →
+          </a>
+        </div>
+      </main>
+    );
+  }
+  const meta = ["DEPARTURES", answers.from, answers.month && MONTH_NAMES[MONTHS.indexOf(answers.month)].toUpperCase()].filter(Boolean).join(" · ");
+  return (
+    <main className="hp-reveal">
+      <div className="lp-wrap hp-reveal-inner">
+        <span className="hp-band-kicker">{meta}</span>
+        <span className="hp-flaps" aria-hidden style={{ "--n": 8 } as CSSProperties}>
+          {[..."????????"].map((ch, i) => (
+            <span key={i} className="hp-flap">
+              {ch}
+            </span>
+          ))}
+        </span>
+        <h1>Someone's picked you a holiday!</h1>
+        <p>
+          {places > 1 ? `${places} places are on the departures board. Watch them drop out one by one until a single holiday is boarding.` : "Watch the departures board to see where you're going."}
+        </p>
+        {summary.length > 0 && (
+          <ul className="hp-reveal-answers" aria-label="What they asked for">
+            {summary.map((s) => (
+              <li key={s}>{s}</li>
+            ))}
+            <li>from {from.name.replace(/^Any London airport$/, "London")}</li>
+          </ul>
+        )}
+        <button type="button" className="btn bright hp-reveal-go" onClick={onReveal} disabled={!shared}>
+          <span aria-hidden>🎟️</span> Reveal the holiday
+        </button>
+      </div>
+    </main>
   );
 }
 
@@ -348,7 +418,7 @@ function Questions({
           </details>
           <details>
             <summary>Can I share my result?</summary>
-            <p className="muted">Yes. Every result has its own link you can send to the family, and they can draw again from it.</p>
+            <p className="muted">Yes. Send the family your result's link and they'll watch the departures board draw it, then they can draw again themselves.</p>
           </details>
           <details>
             <summary>Where do the destinations come from?</summary>
@@ -522,9 +592,16 @@ function Result({ d, answers, also, onAgain, onChange }: { d: DestinationCard; a
   const remember = () => saveIdea(d.slug);
   const saveHref = signedIn ? `/#/next/add/${d.slug}` : "/#signin";
   const share = async () => {
-    const url = location.href;
+    // The link plays the draw for whoever opens it, and keeps the winner out of the message.
+    const url =
+      location.origin +
+      revealHref(
+        d.slug,
+        answers,
+        also.map((x) => x.slug),
+      );
     if (typeof navigator.share === "function" && matchMedia("(pointer: coarse)").matches) {
-      await navigator.share({ title: `Our random holiday: ${d.name}`, text: `The somewhere🎉 holiday picker drew ${d.name} for us!`, url }).catch(() => {});
+      await navigator.share({ title: "We've picked a holiday!", text: "The somewhere🎉 holiday picker has picked our next holiday. Watch the board to see where!", url }).catch(() => {});
       return;
     }
     try {
@@ -615,6 +692,7 @@ function Result({ d, answers, also, onAgain, onChange }: { d: DestinationCard; a
 
           <section className="hp-share" aria-label="Share the result">
             <strong>Share the result with the family</strong>
+            <p className="muted">They'll watch the departures board draw it before they see where.</p>
             <div className="hp-share-buttons">
               <button type="button" className="btn ghost" onClick={() => void share()}>
                 {copied ? "Link copied" : "Copy link"}

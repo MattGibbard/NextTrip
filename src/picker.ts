@@ -6,7 +6,7 @@ import { HOLIDAY_TYPES } from "../shared/ideaDetails";
 import type { HolidayType, TripLength } from "../shared/ideaDetails";
 import { stayDates } from "../shared/tripDates";
 import type { StayDates } from "../shared/tripDates";
-import { pickPath } from "../shared/seo";
+import { PAGES, pickPath } from "../shared/seo";
 import type { Meta } from "../shared/seo";
 import { MONTHS, imageUrl } from "./destinations";
 import type { DestinationCard } from "./destinations";
@@ -175,6 +175,29 @@ export function resultHref(slug: string, a: Answers, also: string[]): string {
   if (also.length) q.set("also", also.join(","));
   const s = q.toString().replace(/%2C/g, ",");
   return `/holiday-picker/${slug}${s ? `?${s}` : ""}`;
+}
+
+/**
+ * The link the Share button sends: it plays the draw before showing the result. The winner rides along
+ * lightly disguised (w=, base64) and the board is in alphabetical order, so neither the link nor its
+ * preview gives the place away.
+ */
+export function revealHref(slug: string, a: Answers, also: string[]): string {
+  const q = answersQuery(a);
+  q.set("also", [...new Set([...also, slug])].sort().join(","));
+  q.set("w", btoa(slug).replace(/=+$/, ""));
+  return `${PAGES.reveal.path}?${q.toString().replace(/%2C/g, ",")}`;
+}
+
+/** The winner a reveal link is for, if it names a real guide. */
+export function readWinner(q: URLSearchParams, all: DestinationCard[]): DestinationCard | undefined {
+  let slug = "";
+  try {
+    slug = atob(q.get("w") ?? "");
+  } catch {
+    return undefined;
+  }
+  return all.find((d) => d.slug === slug);
 }
 
 /** The other guides that were on the board, from a result's address. */

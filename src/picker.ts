@@ -30,8 +30,8 @@ export interface Answers {
   from: string;
 }
 
-/** The kinds of holiday on offer: the ones enough guides are tagged with to be worth asking. */
-export const PICKER_TYPES = HOLIDAY_TYPES.filter((t) => t.key !== "rail" && t.key !== "cruise");
+/** The kinds of holiday on offer. */
+export const PICKER_TYPES = HOLIDAY_TYPES;
 
 export const BUDGET_CHOICES = [
   { key: 1, label: "£", title: "Keep it cheap", hint: "Short hops and simple stays" },
@@ -83,12 +83,21 @@ export function fromAirport(code: string) {
 
 export const NO_ANSWERS: Answers = { types: [], month: null, budget: null, length: null, from: "LON" };
 
+const SKI_SEASON: Record<"north" | "south", Month[]> = {
+  north: ["dec", "jan", "feb", "mar", "apr"],
+  south: ["jun", "jul", "aug", "sep"],
+};
+
 /** Whether a guide fits the answers. A guide that doesn't say its budget or trip length fits any. */
 export function fits(d: DestinationCard, a: Answers): boolean {
-  if (a.types.length && !a.types.some((t) => d.holiday_types.includes(t))) return false;
+  const kinds = a.types.filter((t) => d.holiday_types.includes(t));
+  if (a.types.length && !kinds.length) return false;
   if (a.month) {
     const m = d.months[MONTHS.indexOf(a.month)];
     if (!m || (m.rating !== "best" && m.rating !== "good")) return false;
+    // Ski resorts rate their summers well for walking, so someone who's only after skiing gets
+    // them in the ski season alone.
+    if (kinds.length === 1 && kinds[0] === "ski" && !SKI_SEASON[(d.lat ?? 0) < 0 ? "south" : "north"].includes(a.month)) return false;
   }
   if (a.budget && d.budget !== null && d.budget > a.budget) return false;
   if (a.length && d.trip_length !== null && !LENGTH_FITS[a.length].includes(d.trip_length)) return false;

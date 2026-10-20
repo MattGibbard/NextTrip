@@ -204,6 +204,11 @@
     "lat": 46.7,
     "lon": -60.65
   },
+  "cadiz": {
+    "query": "Cádiz|ES",
+    "lat": 36.5297,
+    "lon": -6.2929
+  },
   "california-zephyr": {
     "query": "California Zephyr|US",
     "lat": 39.5505,
@@ -829,6 +834,11 @@
     "lat": 36.2704,
     "lon": -121.8081
   },
+  "palawan": {
+    "query": "Palawan|PH",
+    "lat": 10,
+    "lon": 118.9
+  },
   "palm-springs": {
     "query": "Palm Springs|US",
     "lat": 33.8303,
@@ -858,6 +868,11 @@
     "query": "Penang|MY",
     "lat": 5.4141,
     "lon": 100.3288
+  },
+  "peneda-geres": {
+    "query": "Peneda-Gerês|PT",
+    "lat": 41.77,
+    "lon": -8.15
   },
   "phuket": {
     "query": "Phuket|TH",

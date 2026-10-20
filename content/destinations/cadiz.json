@@ -1,0 +1,200 @@
+{
+  "name": "Cádiz",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Cádiz",
+  "intro": "An ancient port city of white rooftops, watchtowers and sandy city beaches, almost surrounded by the Atlantic in Spain's far south. Here's what Cádiz is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/cadiz-6060741_1280.webp",
+  "image_alt": "View over the white rooftops and church towers of Cádiz to the Atlantic, from beside a cathedral bell tower",
+  "wikipedia": "https://en.wikipedia.org/wiki/C%C3%A1diz",
+  "to_code": "XRY",
+  "holiday_types": [
+    "city",
+    "beach",
+    "food"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Most direct UK flights to Jerez run in summer, so check the timetable, or fly to Seville and take the train. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 16
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild, Carnival",
+      "temp": 17
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 19
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm, Easter processions",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, beach days begin",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, sea warming",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy beaches",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy beaches",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea, quieter",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, some rain",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, festive",
+      "temp": 17
+    }
+  },
+  "when_to_go": "May, June, September and October are the best months, warm and sunny with the sea breeze keeping the city fresher than inland Andalusia. July and August are hot and the beaches are busy with Spanish holidaymakers. Carnival fills the streets in the run-up to Lent, usually in February. Winter is mild, with highs around 16°C, but can be windy and wet.",
+  "things": [
+    {
+      "name": "Cádiz Cathedral",
+      "tag": "Ticketed",
+      "blurb": "The golden-domed cathedral by the sea. Climb the bell tower for views across the rooftops and out over the Atlantic.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Torre Tavira",
+      "tag": "Ticketed",
+      "blurb": "The highest of the old merchants' watchtowers, with a camera obscura that projects a live view of the city onto a table.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "La Caleta",
+      "tag": "Free",
+      "blurb": "A small sandy beach in a sheltered bay between two castles, with fishing boats and some of the best sunsets in town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Playa de la Victoria",
+      "tag": "Free",
+      "blurb": "A long, wide city beach with a seafront promenade, good for swimming, walking and beach bars.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Barrio del Pópulo",
+      "tag": "Free",
+      "blurb": "The oldest quarter, with narrow lanes, medieval arches and a Roman theatre uncovered by the old town walls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mercado Central",
+      "tag": "Indoors",
+      "blurb": "The busy central market, with fish stalls, tapas counters and fried seafood around the square outside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vejer de la Frontera",
+      "tag": "Day trip",
+      "blurb": "A white hilltop town with Moorish lanes, an hour's drive south, near the beaches of the Costa de la Luz.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Cádiz from the UK?",
+      "answer": "Fly to Jerez, about 45 minutes away by train or car. Jet2 flies there from several UK airports in summer. Seville has more flights all year, and trains to Cádiz take about 1 hour 45 minutes."
+    },
+    {
+      "question": "Is Cádiz good for a beach holiday?",
+      "answer": "Yes. It has sandy city beaches you can walk to from the old town, and the wilder beaches of the Costa de la Luz are a short drive south."
+    },
+    {
+      "question": "How many days do you need in Cádiz?",
+      "answer": "Two or three days covers the old town and beaches. A week lets you add Vejer, Jerez or Bolonia."
+    },
+    {
+      "question": "When is Cádiz Carnival?",
+      "answer": "In the run-up to Lent, usually in February. It's one of Spain's biggest carnivals, known for its costumes and funny, satirical songs."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Seville",
+      "code": "SVQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Malaga",
+      "code": "AGP",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Ronda",
+      "code": "AGP",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Algarve",
+      "code": "FAO",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-20T05:45:17Z",
+  "updated": "2026-10-20T05:45:17Z"
+}

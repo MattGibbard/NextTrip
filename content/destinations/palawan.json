@@ -1,0 +1,200 @@
+{
+  "name": "Palawan",
+  "published": true,
+  "country": "PH",
+  "title": "Holidays in Palawan",
+  "intro": "Limestone islands, hidden lagoons and white-sand beaches in the Philippines' wild western island province, home to El Nido and Coron. Here's what Palawan is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/palawan-1524349_1280.webp",
+  "image_alt": "Tall limestone cliffs covered in jungle rising from a calm turquoise lagoon near El Nido, Palawan",
+  "wikipedia": "https://en.wikipedia.org/wiki/Palawan",
+  "to_code": "PPS",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "adventure"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs ahead of the UK (8 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Philippine peso (₱)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 30 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B / C · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You must register with eTravel online within 72 hours before you arrive, and show proof of an onward flight. Check GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 30
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, calm seas",
+      "temp": 30
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, hot",
+      "temp": 31
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Hottest, dry",
+      "temp": 32
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot, rains start late",
+      "temp": 32
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Wet season",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Wet, rough seas",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Wet, rough seas",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Wettest month",
+      "temp": 30
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Wet, easing",
+      "temp": 30
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drying out",
+      "temp": 30
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry season starts",
+      "temp": 30
+    }
+  },
+  "when_to_go": "December to April is the best time to go, with dry, sunny weather and calm seas for island hopping. March and April are the hottest months. The wet season runs from about June to October, with heavy downpours and rougher seas that can cancel boat trips, and typhoons are possible. November and May are in between and quieter.",
+  "things": [
+    {
+      "name": "El Nido island hopping",
+      "tag": "Tour",
+      "blurb": "Day trips by outrigger boat round the Bacuit archipelago, with lagoons, hidden beaches and snorkelling stops. Tours are labelled A to D.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Big and Small Lagoons",
+      "tag": "Tour",
+      "blurb": "Paddle a kayak into still green lagoons ringed by limestone cliffs, on El Nido's most popular tour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Puerto Princesa Underground River",
+      "tag": "Day trip",
+      "blurb": "A UNESCO-listed river that runs through a cave under the mountains, seen by paddle boat. Visitor numbers are limited, so book ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Coron",
+      "tag": "Tour",
+      "blurb": "An island group to the north with clear lakes, coral reefs and Second World War shipwrecks for snorkelling and diving.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nacpan Beach",
+      "tag": "Free",
+      "blurb": "A long, quiet sweep of golden sand with palm trees, about 45 minutes north of El Nido town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Honda Bay",
+      "tag": "Tour",
+      "blurb": "Easy island hopping and snorkelling from Puerto Princesa, good for a first day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Port Barton",
+      "tag": "Outdoors",
+      "blurb": "A small, laid-back village between Puerto Princesa and El Nido, with quiet islands and reefs close by.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Palawan from the UK?",
+      "answer": "There are no direct flights. Fly to Manila or another Asian hub and connect to Puerto Princesa, El Nido or Busuanga for Coron."
+    },
+    {
+      "question": "How do you get from Puerto Princesa to El Nido?",
+      "answer": "By van or car, usually about five to six hours, or by a short flight from Manila straight to El Nido's small airport."
+    },
+    {
+      "question": "Is Palawan safe to visit?",
+      "answer": "Palawan isn't in the areas of the Philippines the FCDO advises against travelling to, but check the latest advice on GOV.UK before you go."
+    },
+    {
+      "question": "How many days do you need in Palawan?",
+      "answer": "Allow at least a week for El Nido and the Underground River, and ten days to two weeks to add Coron or Port Barton."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lombok",
+      "code": "LOP",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Langkawi",
+      "code": "LGK",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Koh Lanta",
+      "code": "KBV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-20T05:45:17Z",
+  "updated": "2026-10-20T05:45:17Z"
+}

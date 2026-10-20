@@ -1,0 +1,200 @@
+{
+  "name": "Peneda-Gerês",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in Peneda-Gerês",
+  "intro": "Granite mountains, waterfalls you can swim under and stone villages in Portugal's only national park, near the Spanish border north of Braga. Here's what Peneda-Gerês is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/peneda-geres-5935163_1280.webp",
+  "image_alt": "A village of white houses on a green hillside above a reservoir in the Gerês mountains, with peaks behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Peneda-Ger%C3%AAs_National_Park",
+  "to_code": "OPO",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You'll want a hire car, as buses into the park are few. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, wet",
+      "temp": 12
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, wet",
+      "temp": 13
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Fresh, rivers full",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring, waterfalls",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, green",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, swimming",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool, wet",
+      "temp": 14
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool, wet",
+      "temp": 12
+    }
+  },
+  "when_to_go": "May, June and September are the best months, warm enough to swim in the river pools with fewer people on the trails. July and August are hot and the most popular waterfalls get busy, especially at weekends. Spring is green, with the waterfalls at their fullest. Winter is cool and very wet, as this is one of the rainiest corners of Portugal.",
+  "things": [
+    {
+      "name": "Cascata do Arado",
+      "tag": "Outdoors",
+      "blurb": "A string of waterfalls tumbling down a granite valley, with a viewpoint above and cold pools for a summer swim.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Geira Roman road",
+      "tag": "Outdoors",
+      "blurb": "Walk a stretch of the old Roman road between Braga and Astorga, still lined with its stone milestones.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Soajo and Lindoso",
+      "tag": "Free",
+      "blurb": "Two mountain villages known for their groups of raised granite granaries, called espigueiros. Lindoso also has a castle.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ponte da Misarela",
+      "tag": "Free",
+      "blurb": "An old stone bridge arching high over a rocky gorge, reached by a short walk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Caniçada reservoir",
+      "tag": "Outdoors",
+      "blurb": "A long reservoir below the mountains for kayaking, paddleboarding and boat trips in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vila do Gerês",
+      "tag": "Free",
+      "blurb": "The park's little spa town, with thermal baths, cafés and trails into the forest.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Braga",
+      "tag": "Day trip",
+      "blurb": "A historic city with the famous hilltop sanctuary of Bom Jesus, under an hour's drive away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Peneda-Gerês from the UK?",
+      "answer": "Fly to Porto, which has plenty of UK flights, then drive about an hour and a half to two hours to the park."
+    },
+    {
+      "question": "Can you swim in Peneda-Gerês?",
+      "answer": "Yes. In summer people swim in the river pools and below waterfalls, though the water stays cold. Some spots are restricted, so follow the signs."
+    },
+    {
+      "question": "Do you need a car in Peneda-Gerês?",
+      "answer": "Yes, really. Buses are few, and the trails, villages and viewpoints are spread out along slow mountain roads."
+    },
+    {
+      "question": "How many days do you need in Peneda-Gerês?",
+      "answer": "Three or four days covers the waterfalls, a Roman road walk and the villages. A week leaves time for longer hikes and Braga."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Douro Valley",
+      "code": "OPO",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Asturias",
+      "code": "OVD",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Azores",
+      "code": "PDL",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Porto",
+      "code": "OPO",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-20T05:45:17Z",
+  "updated": "2026-10-20T05:45:17Z"
+}

@@ -1,0 +1,200 @@
+{
+  "name": "Puerto Rico",
+  "published": true,
+  "country": "PR",
+  "title": "Holidays in Puerto Rico",
+  "intro": "Colourful colonial streets, rainforest waterfalls and glowing bays on a Caribbean island with a big, lively capital. Here's what Puerto Rico is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/puerto-rico-2354518_1280.webp",
+  "image_alt": "Flamenco Beach on the island of Culebra, Puerto Rico, with white sand, turquoise sea and an old painted tank on the shore",
+  "wikipedia": "https://en.wikipedia.org/wiki/Puerto_Rico",
+  "to_code": "SJU",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "culture"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK (4 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA needed, as for the USA",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Puerto Rico is a US territory, so you need an approved ESTA before you fly, just as for the mainland USA. Check GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 28
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 29
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 29
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 30
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot, showers start",
+      "temp": 30
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, showers",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, showers",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Peak hurricane risk",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Warm, drier",
+      "temp": 30
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Warm, festive",
+      "temp": 29
+    }
+  },
+  "when_to_go": "December to April is the best time to go, with warm, drier and less humid days. Hurricane season runs from June to November, peaking from August to October, so take good travel insurance if you go then. Summer is hot with short tropical showers, and the sea stays warm all year.",
+  "things": [
+    {
+      "name": "Old San Juan",
+      "tag": "Free",
+      "blurb": "Blue cobbled streets and pastel houses inside the old city walls, with plazas, cafés and lively bars after dark.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "El Morro",
+      "tag": "Ticketed",
+      "blurb": "The huge Spanish fortress guarding the entrance to San Juan Bay, with sea views and kites flying on the lawn.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "El Yunque",
+      "tag": "Outdoors",
+      "blurb": "A tropical rainforest with trails to waterfalls and lookout towers, about an hour from San Juan. Some areas need a timed reservation.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Flamenco Beach",
+      "tag": "Day trip",
+      "blurb": "A horseshoe of white sand and clear water on the small island of Culebra, reached by ferry or a short flight.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bioluminescent bays",
+      "tag": "Tour",
+      "blurb": "Kayak at night through water that glows with every paddle stroke, at Mosquito Bay on Vieques or Laguna Grande near Fajardo.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Camuy caves",
+      "tag": "Tour",
+      "blurb": "Guided tours into huge limestone caves and sinkholes, about 1 hour 20 minutes west of San Juan.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rincón",
+      "tag": "Outdoors",
+      "blurb": "A laid-back surf town on the west coast, with sunsets and whale watching in winter.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Puerto Rico from the UK?",
+      "answer": "There are no direct flights at the moment. Connect through a US city such as New York, Miami or Orlando to San Juan."
+    },
+    {
+      "question": "Do you need a passport and visa for Puerto Rico?",
+      "answer": "You need your passport and an approved ESTA, the same as for the mainland USA. There's no separate visa."
+    },
+    {
+      "question": "Do you need a car in Puerto Rico?",
+      "answer": "Not in Old San Juan, but a hire car is the easiest way to reach the rainforest, beaches and the west coast."
+    },
+    {
+      "question": "How many days do you need in Puerto Rico?",
+      "answer": "Five days to a week covers San Juan, El Yunque and a bioluminescent bay. Add a few days for Culebra or Vieques."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Dominica",
+      "code": "DOM",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "St Lucia",
+      "code": "UVF",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Cartagena",
+      "code": "CTG",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Antigua",
+      "code": "ANU",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-21T05:45:56Z",
+  "updated": "2026-10-21T05:45:56Z"
+}

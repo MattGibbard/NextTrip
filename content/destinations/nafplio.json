@@ -1,0 +1,200 @@
+{
+  "name": "Nafplio",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Nafplio",
+  "intro": "Venetian fortresses, marble lanes and a sea-castle in the bay, in a handsome harbour town that was once the capital of Greece. Here's what Nafplio is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/nafplio-382583_1280.webp",
+  "image_alt": "View over the tiled roofs of Nafplio's old town to the little Bourtzi sea castle in the bay, framed by pink oleander and an old stone wall",
+  "wikipedia": "https://en.wikipedia.org/wiki/Nafplio",
+  "to_code": "ATH",
+  "holiday_types": [
+    "culture",
+    "beach",
+    "food"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Athens airport is about two hours' drive away, so most people hire a car or take a transfer. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring flowers",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm, Easter",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 26
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, swimming",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, some rain",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, festive",
+      "temp": 15
+    }
+  },
+  "when_to_go": "May, June, September and October are the best months, warm enough for the beach with comfortable days for ancient sites. July and August are hot, often 33°C, and busy with Greek weekenders, so see the sites early. Winter is mild and quiet, and Nafplio stays lively all year as a weekend escape from Athens.",
+  "things": [
+    {
+      "name": "Palamidi Fortress",
+      "tag": "Ticketed",
+      "blurb": "A huge Venetian fortress on the hill above town. Climb the famous stone staircase or drive up, then walk the walls for views over the bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bourtzi",
+      "tag": "Free",
+      "blurb": "The little castle on an island in the harbour, the town's postcard view. Boats sometimes run out to it in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old town",
+      "tag": "Free",
+      "blurb": "Marble-paved lanes, neoclassical mansions, bougainvillea and Syntagma Square, the setting for Greece's first parliament.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Arvanitia promenade",
+      "tag": "Free",
+      "blurb": "A seaside path round the headland below Akronafplia, with swimming spots on the rocks and Arvanitia beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ancient Epidaurus",
+      "tag": "Day trip",
+      "blurb": "The best-preserved ancient theatre in Greece, famous for its acoustics, about 30 minutes' drive away. Summer festival plays are still held there.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mycenae",
+      "tag": "Day trip",
+      "blurb": "The hilltop citadel of Agamemnon, with the Lion Gate and royal tombs, about half an hour from town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Karathona beach",
+      "tag": "Free",
+      "blurb": "A long, sandy, shallow beach a short drive or walk from town.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Nafplio from the UK?",
+      "answer": "Fly to Athens, which has plenty of UK flights all year, then drive or take the bus, about two hours. Kalamata is another option in summer."
+    },
+    {
+      "question": "Is Nafplio worth visiting?",
+      "answer": "Yes. It's one of Greece's prettiest towns, with fortresses, good food and swimming, and some of the most famous ancient sites close by."
+    },
+    {
+      "question": "How many days do you need in Nafplio?",
+      "answer": "Two or three days covers the town and the fortress. Allow four to seven to add Epidaurus, Mycenae and beach days."
+    },
+    {
+      "question": "Are there beaches in Nafplio?",
+      "answer": "Yes. Arvanitia is right by the old town, and the longer, sandy Karathona beach is just beyond it."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Messinia",
+      "code": "KLX",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Athens",
+      "code": "ATH",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Kefalonia",
+      "code": "EFL",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-21T05:45:56Z",
+  "updated": "2026-10-21T05:45:56Z"
+}

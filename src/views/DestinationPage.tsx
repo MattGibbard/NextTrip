@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import type { Idea, Person } from "../../shared/types";
 import type { Terminal } from "../../shared/terminals";
 import { api } from "../api";
-import { DESTINATIONS, LONDON, bestMonths, countryFlag, destinationNamed, flightHoursTo, flightTime, imageUrl, photoProps, shortIntro } from "../destinations";
+import { DESTINATIONS, bestMonths, countryFlag, destinationNamed, flightTime, imageUrl, photoProps, shortIntro } from "../destinations";
 import type { Destination, DestinationCard } from "../destinations";
 import { HOLIDAY_TYPES, budgetLabel, holidayType, travelTimeLabel } from "../../shared/ideaDetails";
 import { destinationPath } from "../../shared/seo";
@@ -12,6 +12,11 @@ import type { HubKind } from "../hubs";
 import { AppBottomNav, AppTopbar } from "../components/AppNav";
 import { PostLink } from "../components/PostCards";
 import { postsAboutGuide } from "../blog";
+import { Geo } from "../components/Geo";
+import { FlyingFrom } from "../components/FlyingFrom";
+import { useFrom } from "../visitor";
+import { fromTerminal } from "../../shared/visitor";
+import type { From } from "../../shared/visitor";
 
 /**
  * Who's looking. Starts as a visitor, the same as the prerendered page, then checks for a signed-in
@@ -23,7 +28,7 @@ export interface Family {
   /** Who's using this device, for the header. */
   me: Person | null;
   ideas: Idea[] | null;
-  /** The family's home airport, which flight times are worked out from instead of London. */
+  /** The family's home airport, which flight times are worked out from instead of the visitor's (src/visitor.ts). */
   airport: Terminal | null;
 }
 
@@ -57,10 +62,10 @@ export function Label({ children }: { children: string }) {
 /** A destination guide, for visitors finding it in search and for signed-in families looking for ideas. */
 export function DestinationPage({ destination: d, family }: { destination: Destination; family?: Family }) {
   const { signedIn, me, ideas, airport } = useFamily(family);
-  const from = airport?.code && airport.lat !== null ? { code: airport.code, name: airport.name, lat: airport.lat, lon: airport.lon } : LONDON;
+  const from = useFrom(airport);
   const flight = flightTime(from, d);
   const best = bestMonths(d);
-  const facts = [...(flight ? [{ label: `Flight from ${from.name}`, value: flight, highlight: true }] : []), ...d.facts];
+  const facts: { label: string; value: string; highlight: boolean; flight?: true }[] = [...(flight ? [{ label: "", value: "", highlight: true, flight: true as const }] : []), ...d.facts];
   const onList = ideas?.find((i) => i.status === "active" && i.title.trim().toLowerCase() === d.name.toLowerCase());
   const standby = ideas?.filter((i) => i.status === "active" && i !== onList).slice(0, 3) ?? [];
   const types = d.holiday_types.map(holidayType).filter((t) => !!t);
@@ -102,9 +107,11 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
                   <div className="dg-route">
                     <div>
                       <Label>FROM</Label>
-                      <span className="dg-code">{from.code}</span>
+                      <span className="dg-code">
+                        <Geo from={from} geo="code" />
+                      </span>
                     </div>
-                    <div className="dg-route-line">{flight && <span>{flight.toUpperCase()} ✈️</span>}</div>
+                    <div className="dg-route-line">{flight && <Geo from={from} geo="hours" to={d} fmt="route" />}</div>
                     <div className="end">
                       <Label>TO</Label>
                       <span className="dg-code">{d.to_code}</span>
@@ -142,7 +149,9 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
                 {d.budget && (
                   <div>
                     <Label>BUDGET</Label>
-                    <strong>{budgetLabel(d.budget)}</strong>
+                    <strong>
+                      <Geo from={from} geo="budget" level={d.budget} />
+                    </strong>
                   </div>
                 )}
                 {best && (
@@ -245,14 +254,26 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
           <section aria-labelledby="dg-facts" className="dg-section">
             <h2 id="dg-facts">{d.name} at a glance</h2>
             <dl className="dg-board">
-              {facts.map((f) => (
-                <div key={f.label}>
-                  <dt>{f.label.toUpperCase()}</dt>
-                  <dd className={f.highlight ? "lit" : ""}>{f.value.toUpperCase()}</dd>
-                </div>
-              ))}
+              {facts.map((f) =>
+                f.flight ? (
+                  <div key="flight">
+                    <dt>
+                      <Geo from={from} geo="fact-label" />
+                    </dt>
+                    <dd className="lit">
+                      <Geo from={from} geo="hours" to={d} fmt="fact" />
+                    </dd>
+                  </div>
+                ) : (
+                  <div key={f.label}>
+                    <dt>{f.label.toUpperCase()}</dt>
+                    <dd className={f.highlight ? "lit" : ""}>{f.value.toUpperCase()}</dd>
+                  </div>
+                ),
+              )}
             </dl>
             {d.facts_note && <p className="muted small">{d.facts_note}</p>}
+            {flight && <FlyingFrom from={from} home={!!fromTerminal(airport)} />}
           </section>
         )}
 
@@ -405,8 +426,7 @@ export function bestSet(d: DestinationCard): Set<number> {
 }
 
 /** A guide's card, on the Inspire page and the hub pages. `best` is its best months, by number. */
-export function GuideCard({ d, from, month, best, idea, signedIn }: { d: DestinationCard; from: { lat: number | null; lon: number | null }; month: number | null; best: Set<number>; idea?: Idea; signedIn: boolean }) {
-  const hours = flightHoursTo(from, d);
+export function GuideCard({ d, from, month, best, idea, signedIn }: { d: DestinationCard; from: From; month: number | null; best: Set<number>; idea?: Idea; signedIn: boolean }) {
   const t = d.holiday_types.map(holidayType).find((x) => !!x);
   return (
     <article className="dx-card">
@@ -426,9 +446,9 @@ export function GuideCard({ d, from, month, best, idea, signedIn }: { d: Destina
               <span aria-hidden>{t.icon}</span> {t.label}
             </span>
           )}
-          {hours !== null && <span>✈️ {hours}h</span>}
+          <Geo from={from} geo="hours" to={d} fmt="pill" />
           {d.nights && <span>{d.nights} nights</span>}
-          {d.budget && <span>{budgetLabel(d.budget)}</span>}
+          {d.budget && <Geo from={from} geo="budget" level={d.budget} />}
         </div>
       </div>
       <div className="dx-perf" aria-hidden />
@@ -492,7 +512,7 @@ const Chevron = ({ up }: { up?: boolean }) => (
  */
 export function DestinationsIndex({ family }: { family?: Family }) {
   const { signedIn, me, ideas, airport } = useFamily(family);
-  const from = airport?.code && airport.lat !== null ? { code: airport.code, name: airport.name, lat: airport.lat, lon: airport.lon } : LONDON;
+  const from = useFrom(airport);
   const [month, setMonth] = useState<number | null>(null);
   const [type, setType] = useState<string | null>(null);
   const [country, setCountry] = useState<string | null>(null);
@@ -581,25 +601,25 @@ export function DestinationsIndex({ family }: { family?: Family }) {
               <label htmlFor="dx-search">Search destinations</label>
               <input id="dx-search" type="search" placeholder="A city, region or country" value={search} onChange={(e) => setSearch(e.target.value)} />
             </div>
+            <FlyingFrom from={from} home={!!fromTerminal(airport)} />
           </div>
 
           {DESTINATIONS.length > 0 && (
             <aside className="dx-board" aria-label={month === null ? "Destination guides" : `Good to go in ${MONTH_NAMES[month]}`}>
               <div className="dx-board-head">
                 <span className="lit">{month === null ? "DESTINATION GUIDES" : `GOOD TO GO IN ${MONTH_NAMES[month].toUpperCase()}`}</span>
-                <span>{from === LONDON ? "FROM THE UK" : `FROM ${from.code}`}</span>
+                <Geo from={from} geo="label" />
               </div>
               <ul>
-                {board.map((d) => {
-                  const hours = flightHoursTo(from, d);
-                  return (
-                    <li key={d.slug}>
-                      <span className="lit">{d.to_code}</span>
-                      <a href={destinationPath(d.slug)}>{d.name.toUpperCase()}</a>
-                      <span>{hours !== null && `✈️ ${hours}H`}</span>
-                    </li>
-                  );
-                })}
+                {board.map((d) => (
+                  <li key={d.slug}>
+                    <span className="lit">{d.to_code}</span>
+                    <a href={destinationPath(d.slug)}>{d.name.toUpperCase()}</a>
+                    <span>
+                      <Geo from={from} geo="hours" to={d} fmt="board" />
+                    </span>
+                  </li>
+                ))}
               </ul>
               <p>
                 {board.length === 0

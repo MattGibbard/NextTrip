@@ -9,7 +9,7 @@ import type { DestinationCard } from "../destinations";
 import { HUBS, hubIcon } from "../hubs";
 import {
   BUDGET_CHOICES,
-  FROM_AIRPORTS,
+  budgetMark,
   LENGTH_CHOICES,
   MONTH_NAMES,
   NO_ANSWERS,
@@ -34,6 +34,8 @@ import {
 } from "../picker";
 import type { Answers, Question } from "../picker";
 import { flightLink } from "../../shared/flights";
+import { MAIN_AIRPORTS, airportChoice, airportGroups, mainAirport } from "../../shared/mainAirports";
+import { currentVisitor, setFlyingFrom } from "../visitor";
 import { hotelLink } from "../../shared/hotels";
 import { activitiesLink } from "../../shared/activities";
 import { PAGES, destinationPath } from "../../shared/seo";
@@ -65,7 +67,10 @@ export function HolidayPicker({ slug, reveal = false }: { slug?: string; reveal?
       const m = location.pathname.match(/^\/holiday-picker\/([a-z0-9-]+)\/?$/);
       const q = new URLSearchParams(location.search);
       setPage({ slug: !isReveal && m && findDestination(m[1]) ? m[1] : null, query: location.search, reveal: isReveal, ready: true });
-      setAnswers(readAnswers(q));
+      // Without an airport in the address, they fly from wherever the visitor does.
+      const visitor = currentVisitor();
+      const asked = readAnswers(q);
+      setAnswers(!q.has("from") && visitor && mainAirport(visitor.code) ? { ...asked, from: visitor.code } : asked);
       setDrawing(null);
       if (!m && q.toString()) setStep(QUESTIONS.length - 1);
     };
@@ -192,7 +197,7 @@ const QUESTION_LABEL: Record<Question, string> = { types: "YOU ENJOY", month: "D
 function answerText(q: Question, a: Answers): string {
   if (q === "types") return a.types.length ? a.types.map((t) => PICKER_TYPES.find((x) => x.key === t)!.label).join(", ") : "Anything";
   if (q === "month") return a.month ? MONTH_NAMES[MONTHS.indexOf(a.month)] : "Any time";
-  if (q === "budget") return a.budget ? `${BUDGET_CHOICES[a.budget - 1].label} ${BUDGET_CHOICES[a.budget - 1].title}` : "Any budget";
+  if (q === "budget") return a.budget ? `${budgetMark(a.budget, a)} ${BUDGET_CHOICES[a.budget - 1].title}` : "Any budget";
   const length = LENGTH_CHOICES.find((x) => x.key === a.length)?.title ?? "Any length";
   return `${a.from}, ${length.replace(/^A /, "a ").replace(/^About/, "about").replace(/^Two/, "two").replace(/^Any/, "any")}`;
 }
@@ -320,7 +325,7 @@ function Questions({
             <div className="hp-options">
               {BUDGET_CHOICES.map((b) => (
                 <Choice key={b.key} name="hp-budget" checked={answers.budget === b.key} onChange={() => setAnswers({ ...answers, budget: b.key })} big>
-                  <span className="hp-option-mark">{b.label}</span>
+                  <span className="hp-option-mark">{budgetMark(b.key, answers)}</span>
                   <strong>{b.title}</strong>
                   <span className="muted small">{b.hint}</span>
                 </Choice>
@@ -335,12 +340,22 @@ function Questions({
             <>
               <label className="hp-from">
                 <span className="field-label">Flying from</span>
-                <select value={answers.from} onChange={(e) => setAnswers({ ...answers, from: e.target.value })}>
-                  {FROM_AIRPORTS.map((a) => (
-                    <option key={a.code} value={a.code}>
-                      {a.name}
-                      {a.code !== "LON" ? ` (${a.code})` : ""}
-                    </option>
+                <select
+                  value={answers.from}
+                  onChange={(e) => {
+                    setAnswers({ ...answers, from: e.target.value });
+                    // Remembered for the guides' flight times too.
+                    setFlyingFrom(fromAirport(e.target.value));
+                  }}
+                >
+                  {airportGroups(answers.from).map(([code, name]) => (
+                    <optgroup key={code} label={name}>
+                      {MAIN_AIRPORTS.filter((r) => r[2] === code).map((r) => (
+                        <option key={r[0]} value={r[0]}>
+                          {airportChoice(r)}
+                        </option>
+                      ))}
+                    </optgroup>
                   ))}
                 </select>
               </label>
@@ -586,7 +601,7 @@ function Result({ d, answers, also, onAgain, onChange }: { d: DestinationCard; a
   const lengthTitle = LENGTH_CHOICES.find((l) => l.key === answers.length)?.title;
   const stay = pickerStay(answers);
   const place = { name: d.name, country: d.country, country_code: d.country_code, lat: d.lat, lon: d.lon };
-  const flights = d.to_code && d.to_code !== from.code ? flightLink(from.code, d.to_code, 2, "holiday_picker", { dates: stay }) : null;
+  const flights = d.to_code && d.to_code !== from.code ? flightLink(from.code, d.to_code, 2, "holiday_picker", { dates: stay, currency: from.currency }) : null;
   const time = flightTime(from, d);
 
   const remember = () => saveIdea(d.slug);
@@ -646,7 +661,7 @@ function Result({ d, answers, also, onAgain, onChange }: { d: DestinationCard; a
             </div>
             <div>
               <dt>BUDGET</dt>
-              <dd>{d.budget ? BUDGET_CHOICES[d.budget - 1].label : "–"}</dd>
+              <dd>{d.budget ? budgetMark(d.budget, answers) : "–"}</dd>
             </div>
           </dl>
         </div>
@@ -734,7 +749,7 @@ function Result({ d, answers, also, onAgain, onChange }: { d: DestinationCard; a
               <BookLink href={flights} kind="flights" title={`✈️ Flights ${from.code} to ${d.to_code}`} sub={monthName || "Any time"} />
             )}
             <BookLink
-              href={hotelLink(place, "holiday_picker", { dates: stay, guests: 2 })}
+              href={hotelLink(place, "holiday_picker", { dates: stay, guests: 2, currency: from.currency })}
               kind="hotels"
               title={`🏨 Hotels in ${d.name}`}
               sub={[monthName, lengthTitle].filter(Boolean).join(" · ") || "Any dates"}

@@ -10,6 +10,9 @@ import { PAGES, pickPath } from "../shared/seo";
 import type { Meta } from "../shared/seo";
 import { MONTHS, imageUrl } from "./destinations";
 import type { DestinationCard } from "./destinations";
+import { airportFrom, mainAirport } from "../shared/mainAirports";
+import { budgetText } from "../shared/visitor";
+import type { From } from "../shared/visitor";
 
 /** Where "Save to my ideas" leaves the guide for the signed-in app to add once they're in (SignedIn.tsx). */
 export const PICKED_IDEA = "pickedIdea";
@@ -33,10 +36,11 @@ export interface Answers {
 /** The kinds of holiday on offer. */
 export const PICKER_TYPES = HOLIDAY_TYPES;
 
+/** Budgets, shown in the currency of where they fly from (budgetMark). */
 export const BUDGET_CHOICES = [
-  { key: 1, label: "£", title: "Keep it cheap", hint: "Short hops and simple stays" },
-  { key: 2, label: "££", title: "Somewhere in the middle", hint: "Most of Europe, most of the year" },
-  { key: 3, label: "£££", title: "Treat yourselves", hint: "Long haul and big trips" },
+  { key: 1, title: "Keep it cheap", hint: "Short hops and simple stays" },
+  { key: 2, title: "Somewhere in the middle", hint: "Most of Europe, most of the year" },
+  { key: 3, title: "Treat yourselves", hint: "Long haul and big trips" },
 ] as const;
 
 export const LENGTH_CHOICES: { key: Length; title: string; hint: string }[] = [
@@ -51,34 +55,16 @@ const LENGTH_NIGHTS: Record<Length, TripLength> = { weekend: "weekend", week: "w
 export const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 /**
- * Airports to fly from. "LON" is any London airport, which the flight search understands. Positions
- * give rough flight times. A short list rather than a search, as the airport search needs a sign-in.
+ * The airport an answer flies from: one of the main departure airports (shared/mainAirports.ts),
+ * London if the code isn't one. Its country sets the currency the budget and booking links use.
  */
-export const FROM_AIRPORTS: { code: string; name: string; lat: number; lon: number }[] = [
-  { code: "LON", name: "Any London airport", lat: 51.47, lon: -0.4543 },
-  { code: "LHR", name: "London Heathrow", lat: 51.47, lon: -0.4543 },
-  { code: "LGW", name: "London Gatwick", lat: 51.1481, lon: -0.1903 },
-  { code: "STN", name: "London Stansted", lat: 51.885, lon: 0.235 },
-  { code: "LTN", name: "London Luton", lat: 51.8747, lon: -0.3683 },
-  { code: "MAN", name: "Manchester", lat: 53.3537, lon: -2.275 },
-  { code: "BHX", name: "Birmingham", lat: 52.4539, lon: -1.748 },
-  { code: "BRS", name: "Bristol", lat: 51.3827, lon: -2.7191 },
-  { code: "EMA", name: "East Midlands", lat: 52.8311, lon: -1.3281 },
-  { code: "LBA", name: "Leeds Bradford", lat: 53.8659, lon: -1.6606 },
-  { code: "NCL", name: "Newcastle", lat: 55.0375, lon: -1.6917 },
-  { code: "LPL", name: "Liverpool", lat: 53.3336, lon: -2.8497 },
-  { code: "EDI", name: "Edinburgh", lat: 55.95, lon: -3.3725 },
-  { code: "GLA", name: "Glasgow", lat: 55.8719, lon: -4.4331 },
-  { code: "BHD", name: "Belfast City", lat: 54.6181, lon: -5.8725 },
-  { code: "BFS", name: "Belfast International", lat: 54.6575, lon: -6.2158 },
-  { code: "CWL", name: "Cardiff", lat: 51.3967, lon: -3.3433 },
-  { code: "SOU", name: "Southampton", lat: 50.9503, lon: -1.3568 },
-  { code: "EXT", name: "Exeter", lat: 50.7344, lon: -3.4139 },
-  { code: "DUB", name: "Dublin", lat: 53.4213, lon: -6.2701 },
-];
+export function fromAirport(code: string): From {
+  return airportFrom(mainAirport(code) ?? mainAirport(NO_ANSWERS.from)!);
+}
 
-export function fromAirport(code: string) {
-  return FROM_AIRPORTS.find((a) => a.code === code) ?? FROM_AIRPORTS[0];
+/** The budget as a few currency symbols, "££" or "$$", for the airport the answers fly from. */
+export function budgetMark(level: number, a: Answers): string {
+  return budgetText(level, fromAirport(a.from).currency);
 }
 
 export const NO_ANSWERS: Answers = { types: [], month: null, budget: null, length: null, from: "LON" };
@@ -174,7 +160,7 @@ export function readAnswers(q: URLSearchParams): Answers {
     month: MONTHS.find((x) => x === m) ?? null,
     budget: b === 1 || b === 2 || b === 3 ? b : null,
     length: LENGTH_CHOICES.find((x) => x.key === n)?.key ?? null,
-    from: FROM_AIRPORTS.some((x) => x.code === from) ? from : NO_ANSWERS.from,
+    from: mainAirport(from) ? from : NO_ANSWERS.from,
   };
 }
 
@@ -235,7 +221,7 @@ export function answersSummary(a: Answers): string[] {
     types.length ? (types.length > 1 ? `${types.slice(0, -1).join(", ")} or ${types[types.length - 1]}` : types[0]) : "",
     a.month ? MONTH_NAMES[MONTHS.indexOf(a.month)] : "",
     a.length ? LENGTH_CHOICES.find((x) => x.key === a.length)!.title.replace(/^A /, "a ").replace(/^About/, "about").replace(/^Two/, "two") : "",
-    a.budget ? `${BUDGET_CHOICES[a.budget - 1].label} budget` : "",
+    a.budget ? `${budgetMark(a.budget, a)} budget` : "",
   ].filter(Boolean);
 }
 

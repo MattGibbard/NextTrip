@@ -754,6 +754,11 @@
     "lat": 30.9189,
     "lon": -6.8934
   },
+  "nafplio": {
+    "query": "Nafplio|GR",
+    "lat": 37.5659,
+    "lon": 22.8069
+  },
   "namibia": {
     "query": "Namibia|NA",
     "lat": -22.5609,
@@ -903,6 +908,11 @@
     "query": "Prague|CZ",
     "lat": 50.0875,
     "lon": 14.4213
+  },
+  "puerto-rico": {
+    "query": "Puerto Rico|PR",
+    "lat": 18.2208,
+    "lon": -66.5901
   },
   "puglia": {
     "query": "Puglia|IT",
@@ -1093,6 +1103,11 @@
     "query": "Syracuse|IT",
     "lat": 37.0755,
     "lon": 15.2866
+  },
+  "taipei": {
+    "query": "Taipei|TW",
+    "lat": 25.0375,
+    "lon": 121.5637
   },
   "tallinn": {
     "query": "Tallinn|EE",

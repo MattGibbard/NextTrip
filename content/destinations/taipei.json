@@ -1,0 +1,200 @@
+{
+  "name": "Taipei",
+  "published": true,
+  "country": "TW",
+  "title": "Holidays in Taipei",
+  "intro": "Night markets, mountain temples and hot springs on the edge of a friendly, easy-going city, with green hills right on the metro. Here's what Taipei is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/taipei-1846728_1280.webp",
+  "image_alt": "The Taipei 101 tower rising above the city skyline at sunset, seen from a green hillside with pampas grass",
+  "wikipedia": "https://en.wikipedia.org/wiki/Taipei",
+  "to_code": "TPE",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "5 to 8",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs ahead of the UK (8 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "New Taiwan dollar (NT$)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 110V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You must fill in the Taiwan Arrival Card online within three days before you arrive. Bring an adaptor for flat two-pin plugs, and check GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, damp",
+      "temp": 19
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild, Lantern Festival",
+      "temp": 20
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 22
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, pleasant",
+      "temp": 26
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm, plum rains",
+      "temp": 29
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Hot, wettest",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot, typhoons",
+      "temp": 35
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot, typhoons",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot, typhoon risk",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, clear",
+      "temp": 28
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 25
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild, cool evenings",
+      "temp": 21
+    }
+  },
+  "when_to_go": "October, November and April are the best months, warm and mostly clear for walking the city and the hills. July and August are very hot and humid, often 34°C or more, with typhoons possible from June to October. May and June bring the 'plum rains'. Winter is mild but often grey and damp, with the Lantern Festival lighting up the city around February.",
+  "things": [
+    {
+      "name": "Taipei 101",
+      "tag": "Ticketed",
+      "blurb": "The landmark tower, with a fast lift to the observatory and its huge wind damper on show inside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Elephant Mountain",
+      "tag": "Free",
+      "blurb": "A short, steep climb from the metro to the classic view over Taipei 101 and the city, best at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Night markets",
+      "tag": "Free",
+      "blurb": "Shilin, Raohe and Ningxia night markets for bubble tea, dumplings, pepper buns and plenty more.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "National Palace Museum",
+      "tag": "Ticketed",
+      "blurb": "One of the world's great collections of Chinese art, from jade and bronzes to porcelain and paintings.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Beitou hot springs",
+      "tag": "Ticketed",
+      "blurb": "Soak in hot-spring baths in a leafy valley at the end of a metro line, with a free hot-springs museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Maokong Gondola",
+      "tag": "Ticketed",
+      "blurb": "A cable car up to hillside tea houses, with views back over the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jiufen",
+      "tag": "Day trip",
+      "blurb": "A hillside old gold-mining town of lantern-lit lanes and tea houses above the sea, about an hour away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Taipei from the UK?",
+      "answer": "EVA Air flies direct from London Heathrow. Otherwise connect through a hub such as Hong Kong, Singapore or Dubai."
+    },
+    {
+      "question": "Is Taipei easy to get around?",
+      "answer": "Yes. The metro is clean, cheap and signed in English, and an EasyCard covers trains, buses and even some shops."
+    },
+    {
+      "question": "How many days do you need in Taipei?",
+      "answer": "Four or five days covers the city, a night market or two and a hot spring. A week lets you add Jiufen and other day trips."
+    },
+    {
+      "question": "When is the best time to visit Taipei?",
+      "answer": "Spring and autumn are best, especially October and November. Summer is very hot and humid, with typhoons possible."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Seoul",
+      "code": "ICN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Tokyo",
+      "code": "HND",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Busan",
+      "code": "PUS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Kanazawa",
+      "code": "KMQ",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-21T05:45:56Z",
+  "updated": "2026-10-21T05:45:56Z"
+}

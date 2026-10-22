@@ -1,0 +1,197 @@
+{
+  "name": "Hvar",
+  "published": true,
+  "country": "HR",
+  "title": "Holidays in Hvar",
+  "intro": "A sunny Croatian island of lavender fields, a Venetian harbour town with a hilltop fortress and boat trips to the Pakleni islands. Here's what Hvar is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/hvar-62677_1280.webp",
+  "image_alt": "Hvar Town's harbour and the Pakleni islands seen from the fortress",
+  "wikipedia": "https://en.wikipedia.org/wiki/Hvar",
+  "to_code": "SPU",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "culture"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 12
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 13
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, lavender",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 13
+    }
+  },
+  "when_to_go": "June and September are best, warm with a lovely sea and fewer crowds. Lavender flowers in late June and early July. July and August are hot, pricey and lively, especially Hvar Town's nightlife. The season runs from May to October.",
+  "things": [
+    {
+      "name": "Fortica",
+      "tag": "Ticketed",
+      "blurb": "Climb to the Spanish fortress above Hvar Town for sunset over the islands.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pakleni islands",
+      "tag": "Tour",
+      "blurb": "Taxi boats to pine-fringed islands with beaches and beach restaurants.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stari Grad",
+      "tag": "Free",
+      "blurb": "A quieter, older town and an ancient Greek field system on the UNESCO list.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jelsa and Vrboska",
+      "tag": "Free",
+      "blurb": "Calm harbour villages, good for families.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lavender fields",
+      "tag": "Outdoors",
+      "blurb": "Purple hillsides around Velo Grablje in early summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Cave trip",
+      "tag": "Day trip",
+      "blurb": "Speedboat trips to Biševo's glowing Blue Cave and Vis.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Hvar worth visiting?",
+      "answer": "Yes. It's one of Croatia's most beautiful islands, and quieter towns like Stari Grad and Jelsa balance Hvar Town's party scene."
+    },
+    {
+      "question": "How do you get to Hvar?",
+      "answer": "Fly into Split, which has direct flights from the UK, then take the catamaran from Split harbour, about an hour."
+    },
+    {
+      "question": "What is the best time to visit Hvar?",
+      "answer": "June and September, around 26 to 27°C."
+    },
+    {
+      "question": "Is Hvar a party island?",
+      "answer": "Hvar Town is lively in summer, but the rest of the island is relaxed and family-friendly."
+    },
+    {
+      "question": "How many nights do you need on Hvar?",
+      "answer": "Five to seven nights gives time for beaches, island boat trips and a day in Stari Grad."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Korčula",
+      "code": "DBV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Split",
+      "code": "SPU",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Dubrovnik",
+      "code": "DBV",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Dalmatian coast",
+      "code": "SPU",
+      "label": "🛳️ Cruise"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

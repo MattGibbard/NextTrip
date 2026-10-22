@@ -1,0 +1,197 @@
+{
+  "name": "Lefkada",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Lefkada",
+  "intro": "A Greek island joined to the mainland by a causeway, with dazzling white-cliff beaches on the west coast and a laid-back east coast. Here's what Lefkada is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/lefkada-4405357_1280.webp",
+  "image_alt": "A white cliff beach and turquoise sea on Lefkada's west coast",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lefkada",
+  "to_code": "PVK",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 15
+    }
+  },
+  "when_to_go": "June and September are best, with warm sea and calmer beaches. July and August are hot and busy, and the west coast can be windy, which is great for windsurfing at Vasiliki. The season runs from May to October.",
+  "things": [
+    {
+      "name": "Porto Katsiki",
+      "tag": "Outdoors",
+      "blurb": "A dazzling beach beneath white cliffs on the southwest tip.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Egremni beach",
+      "tag": "Outdoors",
+      "blurb": "A long, wild beach with turquoise water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vasiliki",
+      "tag": "Tour",
+      "blurb": "One of Europe's best windsurfing bays, with lessons for beginners.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nydri boat trips",
+      "tag": "Tour",
+      "blurb": "Cruise to Skorpios, Meganisi and sea caves.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dimosari waterfalls",
+      "tag": "Outdoors",
+      "blurb": "A short walk to a waterfall and pool near Nydri.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lefkada town",
+      "tag": "Free",
+      "blurb": "Colourful houses with tin upper floors and a lively harbour.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Lefkada worth visiting?",
+      "answer": "Yes. It has some of Greece's most beautiful beaches, and you can drive there, which makes it easy to explore."
+    },
+    {
+      "question": "How do you get to Lefkada?",
+      "answer": "Fly into Preveza, which has summer flights from the UK, then drive about 30 minutes over the causeway."
+    },
+    {
+      "question": "Do you need a car on Lefkada?",
+      "answer": "Yes, to reach the west coast beaches. Roads are winding, so allow time."
+    },
+    {
+      "question": "What is the best time to visit Lefkada?",
+      "answer": "June and September, around 27 to 28°C."
+    },
+    {
+      "question": "Where should you stay on Lefkada?",
+      "answer": "Nydri is lively and good for boat trips, Vasiliki for windsurfing, and Agios Nikitas for west coast beaches."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kefalonia",
+      "code": "EFL",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Parga",
+      "code": "PVK",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Zakynthos",
+      "code": "ZTH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Corfu",
+      "code": "CFU",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

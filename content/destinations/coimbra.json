@@ -1,0 +1,196 @@
+{
+  "name": "Coimbra",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in Coimbra",
+  "intro": "Portugal's old university city, with a dazzling baroque library, fado sung by students and steep lanes down to the river. Here's what Coimbra is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/coimbra-4470551_1280.webp",
+  "image_alt": "Coimbra climbing up its hill above the Mondego river",
+  "wikipedia": "https://en.wikipedia.org/wiki/Coimbra",
+  "to_code": "OPO",
+  "holiday_types": [
+    "city",
+    "culture"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 16
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 19
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    }
+  },
+  "when_to_go": "April to June and September to October are best. May brings the students' Queima das Fitas celebrations, which are lively and loud. Summer is hot and quieter as students leave. Winter is cool and wet.",
+  "things": [
+    {
+      "name": "Joanina Library",
+      "tag": "Ticketed",
+      "blurb": "A gilded baroque library at the old university. Book a time slot.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "University of Coimbra",
+      "tag": "Ticketed",
+      "blurb": "The clock tower, chapel and great hall at the top of the hill.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Coimbra fado",
+      "tag": "Ticketed",
+      "blurb": "Fado sung by men in student capes, different from Lisbon's.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old Cathedral",
+      "tag": "Ticketed",
+      "blurb": "A fortress-like Romanesque cathedral.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Portugal dos Pequenitos",
+      "tag": "Ticketed",
+      "blurb": "A miniature park of Portugal's buildings, loved by children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Conímbriga",
+      "tag": "Day trip",
+      "blurb": "Roman ruins with mosaics, 20 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Coimbra worth visiting?",
+      "answer": "Yes. The university and library are spectacular, and it's a lively student city between Lisbon and Porto."
+    },
+    {
+      "question": "How many days do you need in Coimbra?",
+      "answer": "One or two days covers the main sights."
+    },
+    {
+      "question": "How do you get to Coimbra?",
+      "answer": "Fly into Porto or Lisbon, then take the train, about an hour from Porto or 1 hour 45 minutes from Lisbon."
+    },
+    {
+      "question": "What is the best time to visit Coimbra?",
+      "answer": "April to June and September to October, around 20 to 27°C."
+    },
+    {
+      "question": "Do you need to book the Joanina Library?",
+      "answer": "Yes, ideally. Tickets are for timed slots and sell out in busy months."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Porto",
+      "code": "OPO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Aveiro",
+      "code": "OPO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Óbidos",
+      "code": "LIS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

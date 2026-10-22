@@ -1,0 +1,197 @@
+{
+  "name": "Nerja",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Nerja",
+  "intro": "A whitewashed Costa del Sol town on low cliffs, with sandy coves, a giant cave and the mountain village of Frigiliana close by. Here's what Nerja is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/nerja-3745827_1280.webp",
+  "image_alt": "The Balcón de Europa in Nerja, a clifftop promenade above small coves",
+  "wikipedia": "https://en.wikipedia.org/wiki/Nerja",
+  "to_code": "AGP",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "nature"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, sunny",
+      "temp": 17
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 18
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 20
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 18
+    }
+  },
+  "when_to_go": "April to June and September to October are best, warm and sunny with a pleasant sea in autumn. July and August are hot and busy. Winter is mild and sunny, around 17 to 18°C, which makes Nerja a popular winter sun spot.",
+  "things": [
+    {
+      "name": "Balcón de Europa",
+      "tag": "Free",
+      "blurb": "A palm-lined clifftop promenade looking along the coast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nerja Caves",
+      "tag": "Ticketed",
+      "blurb": "Huge caverns with one of the world's largest stalactite columns.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Burriana beach",
+      "tag": "Free",
+      "blurb": "The town's main sandy beach, with paella cooked over wood fires.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Río Chíllar",
+      "tag": "Outdoors",
+      "blurb": "Wade up a river through a narrow gorge. Wear shoes you can get wet.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Frigiliana",
+      "tag": "Day trip",
+      "blurb": "One of Andalucía's prettiest white villages, 15 minutes inland.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kayak to Maro cliffs",
+      "tag": "Tour",
+      "blurb": "Paddle to a waterfall that falls straight into the sea.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Nerja worth visiting?",
+      "answer": "Yes. It's one of the prettiest towns on the Costa del Sol, with a real old town, small beaches and no high-rise hotels."
+    },
+    {
+      "question": "How long is the flight to Nerja from the UK?",
+      "answer": "About 2 hours 45 minutes to Málaga, then about an hour by bus or car to Nerja."
+    },
+    {
+      "question": "What is the best time to visit Nerja?",
+      "answer": "April to June and September to October, around 22 to 28°C. Winter is mild enough for walks in the sun."
+    },
+    {
+      "question": "How many nights do you need in Nerja?",
+      "answer": "A week gives time for the beaches, the caves, Frigiliana and the river walk."
+    },
+    {
+      "question": "Is Nerja good for families?",
+      "answer": "Yes. Burriana beach has calm water and play areas, and the caves and river walk are popular with children."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Malaga",
+      "code": "AGP",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Ronda",
+      "code": "AGP",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Granada",
+      "code": "GRX",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Altea",
+      "code": "ALC",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

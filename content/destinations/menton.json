@@ -1,0 +1,197 @@
+{
+  "name": "Menton",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Menton",
+  "intro": "The sunniest town on the French Riviera, a pastel old town by the sea, lemon groves and gardens, right on the Italian border. Here's what Menton is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/menton-4977248_1280.webp",
+  "image_alt": "Menton's pastel old town and church tower above the beach",
+  "wikipedia": "https://en.wikipedia.org/wiki/Menton",
+  "to_code": "NCE",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "culture"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, sunny",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Lemon festival",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 25
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 14
+    }
+  },
+  "when_to_go": "May, June and September are best for the beach, with warm sea and fewer crowds. February brings the Fête du Citron, with giant sculptures made of lemons and oranges. Winter is mild and sunny, which made Menton a classic winter resort.",
+  "things": [
+    {
+      "name": "Old town",
+      "tag": "Free",
+      "blurb": "Pastel houses climbing from the harbour to the Basilica of Saint-Michel.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fête du Citron",
+      "tag": "Ticketed",
+      "blurb": "The lemon festival in February, with citrus floats and sculptures.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jean Cocteau Museum",
+      "tag": "Ticketed",
+      "blurb": "The artist's drawings and films, in a seafront museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Val Rahmeh gardens",
+      "tag": "Ticketed",
+      "blurb": "Tropical gardens on the hillside above the bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Plage des Sablettes",
+      "tag": "Free",
+      "blurb": "The main beach, right below the old town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monaco and Italy",
+      "tag": "Day trip",
+      "blurb": "Monaco is 15 minutes by train, and the Italian market town of Ventimiglia just across the border.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Menton worth visiting?",
+      "answer": "Yes. It's calmer, sunnier and cheaper than Nice or Cannes, with a pretty old town and easy trips to Monaco and Italy."
+    },
+    {
+      "question": "How do you get to Menton?",
+      "answer": "Fly into Nice, which has many direct flights from the UK, then take the train, about 35 minutes."
+    },
+    {
+      "question": "What is the best time to visit Menton?",
+      "answer": "May, June and September, around 21 to 25°C. February for the lemon festival."
+    },
+    {
+      "question": "Does Menton have a sandy beach?",
+      "answer": "Mostly pebbles and coarse sand. Plage des Sablettes is the most popular."
+    },
+    {
+      "question": "How many nights do you need in Menton?",
+      "answer": "Four to seven nights gives time for the beach, gardens and day trips along the coast."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Nice",
+      "code": "NCE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Corsica",
+      "code": "AJA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Cinque Terre",
+      "code": "PSA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Maggiore",
+      "code": "MXP",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

@@ -1,0 +1,197 @@
+{
+  "name": "Cefalù",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Cefalù",
+  "intro": "A medieval fishing town on Sicily's north coast, with a sandy beach right below a Norman cathedral and a great rock looming above. Here's what Cefalù is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/cefalu-3749526_1280.webp",
+  "image_alt": "Cefalù's old town on the water, with its great rock rising behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cefalù",
+  "to_code": "PMO",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "relax"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 16
+    }
+  },
+  "when_to_go": "May, June and September are best, with warm sea and a lively but relaxed town. July and August are hot and crowded on the beach. Winter is mild and quiet, good for walks but too cool for most people to swim.",
+  "things": [
+    {
+      "name": "Cefalù Cathedral",
+      "tag": "Ticketed",
+      "blurb": "A Norman cathedral with a glittering golden mosaic of Christ, and a rooftop walk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Town beach",
+      "tag": "Free",
+      "blurb": "A long sandy beach right beside the old town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "La Rocca",
+      "tag": "Ticketed",
+      "blurb": "Climb the rock above town to a ruined temple and castle walls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lavatoio Medievale",
+      "tag": "Free",
+      "blurb": "Old stone washhouses where a stream runs into the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Palermo",
+      "tag": "Day trip",
+      "blurb": "Markets, street food and Arab-Norman churches, an hour away by train.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Madonie mountains",
+      "tag": "Day trip",
+      "blurb": "Hill villages and walks in the park behind the coast.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Cefalù worth visiting?",
+      "answer": "Yes. It's one of the few Sicilian towns where a lovely old centre sits right on a sandy beach, which makes it great for a relaxed holiday."
+    },
+    {
+      "question": "How many days do you need in Cefalù?",
+      "answer": "Three or four days covers the town, the rock and a day in Palermo. A week makes a good beach holiday."
+    },
+    {
+      "question": "What is the best time to visit Cefalù?",
+      "answer": "May, June and September, around 23 to 28°C."
+    },
+    {
+      "question": "How do you get to Cefalù?",
+      "answer": "Fly into Palermo, which has direct flights from the UK, then take the train, about an hour from Palermo city."
+    },
+    {
+      "question": "Is Cefalù good for families?",
+      "answer": "Yes. The beach is sandy and shelves gently, and the town is small and easy to walk."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Taormina",
+      "code": "CTA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Sicily",
+      "code": "CTA",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Syracuse",
+      "code": "CTA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Malta",
+      "code": "MLA",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

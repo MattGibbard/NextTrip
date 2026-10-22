@@ -1,0 +1,197 @@
+{
+  "name": "Gorges du Verdon",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Gorges du Verdon",
+  "intro": "Europe's deepest canyon, with turquoise water you can kayak or pedal between limestone walls, on the edge of Provence's lavender fields. Here's what Gorges du Verdon is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/gorges-du-verdon-969748_1280.webp",
+  "image_alt": "The turquoise Verdon river between high limestone cliffs",
+  "wikipedia": "https://en.wikipedia.org/wiki/Verdon_Gorge",
+  "to_code": "MRS",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 10
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 17
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Lavender",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Hot, lavender",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 19
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 13
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    }
+  },
+  "when_to_go": "May, June and September are best, warm for kayaking and hiking with fewer people on the water. Lavender on the Valensole plateau peaks from late June to mid-July. July and August are hot and busy. Many services close from November to March.",
+  "things": [
+    {
+      "name": "Kayak or pedalo",
+      "tag": "Tour",
+      "blurb": "Paddle from the Lac de Sainte-Croix into the gorge between towering cliffs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Route des Crêtes",
+      "tag": "Outdoors",
+      "blurb": "A clifftop loop road with lookouts straight down into the canyon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sentier Blanc-Martel",
+      "tag": "Outdoors",
+      "blurb": "A classic full-day hike along the bottom of the gorge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Moustiers-Sainte-Marie",
+      "tag": "Free",
+      "blurb": "A cliffside village with a gold star hanging between two rocks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lac de Sainte-Croix",
+      "tag": "Outdoors",
+      "blurb": "A big turquoise lake with beaches for swimming.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Valensole lavender",
+      "tag": "Free",
+      "blurb": "Fields of purple lavender in early summer, 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Gorges du Verdon worth visiting?",
+      "answer": "Yes. It's one of the most spectacular natural sights in Europe, and kayaking into the gorge is a highlight for all ages."
+    },
+    {
+      "question": "How many days do you need at the Gorges du Verdon?",
+      "answer": "Two or three days covers the drive, a kayak trip and Moustiers. Add a few days for Provence."
+    },
+    {
+      "question": "How do you get to the Gorges du Verdon?",
+      "answer": "Fly into Marseille or Nice, both with direct flights from the UK, then drive about 2 hours. You need a car."
+    },
+    {
+      "question": "When does the lavender bloom?",
+      "answer": "From late June to mid-July on the Valensole plateau, before it's harvested."
+    },
+    {
+      "question": "Can you swim in the Gorges du Verdon?",
+      "answer": "Yes, at the Lac de Sainte-Croix and in calm spots in the gorge. The water is cold, and flows can change with dam releases."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Nice",
+      "code": "NCE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Annecy",
+      "code": "GVA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Dolomites",
+      "code": "VCE",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Corsica",
+      "code": "AJA",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

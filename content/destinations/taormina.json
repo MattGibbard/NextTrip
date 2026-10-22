@@ -1,0 +1,197 @@
+{
+  "name": "Taormina",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Taormina",
+  "intro": "A hilltop town in Sicily with an ancient Greek theatre framing Mount Etna and the sea, and a tiny island beach below. Here's what Taormina is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/taormina-5580238_1280.webp",
+  "image_alt": "Taormina's houses spread across a green hillside above the sea",
+  "wikipedia": "https://en.wikipedia.org/wiki/Taormina",
+  "to_code": "CTA",
+  "holiday_types": [
+    "culture",
+    "beach",
+    "relax"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 15
+    }
+  },
+  "when_to_go": "April to June, September and October are best, warm and sunny without the summer crowds. July and August are hot and busy, with cruise passengers filling the main street. Winter is mild and peaceful, and Etna is often snow-capped, though many hotels close from November to March.",
+  "things": [
+    {
+      "name": "Teatro Antico",
+      "tag": "Ticketed",
+      "blurb": "The Greek-Roman theatre with Etna and the coast as its backdrop. Concerts are held here in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Isola Bella",
+      "tag": "Ticketed",
+      "blurb": "A tiny island nature reserve joined to the pebble beach by a sandbar.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Corso Umberto",
+      "tag": "Free",
+      "blurb": "The main street of shops, churches and piazzas with sea views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Etna",
+      "tag": "Day trip",
+      "blurb": "Tours and cable cars up Europe's highest active volcano, about an hour away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Castelmola",
+      "tag": "Free",
+      "blurb": "A hill village above Taormina with even bigger views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alcantara Gorge",
+      "tag": "Day trip",
+      "blurb": "Wade through icy water between basalt columns.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Taormina worth visiting?",
+      "answer": "Yes. It's one of the most beautiful towns in Sicily, with the Greek theatre and Etna views, though it's busy and pricey in summer."
+    },
+    {
+      "question": "How many days do you need in Taormina?",
+      "answer": "Two or three days covers the town, Isola Bella and Etna. Stay a week to relax and see more of eastern Sicily."
+    },
+    {
+      "question": "What is the best time to visit Taormina?",
+      "answer": "May, June, September and October, around 23 to 27°C. August is very busy."
+    },
+    {
+      "question": "How do you get to Taormina?",
+      "answer": "Fly into Catania, which has direct flights from the UK, then take the bus, about 1 hour 15 minutes."
+    },
+    {
+      "question": "Does Taormina have a beach?",
+      "answer": "Yes, below the town. Take the cable car down to Mazzarò and Isola Bella, which are pebble beaches with clear water."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Sicily",
+      "code": "CTA",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Syracuse",
+      "code": "CTA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Cefalù",
+      "code": "PMO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Malta",
+      "code": "MLA",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

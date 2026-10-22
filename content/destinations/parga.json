@@ -1,0 +1,197 @@
+{
+  "name": "Parga",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Parga",
+  "intro": "A colourful mainland Greek town tumbling down to a bay of islets, with a Venetian castle above and sandy beaches all around. Here's what Parga is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/parga-1163344_1280.webp",
+  "image_alt": "Parga's colourful houses rising above the harbour",
+  "wikipedia": "https://en.wikipedia.org/wiki/Parga",
+  "to_code": "PVK",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "culture"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Closed, mild",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 15
+    }
+  },
+  "when_to_go": "June and September are best, with a warm sea and fewer crowds. July and August are hot and busy. The season runs from May to October, and most hotels close in winter.",
+  "things": [
+    {
+      "name": "Venetian castle",
+      "tag": "Free",
+      "blurb": "Climb to the ruined castle for the view over the town and islets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Valtos beach",
+      "tag": "Outdoors",
+      "blurb": "A long sandy beach over the hill, or by water taxi.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lichnos beach",
+      "tag": "Outdoors",
+      "blurb": "A sheltered bay with sea caves you can visit by boat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Acheron river",
+      "tag": "Day trip",
+      "blurb": "Wade up the cold, clear river through a gorge, said to be the gateway to Hades.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paxos and Antipaxos",
+      "tag": "Day trip",
+      "blurb": "Boat trips to the islands' turquoise coves.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Waterfront tavernas",
+      "tag": "Food",
+      "blurb": "Grilled fish and meze looking out at the island chapel.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Parga worth visiting?",
+      "answer": "Yes. It's one of the prettiest towns on the Greek mainland, with island-style beaches but easier to reach than many islands."
+    },
+    {
+      "question": "How do you get to Parga?",
+      "answer": "Fly into Preveza, about an hour's drive away, which has summer flights from the UK. Corfu is another option, with a ferry and drive."
+    },
+    {
+      "question": "What is the best time to visit Parga?",
+      "answer": "June and September, around 27 to 28°C with a warm sea."
+    },
+    {
+      "question": "How many nights do you need in Parga?",
+      "answer": "A week gives time for the beaches, a boat trip to Paxos and the Acheron river."
+    },
+    {
+      "question": "Is Parga good for families?",
+      "answer": "Yes. The beaches are sandy and calm, and boat taxis make getting around easy."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Paxos",
+      "code": "CFU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lefkada",
+      "code": "PVK",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Corfu",
+      "code": "CFU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Kefalonia",
+      "code": "EFL",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

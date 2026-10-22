@@ -1,0 +1,197 @@
+{
+  "name": "Lecce",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Lecce",
+  "intro": "A golden-stone baroque city in the heel of Italy, full of ornate churches, a Roman amphitheatre and beaches on both coasts within half an hour. Here's what Lecce is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/lecce-3635437_1280.webp",
+  "image_alt": "The baroque cathedral bell tower and seminary in Lecce's Piazza del Duomo",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lecce",
+  "to_code": "BDS",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive",
+      "temp": 14
+    }
+  },
+  "when_to_go": "May, June, September and early October are best, warm enough for the beaches but comfortable for walking the old town. July and August are very hot and the Salento coast is packed with Italian holidaymakers. Winter is mild and quiet, with many beach places closed but the city still lively.",
+  "things": [
+    {
+      "name": "Basilica di Santa Croce",
+      "tag": "Ticketed",
+      "blurb": "The most extravagant baroque façade in town, covered in carved animals, fruit and figures.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Piazza del Duomo",
+      "tag": "Free",
+      "blurb": "An enclosed square of cathedral, bell tower and palaces, beautiful when lit up at night.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Roman amphitheatre",
+      "tag": "Free",
+      "blurb": "Half-dug-out ruins right in the main square, Piazza Sant'Oronzo.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pasticciotto",
+      "tag": "Food",
+      "blurb": "A warm custard-filled pastry, the classic Lecce breakfast with an iced almond coffee.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Torre dell'Orso",
+      "tag": "Day trip",
+      "blurb": "A sandy beach with two sea stacks and clear water, about 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Otranto",
+      "tag": "Day trip",
+      "blurb": "A walled town on the sea with a cathedral floor mosaic, 45 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Lecce worth visiting?",
+      "answer": "Yes. It's one of southern Italy's most beautiful cities, cheaper and calmer than the big names, with excellent food and beaches on two seas within half an hour."
+    },
+    {
+      "question": "How many days do you need in Lecce?",
+      "answer": "Two or three days covers the city. Stay a week to add the Salento beaches, Otranto and Gallipoli."
+    },
+    {
+      "question": "What is the best time to visit Lecce?",
+      "answer": "May, June and September, when it's around 24 to 28°C and the sea is warm. August is very hot and busy."
+    },
+    {
+      "question": "How do you get to Lecce?",
+      "answer": "Fly into Brindisi, about 40 minutes away by bus or car, or Bari, about 2 hours. There are direct flights from the UK to both, more in summer."
+    },
+    {
+      "question": "Do you need a car in Lecce?",
+      "answer": "Not in the city, which is walkable. A car makes the beaches and villages of the Salento far easier to reach."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Puglia",
+      "code": "BRI",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Matera",
+      "code": "BRI",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Polignano a Mare",
+      "code": "BRI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Syracuse",
+      "code": "CTA",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

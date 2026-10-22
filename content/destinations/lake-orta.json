@@ -1,0 +1,197 @@
+{
+  "name": "Lake Orta",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Lake Orta",
+  "intro": "A small, quiet lake in northern Italy, with the cobbled village of Orta San Giulio facing a tiny island monastery. Here's what Lake Orta is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/lake-orta-5374056_1280.webp",
+  "image_alt": "The little island of San Giulio in Lake Orta, covered in old buildings",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lake_Orta",
+  "to_code": "MXP",
+  "holiday_types": [
+    "nature",
+    "relax",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 6
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 13
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 17
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 27
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 17
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 11
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 7
+    }
+  },
+  "when_to_go": "April to June and September to October are lovely, with gardens in bloom or autumn colour and few crowds. July and August are warm and good for swimming. Winter is cold and very quiet, with many places closed.",
+  "things": [
+    {
+      "name": "Orta San Giulio",
+      "tag": "Free",
+      "blurb": "A pretty village of cobbled lanes, a lakeside square and frescoed houses.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Isola San Giulio",
+      "tag": "Free",
+      "blurb": "Take a short boat ride to the island, with its basilica and the silent 'Way of Silence'.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sacro Monte di Orta",
+      "tag": "Free",
+      "blurb": "A wooded hill above the village with 20 frescoed chapels.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake swimming",
+      "tag": "Outdoors",
+      "blurb": "Swim from the lidos and little beaches around the shore.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Walk around the lake",
+      "tag": "Outdoors",
+      "blurb": "Easy paths link villages, with views of the island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake Maggiore",
+      "tag": "Day trip",
+      "blurb": "Stresa and the Borromean Islands, about 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Lake Orta worth visiting?",
+      "answer": "Yes, if you want a quieter alternative to Lake Como or Garda. It's small, peaceful and very pretty."
+    },
+    {
+      "question": "How many days do you need at Lake Orta?",
+      "answer": "Two or three days is enough. Combine it with Lake Maggiore for a week."
+    },
+    {
+      "question": "What is the best time to visit Lake Orta?",
+      "answer": "May, June and September, around 21 to 25°C."
+    },
+    {
+      "question": "How do you get to Lake Orta?",
+      "answer": "Fly into Milan Malpensa, about 45 minutes' drive away. Trains reach Orta-Miasino station, a short walk from the village."
+    },
+    {
+      "question": "Lake Orta or Lake Como?",
+      "answer": "Lake Orta is much smaller, calmer and cheaper. Lake Como has more famous villas and towns but also far more visitors."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lake Maggiore",
+      "code": "MXP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Como",
+      "code": "MXP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Lucerne",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

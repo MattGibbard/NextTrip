@@ -1,0 +1,197 @@
+{
+  "name": "Saint-Malo",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Saint-Malo",
+  "intro": "A granite walled port in Brittany where huge tides reveal islands you can walk to, with sandy beaches, seafood and crêpes. Here's what Saint-Malo is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/saint-malo-4593968_1280.webp",
+  "image_alt": "The walled old town of Saint-Malo seen across the rocks at low tide",
+  "wikipedia": "https://en.wikipedia.org/wiki/Saint-Malo",
+  "to_code": "RNS",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book. You can also take your car on a ferry from the south coast of England.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 12
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 14
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 17
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 16
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 12
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 9
+    }
+  },
+  "when_to_go": "May to September is best, warm enough for beaches and walking the ramparts. July and August are busy. Spring and autumn bring the biggest tides, which are dramatic to watch. Winter is mild but windy.",
+  "things": [
+    {
+      "name": "Ramparts",
+      "tag": "Free",
+      "blurb": "Walk all the way around the walls of the old town for sea views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Bé",
+      "tag": "Free",
+      "blurb": "Walk across the sand at low tide to a small island. Check the tide times.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Plage du Sillon",
+      "tag": "Free",
+      "blurb": "A long sandy beach with wooden breakwaters.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Aquarium",
+      "tag": "Ticketed",
+      "blurb": "Sharks and a 'Nautibus' submarine ride, popular with children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dinan",
+      "tag": "Day trip",
+      "blurb": "A medieval half-timbered town on a river, 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cancale oysters",
+      "tag": "Food",
+      "blurb": "Eat oysters by the sea in the oyster capital of Brittany, 20 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Saint-Malo worth visiting?",
+      "answer": "Yes. The walled old town, beaches and tides make it one of France's most enjoyable seaside towns."
+    },
+    {
+      "question": "How do you get to Saint-Malo?",
+      "answer": "Take the overnight ferry from Portsmouth straight into Saint-Malo, or fly to Rennes, an hour away by train."
+    },
+    {
+      "question": "How many days do you need in Saint-Malo?",
+      "answer": "Two or three days covers the town, beaches and Dinan. Add Mont-Saint-Michel for a long weekend."
+    },
+    {
+      "question": "What is the best time to visit Saint-Malo?",
+      "answer": "May to September, around 17 to 22°C."
+    },
+    {
+      "question": "Can you visit Mont-Saint-Michel from Saint-Malo?",
+      "answer": "Yes. It's about 50 minutes' drive away, and buses and tours run in season."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Mont-Saint-Michel",
+      "code": "RNS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Étretat",
+      "code": "CDG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Bordeaux",
+      "code": "BOD",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Asturias",
+      "code": "OVD",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

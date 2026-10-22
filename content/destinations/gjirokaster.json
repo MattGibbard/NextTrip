@@ -1,0 +1,196 @@
+{
+  "name": "Gjirokastër",
+  "published": true,
+  "country": "AL",
+  "title": "Holidays in Gjirokastër",
+  "intro": "Albania's 'city of stone', a hillside of Ottoman tower houses with slate roofs below a huge castle, in a valley of mountains. Here's what Gjirokastër is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/gjirokaster-3802128_1280.webp",
+  "image_alt": "The Old Bazaar street of Gjirokastër, lined with carpets and craft shops",
+  "wikipedia": "https://en.wikipedia.org/wiki/Gjirokastër",
+  "to_code": "TIA",
+  "holiday_types": [
+    "culture",
+    "nature"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Albanian lek (L)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Euros are often accepted in tourist areas, but prices are better in lek. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 11
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 15
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 10
+    }
+  },
+  "when_to_go": "April, May, September and October are best for walking the steep streets. July and August are very hot but combine well with the beaches at Saranda and Ksamil, an hour away. Winter is cold and rainy.",
+  "things": [
+    {
+      "name": "Gjirokastër Castle",
+      "tag": "Ticketed",
+      "blurb": "A huge hilltop fortress with old cannons and a war plane.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Skenduli House",
+      "tag": "Ticketed",
+      "blurb": "A traditional Ottoman tower house, shown by its family.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old Bazaar",
+      "tag": "Free",
+      "blurb": "Stone lanes of craft shops and cafés.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cold War tunnel",
+      "tag": "Ticketed",
+      "blurb": "A bunker built under the city in communist times.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Eye spring",
+      "tag": "Day trip",
+      "blurb": "A deep, glowing blue spring in the woods, 40 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Butrint",
+      "tag": "Day trip",
+      "blurb": "Ancient ruins by a lagoon near Saranda, about 1 hour 15 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Gjirokastër worth visiting?",
+      "answer": "Yes. It's a UNESCO-listed old town, unlike anywhere else, and easy to add to a beach holiday in southern Albania."
+    },
+    {
+      "question": "How do you get to Gjirokastër?",
+      "answer": "Fly into Tirana, about 3 hours away, or to Corfu and take the ferry to Saranda, an hour away."
+    },
+    {
+      "question": "How many days do you need in Gjirokastër?",
+      "answer": "One or two days covers the town and the Blue Eye."
+    },
+    {
+      "question": "What is the best time to visit Gjirokastër?",
+      "answer": "Spring and autumn, around 19 to 28°C."
+    },
+    {
+      "question": "Is Albania safe to visit?",
+      "answer": "Albania is generally considered safe and welcoming to visitors. Check the latest GOV.UK travel advice before you book."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Berat",
+      "code": "TIA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Saranda",
+      "code": "TIA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lake Ohrid",
+      "code": "OHD",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

@@ -1,0 +1,197 @@
+{
+  "name": "Siena",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Siena",
+  "intro": "A medieval Tuscan city built around a shell-shaped piazza, famous for its bareback horse race and striped Gothic cathedral. Here's what Siena is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/siena-8009248_1280.webp",
+  "image_alt": "Siena's cathedral and red-brick houses on their hilltop",
+  "wikipedia": "https://en.wikipedia.org/wiki/Siena",
+  "to_code": "FLR",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 10
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, Palio",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, Palio",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 14
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive",
+      "temp": 10
+    }
+  },
+  "when_to_go": "April to June and September to October are best, warm and good for countryside drives. The Palio horse race takes place on 2 July and 16 August, when the city is packed. July and August are hot. Winter is quiet and cool.",
+  "things": [
+    {
+      "name": "Piazza del Campo",
+      "tag": "Free",
+      "blurb": "The sloping, shell-shaped main square, perfect for sitting on the bricks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Siena Cathedral",
+      "tag": "Ticketed",
+      "blurb": "Black-and-white striped marble, inlaid floors and the frescoed Piccolomini Library.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Torre del Mangia",
+      "tag": "Ticketed",
+      "blurb": "Climb the tall tower over the Campo for a view of the rooftops.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Palio",
+      "tag": "Free",
+      "blurb": "Watch the frantic horse race round the Campo, or the trial races in the days before.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "San Gimignano",
+      "tag": "Day trip",
+      "blurb": "The town of medieval towers, about an hour away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Val d'Orcia",
+      "tag": "Day trip",
+      "blurb": "Rolling hills, cypress trees and the wine towns of Montalcino and Montepulciano.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Siena worth visiting?",
+      "answer": "Yes. It's one of the best-preserved medieval cities in Italy and much calmer than Florence, especially in the evening."
+    },
+    {
+      "question": "How many days do you need in Siena?",
+      "answer": "Two days covers the city. Use it as a base for three or four to see San Gimignano and the Val d'Orcia."
+    },
+    {
+      "question": "What is the best time to visit Siena?",
+      "answer": "April to June and September, around 19 to 28°C. Book far ahead for the Palio in July and August."
+    },
+    {
+      "question": "How do you get to Siena?",
+      "answer": "Fly into Florence or Pisa, both with direct flights from the UK, then take the bus from Florence, about 1 hour 15 minutes."
+    },
+    {
+      "question": "Siena or Florence?",
+      "answer": "Florence has more famous art, but Siena is smaller, quieter and easier to enjoy at a slow pace. Many people visit both."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Florence",
+      "code": "FLR",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Lucca",
+      "code": "PSA",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bologna",
+      "code": "BLQ",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Rome",
+      "code": "FCO",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

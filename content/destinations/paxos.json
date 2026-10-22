@@ -1,0 +1,197 @@
+{
+  "name": "Paxos",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Paxos",
+  "intro": "A tiny green Ionian island of olive groves, harbour villages and turquoise coves, with even smaller Antipaxos next door. Here's what Paxos is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/paxos-2063834_1280.webp",
+  "image_alt": "The calm turquoise bay at Lakka on Paxos, with olive trees on the shore",
+  "wikipedia": "https://en.wikipedia.org/wiki/Paxos",
+  "to_code": "CFU",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "nature"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 15
+    }
+  },
+  "when_to_go": "June and September are best for warm sea and calm coves. August is busy with yachts and Italian visitors. The season runs from May to October, and the island is very quiet in winter.",
+  "things": [
+    {
+      "name": "Gaios",
+      "tag": "Free",
+      "blurb": "The main harbour village, with a tiny island across a narrow channel.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Loggos and Lakka",
+      "tag": "Free",
+      "blurb": "Two more pretty harbour villages, each with small beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Antipaxos",
+      "tag": "Day trip",
+      "blurb": "Voutoumi and Vrika beaches have some of the clearest water in Greece.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue caves",
+      "tag": "Tour",
+      "blurb": "Boat trips along the west coast's cliffs and sea caves.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hire a small boat",
+      "tag": "Outdoors",
+      "blurb": "No licence is needed for small boats, the best way to find your own cove.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Olive groves walks",
+      "tag": "Outdoors",
+      "blurb": "Old paths through ancient olive trees across the island.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Paxos worth visiting?",
+      "answer": "Yes, for a peaceful holiday. It's small, unspoilt and beautiful, with no big resorts."
+    },
+    {
+      "question": "How do you get to Paxos?",
+      "answer": "Fly into Corfu, which has direct flights from the UK, then take the ferry, about 1 hour to 1 hour 30 minutes."
+    },
+    {
+      "question": "Does Paxos have sandy beaches?",
+      "answer": "Mostly pebble coves. The sandy beaches are on Antipaxos, a short boat ride away."
+    },
+    {
+      "question": "What is the best time to visit Paxos?",
+      "answer": "June and September, around 27°C."
+    },
+    {
+      "question": "Do you need a car on Paxos?",
+      "answer": "Not really. A scooter, small boat or taxi is enough on such a small island."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Corfu",
+      "code": "CFU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Parga",
+      "code": "PVK",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lefkada",
+      "code": "PVK",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Milos",
+      "code": "MLO",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

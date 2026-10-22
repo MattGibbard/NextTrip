@@ -1,0 +1,197 @@
+{
+  "name": "Trogir",
+  "published": true,
+  "country": "HR",
+  "title": "Holidays in Trogir",
+  "intro": "A tiny medieval island town of stone lanes and palaces, joined by bridges to the mainland and Čiovo's beaches, minutes from Split airport. Here's what Trogir is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/trogir-6996783_1280.webp",
+  "image_alt": "Trogir's old town and waterfront from above, with the fortress in front",
+  "wikipedia": "https://en.wikipedia.org/wiki/Trogir",
+  "to_code": "SPU",
+  "holiday_types": [
+    "culture",
+    "beach",
+    "relax"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 11
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 12
+    }
+  },
+  "when_to_go": "May, June and September are best, warm with a pleasant sea. July and August are hot and busy. Spring and autumn are good for sightseeing in Trogir and Split.",
+  "things": [
+    {
+      "name": "Old town",
+      "tag": "Free",
+      "blurb": "A UNESCO-listed maze of Romanesque and Renaissance buildings on a small island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cathedral of St Lawrence",
+      "tag": "Ticketed",
+      "blurb": "Famous for its carved stone portal and bell tower climb.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kamerlengo Fortress",
+      "tag": "Ticketed",
+      "blurb": "Walk the walls for views over the harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Riva promenade",
+      "tag": "Free",
+      "blurb": "A palm-lined waterfront with cafés and yachts.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Čiovo beaches",
+      "tag": "Outdoors",
+      "blurb": "Okrug Gornji and quieter coves across the bridge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Split",
+      "tag": "Day trip",
+      "blurb": "Diocletian's Palace, 30 minutes away by bus or boat.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Trogir worth visiting?",
+      "answer": "Yes. It's a beautiful, compact old town, a quieter base than Split, and very close to the airport."
+    },
+    {
+      "question": "How do you get to Trogir?",
+      "answer": "Fly into Split, which has direct flights from the UK. Trogir is just 10 minutes from the airport."
+    },
+    {
+      "question": "What is the best time to visit Trogir?",
+      "answer": "May, June and September, around 23 to 28°C."
+    },
+    {
+      "question": "Trogir or Split?",
+      "answer": "Trogir is smaller and calmer, Split is a bigger city with more going on. Many people stay in Trogir and visit Split."
+    },
+    {
+      "question": "Does Trogir have a beach?",
+      "answer": "Not in the old town, but Čiovo's beaches are just over the bridge."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Split",
+      "code": "SPU",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Šibenik",
+      "code": "SPU",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Hvar",
+      "code": "SPU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Zadar",
+      "code": "ZAD",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

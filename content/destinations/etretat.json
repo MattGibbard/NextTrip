@@ -1,0 +1,197 @@
+{
+  "name": "Étretat",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Étretat",
+  "intro": "A Normandy seaside town between huge white chalk cliffs and sea arches, with clifftop walks that inspired Monet. Here's what Étretat is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/etretat-7364988_1280.webp",
+  "image_alt": "The chalk arch and needle rock at Étretat above a pebble beach",
+  "wikipedia": "https://en.wikipedia.org/wiki/Étretat",
+  "to_code": "CDG",
+  "holiday_types": [
+    "nature",
+    "beach",
+    "road-trip"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book. You can also take your car on a ferry from the south coast of England.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, stormy",
+      "temp": 7
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 8
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 11
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 13
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 19
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 19
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 11
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 8
+    }
+  },
+  "when_to_go": "May to September is best for cliff walks and the pebble beach, with long light evenings. Weekends and August get busy. Spring and autumn are quieter, and winter storms are dramatic but chilly.",
+  "things": [
+    {
+      "name": "Falaise d'Aval",
+      "tag": "Outdoors",
+      "blurb": "Walk the cliff to see the Porte d'Aval arch and the Aiguille needle.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Falaise d'Amont",
+      "tag": "Outdoors",
+      "blurb": "Climb to the chapel on the opposite cliff for the classic view.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pebble beach",
+      "tag": "Free",
+      "blurb": "Watch the sea between the cliffs, or swim on a calm summer day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jardins d'Étretat",
+      "tag": "Ticketed",
+      "blurb": "Modern art gardens on the clifftop.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Honfleur",
+      "tag": "Day trip",
+      "blurb": "A picture-perfect harbour town, about 45 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Le Havre",
+      "tag": "Day trip",
+      "blurb": "A modern city with a great art museum, 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Étretat worth visiting?",
+      "answer": "Yes. The cliffs and arches are among the most beautiful coastline in France, and it combines well with Honfleur and Normandy's beaches."
+    },
+    {
+      "question": "How do you get to Étretat?",
+      "answer": "Take a ferry to Le Havre, 30 minutes away, or drive from Calais in about 3 hours. By air, fly to Paris and drive about 2 hours 30 minutes."
+    },
+    {
+      "question": "How many days do you need in Étretat?",
+      "answer": "One or two days covers the cliffs. Spend a long weekend to add Honfleur."
+    },
+    {
+      "question": "What is the best time to visit Étretat?",
+      "answer": "May to September, around 16 to 22°C."
+    },
+    {
+      "question": "Is Étretat safe for children?",
+      "answer": "The cliff paths are unfenced in places and close to the edge, so keep children close. Check the tides before walking on the beach."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Saint-Malo",
+      "code": "RNS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Mont-Saint-Michel",
+      "code": "RNS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Paris",
+      "code": "CDG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bruges",
+      "code": "BRU",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

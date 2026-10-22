@@ -1,0 +1,197 @@
+{
+  "name": "Girona",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Girona",
+  "intro": "A colourful medieval city of riverside houses, Roman walls and a cathedral staircase from Game of Thrones, with the Costa Brava close by. Here's what Girona is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/girona-9597447_1280.webp",
+  "image_alt": "Colourful houses along the Onyar river in Girona, reflected in the water",
+  "wikipedia": "https://en.wikipedia.org/wiki/Girona",
+  "to_code": "GRO",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Flower festival",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 13
+    }
+  },
+  "when_to_go": "April to June and September to October are best for walking and beach day trips. Temps de Flors in May fills the old town with flower displays. July and August are hot but great for the Costa Brava. Winter is cool and quiet.",
+  "things": [
+    {
+      "name": "City walls",
+      "tag": "Free",
+      "blurb": "Walk the medieval walls for views over the rooftops and cathedral.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Girona Cathedral",
+      "tag": "Ticketed",
+      "blurb": "Climb the huge Baroque steps to a vast Gothic nave.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Onyar river houses",
+      "tag": "Free",
+      "blurb": "Colourful houses lining the river, best seen from the Eiffel bridge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jewish Quarter",
+      "tag": "Free",
+      "blurb": "One of Europe's best-kept medieval Jewish quarters, with a history museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Arab Baths",
+      "tag": "Ticketed",
+      "blurb": "A small 12th-century bathhouse with a pretty domed room.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Costa Brava",
+      "tag": "Day trip",
+      "blurb": "Coves and fishing villages like Tossa de Mar and Calella, under an hour away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Girona worth visiting?",
+      "answer": "Yes. It's a beautiful, walkable old city with great food, and a much calmer alternative to Barcelona."
+    },
+    {
+      "question": "How many days do you need in Girona?",
+      "answer": "Two days covers the city. Add the Costa Brava or Figueres for a longer stay."
+    },
+    {
+      "question": "What is the best time to visit Girona?",
+      "answer": "April to June and September, around 19 to 27°C."
+    },
+    {
+      "question": "How do you get to Girona?",
+      "answer": "Fly into Girona, which has some flights from the UK, or into Barcelona, 40 minutes away by high-speed train."
+    },
+    {
+      "question": "Where was Game of Thrones filmed in Girona?",
+      "answer": "Around the cathedral steps, the Jewish Quarter and the Arab Baths, which became parts of Braavos and King's Landing."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Barcelona",
+      "code": "BCN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Valencia",
+      "code": "VLC",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Carcassonne",
+      "code": "CCF",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "San Sebastián",
+      "code": "BIO",
+      "label": "🍷 Food & drink"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

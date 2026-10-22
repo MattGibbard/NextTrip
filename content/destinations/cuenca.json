@@ -1,0 +1,196 @@
+{
+  "name": "Cuenca",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Cuenca",
+  "intro": "A clifftop town in central Spain famous for its hanging houses balanced over a gorge, with a modern art museum inside one. Here's what Cuenca is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/cuenca-1059909_1280.webp",
+  "image_alt": "Cuenca's hanging houses balanced on the edge of a cliff",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cuenca,_Spain",
+  "to_code": "MAD",
+  "holiday_types": [
+    "culture",
+    "nature"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 11
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 17
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 19
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 13
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    }
+  },
+  "when_to_go": "April to June and September to October are best, mild for walking the gorges. Summer is hot but drier and cooler at night than Madrid. Winter is cold, and Easter Week brings some of Spain's most dramatic processions.",
+  "things": [
+    {
+      "name": "Casas Colgadas",
+      "tag": "Free",
+      "blurb": "The hanging houses, with balconies jutting out over the Huécar gorge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "San Pablo Bridge",
+      "tag": "Free",
+      "blurb": "An iron footbridge with the best view of the hanging houses.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Museum of Spanish Abstract Art",
+      "tag": "Ticketed",
+      "blurb": "Modern art inside one of the hanging houses.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cuenca Cathedral",
+      "tag": "Ticketed",
+      "blurb": "An unusual Anglo-Norman style cathedral on the main square.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ciudad Encantada",
+      "tag": "Day trip",
+      "blurb": "An 'enchanted city' of strange rock shapes, 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gorge walks",
+      "tag": "Outdoors",
+      "blurb": "Easy paths along the Júcar and Huécar rivers below town.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Cuenca worth visiting?",
+      "answer": "Yes. The hanging houses and the clifftop old town are unique, and it's far less visited than Toledo or Segovia."
+    },
+    {
+      "question": "How many days do you need in Cuenca?",
+      "answer": "One or two days covers the old town and the Ciudad Encantada."
+    },
+    {
+      "question": "How do you get to Cuenca?",
+      "answer": "Fly into Madrid, then take the high-speed train, about an hour. The fast-train station is outside town, so take the bus up."
+    },
+    {
+      "question": "What is the best time to visit Cuenca?",
+      "answer": "April to June and September to October, around 17 to 28°C."
+    },
+    {
+      "question": "Can you visit Cuenca from Madrid?",
+      "answer": "Yes, as a day trip, though staying a night means you see the town lit up."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Toledo",
+      "code": "MAD",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Madrid",
+      "code": "MAD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Valencia",
+      "code": "VLC",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Matera",
+      "code": "BRI",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

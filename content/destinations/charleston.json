@@ -1,0 +1,204 @@
+{
+  "name": "Charleston",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Charleston",
+  "intro": "Pastel-painted houses, cobbled streets, cannon on the waterfront and some of the best Southern cooking anywhere, with beaches close by. Here's what Charleston is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/charleston-4036370_1280.webp",
+  "image_alt": "Pastel-painted houses with flower boxes on a street in Charleston",
+  "wikipedia": "https://en.wikipedia.org/wiki/Charleston,_South_Carolina",
+  "to_code": "CHS",
+  "holiday_types": [
+    "city",
+    "food",
+    "beach"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders need an ESTA, applied for online before you fly. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 17
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 21
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 29
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Hot, humid",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot, humid",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot, storms",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hot, hurricanes",
+      "temp": 30
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive",
+      "temp": 16
+    }
+  },
+  "when_to_go": "March to May and October to November are best, warm and dry with blooming gardens in spring. Summer is hot and humid with afternoon storms, though the beaches are at their best. Hurricane season runs from June to November, peaking in September. Winters are mild and quiet.",
+  "things": [
+    {
+      "name": "Rainbow Row",
+      "tag": "Free",
+      "blurb": "A row of pastel Georgian houses near the waterfront, the city's most photographed street.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fort Sumter",
+      "tag": "Ticketed",
+      "blurb": "Take a boat to the island fort where the first shots of the Civil War were fired.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Magnolia or Middleton Place",
+      "tag": "Ticketed",
+      "blurb": "Old plantation gardens with azaleas and live oaks, and tours on the lives of the people enslaved there.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Battery",
+      "tag": "Free",
+      "blurb": "A waterfront promenade of grand mansions and old cannon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lowcountry food",
+      "tag": "Food",
+      "blurb": "Shrimp and grits, she-crab soup and fried green tomatoes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Folly Beach",
+      "tag": "Outdoors",
+      "blurb": "A relaxed surf beach 20 minutes from the centre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Patriots Point",
+      "tag": "Ticketed",
+      "blurb": "Climb aboard a huge aircraft carrier, popular with children.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Charleston?",
+      "answer": "Three or four days covers the old town, a garden and a beach. Add Savannah, about 2 hours away, for a week."
+    },
+    {
+      "question": "When is the best time to visit Charleston?",
+      "answer": "Spring and autumn, around 21 to 29°C. Summer is very humid, and hurricane season peaks in September."
+    },
+    {
+      "question": "How do you get to Charleston?",
+      "answer": "Fly into Charleston airport, about 20 minutes from downtown, connecting through a US hub such as Atlanta, Charlotte or New York. A few direct flights arrive from Europe in season."
+    },
+    {
+      "question": "Is Charleston expensive?",
+      "answer": "Hotels in the historic district are pricey, especially in spring. Staying in Mount Pleasant or North Charleston and driving in saves money."
+    },
+    {
+      "question": "Which beach is best near Charleston?",
+      "answer": "Folly Beach for surf and a laid-back vibe, Isle of Palms for families, and Sullivan's Island for quieter sand."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Savannah",
+      "code": "SAV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Washington, D.C.",
+      "code": "IAD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "New Orleans",
+      "code": "MSY",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Asheville",
+      "code": "AVL",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

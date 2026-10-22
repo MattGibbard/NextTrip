@@ -1,0 +1,203 @@
+{
+  "name": "Siem Reap",
+  "published": true,
+  "country": "KH",
+  "title": "Holidays in Siem Reap",
+  "intro": "The gateway to Angkor, a vast forest of temples where trees grow through the ruins, plus floating villages and a buzzing night market. Here's what Siem Reap is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/siem-reap-4433172_1280.webp",
+  "image_alt": "The towers of Angkor Wat reflected in a pond, near Siem Reap",
+  "wikipedia": "https://en.wikipedia.org/wiki/Siem_Reap",
+  "to_code": "SAI",
+  "holiday_types": [
+    "culture",
+    "adventure"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($) and Cambodian riel",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "e-Visa or visa on arrival",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / C / G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "US dollars are used everywhere alongside riel, so bring clean, untorn notes. Temple passes are bought online or at the official ticket office. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, warm",
+      "temp": 32
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, hot",
+      "temp": 34
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 35
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 36
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Hot, rains start",
+      "temp": 35
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Rainy, green",
+      "temp": 33
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Rainy",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Rainy",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Rainy",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Rainy, floods",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 30
+    }
+  },
+  "when_to_go": "November to February is best, dry and a little cooler, though it's also the busiest. March to May is very hot. The rainy season from June to October brings afternoon storms, lush scenery, full moats and far fewer visitors, and the floating villages are at their best.",
+  "things": [
+    {
+      "name": "Angkor Wat",
+      "tag": "Ticketed",
+      "blurb": "The largest religious building in the world. Sunrise is famous, but midday is often quieter inside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ta Prohm",
+      "tag": "Ticketed",
+      "blurb": "The temple where giant tree roots grip the stones, left half-wild.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bayon",
+      "tag": "Ticketed",
+      "blurb": "A temple of over 200 serene stone faces in the heart of Angkor Thom.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Banteay Srei",
+      "tag": "Ticketed",
+      "blurb": "A small pink sandstone temple with incredibly fine carvings, about 40 minutes out.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tonlé Sap floating villages",
+      "tag": "Tour",
+      "blurb": "Boat trips to stilt and floating villages on Southeast Asia's largest lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Phare circus",
+      "tag": "Ticketed",
+      "blurb": "A brilliant, high-energy circus by young Cambodian performers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pub Street and night markets",
+      "tag": "Food",
+      "blurb": "Street food, fish amok and fresh fruit shakes after a day at the temples.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need for Angkor?",
+      "answer": "Two or three days is ideal, with a three-day pass. One day covers the big three, Angkor Wat, Bayon and Ta Prohm, but it's a long, hot day."
+    },
+    {
+      "question": "When is the best time to visit Siem Reap?",
+      "answer": "November to February, when it's dry and around 30 to 34°C. The rainy season is quieter and very green."
+    },
+    {
+      "question": "How do you get to Siem Reap?",
+      "answer": "Fly into the new Siem Reap-Angkor International airport from Bangkok, Singapore, Kuala Lumpur or Phnom Penh. It's about 50 minutes from town by shuttle bus or taxi."
+    },
+    {
+      "question": "How do you get around the temples?",
+      "answer": "Hire a tuk-tuk and driver for the day, which is cheap and comfortable. Cycling and electric bikes work well for the closer temples."
+    },
+    {
+      "question": "Do you need a visa for Cambodia?",
+      "answer": "Most visitors need one. Get an e-Visa online before you fly, or a visa on arrival at the airport. Check GOV.UK for the current rules."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Luang Prabang",
+      "code": "LPQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Bangkok",
+      "code": "BKK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Hoi An",
+      "code": "DAD",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Mekong river cruise",
+      "code": "SGN",
+      "label": "🛳️ Cruise"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

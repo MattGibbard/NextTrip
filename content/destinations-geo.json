@@ -169,6 +169,16 @@
     "lat": 37.0344,
     "lon": 27.4307
   },
+  "bologna": {
+    "query": "Bologna|IT",
+    "lat": 44.4938,
+    "lon": 11.3426
+  },
+  "bordeaux": {
+    "query": "Bordeaux|FR",
+    "lat": 44.8412,
+    "lon": -0.58
+  },
   "borneo": {
     "query": "Borneo|MY",
     "lat": 5.9804,
@@ -183,6 +193,11 @@
     "query": "Brașov|RO",
     "lat": 45.6427,
     "lon": 25.5887
+  },
+  "bratislava": {
+    "query": "Bratislava|SK",
+    "lat": 48.1435,
+    "lon": 17.1083
   },
   "bruges": {
     "query": "Bruges|BE",
@@ -254,6 +269,16 @@
     "lat": 45.9237,
     "lon": 6.8694
   },
+  "charleston": {
+    "query": "Charleston|US",
+    "lat": 32.7884,
+    "lon": -79.9399
+  },
+  "chiang-mai": {
+    "query": "Chiang Mai|TH",
+    "lat": 18.7883,
+    "lon": 98.9859
+  },
   "chicago": {
     "query": "Chicago|US",
     "lat": 41.8756,
@@ -293,6 +318,11 @@
     "query": "Costa Rica|CR",
     "lat": 9.7489,
     "lon": -83.7534
+  },
+  "costa-smeralda": {
+    "query": "Costa Smeralda|IT",
+    "lat": 41.0886,
+    "lon": 9.5462
   },
   "crete": {
     "query": "Crete|GR",
@@ -364,6 +394,11 @@
     "lat": 62.0107,
     "lon": -6.7741
   },
+  "fes": {
+    "query": "Fes|MA",
+    "lat": 34.0347,
+    "lon": -5.0162
+  },
   "flam-railway": {
     "query": "Flåm Railway|NO",
     "lat": 60.8631,
@@ -429,6 +464,11 @@
     "lat": 27.9202,
     "lon": -15.5474
   },
+  "granada": {
+    "query": "Granada|ES",
+    "lat": 37.1735,
+    "lon": -3.5995
+  },
   "grand-canyon": {
     "query": "Grand Canyon|US",
     "lat": 36.0544,
@@ -464,6 +504,11 @@
     "lat": 44.6476,
     "lon": -63.5728
   },
+  "halkidiki": {
+    "query": "Halkidiki|GR",
+    "lat": 40.331,
+    "lon": 23.3621
+  },
   "hallstatt": {
     "query": "Hallstatt|AT",
     "lat": 47.5622,
@@ -483,6 +528,11 @@
     "query": "Hévíz|HU",
     "lat": 46.7903,
     "lon": 17.1844
+  },
+  "hiroshima": {
+    "query": "Hiroshima|JP",
+    "lat": 34.3917,
+    "lon": 132.4518
   },
   "hoi-an": {
     "query": "Hoi An|VN",
@@ -523,6 +573,11 @@
     "query": "Japan by bullet train|JP",
     "lat": 35.6812,
     "lon": 139.7671
+  },
+  "jeju": {
+    "query": "Jeju|KR",
+    "lat": 33.4888,
+    "lon": 126.4987
   },
   "jordan": {
     "query": "Jordan|JO",
@@ -579,10 +634,25 @@
     "lat": 42.4247,
     "lon": 18.7712
   },
+  "krabi": {
+    "query": "Krabi|TH",
+    "lat": 8.1112,
+    "lon": 99.1097
+  },
   "krakow": {
     "query": "Kraków|PL",
     "lat": 50.0619,
     "lon": 19.9369
+  },
+  "kyoto": {
+    "query": "Kyoto|JP",
+    "lat": 35.0116,
+    "lon": 135.7681
+  },
+  "la-palma": {
+    "query": "La Palma|ES",
+    "lat": 28.6835,
+    "lon": -17.8656
   },
   "lake-bled": {
     "query": "Lake Bled|SI",
@@ -598,6 +668,11 @@
     "query": "Lake Garda|IT",
     "lat": 45.6328,
     "lon": 10.6771
+  },
+  "lake-lucerne": {
+    "query": "Lake Lucerne|CH",
+    "lat": 46.9854,
+    "lon": 8.4988
   },
   "lake-ohrid": {
     "query": "Lake Ohrid|MK",
@@ -709,10 +784,20 @@
     "lat": -20.2759,
     "lon": 57.5704
   },
+  "medellin": {
+    "query": "Medellín|CO",
+    "lat": 6.2697,
+    "lon": -75.6026
+  },
   "mekong-river-cruise": {
     "query": "Mekong river cruise|VN",
     "lat": 10.36,
     "lon": 106.36
+  },
+  "mendoza": {
+    "query": "Mendoza|AR",
+    "lat": -32.8895,
+    "lon": -68.8458
   },
   "menorca": {
     "query": "Menorca|ES",
@@ -763,6 +848,11 @@
     "query": "Namibia|NA",
     "lat": -22.5609,
     "lon": 17.0658
+  },
+  "naples": {
+    "query": "Naples|IT",
+    "lat": 40.8359,
+    "lon": 14.2488
   },
   "naxos": {
     "query": "Naxos|GR",
@@ -914,6 +1004,11 @@
     "lat": 18.2208,
     "lon": -66.5901
   },
+  "puerto-vallarta": {
+    "query": "Puerto Vallarta|MX",
+    "lat": 20.6407,
+    "lon": -105.2203
+  },
   "puglia": {
     "query": "Puglia|IT",
     "lat": 41.0086,
@@ -1019,6 +1114,16 @@
     "lat": 37.7793,
     "lon": -122.4193
   },
+  "san-sebastian": {
+    "query": "San Sebastián|ES",
+    "lat": 43.3224,
+    "lon": -1.9839
+  },
+  "santa-fe": {
+    "query": "Santa Fe|US",
+    "lat": 35.6876,
+    "lon": -105.9385
+  },
   "santorini": {
     "query": "Santorini|GR",
     "lat": 36.4071,
@@ -1034,10 +1139,20 @@
     "lat": 39.8756,
     "lon": 20.0053
   },
+  "savannah": {
+    "query": "Savannah|US",
+    "lat": 32.079,
+    "lon": -81.0921
+  },
   "saxon-switzerland": {
     "query": "Saxon Switzerland|DE",
     "lat": 50.9175,
     "lon": 14.1531
+  },
+  "sedona": {
+    "query": "Sedona|US",
+    "lat": 34.8689,
+    "lon": -111.7614
   },
   "seoul": {
     "query": "Seoul|KR",
@@ -1059,10 +1174,25 @@
     "lat": 37.567,
     "lon": 14.2795
   },
+  "siem-reap": {
+    "query": "Siem Reap|KH",
+    "lat": 13.3618,
+    "lon": 103.859
+  },
   "singapore": {
     "query": "Singapore|SG",
     "lat": 1.2899,
     "lon": 103.8519
+  },
+  "sintra": {
+    "query": "Sintra|PT",
+    "lat": 38.8355,
+    "lon": -9.3522
+  },
+  "sofia": {
+    "query": "Sofia|BG",
+    "lat": 42.6977,
+    "lon": 23.3217
   },
   "split": {
     "query": "Split|HR",
@@ -1134,6 +1264,11 @@
     "lat": 52.8737,
     "lon": -118.0814
   },
+  "thessaloniki": {
+    "query": "Thessaloniki|GR",
+    "lat": 40.6403,
+    "lon": 22.9353
+  },
   "tobago": {
     "query": "Tobago|TT",
     "lat": 11.2405,
@@ -1199,6 +1334,11 @@
     "lat": 48.2084,
     "lon": 16.3725
   },
+  "vilnius": {
+    "query": "Vilnius|LT",
+    "lat": 54.687,
+    "lon": 25.2829
+  },
   "washington-dc": {
     "query": "Washington, D.C.|US",
     "lat": 38.8951,
@@ -1214,6 +1354,11 @@
     "lat": 50.1163,
     "lon": -122.9574
   },
+  "whitsundays": {
+    "query": "Whitsundays|AU",
+    "lat": -20.3101,
+    "lon": 149.0067
+  },
   "wild-atlantic-way": {
     "query": "Wild Atlantic Way|IE",
     "lat": 52.9715,
@@ -1223,6 +1368,11 @@
     "query": "Yellowstone|US",
     "lat": 44.428,
     "lon": -110.5885
+  },
+  "yogyakarta": {
+    "query": "Yogyakarta|ID",
+    "lat": -7.7953,
+    "lon": 110.3673
   },
   "zadar": {
     "query": "Zadar|HR",

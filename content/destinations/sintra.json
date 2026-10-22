@@ -1,0 +1,203 @@
+{
+  "name": "Sintra",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in Sintra",
+  "intro": "Fairytale palaces, mossy gardens and misty forested hills just outside Lisbon, with wild Atlantic beaches over the ridge. Here's what Sintra is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/sintra-3895332_1280.webp",
+  "image_alt": "The colourful Pena Palace on a forested hilltop in Sintra",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sintra",
+  "to_code": "LIS",
+  "holiday_types": [
+    "culture",
+    "nature"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, misty",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 20
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 25
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    }
+  },
+  "when_to_go": "April to June, September and October are best, mild and green, with fewer coaches than midsummer. July and August are busy, so arrive at opening time. Sintra sits in its own cooler, misty microclimate, so pack a layer even when Lisbon is hot. Winter is quiet and atmospheric but often damp.",
+  "things": [
+    {
+      "name": "Pena Palace",
+      "tag": "Ticketed",
+      "blurb": "The bright red and yellow hilltop palace. Book a timed ticket and go first thing.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Quinta da Regaleira",
+      "tag": "Ticketed",
+      "blurb": "Gardens full of grottoes, tunnels and the spiralling Initiation Well.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Moorish Castle",
+      "tag": "Ticketed",
+      "blurb": "Walk the old walls along the ridge for views to the ocean.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monserrate Palace",
+      "tag": "Ticketed",
+      "blurb": "A romantic palace in a garden of plants from all over the world, usually much quieter.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cabo da Roca",
+      "tag": "Free",
+      "blurb": "Cliffs at mainland Europe's most westerly point, 20 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Praia da Adraga",
+      "tag": "Outdoors",
+      "blurb": "A wild beach between cliffs, with a good fish restaurant on the sand.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Travesseiros",
+      "tag": "Food",
+      "blurb": "Sintra's puff-pastry 'pillows' filled with almond cream, best warm at Piriquita.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Sintra a day trip or worth staying?",
+      "answer": "Lots of people visit as a day trip from Lisbon, but staying a night or two lets you see the palaces before and after the crowds and add the coast."
+    },
+    {
+      "question": "How do you get to Sintra?",
+      "answer": "Fly into Lisbon, then take the train from Rossio station to Sintra, about 40 minutes. Driving up to the palaces is hard, so use the 434 bus, a tuk-tuk or walk."
+    },
+    {
+      "question": "Which Sintra palace is best if you only have time for one?",
+      "answer": "Pena Palace is the most famous, but Quinta da Regaleira is many people's favourite, especially with children who love the tunnels."
+    },
+    {
+      "question": "When is the best time to visit Sintra?",
+      "answer": "Spring and early autumn, around 18 to 24°C. Go early on weekdays to avoid the busiest times."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights covers the main palaces and a day on the coast."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Porto",
+      "code": "OPO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Alentejo",
+      "code": "LIS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

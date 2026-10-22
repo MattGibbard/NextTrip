@@ -1,0 +1,204 @@
+{
+  "name": "Whitsundays",
+  "published": true,
+  "country": "AU",
+  "title": "Holidays in the Whitsundays",
+  "intro": "74 tropical islands in the Great Barrier Reef, with pure white silica sand at Whitehaven Beach, sailing trips and snorkelling over coral. Here's what the Whitsundays are like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/whitsundays-7499018_1280.webp",
+  "image_alt": "The swirling white sand and turquoise water of Hill Inlet in the Whitsundays",
+  "wikipedia": "https://en.wikipedia.org/wiki/Whitsunday_Islands",
+  "to_code": "PPP",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "adventure"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "9 to 10 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Australian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eVisitor for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type I · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Queensland doesn't change its clocks, so the time difference changes in summer. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Hot, wet",
+      "temp": 31
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Hot, wet",
+      "temp": 31
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Warm, showers",
+      "temp": 30
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 28
+    },
+    "may": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 26
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Dry, mild",
+      "temp": 24
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Dry, whales",
+      "temp": 23
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Dry, whales",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 30
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Hot, stingers",
+      "temp": 31
+    }
+  },
+  "when_to_go": "May to October is best, dry, sunny and mild, with humpback whales passing from July to September. November to April is hot and humid, with the wettest weather from January to March and cyclone risk. Box jellyfish and other 'stingers' are in the water from about November to May, so wear a stinger suit to swim.",
+  "things": [
+    {
+      "name": "Whitehaven Beach",
+      "tag": "Tour",
+      "blurb": "Seven kilometres of brilliant white silica sand, reached by boat or seaplane.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hill Inlet lookout",
+      "tag": "Outdoors",
+      "blurb": "The famous view of swirling sand and water at the north end of Whitehaven.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Great Barrier Reef",
+      "tag": "Tour",
+      "blurb": "Day trips to Reefworld or the outer reef for snorkelling and diving.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sailing trip",
+      "tag": "Tour",
+      "blurb": "Spend two or three nights sailing between islands and sleeping on board.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Airlie Beach lagoon",
+      "tag": "Free",
+      "blurb": "A free, stinger-free swimming lagoon by the sea in the main town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Heart Reef",
+      "tag": "Tour",
+      "blurb": "See the heart-shaped coral from a scenic flight.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hamilton Island",
+      "tag": "Free",
+      "blurb": "Golf buggies, a wildlife park and walking trails on the biggest resort island.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "When is the best time to visit the Whitsundays?",
+      "answer": "May to October, when it's dry and around 23 to 28°C. Whales pass from July to September."
+    },
+    {
+      "question": "How do you get to the Whitsundays?",
+      "answer": "Fly to Proserpine for Airlie Beach, or to Hamilton Island, usually from Brisbane, Sydney or Melbourne. Airlie Beach is about 30 minutes from Proserpine airport."
+    },
+    {
+      "question": "Where should you stay in the Whitsundays?",
+      "answer": "Airlie Beach on the mainland is the cheapest base, with boats leaving daily. Hamilton Island and Daydream Island have resorts right on the water."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Five to seven nights gives time for Whitehaven, the reef and a sailing trip, with some lazy days."
+    },
+    {
+      "question": "Can you swim in the Whitsundays?",
+      "answer": "Yes, but wear a stinger suit between November and May, when jellyfish are in the water. Tour operators usually provide them."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Sydney",
+      "code": "SYD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Tasmania",
+      "code": "HBA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Maldives",
+      "code": "MLE",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Great Ocean Road",
+      "code": "MEL",
+      "label": "🚗 Road trip"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

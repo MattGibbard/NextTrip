@@ -1,0 +1,204 @@
+{
+  "name": "Mendoza",
+  "published": true,
+  "country": "AR",
+  "title": "Holidays in Mendoza",
+  "intro": "Argentina's sunny wine country, with Malbec vineyards beneath the snowy Andes, long lunches, horse riding and hot springs. Here's what Mendoza is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/mendoza-5996668_1280.webp",
+  "image_alt": "Rows of vines in a Mendoza vineyard with the Andes behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Mendoza,_Argentina",
+  "to_code": "MDZ",
+  "holiday_types": [
+    "food",
+    "nature",
+    "adventure"
+  ],
+  "nights": "4 to 6",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3 to 4 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Argentine peso ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / I · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Harvest",
+      "temp": 30
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Harvest festival",
+      "temp": 27
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Autumn colours",
+      "temp": 22
+    },
+    "may": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 18
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Cold, skiing",
+      "temp": 14
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Cold, skiing",
+      "temp": 14
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Cool, skiing",
+      "temp": 17
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    }
+  },
+  "when_to_go": "March and April are the best months, with the grape harvest, golden vines and the Vendimia wine festival in early March. October and November are warm and bright as the vines come back to life. Summer is hot but dry, and winter brings snow and skiing high in the Andes.",
+  "things": [
+    {
+      "name": "Wine tasting in Luján de Cuyo",
+      "tag": "Tour",
+      "blurb": "Visit Malbec bodegas close to the city, by bike, car or guided tour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Uco Valley",
+      "tag": "Day trip",
+      "blurb": "High-altitude vineyards with dramatic Andes views and long lunches, about 1 hour 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Aconcagua",
+      "tag": "Day trip",
+      "blurb": "See the highest mountain outside Asia from the park's viewpoints, on a scenic drive into the Andes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Termas de Cacheuta",
+      "tag": "Ticketed",
+      "blurb": "Hot spring pools in a mountain gorge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Horse riding",
+      "tag": "Tour",
+      "blurb": "Ride with gauchos in the foothills, often with an asado barbecue afterwards.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Parque General San Martín",
+      "tag": "Free",
+      "blurb": "A huge city park with a lake and a hilltop monument.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rafting in Potrerillos",
+      "tag": "Tour",
+      "blurb": "White-water rafting on the Mendoza River, for ages 8 and up on easy stretches.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Mendoza?",
+      "answer": "Four to six days lets you visit several wineries, the Uco Valley and the Andes. Add Buenos Aires or Santiago for a longer trip."
+    },
+    {
+      "question": "When is the best time to visit Mendoza?",
+      "answer": "March and April for the harvest and autumn colour, or October and November for spring. Summer is hot and winter is for skiing."
+    },
+    {
+      "question": "How do you get to Mendoza?",
+      "answer": "Fly from Buenos Aires in under 2 hours, or from Santiago in Chile in under an hour over the Andes. The scenic bus from Santiago takes about 7 hours."
+    },
+    {
+      "question": "Is Mendoza good if you don't drink wine?",
+      "answer": "Yes. There's rafting, horse riding, hot springs, hiking and the Andes, and wineries are lovely places for lunch."
+    },
+    {
+      "question": "Is Mendoza good value?",
+      "answer": "Usually, yes, though prices in Argentina change fast. Ask about paying by card in pesos, as the exchange rate can be better than cash."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Torres del Paine",
+      "code": "PUQ",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Cape Town",
+      "code": "CPT",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Douro Valley",
+      "code": "OPO",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Cusco",
+      "code": "CUZ",
+      "label": "🧗 Adventure"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

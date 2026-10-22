@@ -1,0 +1,204 @@
+{
+  "name": "Bologna",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Bologna",
+  "intro": "Red-brick arcades, leaning towers and some of the best food in Italy, in a lively university city that most visitors skip on the way to Florence. Here's what Bologna is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/bologna-2630373_1280.webp",
+  "image_alt": "Bologna's red rooftops, domes and medieval towers seen from above",
+  "wikipedia": "https://en.wikipedia.org/wiki/Bologna",
+  "to_code": "BLQ",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, foggy",
+      "temp": 6
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot, quiet",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild, truffles",
+      "temp": 19
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Damp",
+      "temp": 12
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive",
+      "temp": 7
+    }
+  },
+  "when_to_go": "April, May, September and October are the sweet spot, warm enough to eat outside under the arcades without the heat. July and August are hot and sticky, and in August many family-run restaurants close for a couple of weeks. Winter is cold and often foggy, but it's cheap and the food is at its heartiest.",
+  "things": [
+    {
+      "name": "The Two Towers",
+      "tag": "Ticketed",
+      "blurb": "Climb the 498 steps of the Asinelli tower for a view over the red rooftops. Book a time slot ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Piazza Maggiore",
+      "tag": "Free",
+      "blurb": "The big main square, with the unfinished Basilica of San Petronio and the Neptune fountain.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Quadrilatero",
+      "tag": "Food",
+      "blurb": "Narrow medieval lanes of delis, fishmongers and pasta shops, perfect for a mortadella sandwich.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Portico di San Luca",
+      "tag": "Outdoors",
+      "blurb": "Walk nearly 4 km under a continuous arcade up the hill to a hilltop church with big views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Archiginnasio",
+      "tag": "Ticketed",
+      "blurb": "The old university building, with an extraordinary wooden anatomy theatre inside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pasta-making class",
+      "tag": "Tour",
+      "blurb": "Learn to roll tagliatelle and fill tortellini the local way, often in someone's kitchen.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Modena and Parma",
+      "tag": "Day trip",
+      "blurb": "Balsamic vinegar, Parmigiano and Parma ham, each under an hour away by train.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Bologna?",
+      "answer": "Three or four days covers the city and its food, with time for a day trip to Modena or Parma. Two days is enough for a short city break."
+    },
+    {
+      "question": "When is the best time to visit Bologna?",
+      "answer": "April, May, September and October, when it's around 19 to 26°C. August is hot, and some restaurants close for their summer holidays."
+    },
+    {
+      "question": "Is Bologna worth visiting?",
+      "answer": "Yes, especially if you love food. It's the home of tagliatelle al ragù, tortellini and mortadella, it's much quieter than Florence or Venice, and it's an easy train base for the rest of northern Italy."
+    },
+    {
+      "question": "How do you get to Bologna?",
+      "answer": "Fly into Bologna's airport, which has flights from across Europe, then take the Marconi Express monorail to the centre in about 10 minutes. High-speed trains reach Florence in about 40 minutes and Milan or Venice in under 2 hours."
+    },
+    {
+      "question": "Is Bologna good with children?",
+      "answer": "Yes. The centre is flat, compact and covered by arcades, so it's easy with a pushchair in sun or rain, and few children say no to pasta and gelato."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Florence",
+      "code": "FLR",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Venice",
+      "code": "VCE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lyon",
+      "code": "LYS",
+      "label": "🍷 Food & drink"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

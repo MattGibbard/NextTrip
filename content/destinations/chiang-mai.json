@@ -1,0 +1,204 @@
+{
+  "name": "Chiang Mai",
+  "published": true,
+  "country": "TH",
+  "title": "Holidays in Chiang Mai",
+  "intro": "Northern Thailand's relaxed old city, with over 300 temples, jungle-covered mountains, night markets and ethical elephant sanctuaries. Here's what Chiang Mai is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/chiang-mai-4309820_1280.webp",
+  "image_alt": "The golden chedi of Wat Phra That Doi Suthep above Chiang Mai",
+  "wikipedia": "https://en.wikipedia.org/wiki/Chiang_Mai",
+  "to_code": "CNX",
+  "holiday_types": [
+    "culture",
+    "nature",
+    "food"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Thai baht (฿)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B / C · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Fill in the Thailand Digital Arrival Card online before you land. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Cool, dry",
+      "temp": 29
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 32
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Hot, smoky",
+      "temp": 35
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Very hot, Songkran",
+      "temp": 36
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot, first rains",
+      "temp": 34
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Rainy",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Rainy, green",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Rainy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Rainy",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Yi Peng lanterns",
+      "temp": 30
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Cool, dry",
+      "temp": 28
+    }
+  },
+  "when_to_go": "November to February is best, warm days and cool nights, with the Yi Peng lantern festival in November. March and April are very hot, and smoke from crop burning can make the air poor. The rainy season from June to October is green and quieter, with heavy showers rather than all-day rain. Songkran in mid-April turns the city into a huge water fight.",
+  "things": [
+    {
+      "name": "Doi Suthep",
+      "tag": "Ticketed",
+      "blurb": "A golden hilltop temple reached by a 300-step dragon staircase, with views over the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old City temples",
+      "tag": "Free",
+      "blurb": "Wat Chedi Luang, Wat Phra Singh and dozens more inside the old moat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Elephant sanctuary",
+      "tag": "Tour",
+      "blurb": "Choose an ethical, no-riding sanctuary where you feed and walk with rescued elephants.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Night markets",
+      "tag": "Food",
+      "blurb": "The Sunday Walking Street and the Night Bazaar for khao soi, crafts and street food.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Thai cooking class",
+      "tag": "Tour",
+      "blurb": "Visit a market and cook curries on a farm outside the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Doi Inthanon",
+      "tag": "Day trip",
+      "blurb": "Thailand's highest mountain, with waterfalls, cloud forest and twin pagodas.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Canyon water park",
+      "tag": "Ticketed",
+      "blurb": "Swimming and inflatables in a flooded quarry, a hit with older children.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Chiang Mai?",
+      "answer": "Four to seven days covers the temples, an elephant sanctuary, a cooking class and a trip to the mountains. Add Chiang Rai or Pai for longer."
+    },
+    {
+      "question": "When is the best time to visit Chiang Mai?",
+      "answer": "November to February, when it's warm by day and cool at night. Avoid March and April if you're worried about smoke and heat."
+    },
+    {
+      "question": "How do you choose an ethical elephant sanctuary?",
+      "answer": "Pick one where there's no riding, no performances and no bathing on demand, with small groups and elephants free to roam. Read recent reviews before you book."
+    },
+    {
+      "question": "How do you get to Chiang Mai?",
+      "answer": "Fly from Bangkok in about 1 hour 15 minutes, or take the overnight sleeper train, which takes 11 to 13 hours. Some flights arrive direct from elsewhere in Asia."
+    },
+    {
+      "question": "Is Chiang Mai good for families?",
+      "answer": "Yes. It's calmer than Bangkok, cheap, and full of things children enjoy, from elephants and zip lines to cooking classes and night markets."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bangkok",
+      "code": "BKK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Luang Prabang",
+      "code": "LPQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Krabi",
+      "code": "KBV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Hoi An",
+      "code": "DAD",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

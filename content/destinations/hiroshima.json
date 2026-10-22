@@ -1,0 +1,204 @@
+{
+  "name": "Hiroshima",
+  "published": true,
+  "country": "JP",
+  "title": "Holidays in Hiroshima",
+  "intro": "A moving peace memorial in a lively, friendly city, with the floating shrine gate of Miyajima island just a ferry ride away. Here's what Hiroshima is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/hiroshima-725801_1280.webp",
+  "image_alt": "The red floating torii gate of Itsukushima shrine on Miyajima, near Hiroshima",
+  "wikipedia": "https://en.wikipedia.org/wiki/Hiroshima",
+  "to_code": "HIJ",
+  "holiday_types": [
+    "culture",
+    "city",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 to 9 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Japanese yen (¥)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A · 100V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders don't need a visa for short stays. Japan plans to bring in an online pre-travel registration, so check GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 10
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 11
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Cherry blossom",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Rainy season",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Autumn leaves",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 12
+    }
+  },
+  "when_to_go": "April, May, October and November are best, mild and mostly dry, with cherry blossom in early April and autumn colour on Miyajima in November. June is the rainy season, and July and August are hot and humid. On 6 August the city holds its peace ceremony and lantern floating.",
+  "things": [
+    {
+      "name": "Peace Memorial Park",
+      "tag": "Free",
+      "blurb": "The park at the centre of the 1945 blast, with the Children's Peace Monument and its paper cranes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Peace Memorial Museum",
+      "tag": "Ticketed",
+      "blurb": "A powerful and sometimes upsetting museum. Older children can cope with most of it, but check the exhibits first.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Atomic Bomb Dome",
+      "tag": "Free",
+      "blurb": "The ruined exhibition hall, left standing as a memorial.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Miyajima",
+      "tag": "Day trip",
+      "blurb": "The island of the floating torii gate, with friendly deer and a cable car up Mount Misen.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Okonomiyaki",
+      "tag": "Food",
+      "blurb": "Hiroshima-style savoury pancakes layered with noodles, cooked in front of you.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Shukkeien Garden",
+      "tag": "Ticketed",
+      "blurb": "A peaceful garden with miniature landscapes around a pond.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hiroshima Castle",
+      "tag": "Ticketed",
+      "blurb": "A rebuilt castle with a museum and moat, a short walk from the centre.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Hiroshima?",
+      "answer": "Two days covers the Peace Park and Miyajima. Stay a night on Miyajima if you can, to see it quiet in the evening."
+    },
+    {
+      "question": "Is Hiroshima safe to visit?",
+      "answer": "Yes. It's a modern, thriving city with normal background radiation levels, and it's known for being especially welcoming."
+    },
+    {
+      "question": "When is the best time to visit Hiroshima?",
+      "answer": "Spring and autumn, around 17 to 25°C. Summer is hot and humid."
+    },
+    {
+      "question": "How do you get to Hiroshima?",
+      "answer": "Take the shinkansen from Osaka or Kyoto in about 1 hour 30 minutes, or from Tokyo in about 4 hours. Hiroshima airport has domestic flights and a few from elsewhere in Asia."
+    },
+    {
+      "question": "Is Hiroshima suitable for children?",
+      "answer": "The Peace Park and Miyajima work well for all ages. The museum is harrowing in places, so decide for younger children after reading about it."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kyoto",
+      "code": "KIX",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Tokyo",
+      "code": "HND",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Beppu",
+      "code": "OIT",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Japan by bullet train",
+      "code": "HND",
+      "label": "🚆 By train"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

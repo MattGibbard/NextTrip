@@ -1,0 +1,204 @@
+{
+  "name": "Thessaloniki",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Thessaloniki",
+  "intro": "Greece's second city, a laid-back seafront with Roman ruins, Byzantine churches and arguably the country's best food. Here's what Thessaloniki is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/thessaloniki-4208252_1280.webp",
+  "image_alt": "The White Tower on Thessaloniki's seafront under a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Thessaloniki",
+  "to_code": "SKG",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 10
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 30
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive",
+      "temp": 11
+    }
+  },
+  "when_to_go": "April, May, September and October are best for walking the city, warm but not too hot. July and August are hot, but the beaches of Halkidiki are close. Winter is cooler and quieter, with a lively student nightlife and good prices.",
+  "things": [
+    {
+      "name": "White Tower",
+      "tag": "Ticketed",
+      "blurb": "The city's symbol on the seafront, with a museum inside and a view from the top.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Seafront promenade",
+      "tag": "Free",
+      "blurb": "Walk or cycle the long waterfront to the Umbrellas sculpture, best at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ano Poli",
+      "tag": "Free",
+      "blurb": "The old upper town of lanes and painted houses, up to the walls for views over the bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rotunda and Arch of Galerius",
+      "tag": "Free",
+      "blurb": "Roman monuments right in the middle of the modern city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Modiano and Kapani markets",
+      "tag": "Food",
+      "blurb": "Covered markets selling olives, spices, cheese and fresh fish.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bougatsa breakfast",
+      "tag": "Food",
+      "blurb": "Flaky pastry filled with custard or cheese, the classic local breakfast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Archaeological Museum",
+      "tag": "Ticketed",
+      "blurb": "Gold treasures from ancient Macedonia, home of Alexander the Great.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Thessaloniki worth visiting?",
+      "answer": "Yes. It's a real working city rather than a resort, with excellent, good-value food, Roman and Byzantine sights and a long seafront, and it's a good base for Halkidiki's beaches."
+    },
+    {
+      "question": "How many days do you need in Thessaloniki?",
+      "answer": "Three or four days covers the city and its food. Add a few beach days in Halkidiki for a full week."
+    },
+    {
+      "question": "When is the best time to visit Thessaloniki?",
+      "answer": "Spring and autumn, around 20 to 28°C. July and August are hot, often over 32°C."
+    },
+    {
+      "question": "How do you get to Thessaloniki?",
+      "answer": "Fly into Thessaloniki airport, which has flights from across Europe, then take the bus to the centre in about 40 minutes. The new metro now runs under the city centre."
+    },
+    {
+      "question": "Is there a beach in Thessaloniki?",
+      "answer": "Not one you'd swim from in the city itself. The nearest good beaches are in Halkidiki, about an hour away by car or bus."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Halkidiki",
+      "code": "SKG",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Athens",
+      "code": "ATH",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Lake Ohrid",
+      "code": "OHD",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Plovdiv",
+      "code": "PDV",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

@@ -1,0 +1,204 @@
+{
+  "name": "Yogyakarta",
+  "published": true,
+  "country": "ID",
+  "title": "Holidays in Yogyakarta",
+  "intro": "Java's cultural heart, with the vast Buddhist temple of Borobudur, the Hindu spires of Prambanan, batik workshops and a smoking volcano. Here's what Yogyakarta is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/yogyakarta-2434193_1280.webp",
+  "image_alt": "A stone Buddha among the bell-shaped stupas of Borobudur, near Yogyakarta",
+  "wikipedia": "https://en.wikipedia.org/wiki/Yogyakarta",
+  "to_code": "YIA",
+  "holiday_types": [
+    "culture",
+    "adventure",
+    "nature"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Indonesian rupiah (Rp)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Visa on arrival (paid)",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders need a paid visa on arrival or an e-VOA bought online, and must fill in the All Indonesia arrival form. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 30
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 30
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Rainy",
+      "temp": 31
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Drying out",
+      "temp": 31
+    },
+    "may": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 31
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 33
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 33
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 32
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 31
+    }
+  },
+  "when_to_go": "May to September is the dry season and the best time to visit, sunny and slightly less humid. October to April brings heavy afternoon rain, but mornings are often clear and it's quieter. Avoid big Indonesian holidays such as the end of Ramadan, when the city gets very busy.",
+  "things": [
+    {
+      "name": "Borobudur",
+      "tag": "Ticketed",
+      "blurb": "The world's largest Buddhist temple. Climbing to the top needs a timed ticket bought ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Prambanan",
+      "tag": "Ticketed",
+      "blurb": "Soaring 9th-century Hindu temples, with a Ramayana ballet on an open-air stage some evenings.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Merapi jeep tour",
+      "tag": "Tour",
+      "blurb": "Ride a jeep across the lava fields of one of Indonesia's most active volcanoes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kraton",
+      "tag": "Ticketed",
+      "blurb": "The Sultan's palace, with gamelan music and dance performances most mornings.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Taman Sari",
+      "tag": "Ticketed",
+      "blurb": "The ruins of the Sultan's water palace and its underground mosque.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Batik workshop",
+      "tag": "Tour",
+      "blurb": "Learn to draw with hot wax on cloth, a traditional Javanese craft.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jomblang Cave",
+      "tag": "Tour",
+      "blurb": "Abseil into a sinkhole where beams of light fall through the forest canopy.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Yogyakarta?",
+      "answer": "Three to five days covers Borobudur, Prambanan, the city and a volcano or cave trip. It pairs well with Bali, an hour's flight away."
+    },
+    {
+      "question": "When is the best time to visit Yogyakarta?",
+      "answer": "May to September, the dry season. The rainy season brings afternoon storms but quieter temples."
+    },
+    {
+      "question": "How do you get to Yogyakarta?",
+      "answer": "Fly into Yogyakarta International from Jakarta, Bali or Singapore, among others. It's about an hour from the city by train. Trains also run from Jakarta in about 7 hours."
+    },
+    {
+      "question": "Can you climb Borobudur?",
+      "answer": "Yes, but only on a guided timed visit with a separate ticket, and you'll be given special sandals to protect the stones. Book ahead online."
+    },
+    {
+      "question": "Is Yogyakarta better than Bali?",
+      "answer": "They're different. Yogyakarta is about temples, culture and volcanoes, and has no real beach holiday scene. Many people do both."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lombok",
+      "code": "LOP",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Siem Reap",
+      "code": "SAI",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Borneo",
+      "code": "BKI",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

@@ -1,0 +1,204 @@
+{
+  "name": "Kyoto",
+  "published": true,
+  "country": "JP",
+  "title": "Holidays in Kyoto",
+  "intro": "Over a thousand temples, red torii gates winding up a mountain, bamboo groves and wooden teahouse streets in Japan's old capital. Here's what Kyoto is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/kyoto-1869398_1280.webp",
+  "image_alt": "A path through red torii gates at Fushimi Inari shrine in Kyoto",
+  "wikipedia": "https://en.wikipedia.org/wiki/Kyoto",
+  "to_code": "KIX",
+  "holiday_types": [
+    "culture",
+    "city",
+    "food"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 to 9 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Japanese yen (¥)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A · 100V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders don't need a visa for short stays. Japan plans to bring in an online pre-travel registration, so check GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 10
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Plum blossom",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Cherry blossom",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Rainy season",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, festival",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Autumn leaves",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 12
+    }
+  },
+  "when_to_go": "Late March to early April brings cherry blossom, and mid-November brings red autumn leaves, the two most beautiful and busiest times. May and October are pleasant and slightly calmer. June is the rainy season, and July and August are very hot and humid, though July has the huge Gion Matsuri festival. Winter is cold, quiet and good value.",
+  "things": [
+    {
+      "name": "Fushimi Inari",
+      "tag": "Free",
+      "blurb": "Thousands of red torii gates up a forested mountain. Go early, and climb past the first section to lose the crowds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kiyomizu-dera",
+      "tag": "Ticketed",
+      "blurb": "A wooden temple on stilts over a hillside, with views across the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Arashiyama",
+      "tag": "Free",
+      "blurb": "The bamboo grove, riverside walks and a monkey park on the hill.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kinkaku-ji",
+      "tag": "Ticketed",
+      "blurb": "The Golden Pavilion, covered in gold leaf and reflected in its pond.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gion",
+      "tag": "Free",
+      "blurb": "Wooden teahouse lanes where you might glimpse a geiko or maiko in the evening. Don't take photos on private lanes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nishiki Market",
+      "tag": "Food",
+      "blurb": "A covered market of pickles, skewers, sweets and street snacks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nara",
+      "tag": "Day trip",
+      "blurb": "A giant Buddha and hundreds of friendly deer, under an hour away by train.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Kyoto?",
+      "answer": "Four or five days lets you see the main temples at a gentle pace and add a day trip to Nara. Three days is enough for the highlights."
+    },
+    {
+      "question": "When is the best time to visit Kyoto?",
+      "answer": "Late March to early April for cherry blossom, or November for autumn leaves. Both are busy, so book early. May and October are calmer alternatives."
+    },
+    {
+      "question": "How do you avoid the crowds in Kyoto?",
+      "answer": "Start early, as the big sights are much quieter before 8am. Visit the smaller temples in the north and east, and spend evenings away from the main Gion streets."
+    },
+    {
+      "question": "How do you get to Kyoto?",
+      "answer": "Fly into Kansai International near Osaka and take the Haruka express train, about 1 hour 15 minutes. From Tokyo, the shinkansen takes just over 2 hours."
+    },
+    {
+      "question": "Should you stay in Kyoto or Osaka?",
+      "answer": "Kyoto if you want to be close to the temples and quiet evenings, Osaka for nightlife and food. They're only 15 to 30 minutes apart by train, so either works as a base."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tokyo",
+      "code": "HND",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Kanazawa",
+      "code": "KMQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Japan by bullet train",
+      "code": "HND",
+      "label": "🚆 By train"
+    },
+    {
+      "name": "Hiroshima",
+      "code": "HIJ",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { LONDON, countryFlag, flightHoursTo } from "../destinations";
+import { countryFlag } from "../destinations";
 import { destinationPath } from "../../shared/seo";
 import { NEAR_HOURS, alsoGood, hotList, hubGuides, hubIcon } from "../hubs";
 import type { Hub } from "../hubs";
@@ -10,6 +10,11 @@ import { postsAboutHub } from "../blog";
 import { RichText, anchor } from "./InfoPage";
 import { GuideCard, HubLinks, Label, MONTH_NAMES, bestSet, useFamily } from "./DestinationPage";
 import type { Family } from "./DestinationPage";
+import { Geo } from "../components/Geo";
+import { FlyingFrom } from "../components/FlyingFrom";
+import { useFrom, useFromOnceUp } from "../visitor";
+import { LONDON, fromTerminal } from "../../shared/visitor";
+import type { From } from "../../shared/visitor";
 
 /** How many places each month lists in "When to go", before "and N more". */
 const PER_MONTH = 8;
@@ -25,7 +30,9 @@ const BATCH = 24;
  */
 export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
   const { signedIn, me, ideas, airport } = useFamily(family);
-  const from = airport?.code && airport.lat !== null ? { code: airport.code, name: airport.name, lat: airport.lat, lon: airport.lon } : LONDON;
+  const from = useFrom(airport);
+  // Which places count as near can't be rewritten by the Worker, so that waits for the page to be up.
+  const hotFrom = useFromOnceUp(airport);
   const [month, setMonth] = useState<number | null>(null);
   const [showing, setShowing] = useState(BATCH);
   // A month's page, or a collection with a month, is always about that month; the others look at this month once the page is up.
@@ -63,24 +70,24 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
             <Label>{`${icon} ${hub.kind === "type" ? "HOLIDAY TYPE" : hub.kind === "month" ? "WHEN TO GO" : hub.kind === "collection" ? "HOLIDAY IDEAS" : "COUNTRY"}`.trim()}</Label>
             <h1>{hub.title}</h1>
             {hub.intro && <p className="dg-intro">{hub.intro}</p>}
+            <FlyingFrom from={from} home={!!fromTerminal(airport)} />
           </div>
 
           <aside className="dx-board" aria-label={shown === null ? hub.name : `Good to go in ${MONTH_NAMES[shown]}`}>
             <div className="dx-board-head">
               <span className="lit">{shown === null ? `${guides.length} GUIDES` : `GOOD TO GO IN ${MONTH_NAMES[shown].toUpperCase()}`}</span>
-              <span>{from === LONDON ? "FROM THE UK" : `FROM ${from.code}`}</span>
+              <Geo from={from} geo="label" />
             </div>
             <ul>
-              {(shown === null ? guides : board).slice(0, 5).map((d) => {
-                const hours = flightHoursTo(from, d);
-                return (
-                  <li key={d.slug}>
-                    <span className="lit">{d.to_code}</span>
-                    <a href={destinationPath(d.slug)}>{d.name.toUpperCase()}</a>
-                    <span>{hours !== null && `✈️ ${hours}H`}</span>
-                  </li>
-                );
-              })}
+              {(shown === null ? guides : board).slice(0, 5).map((d) => (
+                <li key={d.slug}>
+                  <span className="lit">{d.to_code}</span>
+                  <a href={destinationPath(d.slug)}>{d.name.toUpperCase()}</a>
+                  <span>
+                    <Geo from={from} geo="hours" to={d} fmt="board" />
+                  </span>
+                </li>
+              ))}
             </ul>
             <p>
               {shown !== null && board.length === 0
@@ -92,7 +99,7 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
           </aside>
         </section>
 
-        {hub.kind === "month" && hub.month !== null && <HotList hub={hub} from={from} />}
+        {hub.kind === "month" && hub.month !== null && <HotList hub={hub} from={hotFrom} />}
 
         <section className="lp-wrap dx-section" aria-labelledby="hb-guides">
           <div className="dx-section-head">
@@ -247,13 +254,13 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
  * A month page's answer to "where is hot in…": the warmest places that are good that month, near and
  * further away, with their average daytime high. The sentence on top is the short answer.
  */
-function HotList({ hub, from }: { hub: Hub; from: { code: string; lat: number | null; lon: number | null } }) {
+function HotList({ hub, from }: { hub: Hub; from: From }) {
   const { near, far } = hotList(hub, from);
   if (!near.length && !far.length) return null;
   const month = MONTH_NAMES[hub.month!];
   const top = (rows: typeof near) => rows.slice(0, 3).map((r) => `${r.d.name} (${r.temp}°C)`);
   const list = (items: string[]) => (items.length < 2 ? items.join("") : `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}`);
-  const fromName = from === LONDON ? "the UK" : from.code;
+  const fromName = from.code === LONDON.code ? "the UK" : from.name;
   const groups = [
     { key: "near", title: `Within ${NEAR_HOURS} hours of ${fromName}`, rows: near },
     { key: "far", title: "Further away", rows: far },

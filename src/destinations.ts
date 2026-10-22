@@ -3,7 +3,7 @@
 // guides are prerendered like the other public pages and need no database or API. The site carries a
 // short card for every guide; a guide's full text is its own small file, loaded on its page.
 import { HOLIDAY_TYPES, TRIP_LENGTHS, BUDGETS } from "../shared/ideaDetails";
-import { distanceKm, flightHours } from "../shared/travelTime";
+import { aboutHours, flightHoursBetween } from "../shared/visitor";
 import { countryName } from "./countries";
 import geo from "../content/destinations-geo.json";
 import airports from "../content/destination-airports.json";
@@ -194,19 +194,19 @@ export function destinationNamed(name: string): DestinationCard | undefined {
 import { imageUrl } from "./photos";
 export { imageUrl, photoProps } from "./photos";
 
-/** Where visitors who aren't signed in are flying from. Signed-in families see their own home airport. */
-export const LONDON = { code: "LON", name: "London", lat: 51.47, lon: -0.4543 };
+/** Where visitors are flying from when we don't know better (see src/visitor.ts). */
+export { LONDON } from "../shared/visitor";
 
 /** Rough flying hours to a guide's place, rounded up as timetables tend to be longer than the straight line. Null without a map position. */
 export function flightHoursTo(from: { lat: number | null; lon: number | null }, d: DestinationCard): number | null {
   if (from.lat === null || from.lon === null || d.lat === null || d.lon === null) return null;
-  return Math.max(1, Math.ceil(flightHours(distanceKm({ lat: from.lat, lon: from.lon }, { lat: d.lat, lon: d.lon }))));
+  return flightHoursBetween({ lat: from.lat, lon: from.lon }, { lat: d.lat, lon: d.lon });
 }
 
 /** The flight time as the guide says it: "About 8 hrs". */
 export function flightTime(from: { lat: number | null; lon: number | null }, d: DestinationCard): string | null {
   const hours = flightHoursTo(from, d);
-  return hours === null ? null : `About ${hours} hr${hours === 1 ? "" : "s"}`;
+  return hours === null ? null : aboutHours(hours);
 }
 
 /** A country's flag, from its two-letter code. */

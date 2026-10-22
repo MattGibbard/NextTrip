@@ -1264,3 +1264,21 @@ a.dg-similar-card:hover {
   min-width: 4ch;
   text-align: right;
 }
+
+/* "Rough flight times from Manchester. Change" (FlyingFrom.tsx). */
+.dg-flying-from {
+  margin: 8px 0 0;
+}
+.dg-flying-from .link {
+  padding: 0;
+  font-size: inherit;
+}
+.dg-flying-pick {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 360px;
+}
+.dg-flying-pick select {
+  min-height: 44px;
+}

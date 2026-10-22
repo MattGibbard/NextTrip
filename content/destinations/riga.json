@@ -149,6 +149,22 @@
   ],
   "faqs": [
     {
+      "question": "Is Riga worth visiting?",
+      "answer": "Yes, especially for a short city break. The old town is a UNESCO World Heritage Site, the Art Nouveau streets are some of the finest in Europe, and food and drink cost much less than in western European capitals."
+    },
+    {
+      "question": "What is the best time to visit Riga?",
+      "answer": "May to August for warm weather and long, light evenings, or late November to early January for the Christmas market and lights. January and February are very cold and quiet."
+    },
+    {
+      "question": "How long is the flight to Riga from the UK?",
+      "answer": "About 2 hours 45 minutes to 3 hours direct from London. Riga is two hours ahead of the UK."
+    },
+    {
+      "question": "Is Riga cheap for a holiday?",
+      "answer": "Compared with most European capitals, yes. Hotels, restaurants and public transport are good value, and the old town is small enough to walk everywhere."
+    },
+    {
       "question": "Is Riga good for a family holiday?",
       "answer": "Yes. It's compact, safe and cheap, with a cosy market and an old town that's easy to explore."
     },
@@ -188,5 +204,5 @@
     }
   ],
   "date": "2026-10-14T07:36:32Z",
-  "updated": "2026-10-14T07:57:51Z"
+  "updated": "2026-10-22T08:04:21Z"
 }

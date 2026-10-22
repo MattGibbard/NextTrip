@@ -158,7 +158,7 @@ describe("pages made out for a visitor", () => {
     for (const slug of built.slugs) expect(rewrite(await built.guide(slug), sea)).toBe(await theirs.guide(slug));
     expect(rewrite(built.index(), sea)).toBe(theirs.index());
     for (const slug of built.hubSlugs) expect(rewrite(await built.hub(slug), sea)).toBe(await theirs.hub(slug));
-  });
+  }, 30_000); // renders every guide and hub twice, so it grows with the content
 });
 
 describe("the holiday picker", () => {

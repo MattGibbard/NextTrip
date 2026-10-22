@@ -144,6 +144,11 @@
     "lat": 33.2846,
     "lon": 131.4914
   },
+  "berchtesgaden": {
+    "query": "Berchtesgaden|DE",
+    "lat": 47.633,
+    "lon": 13.002
+  },
   "bergen-railway": {
     "query": "Bergen Railway|NO",
     "lat": 60.602,
@@ -168,6 +173,11 @@
     "query": "Bodrum|TR",
     "lat": 37.0344,
     "lon": 27.4307
+  },
+  "bordeaux": {
+    "query": "Bordeaux|FR",
+    "lat": 44.8412,
+    "lon": -0.58
   },
   "borneo": {
     "query": "Borneo|MY",
@@ -933,6 +943,11 @@
     "query": "Rajasthan|IN",
     "lat": 26.2389,
     "lon": 73.0243
+  },
+  "reunion": {
+    "query": "Réunion|RE",
+    "lat": -21.115,
+    "lon": 55.536
   },
   "reykjavik": {
     "query": "Reykjavik|IS",

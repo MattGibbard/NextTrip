@@ -1,0 +1,200 @@
+{
+  "name": "Bordeaux",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Bordeaux",
+  "intro": "Golden stone squares, riverside promenades and world-famous vineyards in an elegant, easy-going city in south-west France. Here's what Bordeaux is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/bordeaux-7173548_1280.webp",
+  "image_alt": "The Place de la Bourse in Bordeaux reflected in the shallow Miroir d'eau water mirror under a pink evening sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Bordeaux",
+  "to_code": "BOD",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Some UK routes to Bordeaux only fly in summer, so check the timetable. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 11
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild, blossom",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, terraces",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, long evenings",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 27
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, grape harvest",
+      "temp": 24
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild, harvest ends",
+      "temp": 20
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool, damp",
+      "temp": 14
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cool, Christmas market",
+      "temp": 11
+    }
+  },
+  "when_to_go": "May, June and September are the best months, warm enough to eat outside and cycle the riverside, with the grape harvest in the vineyards around September. July and August are hot, sometimes over 30°C, and the Atlantic beaches get busy. Winter is cool and quieter, with a Christmas market in December.",
+  "things": [
+    {
+      "name": "Place de la Bourse and the Miroir d'eau",
+      "tag": "Free",
+      "blurb": "The grand 18th-century square by the river, reflected in the world's largest water mirror. Best at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cité du Vin",
+      "tag": "Ticketed",
+      "blurb": "A striking wine museum on the river, with interactive exhibits and a tasting with views over the city at the end.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old town and Saint-Pierre",
+      "tag": "Free",
+      "blurb": "Pedestrian streets, honey-coloured squares, the Grosse Cloche gate and the cathedral's bell tower.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Marché des Capucins",
+      "tag": "Indoors",
+      "blurb": "The city's lively food market, with oysters, cheese and wine for breakfast or lunch at the counters.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Saint-Émilion",
+      "tag": "Day trip",
+      "blurb": "A medieval wine village on a hillside of vineyards, with an underground church, about 45 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dune du Pilat",
+      "tag": "Day trip",
+      "blurb": "Europe's tallest sand dune, above the sea near Arcachon, about an hour from the city. Climb up for huge views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Riverside quays",
+      "tag": "Free",
+      "blurb": "Miles of riverside paths for walking and cycling, with gardens, play areas and cafés along the Garonne.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Bordeaux from the UK?",
+      "answer": "Fly direct from several UK airports, with easyJet the main airline. You can also take the Eurostar to Paris and a fast train, about two hours from Paris to Bordeaux."
+    },
+    {
+      "question": "Is Bordeaux worth visiting if you don't drink wine?",
+      "answer": "Yes. The city itself is one of the prettiest in France, with great food, riverside walks and easy day trips to the coast."
+    },
+    {
+      "question": "How many days do you need in Bordeaux?",
+      "answer": "Two or three days covers the city and a vineyard visit. Add a couple more for Saint-Émilion, Arcachon and the Dune du Pilat."
+    },
+    {
+      "question": "Is Bordeaux easy to get around?",
+      "answer": "Yes. The centre is flat and walkable, and trams run from the station through the old town and along the river."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Dordogne",
+      "code": "EGC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lyon",
+      "code": "LYS",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Porto",
+      "code": "OPO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Douro Valley",
+      "code": "OPO",
+      "label": "🍷 Food & drink"
+    }
+  ],
+  "date": "2026-10-22T05:45:30Z",
+  "updated": "2026-10-22T05:45:30Z"
+}

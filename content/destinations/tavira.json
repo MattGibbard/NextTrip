@@ -1,0 +1,197 @@
+{
+  "name": "Tavira",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in Tavira",
+  "intro": "The Algarve's prettiest town, with a Roman bridge, a riverside of old houses and island beaches reached by little ferry. Here's what Tavira is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/tavira-3160579_1280.webp",
+  "image_alt": "A fishing boat on the river in Tavira, with the town's white houses behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Tavira",
+  "to_code": "FAO",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "culture"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, sunny",
+      "temp": 17
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 18
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 20
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 17
+    }
+  },
+  "when_to_go": "May, June, September and October are ideal, warm and sunny with quieter island beaches. July and August are hot and busy. Winter is mild and sunny, around 17°C, and the town stays lively.",
+  "things": [
+    {
+      "name": "Ilha de Tavira",
+      "tag": "Outdoors",
+      "blurb": "A long sandy island beach, reached by a short ferry from town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Praia do Barril",
+      "tag": "Outdoors",
+      "blurb": "Walk or take a little train to the beach, past an anchor cemetery.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Roman bridge",
+      "tag": "Free",
+      "blurb": "The old bridge over the Gilão river, at the heart of town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Castle and churches",
+      "tag": "Free",
+      "blurb": "Climb up to the castle garden for views over the rooftops.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ria Formosa",
+      "tag": "Tour",
+      "blurb": "Boat trips through a lagoon full of birds, including flamingos.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cacela Velha",
+      "tag": "Day trip",
+      "blurb": "A tiny clifftop village above a lagoon beach, 15 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Tavira worth visiting?",
+      "answer": "Yes. It's one of the Algarve's most charming towns, with great island beaches and none of the high-rise resorts."
+    },
+    {
+      "question": "How do you get to Tavira?",
+      "answer": "Fly into Faro, which has many direct flights from the UK, then take the train or drive, about 35 minutes."
+    },
+    {
+      "question": "What is the best time to visit Tavira?",
+      "answer": "May, June, September and October, around 22 to 28°C."
+    },
+    {
+      "question": "Is the sea warmer in Tavira than the western Algarve?",
+      "answer": "Yes. The eastern Algarve is calmer and a few degrees warmer, which suits families."
+    },
+    {
+      "question": "How many nights do you need in Tavira?",
+      "answer": "A week gives time for the islands, the lagoon and a few day trips."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Algarve",
+      "code": "FAO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Seville",
+      "code": "SVQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Cádiz",
+      "code": "XRY",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

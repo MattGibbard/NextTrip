@@ -1,0 +1,197 @@
+{
+  "name": "Fethiye",
+  "published": true,
+  "country": "TR",
+  "title": "Holidays in Fethiye",
+  "intro": "A harbour town on Turkey's turquoise coast, close to the famous Ölüdeniz lagoon, paragliding, rock tombs and boat trips to hidden coves. Here's what Fethiye is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/fethiye-2519511_1280.webp",
+  "image_alt": "The long beach at Ölüdeniz near Fethiye, curving below green mountains",
+  "wikipedia": "https://en.wikipedia.org/wiki/Fethiye",
+  "to_code": "DLM",
+  "holiday_types": [
+    "beach",
+    "adventure",
+    "nature"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK (3 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Turkish lira (₺)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Your passport needs at least 150 days left on it when you arrive. Check entry rules and the latest travel advice on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 16
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 22
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 34
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 16
+    }
+  },
+  "when_to_go": "May, June, September and October are best, warm with a warm sea and fewer crowds. July and August are very hot, often 34°C or more. Winter is mild but many resorts close.",
+  "things": [
+    {
+      "name": "Ölüdeniz Blue Lagoon",
+      "tag": "Ticketed",
+      "blurb": "A calm, shallow lagoon with a sandy spit, about 20 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paragliding from Babadağ",
+      "tag": "Tour",
+      "blurb": "Tandem flights high above Ölüdeniz, one of the world's top spots.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "12 Islands boat trip",
+      "tag": "Tour",
+      "blurb": "A day of swimming in coves around Fethiye bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lycian rock tombs",
+      "tag": "Free",
+      "blurb": "Temple-fronted tombs cut into the cliff above town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kayaköy",
+      "tag": "Free",
+      "blurb": "An abandoned Greek village of stone houses on a hillside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Saklıkent Gorge",
+      "tag": "Day trip",
+      "blurb": "Wade up a narrow canyon in icy water.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Fethiye worth visiting?",
+      "answer": "Yes. It's a working town with a great market, and it's close to Ölüdeniz, boat trips and the Lycian Way."
+    },
+    {
+      "question": "How do you get to Fethiye?",
+      "answer": "Fly into Dalaman, which has many direct flights from the UK, then drive about 45 minutes."
+    },
+    {
+      "question": "What is the best time to visit Fethiye?",
+      "answer": "May, June, September and October, around 22 to 31°C."
+    },
+    {
+      "question": "Should you stay in Fethiye or Ölüdeniz?",
+      "answer": "Ölüdeniz is right on the beach but touristy. Fethiye has more of a real town, with a market and harbour."
+    },
+    {
+      "question": "Is Fethiye good for families?",
+      "answer": "Yes. The Ölüdeniz lagoon is calm and shallow, and boat trips are a hit with children."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kaş",
+      "code": "DLM",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Bodrum",
+      "code": "BJV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Antalya",
+      "code": "AYT",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Rhodes",
+      "code": "RHO",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

@@ -1,0 +1,197 @@
+{
+  "name": "Carcassonne",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Carcassonne",
+  "intro": "A fairytale walled city of turrets and double ramparts above the vineyards of southern France, with the Canal du Midi below. Here's what Carcassonne is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/carcassonne-2701001_1280.webp",
+  "image_alt": "The walls and towers of Carcassonne's medieval Cité on its hill",
+  "wikipedia": "https://en.wikipedia.org/wiki/Carcassonne",
+  "to_code": "CCF",
+  "holiday_types": [
+    "culture",
+    "city",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 10
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 17
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, fireworks",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 20
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 13
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas market",
+      "temp": 11
+    }
+  },
+  "when_to_go": "April to June and September to October are best, warm with fewer crowds on the ramparts. July and August are hot and very busy, with fireworks over the walls on 14 July. December has a Christmas market. Visit the Cité early or late in the day.",
+  "things": [
+    {
+      "name": "La Cité",
+      "tag": "Free",
+      "blurb": "Wander the walled medieval city's lanes inside two rings of ramparts.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Château Comtal and ramparts",
+      "tag": "Ticketed",
+      "blurb": "Walk sections of the walls and towers on a ticketed route.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Canal du Midi",
+      "tag": "Outdoors",
+      "blurb": "Cycle or take a boat trip along the tree-lined canal.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cassoulet",
+      "tag": "Food",
+      "blurb": "The rich bean, sausage and duck stew the region is famous for.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cathar castles",
+      "tag": "Day trip",
+      "blurb": "Clifftop ruins like Peyrepertuse and Quéribus, about 1 hour 15 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bastide Saint-Louis",
+      "tag": "Free",
+      "blurb": "The lower town, with a market square and cafés.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Carcassonne worth visiting?",
+      "answer": "Yes. The walled Cité is one of the most impressive medieval sights in Europe, though it's busy in summer. Stay inside or nearby to see it quiet in the evening."
+    },
+    {
+      "question": "How many days do you need in Carcassonne?",
+      "answer": "One or two days covers the Cité and the lower town. Add a day for the Cathar castles or the canal."
+    },
+    {
+      "question": "How do you get to Carcassonne?",
+      "answer": "Fly into Carcassonne's small airport, which has some flights from the UK, or into Toulouse, about an hour away by train."
+    },
+    {
+      "question": "What is the best time to visit Carcassonne?",
+      "answer": "April to June and September, around 17 to 26°C."
+    },
+    {
+      "question": "Is Carcassonne good for children?",
+      "answer": "Yes. Castles, ramparts and knights' shops are a hit, and there are shows and a jousting display in summer."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Girona",
+      "code": "GRO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bordeaux",
+      "code": "BOD",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Dordogne",
+      "code": "EGC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lyon",
+      "code": "LYS",
+      "label": "🍷 Food & drink"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

@@ -1,0 +1,197 @@
+{
+  "name": "Zell am See",
+  "published": true,
+  "country": "AT",
+  "title": "Holidays in Zell am See",
+  "intro": "An Austrian lakeside town under the mountains, with skiing on a glacier in winter and swimming, hiking and cable cars in summer. Here's what Zell am See is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/zell-am-see-4871359_1280.webp",
+  "image_alt": "Boats on a calm Lake Zell with mountains behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Zell_am_See",
+  "to_code": "SZG",
+  "holiday_types": [
+    "ski",
+    "nature",
+    "adventure"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Snowy, skiing",
+      "temp": 0
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Snowy, skiing",
+      "temp": 2
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring skiing",
+      "temp": 7
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Between seasons",
+      "temp": 12
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Spring",
+      "temp": 17
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 21
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm, lake swims",
+      "temp": 23
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 18
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colours",
+      "temp": 13
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Between seasons",
+      "temp": 6
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Skiing, festive",
+      "temp": 1
+    }
+  },
+  "when_to_go": "December to March is the ski season, with snow guaranteed on the Kitzsteinhorn glacier above Kaprun. June to September is great for lake swimming, hiking and cable cars. April, May and November are quiet between seasons, when some lifts close.",
+  "things": [
+    {
+      "name": "Schmittenhöhe",
+      "tag": "Ticketed",
+      "blurb": "Cable car up the town's mountain for skiing in winter or walks in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kitzsteinhorn glacier",
+      "tag": "Ticketed",
+      "blurb": "High-altitude skiing almost all year, and an ice arena in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake Zell",
+      "tag": "Outdoors",
+      "blurb": "Swim from the lidos, take a boat trip or walk the lakeshore.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grossglockner High Alpine Road",
+      "tag": "Day trip",
+      "blurb": "A spectacular road up to Austria's highest mountain, open in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sigmund Thun Gorge",
+      "tag": "Ticketed",
+      "blurb": "Wooden walkways through a narrow gorge in Kaprun.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Krimml Waterfalls",
+      "tag": "Day trip",
+      "blurb": "Austria's highest waterfalls, about an hour away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Zell am See good for skiing?",
+      "answer": "Yes. It's good for beginners and intermediates, with snow-sure glacier skiing at Kaprun next door, all on one lift pass."
+    },
+    {
+      "question": "Is Zell am See worth visiting in summer?",
+      "answer": "Yes. The lake, cable cars and Grossglockner road make it a great summer holiday, and a Summer Card often includes free lifts and boats."
+    },
+    {
+      "question": "How do you get to Zell am See?",
+      "answer": "Fly into Salzburg, which has direct flights from the UK, then take the train or a transfer, about 1 hour 15 minutes."
+    },
+    {
+      "question": "What is the best time to visit Zell am See?",
+      "answer": "December to March for skiing, or June to September for the lake and mountains."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week is ideal for a ski or summer holiday."
+    }
+  ],
+  "similar": [
+    {
+      "name": "St Anton",
+      "code": "INN",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Hallstatt",
+      "code": "SZG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Innsbruck",
+      "code": "INN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Salzburg",
+      "code": "SZG",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

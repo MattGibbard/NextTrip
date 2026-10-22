@@ -1,0 +1,197 @@
+{
+  "name": "Skiathos",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Skiathos",
+  "intro": "A pine-covered island with over 60 sandy beaches, a lively harbour town and the dramatic runway that planespotters love. Here's what Skiathos is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/skiathos-6813827_1280.webp",
+  "image_alt": "Skiathos town's white houses above the harbour and yachts",
+  "wikipedia": "https://en.wikipedia.org/wiki/Skiathos",
+  "to_code": "JSI",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "nature"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 13
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 14
+    }
+  },
+  "when_to_go": "June and September are best for warm sea and calmer beaches. July and August are busy and hot. The season runs from May to October.",
+  "things": [
+    {
+      "name": "Koukounaries",
+      "tag": "Outdoors",
+      "blurb": "A long golden beach backed by pine forest and a lagoon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lalaria",
+      "tag": "Tour",
+      "blurb": "White pebbles and a rock arch, reached only by boat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Banana beach",
+      "tag": "Outdoors",
+      "blurb": "A lively sandy cove with clear water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Skiathos town",
+      "tag": "Free",
+      "blurb": "Lanes, churches and harbour bars, plus the Bourtzi headland.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Skopelos",
+      "tag": "Day trip",
+      "blurb": "The Mamma Mia! island, a short ferry away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Plane-watching",
+      "tag": "Free",
+      "blurb": "See jets land just over the road at the end of the runway.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Skiathos worth visiting?",
+      "answer": "Yes. It has some of Greece's best sandy beaches, a lively town and easy island-hopping to Skopelos."
+    },
+    {
+      "question": "How do you get to Skiathos?",
+      "answer": "Fly into Skiathos, which has direct summer flights from the UK. The town is a few minutes from the airport."
+    },
+    {
+      "question": "What is the best time to visit Skiathos?",
+      "answer": "June and September, around 26 to 27°C."
+    },
+    {
+      "question": "Is Skiathos good for families?",
+      "answer": "Yes. Many beaches are sandy and shallow, and buses run along the south coast."
+    },
+    {
+      "question": "Can you visit Skopelos from Skiathos?",
+      "answer": "Yes. Ferries take about 45 minutes, and boat trips visit the Mamma Mia! chapel."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Zakynthos",
+      "code": "ZTH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Corfu",
+      "code": "CFU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Naxos",
+      "code": "JNX",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Halkidiki",
+      "code": "SKG",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

@@ -24,6 +24,11 @@
     "lat": 40.5587,
     "lon": 8.3153
   },
+  "altea": {
+    "query": "Altea|ES",
+    "lat": 38.6028,
+    "lon": -0.0472
+  },
   "amalfi-coast": {
     "query": "Amalfi Coast|IT",
     "lat": 40.6647,
@@ -89,6 +94,11 @@
     "lat": 30.2711,
     "lon": -97.7437
   },
+  "aveiro": {
+    "query": "Aveiro|PT",
+    "lat": 40.6405,
+    "lon": -8.6538
+  },
   "azores": {
     "query": "Azores|PT",
     "lat": 37.7412,
@@ -144,6 +154,16 @@
     "lat": 33.2846,
     "lon": 131.4914
   },
+  "berat": {
+    "query": "Berat|AL",
+    "lat": 40.7019,
+    "lon": 19.9581
+  },
+  "bergamo": {
+    "query": "Bergamo|IT",
+    "lat": 45.6983,
+    "lon": 9.6773
+  },
   "bergen-railway": {
     "query": "Bergen Railway|NO",
     "lat": 60.602,
@@ -163,6 +183,11 @@
     "query": "Bernina Express|CH",
     "lat": 46.792,
     "lon": 9.8213
+  },
+  "biarritz": {
+    "query": "Biarritz|FR",
+    "lat": 43.4833,
+    "lon": -1.5593
   },
   "bodrum": {
     "query": "Bodrum|TR",
@@ -209,6 +234,11 @@
     "lat": 47.4979,
     "lon": 19.0402
   },
+  "budva": {
+    "query": "Budva|ME",
+    "lat": 42.2886,
+    "lon": 18.842
+  },
   "busan": {
     "query": "Busan|KR",
     "lat": 35.18,
@@ -254,6 +284,11 @@
     "lat": 38.6431,
     "lon": 34.8289
   },
+  "carcassonne": {
+    "query": "Carcassonne|FR",
+    "lat": 43.213,
+    "lon": 2.3491
+  },
   "caribbean-cruises": {
     "query": "Caribbean cruises|BB",
     "lat": 13.0975,
@@ -263,6 +298,16 @@
     "query": "Cartagena|CO",
     "lat": 10.391,
     "lon": -75.4794
+  },
+  "cefalu": {
+    "query": "Cefalù|IT",
+    "lat": 38.035,
+    "lon": 14.0245
+  },
+  "cesky-krumlov": {
+    "query": "Český Krumlov|CZ",
+    "lat": 48.8107,
+    "lon": 14.3151
   },
   "chamonix": {
     "query": "Chamonix|FR",
@@ -289,6 +334,11 @@
     "lat": 44.1222,
     "lon": 9.7133
   },
+  "coimbra": {
+    "query": "Coimbra|PT",
+    "lat": 40.2112,
+    "lon": -8.4291
+  },
   "colmar": {
     "query": "Colmar|FR",
     "lat": 48.0794,
@@ -303,6 +353,11 @@
     "query": "Copenhagen|DK",
     "lat": 55.6867,
     "lon": 12.5701
+  },
+  "cordoba": {
+    "query": "Córdoba|ES",
+    "lat": 37.8846,
+    "lon": -4.776
   },
   "corfu": {
     "query": "Corfu|GR",
@@ -328,6 +383,11 @@
     "query": "Crete|GR",
     "lat": 35.3088,
     "lon": 24.4633
+  },
+  "cuenca": {
+    "query": "Cuenca|ES",
+    "lat": 40.0661,
+    "lon": -2.1314
   },
   "cusco": {
     "query": "Cusco|PE",
@@ -384,10 +444,20 @@
     "lat": 42.6403,
     "lon": 18.1083
   },
+  "ericeira": {
+    "query": "Ericeira|PT",
+    "lat": 38.9632,
+    "lon": -9.4171
+  },
   "essaouira": {
     "query": "Essaouira|MA",
     "lat": 31.5118,
     "lon": -9.7621
+  },
+  "etretat": {
+    "query": "Étretat|FR",
+    "lat": 49.7075,
+    "lon": 0.2032
   },
   "faroe-islands": {
     "query": "Faroe Islands|FO",
@@ -398,6 +468,11 @@
     "query": "Fes|MA",
     "lat": 34.0347,
     "lon": -5.0162
+  },
+  "fethiye": {
+    "query": "Fethiye|TR",
+    "lat": 36.6221,
+    "lon": 29.1153
   },
   "flam-railway": {
     "query": "Flåm Railway|NO",
@@ -439,6 +514,21 @@
     "lat": 51.0543,
     "lon": 3.7174
   },
+  "giethoorn": {
+    "query": "Giethoorn|NL",
+    "lat": 52.7411,
+    "lon": 6.0774
+  },
+  "girona": {
+    "query": "Girona|ES",
+    "lat": 41.9793,
+    "lon": 2.8199
+  },
+  "gjirokaster": {
+    "query": "Gjirokastër|AL",
+    "lat": 40.0771,
+    "lon": 20.1393
+  },
   "glacier-express": {
     "query": "Glacier Express|CH",
     "lat": 46.3191,
@@ -453,6 +543,11 @@
     "query": "GoldenPass Express|CH",
     "lat": 46.4312,
     "lon": 6.9107
+  },
+  "gorges-du-verdon": {
+    "query": "Gorges du Verdon|FR",
+    "lat": 43.7497,
+    "lon": 6.3286
   },
   "gozo": {
     "query": "Gozo|MT",
@@ -544,6 +639,16 @@
     "lat": 60.3913,
     "lon": 5.3221
   },
+  "hvar": {
+    "query": "Hvar|HR",
+    "lat": 43.1723,
+    "lon": 16.4422
+  },
+  "hydra": {
+    "query": "Hydra|GR",
+    "lat": 37.3496,
+    "lon": 23.4661
+  },
   "ibiza": {
     "query": "Ibiza|ES",
     "lat": 38.9101,
@@ -629,6 +734,11 @@
     "lat": 9.512,
     "lon": 100.0136
   },
+  "korcula": {
+    "query": "Korčula|HR",
+    "lat": 42.9607,
+    "lon": 17.1355
+  },
   "kotor": {
     "query": "Kotor|ME",
     "lat": 42.4247,
@@ -654,6 +764,11 @@
     "lat": 28.6835,
     "lon": -17.8656
   },
+  "lake-balaton": {
+    "query": "Lake Balaton|HU",
+    "lat": 46.8839,
+    "lon": 17.8477
+  },
   "lake-bled": {
     "query": "Lake Bled|SI",
     "lat": 46.3636,
@@ -674,10 +789,20 @@
     "lat": 46.9854,
     "lon": 8.4988
   },
+  "lake-maggiore": {
+    "query": "Lake Maggiore|IT",
+    "lat": 45.9511,
+    "lon": 8.6342
+  },
   "lake-ohrid": {
     "query": "Lake Ohrid|MK",
     "lat": 41,
     "lon": 20.75
+  },
+  "lake-orta": {
+    "query": "Lake Orta|IT",
+    "lat": 45.8193,
+    "lon": 8.3943
   },
   "langkawi": {
     "query": "Langkawi|MY",
@@ -688,6 +813,16 @@
     "query": "Lanzarote|ES",
     "lat": 29.0469,
     "lon": -13.59
+  },
+  "lecce": {
+    "query": "Lecce|IT",
+    "lat": 40.3515,
+    "lon": 18.175
+  },
+  "lefkada": {
+    "query": "Lefkada|GR",
+    "lat": 38.8353,
+    "lon": 20.7097
   },
   "levi": {
     "query": "Levi|FI",
@@ -723,6 +858,16 @@
     "query": "Luang Prabang|LA",
     "lat": 19.8856,
     "lon": 102.1347
+  },
+  "lucca": {
+    "query": "Lucca|IT",
+    "lat": 44.0178,
+    "lon": 10.4544
+  },
+  "lugano": {
+    "query": "Lugano|CH",
+    "lat": 46.0038,
+    "lon": 8.9512
   },
   "lyon": {
     "query": "Lyon|FR",
@@ -804,6 +949,11 @@
     "lat": 39.9496,
     "lon": 4.1105
   },
+  "menton": {
+    "query": "Menton|FR",
+    "lat": 43.7753,
+    "lon": 7.5029
+  },
   "merida": {
     "query": "Mérida|MX",
     "lat": 20.9671,
@@ -813,6 +963,11 @@
     "query": "Messinia|GR",
     "lat": 37.0438,
     "lon": 22.1134
+  },
+  "meteora": {
+    "query": "Meteora|GR",
+    "lat": 39.7217,
+    "lon": 21.6306
   },
   "mexico-city": {
     "query": "Mexico City|MX",
@@ -828,6 +983,11 @@
     "query": "Milos|GR",
     "lat": 36.697,
     "lon": 24.4235
+  },
+  "mont-saint-michel": {
+    "query": "Mont-Saint-Michel|FR",
+    "lat": 48.636,
+    "lon": -1.5114
   },
   "montreal": {
     "query": "Montreal|CA",
@@ -863,6 +1023,11 @@
     "query": "Nepal|NP",
     "lat": 27.7172,
     "lon": 85.324
+  },
+  "nerja": {
+    "query": "Nerja|ES",
+    "lat": 36.7469,
+    "lon": -3.879
   },
   "new-orleans": {
     "query": "New Orleans|US",
@@ -909,6 +1074,11 @@
     "lat": 17.0732,
     "lon": -96.7266
   },
+  "obidos": {
+    "query": "Óbidos|PT",
+    "lat": 39.362,
+    "lon": -9.1572
+  },
   "okinawa": {
     "query": "Okinawa|JP",
     "lat": 26.2124,
@@ -949,6 +1119,11 @@
     "lat": 34.7754,
     "lon": 32.4218
   },
+  "parga": {
+    "query": "Parga|GR",
+    "lat": 39.2853,
+    "lon": 20.3998
+  },
   "paris": {
     "query": "Paris|FR",
     "lat": 48.8535,
@@ -958,6 +1133,11 @@
     "query": "Park City|US",
     "lat": 40.6461,
     "lon": -111.498
+  },
+  "paxos": {
+    "query": "Paxos|GR",
+    "lat": 39.2094,
+    "lon": 20.1616
   },
   "penang": {
     "query": "Penang|MY",
@@ -988,6 +1168,11 @@
     "query": "Plovdiv|BG",
     "lat": 42.1419,
     "lon": 24.7499
+  },
+  "polignano-a-mare": {
+    "query": "Polignano a Mare|IT",
+    "lat": 40.9944,
+    "lon": 17.2225
   },
   "porto": {
     "query": "Porto|PT",
@@ -1054,6 +1239,11 @@
     "lat": -22.9068,
     "lon": -43.1729
   },
+  "riquewihr": {
+    "query": "Riquewihr|FR",
+    "lat": 48.1661,
+    "lon": 7.298
+  },
   "rocky-mountaineer": {
     "query": "Rocky Mountaineer|CA",
     "lat": 51.4178,
@@ -1074,6 +1264,11 @@
     "lat": 36.7423,
     "lon": -5.1671
   },
+  "rothenburg": {
+    "query": "Rothenburg ob der Tauber|DE",
+    "lat": 49.3658,
+    "lon": 10.1629
+  },
   "rotorua": {
     "query": "Rotorua|NZ",
     "lat": -38.1368,
@@ -1093,6 +1288,11 @@
     "query": "Saariselkä|FI",
     "lat": 68.4195,
     "lon": 27.414
+  },
+  "saint-malo": {
+    "query": "Saint-Malo|FR",
+    "lat": 48.6495,
+    "lon": -2.026
   },
   "salzburg": {
     "query": "Salzburg|AT",
@@ -1169,6 +1369,11 @@
     "lat": -4.6796,
     "lon": 55.492
   },
+  "sibenik": {
+    "query": "Šibenik|HR",
+    "lat": 43.7341,
+    "lon": 15.8945
+  },
   "sicily-road-trip": {
     "query": "Sicily|IT",
     "lat": 37.567,
@@ -1179,6 +1384,11 @@
     "lat": 13.3618,
     "lon": 103.859
   },
+  "siena": {
+    "query": "Siena|IT",
+    "lat": 43.3188,
+    "lon": 11.3308
+  },
   "singapore": {
     "query": "Singapore|SG",
     "lat": 1.2899,
@@ -1188,6 +1398,11 @@
     "query": "Sintra|PT",
     "lat": 38.8355,
     "lon": -9.3522
+  },
+  "skiathos": {
+    "query": "Skiathos|GR",
+    "lat": 39.1662,
+    "lon": 23.4889
   },
   "sofia": {
     "query": "Sofia|BG",
@@ -1244,10 +1459,25 @@
     "lat": 59.437,
     "lon": 24.7536
   },
+  "taormina": {
+    "query": "Taormina|IT",
+    "lat": 37.8512,
+    "lon": 15.283
+  },
+  "tarifa": {
+    "query": "Tarifa|ES",
+    "lat": 36.0129,
+    "lon": -5.605
+  },
   "tasmania": {
     "query": "Tasmania|AU",
     "lat": -42.0409,
     "lon": 146.8087
+  },
+  "tavira": {
+    "query": "Tavira|PT",
+    "lat": 37.1262,
+    "lon": -7.6499
   },
   "tbilisi": {
     "query": "Tbilisi|GE",
@@ -1284,6 +1514,11 @@
     "lat": 35.6769,
     "lon": 139.7639
   },
+  "toledo": {
+    "query": "Toledo|ES",
+    "lat": 39.8559,
+    "lon": -4.0243
+  },
   "toronto": {
     "query": "Toronto|CA",
     "lat": 43.6535,
@@ -1293,6 +1528,11 @@
     "query": "Torres del Paine|CL",
     "lat": -50.9423,
     "lon": -73.4068
+  },
+  "trogir": {
+    "query": "Trogir|HR",
+    "lat": 43.5164,
+    "lon": 16.2497
   },
   "tromso": {
     "query": "Tromsø|NO",
@@ -1328,6 +1568,11 @@
     "query": "Verbier|CH",
     "lat": 46.0961,
     "lon": 7.2287
+  },
+  "verona": {
+    "query": "Verona|IT",
+    "lat": 45.4425,
+    "lon": 10.9857
   },
   "vienna": {
     "query": "Vienna|AT",
@@ -1393,6 +1638,11 @@
     "query": "Zanzibar|TZ",
     "lat": -6.1659,
     "lon": 39.2026
+  },
+  "zell-am-see": {
+    "query": "Zell am See|AT",
+    "lat": 47.324,
+    "lon": 12.7963
   },
   "zermatt": {
     "query": "Zermatt|CH",

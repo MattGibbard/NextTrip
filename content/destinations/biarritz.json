@@ -1,0 +1,197 @@
+{
+  "name": "Biarritz",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Biarritz",
+  "intro": "A stylish Basque surf town with grand belle époque villas, big Atlantic beaches and Spain's San Sebastián just down the coast. Here's what Biarritz is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/biarritz-3247556_1280.webp",
+  "image_alt": "Villa Belza on a rocky point above the sea in Biarritz",
+  "wikipedia": "https://en.wikipedia.org/wiki/Biarritz",
+  "to_code": "BIQ",
+  "holiday_types": [
+    "beach",
+    "adventure",
+    "food"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 17
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 20
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm, busy",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, surf",
+      "temp": 24
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 20
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 13
+    }
+  },
+  "when_to_go": "June to September is best for beaches and surf, with warm days and a cool sea. August is the busiest. Autumn has great surf and quieter beaches. Winter is mild but rainy.",
+  "things": [
+    {
+      "name": "Grande Plage",
+      "tag": "Free",
+      "blurb": "The big main beach in front of the Hôtel du Palais.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rocher de la Vierge",
+      "tag": "Free",
+      "blurb": "A rock reached by a little iron footbridge, with a statue of the Virgin.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Surf lessons",
+      "tag": "Tour",
+      "blurb": "Côte des Basques beach is the birthplace of French surfing.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cité de l'Océan",
+      "tag": "Ticketed",
+      "blurb": "A hands-on museum of the ocean and surfing.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Les Halles market",
+      "tag": "Food",
+      "blurb": "Basque ham, cheese and pintxos at the covered market.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Saint-Jean-de-Luz",
+      "tag": "Day trip",
+      "blurb": "A pretty Basque fishing town, 20 minutes south.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Biarritz worth visiting?",
+      "answer": "Yes. It mixes glamour, surfing and Basque food, and San Sebastián is less than an hour away."
+    },
+    {
+      "question": "How do you get to Biarritz?",
+      "answer": "Fly into Biarritz, which has some direct flights from the UK, mainly in summer. Bordeaux is about 2 hours by train."
+    },
+    {
+      "question": "What is the best time to visit Biarritz?",
+      "answer": "June to September, around 20 to 26°C."
+    },
+    {
+      "question": "Is Biarritz good for families?",
+      "answer": "Yes. There are calm beaches like Port Vieux, an aquarium and surf schools for children."
+    },
+    {
+      "question": "Can you visit San Sebastián from Biarritz?",
+      "answer": "Yes. It's about 45 minutes away by car, bus or train."
+    }
+  ],
+  "similar": [
+    {
+      "name": "San Sebastián",
+      "code": "BIO",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Bordeaux",
+      "code": "BOD",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Ericeira",
+      "code": "LIS",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Asturias",
+      "code": "OVD",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

@@ -1,0 +1,197 @@
+{
+  "name": "Verona",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Verona",
+  "intro": "Romeo and Juliet's city, with a huge Roman arena that still hosts summer opera, pink-marble streets and Lake Garda half an hour away. Here's what Verona is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/verona-3067953_1280.webp",
+  "image_alt": "The Ponte Pietra bridge over the Adige river in Verona, with a bell tower behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Verona",
+  "to_code": "VRN",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 7
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 10
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Opera season",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, opera",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, opera",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 19
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Foggy",
+      "temp": 12
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas markets",
+      "temp": 7
+    }
+  },
+  "when_to_go": "April to June and September are ideal for walking the city. The opera festival in the Arena runs from June to early September, and July and August are hot. December has Christmas markets, and winter can be foggy and cold.",
+  "things": [
+    {
+      "name": "Arena di Verona",
+      "tag": "Ticketed",
+      "blurb": "The Roman amphitheatre in the main square. Go to an opera on a summer night.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Juliet's House",
+      "tag": "Ticketed",
+      "blurb": "The famous balcony, in a courtyard that gets very crowded.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Piazza delle Erbe",
+      "tag": "Free",
+      "blurb": "The old market square, surrounded by frescoed houses.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Castel San Pietro",
+      "tag": "Ticketed",
+      "blurb": "Funicular or walk up for the best view over the river and rooftops.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Castelvecchio",
+      "tag": "Ticketed",
+      "blurb": "A red-brick castle and art museum with a battlemented bridge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake Garda",
+      "tag": "Day trip",
+      "blurb": "Sirmione and the lake shore, about 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Verona worth visiting?",
+      "answer": "Yes. It's compact, beautiful and less overwhelming than Venice or Florence, with an evening at the Arena opera a highlight."
+    },
+    {
+      "question": "How many days do you need in Verona?",
+      "answer": "Two days covers the city. Add a day or two for Lake Garda or Valpolicella's vineyards."
+    },
+    {
+      "question": "What is the best time to visit Verona?",
+      "answer": "April to June and September, around 19 to 28°C. June to August for the opera."
+    },
+    {
+      "question": "How do you get to Verona?",
+      "answer": "Fly into Verona, which has direct flights from the UK, then take the shuttle bus to the station in about 15 minutes. Venice is just over an hour away by train."
+    },
+    {
+      "question": "Can you combine Verona with Venice and Lake Garda?",
+      "answer": "Easily. Lake Garda is 30 minutes away and Venice just over an hour by train."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Venice",
+      "code": "VCE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bologna",
+      "code": "BLQ",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Bergamo",
+      "code": "BGY",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

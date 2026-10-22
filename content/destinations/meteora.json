@@ -1,0 +1,197 @@
+{
+  "name": "Meteora",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Meteora",
+  "intro": "Monasteries perched on top of giant sandstone pillars rising from the plains of central Greece, a truly otherworldly sight. Here's what Meteora is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/meteora-3279419_1280.webp",
+  "image_alt": "A monastery on top of a sheer rock pillar at Meteora",
+  "wikipedia": "https://en.wikipedia.org/wiki/Meteora",
+  "to_code": "SKG",
+  "holiday_types": [
+    "culture",
+    "nature",
+    "adventure"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 11
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 34
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 15
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 10
+    }
+  },
+  "when_to_go": "April, May, September and October are best for walking between monasteries. July and August are very hot. Winter is cold and misty, which can look magical. Each monastery closes one day a week, so check before you go.",
+  "things": [
+    {
+      "name": "Great Meteoron",
+      "tag": "Ticketed",
+      "blurb": "The largest monastery, with a museum and a frescoed church.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Varlaam",
+      "tag": "Ticketed",
+      "blurb": "A monastery with an old rope-and-net lift still on show.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Roussanou",
+      "tag": "Ticketed",
+      "blurb": "A nunnery reached by a bridge, on a narrow pillar.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sunset viewpoint",
+      "tag": "Free",
+      "blurb": "Watch the sun set over the rocks from the viewpoints by the road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hiking trails",
+      "tag": "Outdoors",
+      "blurb": "Old paths climb between the monasteries from Kastraki.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rock climbing",
+      "tag": "Tour",
+      "blurb": "Climbing routes for beginners and experts on the pillars.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Meteora worth visiting?",
+      "answer": "Yes. It's one of the most spectacular sights in Greece, a UNESCO site of monasteries on top of rock towers."
+    },
+    {
+      "question": "How many days do you need in Meteora?",
+      "answer": "One or two days covers the monasteries and a sunset. Stay a night in Kalambaka or Kastraki."
+    },
+    {
+      "question": "How do you get to Meteora?",
+      "answer": "Fly to Thessaloniki or Athens, then take the train to Kalambaka, about 3 to 4 hours, or drive."
+    },
+    {
+      "question": "What should you wear to visit Meteora?",
+      "answer": "Cover shoulders and knees. Women should wear skirts, which are usually lent at the entrances."
+    },
+    {
+      "question": "What is the best time to visit Meteora?",
+      "answer": "Spring and autumn, around 20 to 28°C."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Thessaloniki",
+      "code": "SKG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Athens",
+      "code": "ATH",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Cappadocia",
+      "code": "NAV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Lake Ohrid",
+      "code": "OHD",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

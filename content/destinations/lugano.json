@@ -1,0 +1,197 @@
+{
+  "name": "Lugano",
+  "published": true,
+  "country": "CH",
+  "title": "Holidays in Lugano",
+  "intro": "An Italian-speaking Swiss lake city with palm trees, mountain funiculars and lakeside villages, where Switzerland meets the Mediterranean. Here's what Lugano is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/lugano-3272123_1280.webp",
+  "image_alt": "Monte San Salvatore above the lights of Lugano, with tulips by the lake",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lugano",
+  "to_code": "MXP",
+  "holiday_types": [
+    "city",
+    "nature",
+    "relax"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Swiss franc (CHF)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / J · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Switzerland is in the Schengen area, so the new EU entry checks apply. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 7
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 17
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 27
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 23
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 17
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 11
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive",
+      "temp": 8
+    }
+  },
+  "when_to_go": "April to September is best, warm and sunny for boat trips and swimming in the lake. Lugano is one of the sunniest corners of Switzerland. Autumn is mild and colourful, and December has Christmas markets.",
+  "things": [
+    {
+      "name": "Monte San Salvatore",
+      "tag": "Ticketed",
+      "blurb": "A funicular up the sugarloaf mountain for views over the lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monte Brè",
+      "tag": "Ticketed",
+      "blurb": "Another funicular, with walking trails and the village of Brè.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gandria",
+      "tag": "Free",
+      "blurb": "A lakeside village of stone houses, reached by a lakeside path or boat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Morcote",
+      "tag": "Free",
+      "blurb": "A pretty village with a garden and steps up to a church.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Parco Ciani",
+      "tag": "Free",
+      "blurb": "A lakeside park with palm trees and flowerbeds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Swissminiatur",
+      "tag": "Ticketed",
+      "blurb": "A miniature Switzerland in Melide, popular with children.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Lugano worth visiting?",
+      "answer": "Yes. It's a relaxed lake city with an Italian feel, cheaper than Zurich or Geneva, and close to Lake Como and Lake Maggiore."
+    },
+    {
+      "question": "How do you get to Lugano?",
+      "answer": "Fly into Milan Malpensa, about an hour away, or Zurich, about 2 hours by train."
+    },
+    {
+      "question": "What is the best time to visit Lugano?",
+      "answer": "April to September, around 17 to 28°C."
+    },
+    {
+      "question": "How many days do you need in Lugano?",
+      "answer": "Two or three days covers the city, mountains and villages."
+    },
+    {
+      "question": "Can you visit Lake Como from Lugano?",
+      "answer": "Yes. Como is about 30 minutes away by train."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lake Como",
+      "code": "MXP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Maggiore",
+      "code": "MXP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Lucerne",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Orta",
+      "code": "MXP",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

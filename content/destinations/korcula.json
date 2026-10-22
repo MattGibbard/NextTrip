@@ -1,0 +1,197 @@
+{
+  "name": "Korčula",
+  "published": true,
+  "country": "HR",
+  "title": "Holidays in Korčula",
+  "intro": "A green Dalmatian island with a walled medieval town shaped like a fish skeleton, vineyards and quiet coves. Here's what Korčula is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/korcula-572376_1280.webp",
+  "image_alt": "Korčula's walled old town on its peninsula, with the cathedral tower",
+  "wikipedia": "https://en.wikipedia.org/wiki/Korčula",
+  "to_code": "DBV",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 12
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 13
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 13
+    }
+  },
+  "when_to_go": "June and September are ideal, with warm sea and calm towns. July and August are hot and busy. The Moreška sword dance is performed in Korčula Town in summer. The season runs from May to October.",
+  "things": [
+    {
+      "name": "Korčula Town",
+      "tag": "Free",
+      "blurb": "Herringbone streets inside the walls, designed to catch the breeze.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Marco Polo Tower",
+      "tag": "Ticketed",
+      "blurb": "The house and tower said to be the explorer's birthplace, with a view.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Moreška sword dance",
+      "tag": "Ticketed",
+      "blurb": "A traditional dance-drama performed in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lumbarda",
+      "tag": "Outdoors",
+      "blurb": "Sandy beaches and the local white wine, Grk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Badija",
+      "tag": "Tour",
+      "blurb": "A small island with a monastery and tame deer, by taxi boat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pelješac and Ston",
+      "tag": "Day trip",
+      "blurb": "Walls, oysters and vineyards across the channel.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Korčula worth visiting?",
+      "answer": "Yes. Its old town is one of the prettiest in Croatia, and the island is calmer than Hvar."
+    },
+    {
+      "question": "How do you get to Korčula?",
+      "answer": "Fly into Dubrovnik or Split, both with direct flights from the UK, then take a catamaran or a bus and ferry, about 2 to 3 hours."
+    },
+    {
+      "question": "What is the best time to visit Korčula?",
+      "answer": "June and September, around 26 to 27°C."
+    },
+    {
+      "question": "Does Korčula have sandy beaches?",
+      "answer": "A few. Lumbarda's Pržina and Bilin Žal are sandy; most others are pebbles and rocks."
+    },
+    {
+      "question": "Korčula or Hvar?",
+      "answer": "Korčula is quieter, with a more medieval old town. Hvar has more beaches and nightlife."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Hvar",
+      "code": "SPU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Dubrovnik",
+      "code": "DBV",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Split",
+      "code": "SPU",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

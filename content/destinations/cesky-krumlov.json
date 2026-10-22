@@ -1,0 +1,197 @@
+{
+  "name": "Český Krumlov",
+  "published": true,
+  "country": "CZ",
+  "title": "Holidays in Český Krumlov",
+  "intro": "A fairytale Czech town wrapped in a loop of river, with a painted castle tower, cobbled lanes and rafting through the middle. Here's what Český Krumlov is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/cesky-krumlov-3760384_1280.webp",
+  "image_alt": "Český Krumlov lit up at dusk inside a loop of the Vltava river",
+  "wikipedia": "https://en.wikipedia.org/wiki/Český_Krumlov",
+  "to_code": "PRG",
+  "holiday_types": [
+    "culture",
+    "city",
+    "nature"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Czech koruna (Kč)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The Czech Republic is in the Schengen area, so the new EU entry checks apply. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 1
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 3
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 9
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 14
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, rose festival",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm, rafting",
+      "temp": 24
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 19
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colours",
+      "temp": 13
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 6
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas market",
+      "temp": 2
+    }
+  },
+  "when_to_go": "May to September is best, warm for walking and rafting the Vltava. The Five-Petalled Rose Festival brings medieval costumes in June. December has a small Christmas market and the town looks magical in snow. Day-trippers fill the town at midday, so stay a night.",
+  "things": [
+    {
+      "name": "Český Krumlov Castle",
+      "tag": "Ticketed",
+      "blurb": "A huge castle with a painted tower, gardens and a rare baroque theatre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Castle tower",
+      "tag": "Ticketed",
+      "blurb": "Climb the tower for the view over the river loop and rooftops.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rafting on the Vltava",
+      "tag": "Tour",
+      "blurb": "Paddle a raft or canoe through the town, easy enough for families.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old town",
+      "tag": "Free",
+      "blurb": "A UNESCO-listed maze of lanes, little squares and pubs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Egon Schiele Art Centre",
+      "tag": "Ticketed",
+      "blurb": "Works by the Austrian artist who lived here.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Seminary Garden",
+      "tag": "Free",
+      "blurb": "A viewpoint over the castle and river.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Český Krumlov worth visiting?",
+      "answer": "Yes. It's one of the most beautiful small towns in Europe. It gets busy at midday, so stay overnight."
+    },
+    {
+      "question": "How do you get to Český Krumlov?",
+      "answer": "Fly into Prague, then take a bus or shuttle, about 3 hours. Linz in Austria is about 1 hour 15 minutes away."
+    },
+    {
+      "question": "Can you do Český Krumlov as a day trip from Prague?",
+      "answer": "Yes, but it's a long day. Staying a night is much better."
+    },
+    {
+      "question": "What is the best time to visit Český Krumlov?",
+      "answer": "May to September, around 19 to 24°C."
+    },
+    {
+      "question": "How many days do you need in Český Krumlov?",
+      "answer": "One or two days covers the castle, town and a river trip."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Prague",
+      "code": "PRG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Hallstatt",
+      "code": "SZG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Salzburg",
+      "code": "SZG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Karlovy Vary",
+      "code": "PRG",
+      "label": "🧘 Relax & spa"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

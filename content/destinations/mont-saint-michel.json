@@ -1,0 +1,196 @@
+{
+  "name": "Mont-Saint-Michel",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Mont-Saint-Michel",
+  "intro": "A medieval abbey on a rocky island rising from vast tidal sands, reached by a bridge, with one of the biggest tides in Europe. Here's what Mont-Saint-Michel is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/mont-saint-michel-6924072_1280.webp",
+  "image_alt": "Mont-Saint-Michel at the end of its long bridge across the bay",
+  "wikipedia": "https://en.wikipedia.org/wiki/Mont-Saint-Michel",
+  "to_code": "RNS",
+  "holiday_types": [
+    "culture",
+    "nature"
+  ],
+  "nights": "1 to 2",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book. You can also take your car on a ferry from the south coast of England.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 8
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Big tides",
+      "temp": 12
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 14
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 17
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 22
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 22
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Big tides",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 16
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 12
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 9
+    }
+  },
+  "when_to_go": "May, June and September are best, mild and less crowded than summer. July and August are packed by midday. The highest tides come around the spring and autumn equinoxes, when the Mont becomes an island again. Stay overnight to see it without the crowds.",
+  "things": [
+    {
+      "name": "The Abbey",
+      "tag": "Ticketed",
+      "blurb": "Climb up through the village to the Gothic abbey and its cloister.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grande Rue",
+      "tag": "Free",
+      "blurb": "The steep main street of shops and old houses.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ramparts",
+      "tag": "Free",
+      "blurb": "Walk the walls for views over the bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Guided bay walk",
+      "tag": "Tour",
+      "blurb": "Cross the sands at low tide with a guide. Never go without one, because of quicksand and fast tides.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Omelette at La Mère Poulard",
+      "tag": "Food",
+      "blurb": "A famous fluffy omelette cooked over a wood fire.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Saint-Malo",
+      "tag": "Day trip",
+      "blurb": "The walled port, about 50 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Mont-Saint-Michel worth visiting?",
+      "answer": "Yes. It's one of the most famous sights in France, and seeing it rise from the bay is unforgettable, especially at sunset or high tide."
+    },
+    {
+      "question": "How long do you need at Mont-Saint-Michel?",
+      "answer": "Half a day covers the abbey and village. Staying a night lets you see it quiet in the evening and early morning."
+    },
+    {
+      "question": "How do you get to Mont-Saint-Michel?",
+      "answer": "Fly to Rennes or take the ferry to Saint-Malo, both about an hour away. Buses run from Rennes station."
+    },
+    {
+      "question": "When is high tide at Mont-Saint-Michel?",
+      "answer": "It changes daily. The biggest tides come around the equinoxes in March and September. Check the official tide timetable."
+    },
+    {
+      "question": "Is Mont-Saint-Michel suitable for pushchairs?",
+      "answer": "Not really. The streets are steep with lots of steps, so bring a baby carrier."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Saint-Malo",
+      "code": "RNS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Étretat",
+      "code": "CDG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Paris",
+      "code": "CDG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Carcassonne",
+      "code": "CCF",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

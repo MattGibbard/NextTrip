@@ -1,0 +1,197 @@
+{
+  "name": "Budva",
+  "published": true,
+  "country": "ME",
+  "title": "Holidays in Budva",
+  "intro": "Montenegro's beach capital, with a walled old town on the sea, the island hotel of Sveti Stefan nearby and mountains rising behind. Here's what Budva is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/budva-3694783_1280.webp",
+  "image_alt": "Budva's walled old town and bell tower by the sea, with mountains behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Budva",
+  "to_code": "TIV",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "relax"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Montenegro isn't in the EU but uses the euro. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 12
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 13
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 13
+    }
+  },
+  "when_to_go": "June and September are best, warm with a warm sea and fewer crowds. July and August are hot and busy, with lively nightlife. Spring and autumn are good for the old town and Kotor.",
+  "things": [
+    {
+      "name": "Budva Old Town",
+      "tag": "Free",
+      "blurb": "Venetian walls, lanes and a citadel on the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mogren beach",
+      "tag": "Outdoors",
+      "blurb": "Two coves reached by a cliff path from the old town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sveti Stefan",
+      "tag": "Free",
+      "blurb": "The famous island village, best seen from the beach and viewpoints.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kotor",
+      "tag": "Day trip",
+      "blurb": "The walled town in its fjord-like bay, 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lovćen",
+      "tag": "Day trip",
+      "blurb": "Drive up the mountain to a mausoleum with views over the country.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Petrovac",
+      "tag": "Free",
+      "blurb": "A quieter resort town with a pine-backed beach.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Budva worth visiting?",
+      "answer": "Yes, for beaches and an old town, at lower prices than Croatia. Stay outside the busiest strip if you want peace."
+    },
+    {
+      "question": "How do you get to Budva?",
+      "answer": "Fly into Tivat, about 30 minutes away, or Podgorica or Dubrovnik. There are direct flights from the UK, mostly in summer."
+    },
+    {
+      "question": "What is the best time to visit Budva?",
+      "answer": "June and September, around 26 to 27°C."
+    },
+    {
+      "question": "Is Budva good for families?",
+      "answer": "Yes, with sandy and pebble beaches and a compact old town, though the main strip is noisy at night in summer."
+    },
+    {
+      "question": "Budva or Kotor?",
+      "answer": "Kotor is more beautiful and historic, Budva has better beaches. They're only 30 minutes apart."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Dubrovnik",
+      "code": "DBV",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Saranda",
+      "code": "TIA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lake Ohrid",
+      "code": "OHD",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

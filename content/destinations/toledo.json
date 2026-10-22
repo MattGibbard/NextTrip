@@ -1,0 +1,196 @@
+{
+  "name": "Toledo",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Toledo",
+  "intro": "A hilltop city wrapped in a river gorge, where churches, mosques and synagogues crowd together, just half an hour from Madrid. Here's what Toledo is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/toledo-4917318_1280.webp",
+  "image_alt": "The Alcázar of Toledo above the Alcántara bridge and old city walls",
+  "wikipedia": "https://en.wikipedia.org/wiki/Toledo,_Spain",
+  "to_code": "MAD",
+  "holiday_types": [
+    "city",
+    "culture"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, sunny",
+      "temp": 11
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 13
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 35
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 15
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cold",
+      "temp": 11
+    }
+  },
+  "when_to_go": "April, May, September and October are best for walking the steep streets. July and August are very hot. Winter is cold but sunny and quiet once the day-trippers leave. Corpus Christi in early summer brings a big procession.",
+  "things": [
+    {
+      "name": "Toledo Cathedral",
+      "tag": "Ticketed",
+      "blurb": "One of Spain's greatest Gothic cathedrals, with paintings by El Greco and Goya.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mirador del Valle",
+      "tag": "Free",
+      "blurb": "The classic view of the whole city across the river gorge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alcázar",
+      "tag": "Ticketed",
+      "blurb": "The fortress on the hilltop, now an army museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Synagogue of Santa María la Blanca",
+      "tag": "Ticketed",
+      "blurb": "White horseshoe arches in a medieval synagogue.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "El Greco's Burial of the Count of Orgaz",
+      "tag": "Ticketed",
+      "blurb": "His masterpiece, in the church of Santo Tomé.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Marzipan",
+      "tag": "Food",
+      "blurb": "Toledo's speciality, sold in shops all over the old town.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Toledo worth visiting?",
+      "answer": "Yes. It's one of Spain's most historic cities, with Christian, Jewish and Moorish buildings packed onto one hill."
+    },
+    {
+      "question": "How many days do you need in Toledo?",
+      "answer": "One day covers the highlights, but staying a night lets you see it quiet in the evening."
+    },
+    {
+      "question": "Can you do Toledo as a day trip from Madrid?",
+      "answer": "Yes. The fast train takes about 33 minutes from Madrid Atocha."
+    },
+    {
+      "question": "What is the best time to visit Toledo?",
+      "answer": "Spring and autumn, around 20 to 29°C. Summer is very hot."
+    },
+    {
+      "question": "How do you get to Toledo?",
+      "answer": "Fly into Madrid, which has many flights from the UK, then take the fast train or a bus."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Madrid",
+      "code": "MAD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Cuenca",
+      "code": "MAD",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Córdoba",
+      "code": "SVQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Seville",
+      "code": "SVQ",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

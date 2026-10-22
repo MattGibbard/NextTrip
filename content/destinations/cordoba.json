@@ -1,0 +1,197 @@
+{
+  "name": "Córdoba",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Córdoba",
+  "intro": "A Moorish city on the Guadalquivir, home to the extraordinary Mezquita mosque-cathedral and courtyards overflowing with flowers. Here's what Córdoba is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/cordoba-7771933_1280.webp",
+  "image_alt": "The Roman bridge over the Guadalquivir in Córdoba, with the Mezquita behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Córdoba,_Spain",
+  "to_code": "SVQ",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cool, sunny",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 17
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 21
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 23
+    },
+    "may": {
+      "rating": "best",
+      "note": "Patios festival",
+      "temp": 28
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 33
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 37
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 37
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 15
+    }
+  },
+  "when_to_go": "March to May and October are ideal, with the patio festival and spring fair in May. July and August are among the hottest in Europe, often near 40°C. Winter is cool and sunny, with fewer visitors.",
+  "things": [
+    {
+      "name": "Mezquita",
+      "tag": "Ticketed",
+      "blurb": "A forest of red-and-white arches in a former mosque with a cathedral built inside. Free early-morning entry on most days.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alcázar de los Reyes Cristianos",
+      "tag": "Ticketed",
+      "blurb": "A fortress with terraced gardens and fountains.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Roman Bridge",
+      "tag": "Free",
+      "blurb": "Walk across the river at sunset for the view back to the Mezquita.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Patios",
+      "tag": "Ticketed",
+      "blurb": "Flower-filled courtyards, at their best during the May festival.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Judería",
+      "tag": "Free",
+      "blurb": "The old Jewish quarter of narrow white lanes and a medieval synagogue.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Medina Azahara",
+      "tag": "Day trip",
+      "blurb": "Ruins of a 10th-century palace city, just outside town.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Córdoba worth visiting?",
+      "answer": "Yes. The Mezquita is one of the most remarkable buildings in Europe, and the old town is easy to explore in a day or two."
+    },
+    {
+      "question": "How many days do you need in Córdoba?",
+      "answer": "One or two days. Many people combine it with Seville and Granada for a week."
+    },
+    {
+      "question": "What is the best time to visit Córdoba?",
+      "answer": "March to May and October, around 21 to 28°C. Summer is extremely hot."
+    },
+    {
+      "question": "How do you get to Córdoba?",
+      "answer": "Fly into Seville or Málaga, both with direct flights from the UK, then take the fast train, about 45 minutes to an hour."
+    },
+    {
+      "question": "When is the Córdoba patio festival?",
+      "answer": "Usually in the first half of May, when families open their flower-filled courtyards to visitors."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Seville",
+      "code": "SVQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Granada",
+      "code": "GRX",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Toledo",
+      "code": "MAD",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Ronda",
+      "code": "AGP",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

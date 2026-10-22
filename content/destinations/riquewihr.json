@@ -1,0 +1,196 @@
+{
+  "name": "Riquewihr",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Riquewihr",
+  "intro": "A perfectly preserved Alsace wine village of half-timbered houses among vineyards, with one of the prettiest Christmas markets in France. Here's what Riquewihr is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/riquewihr-6952811_1280.webp",
+  "image_alt": "Colourful half-timbered houses along Riquewihr's main street",
+  "wikipedia": "https://en.wikipedia.org/wiki/Riquewihr",
+  "to_code": "BSL",
+  "holiday_types": [
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 4
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 6
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 12
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 16
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 27
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Grape harvest",
+      "temp": 22
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colours",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Christmas market",
+      "temp": 9
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas market",
+      "temp": 5
+    }
+  },
+  "when_to_go": "May, June, September and October are best for walking the vineyards, with the grape harvest in autumn. The Christmas market runs from late November to late December and is very popular, so stay over. Summer weekends can be busy.",
+  "things": [
+    {
+      "name": "Grand'Rue",
+      "tag": "Free",
+      "blurb": "The main street of painted half-timbered houses.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dolder tower",
+      "tag": "Ticketed",
+      "blurb": "An old gate tower with a small museum and view.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wine tasting",
+      "tag": "Food",
+      "blurb": "Taste Riesling and Gewürztraminer in family-run cellars.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vineyard walk",
+      "tag": "Outdoors",
+      "blurb": "A marked path through the vines to nearby Hunawihr and Ribeauvillé.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Christmas market",
+      "tag": "Free",
+      "blurb": "Stalls and lights among the old houses, from late November.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Colmar",
+      "tag": "Day trip",
+      "blurb": "Little Venice and the old town, 20 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Riquewihr worth visiting?",
+      "answer": "Yes. It's one of the most beautiful villages in France, and easy to combine with Colmar and the Alsace wine route."
+    },
+    {
+      "question": "How do you get to Riquewihr?",
+      "answer": "Fly into Basel-Mulhouse, about an hour away by car, then drive or take the train to Colmar and a bus."
+    },
+    {
+      "question": "When is the Riquewihr Christmas market?",
+      "answer": "Usually from late November to just before Christmas. Check this year's dates."
+    },
+    {
+      "question": "What is the best time to visit Riquewihr?",
+      "answer": "Spring, autumn and December, around 15 to 24°C outside winter."
+    },
+    {
+      "question": "Riquewihr or Colmar?",
+      "answer": "Colmar is a town with more hotels and restaurants. Riquewihr is a small village. Stay in Colmar and visit Riquewihr, or stay in Riquewihr for peace in the evening."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Colmar",
+      "code": "BSL",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Strasbourg",
+      "code": "SXB",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Baden-Baden",
+      "code": "FKB",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Rothenburg ob der Tauber",
+      "code": "NUE",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

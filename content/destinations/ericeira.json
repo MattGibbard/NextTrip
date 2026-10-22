@@ -1,0 +1,197 @@
+{
+  "name": "Ericeira",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in Ericeira",
+  "intro": "A white-and-blue fishing town on cliffs above the Atlantic, Europe's only World Surfing Reserve, with seafood and beaches on every side. Here's what Ericeira is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/ericeira-5488541_1280.webp",
+  "image_alt": "Ericeira's white town on the cliffs above an Atlantic surf beach",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ericeira",
+  "to_code": "LIS",
+  "holiday_types": [
+    "beach",
+    "adventure",
+    "food"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, big waves",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 20
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, good surf",
+      "temp": 24
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild, surf",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 15
+    }
+  },
+  "when_to_go": "May to September is best for beach days, with warm sun and cooler sea. September and October bring great surf and warm days. Winter brings huge swells for experienced surfers, and mild but damp weather.",
+  "things": [
+    {
+      "name": "Surf lessons",
+      "tag": "Tour",
+      "blurb": "Learn on the gentler beaches like Foz do Lizandro with one of many surf schools.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ribamar and Ribeira d'Ilhas",
+      "tag": "Outdoors",
+      "blurb": "World-class surf beaches just north of town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fishermen's beach",
+      "tag": "Free",
+      "blurb": "The old harbour beach below the town's cliffs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Seafood",
+      "tag": "Food",
+      "blurb": "Grilled fish, barnacles and shellfish in the town's restaurants.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mafra Palace",
+      "tag": "Day trip",
+      "blurb": "A huge palace with a beautiful library, 15 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sintra",
+      "tag": "Day trip",
+      "blurb": "Fairytale palaces about 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Ericeira worth visiting?",
+      "answer": "Yes. It's a pretty, relaxed town with great surf and seafood, and an easy escape from Lisbon."
+    },
+    {
+      "question": "Is Ericeira good for beginner surfers?",
+      "answer": "Yes. Foz do Lizandro and other sheltered beaches suit beginners, and there are lots of surf schools."
+    },
+    {
+      "question": "How do you get to Ericeira?",
+      "answer": "Fly into Lisbon, then take the bus or drive, about 45 minutes."
+    },
+    {
+      "question": "What is the best time to visit Ericeira?",
+      "answer": "May to October, around 20 to 24°C. September is great for surf and sun."
+    },
+    {
+      "question": "Is the sea warm in Ericeira?",
+      "answer": "No. The Atlantic stays cool, around 17 to 19°C in summer, so wetsuits are normal."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Sintra",
+      "code": "LIS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Algarve",
+      "code": "FAO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Tarifa",
+      "code": "GIB",
+      "label": "🧗 Adventure"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

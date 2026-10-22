@@ -1,0 +1,197 @@
+{
+  "name": "Rothenburg ob der Tauber",
+  "published": true,
+  "country": "DE",
+  "title": "Holidays in Rothenburg ob der Tauber",
+  "intro": "Germany's best-preserved medieval walled town, all half-timbered houses, towers and cobbles, with a Christmas museum and a famous market. Here's what Rothenburg ob der Tauber is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/rothenburg-6994803_1280.webp",
+  "image_alt": "Painted half-timbered buildings on the market square in Rothenburg ob der Tauber",
+  "wikipedia": "https://en.wikipedia.org/wiki/Rothenburg_ob_der_Tauber",
+  "to_code": "NUE",
+  "holiday_types": [
+    "culture",
+    "city",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 2
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 4
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 9
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 14
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 19
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colours",
+      "temp": 13
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Christmas market",
+      "temp": 6
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Christmas market",
+      "temp": 3
+    }
+  },
+  "when_to_go": "May to October is pleasant for walking the walls, and Christmas market season from late November to 23 December is magical but busy. Midsummer brings day-trippers, so stay overnight to see the town quiet. Winter outside December is cold and very quiet.",
+  "things": [
+    {
+      "name": "Town walls",
+      "tag": "Free",
+      "blurb": "Walk the covered walkway along the medieval walls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Plönlein",
+      "tag": "Free",
+      "blurb": "The famous fork in the road with a yellow house between two towers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Night Watchman tour",
+      "tag": "Tour",
+      "blurb": "An entertaining evening walk with the town's night watchman.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Medieval Crime Museum",
+      "tag": "Ticketed",
+      "blurb": "Instruments of punishment and justice through the ages.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Christmas Museum",
+      "tag": "Ticketed",
+      "blurb": "At Käthe Wohlfahrt's Christmas village, open all year.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Schneeballen",
+      "tag": "Food",
+      "blurb": "Snowball pastries of fried dough, dusted in sugar or chocolate.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Rothenburg ob der Tauber worth visiting?",
+      "answer": "Yes. It's one of the most picturesque towns in Europe and a highlight of Germany's Romantic Road."
+    },
+    {
+      "question": "How do you get to Rothenburg ob der Tauber?",
+      "answer": "Fly into Nuremberg or Frankfurt, then take the train, changing at Steinach. Nuremberg is about 1 hour 30 minutes away."
+    },
+    {
+      "question": "When is the Rothenburg Christmas market?",
+      "answer": "Usually from the end of November to 23 December."
+    },
+    {
+      "question": "How many days do you need in Rothenburg?",
+      "answer": "One or two days covers the town. Stay a night to enjoy it after the tour buses leave."
+    },
+    {
+      "question": "What is the best time to visit Rothenburg?",
+      "answer": "May to October, or December for the Christmas market."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Romantic Road",
+      "code": "FRA",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Nuremberg",
+      "code": "NUE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Colmar",
+      "code": "BSL",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Riquewihr",
+      "code": "BSL",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

@@ -1,0 +1,197 @@
+{
+  "name": "Lucca",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Lucca",
+  "intro": "A Tuscan town ringed by tree-lined Renaissance walls you can cycle around, with towers, piazzas and Pisa just down the road. Here's what Lucca is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/lucca-1097366_1280.webp",
+  "image_alt": "The oval Piazza dell'Anfiteatro in Lucca, lined with houses and cafés",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lucca",
+  "to_code": "PSA",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 11
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 13
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 15
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive",
+      "temp": 11
+    }
+  },
+  "when_to_go": "April to June and September to October are best, warm and green for cycling and day trips. July and August are hot. The Lucca Comics & Games festival takes over the town in late October or early November, and the Puccini festival runs in summer.",
+  "things": [
+    {
+      "name": "City walls",
+      "tag": "Free",
+      "blurb": "Walk or cycle the 4 km of tree-lined walls around the old town. Bikes are easy to hire.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Guinigi Tower",
+      "tag": "Ticketed",
+      "blurb": "A medieval tower with oak trees growing on top.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Piazza dell'Anfiteatro",
+      "tag": "Free",
+      "blurb": "An oval square built on the shape of a Roman amphitheatre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "San Michele in Foro",
+      "tag": "Free",
+      "blurb": "A church with a tall, lacy white façade.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pisa",
+      "tag": "Day trip",
+      "blurb": "The Leaning Tower, about 30 minutes away by train.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Garfagnana",
+      "tag": "Day trip",
+      "blurb": "Mountain villages and the medieval Devil's Bridge, an hour north.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Lucca worth visiting?",
+      "answer": "Yes. It's one of Tuscany's most charming towns, flat and car-free inside the walls, and a calmer base than Florence."
+    },
+    {
+      "question": "How many days do you need in Lucca?",
+      "answer": "Two days covers the town. Stay three or four to add Pisa, Florence or the coast."
+    },
+    {
+      "question": "What is the best time to visit Lucca?",
+      "answer": "April to June and September, around 19 to 28°C."
+    },
+    {
+      "question": "How do you get to Lucca?",
+      "answer": "Fly into Pisa, which has direct flights from the UK, then take the train, about 30 minutes."
+    },
+    {
+      "question": "Lucca or Pisa?",
+      "answer": "Stay in Lucca. It's prettier and more relaxed, and Pisa's tower is an easy half-day trip."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Florence",
+      "code": "FLR",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Siena",
+      "code": "FLR",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Cinque Terre",
+      "code": "PSA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Bologna",
+      "code": "BLQ",
+      "label": "🍷 Food & drink"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

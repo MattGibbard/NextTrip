@@ -1,0 +1,196 @@
+{
+  "name": "Berat",
+  "published": true,
+  "country": "AL",
+  "title": "Holidays in Berat",
+  "intro": "The 'town of a thousand windows', with white Ottoman houses stacked up a hillside beneath a castle that people still live in. Here's what Berat is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/berat-7250120_1280.webp",
+  "image_alt": "Berat's white Ottoman houses stacked up the hillside",
+  "wikipedia": "https://en.wikipedia.org/wiki/Berat",
+  "to_code": "TIA",
+  "holiday_types": [
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Albanian lek (L)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Euros are often accepted in tourist areas, but prices are better in lek. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 11
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 13
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 30
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 34
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 12
+    }
+  },
+  "when_to_go": "April, May, September and October are best for climbing to the castle. Summer is very hot. Autumn brings the wine harvest in the nearby vineyards. Winter is cool and wet.",
+  "things": [
+    {
+      "name": "Berat Castle",
+      "tag": "Ticketed",
+      "blurb": "A lived-in castle with churches, a mosque ruin and views over the valley.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mangalem",
+      "tag": "Free",
+      "blurb": "The hillside quarter of white houses with rows of windows.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Onufri Museum",
+      "tag": "Ticketed",
+      "blurb": "Icons by Albania's great 16th-century painter, in a castle church.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gorica bridge",
+      "tag": "Free",
+      "blurb": "An Ottoman bridge to the quarter across the river.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wine tasting",
+      "tag": "Food",
+      "blurb": "Local wineries near Berat make good wines from native grapes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Osumi Canyon",
+      "tag": "Day trip",
+      "blurb": "A canyon for rafting in spring, about 1 hour 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Berat worth visiting?",
+      "answer": "Yes. It's one of Albania's two UNESCO-listed Ottoman towns and a highlight of any trip to the country."
+    },
+    {
+      "question": "How do you get to Berat?",
+      "answer": "Fly into Tirana, then take a bus or drive, about 2 hours."
+    },
+    {
+      "question": "How many days do you need in Berat?",
+      "answer": "One or two days covers the castle and old quarters."
+    },
+    {
+      "question": "What is the best time to visit Berat?",
+      "answer": "Spring and autumn, around 20 to 29°C."
+    },
+    {
+      "question": "Berat or Gjirokastër?",
+      "answer": "Both are lovely. Berat is closer to Tirana, Gjirokastër closer to the southern beaches. Many people visit both."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Gjirokastër",
+      "code": "TIA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Saranda",
+      "code": "TIA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lake Ohrid",
+      "code": "OHD",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Plovdiv",
+      "code": "PDV",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

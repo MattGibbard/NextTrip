@@ -1,0 +1,204 @@
+{
+  "name": "Santa Fe",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Santa Fe",
+  "intro": "Adobe buildings, art galleries and turquoise jewellery in a high-desert town with deep Native American and Spanish roots. Here's what Santa Fe is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/santa-fe-55665_1280.webp",
+  "image_alt": "A traditional adobe building with lavender in front, in Santa Fe",
+  "wikipedia": "https://en.wikipedia.org/wiki/Santa_Fe,_New_Mexico",
+  "to_code": "ABQ",
+  "holiday_types": [
+    "culture",
+    "food",
+    "nature"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders need an ESTA, applied for online before you fly. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cold, ski season",
+      "temp": 7
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cold",
+      "temp": 10
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, monsoon",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, Indian Market",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild, aspens",
+      "temp": 19
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 12
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive, farolitos",
+      "temp": 7
+    }
+  },
+  "when_to_go": "May, June, September and October are ideal, sunny and dry, with golden aspens on the mountains in autumn. July and August bring afternoon storms and the big art markets. Winter is cold and sunny, with skiing just above town and candle-lit farolitos for Christmas. At 2,100 m, the sun is strong and the air is thin, so drink plenty of water.",
+  "things": [
+    {
+      "name": "The Plaza",
+      "tag": "Free",
+      "blurb": "The historic heart of town, where Native American artists sell jewellery under the Palace of the Governors' porch.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Canyon Road",
+      "tag": "Free",
+      "blurb": "A mile of over 100 galleries in old adobe houses.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Meow Wolf",
+      "tag": "Ticketed",
+      "blurb": "A mind-bending walk-through art installation full of secret doors, loved by children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Georgia O'Keeffe Museum",
+      "tag": "Ticketed",
+      "blurb": "Paintings by the artist who made New Mexico's landscapes famous.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bandelier National Monument",
+      "tag": "Day trip",
+      "blurb": "Climb ladders into cliff dwellings built by Ancestral Pueblo people, an hour away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Taos Pueblo",
+      "tag": "Day trip",
+      "blurb": "A multi-storey adobe village lived in for over 1,000 years, about 1 hour 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Green chile",
+      "tag": "Food",
+      "blurb": "Try it on everything, from enchiladas to burgers. Order 'Christmas' for both red and green.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Santa Fe?",
+      "answer": "Three or four days covers the town, Meow Wolf and a day trip to Bandelier or Taos. It pairs well with Albuquerque's balloon fiesta in October."
+    },
+    {
+      "question": "When is the best time to visit Santa Fe?",
+      "answer": "Late spring and early autumn, around 18 to 29°C. Winter is cold but sunny."
+    },
+    {
+      "question": "How do you get to Santa Fe?",
+      "answer": "Most people fly into Albuquerque and drive or take the Rail Runner train, about an hour. Santa Fe's own small airport has a few connecting flights."
+    },
+    {
+      "question": "Does altitude affect visitors in Santa Fe?",
+      "answer": "Some people feel tired or get headaches for the first day or two, as the town is about 2,100 m up. Take it easy, drink lots of water and go easy on alcohol."
+    },
+    {
+      "question": "Is Santa Fe good for families?",
+      "answer": "Yes. Meow Wolf, cliff dwellings at Bandelier and the children's museum are big hits, and the town is easy to walk."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Sedona",
+      "code": "PHX",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Austin",
+      "code": "AUS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Utah's national parks",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Mexico City",
+      "code": "MEX",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

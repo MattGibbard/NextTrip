@@ -1,0 +1,203 @@
+{
+  "name": "Vilnius",
+  "published": true,
+  "country": "LT",
+  "title": "Holidays in Vilnius",
+  "intro": "A baroque old town of church spires and courtyards, a self-declared artists' republic and forests and lakes right on the doorstep. Here's what Vilnius is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/vilnius-2821488_1280.webp",
+  "image_alt": "Church towers and red roofs of Vilnius old town among green trees",
+  "wikipedia": "https://en.wikipedia.org/wiki/Vilnius",
+  "to_code": "VNO",
+  "holiday_types": [
+    "city",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Snowy",
+      "temp": -2
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 0
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 5
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 13
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm, long days",
+      "temp": 24
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 17
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colours",
+      "temp": 10
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey",
+      "temp": 3
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas market",
+      "temp": -1
+    }
+  },
+  "when_to_go": "May to September is best, with long light evenings and outdoor cafés everywhere. September brings golden forests and fewer visitors. Winter is cold and snowy, but the old town looks magical and the Christmas tree in Cathedral Square is famous. November and March are usually grey.",
+  "things": [
+    {
+      "name": "Old Town",
+      "tag": "Free",
+      "blurb": "One of Europe's largest baroque old towns, full of churches, courtyards and cafés.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gediminas Tower",
+      "tag": "Ticketed",
+      "blurb": "A short climb or funicular ride to the castle tower for a view over the red roofs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Užupis",
+      "tag": "Free",
+      "blurb": "The quirky artists' district, which has its own constitution posted on a wall.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hill of Three Crosses",
+      "tag": "Outdoors",
+      "blurb": "A park viewpoint above the old town, best at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Trakai Castle",
+      "tag": "Day trip",
+      "blurb": "A red-brick island castle on a lake, 30 minutes away by train or bus.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Museum of Occupations and Freedom Fights",
+      "tag": "Ticketed",
+      "blurb": "The former KGB headquarters, a sobering look at Soviet rule.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cepelinai",
+      "tag": "Food",
+      "blurb": "Hearty potato dumplings stuffed with meat and served with sour cream and bacon.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Vilnius worth visiting?",
+      "answer": "Yes. It's compact, very good value, friendly and much less busy than Prague or Kraków, with an old town that's on the UNESCO list."
+    },
+    {
+      "question": "How many days do you need in Vilnius?",
+      "answer": "Three days covers the old town, Užupis and a trip to Trakai Castle. Add Riga or Tallinn by bus for a longer Baltic trip."
+    },
+    {
+      "question": "When is the best time to visit Vilnius?",
+      "answer": "May to September, when it's around 19 to 24°C with long days. December is good for the Christmas market if you don't mind the cold."
+    },
+    {
+      "question": "How do you get to Vilnius?",
+      "answer": "Fly into Vilnius airport, which has flights from across Europe, then take the train or bus to the centre in about 10 to 15 minutes."
+    },
+    {
+      "question": "Is Vilnius cheap?",
+      "answer": "Compared with western Europe, yes. Meals, beer and public transport are good value, though hotel prices rise during big events."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Riga",
+      "code": "RIX",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Tallinn",
+      "code": "TLL",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Kraków",
+      "code": "KRK",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Gdańsk",
+      "code": "GDN",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

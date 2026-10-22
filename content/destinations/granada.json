@@ -1,0 +1,204 @@
+{
+  "name": "Granada",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Granada",
+  "intro": "The Alhambra palace glowing against the snowy Sierra Nevada, whitewashed Moorish lanes and free tapas with every drink. Here's what Granada is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/granada-3821691_1280.webp",
+  "image_alt": "The Alhambra palace on its wooded hill in Granada, with the snowy Sierra Nevada behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Granada",
+  "to_code": "GRX",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cold nights, sunny",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 19
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 35
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 35
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 30
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cool, skiing",
+      "temp": 13
+    }
+  },
+  "when_to_go": "March to May and October are ideal, warm and sunny for walking the hills. July and August are very hot, often above 35°C. Winter days are sunny but nights are cold, and you can ski in the Sierra Nevada in the morning. Book Alhambra tickets weeks ahead at any time of year.",
+  "things": [
+    {
+      "name": "The Alhambra",
+      "tag": "Ticketed",
+      "blurb": "The Nasrid Palaces, gardens and fortress. Tickets sell out, so book on the official site as soon as you can.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Albaicín",
+      "tag": "Free",
+      "blurb": "Climb the old Moorish quarter's lanes to the Mirador de San Nicolás for sunset over the Alhambra.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sacromonte",
+      "tag": "Tour",
+      "blurb": "Cave houses in the hillside, and flamenco shows in the caves at night.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Free tapas",
+      "tag": "Food",
+      "blurb": "Order a drink at most bars and a plate of tapas comes with it, free.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cathedral and Royal Chapel",
+      "tag": "Ticketed",
+      "blurb": "The tombs of Ferdinand and Isabella, who financed Columbus.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hammam Al Ándalus",
+      "tag": "Ticketed",
+      "blurb": "Arab-style baths with warm and hot pools under candlelit arches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sierra Nevada",
+      "tag": "Day trip",
+      "blurb": "Spain's southernmost ski resort in winter, mountain walks in summer, about 45 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Granada?",
+      "answer": "Three days covers the Alhambra, the Albaicín and Sacromonte. Add a day for the Sierra Nevada or a trip to the coast."
+    },
+    {
+      "question": "How far ahead should you book the Alhambra?",
+      "answer": "As early as you can, ideally a few weeks ahead, or longer for Easter and summer. Only buy from the official website or a licensed tour, and bring the passport you booked with."
+    },
+    {
+      "question": "When is the best time to visit Granada?",
+      "answer": "Spring and autumn, around 20 to 26°C. Summer is very hot, and winter is sunny but cold at night."
+    },
+    {
+      "question": "How do you get to Granada?",
+      "answer": "Granada's own airport has flights from Madrid, Barcelona and a few other cities. Many people fly into Málaga and take the bus or drive, about 1 hour 30 minutes."
+    },
+    {
+      "question": "Can you combine Granada with Seville and Córdoba?",
+      "answer": "Yes, and many people do. Trains link the three cities, and a week covers them all."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Seville",
+      "code": "SVQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Ronda",
+      "code": "AGP",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Malaga",
+      "code": "AGP",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Marrakech",
+      "code": "RAK",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

@@ -1,0 +1,204 @@
+{
+  "name": "Krabi",
+  "published": true,
+  "country": "TH",
+  "title": "Holidays in Krabi",
+  "intro": "Towering limestone cliffs rising from turquoise sea, long-tail boats and island-hopping to some of Thailand's most beautiful beaches. Here's what Krabi is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/krabi-2262894_1280.webp",
+  "image_alt": "Long-tail boats on the beach below limestone cliffs at Railay in Krabi",
+  "wikipedia": "https://en.wikipedia.org/wiki/Krabi_province",
+  "to_code": "KBV",
+  "holiday_types": [
+    "beach",
+    "adventure",
+    "nature"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Thai baht (฿)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B / C · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Fill in the Thailand Digital Arrival Card online before you land. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 32
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 33
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, hot",
+      "temp": 34
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 34
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 33
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Rainy, rough seas",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Wettest",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Rainy",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drying out",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 31
+    }
+  },
+  "when_to_go": "December to April is the dry season, with calm seas for island trips and the busiest beaches. May to October is the rainy season, cheaper and greener, but some boat trips are cancelled when the sea is rough. November is a good shoulder month, when the rain eases.",
+  "things": [
+    {
+      "name": "Railay",
+      "tag": "Outdoors",
+      "blurb": "A peninsula of beaches and cliffs reached only by boat, famous for rock climbing.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Four Islands tour",
+      "tag": "Tour",
+      "blurb": "Hop between Phra Nang Cave beach, Chicken Island, Tup Island and Poda by long-tail boat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Phi Phi islands",
+      "tag": "Day trip",
+      "blurb": "Speedboat trips to Maya Bay and the Phi Phi islands, about an hour away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tiger Cave Temple",
+      "tag": "Free",
+      "blurb": "Climb 1,260 steep steps to a Buddha on the summit and a huge view.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Emerald Pool",
+      "tag": "Ticketed",
+      "blurb": "A clear, jade-green spring-fed pool in the forest, with a hot spring nearby.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kayaking in Ao Thalane",
+      "tag": "Tour",
+      "blurb": "Paddle through mangroves and between cliffs, with monkeys on the banks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Koh Lanta",
+      "tag": "Day trip",
+      "blurb": "A quieter island to the south, or a good second stop for a longer trip.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where should you stay in Krabi?",
+      "answer": "Ao Nang is the main resort, with lots of hotels and boats. Railay is more remote and dramatic but is reached only by boat. Klong Muang and Tubkaek are quieter and more upmarket."
+    },
+    {
+      "question": "When is the best time to visit Krabi?",
+      "answer": "December to April, when it's dry and the sea is calm. May to October is cheaper but rainy, and some boat trips are cancelled."
+    },
+    {
+      "question": "How do you get to Krabi?",
+      "answer": "Fly to Krabi from Bangkok in about 1 hour 20 minutes, or direct from Singapore and Kuala Lumpur. Ao Nang is about 30 minutes from the airport."
+    },
+    {
+      "question": "How many nights do you need in Krabi?",
+      "answer": "A week gives time for a few island trips, Railay and some beach days. Add Koh Lanta or Phuket for two weeks."
+    },
+    {
+      "question": "Is Krabi or Phuket better?",
+      "answer": "Krabi is more relaxed and scenic, with dramatic cliffs and fewer big resorts. Phuket has more nightlife, more hotels and more flights."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Phuket",
+      "code": "HKT",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Koh Lanta",
+      "code": "KBV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Koh Samui",
+      "code": "USM",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Langkawi",
+      "code": "LGK",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

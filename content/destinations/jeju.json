@@ -1,0 +1,204 @@
+{
+  "name": "Jeju",
+  "published": true,
+  "country": "KR",
+  "title": "Holidays in Jeju",
+  "intro": "South Korea's volcanic holiday island, with a crater rising from the sea, lava tubes, waterfalls, tangerine farms and black-rock beaches. Here's what Jeju is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/jeju-4588910_1280.webp",
+  "image_alt": "The green cliffs of Seongsan Ilchulbong crater rising from the sea on Jeju",
+  "wikipedia": "https://en.wikipedia.org/wiki/Jeju_Island",
+  "to_code": "CJU",
+  "holiday_types": [
+    "nature",
+    "beach",
+    "adventure"
+  ],
+  "nights": "4 to 6",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs ahead of the UK (9 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "South Korean won (₩)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders are currently exempt from Korea's K-ETA, but the rules can change, so check GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, windy",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 10
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Canola flowers",
+      "temp": 13
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm, rainy",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm, typhoons",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Tangerines",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 11
+    }
+  },
+  "when_to_go": "April, May and October are best, mild and mostly dry for walking, with yellow canola flowers in spring. July and August are hot and good for the beaches but busy with Korean holidaymakers. Late summer can bring typhoons. Winter is cool and windy but it's tangerine season.",
+  "things": [
+    {
+      "name": "Seongsan Ilchulbong",
+      "tag": "Ticketed",
+      "blurb": "Climb the tuff cone for the view into its crater, ideally at sunrise.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hallasan",
+      "tag": "Outdoors",
+      "blurb": "South Korea's highest mountain. The summit trails need booking ahead online.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Manjanggul lava tube",
+      "tag": "Ticketed",
+      "blurb": "Walk into a huge lava tunnel, one of the longest in the world.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jeju Olle Trail",
+      "tag": "Outdoors",
+      "blurb": "A long coastal walking route split into easy sections.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Udo island",
+      "tag": "Day trip",
+      "blurb": "A small island by ferry, best seen by e-bike, with pale sandy beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Haenyeo divers",
+      "tag": "Free",
+      "blurb": "Watch the island's famous women divers come ashore, and try fresh seafood.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cheonjiyeon Falls",
+      "tag": "Ticketed",
+      "blurb": "A waterfall in a lush gorge near Seogwipo, lit up at night.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Jeju?",
+      "answer": "Four to six days covers the east and west, a climb of Seongsan and a day on Udo. Add Seoul or Busan for a longer trip."
+    },
+    {
+      "question": "When is the best time to visit Jeju?",
+      "answer": "April, May and October, around 18 to 22°C. Summer is hot and busy, with typhoon risk in late summer."
+    },
+    {
+      "question": "How do you get to Jeju?",
+      "answer": "Fly from Seoul in about an hour, on one of the world's busiest air routes, or from Busan. Some flights also arrive from elsewhere in Asia."
+    },
+    {
+      "question": "Do you need a car on Jeju?",
+      "answer": "It helps, but you'll need an International Driving Permit. Buses cover most sights, and taxis and tours fill the gaps."
+    },
+    {
+      "question": "Is Jeju good for families?",
+      "answer": "Very. There are easy walks, beaches, lava caves, theme museums and lots of good-value seafood and barbecue."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Busan",
+      "code": "PUS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Seoul",
+      "code": "ICN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Okinawa",
+      "code": "OKA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Taipei",
+      "code": "TPE",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

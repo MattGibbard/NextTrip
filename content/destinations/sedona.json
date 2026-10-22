@@ -1,0 +1,204 @@
+{
+  "name": "Sedona",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Sedona",
+  "intro": "Glowing red-rock towers and canyons in the Arizona desert, with hiking trails, swimming holes and some of the clearest night skies in America. Here's what Sedona is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/sedona-7499758_1280.webp",
+  "image_alt": "Red-rock buttes glowing at sunset above the desert in Sedona",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sedona,_Arizona",
+  "to_code": "PHX",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 to 8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Arizona doesn't change its clocks, so the time difference changes in summer. UK passport holders need an ESTA, applied for online before you fly. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cool, sunny",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 16
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 19
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 34
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, monsoon",
+      "temp": 36
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, monsoon",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cool, festive",
+      "temp": 14
+    }
+  },
+  "when_to_go": "March to May and September to November are best, warm and sunny for hiking. June to August is hot, with monsoon storms in the afternoons in July and August, so hike early. Winter is sunny and mild by day, with the odd dusting of snow on the red rocks, and the town lights up for the holidays.",
+  "things": [
+    {
+      "name": "Cathedral Rock",
+      "tag": "Outdoors",
+      "blurb": "A short but steep scramble to a saddle between red spires. Start early.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Devil's Bridge",
+      "tag": "Outdoors",
+      "blurb": "The area's largest natural sandstone arch, reached by a popular trail.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Slide Rock State Park",
+      "tag": "Ticketed",
+      "blurb": "Slide down a natural rock water chute in Oak Creek Canyon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chapel of the Holy Cross",
+      "tag": "Free",
+      "blurb": "A modern chapel built into the red rocks, with big views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pink Jeep tour",
+      "tag": "Tour",
+      "blurb": "Bounce along rough back-country tracks to viewpoints in a 4x4.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stargazing",
+      "tag": "Free",
+      "blurb": "Sedona is an International Dark Sky Community, so the stars are bright.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Canyon",
+      "tag": "Day trip",
+      "blurb": "The South Rim is about 2 hours' drive away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Sedona?",
+      "answer": "Three to five days gives time for several hikes, a jeep tour and Slide Rock. It makes a great stop on a road trip with the Grand Canyon."
+    },
+    {
+      "question": "When is the best time to visit Sedona?",
+      "answer": "Spring and autumn, around 19 to 28°C. Summer is very hot, so hike at dawn."
+    },
+    {
+      "question": "How do you get to Sedona?",
+      "answer": "Fly into Phoenix, which has flights from across the US and some from Europe, then drive about 2 hours north. Flagstaff's small airport is 45 minutes away."
+    },
+    {
+      "question": "Do you need a car in Sedona?",
+      "answer": "Yes. There's a free trailhead shuttle for the busiest walks, but you need a car to get there and to explore the area."
+    },
+    {
+      "question": "Do you need a pass to hike in Sedona?",
+      "answer": "Many trailheads need a Red Rock Pass, bought at machines in the car park or online. America the Beautiful passes are accepted too."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Grand Canyon",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Utah's national parks",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Route 66",
+      "code": "ORD",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Santa Fe",
+      "code": "ABQ",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

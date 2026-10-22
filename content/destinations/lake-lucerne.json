@@ -1,0 +1,204 @@
+{
+  "name": "Lake Lucerne",
+  "published": true,
+  "country": "CH",
+  "title": "Holidays in Lake Lucerne",
+  "intro": "A fjord-like lake ringed by mountains, with old paddle steamers, cog railways and a pretty medieval town at one end. Here's what Lake Lucerne is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/lake-lucerne-4483144_1280.webp",
+  "image_alt": "The Chapel Bridge and its water tower in Lucerne, lit up at dusk",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lake_Lucerne",
+  "to_code": "ZRH",
+  "holiday_types": [
+    "nature",
+    "rail",
+    "city"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Swiss franc (CHF)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / J · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Switzerland is in the Schengen area, so the new EU entry checks apply. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cold, snowy peaks",
+      "temp": 4
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cold",
+      "temp": 6
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 11
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 15
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colours",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey",
+      "temp": 9
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas markets",
+      "temp": 5
+    }
+  },
+  "when_to_go": "May to September is best for lake swimming, boat trips and mountain walks, when every cable car and cog railway is running. July and August are the busiest months. Autumn brings golden colours and clear days, and December has Christmas markets, but some mountain lifts close for maintenance in November and spring.",
+  "things": [
+    {
+      "name": "Chapel Bridge",
+      "tag": "Free",
+      "blurb": "Lucerne's covered wooden bridge, with painted panels under its roof and a stone water tower.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Pilatus",
+      "tag": "Ticketed",
+      "blurb": "Ride the world's steepest cog railway up from Alpnachstad and a cable car back down to Kriens.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Rigi",
+      "tag": "Ticketed",
+      "blurb": "The 'queen of the mountains', reached by boat and cog railway, with easy walks and views of the lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake steamer",
+      "tag": "Ticketed",
+      "blurb": "Cruise the lake on a historic paddle steamer. Swiss Travel Pass holders ride free.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Swiss Museum of Transport",
+      "tag": "Ticketed",
+      "blurb": "Trains, planes and a planetarium, a big hit with children and on rainy days.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stoos ridge walk",
+      "tag": "Outdoors",
+      "blurb": "Take the world's steepest funicular to Stoos, then walk the ridge between two peaks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old Town",
+      "tag": "Free",
+      "blurb": "Painted houses, fountains and the city walls, with towers you can climb for free in summer.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Lucerne?",
+      "answer": "Four or five days lets you see the town and do two or three mountains and a boat trip. Two days covers the town and one mountain."
+    },
+    {
+      "question": "When is the best time to visit Lake Lucerne?",
+      "answer": "May to September, when it's around 19 to 25°C and all the mountain lifts and boats are running. September is quieter than July and August."
+    },
+    {
+      "question": "Is Lucerne expensive?",
+      "answer": "Yes, like the rest of Switzerland. A Swiss Travel Pass or the Tell-Pass can save a lot if you plan to use boats, trains and mountain railways, and picnics help with food costs."
+    },
+    {
+      "question": "How do you get to Lucerne?",
+      "answer": "Fly into Zurich, then take the train from the airport to Lucerne in about an hour. Trains also connect easily from Geneva, Basel and Milan."
+    },
+    {
+      "question": "Is Lucerne good for families?",
+      "answer": "Very. The Transport Museum, cog railways, boats and easy mountain walks with playgrounds keep children busy, and under-16s travel free on Swiss trains with a parent's pass and a Junior Travelcard."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Interlaken",
+      "code": "ZRH",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Zermatt",
+      "code": "GVA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Como",
+      "code": "MXP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Glacier Express",
+      "code": "ZRH",
+      "label": "🚆 By train"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

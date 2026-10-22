@@ -1,0 +1,204 @@
+{
+  "name": "Savannah",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Savannah",
+  "intro": "Mossy oak-lined squares, grand old mansions and a lazy riverfront in one of the American South's most beautiful and easy-going cities. Here's what Savannah is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/savannah-6744861_1280.webp",
+  "image_alt": "An avenue of moss-draped live oak trees near Savannah",
+  "wikipedia": "https://en.wikipedia.org/wiki/Savannah,_Georgia",
+  "to_code": "SAV",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK passport holders need an ESTA, applied for online before you fly. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 17
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 19
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Azaleas",
+      "temp": 23
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 30
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Hot, humid",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot, humid",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot, storms",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hot, hurricanes",
+      "temp": 30
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 21
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive",
+      "temp": 18
+    }
+  },
+  "when_to_go": "March, April, October and November are ideal, warm without the humidity, with azaleas in bloom in spring. June to September is hot, humid and stormy, and hurricane season runs to November. Winters are mild and quiet, and St Patrick's Day in March is one of the biggest parades in the US.",
+  "things": [
+    {
+      "name": "The squares",
+      "tag": "Free",
+      "blurb": "Wander the 22 leafy squares of the historic district, laid out in 1733.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Forsyth Park",
+      "tag": "Free",
+      "blurb": "A big park with a famous white fountain and a Saturday farmers' market.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bonaventure Cemetery",
+      "tag": "Free",
+      "blurb": "A hauntingly beautiful cemetery of moss-draped oaks and statues.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "River Street",
+      "tag": "Free",
+      "blurb": "Cobbled streets of old cotton warehouses, pralines and riverboats.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Historic house tour",
+      "tag": "Ticketed",
+      "blurb": "Step inside the Owens-Thomas House or the Mercer Williams House.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ghost tour",
+      "tag": "Tour",
+      "blurb": "Savannah is said to be one of America's most haunted cities.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tybee Island",
+      "tag": "Day trip",
+      "blurb": "A laid-back beach town with a lighthouse, 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Savannah?",
+      "answer": "Three or four days covers the historic district, a house tour and a beach day on Tybee. It pairs well with Charleston, about 2 hours away."
+    },
+    {
+      "question": "When is the best time to visit Savannah?",
+      "answer": "Spring and autumn, around 23 to 26°C. Summer is very hot and humid."
+    },
+    {
+      "question": "How do you get to Savannah?",
+      "answer": "Fly into Savannah/Hilton Head airport, about 20 minutes from the centre, usually connecting through Atlanta, Charlotte or another US hub. Atlanta is about 4 hours' drive."
+    },
+    {
+      "question": "Do you need a car in Savannah?",
+      "answer": "Not in the historic district, which is easy on foot and has a free shuttle. A car helps for Tybee and Bonaventure Cemetery."
+    },
+    {
+      "question": "Is Savannah good for families?",
+      "answer": "Yes. The squares and parks are easy to walk, trolley tours keep little legs rested, and Tybee's beach is close."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Charleston",
+      "code": "CHS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "New Orleans",
+      "code": "MSY",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Asheville",
+      "code": "AVL",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Florida Keys",
+      "code": "MIA",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

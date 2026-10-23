@@ -674,6 +674,11 @@
     "lat": 46.6863,
     "lon": 7.8632
   },
+  "ischia": {
+    "query": "Ischia|IT",
+    "lat": 40.7342,
+    "lon": 13.9471
+  },
   "istria": {
     "query": "Istria|HR",
     "lat": 45.25,
@@ -1564,6 +1569,11 @@
     "lat": 39.4698,
     "lon": -0.3763
   },
+  "valparaiso": {
+    "query": "Valparaíso|CL",
+    "lat": -33.0458,
+    "lon": -71.6197
+  },
   "vancouver": {
     "query": "Vancouver|CA",
     "lat": 49.2609,
@@ -1618,6 +1628,11 @@
     "query": "Wild Atlantic Way|IE",
     "lat": 52.9715,
     "lon": -9.4309
+  },
+  "wroclaw": {
+    "query": "Wrocław|PL",
+    "lat": 51.109,
+    "lon": 17.0327
   },
   "yellowstone": {
     "query": "Yellowstone|US",

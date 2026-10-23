@@ -1,0 +1,200 @@
+{
+  "name": "Wrocław",
+  "published": true,
+  "country": "PL",
+  "title": "Holidays in Wrocław",
+  "intro": "A colourful market square, river islands and hundreds of little bronze dwarfs in one of Poland's liveliest and best-value cities. Here's what Wrocław is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/wroclaw-3096512_1280.webp",
+  "image_alt": "The twin spires of Wrocław Cathedral rising above red-roofed buildings on Ostrów Tumski, seen across the River Oder",
+  "wikipedia": "https://en.wikipedia.org/wiki/Wroc%C5%82aw",
+  "to_code": "WRO",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Polish złoty (zł)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Poland doesn't use the euro, so carry some złoty or a card without foreign fees. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 2
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 4
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly, spring starts",
+      "temp": 9
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild, blossom",
+      "temp": 15
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, green",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, long days",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busier",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busier",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild, clear",
+      "temp": 21
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cool, autumn colour",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold, grey",
+      "temp": 9
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cold, Christmas market",
+      "temp": 4
+    }
+  },
+  "when_to_go": "May, June and September are the best months, warm enough for river cruises and café terraces on the Market Square. July and August are warm and lively with summer events. Winter is cold, often around freezing, but the Christmas market fills the square from late November through December.",
+  "things": [
+    {
+      "name": "Market Square (Rynek)",
+      "tag": "Free",
+      "blurb": "One of Europe's largest market squares, ringed by painted townhouses, with a Gothic town hall in the middle.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dwarf hunting",
+      "tag": "Free",
+      "blurb": "Track down some of the hundreds of small bronze dwarfs hidden around the city. Pick up a map, or use an app.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ostrów Tumski",
+      "tag": "Free",
+      "blurb": "The oldest part of the city, with the cathedral, quiet lanes and gas lamps still lit by hand at dusk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Panorama of Racławice",
+      "tag": "Ticketed",
+      "blurb": "A huge 19th-century circular painting of a battle, about 114 metres long, shown in its own rotunda.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Centennial Hall",
+      "tag": "Ticketed",
+      "blurb": "A landmark early concrete hall, now UNESCO-listed, with a musical fountain show in the park in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "St Elizabeth's Church tower",
+      "tag": "Ticketed",
+      "blurb": "Climb the steps up the tower for the best view over the Market Square and rooftops.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "River Oder",
+      "tag": "Tour",
+      "blurb": "Boat trips and riverside paths around the city's islands and bridges, best on a summer evening.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Wrocław from the UK?",
+      "answer": "Fly direct. Ryanair flies from several UK airports, including London. Check the timetable for your nearest airport."
+    },
+    {
+      "question": "Is Wrocław worth visiting?",
+      "answer": "Yes. It's one of Poland's prettiest cities, with a huge market square, river islands, good food and low prices, and fewer crowds than Kraków."
+    },
+    {
+      "question": "How many days do you need in Wrocław?",
+      "answer": "Two or three days covers the old town, Ostrów Tumski and the Panorama. Add a day for Centennial Hall and a river trip."
+    },
+    {
+      "question": "Is Wrocław cheap to visit?",
+      "answer": "Yes. Food, drink and transport cost much less than in most Western European cities."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kraków",
+      "code": "KRK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Gdańsk",
+      "code": "GDN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Prague",
+      "code": "PRG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Dresden",
+      "code": "DRS",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-23T05:49:18Z",
+  "updated": "2026-10-23T05:49:18Z"
+}

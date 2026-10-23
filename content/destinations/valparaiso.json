@@ -1,0 +1,200 @@
+{
+  "name": "Valparaíso",
+  "published": true,
+  "country": "CL",
+  "title": "Holidays in Valparaíso",
+  "intro": "Steep hills of brightly painted houses, street art and old funicular lifts above the busy port of Chile's most bohemian city. Here's what Valparaíso is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/valparaiso-4692655_1280.webp",
+  "image_alt": "Brightly painted houses climbing a hillside in Valparaíso, Chile, with the port and Pacific Ocean behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Valpara%C3%ADso",
+  "to_code": "SCL",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3 to 5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Chilean peso ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / L · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Bring a plug adaptor. Chile's entry rules can change, so check GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Warm, dry, summer",
+      "temp": 21
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 21
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 20
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild, autumn",
+      "temp": 19
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Cool, rain starts",
+      "temp": 17
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Cool, wettest",
+      "temp": 16
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Cool, damp",
+      "temp": 15
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Cool, damp",
+      "temp": 16
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Spring, national holidays",
+      "temp": 16
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild, spring",
+      "temp": 17
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Warm, New Year fireworks",
+      "temp": 20
+    }
+  },
+  "when_to_go": "November to March, the southern summer, is the best time to go, dry and sunny with highs around 20°C and cooling sea breezes. New Year's Eve brings one of South America's biggest firework shows over the bay. June to August is cool and the wettest time, but still mild.",
+  "things": [
+    {
+      "name": "Cerro Alegre and Cerro Concepción",
+      "tag": "Free",
+      "blurb": "The prettiest hills, with painted houses, street art, cafés and lookout points over the bay. Best explored on foot.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ascensores",
+      "tag": "Ticketed",
+      "blurb": "Ride one of the old funicular lifts that climb the hills from the lower town, such as Ascensor Concepción or El Peral.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "La Sebastiana",
+      "tag": "Ticketed",
+      "blurb": "Poet Pablo Neruda's quirky hilltop house, full of his collections, with huge views over the port.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Street art",
+      "tag": "Tour",
+      "blurb": "Walking tours of the city's murals, which cover walls, stairways and whole houses across the hills.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paseo 21 de Mayo",
+      "tag": "Free",
+      "blurb": "A viewpoint over the docks and the bay, lovely at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Viña del Mar",
+      "tag": "Day trip",
+      "blurb": "The neighbouring beach resort, with golden sand, gardens and promenades, a short metro ride away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Casablanca Valley",
+      "tag": "Day trip",
+      "blurb": "Wine country between the coast and Santiago, known for crisp white wines and vineyard lunches.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Valparaíso from the UK?",
+      "answer": "There are no direct flights to Chile from the UK. Connect through a hub such as Madrid or São Paulo to Santiago, then take a bus to Valparaíso, about an hour and a half."
+    },
+    {
+      "question": "Is Valparaíso safe for tourists?",
+      "answer": "Stick to the main tourist hills, such as Cerro Alegre and Cerro Concepción, and take care with bags in the port area and after dark. Check the latest FCDO advice before you go."
+    },
+    {
+      "question": "How many days do you need in Valparaíso?",
+      "answer": "Two or three days covers the hills, the ascensores and Neruda's house. Add a day for Viña del Mar or the wine valleys."
+    },
+    {
+      "question": "Is Valparaíso worth combining with Santiago?",
+      "answer": "Yes. It's an easy trip from Santiago and often the highlight of a visit to central Chile."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Mendoza",
+      "code": "MDZ",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Cusco",
+      "code": "CUZ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Torres del Paine",
+      "code": "PUQ",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Cartagena",
+      "code": "CTG",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-23T05:49:18Z",
+  "updated": "2026-10-23T05:49:18Z"
+}

@@ -1,0 +1,200 @@
+{
+  "name": "Ischia",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Ischia",
+  "intro": "Thermal gardens, a castle on its own rock and sandy bays on a green volcanic island in the Bay of Naples. Here's what Ischia is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/ischia-7022393_1280.webp",
+  "image_alt": "The Aragonese Castle on its rocky islet off Ischia, joined to the island by a causeway, with sailing boats in the blue bay",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ischia",
+  "to_code": "NAP",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Fly to Naples, then take a hydrofoil or ferry to the island. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm, Easter",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, thermal gardens open",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busiest",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea, quieter",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild, quieter",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, some places shut",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    }
+  },
+  "when_to_go": "May, June and September are the best months, warm and sunny with the sea warm enough for swimming and the thermal parks open. July and August are hot and busy, especially at weekends when Neapolitans visit. Many hotels and thermal parks close in winter, from about November to March.",
+  "things": [
+    {
+      "name": "Aragonese Castle",
+      "tag": "Ticketed",
+      "blurb": "A castle and old convent on a rocky islet, joined to the island by a stone causeway. Walk up for views across the bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Giardini Poseidon",
+      "tag": "Ticketed",
+      "blurb": "The island's biggest thermal park, on the Bay of Citara, with about 20 pools at different temperatures by the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Negombo",
+      "tag": "Ticketed",
+      "blurb": "A thermal park and beach in gardens around the bay of San Montano, with pools, sand and sunbeds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sant'Angelo",
+      "tag": "Free",
+      "blurb": "A pretty, car-free fishing village on the south coast, with hot springs and the Maronti beach nearby.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monte Epomeo",
+      "tag": "Outdoors",
+      "blurb": "Walk up the island's old volcanic peak for views over the whole Bay of Naples.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "La Mortella",
+      "tag": "Ticketed",
+      "blurb": "Lush gardens created by the composer William Walton's wife, with terraces of tropical plants above the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Procida",
+      "tag": "Day trip",
+      "blurb": "A tiny neighbouring island of pastel fishermen's houses, a short boat ride away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Ischia from the UK?",
+      "answer": "Fly to Naples, then take a taxi or bus to the port. The hydrofoil to Ischia takes about an hour, and the slower car ferry about an hour and a half."
+    },
+    {
+      "question": "Is Ischia better than Capri?",
+      "answer": "They're different. Ischia is bigger, calmer and better value, with thermal pools and beaches, while Capri is smaller, glitzier and busier with day trippers."
+    },
+    {
+      "question": "Do you need a car on Ischia?",
+      "answer": "No. Buses go all round the island, and taxis and small boats fill the gaps. Car rules for visitors can be strict in summer."
+    },
+    {
+      "question": "How many days do you need on Ischia?",
+      "answer": "Three or four days covers the castle, a thermal park and a beach. A week lets you slow down and add Procida."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Naples",
+      "code": "NAP",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Amalfi Coast",
+      "code": "NAP",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Cefalù",
+      "code": "PMO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Hvar",
+      "code": "SPU",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-23T05:49:18Z",
+  "updated": "2026-10-23T05:49:18Z"
+}

@@ -1,0 +1,197 @@
+{
+  "name": "Costa Smeralda",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Costa Smeralda",
+  "intro": "Bright turquoise coves, granite boulders and some of the clearest water in the Mediterranean, on Sardinia's glamorous north-east coast. Here's what Costa Smeralda is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/costa-smeralda-4479204_1280.webp",
+  "image_alt": "Granite rocks and clear turquoise sea on Sardinia's Costa Smeralda, with yachts in the bay",
+  "wikipedia": "https://en.wikipedia.org/wiki/Costa_Smeralda",
+  "to_code": "OLB",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "relax"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Closed, cool",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sea warming",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busiest",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 15
+    }
+  },
+  "when_to_go": "May, June and September are ideal, with warm sea and far fewer boats in the coves. July and especially August are hot, expensive and busy, when the yachts arrive in Porto Cervo. Most hotels and beach bars close from late October to April, so this is a summer place.",
+  "things": [
+    {
+      "name": "La Maddalena islands",
+      "tag": "Tour",
+      "blurb": "Take a boat trip around the national park's islands, swimming at beaches you can't reach by road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spiaggia del Principe",
+      "tag": "Outdoors",
+      "blurb": "A crescent of white sand and clear water, reached by a short walk from the car park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Porto Cervo",
+      "tag": "Free",
+      "blurb": "The yacht harbour and its piazza, for a look at the superyachts and an expensive coffee.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Capriccioli",
+      "tag": "Outdoors",
+      "blurb": "Little coves between pink granite rocks, with shallow water that suits small children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "San Pantaleo",
+      "tag": "Free",
+      "blurb": "A pretty hill village with a Thursday market, a short drive inland.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Capo Testa",
+      "tag": "Day trip",
+      "blurb": "Wind-sculpted granite and hidden coves near Santa Teresa Gallura, an hour's drive away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "When is the best time to visit Costa Smeralda?",
+      "answer": "June and September, when the sea is warm and the beaches are calmer. August is the busiest and most expensive month, and the season is roughly May to early October."
+    },
+    {
+      "question": "Is Costa Smeralda expensive?",
+      "answer": "It can be, especially in Porto Cervo in August. You can keep costs down by staying in Cannigione, Baja Sardinia or a farmhouse agriturismo inland and driving to the beaches."
+    },
+    {
+      "question": "Do you need a car on Costa Smeralda?",
+      "answer": "Yes, really. The best beaches are spread out along the coast and buses are sparse, so hire a car at Olbia airport."
+    },
+    {
+      "question": "How do you get to Costa Smeralda?",
+      "answer": "Fly into Olbia, which has plenty of flights from across Europe in summer. The coast starts about 20 to 30 minutes' drive north of the airport."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "A week is ideal: a few beach days, a boat trip to La Maddalena and a day exploring the north of the island."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Alghero",
+      "code": "AHO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Corsica",
+      "code": "AJA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Menorca",
+      "code": "MAH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Corfu",
+      "code": "CFU",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

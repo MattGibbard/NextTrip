@@ -1,0 +1,197 @@
+{
+  "name": "Polignano a Mare",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Polignano a Mare",
+  "intro": "A whitewashed old town perched on cliffs above a tiny pebble cove and turquoise sea, an easy hop from Bari in Puglia. Here's what Polignano a Mare is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/polignano-a-mare-552098_1280.webp",
+  "image_alt": "Whitewashed houses of Polignano a Mare on cliffs above turquoise water",
+  "wikipedia": "https://en.wikipedia.org/wiki/Polignano_a_Mare",
+  "to_code": "BRI",
+  "holiday_types": [
+    "beach",
+    "food",
+    "relax"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 13
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busiest",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 14
+    }
+  },
+  "when_to_go": "May, June and September are ideal, with warm sea and fewer day-trippers on the famous cove. July and August are hot and very busy, especially at weekends. Winter is mild but quiet, with some restaurants closed.",
+  "things": [
+    {
+      "name": "Lama Monachile",
+      "tag": "Free",
+      "blurb": "The little pebble beach squeezed between cliffs, the town's famous view.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old town balconies",
+      "tag": "Free",
+      "blurb": "Lanes of white houses ending at terraces over the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Boat trip to the sea caves",
+      "tag": "Tour",
+      "blurb": "See the caves under the cliffs, including the Grotta Palazzese.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Domenico Modugno statue",
+      "tag": "Free",
+      "blurb": "The singer of 'Volare' was born here, and his statue looks out to sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gelato and seafood",
+      "tag": "Food",
+      "blurb": "Raw seafood at the harbour and coffee ice cream at Il Super Mago del Gelo.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alberobello",
+      "tag": "Day trip",
+      "blurb": "The cone-roofed trulli houses, about 40 minutes inland.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Polignano a Mare worth visiting?",
+      "answer": "Yes, for a night or two. The old town and its clifftop views are stunning, and it's a great base for Puglia's coast and trulli villages."
+    },
+    {
+      "question": "How many days do you need in Polignano a Mare?",
+      "answer": "One or two days covers the town. Use it as a base for three or four to see Monopoli, Alberobello and Ostuni."
+    },
+    {
+      "question": "Is there a beach in Polignano a Mare?",
+      "answer": "Yes, but small. Lama Monachile is a pebble cove that gets very busy. There are rocky swimming spots and sandy beaches a short drive south."
+    },
+    {
+      "question": "How do you get to Polignano a Mare?",
+      "answer": "Fly into Bari, which has direct flights from the UK, then take the train, about 40 minutes."
+    },
+    {
+      "question": "What is the best time to visit Polignano a Mare?",
+      "answer": "May, June and September, around 23 to 27°C with warm sea and smaller crowds."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Puglia",
+      "code": "BRI",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Lecce",
+      "code": "BDS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Matera",
+      "code": "BRI",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Amalfi Coast",
+      "code": "NAP",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

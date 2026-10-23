@@ -152,14 +152,13 @@ describe("pages made out for a visitor", () => {
     expect(rewrite(page, sea)).toBe(await theirs.guide("lisbon"));
   });
 
-  // Renders every guide twice, so it slows down as guides are added.
   it("rewrite every guide, the list of guides and the hub pages", async () => {
     const built = await pagesFor(null);
     const theirs = await pagesFor(writeHint(sea));
     for (const slug of built.slugs) expect(rewrite(await built.guide(slug), sea)).toBe(await theirs.guide(slug));
     expect(rewrite(built.index(), sea)).toBe(theirs.index());
     for (const slug of built.hubSlugs) expect(rewrite(await built.hub(slug), sea)).toBe(await theirs.hub(slug));
-  }, 30_000);
+  }, 30_000); // renders every guide and hub twice, so it grows with the content
 });
 
 describe("the holiday picker", () => {

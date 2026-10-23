@@ -1,0 +1,197 @@
+{
+  "name": "Šibenik",
+  "published": true,
+  "country": "HR",
+  "title": "Holidays in Šibenik",
+  "intro": "A stone city on the Dalmatian coast with a UNESCO cathedral, four fortresses and the waterfalls of Krka National Park nearby. Here's what Šibenik is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/sibenik-4727614_1280.webp",
+  "image_alt": "The stone façade of the Cathedral of St James in Šibenik",
+  "wikipedia": "https://en.wikipedia.org/wiki/Šibenik",
+  "to_code": "SPU",
+  "holiday_types": [
+    "culture",
+    "nature",
+    "city"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 11
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 12
+    }
+  },
+  "when_to_go": "May, June and September are best, warm and great for Krka's waterfalls. July and August are hot and busy at the park. Spring brings full waterfalls.",
+  "things": [
+    {
+      "name": "Cathedral of St James",
+      "tag": "Ticketed",
+      "blurb": "A UNESCO cathedral built entirely of stone, with 71 carved faces.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "St Michael's Fortress",
+      "tag": "Ticketed",
+      "blurb": "A fortress with views over the old town, used for summer concerts.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Barone Fortress",
+      "tag": "Ticketed",
+      "blurb": "A fortress with an augmented-reality history tour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Krka National Park",
+      "tag": "Day trip",
+      "blurb": "Waterfalls and boardwalks, about 20 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kornati islands",
+      "tag": "Tour",
+      "blurb": "Boat trips to a national park of bare islands.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old town lanes",
+      "tag": "Free",
+      "blurb": "Stone steps and alleys climbing from the waterfront.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Šibenik worth visiting?",
+      "answer": "Yes. It's less touristy than Split or Dubrovnik, with a real old town and Krka's waterfalls close by."
+    },
+    {
+      "question": "How do you get to Šibenik?",
+      "answer": "Fly into Split, about 45 minutes away, or Zadar, about an hour. Both have direct flights from the UK."
+    },
+    {
+      "question": "Can you swim at Krka National Park?",
+      "answer": "Not any more. Swimming at Skradinski Buk has been banned since 2021."
+    },
+    {
+      "question": "What is the best time to visit Šibenik?",
+      "answer": "May, June and September, around 23 to 28°C."
+    },
+    {
+      "question": "How many days do you need in Šibenik?",
+      "answer": "Two or three days covers the city, Krka and a boat trip."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Trogir",
+      "code": "SPU",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Zadar",
+      "code": "ZAD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Plitvice Lakes",
+      "code": "ZAG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Split",
+      "code": "SPU",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

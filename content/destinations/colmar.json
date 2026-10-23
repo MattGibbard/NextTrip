@@ -150,6 +150,18 @@
   ],
   "faqs": [
     {
+      "question": "Is Colmar worth visiting?",
+      "answer": "Yes. Its old town of painted half-timbered houses and canals is one of the prettiest in France, it's small enough to walk everywhere, and it's surrounded by the Alsace wine villages."
+    },
+    {
+      "question": "What is the best time to visit Colmar?",
+      "answer": "December for the Christmas markets and lights, or May, June and September for warm weather and the wine villages. January to March is cold and quiet."
+    },
+    {
+      "question": "How many days do you need in Colmar?",
+      "answer": "Two days is enough for the town itself. Stay three or four to add the wine villages, Haut-Koenigsbourg Castle or a day in Strasbourg."
+    },
+    {
       "question": "Is Colmar good for a family holiday?",
       "answer": "Yes. It's small, walkable and pretty, with a children's Christmas market and easy day trips to castles and villages."
     },
@@ -189,5 +201,5 @@
     }
   ],
   "date": "2026-10-14T07:36:32Z",
-  "updated": "2026-10-14T07:51:36Z"
+  "updated": "2026-10-22T08:04:21Z"
 }

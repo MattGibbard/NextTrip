@@ -1,0 +1,197 @@
+{
+  "name": "Altea",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Altea",
+  "intro": "A whitewashed hill town on the Costa Blanca, crowned by a blue-domed church, with a pebble seafront and Benidorm's beaches next door. Here's what Altea is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/altea-4595349_1280.webp",
+  "image_alt": "The blue-and-white domes and bell tower of Altea's church",
+  "wikipedia": "https://en.wikipedia.org/wiki/Altea",
+  "to_code": "ALC",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "culture"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, sunny",
+      "temp": 17
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 18
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 20
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 18
+    }
+  },
+  "when_to_go": "May, June, September and October are ideal, warm with a pleasant sea. July and August are hot and busy. Winter is mild and sunny, with many visitors from northern Europe.",
+  "things": [
+    {
+      "name": "Old town",
+      "tag": "Free",
+      "blurb": "Steep white lanes up to the blue-and-white domed church and its viewpoint.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Seafront promenade",
+      "tag": "Free",
+      "blurb": "A long pebble beach lined with cafés and restaurants.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Serra Gelada",
+      "tag": "Outdoors",
+      "blurb": "A cliff walk to a lighthouse between Altea and Benidorm.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Algar waterfalls",
+      "tag": "Day trip",
+      "blurb": "Turquoise pools and falls for swimming, 25 minutes inland.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Guadalest",
+      "tag": "Day trip",
+      "blurb": "A tiny castle village perched on a rock above a reservoir.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Benidorm beaches",
+      "tag": "Day trip",
+      "blurb": "Long sandy beaches and theme parks next door.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Altea worth visiting?",
+      "answer": "Yes. It's one of the prettiest towns on the Costa Blanca, with an arty old town and a calmer feel than nearby Benidorm."
+    },
+    {
+      "question": "Does Altea have a sandy beach?",
+      "answer": "Altea's beaches are mostly pebbles. For sand, head to Albir or Benidorm, a short drive away."
+    },
+    {
+      "question": "How do you get to Altea?",
+      "answer": "Fly into Alicante, which has many direct flights from the UK, then drive or take the bus or tram, about an hour."
+    },
+    {
+      "question": "What is the best time to visit Altea?",
+      "answer": "May, June, September and October, around 22 to 29°C."
+    },
+    {
+      "question": "How many nights do you need in Altea?",
+      "answer": "A week gives time for the old town, the beaches, the waterfalls and Guadalest."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Valencia",
+      "code": "VLC",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Nerja",
+      "code": "AGP",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Mallorca",
+      "code": "PMI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Ibiza",
+      "code": "IBZ",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

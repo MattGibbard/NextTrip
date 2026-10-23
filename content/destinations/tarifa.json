@@ -1,0 +1,197 @@
+{
+  "name": "Tarifa",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Tarifa",
+  "intro": "Europe's southernmost town, a windy, laid-back surf hub of white sand beaches, with Morocco just 35 minutes across the strait. Here's what Tarifa is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/tarifa-7282233_1280.webp",
+  "image_alt": "The Castillo de Santa Catalina on a rocky hill above Tarifa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Tarifa",
+  "to_code": "GIB",
+  "holiday_types": [
+    "beach",
+    "adventure",
+    "nature"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, windy",
+      "temp": 16
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 17
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, whales",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 27
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 17
+    }
+  },
+  "when_to_go": "May, June, September and October are best, warm with fewer crowds and good whale and dolphin watching. July and August are busy with Spanish holidaymakers. It's windy most of the year, which is great for kitesurfing but can make beach days blowy, so check whether the Levante or Poniente wind is blowing.",
+  "things": [
+    {
+      "name": "Playa de Valdevaqueros",
+      "tag": "Outdoors",
+      "blurb": "A long white beach with huge dunes and colourful kites in the sky.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bolonia",
+      "tag": "Outdoors",
+      "blurb": "A wild beach with a giant dune and Roman ruins of Baelo Claudia.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale and dolphin watching",
+      "tag": "Tour",
+      "blurb": "Boat trips into the Strait of Gibraltar, one of the best places in Europe to see them.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kitesurfing lessons",
+      "tag": "Tour",
+      "blurb": "Tarifa is Europe's kitesurfing capital, with schools for beginners.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tangier",
+      "tag": "Day trip",
+      "blurb": "Catch the 35-minute ferry to Morocco for the day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old town",
+      "tag": "Free",
+      "blurb": "White lanes, a castle and a lively evening scene.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Tarifa worth visiting?",
+      "answer": "Yes, especially if you like wild beaches and outdoor sports. It's relaxed, with a young, surfy feel and a pretty old town."
+    },
+    {
+      "question": "Is Tarifa too windy?",
+      "answer": "It can be. Wind is what makes it famous for kitesurfing, but on calm days the beaches are glorious. Some beaches are more sheltered depending on the wind direction."
+    },
+    {
+      "question": "How do you get to Tarifa?",
+      "answer": "Fly into Gibraltar, about 45 minutes' drive away, or Málaga, about 2 hours. Seville and Jerez are other options."
+    },
+    {
+      "question": "What is the best time to visit Tarifa?",
+      "answer": "May, June, September and October, around 22 to 26°C."
+    },
+    {
+      "question": "Can you go to Morocco from Tarifa?",
+      "answer": "Yes. Fast ferries reach Tangier in about 35 minutes, and many companies offer guided day trips."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cádiz",
+      "code": "XRY",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Malaga",
+      "code": "AGP",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Essaouira",
+      "code": "ESU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Seville",
+      "code": "SVQ",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

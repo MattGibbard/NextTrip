@@ -1,0 +1,204 @@
+{
+  "name": "Fes",
+  "published": true,
+  "country": "MA",
+  "title": "Holidays in Fes",
+  "intro": "The world's largest car-free medieval city, a maze of thousands of lanes, tanneries and craft workshops that has barely changed in centuries. Here's what Fes is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/fes-165767_1280.webp",
+  "image_alt": "The Chouara tannery in Fes, with pits of coloured dye among the medina's houses",
+  "wikipedia": "https://en.wikipedia.org/wiki/Fez,_Morocco",
+  "to_code": "FEZ",
+  "holiday_types": [
+    "culture",
+    "city",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "0 to 1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Moroccan dirham (MAD)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Dirhams can only be bought in Morocco. Dress modestly in the medina, covering shoulders and knees. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cool, sunny",
+      "temp": 16
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 18
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 21
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 33
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 37
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 37
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 17
+    }
+  },
+  "when_to_go": "March to May and October are best, warm and sunny for exploring the medina. July and August are very hot, often 35 to 40°C. Winter days are mild and sunny but nights are cold, and many riads have little heating. During Ramadan some cafés close in the daytime, though most sights stay open.",
+  "things": [
+    {
+      "name": "Fes el-Bali",
+      "tag": "Free",
+      "blurb": "The old medina, with around 9,000 lanes. A guide for your first morning helps you find your bearings.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chouara Tannery",
+      "tag": "Free",
+      "blurb": "Leather dyed in stone pits of colour, seen from the terraces of the shops around it.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Al-Attarine Madrasa",
+      "tag": "Ticketed",
+      "blurb": "A small Islamic school with beautiful carved cedar, tiles and plaster.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bou Inania Madrasa",
+      "tag": "Ticketed",
+      "blurb": "Another stunning madrasa, with a courtyard and a minaret.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bab Bou Jeloud",
+      "tag": "Free",
+      "blurb": "The blue-tiled main gate into the medina, busy with food stalls at night.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Volubilis and Meknes",
+      "tag": "Day trip",
+      "blurb": "Roman ruins and an imperial city, about an hour away by road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cooking class",
+      "tag": "Tour",
+      "blurb": "Shop at the market, then learn to make tagine and pastilla in a riad.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Fes worth visiting?",
+      "answer": "Yes. It's the most authentic of Morocco's old cities, with fewer tourists than Marrakech and a medina that still works as a city, full of craftspeople and donkeys rather than cars."
+    },
+    {
+      "question": "How many days do you need in Fes?",
+      "answer": "Three days covers the medina, a day trip to Volubilis and Meknes, and a cooking class. Many people combine Fes with Chefchaouen or the desert."
+    },
+    {
+      "question": "Do you need a guide in Fes?",
+      "answer": "It helps on your first day, as the medina is very easy to get lost in. Book an official guide through your riad, and politely ignore people who offer to show you the way."
+    },
+    {
+      "question": "When is the best time to visit Fes?",
+      "answer": "Spring and October, around 21 to 26°C. Summer is very hot, often above 35°C."
+    },
+    {
+      "question": "How do you get to Fes?",
+      "answer": "Fly into Fes-Saïss airport, which has flights from several European cities, then take a taxi to the medina in about 30 minutes. Trains link Fes with Tangier, Rabat, Casablanca and Marrakech."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Marrakech",
+      "code": "RAK",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Morocco desert road trip",
+      "code": "RAK",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Essaouira",
+      "code": "ESU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Granada",
+      "code": "GRX",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

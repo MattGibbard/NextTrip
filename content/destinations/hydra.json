@@ -1,0 +1,197 @@
+{
+  "name": "Hydra",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Hydra",
+  "intro": "A car-free Greek island of stone mansions around a horseshoe harbour, where donkeys carry the luggage, two hours from Athens by ferry. Here's what Hydra is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/hydra-7248441_1280.webp",
+  "image_alt": "Stone houses and a bell tower around Hydra's harbour",
+  "wikipedia": "https://en.wikipedia.org/wiki/Hydra_(island)",
+  "to_code": "ATH",
+  "holiday_types": [
+    "relax",
+    "culture",
+    "beach"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 15
+    }
+  },
+  "when_to_go": "May, June, September and October are best, warm with calm seas and quieter lanes. July and August are hot and busy with day-trippers and yachts. Winter is quiet, with many places closed.",
+  "things": [
+    {
+      "name": "Hydra harbour",
+      "tag": "Free",
+      "blurb": "Cafés and stone mansions around the old port, watching boats and donkeys.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Swim off the rocks",
+      "tag": "Outdoors",
+      "blurb": "Swim from the platforms at Spilia and Hydronetta, just west of the harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Coastal walk to Kamini",
+      "tag": "Outdoors",
+      "blurb": "An easy path to a fishing village with a tavern by the water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Water taxi to Bisti",
+      "tag": "Outdoors",
+      "blurb": "Pine-backed coves on the far side of the island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Historical Archives Museum",
+      "tag": "Ticketed",
+      "blurb": "Island history and its role in the Greek War of Independence.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monastery walk",
+      "tag": "Outdoors",
+      "blurb": "Climb to the Profitis Ilias monastery for big views.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Hydra worth visiting?",
+      "answer": "Yes. With no cars, it's peaceful and beautiful, and an easy escape from Athens."
+    },
+    {
+      "question": "How do you get to Hydra?",
+      "answer": "Fly into Athens, then take a fast ferry from Piraeus, about 1 hour 30 minutes to 2 hours."
+    },
+    {
+      "question": "Can you do Hydra as a day trip from Athens?",
+      "answer": "Yes, but staying a night or two is much better, when the day-trippers have gone."
+    },
+    {
+      "question": "Does Hydra have beaches?",
+      "answer": "Mostly rocks and small pebble coves, reached on foot or by water taxi."
+    },
+    {
+      "question": "What is the best time to visit Hydra?",
+      "answer": "May, June, September and October, around 23 to 29°C."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Athens",
+      "code": "ATH",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Nafplio",
+      "code": "ATH",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Milos",
+      "code": "MLO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Naxos",
+      "code": "JNX",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

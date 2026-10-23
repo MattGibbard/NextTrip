@@ -1,0 +1,203 @@
+{
+  "name": "Bratislava",
+  "published": true,
+  "country": "SK",
+  "title": "Holidays in Bratislava",
+  "intro": "A small, walkable old town on the Danube, with a white hilltop castle, cheap beer and Vienna just an hour away. Here's what Bratislava is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/bratislava-3641287_1280.webp",
+  "image_alt": "Bratislava Castle above the Danube at dusk",
+  "wikipedia": "https://en.wikipedia.org/wiki/Bratislava",
+  "to_code": "BTS",
+  "holiday_types": [
+    "city",
+    "culture"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 3
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 5
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 11
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 17
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 27
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Grey",
+      "temp": 8
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas markets",
+      "temp": 4
+    }
+  },
+  "when_to_go": "April to June and September are ideal, warm enough for riverside terraces without the heat. July and August are hot. The Christmas markets in late November and December are smaller, cheaper and calmer than Vienna's.",
+  "things": [
+    {
+      "name": "Bratislava Castle",
+      "tag": "Ticketed",
+      "blurb": "The white castle on the hill, with gardens and views over the Danube to Austria and Hungary.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old Town",
+      "tag": "Free",
+      "blurb": "Narrow lanes, palaces and the Old Town Hall, all within a few minutes' walk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Čumil and the statues",
+      "tag": "Free",
+      "blurb": "Find the bronze man peeping out of a manhole, and other quirky statues.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Devín Castle",
+      "tag": "Day trip",
+      "blurb": "Clifftop ruins where the Morava meets the Danube, by bus or summer boat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "UFO Tower",
+      "tag": "Ticketed",
+      "blurb": "An observation deck on top of the flying-saucer bridge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Church",
+      "tag": "Free",
+      "blurb": "An art nouveau church painted every shade of blue.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vienna",
+      "tag": "Day trip",
+      "blurb": "About an hour away by train, bus or summer boat along the Danube.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Bratislava?",
+      "answer": "Two days covers the old town, the castle and Devín. Many people add Vienna or Budapest for a longer trip."
+    },
+    {
+      "question": "Is Bratislava worth visiting?",
+      "answer": "Yes, for a relaxed, good-value weekend. It's smaller and calmer than nearby capitals, and the old town is easy to see on foot."
+    },
+    {
+      "question": "When is the best time to visit Bratislava?",
+      "answer": "Spring and September, around 17 to 25°C, or December for the Christmas markets."
+    },
+    {
+      "question": "How do you get to Bratislava?",
+      "answer": "Fly into Bratislava airport, which has budget flights from across Europe, or into Vienna, which has many more and is about an hour away by bus."
+    },
+    {
+      "question": "Can you combine Bratislava with Vienna and Budapest?",
+      "answer": "Easily. Trains link all three, with Vienna about an hour away and Budapest about 2 hours 30 minutes."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Vienna",
+      "code": "VIE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Budapest",
+      "code": "BUD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Prague",
+      "code": "PRG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Ljubljana",
+      "code": "LJU",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

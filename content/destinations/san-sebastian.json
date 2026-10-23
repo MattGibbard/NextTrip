@@ -1,0 +1,204 @@
+{
+  "name": "San Sebastián",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in San Sebastián",
+  "intro": "A perfect shell-shaped bay, an old town packed with pintxos bars and green hills rolling down to the sea, in Spain's Basque Country. Here's what San Sebastián is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/san-sebastian-2420870_1280.webp",
+  "image_alt": "La Concha bay in San Sebastián, with its little island and curving beach",
+  "wikipedia": "https://en.wikipedia.org/wiki/San_Sebastián",
+  "to_code": "BIO",
+  "holiday_types": [
+    "city",
+    "food",
+    "beach"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, rainy",
+      "temp": 12
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 13
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 17
+    },
+    "may": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 20
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm, busy",
+      "temp": 25
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 24
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 20
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 15
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 13
+    }
+  },
+  "when_to_go": "June to September is best, warm enough for the beach and evenings out in the old town. August is the busiest and priciest month. It rains a lot, even in summer, which is why the hills are so green, so pack a jacket. Winter is mild but wet, though the food scene runs all year.",
+  "things": [
+    {
+      "name": "Pintxos crawl",
+      "tag": "Food",
+      "blurb": "Hop between bars in the Parte Vieja, picking a speciality and a small drink at each.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "La Concha beach",
+      "tag": "Free",
+      "blurb": "A wide city beach with calm water, a promenade and a little island in the bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monte Igueldo",
+      "tag": "Ticketed",
+      "blurb": "A 1912 funicular up to a hilltop viewpoint and an old-fashioned fairground.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monte Urgull",
+      "tag": "Outdoors",
+      "blurb": "Walk up through the woods to a castle and a statue looking over the bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zurriola beach",
+      "tag": "Outdoors",
+      "blurb": "The surf beach, with surf schools for beginners and a younger crowd.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Peine del Viento",
+      "tag": "Free",
+      "blurb": "Steel sculptures built into the rocks where the waves crash, at the end of Ondarreta beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hondarribia",
+      "tag": "Day trip",
+      "blurb": "A walled town with colourful fishing houses near the French border, 30 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in San Sebastián?",
+      "answer": "Three or four days gives time for the beaches, the hills and plenty of pintxos. Add Bilbao and the Guggenheim for a longer trip."
+    },
+    {
+      "question": "When is the best time to visit San Sebastián?",
+      "answer": "June to September, when it's around 23 to 25°C and the sea is warm enough for swimming. September is quieter and still warm."
+    },
+    {
+      "question": "Is San Sebastián expensive?",
+      "answer": "More than most of Spain, especially hotels in August. Pintxos keep eating out affordable, at a few euros each."
+    },
+    {
+      "question": "How do you get to San Sebastián?",
+      "answer": "Most people fly into Bilbao and take the direct bus, about 1 hour 15 minutes. San Sebastián's own small airport has a few flights from Madrid and Barcelona, and Biarritz in France is about 45 minutes away."
+    },
+    {
+      "question": "Is San Sebastián good with children?",
+      "answer": "Yes. The beaches are calm and close to the centre, the aquarium and Monte Igueldo's fairground are fun, and pintxos bars welcome families early in the evening."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Asturias",
+      "code": "OVD",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Bordeaux",
+      "code": "BOD",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Porto",
+      "code": "OPO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Valencia",
+      "code": "VLC",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

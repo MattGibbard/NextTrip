@@ -1,0 +1,197 @@
+{
+  "name": "Halkidiki",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Halkidiki",
+  "intro": "Three green peninsulas stretching into a clear, calm sea, with pine forest right down to the sand and a holy mountain at the tip. Here's what Halkidiki is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/halkidiki-972446_1280.webp",
+  "image_alt": "The old Byzantine tower by the beach at Ouranoupoli in Halkidiki",
+  "wikipedia": "https://en.wikipedia.org/wiki/Chalkidiki",
+  "to_code": "SKG",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "relax"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Closed, cool",
+      "temp": 11
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 12
+    }
+  },
+  "when_to_go": "June and September are best, with warm sea, calm beaches and lower prices. July and August are hot and the busiest, especially with visitors from the Balkans. Most hotels and tavernas open from May to October, so it's very quiet in winter.",
+  "things": [
+    {
+      "name": "Kassandra beaches",
+      "tag": "Outdoors",
+      "blurb": "The first peninsula's long sandy beaches and lively villages, good for families.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sithonia coves",
+      "tag": "Outdoors",
+      "blurb": "The quieter middle peninsula, with turquoise coves like Kavourotrypes and Karidi.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Athos boat trip",
+      "tag": "Tour",
+      "blurb": "Cruise along the coast of the monks' peninsula to see its cliff-top monasteries. Only men may visit on land, with a permit.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Petralona Cave",
+      "tag": "Ticketed",
+      "blurb": "A cave of stalactites where a very old human skull was found.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Afytos",
+      "tag": "Free",
+      "blurb": "A cliff-top stone village with a square for an evening drink.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ouranoupoli",
+      "tag": "Free",
+      "blurb": "A pretty seaside village at the border of Mount Athos, with a Byzantine tower.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Which part of Halkidiki is best?",
+      "answer": "Kassandra is the busiest, with long beaches and lots of hotels and nightlife. Sithonia is wilder and quieter, with small coves. Athos is the most remote, with the monks' peninsula at its tip."
+    },
+    {
+      "question": "When is the best time to visit Halkidiki?",
+      "answer": "June and September, when the sea is warm and it's around 27 to 29°C. July and August are hotter and busier."
+    },
+    {
+      "question": "How do you get to Halkidiki?",
+      "answer": "Fly into Thessaloniki, then drive or take a transfer. Kassandra is about 1 hour away, Sithonia 1 hour 30 minutes and Ouranoupoli about 2 hours."
+    },
+    {
+      "question": "Do you need a car in Halkidiki?",
+      "answer": "It helps a lot, as the best beaches are spread out. If you stay in one resort, buses and boat trips are enough."
+    },
+    {
+      "question": "Is Halkidiki good for families?",
+      "answer": "Yes. The sea is calm and shallow on many beaches, it's cheaper than the islands, and it's a short transfer from the airport."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Thessaloniki",
+      "code": "SKG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Corfu",
+      "code": "CFU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Kefalonia",
+      "code": "EFL",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Saranda",
+      "code": "TIA",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

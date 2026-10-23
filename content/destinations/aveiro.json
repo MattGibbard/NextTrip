@@ -1,0 +1,197 @@
+{
+  "name": "Aveiro",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in Aveiro",
+  "intro": "Portugal's little Venice, with colourful boats on canals, art nouveau houses, striped beach cottages and sweet egg pastries. Here's what Aveiro is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/aveiro-993115_1280.webp",
+  "image_alt": "Brightly painted moliceiro boats moored on a canal in Aveiro",
+  "wikipedia": "https://en.wikipedia.org/wiki/Aveiro,_Portugal",
+  "to_code": "OPO",
+  "holiday_types": [
+    "city",
+    "food",
+    "beach"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 20
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 24
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    }
+  },
+  "when_to_go": "April to June and September to October are best, mild for walking and boat rides. July and August are warm with busy beaches. Winter is cool and rainy.",
+  "things": [
+    {
+      "name": "Moliceiro boat ride",
+      "tag": "Tour",
+      "blurb": "A trip along the canals on a painted former seaweed boat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Costa Nova",
+      "tag": "Free",
+      "blurb": "Candy-striped beach houses and a long Atlantic beach, 15 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ovos moles",
+      "tag": "Food",
+      "blurb": "Sweet egg-yolk sweets in wafer shells shaped like fish and shells.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Art nouveau museum",
+      "tag": "Ticketed",
+      "blurb": "A small museum and tea room in one of the town's art nouveau houses.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Salt pans",
+      "tag": "Tour",
+      "blurb": "Learn how salt is made, and float in salty pools.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Porto",
+      "tag": "Day trip",
+      "blurb": "About 40 minutes away by train.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Aveiro worth visiting?",
+      "answer": "Yes, for a day or two. The canals, painted boats and striped houses at Costa Nova are charming."
+    },
+    {
+      "question": "How many days do you need in Aveiro?",
+      "answer": "One or two days covers the town and Costa Nova."
+    },
+    {
+      "question": "How do you get to Aveiro?",
+      "answer": "Fly into Porto, which has direct flights from the UK, then take the train, about 40 minutes to an hour."
+    },
+    {
+      "question": "Can you visit Aveiro as a day trip from Porto?",
+      "answer": "Yes. Trains run often, and many tours combine Aveiro and Costa Nova."
+    },
+    {
+      "question": "What is the best time to visit Aveiro?",
+      "answer": "April to June and September, around 18 to 24°C."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Porto",
+      "code": "OPO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Coimbra",
+      "code": "OPO",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Óbidos",
+      "code": "LIS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Douro Valley",
+      "code": "OPO",
+      "label": "🍷 Food & drink"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

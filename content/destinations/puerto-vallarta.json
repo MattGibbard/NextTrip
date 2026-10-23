@@ -1,0 +1,204 @@
+{
+  "name": "Puerto Vallarta",
+  "published": true,
+  "country": "MX",
+  "title": "Holidays in Puerto Vallarta",
+  "intro": "A cobbled old town on a huge bay, jungle-covered mountains running down to the beach and humpback whales out in the water in winter. Here's what Puerto Vallarta is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/puerto-vallarta-4462246_1280.webp",
+  "image_alt": "The beach at Puerto Vallarta, with the city and green mountains behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Puerto_Vallarta",
+  "to_code": "PVR",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "food"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Mexican peso ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 127V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Jalisco doesn't change its clocks, so the time difference changes in summer. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, whales",
+      "temp": 28
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, whales",
+      "temp": 28
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 29
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 30
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Hot, rains start",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Rainy, humid",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Wettest, storms",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 32
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, whales",
+      "temp": 29
+    }
+  },
+  "when_to_go": "November to April is the dry season, warm and sunny with humpback whales in the bay from December to March. It's also the busiest and most expensive time. Summer is hot, humid and rainy, with hurricane risk from June to October, peaking in September, but prices drop and the jungle is lush.",
+  "things": [
+    {
+      "name": "The Malecón",
+      "tag": "Free",
+      "blurb": "The seafront promenade, lined with sculptures and street food, best at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Tour",
+      "blurb": "Humpback whales calve in the bay from December to March.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Los Arcos",
+      "tag": "Tour",
+      "blurb": "Snorkel among rock arches in a marine park by boat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Yelapa",
+      "tag": "Day trip",
+      "blurb": "A jungle beach village reached only by boat, with a waterfall walk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zona Romántica",
+      "tag": "Free",
+      "blurb": "The old town's cobbled lanes, restaurants and the Los Muertos pier.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sayulita",
+      "tag": "Day trip",
+      "blurb": "A colourful surf town about an hour north.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Botanical garden",
+      "tag": "Ticketed",
+      "blurb": "Orchids and jungle trails in the hills, with river swimming nearby.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "When is the best time to visit Puerto Vallarta?",
+      "answer": "November to April, when it's dry and around 28 to 30°C. December to March is whale season."
+    },
+    {
+      "question": "Is Puerto Vallarta safe?",
+      "answer": "The tourist areas are generally considered safe, and it's one of Mexico's most popular resorts. Check your government's travel advice before you book, as some other parts of Jalisco state carry warnings."
+    },
+    {
+      "question": "How do you get to Puerto Vallarta?",
+      "answer": "Fly into Puerto Vallarta airport, which has direct flights from many US and Canadian cities and some from Europe in winter. The old town is about 20 minutes away."
+    },
+    {
+      "question": "How many nights do you need in Puerto Vallarta?",
+      "answer": "A week covers beaches, a boat trip, whale watching in season and a day in Sayulita. Add Guadalajara for a longer trip."
+    },
+    {
+      "question": "Is Puerto Vallarta good for families?",
+      "answer": "Yes. There are calm beaches, boat trips, a walkable old town and family-friendly resorts in Nuevo Vallarta."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cancún",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Oaxaca",
+      "code": "OAX",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Mexico City",
+      "code": "MEX",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Costa Rica",
+      "code": "SJO",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

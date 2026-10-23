@@ -1,0 +1,196 @@
+{
+  "name": "Óbidos",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in Óbidos",
+  "intro": "A walled medieval village of white houses edged in blue and yellow, with a castle, bookshops and cherry liqueur in chocolate cups. Here's what Óbidos is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/obidos-111783_1280.webp",
+  "image_alt": "The walls and towers of Óbidos castle under a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Óbidos,_Portugal",
+  "to_code": "LIS",
+  "holiday_types": [
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 20
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, medieval fair",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 25
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas village",
+      "temp": 15
+    }
+  },
+  "when_to_go": "April to June and September to October are best, mild and calmer than summer weekends. July brings the medieval fair, and December has the Óbidos Christmas village. Winter can be damp. Day-trippers arrive mid-morning, so it's lovely in the evening.",
+  "things": [
+    {
+      "name": "Village walls",
+      "tag": "Free",
+      "blurb": "Walk the top of the walls all the way round, with care as there are no railings.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rua Direita",
+      "tag": "Free",
+      "blurb": "The main street of shops and the famous ginjinha cherry liqueur.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ginjinha in a chocolate cup",
+      "tag": "Food",
+      "blurb": "A shot of local cherry liqueur served in an edible cup.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bookshops",
+      "tag": "Free",
+      "blurb": "Óbidos is a UNESCO City of Literature, with bookshops in a church and a market.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Foz do Arelho",
+      "tag": "Day trip",
+      "blurb": "A lagoon and ocean beach about 20 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nazaré",
+      "tag": "Day trip",
+      "blurb": "The town of giant winter waves, 40 minutes north.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Óbidos worth visiting?",
+      "answer": "Yes. It's one of Portugal's prettiest villages and a great stop between Lisbon and Porto. Stay a night to see it without the crowds."
+    },
+    {
+      "question": "How many days do you need in Óbidos?",
+      "answer": "One day covers the village. Stay two or three to add Nazaré, the beaches and the Alcobaça monastery."
+    },
+    {
+      "question": "How do you get to Óbidos?",
+      "answer": "Fly into Lisbon, then take the direct bus, about an hour."
+    },
+    {
+      "question": "What is the best time to visit Óbidos?",
+      "answer": "Spring and early autumn, around 18 to 25°C."
+    },
+    {
+      "question": "When is the Óbidos Christmas village?",
+      "answer": "Usually from late November to early January, with lights, rides and a skating rink."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Sintra",
+      "code": "LIS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Porto",
+      "code": "OPO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Coimbra",
+      "code": "OPO",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T18:13:33Z",
+  "updated": "2026-10-22T18:13:33Z"
+}

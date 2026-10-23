@@ -1,0 +1,204 @@
+{
+  "name": "La Palma",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in La Palma",
+  "intro": "The Canaries' greenest island, with laurel forests, volcanoes, black-sand beaches and some of the darkest night skies in the world. Here's what La Palma is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/la-palma-2871545_1280.webp",
+  "image_alt": "Volcanic peaks rising above a sea of clouds at the Caldera de Taburiente on La Palma",
+  "wikipedia": "https://en.wikipedia.org/wiki/La_Palma",
+  "to_code": "SPC",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "beach"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 20
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 20
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 21
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 26
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 27
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 23
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 21
+    }
+  },
+  "when_to_go": "It's mild all year, which suits walking: winter is around 20°C and summer rarely tops 27°C. Spring and autumn are especially good for hiking, when the trails are green and clear. The east side is cloudier and the west sunnier, so the weather can change from one valley to the next. High trails can get snow in winter.",
+  "things": [
+    {
+      "name": "Caldera de Taburiente",
+      "tag": "Outdoors",
+      "blurb": "A huge volcanic crater and national park, with trails, waterfalls and a stream of orange rock.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Roque de los Muchachos",
+      "tag": "Free",
+      "blurb": "The island's highest point, above the clouds, beside a cluster of world-class observatories.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stargazing tour",
+      "tag": "Tour",
+      "blurb": "La Palma protects its night skies by law, so the stars are spectacular.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Route of the Volcanoes",
+      "tag": "Outdoors",
+      "blurb": "A long ridge hike over volcanic cones in the south of the island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Santa Cruz de La Palma",
+      "tag": "Free",
+      "blurb": "The small capital, with wooden balconies and a replica of Columbus's ship.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tajogaite volcano",
+      "tag": "Tour",
+      "blurb": "See the lava fields left by the 2021 eruption on a guided visit.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Charco Azul",
+      "tag": "Outdoors",
+      "blurb": "Natural seawater pools by the rocks on the north-east coast.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is La Palma good for a beach holiday?",
+      "answer": "Partly. There are a few black-sand beaches, like Puerto de Tazacorte and Puerto Naos, but most people come for hiking, stargazing and scenery. For more beach, choose Tenerife or Fuerteventura."
+    },
+    {
+      "question": "When is the best time to visit La Palma?",
+      "answer": "All year. It's around 20 to 27°C year-round, and spring and autumn are especially good for hiking."
+    },
+    {
+      "question": "Is it safe to visit after the 2021 volcano?",
+      "answer": "Yes. The eruption ended in December 2021 and the island is fully open, with the new lava fields now part of what visitors come to see."
+    },
+    {
+      "question": "How do you get to La Palma?",
+      "answer": "Some airlines fly direct from European cities, mostly in winter. Otherwise, fly to Tenerife and take a short flight or a ferry."
+    },
+    {
+      "question": "Do you need a car on La Palma?",
+      "answer": "Yes. The island is steep and bus routes are limited, so hire a car. Many walks are one-way, so taxis or buses back to the car help."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tenerife",
+      "code": "TFS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Azores",
+      "code": "PDL",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lanzarote",
+      "code": "ACE",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

@@ -1,0 +1,204 @@
+{
+  "name": "Naples",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Naples",
+  "intro": "Chaotic, loud and full of life, with the best pizza in the world, Vesuvius on the skyline and Pompeii a train ride away. Here's what Naples is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/naples-5067603_1280.webp",
+  "image_alt": "Castel dell'Ovo on the Bay of Naples with Mount Vesuvius behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Naples",
+  "to_code": "NAP",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, wet",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive",
+      "temp": 14
+    }
+  },
+  "when_to_go": "April, May, September and October are best for walking the city and climbing Vesuvius, warm without the summer heat. July and August are hot and busy around Pompeii and the coast. Winter is mild but wetter, and December brings the nativity workshops of Via San Gregorio Armeno to life.",
+  "things": [
+    {
+      "name": "Pizza in the old town",
+      "tag": "Food",
+      "blurb": "Queue for a Margherita where it was born, at places like Da Michele, Sorbillo or Di Matteo.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pompeii",
+      "tag": "Day trip",
+      "blurb": "The Roman town buried by Vesuvius, about 40 minutes away on the Circumvesuviana train.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Vesuvius",
+      "tag": "Outdoors",
+      "blurb": "A bus and a short, steep path take you to the edge of the crater. Book a timed ticket.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Naples Underground",
+      "tag": "Tour",
+      "blurb": "Tunnels, Greek cisterns and wartime shelters 40 metres below the streets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "National Archaeological Museum",
+      "tag": "Ticketed",
+      "blurb": "Treasures from Pompeii and Herculaneum, from mosaics to everyday objects.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spaccanapoli",
+      "tag": "Free",
+      "blurb": "The long, straight street through the old town, buzzing with shops, churches and scooters.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Procida",
+      "tag": "Day trip",
+      "blurb": "A small, colourful island an hour away by ferry, much quieter than Capri.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Naples safe for tourists?",
+      "answer": "Mostly, yes. Like any big city, keep an eye on bags and phones on crowded buses and at the station, and take an official taxi or the metro at night. Most visitors have no trouble."
+    },
+    {
+      "question": "How many days do you need in Naples?",
+      "answer": "Three days covers the old town, the museum and Pompeii. Add a couple more for Vesuvius, Herculaneum or an island, or use Naples as the start of an Amalfi Coast trip."
+    },
+    {
+      "question": "When is the best time to visit Naples?",
+      "answer": "Spring and autumn, especially April, May and October, when it's around 19 to 23°C. Summer is hot, often above 30°C."
+    },
+    {
+      "question": "How do you get to Naples?",
+      "answer": "Fly into Naples airport, which has flights from all over Europe, then take the Alibus to the centre in about 20 minutes. High-speed trains reach Rome in just over an hour."
+    },
+    {
+      "question": "Can you combine Naples with the Amalfi Coast?",
+      "answer": "Easily. Sorrento is an hour away on the Circumvesuviana, and ferries run to Capri, Ischia, Procida and, in summer, to Amalfi and Positano."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Amalfi Coast",
+      "code": "NAP",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Rome",
+      "code": "FCO",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Sicily",
+      "code": "CTA",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Matera",
+      "code": "BRI",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-22T17:35:51Z",
+  "updated": "2026-10-22T17:35:51Z"
+}

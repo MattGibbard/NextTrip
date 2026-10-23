@@ -1,0 +1,200 @@
+{
+  "name": "Réunion",
+  "published": true,
+  "country": "RE",
+  "title": "Holidays in Réunion",
+  "intro": "Volcanic peaks, deep green cirques and coral lagoons on a French island in the Indian Ocean, east of Madagascar. Here's what Réunion is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/reunion-2082812_1280.webp",
+  "image_alt": "Steep green mountain peaks and ridges of the Cirque de Mafate on Réunion island under a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/R%C3%A9union",
+  "to_code": "RUN",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "beach"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3 hrs ahead of the UK (4 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Réunion is part of France, so French rules apply. Check GOV.UK for the latest entry rules before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Hot, cyclone risk",
+      "temp": 30
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Hot, cyclone risk",
+      "temp": 30
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Hot, wet",
+      "temp": 30
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm, drying out",
+      "temp": 29
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, dry season",
+      "temp": 28
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Mild, clear",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Mild, whales",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Mild, whales",
+      "temp": 25
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Dry, whales",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Driest, warm",
+      "temp": 27
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Warm, busier",
+      "temp": 28
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Hot, rains start",
+      "temp": 30
+    }
+  },
+  "when_to_go": "May to November is the best time to go, the cooler dry season, with clear skies for hiking and humpback whales off the coast from about June to October. September and October are often the driest months. December to April is hot and humid, with heavy rain in the mountains and on the east coast, and cyclones are possible. The west coast beaches stay warm all year.",
+  "things": [
+    {
+      "name": "Piton de la Fournaise",
+      "tag": "Outdoors",
+      "blurb": "One of the world's most active volcanoes. Walk across the lava fields to the crater rim, but check access first, as it closes during eruptions.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cirque de Mafate",
+      "tag": "Outdoors",
+      "blurb": "A huge mountain amphitheatre with no roads, reached only on foot or by helicopter. Hike in and stay at a village guesthouse.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cilaos",
+      "tag": "Outdoors",
+      "blurb": "A mountain village in its own cirque, reached by a famously winding road, with hot springs, wine and trails up Piton des Neiges.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Salazie and Hell-Bourg",
+      "tag": "Free",
+      "blurb": "The greenest cirque, full of waterfalls such as the Voile de la Mariée, with the pretty Creole village of Hell-Bourg.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Saint-Gilles lagoon",
+      "tag": "Free",
+      "blurb": "The island's main beach resort, with calm, reef-protected lagoon water for swimming and snorkelling at L'Hermitage.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Helicopter flight",
+      "tag": "Tour",
+      "blurb": "A flight over the cirques and the Trou de Fer waterfall gorge, the best way to see the island's wild interior.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Tour",
+      "blurb": "Humpback whales visit from about June to October. Boat trips run from Saint-Gilles.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Réunion from the UK?",
+      "answer": "There are no direct flights. Most people fly via Paris, which has direct flights to Saint-Denis, or connect through Mauritius."
+    },
+    {
+      "question": "Is Réunion good for a beach holiday?",
+      "answer": "Partly. The west coast has sandy beaches and a coral lagoon around Saint-Gilles, but most people come for the mountains and hiking."
+    },
+    {
+      "question": "Do you need a car on Réunion?",
+      "answer": "Yes, really. A hire car is the easiest way to reach the cirques, the volcano and the beaches. Buses run on the main coast roads."
+    },
+    {
+      "question": "How many days do you need on Réunion?",
+      "answer": "Allow at least ten days to see the volcano, two or three cirques and some beach time. Two weeks lets you add a multi-day hike."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Mauritius",
+      "code": "MRU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Seychelles",
+      "code": "SEZ",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Azores",
+      "code": "PDL",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-22T05:45:30Z",
+  "updated": "2026-10-22T05:45:30Z"
+}

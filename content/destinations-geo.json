@@ -159,6 +159,11 @@
     "lat": 40.7019,
     "lon": 19.9581
   },
+  "berchtesgaden": {
+    "query": "Berchtesgaden|DE",
+    "lat": 47.633,
+    "lon": 13.002
+  },
   "bergamo": {
     "query": "Bergamo|IT",
     "lat": 45.6983,
@@ -1213,6 +1218,11 @@
     "query": "Rajasthan|IN",
     "lat": 26.2389,
     "lon": 73.0243
+  },
+  "reunion": {
+    "query": "Réunion|RE",
+    "lat": -21.115,
+    "lon": 55.536
   },
   "reykjavik": {
     "query": "Reykjavik|IS",

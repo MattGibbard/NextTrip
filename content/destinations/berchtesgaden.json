@@ -1,0 +1,200 @@
+{
+  "name": "Berchtesgaden",
+  "published": true,
+  "country": "DE",
+  "title": "Holidays in Berchtesgaden",
+  "intro": "Emerald lakes, sheer mountain walls and alpine villages in the far south-east corner of Bavaria, close to Salzburg. Here's what Berchtesgaden is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/berchtesgaden-6570773_1280.webp",
+  "image_alt": "The Obersee lake near the Königssee in Berchtesgaden, reflecting green forest and steep rock walls with a waterfall",
+  "wikipedia": "https://en.wikipedia.org/wiki/Berchtesgaden",
+  "to_code": "SZG",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "culture"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The nearest airport is Salzburg, just over the border in Austria. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Snow, winter sports",
+      "temp": 2
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Snow, winter sports",
+      "temp": 4
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Thaw",
+      "temp": 8
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Spring, some trails shut",
+      "temp": 13
+    },
+    "may": {
+      "rating": "good",
+      "note": "Green, boats running",
+      "temp": 18
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hiking season",
+      "temp": 21
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Hiking, busy",
+      "temp": 23
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Hiking, busy",
+      "temp": 23
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Clear, quieter",
+      "temp": 19
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 14
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Damp, quiet",
+      "temp": 8
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Snow, Christmas markets",
+      "temp": 3
+    }
+  },
+  "when_to_go": "June to September is the best time for hiking and lake boats, with long days and the high paths clear of snow. July and August are busiest, so take an early boat on the Königssee. September and early October bring clear air and autumn colour. Winter is snowy, with small ski areas, a famous bobsleigh track and Christmas markets in December.",
+  "things": [
+    {
+      "name": "Königssee boat trip",
+      "tag": "Ticketed",
+      "blurb": "Quiet electric boats glide down the long, narrow lake to St Bartholomä church. In summer, carry on to Salet and walk to the Obersee.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kehlsteinhaus (Eagle's Nest)",
+      "tag": "Ticketed",
+      "blurb": "A mountain-top house reached by a special bus and a brass-lined lift, with huge views. Open from about mid-May to October.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Salt mine",
+      "tag": "Ticketed",
+      "blurb": "Ride a miners' train into the old salt mine, slide down wooden chutes and cross an underground salt lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jenner cable car",
+      "tag": "Ticketed",
+      "blurb": "A cable car up the Jenner for views over the Königssee and the Watzmann, with walks from the top.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hintersee and Ramsau",
+      "tag": "Free",
+      "blurb": "A clear mountain lake in the forest and a much-photographed village church with the mountains behind.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dokumentation Obersalzberg",
+      "tag": "Ticketed",
+      "blurb": "A thoughtful museum on the history of the Nazi era on the Obersalzberg, on the site where it happened.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Salzburg",
+      "tag": "Day trip",
+      "blurb": "Mozart's city, with its old town and fortress, about half an hour away by car or bus.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Berchtesgaden from the UK?",
+      "answer": "Fly to Salzburg, which has UK flights, then drive or take the bus, about 30 to 45 minutes. Munich is another option, about two and a half hours away."
+    },
+    {
+      "question": "Is the Königssee open all year?",
+      "answer": "Boats run most of the year, but the full trip to Salet and the Obersee is usually only in the warmer months. Check timetables before you go."
+    },
+    {
+      "question": "Is Berchtesgaden good in winter?",
+      "answer": "Yes, for snow walks, sledging, Christmas markets and small ski areas, though the Eagle's Nest is closed."
+    },
+    {
+      "question": "How many days do you need in Berchtesgaden?",
+      "answer": "Three days covers the Königssee, the salt mine and a mountain. A week lets you add longer hikes and Salzburg."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Salzburg",
+      "code": "SZG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Hallstatt",
+      "code": "SZG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Innsbruck",
+      "code": "INN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Dolomites",
+      "code": "VCE",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-22T05:45:30Z",
+  "updated": "2026-10-22T05:45:30Z"
+}

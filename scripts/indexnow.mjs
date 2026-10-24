@@ -46,7 +46,8 @@ if (urls.size === 0) {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const repo = process.env.GITHUB_REPOSITORY ?? "MattGibbard/NextTrip";
 const headers = { Accept: "application/vnd.github+json", ...(process.env.GITHUB_TOKEN && { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` }) };
-const deadline = Date.now() + 20 * 60_000;
+const started = Date.now();
+const deadline = started + 20 * 60_000;
 for (;;) {
   const res = await fetch(`https://api.github.com/repos/${repo}/commits/${after}/check-runs?per_page=100`, { headers });
   if (!res.ok) console.log(`GitHub answered ${res.status} when asked about the Cloudflare build; trying again.`);
@@ -55,6 +56,10 @@ for (;;) {
     if (build.conclusion !== "success") throw new Error(`The site's Cloudflare build ${build.conclusion}, so search engines weren't told.`);
     break;
   }
+  // Cloudflare occasionally doesn't start a build for a push at all (it happened on 24 October 2026), and then
+  // the site stays on the previous version. Say that plainly rather than waiting out the full 20 minutes.
+  if (res.ok && !build && Date.now() > started + 10 * 60_000)
+    throw new Error("Cloudflare never started a build for this commit, so the live site wasn't updated and search engines weren't told. Retry the build in the Cloudflare dashboard, or push again.");
   if (Date.now() > deadline) throw new Error("The site's Cloudflare build hadn't finished after 20 minutes, so search engines weren't told.");
   await sleep(30_000);
 }

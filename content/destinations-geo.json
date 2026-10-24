@@ -774,6 +774,11 @@
     "lat": 28.6835,
     "lon": -17.8656
   },
+  "labuan-bajo": {
+    "query": "Labuan Bajo|ID",
+    "lat": -8.4899,
+    "lon": 119.8765
+  },
   "lake-balaton": {
     "query": "Lake Balaton|HU",
     "lat": 46.8839,
@@ -1419,6 +1424,11 @@
     "lat": 39.1662,
     "lon": 23.4889
   },
+  "soca-valley": {
+    "query": "Soča Valley|SI",
+    "lat": 46.3375,
+    "lon": 13.5522
+  },
   "sofia": {
     "query": "Sofia|BG",
     "lat": 42.6977,
@@ -1513,6 +1523,11 @@
     "query": "Thessaloniki|GR",
     "lat": 40.6403,
     "lon": 22.9353
+  },
+  "tirana": {
+    "query": "Tirana|AL",
+    "lat": 41.3281,
+    "lon": 19.8184
   },
   "tobago": {
     "query": "Tobago|TT",

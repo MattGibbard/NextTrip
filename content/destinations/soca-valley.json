@@ -1,0 +1,199 @@
+{
+  "name": "Soča Valley",
+  "published": true,
+  "country": "SI",
+  "title": "Holidays in Soča Valley",
+  "intro": "An emerald-green river running through Alpine gorges in western Slovenia, with rafting, waterfalls and quiet mountain villages. Here's what Soča Valley is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/soca-5633451_1280.webp",
+  "image_alt": "The bright turquoise water of the Soča River flowing between white limestone rocks and green forest in Slovenia",
+  "wikipedia": "https://en.wikipedia.org/wiki/So%C4%8Da",
+  "to_code": "LJU",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "A car makes the valley much easier to explore. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, snowy peaks",
+      "temp": 5
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 7
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly, early spring",
+      "temp": 11
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring, high water",
+      "temp": 15
+    },
+    "may": {
+      "rating": "good",
+      "note": "Fresh, green, rafting",
+      "temp": 20
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, rafting",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm, river at its best",
+      "temp": 26
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busiest",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild, quieter",
+      "temp": 21
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cool, autumn colour",
+      "temp": 16
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold, wet",
+      "temp": 9
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 5
+    }
+  },
+  "when_to_go": "June to September is the best time, warm enough for swimming spots and every outdoor activity, with September quieter than the summer holidays. Rafting usually runs from about April to October, with higher, wilder water in spring. Winters are cold, many activities stop, and the high mountain passes can close.",
+  "things": [
+    {
+      "name": "Rafting and kayaking",
+      "tag": "Tour",
+      "blurb": "The Soča is one of Europe's best rivers for rafting, with trips for beginners and experienced paddlers from Bovec.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Great Soča Gorge",
+      "tag": "Free",
+      "blurb": "A narrow gorge where the river has carved smooth pools and channels into the white limestone, just above Bovec.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kozjak Waterfall",
+      "tag": "Ticketed",
+      "blurb": "A short walk from Kobarid over a suspension bridge to a waterfall that falls into a rocky chamber.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kobarid Museum",
+      "tag": "Ticketed",
+      "blurb": "A moving museum about the First World War battles fought along the Soča, also known as the Isonzo Front.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vršič Pass",
+      "tag": "Outdoors",
+      "blurb": "A dramatic mountain road with 50 hairpin bends, linking the valley to Kranjska Gora. It can close in winter.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Soča Trail",
+      "tag": "Outdoors",
+      "blurb": "A walking trail that follows the river from its source high in the mountains past gorges and bridges.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Boka Waterfall",
+      "tag": "Outdoors",
+      "blurb": "One of Slovenia's tallest waterfalls, seen from a viewpoint a short walk from the road near Bovec.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to the Soča Valley from the UK?",
+      "answer": "Fly to Ljubljana, which easyJet serves from London and other UK airports, then drive about two hours. Trieste airport in Italy is a little closer."
+    },
+    {
+      "question": "When is the rafting season on the Soča?",
+      "answer": "Usually from about April to October. The water is higher and wilder in spring and calmer in late summer."
+    },
+    {
+      "question": "Where should you stay in the Soča Valley?",
+      "answer": "Bovec is the main base for rafting and the mountains. Kobarid is quieter, with good restaurants and the museum."
+    },
+    {
+      "question": "Can you swim in the Soča River?",
+      "answer": "Yes, in calm spots in summer, but the water is very cold, even in August. Take care near rapids."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lake Bled",
+      "code": "LJU",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Dolomites",
+      "code": "VCE",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Plitvice Lakes",
+      "code": "ZAG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Hallstatt",
+      "code": "SZG",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-24T05:46:44Z",
+  "updated": "2026-10-24T05:46:44Z"
+}

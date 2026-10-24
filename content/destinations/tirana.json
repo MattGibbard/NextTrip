@@ -1,0 +1,200 @@
+{
+  "name": "Tirana",
+  "published": true,
+  "country": "AL",
+  "title": "Holidays in Tirana",
+  "intro": "Bright painted blocks, Cold War bunkers turned museums and buzzing café streets in Albania's fast-changing capital, with mountains on its doorstep. Here's what Tirana is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/tirana-2798900_1280.webp",
+  "image_alt": "The clock tower and the minaret and dome of the Et'hem Bey Mosque beside Skanderbeg Square in central Tirana",
+  "wikipedia": "https://en.wikipedia.org/wiki/Tirana",
+  "to_code": "TIA",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Albanian lek (L)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Albania isn't in the EU and uses the lek. Some hotels take euros, but carry lek for taxis, markets and small cafés. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 12
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, showers",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring starts",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm, green",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, terraces open",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, long evenings",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot, quieter city",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, clear",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm, autumn",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, wettest",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool, festive lights",
+      "temp": 13
+    }
+  },
+  "when_to_go": "May, June and September are the best months, warm enough for café terraces and the cable car without the heat of high summer. July and August often pass 30°C, and many locals head to the coast. Winters are mild but wet, with November usually the rainiest month.",
+  "things": [
+    {
+      "name": "Skanderbeg Square",
+      "tag": "Free",
+      "blurb": "The huge main square, ringed by the National History Museum, the opera house, the clock tower and the Et'hem Bey Mosque.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bunk'Art 2",
+      "tag": "Ticketed",
+      "blurb": "A museum in a Cold War bunker in the centre, telling the story of the communist-era secret police.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bunk'Art 1",
+      "tag": "Ticketed",
+      "blurb": "A much larger bunker on the edge of the city, built for the leadership, with rooms of exhibits deep under the hill.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pyramid of Tirana",
+      "tag": "Free",
+      "blurb": "Built as a memorial to the dictator Enver Hoxha, now covered in street art with steps you can climb for views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blloku",
+      "tag": "Free",
+      "blurb": "Once closed to everyone but the communist elite, now the city's liveliest area for cafés, bars and restaurants.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dajti Ekspres",
+      "tag": "Ticketed",
+      "blurb": "A cable car from the edge of the city up Mount Dajti, with big views and walks at the top. Check the opening days before you go.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "New Bazaar (Pazari i Ri)",
+      "tag": "Free",
+      "blurb": "A covered market and surrounding streets with fruit, cheese, olives and good, cheap places to eat.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Tirana from the UK?",
+      "answer": "Fly direct. British Airways flies from Heathrow, and Ryanair started flights from Birmingham in 2026. The flight takes about three hours."
+    },
+    {
+      "question": "Is Tirana worth visiting?",
+      "answer": "Yes. It's lively, cheap and unlike any other European capital, with fascinating Cold War history and easy day trips to Berat and the mountains."
+    },
+    {
+      "question": "How many days do you need in Tirana?",
+      "answer": "Two or three days covers the main sights and the cable car. Add more if you want to travel on to Berat or the coast."
+    },
+    {
+      "question": "Can you use euros in Tirana?",
+      "answer": "Sometimes, mainly in hotels and some restaurants, but you'll get a worse rate and change in lek. It's easier to pay in lek or by card."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Berat",
+      "code": "TIA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Sarajevo",
+      "code": "SJJ",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Sofia",
+      "code": "SOF",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Lake Ohrid",
+      "code": "OHD",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-24T05:46:44Z",
+  "updated": "2026-10-24T05:46:44Z"
+}

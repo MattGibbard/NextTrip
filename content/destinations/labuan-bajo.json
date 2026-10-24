@@ -1,0 +1,200 @@
+{
+  "name": "Labuan Bajo",
+  "published": true,
+  "country": "ID",
+  "title": "Holidays in Labuan Bajo",
+  "intro": "A harbour town on the island of Flores that's the gateway to Komodo National Park, with dragons, pink sand and some of Indonesia's best snorkelling. Here's what Labuan Bajo is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/labuanbajo-3687809_1280.webp",
+  "image_alt": "The view from the top of Padar Island in Komodo National Park, with curved bays and beaches between brown hills and blue sea",
+  "wikipedia": "https://en.wikipedia.org/wiki/Labuan_Bajo",
+  "to_code": "LBJ",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "adventure"
+  ],
+  "nights": "4 to 6",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 to 8 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Indonesian rupiah (Rp)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Visa on arrival or e-VOA",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Komodo National Park permits are booked online in advance, and fees change, so check the latest before you go. Indonesia's entry rules can change, so check GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Hot, wet season",
+      "temp": 31
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Hot, wet season",
+      "temp": 31
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Hot, rainy",
+      "temp": 31
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot, green hills",
+      "temp": 31
+    },
+    "may": {
+      "rating": "best",
+      "note": "Hot, dry, calm seas",
+      "temp": 31
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Dry, less humid",
+      "temp": 30
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Dry, busiest",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Dry, busiest",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Dry, quieter",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Dry, hot",
+      "temp": 32
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Hot, rains starting",
+      "temp": 32
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Hot, wet season",
+      "temp": 31
+    }
+  },
+  "when_to_go": "April to November is the dry season, with calm seas for boat trips. May, June, September and October are the sweet spot, with July and August the busiest and priciest. December to March is the wet season, with heavy but often short downpours and rougher seas, though the hills are at their greenest.",
+  "things": [
+    {
+      "name": "Komodo dragons",
+      "tag": "Tour",
+      "blurb": "See the world's largest lizards in the wild on Komodo or Rinca island, on a walk led by a park ranger.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Padar Island",
+      "tag": "Tour",
+      "blurb": "Climb to the famous viewpoint over three curved bays, best at sunrise before the heat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pink Beach",
+      "tag": "Tour",
+      "blurb": "A beach with sand tinted pink by tiny pieces of red coral, with good snorkelling just offshore.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Manta Point",
+      "tag": "Tour",
+      "blurb": "Snorkel or dive with manta rays, which gather here to feed, often seen in good numbers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Liveaboard boat trip",
+      "tag": "Tour",
+      "blurb": "Spend one or more nights on a boat to reach the islands early, before the day-trip crowds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kanawa Island",
+      "tag": "Day trip",
+      "blurb": "A small island with white sand, clear water and easy snorkelling straight off the beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sunset over the harbour",
+      "tag": "Free",
+      "blurb": "Watch the sun go down over the islands from a hilltop or a waterfront bar in town.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Labuan Bajo from the UK?",
+      "answer": "There are no direct flights from the UK to Indonesia. Fly to Bali with one stop, then take a domestic flight to Labuan Bajo, which takes about an hour and a quarter."
+    },
+    {
+      "question": "Is it safe to see Komodo dragons?",
+      "answer": "Yes, with a ranger. Visits are always guided, and rangers keep groups at a safe distance. Follow their instructions."
+    },
+    {
+      "question": "How many days do you need in Labuan Bajo?",
+      "answer": "Three or four days is enough for a boat trip through the national park plus a day of snorkelling. Many people add it to a trip to Bali."
+    },
+    {
+      "question": "When is the best time to visit Komodo National Park?",
+      "answer": "The dry season, from about April to November, has the calmest seas. May, June, September and October are less busy than July and August."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lombok",
+      "code": "LOP",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Palawan",
+      "code": "PPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Borneo",
+      "code": "BKI",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-24T05:46:44Z",
+  "updated": "2026-10-24T05:46:44Z"
+}

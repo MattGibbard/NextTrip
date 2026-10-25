@@ -1,0 +1,199 @@
+{
+  "name": "Leipzig",
+  "published": true,
+  "country": "DE",
+  "title": "Holidays in Leipzig",
+  "intro": "Bach, Mendelssohn and a famous concert hall, grand arcades, old factories turned art spaces and lakes on the edge of town in eastern Germany's liveliest city. Here's what Leipzig is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/old-town-hall-2388597_1280.webp",
+  "image_alt": "The long Renaissance Old Town Hall on Leipzig's Market Square, with its arcades, gables and tower under a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Leipzig",
+  "to_code": "LEJ",
+  "holiday_types": [
+    "city",
+    "culture"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "If there's no direct flight that suits you, fly to Berlin and take the train. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 4
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 5
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly, spring starts",
+      "temp": 10
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild, blossom",
+      "temp": 15
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, beer gardens open",
+      "temp": 20
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, Bach Festival",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, lake swimming",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, summer events",
+      "temp": 25
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild, clear",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cool, autumn colour",
+      "temp": 14
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold, grey",
+      "temp": 8
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cold, Christmas market",
+      "temp": 5
+    }
+  },
+  "when_to_go": "May, June and September are the best months, warm enough for beer gardens and the lakes without the heat of high summer. The Bach Festival fills the city with music each June. Winter is cold, but the Christmas market brings the old town to life from late November.",
+  "things": [
+    {
+      "name": "Market Square and Old Town Hall",
+      "tag": "Free",
+      "blurb": "The heart of the old town, with the long Renaissance town hall, now the city history museum, and arcades all around.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "St Thomas Church",
+      "tag": "Free",
+      "blurb": "Where Johann Sebastian Bach led the choir for 27 years and where he's buried. Time a visit for a motet or concert.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monument to the Battle of the Nations",
+      "tag": "Ticketed",
+      "blurb": "A huge stone memorial to the 1813 battle against Napoleon. Climb to the platform at the top for views over the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spinnerei",
+      "tag": "Free",
+      "blurb": "A vast old cotton mill turned home to artists' studios and galleries, with open days several times a year.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gewandhaus",
+      "tag": "Ticketed",
+      "blurb": "Home of one of the world's oldest orchestras. Book ahead for a concert in the main hall.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Arcades and passages",
+      "tag": "Free",
+      "blurb": "Covered shopping passages such as Mädler Passage, home to the historic Auerbachs Keller restaurant.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Leipzig lakes",
+      "tag": "Outdoors",
+      "blurb": "Old open-cast mines south of the city turned into lakes with beaches, cycle paths and boat hire.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Leipzig from the UK?",
+      "answer": "Check for direct flights to Leipzig/Halle Airport from London. Otherwise, fly to Berlin and take the fast train to Leipzig, which takes a little over an hour."
+    },
+    {
+      "question": "Is Leipzig worth visiting?",
+      "answer": "Yes. It's full of music history, has a handsome old town and a creative, young feel, and is cheaper and less crowded than Berlin or Munich."
+    },
+    {
+      "question": "How many days do you need in Leipzig?",
+      "answer": "Two or three days covers the old town, the churches and the monument. Add a day for the lakes or a trip to Dresden."
+    },
+    {
+      "question": "Leipzig or Dresden?",
+      "answer": "Dresden has the grander baroque old town and river views. Leipzig is livelier, with more music, art and nightlife. They're about an hour apart by train, so you can do both."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Dresden",
+      "code": "DRS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Berlin",
+      "code": "BER",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Nuremberg",
+      "code": "NUE",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Prague",
+      "code": "PRG",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-25T06:45:22Z",
+  "updated": "2026-10-25T06:45:22Z"
+}

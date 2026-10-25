@@ -54,6 +54,26 @@ describe("holiday picker filters", () => {
     expect(fits(lisbon, answers({ length: "weekend" }))).toBe(false);
   });
 
+  it("matches any of the continents picked", () => {
+    expect(fits(lisbon, answers({ continents: ["europe", "asia"] }))).toBe(true);
+    expect(fits(lisbon, answers({ continents: ["asia"] }))).toBe(false);
+    const cappadocia = DESTINATIONS.find((d) => d.country_code === "TR")!;
+    expect(fits(cappadocia, answers({ continents: ["europe"] }))).toBe(true);
+    const antarctica = findDestination("antarctica-cruise")!;
+    expect(fits(antarctica, NO_ANSWERS)).toBe(true);
+    for (const c of ["europe", "asia", "africa", "north-america", "south-america", "oceania"] as const) {
+      expect(matches(DESTINATIONS, answers({ continents: [c] }))).not.toContainEqual(antarctica);
+      expect(matches(DESTINATIONS, answers({ continents: [c] })).length).toBeGreaterThan(0);
+    }
+    expect(answersSummary(answers({ continents: ["europe", "africa"] }))).toEqual(["in Europe or Africa"]);
+  });
+
+  it("suggests anywhere in the world when the continent rules everything out", () => {
+    const none = answers({ types: ["ski"], continents: ["africa"] });
+    expect(matches(DESTINATIONS, none)).toHaveLength(0);
+    expect(loosen(DESTINATIONS, none).map((f) => f.question)).toContain("where");
+  });
+
   it("suggests which answer to loosen when nothing fits", () => {
     const none = answers({ types: ["ski"], month: "jul", budget: 1 });
     expect(matches(DESTINATIONS, none)).toHaveLength(0);
@@ -92,9 +112,9 @@ describe("the draw", () => {
 
 describe("result links", () => {
   it("carry the answers and the board, and read back", () => {
-    const a = answers({ types: ["city", "beach"], month: "sep", budget: 2, length: "week", from: "LGW" });
+    const a = answers({ types: ["city", "beach"], continents: ["europe", "africa"], month: "sep", budget: 2, length: "week", from: "LGW" });
     const href = resultHref("lisbon", a, ["nice", "lisbon", "nowhere"]);
-    expect(href).toBe("/holiday-picker/lisbon?t=city,beach&m=sep&b=2&n=week&from=LGW&also=nice,lisbon,nowhere");
+    expect(href).toBe("/holiday-picker/lisbon?t=city,beach&c=europe,africa&m=sep&b=2&n=week&from=LGW&also=nice,lisbon,nowhere");
     const q = new URL(href, "https://somewhere.party").searchParams;
     expect(readAnswers(q)).toEqual(a);
     expect(readAlso(q, DESTINATIONS, "lisbon").map((d) => d.slug)).toEqual(["nice"]);
@@ -125,7 +145,7 @@ describe("result links", () => {
   });
 
   it("drop anything that isn't a real answer", () => {
-    expect(readAnswers(new URLSearchParams("t=ski,space&m=smarch&b=9&n=forever&from=XXX"))).toEqual(answers({ types: ["ski"] }));
+    expect(readAnswers(new URLSearchParams("t=ski,space&c=mars&m=smarch&b=9&n=forever&from=XXX"))).toEqual(answers({ types: ["ski"] }));
   });
 
   it("are kept out of search but still preview when shared", () => {

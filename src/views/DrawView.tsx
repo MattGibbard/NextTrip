@@ -21,6 +21,8 @@ import { useMedia } from "../useMedia";
 import type { BoardRow } from "../components/FlapBoard";
 import { IdeasInPicker, RoundFilterLine } from "../components/RoundFilters";
 import { NO_FILTERS, matchesFilters } from "../../shared/roundFilters";
+import { continentKey } from "../../shared/continents";
+import type { Continent } from "../../shared/continents";
 import type { RoundFilters } from "../../shared/roundFilters";
 import type { TripDraft } from "./TripForm";
 import { RoundDates, TripDatesField, datesOf, draftOf } from "../components/TripDatesField";
@@ -127,6 +129,7 @@ function StartRound({ lastPoints, roundNo }: { lastPoints: number; roundNo: numb
   const whenChecked = datesOf(when);
   const pool = ideas.filter((i) => i.status === "active");
   const matching = pool.filter((i) => matchesFilters(i, filters));
+  const continents = [...new Set(pool.flatMap((i) => i.places.map((p) => continentKey(p.country_code))))].filter((k): k is Continent => !!k);
   const bump = (d: number) => setPoints((p) => Math.max(1, Math.min(100, p + d)));
 
   const start = async () => {
@@ -183,7 +186,7 @@ function StartRound({ lastPoints, roundNo }: { lastPoints: number; roundNo: numb
                   </div>
                 </div>
               </div>
-              <IdeasInPicker value={filters} onChange={setFilters} total={pool.length} matching={matching.length} />
+              <IdeasInPicker value={filters} onChange={setFilters} total={pool.length} matching={matching.length} continents={continents} />
               <div className="ideas-in">
                 <div className="ideas-in-head">
                   <h3>When's the trip?</h3>

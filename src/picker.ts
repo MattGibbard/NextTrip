@@ -1,8 +1,10 @@
-// The holiday picker at /holiday-picker: four questions narrow the destination guides to the places
+// The holiday picker at /holiday-picker: five questions narrow the destination guides to the places
 // that fit, then one is drawn at random. Visitors don't need an account, so the answers and the draw
-// live in the address (?t=city,beach&m=sep&b=2&n=week&from=LGW&also=palma,nice), which makes every
+// live in the address (?t=city,beach&c=europe&m=sep&b=2&n=week&from=LGW&also=palma,nice), which makes every
 // result a link that can be sent to the family.
 import { HOLIDAY_TYPES } from "../shared/ideaDetails";
+import { CONTINENT_CHOICES, inContinents } from "../shared/continents";
+import type { Continent } from "../shared/continents";
 import type { HolidayType, TripLength } from "../shared/ideaDetails";
 import { stayDates } from "../shared/tripDates";
 import type { StayDates } from "../shared/tripDates";
@@ -24,6 +26,8 @@ export type Length = "weekend" | "week" | "long";
 export interface Answers {
   /** Any of these; none means any kind of holiday. */
   types: HolidayType[];
+  /** Any of these continents; none means anywhere. */
+  continents: Continent[];
   /** null: any time of year. */
   month: Month | null;
   /** The most they want to spend, 1 to 3; null: any budget. */
@@ -67,7 +71,7 @@ export function budgetMark(level: number, a: Answers): string {
   return budgetText(level, fromAirport(a.from).currency);
 }
 
-export const NO_ANSWERS: Answers = { types: [], month: null, budget: null, length: null, from: "LON" };
+export const NO_ANSWERS: Answers = { types: [], continents: [], month: null, budget: null, length: null, from: "LON" };
 
 const SKI_SEASON: Record<"north" | "south", Month[]> = {
   north: ["dec", "jan", "feb", "mar", "apr"],
@@ -78,6 +82,7 @@ const SKI_SEASON: Record<"north" | "south", Month[]> = {
 export function fits(d: DestinationCard, a: Answers): boolean {
   const kinds = a.types.filter((t) => d.holiday_types.includes(t));
   if (a.types.length && !kinds.length) return false;
+  if (!inContinents([d.country_code], a.continents)) return false;
   if (a.month) {
     const m = d.months[MONTHS.indexOf(a.month)];
     if (!m || (m.rating !== "best" && m.rating !== "good")) return false;
@@ -125,6 +130,7 @@ export function draw(fitting: DestinationCard[], random: () => number = Math.ran
 export function loosen(all: DestinationCard[], a: Answers): { question: Question; label: string; answers: Answers; count: number }[] {
   const options: { question: Question; label: string; answers: Answers }[] = [];
   if (a.types.length) options.push({ question: "types", label: "Any kind of holiday", answers: { ...a, types: [] } });
+  if (a.continents.length) options.push({ question: "where", label: "Anywhere in the world", answers: { ...a, continents: [] } });
   if (a.month) options.push({ question: "month", label: "Any time of year", answers: { ...a, month: null } });
   if (a.budget && a.budget < 3) options.push({ question: "budget", label: "A bigger budget", answers: { ...a, budget: (a.budget + 1) as 2 | 3 } });
   if (a.length) options.push({ question: "length", label: "Any length of trip", answers: { ...a, length: null } });
@@ -134,13 +140,14 @@ export function loosen(all: DestinationCard[], a: Answers): { question: Question
     .sort((x, y) => y.count - x.count);
 }
 
-export type Question = "types" | "month" | "budget" | "length";
-export const QUESTIONS: Question[] = ["types", "month", "budget", "length"];
+export type Question = "types" | "where" | "month" | "budget" | "length";
+export const QUESTIONS: Question[] = ["types", "where", "month", "budget", "length"];
 
 /** The answers as query-string values. Empty answers are left out. */
 export function answersQuery(a: Answers): URLSearchParams {
   const q = new URLSearchParams();
   if (a.types.length) q.set("t", a.types.join(","));
+  if (a.continents.length) q.set("c", a.continents.join(","));
   if (a.month) q.set("m", a.month);
   if (a.budget) q.set("b", String(a.budget));
   if (a.length) q.set("n", a.length);
@@ -151,12 +158,14 @@ export function answersQuery(a: Answers): URLSearchParams {
 /** Reads answers back from a query string, dropping anything that isn't a real choice. */
 export function readAnswers(q: URLSearchParams): Answers {
   const types = (q.get("t") ?? "").split(",").filter((t): t is HolidayType => PICKER_TYPES.some((x) => x.key === t));
+  const continents = (q.get("c") ?? "").split(",").filter((c): c is Continent => CONTINENT_CHOICES.some((x) => x.key === c));
   const m = q.get("m");
   const b = Number(q.get("b"));
   const n = q.get("n");
   const from = q.get("from") ?? "";
   return {
     types: [...new Set(types)],
+    continents: [...new Set(continents)],
     month: MONTHS.find((x) => x === m) ?? null,
     budget: b === 1 || b === 2 || b === 3 ? b : null,
     length: LENGTH_CHOICES.find((x) => x.key === n)?.key ?? null,
@@ -214,11 +223,18 @@ export function pickerStay(a: Answers, today = new Date()): StayDates | null {
   return stayDates({ kind: "month", month: nextMonth(a.month, today) }, a.length ? LENGTH_NIGHTS[a.length] : null);
 }
 
-/** The answers in a few words each, for the result page: "city break or beach", "September", "about a week", "££ budget". */
+/** "Europe or Asia": a list of choices joined with commas and a final "or". */
+function orList(items: string[]): string {
+  return items.length > 1 ? `${items.slice(0, -1).join(", ")} or ${items[items.length - 1]}` : (items[0] ?? "");
+}
+
+/** The answers in a few words each, for the result page: "city break or beach", "in Europe", "September", "about a week", "££ budget". */
 export function answersSummary(a: Answers): string[] {
   const types = a.types.map((t) => PICKER_TYPES.find((x) => x.key === t)!.label.toLowerCase());
+  const places = a.continents.map((c) => CONTINENT_CHOICES.find((x) => x.key === c)!.label);
   return [
-    types.length ? (types.length > 1 ? `${types.slice(0, -1).join(", ")} or ${types[types.length - 1]}` : types[0]) : "",
+    orList(types),
+    places.length ? `in ${orList(places)}` : "",
     a.month ? MONTH_NAMES[MONTHS.indexOf(a.month)] : "",
     a.length ? LENGTH_CHOICES.find((x) => x.key === a.length)!.title.replace(/^A /, "a ").replace(/^About/, "about").replace(/^Two/, "two") : "",
     a.budget ? `${budgetMark(a.budget, a)} budget` : "",

@@ -40,6 +40,8 @@ import { hotelLink } from "../../shared/hotels";
 import { activitiesLink } from "../../shared/activities";
 import { PAGES, destinationPath } from "../../shared/seo";
 import type { HolidayType } from "../../shared/ideaDetails";
+import { CONTINENT_CHOICES } from "../../shared/continents";
+import type { Continent } from "../../shared/continents";
 import { api } from "../api";
 import { load, save } from "../storage";
 import { SIGNED_IN } from "../lastFamily";
@@ -48,7 +50,7 @@ import { useMedia } from "../useMedia";
 const STEP_MS = 60;
 
 /**
- * The holiday picker at /holiday-picker, for visitors without an account: four questions, a draw on
+ * The holiday picker at /holiday-picker, for visitors without an account: five questions, a draw on
  * the departures board, then the result at /holiday-picker/<guide>, which nudges them to sign up and
  * save it. `slug` is set on a result page. The answers come from the address once the page is up, so
  * the prerendered page and the first draw in the browser match. A shared result (`reveal`, at
@@ -192,10 +194,11 @@ function Reveal({ shared, ready, answers, onReveal }: { shared: { winner: Destin
 
 /* ---------- The questions ---------- */
 
-const QUESTION_LABEL: Record<Question, string> = { types: "YOU ENJOY", month: "DEPARTS", budget: "BUDGET", length: "FROM & NIGHTS" };
+const QUESTION_LABEL: Record<Question, string> = { types: "YOU ENJOY", where: "HEADING TO", month: "DEPARTS", budget: "BUDGET", length: "FLYING FROM" };
 
 function answerText(q: Question, a: Answers): string {
   if (q === "types") return a.types.length ? a.types.map((t) => PICKER_TYPES.find((x) => x.key === t)!.label).join(", ") : "Anything";
+  if (q === "where") return a.continents.length ? a.continents.map((c) => CONTINENT_CHOICES.find((x) => x.key === c)!.label).join(", ") : "Anywhere";
   if (q === "month") return a.month ? MONTH_NAMES[MONTHS.indexOf(a.month)] : "Any time";
   if (q === "budget") return a.budget ? `${budgetMark(a.budget, a)} ${BUDGET_CHOICES[a.budget - 1].title}` : "Any budget";
   const length = LENGTH_CHOICES.find((x) => x.key === a.length)?.title ?? "Any length";
@@ -225,6 +228,8 @@ function Questions({
     requestAnimationFrame(() => card.current?.scrollIntoView({ block: "nearest", behavior: "smooth" }));
   };
   const toggleType = (t: HolidayType) => setAnswers({ ...answers, types: answers.types.includes(t) ? answers.types.filter((x) => x !== t) : [...answers.types, t] });
+  const toggleContinent = (c: Continent) =>
+    setAnswers({ ...answers, continents: answers.continents.includes(c) ? answers.continents.filter((x) => x !== c) : [...answers.continents, c] });
   const fixes = fitting.length ? [] : loosen(DESTINATIONS, answers);
 
   return (
@@ -234,7 +239,7 @@ function Questions({
           <a href="/">Home</a> › Holiday picker
         </nav>
         <h1>Can't pick a holiday? Let the board decide.</h1>
-        <p className="lp-lead">Four quick questions, then we draw a destination at random from our guides. Free, and no account needed.</p>
+        <p className="lp-lead">Five quick questions, then we draw a destination at random from our guides. Free, and no account needed.</p>
       </section>
 
       <section className="lp-wrap hp-quiz" aria-label="Your questions">
@@ -247,9 +252,7 @@ function Questions({
                   {i < step ? "✓" : String(i + 1).padStart(2, "0")}
                 </span>
                 <button type="button" className="hp-stub-body" onClick={() => go(i)} disabled={i === step}>
-                  <span className="hp-stub-label">
-                    {String(i + 1).padStart(2, "0")} · {QUESTION_LABEL[key]}
-                  </span>
+                  <span className="hp-stub-label">{QUESTION_LABEL[key]}</span>
                   <strong>{i === step ? "Choosing…" : i < step ? answerText(key, answers) : "Next"}</strong>
                 </button>
               </li>
@@ -290,8 +293,9 @@ function Questions({
             <span className="hp-ticket">
               TICKET {step + 1} / {QUESTIONS.length}
             </span>
-            <h2>{q === "types" ? "What do you enjoy?" : q === "month" ? "When do you want to go?" : q === "budget" ? "What's the budget?" : "Flying from, and for how long?"}</h2>
+            <h2>{q === "types" ? "What do you enjoy?" : q === "where" ? "Where in the world?" : q === "month" ? "When do you want to go?" : q === "budget" ? "What's the budget?" : "Flying from, and for how long?"}</h2>
             {q === "types" && <p className="muted">Pick as many as you like, or none for anything.</p>}
+            {q === "where" && <p className="muted">Pick as many as you like, or none for anywhere. North America takes in the Caribbean and Mexico, and Asia the Middle East.</p>}
           </div>
 
           {q === "types" && (
@@ -301,6 +305,19 @@ function Questions({
                 return (
                   <button key={t.key} type="button" className={on ? "hp-chip on" : "hp-chip"} aria-pressed={on} onClick={() => toggleType(t.key)}>
                     <span aria-hidden>{t.icon}</span> {t.label}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          {q === "where" && (
+            <div className="hp-chips">
+              {CONTINENT_CHOICES.map((c) => {
+                const on = answers.continents.includes(c.key);
+                return (
+                  <button key={c.key} type="button" className={on ? "hp-chip on" : "hp-chip"} aria-pressed={on} title={"hint" in c ? c.hint : undefined} onClick={() => toggleContinent(c.key)}>
+                    <span aria-hidden>{c.icon}</span> {c.label}
                   </button>
                 );
               })}

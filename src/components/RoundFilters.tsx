@@ -1,11 +1,14 @@
 import { useRef, useState } from "react";
 import { BUDGETS, HOLIDAY_TYPES, TRAVEL_TIMES, TRIP_LENGTHS } from "../../shared/ideaDetails";
+import { CONTINENT_CHOICES } from "../../shared/continents";
+import type { Continent } from "../../shared/continents";
 import { NO_FILTERS, hasFilters } from "../../shared/roundFilters";
 import type { RoundFilters } from "../../shared/roundFilters";
 
 type Key = keyof RoundFilters;
 
 const GROUPS: { key: Key; label: string; options: readonly { key: string | number; label: string; hint?: string; icon?: string }[] }[] = [
+  { key: "continents", label: "Where in the world", options: CONTINENT_CHOICES },
   { key: "budgets", label: "Budget", options: BUDGETS },
   { key: "trip_lengths", label: "Trip length", options: TRIP_LENGTHS },
   { key: "travel_times", label: "Travel time (each way)", options: TRAVEL_TIMES },
@@ -23,7 +26,20 @@ const Chevron = ({ up }: { up?: boolean }) => (
  * with the filters a tap away; once narrowed, the picks show as pills.
  * Each group is a row of multi-select chips, and nothing picked in a group means "any".
  */
-export function IdeasInPicker({ value, onChange, total, matching }: { value: RoundFilters; onChange: (f: RoundFilters) => void; total: number; matching: number }) {
+export function IdeasInPicker({
+  value,
+  onChange,
+  total,
+  matching,
+  continents,
+}: {
+  value: RoundFilters;
+  onChange: (f: RoundFilters) => void;
+  total: number;
+  matching: number;
+  /** The continents the family's ideas are in: only these are offered. */
+  continents: Continent[];
+}) {
   const [open, setOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const doneRef = useRef<HTMLButtonElement>(null);
@@ -61,7 +77,7 @@ export function IdeasInPicker({ value, onChange, total, matching }: { value: Rou
                   ))}
                 </ul>
               ) : (
-                <p className="muted small">Looking for something specific? Filter by budget, length, travel time or type.</p>
+                <p className="muted small">Looking for something specific? Filter by where in the world, budget, length, travel time or type.</p>
               )}
               {tooFew && <p className="small error-text">You need at least 2 ideas to start a round.</p>}
             </div>
@@ -96,6 +112,9 @@ export function IdeasInPicker({ value, onChange, total, matching }: { value: Rou
       </div>
       {GROUPS.map((g) => {
         const picked = value[g.key] as (string | number)[];
+        // Only the continents there are ideas in, plus any still picked from before.
+        const options = g.key === "continents" ? g.options.filter((o) => continents.includes(o.key as Continent) || picked.includes(o.key)) : g.options;
+        if (!options.length) return null;
         const id = `ip-${g.key}`;
         return (
           <div className="ip-group" key={g.key}>
@@ -104,7 +123,7 @@ export function IdeasInPicker({ value, onChange, total, matching }: { value: Rou
               <div className="muted">{picked.length ? `${picked.length} picked` : "Any"}</div>
             </div>
             <div className="choice-row" role="group" aria-labelledby={id}>
-              {g.options.map((o) => {
+              {options.map((o) => {
                 const on = picked.includes(o.key);
                 return (
                   <button type="button" key={o.key} aria-pressed={on} className={`choice ${on ? "on" : ""}`} title={o.hint} onClick={() => toggle(g.key, o.key)}>

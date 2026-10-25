@@ -102,7 +102,7 @@ export const PAGES: Record<FixedPage, Meta> = {
     path: "/holiday-picker",
     title: "Random holiday picker: let the board decide where to go | somewhere🎉",
     description:
-      "Can't pick a holiday? Answer four quick questions and our random holiday picker draws a destination from our guides. Free, and no account needed.",
+      "Can't pick a holiday? Answer five quick questions and our random holiday picker draws a destination from our guides. Free, and no account needed.",
     index: true,
   },
   // A holiday picker result sent to someone, which plays the draw before showing it. The winner stays

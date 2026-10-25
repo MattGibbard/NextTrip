@@ -2,7 +2,7 @@ import { useMemo, useRef, useState } from "react";
 import type { Trip } from "../../shared/types";
 import { useData } from "../data";
 import { countryName, flag, summarise } from "../countries";
-import { CONTINENT_NAMES, WORLD_COUNTRIES, continentOf } from "../continents";
+import { CONTINENT_NAMES, WORLD_COUNTRIES, continentOf } from "../../shared/continents";
 import { dateRange, plural } from "../format";
 import { WorldMap } from "../components/WorldMap";
 import { placeCode, tripMode } from "../../shared/travelMode";

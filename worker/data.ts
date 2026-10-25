@@ -53,14 +53,18 @@ export async function activePeople(db: D1Database, family: number) {
 
 /** Active ideas that fit a round's filters. */
 export async function matchingIdeaIds(db: D1Database, family: number, filters: RoundFilters) {
-  const { results } = await db
-    .prepare("SELECT id, status, budget, trip_length, travel_time, holiday_types FROM ideas WHERE family_id = ? AND status = 'active'")
-    .bind(family)
-    .all<MatchRow>();
-  return matchingIds(results, filters);
+  const [ideas, places] = await db.batch([
+    db.prepare("SELECT id, status, budget, trip_length, travel_time, holiday_types FROM ideas WHERE family_id = ? AND status = 'active'").bind(family),
+    db.prepare(placesSql("idea_places", "idea_id", "ideas")).bind(family),
+  ]);
+  const byIdea = byOwner(places.results as PlaceRow[]);
+  return matchingIds(
+    (ideas.results as Omit<MatchRow, "places">[]).map((i) => ({ ...i, places: byIdea.get(i.id) ?? [] })),
+    filters,
+  );
 }
 
-type MatchRow = Omit<IdeaDetails, "holiday_types"> & { id: number; status: IdeaStatus; holiday_types: string | null };
+type MatchRow = Omit<IdeaDetails, "holiday_types"> & { id: number; status: IdeaStatus; holiday_types: string | null; places: Pick<Place, "country_code">[] };
 
 /** The active ideas among these that fit a round's filters. */
 function matchingIds(ideas: MatchRow[], filters: RoundFilters) {
@@ -101,7 +105,8 @@ export async function loadFamily(db: D1Database, family: number, viewer: number 
     trips: want.has("trips") ? "SELECT * FROM trips WHERE family_id = ? ORDER BY COALESCE(start_date, created_at) DESC" : null,
     tripPlaces: want.has("trips") ? placesSql("trip_places", "trip_id", "trips") : null,
     ideas: want.has("ideas") || rounds ? "SELECT * FROM ideas WHERE family_id = ? ORDER BY created_at DESC" : null,
-    ideaPlaces: want.has("ideas") ? placesSql("idea_places", "idea_id", "ideas") : null,
+    // Rounds need idea places too, for a continent filter.
+    ideaPlaces: want.has("ideas") || rounds ? placesSql("idea_places", "idea_id", "ideas") : null,
     rounds: rounds ? "SELECT * FROM rounds WHERE family_id = ? ORDER BY id DESC" : null,
     allocations: rounds ? `SELECT round_id, person_id, idea_id, points FROM allocations WHERE ${mine}` : null,
     locks: rounds ? `SELECT round_id, person_id FROM round_locks WHERE ${mine}` : null,
@@ -120,12 +125,10 @@ export async function loadFamily(db: D1Database, family: number, viewer: number 
     const places = byOwner(rows<PlaceRow>("tripPlaces"));
     out.trips = rows<TripRow>("trips").map((t) => ({ ...t, road_trip: !!t.road_trip, cruise: !!t.cruise, rail: !!t.rail, ...parseEnds(t), places: places.get(t.id) ?? [] }));
   }
-  const ideas = rows<IdeaRow>("ideas");
+  const ideaPlaces = byOwner(rows<PlaceRow>("ideaPlaces"));
+  const ideas = rows<IdeaRow>("ideas").map((i) => ({ ...i, places: ideaPlaces.get(i.id) ?? [] }));
   if (want.has("ideas")) {
-    const places = byOwner(rows<PlaceRow>("ideaPlaces"));
-    out.ideas = ideas
-      .filter((i) => i.status !== "archived")
-      .map((i) => ({ ...i, holiday_types: parseTypes(i.holiday_types), ...parseEnds(i), places: places.get(i.id) ?? [] }));
+    out.ideas = ideas.filter((i) => i.status !== "archived").map((i) => ({ ...i, holiday_types: parseTypes(i.holiday_types), ...parseEnds(i) }));
   }
   if (rounds) {
     out.rounds = buildRounds({
@@ -158,7 +161,7 @@ function buildRounds({
   locks: { round_id: number; person_id: number }[];
   vetoes: { round_id: number; person_id: number; idea_id: number }[];
   swipes: SwipeRow[];
-  ideas: IdeaRow[];
+  ideas: (IdeaRow & { places: Place[] })[];
   /** Everyone who takes part in draws. */
   people: number[];
   viewer: number | null;

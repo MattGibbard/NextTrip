@@ -1,6 +1,8 @@
 import { BUDGETS, HOLIDAY_TYPES, TRAVEL_TIMES, TRIP_LENGTHS } from "./ideaDetails";
 import type { HolidayType, TravelTime, TripLength } from "./ideaDetails";
-import type { IdeaDetails } from "./types";
+import { CONTINENT_CHOICES, inContinents } from "./continents";
+import type { Continent } from "./continents";
+import type { IdeaDetails, Place } from "./types";
 
 /** Which ideas a round is about. Each empty list means "any". */
 export interface RoundFilters {
@@ -8,9 +10,11 @@ export interface RoundFilters {
   trip_lengths: TripLength[];
   travel_times: TravelTime[];
   holiday_types: HolidayType[];
+  /** Where in the world: an idea is in if any of its places is in one of these. */
+  continents: Continent[];
 }
 
-export const NO_FILTERS: RoundFilters = { budgets: [], trip_lengths: [], travel_times: [], holiday_types: [] };
+export const NO_FILTERS: RoundFilters = { budgets: [], trip_lengths: [], travel_times: [], holiday_types: [], continents: [] };
 
 function pick<T>(v: unknown, allowed: readonly { key: T }[]): T[] {
   if (!Array.isArray(v)) return [];
@@ -33,22 +37,24 @@ export function cleanFilters(raw: unknown): RoundFilters {
     trip_lengths: pick(o.trip_lengths, TRIP_LENGTHS),
     travel_times: pick(o.travel_times, TRAVEL_TIMES),
     holiday_types: pick(o.holiday_types, HOLIDAY_TYPES),
+    continents: pick(o.continents, CONTINENT_CHOICES),
   };
 }
 
 export function hasFilters(f: RoundFilters) {
-  return f.budgets.length + f.trip_lengths.length + f.travel_times.length + f.holiday_types.length > 0;
+  return f.budgets.length + f.trip_lengths.length + f.travel_times.length + f.holiday_types.length + f.continents.length > 0;
 }
 
 /**
  * An idea matches when it fits every filter that's set. Within a filter any
  * choice matches (e.g. £ or ££). An idea without that detail filled in doesn't
- * match a filter on it.
+ * match a filter on it, and an idea without places doesn't match a continent.
  */
-export function matchesFilters(idea: IdeaDetails, f: RoundFilters): boolean {
+export function matchesFilters(idea: IdeaDetails & { places: Pick<Place, "country_code">[] }, f: RoundFilters): boolean {
   if (f.budgets.length && (idea.budget === null || !f.budgets.includes(idea.budget))) return false;
   if (f.trip_lengths.length && (idea.trip_length === null || !f.trip_lengths.includes(idea.trip_length))) return false;
   if (f.travel_times.length && (idea.travel_time === null || !f.travel_times.includes(idea.travel_time))) return false;
   if (f.holiday_types.length && !idea.holiday_types.some((t) => f.holiday_types.includes(t))) return false;
+  if (f.continents.length && !inContinents(idea.places.map((p) => p.country_code), f.continents)) return false;
   return true;
 }

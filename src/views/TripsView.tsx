@@ -3,7 +3,7 @@ import type { Trip } from "../../shared/types";
 import { MODES, MODE_KEYS, tripMode } from "../../shared/travelMode";
 import type { Mode } from "../../shared/travelMode";
 import { useData } from "../data";
-import { continentOf } from "../continents";
+import { continentOf } from "../../shared/continents";
 import { nights } from "../format";
 import { Flaps } from "../components/Ticket";
 import { TripPostcard } from "../components/TripPostcard";

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { useData } from "../data";
 import { summarise } from "../countries";
-import { WORLD_COUNTRIES, continentOf } from "../continents";
+import { WORLD_COUNTRIES, continentOf } from "../../shared/continents";
 import { plural } from "../format";
 import { loadCountries } from "../countryShapes";
 import type { CountryShapes } from "../countryShapes";

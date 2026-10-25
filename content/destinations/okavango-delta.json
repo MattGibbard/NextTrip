@@ -1,0 +1,199 @@
+{
+  "name": "Okavango Delta",
+  "published": true,
+  "country": "BW",
+  "title": "Holidays in Okavango Delta",
+  "intro": "A vast inland river delta in Botswana where elephants wade through channels, hippos crowd the lagoons and you glide between the reeds in a dugout canoe. Here's what Okavango Delta is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/okavango-delta-5158380_1280.webp",
+  "image_alt": "An aerial view of the Okavango Delta in Botswana, with a river winding in loops across green floodplains",
+  "wikipedia": "https://en.wikipedia.org/wiki/Okavango_Delta",
+  "to_code": "MUB",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 to 2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Botswana pula (P)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type D / G / M · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The delta is in a malaria area, so get travel health advice before you go. Check entry rules, including for under-18s, on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Hot, rainy, green",
+      "temp": 33
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Hot, rainy, green",
+      "temp": 33
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Hot, rains ending",
+      "temp": 32
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm, lower prices",
+      "temp": 31
+    },
+    "may": {
+      "rating": "good",
+      "note": "Floods arriving",
+      "temp": 29
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Floods, cool nights",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "best",
+      "note": "High water, cool nights",
+      "temp": 26
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Dry, great wildlife",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Dry, great wildlife",
+      "temp": 34
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Very hot, dry",
+      "temp": 36
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Hot, rains starting",
+      "temp": 35
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Hot, rainy, green",
+      "temp": 33
+    }
+  },
+  "when_to_go": "June to September is the best time. The floodwaters from Angola peak in the dry season, wildlife gathers around the water, and days are warm with cool nights. October is very hot. November to March is the green season, with rain, newborn animals, lots of birds and lower prices at many camps.",
+  "things": [
+    {
+      "name": "Mokoro trip",
+      "tag": "Tour",
+      "blurb": "Glide through the reeds and water lilies in a traditional dugout canoe, poled by a local guide.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Game drives",
+      "tag": "Tour",
+      "blurb": "Look for elephants, lions, leopards, giraffes and buffalo on guided drives from the camps.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Moremi Game Reserve",
+      "tag": "Ticketed",
+      "blurb": "A protected reserve on the eastern side of the delta, mixing water channels, islands and dry woodland.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Scenic flight",
+      "tag": "Tour",
+      "blurb": "See the channels, lagoons and herds from the air on a light aircraft or helicopter flight from Maun.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Walking safari",
+      "tag": "Tour",
+      "blurb": "Explore the islands on foot with an armed guide, tracking animals and learning about the plants.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Birdwatching",
+      "tag": "Outdoors",
+      "blurb": "The delta is home to hundreds of species, from fish eagles to bee-eaters, and is best in the green season.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chobe National Park",
+      "tag": "Day trip",
+      "blurb": "Famous for its huge elephant herds, often combined with the delta on a longer trip.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to the Okavango Delta from the UK?",
+      "answer": "There are no direct flights to Botswana from the UK. Most people fly to Johannesburg, then connect to Maun. Camps in the delta are usually reached by light aircraft from Maun."
+    },
+    {
+      "question": "When is the best time to visit the Okavango Delta?",
+      "answer": "June to September, when the floods are high, the weather is dry and wildlife gathers near the water. The green season, November to March, is cheaper and good for birds."
+    },
+    {
+      "question": "How many days do you need in the Okavango Delta?",
+      "answer": "Three or four nights is a good stay, often split between two camps. Many trips combine it with Chobe or Victoria Falls."
+    },
+    {
+      "question": "Is the Okavango Delta expensive?",
+      "answer": "It can be. Botswana focuses on small, high-end camps to protect the area. Mobile safaris and stays near Maun cost less."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Namibia",
+      "code": "WDH",
+      "label": "🦁 Safari"
+    },
+    {
+      "name": "Maasai Mara",
+      "code": "NBO",
+      "label": "🦁 Safari"
+    },
+    {
+      "name": "Cape Town",
+      "code": "CPT",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Zanzibar",
+      "code": "ZNZ",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-25T06:45:22Z",
+  "updated": "2026-10-25T06:45:22Z"
+}

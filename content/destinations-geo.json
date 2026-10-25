@@ -769,6 +769,11 @@
     "lat": 35.0116,
     "lon": 135.7681
   },
+  "la-gomera": {
+    "query": "La Gomera|ES",
+    "lat": 28.1128,
+    "lon": -17.1953
+  },
   "la-palma": {
     "query": "La Palma|ES",
     "lat": 28.6835,
@@ -838,6 +843,11 @@
     "query": "Lefkada|GR",
     "lat": 38.8353,
     "lon": 20.7097
+  },
+  "leipzig": {
+    "query": "Leipzig|DE",
+    "lat": 51.3406,
+    "lon": 12.3747
   },
   "levi": {
     "query": "Levi|FI",
@@ -1093,6 +1103,11 @@
     "query": "Óbidos|PT",
     "lat": 39.362,
     "lon": -9.1572
+  },
+  "okavango-delta": {
+    "query": "Okavango Delta|BW",
+    "lat": -19.154,
+    "lon": 22.9801
   },
   "okinawa": {
     "query": "Okinawa|JP",

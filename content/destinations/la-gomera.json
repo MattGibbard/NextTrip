@@ -1,0 +1,199 @@
+{
+  "name": "La Gomera",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in La Gomera",
+  "intro": "A small, steep Canary Island of misty laurel forest, deep green valleys and quiet villages, a short ferry ride from Tenerife. Here's what La Gomera is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/agulo-5064048_1280.webp",
+  "image_alt": "The village of Agulo on La Gomera, with white and colourful houses on a green ridge above the Atlantic Ocean",
+  "wikipedia": "https://en.wikipedia.org/wiki/La_Gomera",
+  "to_code": "TFS",
+  "holiday_types": [
+    "nature",
+    "relax"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Fly to Tenerife South, then take the ferry from Los Cristianos. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, winter sun",
+      "temp": 20
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild, almond blossom",
+      "temp": 20
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, great walking",
+      "temp": 21
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, great walking",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quiet",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busier",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busier",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, great walking",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm, winter sun",
+      "temp": 22
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild, winter sun",
+      "temp": 21
+    }
+  },
+  "when_to_go": "La Gomera is mild all year, with highs around 20°C in winter and the mid-20s in summer. Spring and autumn are best for walking. Winter is good for gentle sun, though the forest is often cool and misty. Summer is hot and busier with Spanish visitors.",
+  "things": [
+    {
+      "name": "Garajonay National Park",
+      "tag": "Free",
+      "blurb": "UNESCO-listed laurel forest in the island's misty centre, with marked trails and the island's highest peak.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Valle Gran Rey",
+      "tag": "Free",
+      "blurb": "A deep valley of terraces and palms that ends at black-sand beaches, popular for its sunsets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Los Órganos",
+      "tag": "Tour",
+      "blurb": "Take a boat trip from Valle Gran Rey to see these cliffs of tall basalt columns, like organ pipes, only visible from the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale and dolphin trips",
+      "tag": "Tour",
+      "blurb": "Boat trips look for pilot whales and dolphins in the waters between La Gomera and Tenerife.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Silbo Gomero",
+      "tag": "Free",
+      "blurb": "Listen for the island's whistled language, used to talk across valleys and now taught in local schools.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Agulo",
+      "tag": "Free",
+      "blurb": "A pretty village of cobbled lanes and white houses on the north coast, with a glass skywalk viewpoint nearby.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Roque de Agando",
+      "tag": "Free",
+      "blurb": "A tall volcanic rock tower beside the mountain road, with a viewpoint over the valleys.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to La Gomera from the UK?",
+      "answer": "Fly to Tenerife South, then take a taxi or bus to Los Cristianos and catch the ferry to San Sebastián de La Gomera, which takes about 50 minutes."
+    },
+    {
+      "question": "Is La Gomera worth visiting?",
+      "answer": "Yes, if you like walking, scenery and peace. It's far quieter than Tenerife, with no big resorts, and a great base for hiking."
+    },
+    {
+      "question": "Can you do La Gomera as a day trip from Tenerife?",
+      "answer": "Yes, by ferry or on an organised tour. But to walk in the forest and see the valleys properly, stay a few nights."
+    },
+    {
+      "question": "Do you need a car on La Gomera?",
+      "answer": "It helps, as the roads are winding and buses are infrequent. You can bring a hire car over on the ferry or rent one on the island."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tenerife",
+      "code": "TFS",
+      "label": "☀️ Winter sun"
+    },
+    {
+      "name": "La Palma",
+      "code": "SPC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Azores",
+      "code": "PDL",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-25T06:45:22Z",
+  "updated": "2026-10-25T06:45:22Z"
+}

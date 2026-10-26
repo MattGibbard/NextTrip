@@ -1,0 +1,200 @@
+{
+  "name": "Yerevan",
+  "published": true,
+  "country": "AM",
+  "title": "Holidays in Yerevan",
+  "intro": "A pink-stone capital of café terraces, ancient manuscripts and brandy cellars, with snowy Mount Ararat on the skyline. Here's what Yerevan is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/armenia-5021630_1280.webp",
+  "image_alt": "Republic Square in Yerevan, with its pink tuff-stone government buildings and clock tower reflected in the pool of fountains",
+  "wikipedia": "https://en.wikipedia.org/wiki/Yerevan",
+  "to_code": "EVN",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3 to 4 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Armenian dram (֏)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The FCDO advises against travel near the border with Azerbaijan, well away from Yerevan. Check the latest advice and entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, snow possible",
+      "temp": 3
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 6
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly, spring starts",
+      "temp": 12
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild, blossom",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, green",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, long evenings",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot, dry",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot, dry",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, grape harvest",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild, autumn colour",
+      "temp": 20
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 11
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold, festive",
+      "temp": 5
+    }
+  },
+  "when_to_go": "May, June, September and October are the best months, warm and sunny without the dry 30°C-plus heat of July and August. Spring brings blossom and clear views of Ararat. Winters are cold, with snow possible.",
+  "things": [
+    {
+      "name": "Cascade",
+      "tag": "Free",
+      "blurb": "A giant stairway of terraces, fountains and modern sculptures with views over the city to Mount Ararat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Republic Square",
+      "tag": "Free",
+      "blurb": "The grand central square of pink stone buildings, with fountains that light up on summer evenings.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Matenadaran",
+      "tag": "Ticketed",
+      "blurb": "A museum of ancient Armenian manuscripts, with beautifully illustrated books going back centuries.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Armenian Genocide Memorial",
+      "tag": "Free",
+      "blurb": "A moving memorial and museum on Tsitsernakaberd hill.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vernissage market",
+      "tag": "Free",
+      "blurb": "An open-air market of carpets, crafts and Soviet curios, busiest at weekends.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Garni and Geghard",
+      "tag": "Day trip",
+      "blurb": "A Greek-style temple above a gorge and a monastery partly carved into the rock, often visited together.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Khor Virap",
+      "tag": "Day trip",
+      "blurb": "A hilltop monastery with one of the best close-up views of Mount Ararat.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Yerevan from the UK?",
+      "answer": "Wizz Air started direct flights from London Luton to Yerevan in June 2026. You can also fly with one stop via a European hub."
+    },
+    {
+      "question": "Is Yerevan worth visiting?",
+      "answer": "Yes. It's friendly, good value and full of history, food and wine, with ancient monasteries an easy day trip away."
+    },
+    {
+      "question": "How many days do you need in Yerevan?",
+      "answer": "Two or three days covers the city. Add a day or two for Garni, Geghard, Khor Virap or Lake Sevan."
+    },
+    {
+      "question": "Do you need a visa for Armenia?",
+      "answer": "UK passport holders don't need a visa for short visits. Check the latest rules on GOV.UK before you travel."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tbilisi",
+      "code": "TBS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Samarkand",
+      "code": "SKD",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Cappadocia",
+      "code": "NAV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Sarajevo",
+      "code": "SJJ",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-26T06:45:32Z",
+  "updated": "2026-10-26T06:45:32Z"
+}

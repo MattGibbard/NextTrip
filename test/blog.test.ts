@@ -102,7 +102,7 @@ describe("links between posts and guides", () => {
     const lisbon = findPost("lisbon-or-porto")!;
     expect(lisbon.guides).toEqual(expect.arrayContaining(["lisbon", "porto"]));
     expect(lisbon.cover?.image).toMatch(/^\/images\/destinations\//);
-    expect(postsAboutGuide("lisbon", 3)).toContainEqual(lisbon);
+    expect(postsAboutGuide("lisbon", POSTS.length)).toContainEqual(lisbon);
   });
 
   it("uses a post's own photo instead of a guide's when it has one", () => {

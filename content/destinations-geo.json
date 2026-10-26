@@ -354,6 +354,11 @@
     "lat": 50.9375,
     "lon": 6.9603
   },
+  "colombia-coffee-region": {
+    "query": "Colombia's Coffee Region|CO",
+    "lat": 4.6372,
+    "lon": -75.5703
+  },
   "copenhagen": {
     "query": "Copenhagen|DK",
     "lat": 55.6867,
@@ -1008,6 +1013,11 @@
     "query": "Milos|GR",
     "lat": 36.697,
     "lon": 24.4235
+  },
+  "monemvasia": {
+    "query": "Monemvasia|GR",
+    "lat": 36.6874,
+    "lon": 23.0555
   },
   "mont-saint-michel": {
     "query": "Mont-Saint-Michel|FR",
@@ -1668,6 +1678,11 @@
     "query": "Yellowstone|US",
     "lat": 44.428,
     "lon": -110.5885
+  },
+  "yerevan": {
+    "query": "Yerevan|AM",
+    "lat": 40.1777,
+    "lon": 44.5126
   },
   "yogyakarta": {
     "query": "Yogyakarta|ID",

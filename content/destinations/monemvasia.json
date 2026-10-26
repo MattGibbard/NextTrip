@@ -1,0 +1,199 @@
+{
+  "name": "Monemvasia",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Monemvasia",
+  "intro": "A walled medieval town hidden on the side of a huge rock off the Peloponnese coast, with car-free lanes, sea views and clifftop ruins. Here's what Monemvasia is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/rooftops-844294_1280.webp",
+  "image_alt": "Stone houses, a domed church and a bell tower in Monemvasia's lower town, below the steep rock under a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Monemvasia",
+  "to_code": "KLX",
+  "holiday_types": [
+    "culture",
+    "beach"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "It's a long drive from the airport, so most people hire a car. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring starts",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm, wild flowers",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sea warming",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, warm sea",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot, busy",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot, busiest",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea, quieter",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, quiet",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, some places shut",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 16
+    }
+  },
+  "when_to_go": "May, June, September and October are the best months, warm enough for swimming without the peak heat and day trippers of July and August. Winter is mild, and the old town is peaceful, though some hotels and tavernas close.",
+  "things": [
+    {
+      "name": "Lower town",
+      "tag": "Free",
+      "blurb": "Wander the car-free lanes of the walled town, with stone mansions, little squares and Byzantine churches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Upper town and Agia Sofia",
+      "tag": "Free",
+      "blurb": "Climb the zigzag path to the ruins on top of the rock and the 12th-century church of Agia Sofia, perched on the cliff edge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Town walls",
+      "tag": "Free",
+      "blurb": "Walk along the old sea walls for views over the water and back to the mainland.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Swimming",
+      "tag": "Free",
+      "blurb": "Swim off the rocks below the town walls, or at the beaches near Gefyra, the small mainland town across the causeway.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Malvasia wine",
+      "tag": "Tour",
+      "blurb": "Taste the sweet wine the town gave its name to, now made again by local wineries.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Elafonisos",
+      "tag": "Day trip",
+      "blurb": "A small island to the south with long, pale sandy beaches, reached by a short ferry.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mystras",
+      "tag": "Day trip",
+      "blurb": "A UNESCO-listed ruined Byzantine city on a hillside near Sparta, about an hour and a half's drive away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Monemvasia from the UK?",
+      "answer": "Fly to Kalamata, which has summer flights from the UK, or to Athens, then drive. It takes about two and a half to three hours from Kalamata and three to four hours from Athens."
+    },
+    {
+      "question": "Can you drive into Monemvasia?",
+      "answer": "No. Cars aren't allowed in the old town. You park along the road outside the main gate and walk in."
+    },
+    {
+      "question": "Is Monemvasia worth visiting?",
+      "answer": "Yes. It's one of the most atmospheric places in Greece, with a whole medieval town hidden from the mainland, and far quieter than the islands."
+    },
+    {
+      "question": "How many days do you need in Monemvasia?",
+      "answer": "Two days is enough for the old town and the upper town. Stay longer to add beaches, Elafonisos and Mystras."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Nafplio",
+      "code": "ATH",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Messinia",
+      "code": "KLX",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Hydra",
+      "code": "ATH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Meteora",
+      "code": "SKG",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-26T06:45:32Z",
+  "updated": "2026-10-26T06:45:32Z"
+}

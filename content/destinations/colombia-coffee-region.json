@@ -1,0 +1,193 @@
+{
+  "name": "Colombia's Coffee Region",
+  "published": true,
+  "country": "CO",
+  "title": "Holidays in Colombia's Coffee Region",
+  "intro": "Green hills of coffee farms, colourful mountain towns and a valley of giant wax palms in Colombia's Andes. Here's what Colombia's Coffee Region is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/colombia-4907636_1280.webp",
+  "image_alt": "Tall, thin wax palms dotted across the green hills of the Cocora Valley in Colombia, with cloud on the forested ridges",
+  "wikipedia": "https://en.wikipedia.org/wiki/Coffee_Cultural_Landscape_of_Colombia",
+  "to_code": "PEI",
+  "holiday_types": [
+    "nature",
+    "culture",
+    "food"
+  ],
+  "nights": "4 to 6",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 to 6 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Colombian peso ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 110V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You'll need a plug adaptor. Colombia's entry rules and the online Check-MIG form can change, so check GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Drier, sunny spells",
+      "temp": 22
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Drier, sunny spells",
+      "temp": 22
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild, showers",
+      "temp": 22
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 21
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Drier",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Drier, sunny spells",
+      "temp": 22
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Drier, sunny spells",
+      "temp": 23
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Mild, showers",
+      "temp": 22
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Wettest",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 21
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Drier, festive",
+      "temp": 21
+    }
+  },
+  "when_to_go": "The weather is mild all year, with highs around 21 to 23°C and cool nights. The drier spells, December to February and June to August, are the best for walking in the Cocora Valley. April, May, October and November are the rainiest, with heavy afternoon showers.",
+  "things": [
+    {
+      "name": "Cocora Valley",
+      "tag": "Ticketed",
+      "blurb": "Walk among the wax palms, Colombia's national tree, which grow up to 60 metres tall on the misty hillsides.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Salento",
+      "tag": "Free",
+      "blurb": "A small, colourful mountain town with painted balconies, craft shops and a lookout over the valley.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Coffee farm tour",
+      "tag": "Tour",
+      "blurb": "See how coffee is grown, picked and roasted on a family farm, then taste it fresh.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Filandia",
+      "tag": "Free",
+      "blurb": "A quieter hill town with bright wooden houses and a tall lookout tower over the coffee hills.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hot springs",
+      "tag": "Ticketed",
+      "blurb": "Soak in thermal pools in the forest near Santa Rosa de Cabal.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jeep rides",
+      "tag": "Tour",
+      "blurb": "Ride in the old Willys jeeps that still serve as local taxis between the towns and the Cocora Valley.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Colombia's coffee region from the UK?",
+      "answer": "Fly to Bogotá, then take a short domestic flight to Pereira or Armenia. Salento is about an hour by road from either airport."
+    },
+    {
+      "question": "How many days do you need in the coffee region?",
+      "answer": "Three or four days covers Salento, the Cocora Valley and a coffee farm. Add more to see Filandia and the hot springs."
+    },
+    {
+      "question": "Is it safe to visit Salento and the Cocora Valley?",
+      "answer": "It's one of Colombia's most visited areas and generally calm for tourists. Check the latest FCDO advice for Colombia before you travel."
+    },
+    {
+      "question": "When is the best time to visit the Cocora Valley?",
+      "answer": "December to February and June to August are usually the driest, with the best chance of clear views of the palms."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Medellín",
+      "code": "MDE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Cartagena",
+      "code": "CTG",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Costa Rica",
+      "code": "SJO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Cusco",
+      "code": "CUZ",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-26T06:45:32Z",
+  "updated": "2026-10-26T06:45:32Z"
+}

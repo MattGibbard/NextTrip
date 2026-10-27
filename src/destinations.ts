@@ -8,6 +8,7 @@ import { countryName } from "./countries";
 import geo from "../content/destinations-geo.json";
 import airports from "../content/destination-airports.json";
 import imageSizes from "../content/destination-images.json";
+import everydayNames from "../shared/countryNames.json";
 import type { HolidayType, TripLength } from "../shared/ideaDetails";
 import { SITE, destinationPath } from "../shared/seo";
 import type { Meta } from "../shared/seo";
@@ -15,8 +16,10 @@ import type { IdeaInput, Place } from "../shared/types";
 import { rowToTerminal } from "../shared/terminals";
 import type { Terminal, TerminalRow } from "../shared/terminals";
 
-export const MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"] as const;
-export type MonthRating = "best" | "good" | "quiet";
+import { MONTHS } from "./months";
+import type { MonthRating } from "./months";
+export { MONTHS, bestMonths } from "./months";
+export type { MonthRating } from "./months";
 
 export interface Destination {
   slug: string;
@@ -71,21 +74,7 @@ const list = (v: unknown): Record<string, unknown>[] =>
 
 // Everyday names where the standard list uses the formal one ("Russian Federation"). The editor's
 // country dropdown in public/admin/config.yml uses the same names; a test keeps the two in step.
-const EVERYDAY_NAMES: Record<string, string> = {
-  CN: "China",
-  CD: "Democratic Republic of the Congo",
-  CG: "Congo",
-  CI: "Côte d'Ivoire",
-  GM: "The Gambia",
-  IR: "Iran",
-  MK: "North Macedonia",
-  PS: "Palestine",
-  RU: "Russia",
-  TW: "Taiwan",
-  TZ: "Tanzania",
-  TR: "Turkey",
-  US: "United States",
-};
+const EVERYDAY_NAMES: Record<string, string | undefined> = everydayNames;
 
 export function destinationCountry(code: string): string {
   return EVERYDAY_NAMES[code] ?? countryName(code);
@@ -217,26 +206,6 @@ export function countryFlag(code: string): string {
 /** The first sentence of a guide's introduction, for its card in the list of guides. */
 export function shortIntro(d: DestinationCard): string {
   return d.intro.match(/^.+?[.!?](?=\s|$)/)?.[0] ?? d.intro;
-}
-
-/** The best months to go, from the month-by-month ratings: "Apr–Jun, Sep–Oct". Runs can wrap past December. */
-export function bestMonths(d: DestinationCard): string {
-  const best = d.months.map((m) => m.rating === "best");
-  if (!best.some(Boolean)) return "";
-  if (best.every(Boolean)) return "All year";
-  const label = (i: number) => d.months[i].code.charAt(0) + d.months[i].code.slice(1).toLowerCase();
-  // Start just after a month that isn't "best", so a run like Nov–Feb stays in one piece.
-  const start = (best.indexOf(false) + 1) % 12;
-  const runs: [number, number][] = [];
-  for (let k = 0; k < 12; k++) {
-    const i = (start + k) % 12;
-    if (!best[i]) continue;
-    const last = runs[runs.length - 1];
-    if (last && last[1] === (i + 11) % 12) last[1] = i;
-    else runs.push([i, i]);
-  }
-  runs.sort((a, b) => a[0] - b[0]);
-  return runs.map(([a, b]) => (a === b ? label(a) : `${label(a)}–${label(b)}`)).join(", ");
 }
 
 /** The place a guide is about, as the idea and trip forms want it. */

@@ -181,7 +181,9 @@ const BOOK_PLACE_NAMES: Record<string, string> = {
   trip_plan: "Trip plans",
   holiday_picker: "Holiday picker",
   destination_guide: "Destination guides",
+  blog: "Blog posts",
 };
+const BLOG_TAP_NAMES: Record<string, string> = { picker: "🎲 To the holiday picker", signin: "🎟️ To sign up", guide: "📖 To a guide" };
 
 /** Google's thresholds for a good, middling and poor page experience. */
 const tone = (v: number | null, good: number, poor: number) => (v === null ? undefined : v <= good ? "good" : v <= poor ? "ok" : "poor");
@@ -296,6 +298,13 @@ export function renderStats({ days, since, site, visits, worker, search, pageDat
      ${sub("What")}${rows(Object.entries(site.book.kinds).map(([k, value]) => ({ name: BOOK_KIND_NAMES[k] ?? k, value })), "")}
      ${sub("Where")}${rows(Object.entries(site.book.places).map(([k, value]) => ({ name: BOOK_PLACE_NAMES[k] ?? k, value })), "")}`,
     "Taps on the flight, hotel and things-to-do buttons. Bookings themselves show in Stay22 and Travelpayouts.",
+  )}
+
+  ${panel(
+    "From the blog",
+    `${facts([{ label: "Taps", value: period(site.blog.total) }])}
+     ${rows(Object.entries(site.blog.taps).map(([k, value]) => ({ name: BLOG_TAP_NAMES[k] ?? k, value })), "")}`,
+    "Taps on the boxes at the end of blog posts, other than booking (which shows under Book it taps as Blog posts).",
   )}
 
   ${searchPanel}

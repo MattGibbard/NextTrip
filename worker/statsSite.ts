@@ -1,5 +1,5 @@
 import { cleanFilters } from "../shared/roundFilters";
-import { BOOK_KINDS, BOOK_PLACES } from "./counters";
+import { BLOG_TAPS, BOOK_KINDS, BOOK_PLACES } from "./counters";
 
 /**
  * The stats page's numbers from the site's own database. Family 1 is the owner's own and is left out
@@ -26,6 +26,7 @@ export interface SiteNumbers {
   funnel: { families: number; welcomed: number; withIdea: number; invited: number; withDraw: number };
   signin: { emails: Period; done: Period };
   book: { total: Period; kinds: Record<string, number>; places: Record<string, number> };
+  blog: { total: Period; taps: Record<string, number> };
   serverErrors: number;
   familySizes: { size: string; families: number }[];
   draws: { total: number; dates: number; filters: number; swipes: number };
@@ -105,6 +106,14 @@ export async function siteNumbers(db: D1Database, since: string, prevSince: stri
     }
   }
 
+  const blog = { total: { current: 0, prev: 0 }, taps: {} as Record<string, number> };
+  for (const tap of BLOG_TAPS) {
+    const c = count(`blog:${tap}`);
+    blog.total.current += c.current;
+    blog.total.prev += c.prev;
+    blog.taps[tap] = c.current;
+  }
+
   const drawn = rounds.results.map((r) => ({ filters: cleanFilters(r.filters), dates: !!r.trip_dates, swipe: num(r.swipe) === 1 }));
   const sizeRows = sizes.results.map((r) => ({ size: num(r.size), families: num(r.families) }));
   const bigger = sizeRows.filter((r) => r.size >= 5).reduce((n, r) => n + r.families, 0);
@@ -124,6 +133,7 @@ export async function siteNumbers(db: D1Database, since: string, prevSince: stri
     funnel: { families: num(f.families), welcomed: num(f.welcomed), withIdea: num(f.withIdea), invited: num(f.invited), withDraw: num(f.withDraw) },
     signin: { emails: count("signin_email"), done: count("signin_done") },
     book,
+    blog,
     serverErrors: count("error_500").current,
     familySizes: [
       ...sizeRows.filter((r) => r.size < 5).map((r) => ({ size: r.size === 1 ? "1 person" : `${r.size} people`, families: r.families })),

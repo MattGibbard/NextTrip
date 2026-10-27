@@ -76,7 +76,7 @@ function hub(page: PublicPage) {
 }
 
 // Every blog post in full, likewise.
-const postFiles = import.meta.glob<Record<string, unknown>>("/content/blog/*.json", { eager: true, import: "default" });
+const postFiles = import.meta.glob<Record<string, unknown>>("/content/blog/*.json", { eager: true, query: "?post", import: "default" });
 
 function post(page: PublicPage) {
   const slug = page.startsWith("post:") ? page.slice("post:".length) : "";

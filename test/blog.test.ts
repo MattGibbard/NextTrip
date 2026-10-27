@@ -6,6 +6,9 @@ import { feedXml } from "../src/feed";
 import { publicPage } from "../shared/seo";
 import { DESTINATIONS } from "../src/destinations";
 import { HUBS } from "../src/hubs";
+import { bestMonths } from "../src/months";
+import { mainAirport } from "../shared/mainAirports";
+import { postBoxes } from "../src/components/PostBoxes";
 
 const dir = new URL("../content/blog/", import.meta.url);
 const files = readdirSync(dir).filter((f) => f.endsWith(".json"));
@@ -198,5 +201,61 @@ describe("pages of posts", () => {
   it("names later pages in their titles", () => {
     expect(listingMeta({ tag: null, page: 2, pages: 3, posts: [], total: 30 }).title).toContain("page 2");
     expect(listingMeta({ tag: "europe", page: 2, pages: 2, posts: [], total: 20 }).title).toContain("page 2");
+  });
+});
+
+describe("what comes after a post", () => {
+  const options = [...readFileSync(new URL("../public/admin/config.yml", import.meta.url), "utf8").matchAll(/\{ label: "[^"]+ \(([A-Z]{3})\)", value: ([A-Z]{3}) \}/g)];
+
+  it("knows each place it's about as its guide does", async () => {
+    for (const card of POSTS) {
+      const p = (await loadPost(card.slug))!;
+      for (const place of p.places) {
+        const d = DESTINATIONS.find((x) => x.slug === place.slug);
+        expect(d, `${card.slug}: ${place.slug} isn't a published guide`).toBeDefined();
+        expect({ ...place, best: bestMonths(place) }).toMatchObject({
+          name: d!.name,
+          country: d!.country,
+          country_code: d!.country_code,
+          lat: d!.lat,
+          lon: d!.lon,
+          to_code: d!.to_code,
+          image: d!.image,
+          image_size: d!.image_size,
+          best: bestMonths(d!),
+        });
+      }
+    }
+  });
+
+  it("starts with the place the cover photo comes from, then the guides it links to", async () => {
+    const p = (await loadPost("seville-in-3-days"))!;
+    expect(p.places[0].slug).toBe("seville");
+    expect(p.places.map((x) => x.slug)).toEqual(expect.arrayContaining(p.guides.slice(0, 4)));
+  });
+
+  it("gives every airport post a departures board from its own airport", async () => {
+    for (const card of POSTS.filter((c) => /^(how-early-should-you-arrive-at|where-can-you-fly-direct-from)-/.test(c.slug))) {
+      const p = (await loadPost(card.slug))!;
+      expect(mainAirport(p.airport), `${card.slug} needs its airport`).toBeDefined();
+      expect(postBoxes(p).board).toBe("airport");
+    }
+  });
+
+  it("offers the editor every main UK and Irish airport, and only those", () => {
+    expect(options.length).toBeGreaterThan(10);
+    for (const [, label, value] of options) {
+      expect(label).toBe(value);
+      expect(mainAirport(value)?.[2], value).toMatch(/^(GB|IE)$/);
+    }
+  });
+
+  it("books the places a post is about, or the one place, and ends with the picker or the draw", async () => {
+    const at = async (slug: string) => postBoxes((await loadPost(slug))!);
+    expect(await at("lisbon-or-porto")).toEqual({ board: null, book: "tiles", end: "picker" });
+    expect(await at("tivoli-gardens-at-christmas")).toEqual({ board: null, book: "card", end: "picker" });
+    expect(await at("fair-ways-to-pick-a-holiday")).toEqual({ board: null, book: null, end: "draw" });
+    expect(await at("which-side-of-the-plane-to-sit-on")).toEqual({ board: "visitor", book: null, end: null });
+    expect(await at("which-side-of-the-plane-to-sit-on-flying-to-madeira")).toEqual({ board: null, book: "card", end: "picker" });
   });
 });

@@ -6,6 +6,7 @@ import { photoProps } from "../photos";
 import { SiteFooter, SiteHeader } from "../components/SiteFrame";
 import { PostCards, PostLink } from "../components/PostCards";
 import { RichText, anchor } from "./InfoPage";
+import { PostBoxes } from "../components/PostBoxes";
 import { INFO } from "../infoPages";
 import { INFO_PAGES } from "../../shared/seo";
 
@@ -127,7 +128,7 @@ export function BlogList({ listing: l }: { listing: Listing }) {
   );
 }
 
-/** One blog post: heading and introduction, its photo, its sections, a nudge to try the draw, its questions and related posts. */
+/** One blog post: heading and introduction, its photo, its sections, its places and a way on (PostBoxes), its questions and related posts. */
 export function BlogPost({ post }: { post: Post }) {
   const contents = post.sections.length >= 5 ? post.sections.filter((s) => s.heading) : [];
 
@@ -194,19 +195,7 @@ export function BlogPost({ post }: { post: Post }) {
             ))}
           </article>
 
-          <div className="dx-cta bl-cta">
-            <div>
-              <span className="dx-cta-label">🎟️ CAN'T AGREE?</span>
-              <h2>Let a fair draw decide</h2>
-              <p className="muted">Everyone adds their ideas, spreads their points in secret and gets one veto. Then the draw picks where you go. It's free.</p>
-            </div>
-            <div className="dx-cta-actions">
-              <a className="btn" href="/#signin">
-                Start planning
-              </a>
-              <a href="/destinations">Find ideas</a>
-            </div>
-          </div>
+          <PostBoxes post={post} />
         </div>
 
         {post.faqs.length > 0 && (

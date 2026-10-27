@@ -298,6 +298,249 @@
 .bl-cta {
   max-width: 720px;
 }
+/* After a post: the places it's about, to book (src/components/PostBoxes.tsx). */
+.bl-book,
+.bl-places,
+.bl-board {
+  max-width: 720px;
+}
+.bl-places {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.lp-info .bl-places h2 {
+  margin: 0;
+  font-size: var(--text-17);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.bl-place-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.bl-place-list.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.bl-place {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card-lg);
+  overflow: hidden;
+}
+.bl-place-photo {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  background: var(--surface-2);
+  color: var(--muted);
+  font-family: var(--mono);
+  text-decoration: none;
+}
+.bl-place-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.bl-place-body {
+  min-width: 0;
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.lp-info .bl-place h3 {
+  margin: 0;
+  font-size: var(--text-12);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.bl-place h3 a {
+  color: var(--text);
+  text-decoration: none;
+}
+.bl-place h3 a:hover {
+  color: var(--accent);
+}
+.bl-place-body > p {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+.bl-place-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+.bl-place-links a {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: var(--text-6);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.bl-place-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.bl-places > p {
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .bl-place-list,
+  .bl-place-list.three {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  /* Photo beside the words, so four places don't make a long scroll. */
+  .bl-place {
+    flex-direction: row;
+  }
+  .bl-place-photo {
+    flex: 0 0 104px;
+    aspect-ratio: auto;
+  }
+  .bl-place-body {
+    padding: 10px 12px 12px;
+  }
+  .bl-place-links a {
+    min-height: 34px;
+    padding: 5px 8px;
+  }
+}
+
+/* After an airport post: a departures board of where you could fly from there. */
+.bl-board {
+  background: var(--board);
+  color: var(--on-photo);
+  border-radius: var(--radius-card-lg);
+  padding: 20px 24px 22px;
+  box-shadow: var(--shadow-departure);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.bl-board-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--board-line);
+  font-family: var(--mono);
+  font-size: var(--text-3);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--board-muted);
+}
+.bl-board .lit {
+  color: var(--board-lit);
+}
+.lp-info .bl-board h2 {
+  margin: 0;
+  color: var(--on-photo);
+  font-size: var(--text-17);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.bl-board ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--mono);
+}
+.bl-board li {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) 3.5rem 7.5rem auto;
+  gap: 12px;
+  align-items: center;
+  min-height: 44px;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--board-line);
+  font-size: var(--text-7);
+  font-weight: 500;
+  color: var(--board-dim);
+}
+.bl-board li > a:first-of-type {
+  color: var(--on-photo);
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bl-board li > a:first-of-type:hover {
+  color: var(--board-lit);
+}
+.bl-board-best {
+  font-size: var(--text-4);
+  color: var(--board-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bl-board-fly {
+  color: var(--board-lit);
+  font-size: var(--text-4);
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 6px 0;
+}
+.bl-board-fly:hover {
+  color: var(--board-lit-hover);
+}
+.bl-board-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  margin-top: 6px;
+}
+.bl-board-foot p {
+  flex: 1 1 220px;
+  margin: 0;
+  font-size: var(--text-6);
+  color: var(--board-dim);
+}
+.bl-board-note {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: var(--text-2);
+  letter-spacing: 0.04em;
+  color: var(--board-muted);
+}
+@media (max-width: 600px) {
+  .bl-board {
+    padding: 16px 16px 18px;
+  }
+  .bl-board li {
+    grid-template-columns: 2.6rem minmax(0, 1fr) 3rem auto;
+    gap: 8px;
+  }
+  .bl-board-best {
+    display: none;
+  }
+  .bl-board-foot .btn {
+    width: 100%;
+  }
+}
+
 .bl-more {
   border-top: 1px solid var(--border);
   padding-top: 40px;

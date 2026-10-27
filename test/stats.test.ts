@@ -121,7 +121,8 @@ beforeAll(async () => {
   // Opening the app marks the family as active.
   await api(cookie, "GET", "/bootstrap");
   // A tap on a Book it button, and two that aren't real buttons.
-  for (const tap of [{ kind: "hotels", place: "idea_page" }, { kind: "cars", place: "idea_page" }, { kind: "hotels", place: "nowhere" }]) {
+  // And taps on a blog post's other ways on: two to the picker, and one that isn't a real box.
+  for (const tap of [{ kind: "hotels", place: "idea_page" }, { kind: "cars", place: "idea_page" }, { kind: "hotels", place: "nowhere" }, { blog: "picker" }, { blog: "picker" }, { blog: "popup" }]) {
     expect((await api(null, "POST", "/clicks", tap)).status).toBe(204);
   }
   await env.DB.prepare("INSERT INTO ideas (title, family_id) VALUES ('Owner idea', 1)").run();
@@ -220,6 +221,7 @@ it("shows the numbers, leaving out family 1", async () => {
   expect(html).toMatch(/Sign-in emails sent<\/dt><dd>1/);
   expect(html).toMatch(/Signed in<\/dt><dd>1/);
   expect(html).toMatch(/Book it taps<\/span><b>1<\/b>/);
+  expect(html).toMatch(/From the blog<\/h2>.*?Taps<\/dt><dd>2/s);
   expect(html).toContain("Rovaniemi");
   expect(html).toContain("Finland");
   expect(html).toContain("Google search");

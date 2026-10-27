@@ -15,6 +15,7 @@ export const MAIN_AIRPORTS: readonly MainAirportRow[] = [
   ["LGW", "London Gatwick", "GB", 51.1487, -0.1857, "far"],
   ["STN", "London Stansted", "GB", 51.885, 0.235, "far"],
   ["LTN", "London Luton", "GB", 51.8747, -0.3683, "far"],
+  ["LCY", "London City", "GB", 51.5048, 0.0495, "far"],
   ["MAN", "Manchester", "GB", 53.3494, -2.2795],
   ["BHX", "Birmingham", "GB", 52.4539, -1.748],
   ["BRS", "Bristol", "GB", 51.3823, -2.7165],

@@ -7,6 +7,7 @@ import { plainText } from "./infoPages";
 import { imageUrl } from "./photos";
 import { BLOG_TAGS, TAG_INDEX_MIN, isBlogTag, tagInSentence, tagPath } from "./blogTags";
 import type { BlogTag } from "./blogTags";
+import type { MonthRating } from "./months";
 
 /** The people who write the posts. */
 export const AUTHORS = ["Matt", "Brogan"] as const;
@@ -41,8 +42,27 @@ export interface PostCard {
   cover?: Cover;
 }
 
+/** A guide a post is about, with what its booking links and departures board need (scripts/destination-cards.mjs). */
+export interface PostPlace {
+  slug: string;
+  name: string;
+  country: string;
+  country_code: string;
+  lat: number | null;
+  lon: number | null;
+  to_code: string;
+  image: string;
+  image_alt: string;
+  image_size: [number, number] | null;
+  months: { code: string; rating: MonthRating }[];
+}
+
 export interface Post extends PostCard {
   seo_description: string;
+  /** The UK airport an airport post is about, e.g. MAN, for its departures board. Empty for other posts. */
+  airport: string;
+  /** The guides it's about: its cover photo's guide, then the ones it links to, in order. */
+  places: PostPlace[];
   /** Each section's text is short paragraphs, "- " lists, **bold** and [links](/somewhere), as on the content pages. */
   sections: { heading: string; text: string }[];
   faqs: { question: string; answer: string }[];
@@ -86,12 +106,32 @@ export function readPost(slug: string, raw: Record<string, unknown>): Post {
     hubs: strings(raw.hubs),
     cover: readCover(raw.cover),
     seo_description: str(raw.seo_description),
+    airport: /^[A-Za-z]{3}$/.test(str(raw.airport)) ? str(raw.airport).toUpperCase() : "",
+    places: list(raw.places).map(readPlace),
     sections: list(raw.sections)
       .map((s) => ({ heading: str(s.heading), text: str(s.text) }))
       .filter((s) => s.heading || s.text),
     faqs: list(raw.faqs)
       .map((f) => ({ question: str(f.question), answer: str(f.answer) }))
       .filter((f) => f.question && f.answer),
+  };
+}
+
+function readPlace(p: Record<string, unknown>): PostPlace {
+  const num = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? v : null);
+  const size = Array.isArray(p.image_size) && p.image_size.length === 2 && p.image_size.every((n) => typeof n === "number") ? (p.image_size as [number, number]) : null;
+  return {
+    slug: str(p.slug),
+    name: str(p.name),
+    country: str(p.country),
+    country_code: str(p.country_code),
+    lat: num(p.lat),
+    lon: num(p.lon),
+    to_code: str(p.to_code),
+    image: str(p.image),
+    image_alt: str(p.image_alt),
+    image_size: size,
+    months: list(p.months).map((m) => ({ code: str(m.code), rating: m.rating === "best" || m.rating === "good" ? m.rating : "quiet" })),
   };
 }
 
@@ -104,12 +144,13 @@ export function withCard(p: Post): Post {
 const slugOf = (path: string) => path.replace(/^.*\/|\.json(\?.*)?$/g, "");
 
 const cards = import.meta.glob<Record<string, unknown>>("/content/blog/*.json", { eager: true, query: "?card", import: "default" });
-const files = import.meta.glob<Record<string, unknown>>("/content/blog/*.json", { import: "default" });
+// In full, with the guides it's about (scripts/destination-cards.mjs).
+const files = import.meta.glob<Record<string, unknown>>("/content/blog/*.json", { query: "?post", import: "default" });
 
 /** Every published post, newest first. */
 export const POSTS: PostCard[] = Object.entries(cards)
   .map(([path, raw]): PostCard => {
-    const { seo_description: _d, sections: _s, faqs: _f, ...card } = readPost(slugOf(path), raw);
+    const { seo_description: _d, sections: _s, faqs: _f, airport: _a, places: _p, ...card } = readPost(slugOf(path), raw);
     return card;
   })
   .filter((p) => p.published)

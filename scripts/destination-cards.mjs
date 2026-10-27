@@ -4,6 +4,10 @@
 // way: every page knows enough to link to them, and their words load on their own page (src/hubs.ts).
 // So do blog posts (content/blog, src/blog.ts).
 import { readFile } from "node:fs/promises";
+import countries from "i18n-iso-countries";
+import en from "i18n-iso-countries/langs/en.json" with { type: "json" };
+
+countries.registerLocale(en);
 
 /** The fields a card, the departures board, the filters and "Add to ideas" read. */
 const CARD_FIELDS = [
@@ -33,6 +37,12 @@ const POST_CARD_FIELDS = ["published", "title", "date", "updated", "intro", "seo
 const GUIDES = new URL("../content/destinations/", import.meta.url);
 const HUBS = new URL("../content/hubs/", import.meta.url);
 const IMAGE_SIZES = new URL("../content/destination-images.json", import.meta.url);
+const POSITIONS = new URL("../content/destinations-geo.json", import.meta.url);
+const COUNTRY_NAMES = new URL("../shared/countryNames.json", import.meta.url);
+const MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+
+/** How many of a post's places its page gets: enough for its booking tiles and departures board. */
+const POST_PLACES = 8;
 
 /** Reads a JSON file, or undefined when it isn't there. */
 async function readJson(url) {
@@ -71,6 +81,48 @@ export async function postCard(raw) {
     } else if (linked.includes(slug) && (await readJson(new URL(`${slug}.json`, HUBS)))) hubs.push(slug);
   }
   return { ...card, guides, hubs, ...(cover ? { cover } : {}) };
+}
+
+/**
+ * A post in full, with the guides it's about: the guide its cover photo came from, then the guides it
+ * links to. Each comes as a guide's page would read it (src/destinations.ts readDestination, which a test
+ * holds this to), so the post's page can show booking links and flight times for them without
+ * carrying the list of every guide.
+ */
+export async function fullPost(raw) {
+  const text = [...(Array.isArray(raw.sections) ? raw.sections : []).map((s) => s?.text ?? ""), ...(Array.isArray(raw.faqs) ? raw.faqs : []).map((f) => f?.answer ?? "")].join("\n");
+  const linked = [...text.matchAll(/\]\(\/destinations\/([a-z0-9-]+)/g)].map((m) => m[1]);
+  const cover = typeof raw.cover === "string" && !(typeof raw.cover_image === "string" && raw.cover_image.trim()) ? raw.cover.trim() : "";
+  const [sizes, positions, everyday] = await Promise.all([readJson(IMAGE_SIZES), readJson(POSITIONS), readJson(COUNTRY_NAMES)]);
+  const places = [];
+  for (const slug of [...new Set([cover, ...linked].filter(Boolean))]) {
+    if (places.length >= POST_PLACES) break;
+    const g = await readJson(new URL(`${slug}.json`, GUIDES));
+    if (!g || g.published !== true) continue;
+    const str = (v) => (typeof v === "string" ? v.trim() : "");
+    const num = (v) => (typeof v === "number" && Number.isFinite(v) ? v : null);
+    const name = str(g.name) || slug;
+    const code = (/^[A-Za-z]{2}$/.test(str(g.country)) ? str(g.country) : str(g.country_code)).toUpperCase();
+    const position = positions?.[slug]?.query === `${name}|${code}` ? positions[slug] : undefined;
+    const image = str(g.image);
+    places.push({
+      slug,
+      name,
+      country: code ? (everyday?.[code] ?? countries.getName(code, "en") ?? code) : str(g.country),
+      country_code: code,
+      lat: position?.lat ?? num(g.lat),
+      lon: position?.lon ?? num(g.lon),
+      to_code: str(g.to_code).toUpperCase(),
+      image,
+      image_alt: str(g.image_alt),
+      image_size: sizes?.[image] ?? null,
+      months: MONTHS.map((m) => {
+        const rating = g.months?.[m]?.rating;
+        return { code: m.toUpperCase(), rating: rating === "best" || rating === "good" ? rating : "quiet" };
+      }),
+    });
+  }
+  return { ...raw, places };
 }
 
 /** A hub's card fields. */
@@ -119,9 +171,10 @@ export function destinationCards() {
     enforce: "pre",
     async load(id) {
       const [file, query] = id.split("?");
-      if (query !== "card" || !file.endsWith(".json")) return null;
+      if ((query !== "card" && query !== "post") || !file.endsWith(".json")) return null;
       this.addWatchFile(file);
       const raw = JSON.parse(await readFile(file, "utf8"));
+      if (query === "post") return { code: `export default ${JSON.stringify(await fullPost(raw))};`, moduleType: "js" };
       const card = /[\\/]content[\\/]site[\\/]popular-guides\.json$/.test(file)
         ? await popularGuides(raw)
         : /[\\/]content[\\/]hubs[\\/]/.test(file) ? hubCard(raw) : /[\\/]content[\\/]blog[\\/]/.test(file) ? await postCard(raw) : guideCard(raw);

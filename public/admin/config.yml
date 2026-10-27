@@ -674,6 +674,38 @@ collections:
           - { label: Budget travel, value: budget-travel }
           - { label: Europe, value: europe }
           - { label: Long haul, value: long-haul }
+      - label: Airport
+        name: airport
+        widget: select
+        required: false
+        hint: "Only for posts about one UK or Irish airport (how early to arrive, direct flights). The end of the post then shows a departures board of the places it links to, with flights from this airport. Leave empty for other posts."
+        options:
+          - { label: "London Heathrow (LHR)", value: LHR }
+          - { label: "London Gatwick (LGW)", value: LGW }
+          - { label: "London Stansted (STN)", value: STN }
+          - { label: "London Luton (LTN)", value: LTN }
+          - { label: "London City (LCY)", value: LCY }
+          - { label: "Manchester (MAN)", value: MAN }
+          - { label: "Birmingham (BHX)", value: BHX }
+          - { label: "Bristol (BRS)", value: BRS }
+          - { label: "East Midlands (EMA)", value: EMA }
+          - { label: "Leeds Bradford (LBA)", value: LBA }
+          - { label: "Newcastle (NCL)", value: NCL }
+          - { label: "Liverpool (LPL)", value: LPL }
+          - { label: "Edinburgh (EDI)", value: EDI }
+          - { label: "Glasgow (GLA)", value: GLA }
+          - { label: "Aberdeen (ABZ)", value: ABZ }
+          - { label: "Inverness (INV)", value: INV }
+          - { label: "Belfast City (BHD)", value: BHD }
+          - { label: "Belfast International (BFS)", value: BFS }
+          - { label: "Cardiff (CWL)", value: CWL }
+          - { label: "Southampton (SOU)", value: SOU }
+          - { label: "Bournemouth (BOH)", value: BOH }
+          - { label: "Exeter (EXT)", value: EXT }
+          - { label: "Norwich (NWI)", value: NWI }
+          - { label: "Dublin (DUB)", value: DUB }
+          - { label: "Cork (ORK)", value: ORK }
+          - { label: "Shannon (SNN)", value: SNN }
       - { label: Updated, name: updated, widget: datetime, required: false, time_format: false, date_format: YYYY-MM-DD, format: YYYY-MM-DD, hint: "Optional. When you last checked or changed the advice. Shows as Updated under the heading. Leave empty for small fixes." }
       - label: Cover photo
         name: cover

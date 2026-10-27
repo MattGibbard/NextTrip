@@ -46,6 +46,10 @@ async function request<T>(method: string, path: string, body?: unknown): Promise
 }
 
 export const api = {
+  /** Counts a tap on one of a blog post's ways on that isn't booking (worker/counters.ts BLOG_TAPS), like bookClick. */
+  blogClick: (blog: "picker" | "signin" | "guide") => {
+    fetch("/api/clicks", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ blog }), keepalive: true }).catch(() => {});
+  },
   /** Counts a tap on a Book it button for the stats page. Sent with keepalive so it survives the new tab opening. */
   bookClick: (kind: "flights" | "hotels" | "things", place: string) => {
     fetch("/api/clicks", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ kind, place }), keepalive: true }).catch(() => {});

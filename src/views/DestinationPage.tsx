@@ -14,7 +14,10 @@ import { PostLink } from "../components/PostCards";
 import { postsAboutGuide } from "../blog";
 import { Geo } from "../components/Geo";
 import { FlyingFrom } from "../components/FlyingFrom";
-import { useFrom } from "../visitor";
+import { useFrom, useFromOnceUp } from "../visitor";
+import { flightLink } from "../../shared/flights";
+import { hotelLink } from "../../shared/hotels";
+import { activitiesLink } from "../../shared/activities";
 import { fromTerminal } from "../../shared/visitor";
 import type { From } from "../../shared/visitor";
 
@@ -30,6 +33,8 @@ export interface Family {
   ideas: Idea[] | null;
   /** The family's home airport, which flight times are worked out from instead of the visitor's (src/visitor.ts). */
   airport: Terminal | null;
+  /** How many are in the family, for the booking searches. None for visitors, who get two adults. */
+  travellers?: number;
 }
 
 export function useFamily(given?: Family): Family {
@@ -44,7 +49,7 @@ export function useFamily(given?: Family): Family {
         setState({ signedIn: true, me: null, ideas: null, airport: null });
         const [ideas, home, people] = await Promise.all([api.ideas(), api.homeEnds().catch(() => null), api.people().catch(() => [])]);
         const me = people.find((p) => p.id === s.person_id && !p.removed) ?? null;
-        if (live) setState({ signedIn: true, me, ideas, airport: home?.airport ?? null });
+        if (live) setState({ signedIn: true, me, ideas, airport: home?.airport ?? null, travellers: people.filter((p) => !p.removed).length });
       })
       .catch(() => {});
     return () => {
@@ -55,13 +60,51 @@ export function useFamily(given?: Family): Family {
   return given ?? state;
 }
 
+/**
+ * Flights, hotels and things to do for the guide's place, through our affiliate links. The flights
+ * leave from the visitor's airport, which only changes once the page is up, so the prerendered page
+ * (searching from London) and React agree. Two adults unless the family is signed in.
+ */
+function BookCard({ d, airport, travellers }: { d: Destination; airport: Terminal | null; travellers?: number }) {
+  const from = useFromOnceUp(airport);
+  const guests = travellers || 2;
+  const place = { name: d.name, country: d.country, country_code: d.country_code, lat: d.lat, lon: d.lon };
+  const flights = d.to_code && d.to_code !== from.code ? flightLink(from.code, d.to_code, guests, "destination_guide", { currency: from.currency }) : null;
+  const who = guests === 1 ? "1 traveller" : `${guests} travellers`;
+  return (
+    <section aria-labelledby="dg-book" className="dg-section dg-book">
+      <h2 id="dg-book">Book {d.name}</h2>
+      <div className="dg-book-links">
+        {flights && <BookLink href={flights} kind="flights" title={`✈️ Flights ${from.code} to ${d.to_code}`} sub={`Any dates · ${who}`} />}
+        <BookLink href={hotelLink(place, "destination_guide", { guests, currency: from.currency })} kind="hotels" title={`🏨 Hotels in ${d.name}`} sub={`Any dates · ${who}`} />
+        <BookLink href={activitiesLink(place, "destination_guide")} kind="things" title={`🎟️ Things to do in ${d.name}`} sub="Tickets and tours" />
+      </div>
+      <p className="muted small">
+        We may earn a small commission if you book, at no extra cost to you. <a href="/how-we-make-money">How we make money</a>
+      </p>
+    </section>
+  );
+}
+
+function BookLink({ href, kind, title, sub }: { href: string; kind: "flights" | "hotels" | "things"; title: string; sub: string }) {
+  return (
+    <a className="dg-book-link" href={href} target="_blank" rel="sponsored noopener" onClick={() => api.bookClick(kind, "destination_guide")}>
+      <span className="dg-book-text">
+        <span>{title}</span>
+        <span className="muted small">{sub}</span>
+      </span>
+      <span aria-hidden>↗</span>
+    </a>
+  );
+}
+
 export function Label({ children }: { children: string }) {
   return <span className="dg-label">{children}</span>;
 }
 
 /** A destination guide, for visitors finding it in search and for signed-in families looking for ideas. */
 export function DestinationPage({ destination: d, family }: { destination: Destination; family?: Family }) {
-  const { signedIn, me, ideas, airport } = useFamily(family);
+  const { signedIn, me, ideas, airport, travellers } = useFamily(family);
   const from = useFrom(airport);
   const flight = flightTime(from, d);
   const best = bestMonths(d);
@@ -356,6 +399,8 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
             </div>
           </section>
         )}
+
+        <BookCard d={d} airport={airport} travellers={travellers} />
 
         {d.similar.length > 0 && (
           <section aria-labelledby="dg-similar" className="dg-section">

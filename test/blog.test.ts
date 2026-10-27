@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { AUTHORS, PAGE_SIZE, POSTS, findPost, listing, listingMeta, listingPath, listings, loadPost, postDate, postMeta, postTitle, postsAboutGuide, postsAboutHub, postsTagged, readPost, relatedPosts, usedTags } from "../src/blog";
+import { AUTHORS, PAGE_SIZE, POSTS, findPost, listing, listingMeta, listingPath, listings, loadPost, postDate, postMeta, postTitle, postsAboutGuide, postsAboutHub, postsTagged, readPost, relatedPosts, sectionPhotos, usedTags } from "../src/blog";
+import { calloutOf, tableRows } from "../src/views/InfoPage";
 import { BLOG_TAGS, TAG_INDEX_MIN, isBlogTag } from "../src/blogTags";
 import { feedXml } from "../src/feed";
 import { publicPage } from "../shared/seo";
@@ -257,5 +258,56 @@ describe("what comes after a post", () => {
     expect(await at("fair-ways-to-pick-a-holiday")).toEqual({ board: null, book: null, end: "draw" });
     expect(await at("which-side-of-the-plane-to-sit-on")).toEqual({ board: "visitor", book: null, end: null });
     expect(await at("which-side-of-the-plane-to-sit-on-flying-to-madeira")).toEqual({ board: null, book: "card", end: "picker" });
+  });
+});
+
+describe("breaking up a post", () => {
+  it("reads Tip, Watch out and Local knowledge paragraphs as boxes", () => {
+    expect(calloutOf("Tip: book early.")).toEqual({ kind: "tip", text: "Book early." });
+    expect(calloutOf("**Watch out:** queues")).toEqual({ kind: "warn", text: "Queues" });
+    expect(calloutOf("Local knowledge: go at noon")).toMatchObject({ kind: "local" });
+    expect(calloutOf("Tipping is optional.")).toBeNull();
+    expect(calloutOf("Tip:")).toBeNull();
+  });
+
+  it("reads | rows as a table, skipping a Markdown divider row", () => {
+    expect(tableRows(["| Trip | Arrive |", "| --- | --- |", "| City break | 2 hours |"])).toEqual([
+      ["Trip", "Arrive"],
+      ["City break", "2 hours"],
+    ]);
+    expect(tableRows(["| Just a heading |"])).toBeNull();
+    expect(tableRows(["| a | b |", "not a row"])).toBeNull();
+  });
+
+  it("every table in a post has the same number of cells in each row", () => {
+    for (const f of files) {
+      const raw = JSON.parse(readFileSync(new URL(f, dir), "utf8"));
+      for (const s of readPost(f, raw).sections) {
+        for (const block of s.text.split(/\n\s*\n/)) {
+          const rows = tableRows(block.split("\n").map((l) => l.trim()).filter(Boolean));
+          if (rows) for (const r of rows) expect(r.length, `${f}: ${s.heading}`).toBe(rows[0].length);
+        }
+      }
+    }
+  });
+
+  it("shows guide photos through a post, never twice, never after two sections running", () => {
+    const place = (slug: string) => ({ slug, name: slug, country: "", country_code: "", lat: null, lon: null, to_code: "", image: `/images/destinations/${slug}.webp`, image_alt: slug, image_size: null, months: [] });
+    const section = (heading: string, text: string, image = "") => ({ heading, text, image, image_alt: "", image_caption: "", image_size: null });
+    const post = {
+      ...readPost("x", {}),
+      cover: { guide: "lisbon", image: "/images/destinations/lisbon.webp", alt: "" },
+      places: ["lisbon", "porto", "faro", "evora"].map(place),
+      sections: [
+        section("The short answer", "- [Lisbon](/destinations/lisbon) or [Porto](/destinations/porto)"),
+        section("One", "Text"),
+        section("Two", "[Faro](/destinations/faro)"),
+        section("Three", "[Evora](/destinations/evora)"),
+        section("Four", "[Porto](/destinations/porto) and [Evora](/destinations/evora)", "/images/blog/own.webp"),
+        section("Five", "[Evora](/destinations/evora)"),
+      ],
+    };
+    const photos = sectionPhotos(post).map((p) => p.map((x) => x.guide || x.image));
+    expect(photos).toEqual([[], ["porto"], [], ["evora"], ["/images/blog/own.webp"], []]);
   });
 });

@@ -725,10 +725,13 @@ collections:
         name: sections
         widget: list
         summary: "{{heading}}"
-        hint: "Text: leave a blank line between paragraphs, start a line with - for a bullet, **two stars** for bold, and [words](/destinations) for a link. Posts with five or more sections get a list of them at the top."
+        hint: "Text: leave a blank line between paragraphs, start a line with - for a bullet, **two stars** for bold, and [words](/destinations) for a link. Start a paragraph with Tip:, Watch out: or Local knowledge: to put it in a box. For a table, write each row on its own line between | bars, heading row first, e.g. | Trip | Arrive |. A first section headed The short answer (or The short version) shows as a box at the top. Posts with five or more sections get a list of them."
         fields:
           - { label: Heading, name: heading, widget: string, required: false }
           - { label: Text, name: text, widget: text }
+          - { label: Photo, name: image, widget: image, required: false, media_folder: /public/images/blog, public_folder: /images/blog, hint: "Optional. Shown after this section's words. Landscape, about 1280 pixels wide, e.g. from Pixabay (download it, don't link to it). Sections that link a guide show its photo on their own, so only add one where no guide photo fits." }
+          - { label: Photo description, name: image_alt, widget: string, required: false, hint: "What's in the photo, for people who can't see it and for Google." }
+          - { label: Photo caption, name: image_caption, widget: string, required: false, hint: "Optional. A short line under the photo." }
       - label: Common questions
         name: faqs
         widget: list

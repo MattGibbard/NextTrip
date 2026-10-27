@@ -122,7 +122,11 @@ export async function fullPost(raw) {
       }),
     });
   }
-  return { ...raw, places };
+  // Sections' own photos, with their sizes like the cover's.
+  const sections = Array.isArray(raw.sections)
+    ? raw.sections.map((s) => (s && typeof s.image === "string" && s.image.trim() && sizes?.[s.image.trim()] ? { ...s, image_size: sizes[s.image.trim()] } : s))
+    : raw.sections;
+  return { ...raw, sections, places };
 }
 
 /** A hub's card fields. */

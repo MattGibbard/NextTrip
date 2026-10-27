@@ -151,6 +151,22 @@ export function RichText({ text }: { text: string }) {
     <>
       {text.split(/\n\s*\n/).map((block, i) => {
         const lines = block.split("\n").map((l) => l.trim()).filter(Boolean);
+        const table = tableRows(lines);
+        if (table) return <Table key={i} rows={table} />;
+        const callout = calloutOf(lines.join(" "));
+        if (callout) {
+          return (
+            <aside key={i} className={`rt-callout rt-${callout.kind}`}>
+              <span className="rt-callout-icon" aria-hidden>
+                {CALLOUTS[callout.kind].icon}
+              </span>
+              <span className="rt-callout-label">{CALLOUTS[callout.kind].label}</span>
+              <p>
+                <Inline text={callout.text} />
+              </p>
+            </aside>
+          );
+        }
         const items = lines.filter((l) => l.startsWith("- "));
         const intro = lines.filter((l) => !l.startsWith("- "));
         if (!items.length) {
@@ -179,6 +195,69 @@ export function RichText({ text }: { text: string }) {
         );
       })}
     </>
+  );
+}
+
+/** The boxes a paragraph becomes when it starts with "Tip:", "Watch out:" or "Local knowledge:". */
+export const CALLOUTS = {
+  tip: { prefix: "Tip:", label: "Tip", icon: "💡" },
+  warn: { prefix: "Watch out:", label: "Watch out", icon: "⚠️" },
+  local: { prefix: "Local knowledge:", label: "Local knowledge", icon: "📍" },
+} as const;
+type CalloutKind = keyof typeof CALLOUTS;
+
+/** A paragraph's box, if it starts with one of the CALLOUTS (bold or not), and its words after that. */
+export function calloutOf(paragraph: string): { kind: CalloutKind; text: string } | null {
+  for (const kind of Object.keys(CALLOUTS) as CalloutKind[]) {
+    const word = CALLOUTS[kind].prefix.slice(0, -1);
+    const m = paragraph.match(new RegExp(`^(?:\\*\\*${word}:\\*\\*|\\*\\*${word}\\*\\*:|${word}:)\\s*`, "i"));
+    if (m && paragraph.length > m[0].length) {
+      const text = paragraph.slice(m[0].length);
+      return { kind, text: text.charAt(0).toUpperCase() + text.slice(1) };
+    }
+  }
+  return null;
+}
+
+/**
+ * A block of lines that each start with "|" as a table's rows of cells, e.g. "| Trip | Arrive |".
+ * The first row is the heading. A row of dashes under it ("|---|---|"), as in Markdown, is skipped.
+ */
+export function tableRows(lines: string[]): string[][] | null {
+  if (lines.length < 2 || !lines.every((l) => l.startsWith("|"))) return null;
+  const rows = lines
+    .map((l) => l.replace(/^\|/, "").replace(/\|$/, "").split("|").map((c) => c.trim()))
+    .filter((cells) => !cells.every((c) => /^:?-{2,}:?$/.test(c)));
+  return rows.length >= 2 ? rows : null;
+}
+
+function Table({ rows }: { rows: string[][] }) {
+  const [head, ...body] = rows;
+  return (
+    <div className="rt-table" role="region" aria-label={head.join(", ")} tabIndex={0}>
+      <table>
+        <thead>
+          <tr>
+            {head.map((c, j) => (
+              <th key={j} scope="col">
+                <Inline text={c} />
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {body.map((r, k) => (
+            <tr key={k}>
+              {head.map((_, j) => (
+                <td key={j}>
+                  <Inline text={r[j] ?? ""} />
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 

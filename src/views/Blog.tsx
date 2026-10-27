@@ -1,14 +1,15 @@
-import { listingPath, postDate, relatedPosts, usedTags } from "../blog";
-import type { Listing, Post } from "../blog";
+import { useEffect, useState } from "react";
+import { isShortAnswer, listingPath, postDate, relatedPosts, sectionPhotos, usedTags } from "../blog";
+import type { Listing, Post, PostPhoto, Section } from "../blog";
 import { BLOG_TAGS, tagInSentence, tagPath } from "../blogTags";
 import type { BlogTag } from "../blogTags";
 import { photoProps } from "../photos";
 import { SiteFooter, SiteHeader } from "../components/SiteFrame";
 import { PostCards, PostLink } from "../components/PostCards";
-import { RichText, anchor } from "./InfoPage";
+import { Inline, RichText, anchor } from "./InfoPage";
 import { PostBoxes } from "../components/PostBoxes";
 import { INFO } from "../infoPages";
-import { INFO_PAGES } from "../../shared/seo";
+import { INFO_PAGES, destinationPath } from "../../shared/seo";
 
 /** How many other posts a post suggests at the bottom. */
 const MORE = 3;
@@ -131,6 +132,7 @@ export function BlogList({ listing: l }: { listing: Listing }) {
 /** One blog post: heading and introduction, its photo, its sections, its places and a way on (PostBoxes), its questions and related posts. */
 export function BlogPost({ post }: { post: Post }) {
   const contents = post.sections.length >= 5 ? post.sections.filter((s) => s.heading) : [];
+  const photos = sectionPhotos(post);
 
   return (
     <div className="lp lp-home lp-info bl">
@@ -173,29 +175,25 @@ export function BlogPost({ post }: { post: Post }) {
           </figure>
         )}
 
-        <div className="lp-wrap lp-info-body">
-          {contents.length > 0 && (
-            <nav className="lp-info-contents" aria-label="In this post">
-              <span className="lp-kicker">In this post</span>
-              <ul>
-                {contents.map((s) => (
-                  <li key={s.heading}>
-                    <a href={`#${anchor(s.heading)}`}>{s.heading}</a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          )}
-          <article className="lp-article">
-            {post.sections.map((s, i) => (
-              <section key={i} id={s.heading ? anchor(s.heading) : undefined}>
-                {s.heading && <h2>{s.heading}</h2>}
-                <RichText text={s.text} />
-              </section>
-            ))}
-          </article>
+        <div className="lp-wrap lp-info-body bl-body">
+          {contents.length > 0 && <PostContents sections={contents} />}
+          <div className="bl-main">
+            <article className="lp-article">
+              {post.sections.map((s, i) => {
+                const id = s.heading ? anchor(s.heading) : undefined;
+                if (i === 0 && isShortAnswer(s)) return <ShortAnswer key={i} section={s} id={id} code={post.airport} />;
+                return (
+                  <section key={i} id={id}>
+                    {s.heading && <h2>{s.heading}</h2>}
+                    <RichText text={s.text} />
+                    {photos[i].length > 0 && <PostPhotos photos={photos[i]} />}
+                  </section>
+                );
+              })}
+            </article>
 
-          <PostBoxes post={post} />
+            <PostBoxes post={post} />
+          </div>
         </div>
 
         {post.faqs.length > 0 && (
@@ -222,5 +220,164 @@ export function BlogPost({ post }: { post: Post }) {
 
       <SiteFooter />
     </div>
+  );
+}
+
+/**
+ * A post's opening "The short answer" as a box: a departures-board strip, then a row for each point.
+ * A point written "**Label:** short value" puts the value in a chip on the right, so the numbers stand out.
+ */
+function ShortAnswer({ section, id, code }: { section: Section; id?: string; code: string }) {
+  const blocks = section.text.split(/\n\s*\n/).map((b) => b.split("\n").map((l) => l.trim()).filter(Boolean));
+  const items = blocks.flat().filter((l) => l.startsWith("- ")).map((l) => l.slice(2));
+  const notes = blocks.map((b) => b.filter((l) => !l.startsWith("- ")).join(" ")).filter(Boolean);
+  // Values go in chips only when every point has a short one, so the rows line up.
+  const chips = items.every((i) => CHIP.test(i));
+  if (items.length === 0) {
+    return (
+      <section id={id} className="bl-answer">
+        <AnswerHead heading={section.heading} code={code} />
+        <div className="bl-answer-foot">
+          <RichText text={section.text} />
+        </div>
+      </section>
+    );
+  }
+  return (
+    <section id={id} className="bl-answer">
+      <AnswerHead heading={section.heading} code={code} />
+      <ul className="bl-answer-rows">
+        {items.map((item, j) => {
+          const m = chips ? item.match(CHIP) : null;
+          const chip = !!m;
+          return (
+            <li key={j} className={chip ? "chip" : undefined}>
+              {chip ? (
+                <>
+                  <strong>
+                    <Inline text={m[1]} />
+                  </strong>
+                  <span className="bl-answer-value">
+                    <Inline text={m[2]} />
+                  </span>
+                </>
+              ) : (
+                <span>
+                  <Inline text={item} />
+                </span>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+      {notes.length > 0 && (
+        <div className="bl-answer-foot">
+          {notes.map((n, j) => (
+            <p key={j}>
+              <Inline text={n} />
+            </p>
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
+
+/** A short-answer point written "**Label:** short value", e.g. "**Long-haul:** 3 hours". */
+const CHIP = /^\*\*([^*]+?):\*\*\s*([^*[\]]{1,28}?)\.?$/;
+
+function AnswerHead({ heading, code }: { heading: string; code: string }) {
+  return (
+    <div className="bl-answer-head">
+      <h2>{heading}</h2>
+      {code && <span aria-hidden>{code}</span>}
+    </div>
+  );
+}
+
+/** A section's photo, or two guides' photos side by side, with a caption linking the guides. */
+function PostPhotos({ photos }: { photos: PostPhoto[] }) {
+  const guides = photos.filter((p) => p.guide);
+  const caption = photos.length === 1 && photos[0].caption ? photos[0].caption : "";
+  return (
+    <figure className={`bl-photo ${photos.length > 1 ? "pair" : ""}`}>
+      <div className="bl-photo-imgs">
+        {photos.map((p) => (
+          <img key={p.image} {...photoProps(p.image, p.size, photos.length > 1 ? "(max-width: 760px) 50vw, 360px" : "(max-width: 760px) 100vw, 720px")} alt={p.alt} width={p.size?.[0]} height={p.size?.[1]} loading="lazy" decoding="async" />
+        ))}
+      </div>
+      {(caption || guides.length > 0) && (
+        <figcaption>
+          {caption && <Inline text={caption} />}
+          {guides.map((p, j) => (
+            <span key={p.guide}>
+              {(caption || j > 0) && " · "}
+              <a href={destinationPath(p.guide)}>{p.name} guide</a>
+            </span>
+          ))}
+        </figcaption>
+      )}
+    </figure>
+  );
+}
+
+/**
+ * "In this post": a box above the words on phones, and a column beside them on wide screens that stays
+ * in view, marks the section you're reading and shows how far through the post you are.
+ */
+function PostContents({ sections }: { sections: Section[] }) {
+  const [current, setCurrent] = useState("");
+  const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    const ids = sections.map((s) => anchor(s.heading));
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const article = document.querySelector(".bl-main .lp-article");
+      if (!article) return;
+      const box = article.getBoundingClientRect();
+      const seen = window.innerHeight * 0.6 - box.top;
+      setProgress(Math.max(0, Math.min(1, seen / box.height)));
+      let on = "";
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top < window.innerHeight * 0.3) on = id;
+      }
+      setCurrent(on);
+    };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (frame) cancelAnimationFrame(frame);
+    };
+  }, [sections]);
+
+  return (
+    <aside className="bl-side">
+      <nav className="lp-info-contents" aria-label="In this post">
+        <span className="lp-kicker">In this post</span>
+        <div className="bl-progress" aria-hidden>
+          <i style={{ transform: `scaleX(${progress})` }} />
+        </div>
+        <ul>
+          {sections.map((s) => {
+            const id = anchor(s.heading);
+            return (
+              <li key={s.heading}>
+                <a href={`#${id}`} aria-current={id === current ? "location" : undefined}>
+                  {s.heading}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+    </aside>
   );
 }

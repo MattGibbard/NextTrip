@@ -559,6 +559,11 @@
     "lat": 43.7497,
     "lon": 6.3286
   },
+  "gothenburg": {
+    "query": "Gothenburg|SE",
+    "lat": 57.7072,
+    "lon": 11.967
+  },
   "gozo": {
     "query": "Gozo|MT",
     "lat": 36.0443,
@@ -863,6 +868,11 @@
     "query": "Lisbon|PT",
     "lat": 38.7078,
     "lon": -9.1366
+  },
+  "livigno": {
+    "query": "Livigno|IT",
+    "lat": 46.5382,
+    "lon": 10.136
   },
   "ljubljana": {
     "query": "Ljubljana|SI",
@@ -1188,6 +1198,11 @@
     "query": "Peneda-Gerês|PT",
     "lat": 41.77,
     "lon": -8.15
+  },
+  "phu-quoc": {
+    "query": "Phu Quoc|VN",
+    "lat": 10.2163,
+    "lon": 103.9588
   },
   "phuket": {
     "query": "Phuket|TH",

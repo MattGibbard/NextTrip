@@ -1,0 +1,200 @@
+{
+  "name": "Gothenburg",
+  "published": true,
+  "country": "SE",
+  "title": "Holidays in Gothenburg",
+  "intro": "Sweden's laid-back second city of canals, seafood and cinnamon buns, with car-free islands a tram and ferry ride away. Here's what Gothenburg is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/little-boom-7362108_1280.webp",
+  "image_alt": "The tall ship Barken Viking moored in Gothenburg's Lilla Bommen harbour at dusk, with the red and white Lipstick building behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Gothenburg",
+  "to_code": "GOT",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Swedish krona (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Sweden is almost cashless, so a card without foreign fees is all you need. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, dark",
+      "temp": 2
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, dark",
+      "temp": 2
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly, lighter",
+      "temp": 5
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Cool, spring",
+      "temp": 11
+    },
+    "may": {
+      "rating": "good",
+      "note": "Mild, long days",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, long days",
+      "temp": 19
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm, island swimming",
+      "temp": 21
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm, festivals",
+      "temp": 20
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Mild, quieter",
+      "temp": 16
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Cool, autumn",
+      "temp": 11
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Christmas market opens",
+      "temp": 6
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas at Liseberg",
+      "temp": 3
+    }
+  },
+  "when_to_go": "June to August is the best time, with long light evenings, warm days and the islands at their best. Spring and early autumn are mild and quieter. Winters are cold and dark, but Liseberg's big Christmas market lights up the city from mid-November.",
+  "things": [
+    {
+      "name": "Haga",
+      "tag": "Free",
+      "blurb": "An old district of wooden houses and cobbled streets, famous for cafés and huge cinnamon buns.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Southern archipelago",
+      "tag": "Ferry",
+      "blurb": "Take a tram and a ferry, on a normal city ticket, to car-free islands with rocky swimming spots and fishing villages.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Liseberg",
+      "tag": "Ticketed",
+      "blurb": "Scandinavia's largest amusement park, open in summer and again for its Christmas market.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Feskekôrka",
+      "tag": "Free",
+      "blurb": "The 'fish church', a market hall shaped like a church, selling fresh seafood and shrimp sandwiches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Universeum",
+      "tag": "Ticketed",
+      "blurb": "A science centre with a rainforest, an aquarium and hands-on exhibits.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Slottsskogen",
+      "tag": "Free",
+      "blurb": "A large city park with lakes, walking paths and a small free zoo of Nordic animals.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Canal boat tour",
+      "tag": "Tour",
+      "blurb": "A Paddan boat trip through the city's canals and under very low bridges.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Gothenburg from the UK?",
+      "answer": "Fly direct from London Heathrow, Manchester or Edinburgh. Check the latest timetables, as routes change by season."
+    },
+    {
+      "question": "Gothenburg or Stockholm?",
+      "answer": "Stockholm is grander, with more big sights. Gothenburg is smaller, more relaxed and known for seafood, with islands reachable by tram and ferry."
+    },
+    {
+      "question": "How many days do you need in Gothenburg?",
+      "answer": "Two or three days covers Haga, the canals and a trip to the islands. Add a day in summer for Liseberg."
+    },
+    {
+      "question": "Is Gothenburg expensive?",
+      "answer": "It's not cheap, like most of Scandinavia, but public transport is good value and lunch deals help keep costs down."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Copenhagen",
+      "code": "CPH",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Stockholm",
+      "code": "ARN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bergen",
+      "code": "BGO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Tallinn",
+      "code": "TLL",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-27T06:45:48Z",
+  "updated": "2026-10-27T06:45:48Z"
+}

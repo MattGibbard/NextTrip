@@ -1,0 +1,200 @@
+{
+  "name": "Livigno",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Livigno",
+  "intro": "A high Alpine ski town on the Swiss border with snow-sure slopes, an Olympic snow park and tax-free shopping. Here's what Livigno is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/livigno-5231041_1280.webp",
+  "image_alt": "Snow-covered slopes and ski runs rising above the long village of Livigno in the Italian Alps under a cloudy blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Livigno",
+  "to_code": "BGY",
+  "holiday_types": [
+    "ski",
+    "nature",
+    "adventure"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Livigno is a long transfer from Milan's airports, so allow most of a day to get there. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Cold, good snow",
+      "temp": -6
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Cold, good snow",
+      "temp": -5
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Sunny, long ski days",
+      "temp": -2
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring skiing",
+      "temp": 2
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Season ends, quiet",
+      "temp": 7
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Cool, lifts reopening",
+      "temp": 12
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Mild, hiking and biking",
+      "temp": 15
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Mild, hiking and biking",
+      "temp": 15
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Cool, quiet trails",
+      "temp": 10
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 4
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold, season starting",
+      "temp": -1
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Snowy, festive",
+      "temp": -5
+    }
+  },
+  "when_to_go": "Livigno is one of the highest ski towns in the Alps, so the snow is reliable. The ski season usually runs from late November to early May, with January to March the best months, and February half term the busiest. Summer is cool and green, with hiking and mountain biking from about late June to September.",
+  "things": [
+    {
+      "name": "Skiing",
+      "tag": "Ticketed",
+      "blurb": "Two linked ski areas, Carosello 3000 and Mottolino, on either side of the valley, with lots of wide, sunny runs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Livigno Snow Park",
+      "tag": "Ticketed",
+      "blurb": "The freestyle park at Mottolino that hosted the snowboard and freestyle skiing events at the 2026 Winter Olympics.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tax-free shopping",
+      "tag": "Free",
+      "blurb": "Livigno has a special duty-free status, so fuel, sports gear and many other goods cost less than elsewhere in Italy.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Aquagranda",
+      "tag": "Ticketed",
+      "blurb": "A big leisure centre with pools, slides and a wellness area, good for a rest day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cross-country skiing",
+      "tag": "Outdoors",
+      "blurb": "Long, flat trails along the valley floor beside the lake, suitable for beginners.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake Livigno",
+      "tag": "Outdoors",
+      "blurb": "A long reservoir at the end of the valley, with lakeside paths for walking and biking in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mountain biking",
+      "tag": "Outdoors",
+      "blurb": "In summer, lifts carry bikes up to trails and a bike park on the slopes.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Livigno from the UK?",
+      "answer": "Fly to Milan Bergamo or Milan Malpensa, then take a transfer of around four hours. Some people fly to Zurich or Innsbruck instead."
+    },
+    {
+      "question": "Why is Livigno duty free?",
+      "answer": "It has had a special tax-free status for a very long time, partly because it was so remote. Today it means cheaper fuel and shopping, within limits on what you can take home."
+    },
+    {
+      "question": "When is the ski season in Livigno?",
+      "answer": "It usually runs from late November to early May. Its height makes it one of the more snow-sure resorts in the Alps."
+    },
+    {
+      "question": "Is Livigno good for beginners?",
+      "answer": "Yes. There are plenty of wide, gentle runs and ski schools on both sides of the valley."
+    }
+  ],
+  "similar": [
+    {
+      "name": "St Anton",
+      "code": "INN",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Val Thorens",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Zermatt",
+      "code": "GVA",
+      "label": "⛷️ Skiing"
+    },
+    {
+      "name": "Bansko",
+      "code": "SOF",
+      "label": "⛷️ Skiing"
+    }
+  ],
+  "date": "2026-10-27T06:45:48Z",
+  "updated": "2026-10-27T06:45:48Z"
+}

@@ -1,0 +1,199 @@
+{
+  "name": "Phu Quoc",
+  "published": true,
+  "country": "VN",
+  "title": "Holidays in Phu Quoc",
+  "intro": "A tropical island off southern Vietnam with long white-sand beaches, seafood night markets, pepper farms and one of the world's longest sea cable cars. Here's what Phu Quoc is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/sea-4168234_1280.webp",
+  "image_alt": "Fishing boats in the bay at An Thoi on Phu Quoc island, with the cable car wires running out over the water",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ph%C3%BA_Qu%E1%BB%91c",
+  "to_code": "PQC",
+  "holiday_types": [
+    "beach",
+    "relax"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Vietnamese dong (₫)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 45 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Vietnam's visa rules have changed several times, so check GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny, calm sea",
+      "temp": 30
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, sunny, calm sea",
+      "temp": 31
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, hot",
+      "temp": 32
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Very hot, quieter",
+      "temp": 33
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Rains starting",
+      "temp": 32
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Rainy, rough sea",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Rainy, rough sea",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Rainy, rough sea",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 30
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Rain easing",
+      "temp": 30
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drier, warm sea",
+      "temp": 30
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, sunny, calm sea",
+      "temp": 30
+    }
+  },
+  "when_to_go": "November to April is the dry season, with sunshine and calm, clear sea, and December to March is the best of it. April is the hottest month. May to October is the rainy season, when the west coast beaches can be rough, but it's quieter and cheaper.",
+  "things": [
+    {
+      "name": "Sao Beach",
+      "tag": "Free",
+      "blurb": "A long curve of soft white sand and clear water on the south-east coast, one of the island's prettiest beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hon Thom cable car",
+      "tag": "Ticketed",
+      "blurb": "Ride one of the world's longest sea cable cars from An Thoi out over the fishing boats to Hon Thom island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "An Thoi islands",
+      "tag": "Tour",
+      "blurb": "Boat trips around the small islands off the south coast, with snorkelling over coral.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Night market",
+      "tag": "Free",
+      "blurb": "The night market in Duong Dong town, packed with grilled seafood stalls and local snacks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pepper farms and fish sauce",
+      "tag": "Free",
+      "blurb": "Visit the island's famous pepper farms and the factories where its fish sauce is made.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sunset on the west coast",
+      "tag": "Free",
+      "blurb": "The west-facing beaches are made for sunsets, with bars and cafés right on the sand.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Phu Quoc National Park",
+      "tag": "Outdoors",
+      "blurb": "Forest covering much of the north of the island, with walking trails and streams.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Phu Quoc from the UK?",
+      "answer": "There are no direct flights. Fly to Ho Chi Minh City or Hanoi, often with one stop, then take a short domestic flight to Phu Quoc. Some airlines also connect through hubs such as Singapore or Bangkok."
+    },
+    {
+      "question": "Do you need a visa for Phu Quoc?",
+      "answer": "UK passport holders can currently visit Vietnam for up to 45 days without a visa. Check the latest rules on GOV.UK before you travel."
+    },
+    {
+      "question": "When is the best time to visit Phu Quoc?",
+      "answer": "December to March, in the dry season, when the sea is calm and the skies are clear. It's still hot in April."
+    },
+    {
+      "question": "How many days do you need in Phu Quoc?",
+      "answer": "Four to six days is enough for beaches, a boat trip and the cable car. Many people add it to the end of a trip around Vietnam."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Phuket",
+      "code": "HKT",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Koh Lanta",
+      "code": "KBV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Langkawi",
+      "code": "LGK",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-27T06:45:48Z",
+  "updated": "2026-10-27T06:45:48Z"
+}

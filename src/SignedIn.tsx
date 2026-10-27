@@ -67,7 +67,7 @@ function currentRoute(): { tab: TabId; id: number | null; add: string | null; pl
 }
 
 function Shell({ path }: { path: string }) {
-  const { me, ideas, home, loading, error, reload } = useData();
+  const { me, ideas, home, people, loading, error, reload } = useData();
   const [route, setRoute] = useState(currentRoute);
   // Someone new sees the welcome steps once; the server remembers when they've been through them.
   const [welcomed, setWelcomed] = useState(false);
@@ -116,7 +116,7 @@ function Shell({ path }: { path: string }) {
   if (isGuidePath(path)) {
     return (
       <>
-        <GuideView path={path} family={{ signedIn: true, me, ideas: loading ? null : ideas, airport: home }} />
+        <GuideView path={path} family={{ signedIn: true, me, ideas: loading ? null : ideas, airport: home, travellers: people.filter((p) => !p.removed).length }} />
         {!loading && !error && !me && <PersonPicker />}
       </>
     );

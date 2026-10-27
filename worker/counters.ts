@@ -14,7 +14,7 @@ export async function bump(db: D1Database, name: string): Promise<void> {
 }
 
 export const BOOK_KINDS = ["flights", "hotels", "things"] as const;
-export const BOOK_PLACES = ["draw_result", "idea_page", "been_page", "trip_plan", "holiday_picker"] as const;
+export const BOOK_PLACES = ["draw_result", "idea_page", "been_page", "trip_plan", "holiday_picker", "destination_guide"] as const;
 
 /** Notes when someone taps a Book it button. The button still opens the booking site straight away. */
 export function clickRoutes(app: Hono<App>) {

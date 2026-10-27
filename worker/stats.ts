@@ -180,6 +180,7 @@ const BOOK_PLACE_NAMES: Record<string, string> = {
   been_page: "Been trip pages",
   trip_plan: "Trip plans",
   holiday_picker: "Holiday picker",
+  destination_guide: "Destination guides",
 };
 
 /** Google's thresholds for a good, middling and poor page experience. */

@@ -147,7 +147,7 @@ function PhoneMenu({ current, go }: { current: Current; go?: (t: TabId) => void 
 
 /**
  * A tab: inside the app a button that switches tabs in place, and on the guide pages a link back
- * into the app. Destinations is always a link, as it's its own page.
+ * into the app. Guides (the destination guides) is always a link, as it's its own page.
  */
 function Tab({ id, current, go, children }: { id: TabId; current: Current; go?: (t: TabId) => void; children: ReactNode }) {
   const active = current === id;
@@ -184,7 +184,7 @@ export function AppTopbar({ current, me, go }: { current: Current; me: Pick<Pers
               {t.label}
             </Tab>
           ))}
-          <GuidesTab current={current}>Destinations</GuidesTab>
+          <GuidesTab current={current}>Guides</GuidesTab>
           <ExploreMenu current={current} />
         </nav>
         <div className="topbar-right">
@@ -222,7 +222,7 @@ export function AppBottomNav({ current, go }: { current: Current; go?: (t: TabId
       ))}
       <GuidesTab current={current}>
         <span className="icon">🧭</span>
-        Destinations
+        Guides
       </GuidesTab>
     </nav>
   );

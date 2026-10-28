@@ -129,7 +129,8 @@ a.icon-btn {
   right: 0;
   z-index: 1000;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  /* Equal columns, so a longer label can never squeeze the others. */
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   background: var(--surface);
   border-top: 1px solid var(--border);
   padding-bottom: env(safe-area-inset-bottom);

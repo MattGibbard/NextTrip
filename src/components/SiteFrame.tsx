@@ -6,6 +6,8 @@ import { destinationPath } from "../../shared/seo";
 import { FEATURED } from "../site";
 import { setThemeChoice, themeChoice } from "../theme";
 import type { ThemeChoice } from "../theme";
+import { useSignedIn } from "../useSignedIn";
+import { AppBottomNav, AppTopbar } from "./AppNav";
 
 /** The page frame for signed-out pages other than the home page: the home page's header and footer around the content. */
 export function Frame({ children }: { children: ReactNode }) {
@@ -29,11 +31,17 @@ const NAV: { id: SiteSection; label: string; href: string }[] = [
 ];
 
 /**
- * The signed-out header, the same on every public page. `current` lights up the section the page is in;
+ * The header on every public page. `current` lights up the section the page is in;
  * `exact` says the page is that section's front page. On the home page sign-in and How it works scroll rather than reload.
- * Phones get the button and a menu of the links instead.
+ * Phones get the button and a menu of the links instead. A signed-in family gets the app's header instead, once the page is up.
  */
-export function SiteHeader({ current, exact = false, home = false }: { current?: SiteSection; exact?: boolean; home?: boolean }) {
+export function SiteHeader(props: { current?: SiteSection; exact?: boolean; home?: boolean }) {
+  const { signedIn, me } = useSignedIn();
+  if (signedIn && !props.home) return <AppTopbar current={props.current === "inspire" ? "guides" : "explore"} me={me} />;
+  return <VisitorHeader {...props} />;
+}
+
+function VisitorHeader({ current, exact = false, home = false }: { current?: SiteSection; exact?: boolean; home?: boolean }) {
   const [open, setOpen] = useState(false);
   const signin = home ? { href: "#signin", onClick: jump } : { href: "/#signin" };
   const link = (n: (typeof NAV)[number]) => (home && n.id === "how" ? { href: "#how", onClick: jump } : { href: n.href });
@@ -191,9 +199,13 @@ const HUB_LINKS: { slug: string; name: string; icon: string }[] = hubLinks;
  * The footer on every public page. The hub pages it links to are picked at random once the page is up,
  * from the list scripts/hub-links.mjs makes at each build, so the prerendered page stays the same and
  * nothing is fetched. That list is small, so pages don't carry every guide just for these links.
- * The "Start planning" banner is for people who aren't signed in.
+ * The "Start planning" banner is for people who aren't signed in. Pages that know who's looking say so
+ * with `signedIn` and add the app's bottom bar themselves; on the rest the footer checks, and adds the bar.
  */
-export function SiteFooter({ sections = false, signedIn = false }: { sections?: boolean; signedIn?: boolean }) {
+export function SiteFooter({ sections = false, signedIn: given }: { sections?: boolean; signedIn?: boolean }) {
+  const checked = useSignedIn().signedIn;
+  const signedIn = given ?? checked;
+  const ownNav = given === undefined && checked;
   const [picks, setPicks] = useState(() => HUB_LINKS.slice(0, 3));
   useEffect(() => setPicks(shuffled(HUB_LINKS).slice(0, 3)), []);
   // On the home page the section links scroll; elsewhere they go to the home page.
@@ -293,9 +305,11 @@ export function SiteFooter({ sections = false, signedIn = false }: { sections?: 
           <nav aria-label="The small print" className="lp-foot-col">
             <h2 className="lp-foot-label">SMALL PRINT</h2>
             <ul>
-              <li>
-                <a {...home("signin")}>Sign in</a>
-              </li>
+              {!signedIn && (
+                <li>
+                  <a {...home("signin")}>Sign in</a>
+                </li>
+              )}
               <li>
                 <a href="/privacy">Privacy policy</a>
               </li>
@@ -320,6 +334,12 @@ export function SiteFooter({ sections = false, signedIn = false }: { sections?: 
         <ThemeSwitch />
         <p className="lp-foot-label">ADMIT ONE FAMILY · ANY DESTINATION</p>
       </div>
+      {ownNav && (
+        <>
+          <div className="app-nav-room mobile-only" />
+          <AppBottomNav current="explore" />
+        </>
+      )}
     </footer>
   );
 }

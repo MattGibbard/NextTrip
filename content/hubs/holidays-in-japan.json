@@ -1,0 +1,42 @@
+{
+  "published": true,
+  "kind": "country",
+  "country": "JP",
+  "name": "Japan",
+  "title": "Holidays in Japan",
+  "intro": "Temples, bullet trains, hot springs and some of the best food anywhere. Here's where to go on holiday in Japan, how long to stay and the best time to visit.",
+  "seo_title": "Where to go in Japan: the best places for a holiday",
+  "seo_description": "",
+  "sections": [
+    {
+      "heading": "A first trip to Japan",
+      "text": "Most first trips start in [Tokyo](/destinations/tokyo) and take the bullet train to [Kyoto](/destinations/kyoto) for temples, gardens and old wooden streets. Add [Hiroshima](/destinations/hiroshima) and the island of Miyajima for a day or two, and you have a two-week trip. Our [Japan by bullet train](/destinations/japan-bullet-train) guide strings these together."
+    },
+    {
+      "heading": "Somewhere quieter",
+      "text": "[Kanazawa](/destinations/kanazawa) has one of Japan's finest gardens, a samurai district and fresh seafood, with far fewer visitors than Kyoto. [Beppu](/destinations/beppu) is a hot spring town on Kyushu where steam rises from the streets. For beaches, [Okinawa](/destinations/okinawa) is subtropical, with coral reefs and its own food and culture."
+    },
+    {
+      "heading": "Skiing in Japan",
+      "text": "[Niseko](/destinations/niseko) on Hokkaido is famous for deep, light powder snow from December to February. It's a long way to go, so most people stay a week or more and add a few days in Tokyo."
+    },
+    {
+      "heading": "Best time to go and getting there",
+      "text": "Late March to early April brings cherry blossom, and October to November brings autumn leaves. Both are busy, so book early. Summer is hot and humid, with a rainy season in June. Direct flights from London to Tokyo take about 14 hours."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the best time to visit Japan?",
+      "answer": "Spring (late March to May) and autumn (October and November) are best, with cherry blossom in spring and red leaves in autumn. Avoid the June rainy season and the hot, humid summer if you can."
+    },
+    {
+      "question": "How long do you need for a holiday in Japan?",
+      "answer": "Two weeks is a good length for a first trip: Tokyo, Kyoto and Hiroshima. With 10 days, stick to Tokyo and Kyoto."
+    },
+    {
+      "question": "Where in Japan is good for skiing?",
+      "answer": "Niseko on Hokkaido has the most reliable powder snow, best from December to February."
+    }
+  ]
+}

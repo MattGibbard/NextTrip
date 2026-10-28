@@ -1,0 +1,32 @@
+{
+  "published": true,
+  "code": "EDI",
+  "name": "Edinburgh Airport",
+  "title": "Edinburgh Airport guide: terminals, airlines and getting there",
+  "intro": "Edinburgh has one terminal, linked to the city by tram and bus. Here's who flies from it and how to get there.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "The terminal",
+      "airlines": "easyJet, Ryanair, Jet2, British Airways, Loganair and others",
+      "text": "One terminal with one security area, Scotland's busiest."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to Edinburgh Airport",
+      "text": "- **Tram:** Edinburgh Trams run from the city centre to the terminal in about 35 minutes. The tram also stops at Edinburgh Gateway, where you can change from trains coming from Fife and the north.\n- **Bus:** the Airlink 100 runs from Waverley Bridge in the city centre, about 30 minutes.\n- **Car:** the airport is west of the city, off the A8 near the M8 and M9. There's a charge for the drop-off zone outside the terminal."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get from Edinburgh city centre to the airport?",
+      "answer": "By tram, about 35 minutes, or the Airlink 100 bus, about 30 minutes."
+    },
+    {
+      "question": "How many terminals does Edinburgh Airport have?",
+      "answer": "One."
+    }
+  ]
+}

@@ -6,7 +6,7 @@ import { DEFAULT_CURRENCY } from "./currency";
 export const STAY22_AID = "somewhereparty";
 
 /** Where the link was shown, so Stay22's reports say which button earned it. Underscores only, as Stay22 asks. */
-export type HotelCampaign = "draw_result" | "idea_page" | "been_page" | "trip_plan" | "holiday_picker" | "destination_guide" | "blog";
+export type HotelCampaign = "draw_result" | "idea_page" | "been_page" | "trip_plan" | "holiday_picker" | "destination_guide" | "blog" | "airport_guide";
 
 /**
  * A Stay22 link that searches hotels in a place, on whichever booking site Stay22 picks.

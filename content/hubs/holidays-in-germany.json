@@ -1,0 +1,42 @@
+{
+  "published": true,
+  "kind": "country",
+  "country": "DE",
+  "name": "Germany",
+  "title": "Holidays in Germany",
+  "intro": "Christmas markets, river valleys, castles and big-city weekends. Here's where to go on holiday in Germany, how long to stay and the best time to visit.",
+  "seo_title": "Where to go in Germany: the best places for a holiday",
+  "seo_description": "",
+  "sections": [
+    {
+      "heading": "Where to go in Germany for a city break",
+      "text": "[Berlin](/destinations/berlin) is the big one: museums, history and a different neighbourhood for every day of a long weekend. [Cologne](/destinations/cologne) is smaller, with the cathedral right outside the station and the Rhine at the end of the street. For somewhere cheaper and quieter, [Leipzig](/destinations/leipzig) and [Dresden](/destinations/dresden) are both easy to see in two or three days, and [Nuremberg](/destinations/nuremberg) has one of the best old towns in the country."
+    },
+    {
+      "heading": "Christmas markets in Germany",
+      "text": "Germany is where the Christmas market began, and late November to the week before Christmas is the time to go. [Nuremberg](/destinations/nuremberg) has the most famous market, [Cologne](/destinations/cologne) has several within walking distance of each other, and [Dresden](/destinations/dresden) has one of the oldest. For something smaller, [Rothenburg ob der Tauber](/destinations/rothenburg) looks like a Christmas card all year, and [Baden-Baden](/destinations/baden-baden) adds thermal baths to the mulled wine.\n\nMost markets open in the last week of November and close on 23 December, so check dates before you book."
+    },
+    {
+      "heading": "Countryside, rivers and mountains",
+      "text": "The [Mosel Valley](/destinations/mosel-valley) is vineyards, castles and little wine towns along a slow river, and a [Rhine river cruise](/destinations/rhine-river-cruise) covers similar country without packing and unpacking. Drive the [Romantic Road](/destinations/romantic-road) through Bavaria for walled towns, or head south to [Berchtesgaden](/destinations/berchtesgaden) for lakes and Alpine walks. In the east, [Saxon Switzerland](/destinations/saxon-switzerland) has sandstone towers and the Bastei bridge, and the [Harz steam railway](/destinations/harz-steam-railway) runs all year."
+    },
+    {
+      "heading": "Getting to Germany from the UK",
+      "text": "Most German cities are 1 to 2 hours' flight from the UK, with direct flights to Berlin, Cologne, Munich, Frankfurt, Hamburg, Düsseldorf and more. You can also go by train: Eurostar to Brussels, then a fast train gets you to Cologne in about 5 hours from London."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the best time to visit Germany?",
+      "answer": "May, June and September are best for cities and countryside: warm days and fewer crowds than August. Late November and December are the time for Christmas markets."
+    },
+    {
+      "question": "Which German city is best for a weekend break?",
+      "answer": "Berlin has the most to do, Cologne is the easiest to reach and get around, and Leipzig and Dresden are cheaper and quieter."
+    },
+    {
+      "question": "Can you get to Germany by train from the UK?",
+      "answer": "Yes. Take the Eurostar to Brussels and change for a fast train to Cologne, which takes about 5 hours from London in total."
+    }
+  ]
+}

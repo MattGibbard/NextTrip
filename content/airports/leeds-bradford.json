@@ -1,0 +1,32 @@
+{
+  "published": true,
+  "code": "LBA",
+  "name": "Leeds Bradford Airport",
+  "title": "Leeds Bradford Airport guide: terminals, airlines and getting there",
+  "intro": "Leeds Bradford has one terminal and no train station. Here's who flies from it and how to get there from Leeds, Bradford and Harrogate.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "The terminal",
+      "airlines": "Jet2 (the biggest), Ryanair, TUI and others",
+      "text": "One terminal with one security area. Jet2's early-morning wave makes 5am to 7am the busiest time."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to Leeds Bradford Airport",
+      "text": "- **Bus:** Flyer buses run from Leeds and Bradford city centres, and there are buses from Harrogate too.\n- **Car:** the airport is north-west of Leeds, on the A658. Roads around it are narrow and get busy, so allow extra time. There's a charge for the drop-off zone."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is there a train station at Leeds Bradford Airport?",
+      "answer": "No. Take a Flyer bus from Leeds or Bradford city centre."
+    },
+    {
+      "question": "How many terminals does Leeds Bradford Airport have?",
+      "answer": "One."
+    }
+  ]
+}

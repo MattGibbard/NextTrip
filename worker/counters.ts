@@ -14,7 +14,7 @@ export async function bump(db: D1Database, name: string): Promise<void> {
 }
 
 export const BOOK_KINDS = ["flights", "hotels", "things"] as const;
-export const BOOK_PLACES = ["draw_result", "idea_page", "been_page", "trip_plan", "holiday_picker", "destination_guide", "blog"] as const;
+export const BOOK_PLACES = ["draw_result", "idea_page", "been_page", "trip_plan", "holiday_picker", "destination_guide", "blog", "airport_guide"] as const;
 /** The other ways out of a blog post that get counted: to the holiday picker, to sign-in, and to a guide. */
 export const BLOG_TAPS = ["picker", "signin", "guide"] as const;
 

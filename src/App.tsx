@@ -25,7 +25,15 @@ const InfoPage = lazyView(() => import("./views/InfoPage").then((m) => m.InfoPag
 const BlogList = lazyView(() => import("./views/Blog").then((m) => m.BlogList));
 const BlogPost = lazyView(() => import("./views/Blog").then((m) => m.BlogPost));
 const HolidayPicker = lazyView(() => import("./views/HolidayPicker").then((m) => m.HolidayPicker));
+// The airport guides carry their own words and departures boards, so only their pages download them.
+const loadAirports = () => import("./views/AirportPage");
+const AirportPage = lazyView(() => loadAirports().then((m) => m.AirportPage));
+const AirportsIndex = lazyView(() => loadAirports().then((m) => m.AirportsIndex));
+const loadAirportData = () => import("./airportPages");
 
+
+/** The airport guides' words, once an airport page has fetched them. */
+let airportData: typeof import("./airportPages") | undefined;
 
 /** Fetches the code for the page at this address, if it's one that loads on its own. */
 export function preloadPage(pathname: string): Promise<unknown> {
@@ -35,6 +43,8 @@ export function preloadPage(pathname: string): Promise<unknown> {
   if (page === "creators") return CreatorsPage.preload();
   if (page === "how") return HowItWorksPage.preload();
   if (page === "picker" || page === "reveal" || page?.startsWith("pick:")) return HolidayPicker.preload();
+  if (page === "airports") return AirportsIndex.preload();
+  if (page?.startsWith("airport:")) return Promise.all([AirportPage.preload(), loadAirportData().then((m) => (airportData = m))]);
   if (listing(page)) return BlogList.preload();
   if (page?.startsWith("post:")) return BlogPost.preload();
   if (infoPage(pathname)) return InfoPage.preload();
@@ -85,9 +95,9 @@ export function App() {
   }, []);
 
   useEffect(() => {
-    // A guide or hub names itself (GuideView), as only the Guides pages know every guide. So does the holiday picker.
+    // A guide or hub names itself (GuideView), as only the Guides pages know every guide. So do the holiday picker and the airport guides.
     const page = publicPage(path);
-    if (!page?.startsWith("destination:") && page !== "picker" && page !== "reveal" && !page?.startsWith("pick:")) document.title = pageTitle(path);
+    if (!page?.startsWith("destination:") && page !== "picker" && page !== "reveal" && !page?.startsWith("pick:") && page !== "airports" && !page?.startsWith("airport:")) document.title = pageTitle(path);
   }, [path]);
 
   const page = publicPage(path);
@@ -97,6 +107,11 @@ export function App() {
   if (page === "picker") return <HolidayPicker />;
   if (page === "reveal") return <HolidayPicker reveal />;
   if (page?.startsWith("pick:")) return <HolidayPicker slug={page.slice("pick:".length)} />;
+  if (page === "airports") return <AirportsIndex />;
+  if (page?.startsWith("airport:")) {
+    const airport = airportData?.findAirport(page.slice("airport:".length));
+    return airport ? <AirportPage airport={airport} /> : <NotFound />;
+  }
   const info = infoPage(path);
   if (info) return <InfoPage page={info} />;
   if (page === "blog" || page?.startsWith("blog:") || page?.startsWith("tag:")) {

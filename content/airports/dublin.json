@@ -1,0 +1,45 @@
+{
+  "published": true,
+  "code": "DUB",
+  "name": "Dublin Airport",
+  "title": "Dublin Airport guide: terminals, airlines and getting there",
+  "intro": "Dublin has two terminals with separate security and drop-off points, and US flights clear immigration before they leave. Here's which airline uses which terminal.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "Terminal 1",
+      "airlines": "Ryanair and many other short-haul airlines",
+      "text": "The older terminal, and the busier one in the early morning."
+    },
+    {
+      "name": "Terminal 2",
+      "airlines": "Aer Lingus and most flights to the United States",
+      "text": "Home to US preclearance, where you go through US immigration before you fly, so you land in the States as a domestic passenger. Allow extra time for it."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to Dublin Airport",
+      "text": "- **Bus:** there's no train. Dublin Express, Aircoach and Dublin Bus run from the city centre, about 30 to 45 minutes depending on traffic.\n- **Car:** the airport is just off the M1 and M50. Each terminal has its own drop-off, so make sure your driver knows which one."
+    },
+    {
+      "heading": "Moving between terminals",
+      "text": "Terminals 1 and 2 are a few minutes' walk apart, but they have separate security, so going to the wrong one costs you time on a busy morning."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Which terminal is Ryanair at Dublin Airport?",
+      "answer": "Terminal 1."
+    },
+    {
+      "question": "Which terminal is Aer Lingus at Dublin Airport?",
+      "answer": "Terminal 2."
+    },
+    {
+      "question": "What is US preclearance at Dublin Airport?",
+      "answer": "You go through US immigration and customs in Dublin, in Terminal 2, before you fly, so you arrive in the US as a domestic passenger."
+    }
+  ]
+}

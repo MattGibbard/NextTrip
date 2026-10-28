@@ -1,0 +1,36 @@
+{
+  "published": true,
+  "code": "LTN",
+  "name": "Luton Airport",
+  "title": "Luton Airport guide: terminals, airlines and getting there",
+  "intro": "Luton has one terminal, served by easyJet, Wizz Air, Ryanair and TUI. Here's how to get there, including the DART shuttle from the station.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "The terminal",
+      "airlines": "easyJet, Wizz Air, Ryanair, TUI and others",
+      "text": "A single terminal with one security area. Some gates are a long walk from the shops, so leave the lounge when your gate shows."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to Luton Airport",
+      "text": "- **Train and DART:** trains from St Pancras (Thameslink and the East Midlands Railway Luton Airport Express) stop at Luton Airport Parkway, about 25 to 35 minutes from London. The Luton DART shuttle then takes about 4 minutes to the terminal. Through tickets include the DART.\n- **Coach:** from London Victoria and other cities.\n- **Car:** Luton is about 2 miles from junction 10 of the M1. There's a charge for the drop-off zone outside the terminal."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many terminals does Luton Airport have?",
+      "answer": "One."
+    },
+    {
+      "question": "What is the Luton DART?",
+      "answer": "A shuttle train between Luton Airport Parkway station and the terminal. It runs every few minutes and takes about 4 minutes."
+    },
+    {
+      "question": "How do you get from London to Luton Airport?",
+      "answer": "Take a train from St Pancras to Luton Airport Parkway, then the DART shuttle. It takes around 40 minutes in all."
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 // text. The full guide loads on its own page (src/destinations.ts). Hubs (content/hubs) work the same
 // way: every page knows enough to link to them, and their words load on their own page (src/hubs.ts).
 // So do blog posts (content/blog, src/blog.ts).
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import countries from "i18n-iso-countries";
 import en from "i18n-iso-countries/langs/en.json" with { type: "json" };
 
@@ -34,7 +34,11 @@ const HUB_CARD_FIELDS = ["published", "kind", "holiday_type", "country", "month"
 /** The fields links to a blog post need. */
 const POST_CARD_FIELDS = ["published", "title", "date", "updated", "intro", "seo_title", "author", "tags"];
 
+/** The fields links to an airport page need. */
+const AIRPORT_CARD_FIELDS = ["published", "code", "name"];
+
 const GUIDES = new URL("../content/destinations/", import.meta.url);
+const BLOG = new URL("../content/blog/", import.meta.url);
 const HUBS = new URL("../content/hubs/", import.meta.url);
 const IMAGE_SIZES = new URL("../content/destination-images.json", import.meta.url);
 const POSITIONS = new URL("../content/destinations-geo.json", import.meta.url);
@@ -43,6 +47,8 @@ const MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "
 
 /** How many of a post's places its page gets: enough for its booking tiles and departures board. */
 const POST_PLACES = 8;
+/** How many places an airport page's departures board can show. */
+const AIRPORT_PLACES = 12;
 
 /** Reads a JSON file, or undefined when it isn't there. */
 async function readJson(url) {
@@ -93,10 +99,23 @@ export async function fullPost(raw) {
   const text = [...(Array.isArray(raw.sections) ? raw.sections : []).map((s) => s?.text ?? ""), ...(Array.isArray(raw.faqs) ? raw.faqs : []).map((f) => f?.answer ?? "")].join("\n");
   const linked = [...text.matchAll(/\]\(\/destinations\/([a-z0-9-]+)/g)].map((m) => m[1]);
   const cover = typeof raw.cover === "string" && !(typeof raw.cover_image === "string" && raw.cover_image.trim()) ? raw.cover.trim() : "";
+  const [places, sizes] = await Promise.all([placesFor([cover, ...linked], POST_PLACES), readJson(IMAGE_SIZES)]);
+  // Sections' own photos, with their sizes like the cover's.
+  const sections = Array.isArray(raw.sections)
+    ? raw.sections.map((s) => (s && typeof s.image === "string" && s.image.trim() && sizes?.[s.image.trim()] ? { ...s, image_size: sizes[s.image.trim()] } : s))
+    : raw.sections;
+  return { ...raw, sections, places };
+}
+
+/**
+ * Published guides by slug, each as a guide's page would read it (src/destinations.ts readDestination,
+ * which a test holds this to), skipping any that are missing or unpublished, at most `max` of them.
+ */
+async function placesFor(slugs, max) {
   const [sizes, positions, everyday] = await Promise.all([readJson(IMAGE_SIZES), readJson(POSITIONS), readJson(COUNTRY_NAMES)]);
   const places = [];
-  for (const slug of [...new Set([cover, ...linked].filter(Boolean))]) {
-    if (places.length >= POST_PLACES) break;
+  for (const slug of [...new Set(slugs.filter(Boolean))]) {
+    if (places.length >= max) break;
     const g = await readJson(new URL(`${slug}.json`, GUIDES));
     if (!g || g.published !== true) continue;
     const str = (v) => (typeof v === "string" ? v.trim() : "");
@@ -122,11 +141,37 @@ export async function fullPost(raw) {
       }),
     });
   }
-  // Sections' own photos, with their sizes like the cover's.
-  const sections = Array.isArray(raw.sections)
-    ? raw.sections.map((s) => (s && typeof s.image === "string" && s.image.trim() && sizes?.[s.image.trim()] ? { ...s, image_size: sizes[s.image.trim()] } : s))
-    : raw.sections;
-  return { ...raw, sections, places };
+  return places;
+}
+
+/**
+ * An airport page in full (content/airports), with the blog posts about that airport (by their
+ * `airport` field) and the places those posts link to, for its departures board. Direct-flights posts
+ * come first, as their places are the ones you can fly to without changing.
+ */
+export async function fullAirport(raw) {
+  const code = typeof raw.code === "string" ? raw.code.trim().toUpperCase() : "";
+  const posts = [];
+  const linked = [];
+  const files = code ? (await readdir(BLOG)).filter((f) => f.endsWith(".json")).sort() : [];
+  for (const file of files) {
+    const p = await readJson(new URL(file, BLOG));
+    if (!p || p.published !== true || typeof p.airport !== "string" || p.airport.trim().toUpperCase() !== code) continue;
+    const slug = file.replace(/\.json$/, "");
+    const direct = /direct/.test(slug);
+    posts.push({ slug, title: p.title ?? slug, intro: p.intro ?? "", direct });
+    const text = [...(Array.isArray(p.sections) ? p.sections : []).map((s) => s?.text ?? ""), ...(Array.isArray(p.faqs) ? p.faqs : []).map((f) => f?.answer ?? "")].join("\n");
+    const slugs = [...text.matchAll(/\]\(\/destinations\/([a-z0-9-]+)/g)].map((m) => m[1]);
+    if (direct) linked.unshift(...slugs);
+    else linked.push(...slugs);
+  }
+  posts.sort((a, b) => Number(b.direct) - Number(a.direct) || a.slug.localeCompare(b.slug));
+  return { ...raw, posts: posts.map(({ direct: _d, ...p }) => p), places: await placesFor(linked, AIRPORT_PLACES) };
+}
+
+/** An airport page's card fields: enough to link to it. */
+export function airportCard(raw) {
+  return Object.fromEntries(AIRPORT_CARD_FIELDS.filter((k) => k in raw).map((k) => [k, raw[k]]));
 }
 
 /** A hub's card fields. */
@@ -175,13 +220,14 @@ export function destinationCards() {
     enforce: "pre",
     async load(id) {
       const [file, query] = id.split("?");
-      if ((query !== "card" && query !== "post") || !file.endsWith(".json")) return null;
+      if ((query !== "card" && query !== "post" && query !== "airport") || !file.endsWith(".json")) return null;
       this.addWatchFile(file);
       const raw = JSON.parse(await readFile(file, "utf8"));
       if (query === "post") return { code: `export default ${JSON.stringify(await fullPost(raw))};`, moduleType: "js" };
+      if (query === "airport") return { code: `export default ${JSON.stringify(await fullAirport(raw))};`, moduleType: "js" };
       const card = /[\\/]content[\\/]site[\\/]popular-guides\.json$/.test(file)
         ? await popularGuides(raw)
-        : /[\\/]content[\\/]hubs[\\/]/.test(file) ? hubCard(raw) : /[\\/]content[\\/]blog[\\/]/.test(file) ? await postCard(raw) : guideCard(raw);
+        : /[\\/]content[\\/]hubs[\\/]/.test(file) ? hubCard(raw) : /[\\/]content[\\/]airports[\\/]/.test(file) ? airportCard(raw) : /[\\/]content[\\/]blog[\\/]/.test(file) ? await postCard(raw) : guideCard(raw);
       return { code: `export default ${JSON.stringify(card)};`, moduleType: "js" };
     },
   };

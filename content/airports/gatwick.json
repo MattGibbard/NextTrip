@@ -1,0 +1,45 @@
+{
+  "published": true,
+  "code": "LGW",
+  "name": "Gatwick Airport",
+  "title": "Gatwick Airport guide: terminals, airlines and getting there",
+  "intro": "Gatwick has two terminals, North and South, and turning up at the wrong one is the easiest way to lose time. Here's which airline uses which, and how to get to the airport.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "North Terminal",
+      "airlines": "easyJet and some other airlines",
+      "text": "easyJet, Gatwick's biggest airline, flies from the North Terminal. It's linked to the South Terminal and the station by a free shuttle train."
+    },
+    {
+      "name": "South Terminal",
+      "airlines": "British Airways, Wizz Air, Jet2 and others",
+      "text": "Gatwick's railway station is part of the South Terminal, so you walk straight from the platform to check-in."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to Gatwick",
+      "text": "- **Gatwick Express:** non-stop from London Victoria, about 30 minutes.\n- **Thameslink:** from London Bridge, Farringdon and St Pancras, and on to Bedford and Cambridge, so useful from north of London too.\n- **Southern:** from Victoria and from the south coast, including Brighton.\n- **Car:** Gatwick is off junction 9 of the M23. Both terminals charge for the drop-off zone."
+    },
+    {
+      "heading": "Moving between terminals",
+      "text": "A free shuttle train runs between the North and South Terminals every few minutes and takes about 2 minutes. If you arrive by train and fly from the North Terminal, allow 10 extra minutes for it."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Which terminal is easyJet at Gatwick?",
+      "answer": "The North Terminal."
+    },
+    {
+      "question": "Which terminal is British Airways at Gatwick?",
+      "answer": "The South Terminal."
+    },
+    {
+      "question": "Which Gatwick terminal is the train station in?",
+      "answer": "The South Terminal. For the North Terminal, take the free shuttle train, which takes about 2 minutes."
+    }
+  ]
+}

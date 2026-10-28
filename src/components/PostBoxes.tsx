@@ -15,6 +15,7 @@ import { geoText } from "../../shared/visitor";
 import type { From } from "../../shared/visitor";
 import { useFrom, useFromOnceUp } from "../visitor";
 import { BookCard, Commission } from "./BookCard";
+import { airportGuide } from "../airports";
 import { Geo } from "./Geo";
 
 /** How many places a post shows to book, and how many rows its departures board has. */
@@ -111,18 +112,25 @@ function TileLink({ href, kind, label }: { href: string; kind: "flights" | "hote
   );
 }
 
-/** The places an airport post links to, as departures from that airport, with the picker set to fly from there. */
-function AirportBoard({ places, airport }: { places: PostPlace[]; airport: From }) {
-  const rows = places.filter((p) => p.to_code !== airport.code).slice(0, BOARD_ROWS);
+/**
+ * The places an airport post links to, as departures from that airport, with the picker set to fly from
+ * there. On a post it also links to the airport's own guide, if it has one; the airport guide shows the
+ * same board for every post about it, with more rows.
+ */
+export function AirportBoard({ places, airport, place = "blog", rows: most = BOARD_ROWS }: { places: PostPlace[]; airport: From; place?: "blog" | "airport_guide"; rows?: number }) {
+  const rows = places.filter((p) => p.to_code !== airport.code).slice(0, most);
+  const guide = place === "blog" ? airportGuide(airport.code) : undefined;
   return (
     <Board
       heading={<>Where could you go from {airport.name}?</>}
       code={airport.code}
       rows={rows}
       hours={(p) => <Hours from={airport} to={p} />}
-      flights={(p) => (p.to_code ? flightLink(airport.code, p.to_code, GUESTS, "blog", { currency: airport.currency }) : null)}
+      flights={(p) => (p.to_code ? flightLink(airport.code, p.to_code, GUESTS, place, { currency: airport.currency }) : null)}
       picker={`/holiday-picker?from=${airport.code}`}
       pickerLabel={`Pick a holiday from ${airport.name}`}
+      place={place}
+      guide={guide && { href: guide.path, label: `${guide.name} guide: terminals and getting there` }}
     />
   );
 }
@@ -149,6 +157,7 @@ function VisitorBoard({ places }: { places: PostPlace[] }) {
       flights={(p) => (p.to_code ? flightLink(book.code, p.to_code, GUESTS, "blog", { currency: book.currency }) : null)}
       picker={mainAirport(book.code) && book.code !== "LON" ? `/holiday-picker?from=${book.code}` : "/holiday-picker"}
       pickerLabel="Pick a holiday for me"
+      place="blog"
     />
   );
 }
@@ -167,6 +176,8 @@ function Board({
   flights,
   picker,
   pickerLabel,
+  place,
+  guide,
 }: {
   heading: ReactNode;
   code: ReactNode;
@@ -175,7 +186,12 @@ function Board({
   flights: (p: PostPlace) => string | null;
   picker: string;
   pickerLabel: string;
+  /** Where the board is, for the stats page's counts. Taps on an airport guide's board aren't blog taps. */
+  place: "blog" | "airport_guide";
+  /** A link on to the airport's own guide. */
+  guide?: { href: string; label: string };
 }) {
+  const blogClick = (tap: "picker" | "guide") => place === "blog" && api.blogClick(tap);
   return (
     <section className="bl-board" aria-labelledby="bl-board">
       <div className="bl-board-head">
@@ -191,13 +207,13 @@ function Board({
             return (
               <li key={p.slug}>
                 <span className="lit">{p.to_code || "···"}</span>
-                <a href={destinationPath(p.slug)} onClick={() => api.blogClick("guide")}>
+                <a href={destinationPath(p.slug)} onClick={() => blogClick("guide")}>
                   {p.name.toUpperCase()}
                 </a>
                 <span>{hours(p)}</span>
                 <span className="bl-board-best">{best ? best.toUpperCase() : ""}</span>
                 {link ? (
-                  <a className="bl-board-fly" href={link} target="_blank" rel="sponsored noopener" onClick={() => api.bookClick("flights", "blog")} aria-label={`Flights to ${p.name}`}>
+                  <a className="bl-board-fly" href={link} target="_blank" rel="sponsored noopener" onClick={() => api.bookClick("flights", place)} aria-label={`Flights to ${p.name}`}>
                     FLIGHTS ↗
                   </a>
                 ) : (
@@ -209,11 +225,16 @@ function Board({
         </ul>
       )}
       <div className="bl-board-foot">
-        <a className="btn bright" href={picker} onClick={() => api.blogClick("picker")}>
+        <a className="btn bright" href={picker} onClick={() => blogClick("picker")}>
           🎲 {pickerLabel}
         </a>
         <p>Answer five quick questions and the board picks somewhere for you. Free, no sign-up.</p>
       </div>
+      {guide && (
+        <p className="bl-board-guide">
+          <a href={guide.href}>{guide.label} →</a>
+        </p>
+      )}
       <p className="bl-board-note">Rough flight times. Flights open on Aviasales, and we may earn a small commission if you book.</p>
     </section>
   );

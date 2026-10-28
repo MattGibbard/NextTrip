@@ -1,0 +1,32 @@
+{
+  "published": true,
+  "code": "BHX",
+  "name": "Birmingham Airport",
+  "title": "Birmingham Airport guide: terminals, airlines and getting there",
+  "intro": "Birmingham has one terminal, next to the NEC and Birmingham International station. Here's who flies from it and how to get there.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "The terminal",
+      "airlines": "Jet2, TUI, Ryanair, Emirates and others",
+      "text": "One terminal with one security area, so you can't go to the wrong one."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to Birmingham Airport",
+      "text": "- **Train:** Birmingham International station is on the main line, about 10 minutes from Birmingham New Street and with direct trains from London Euston. The free Air-Rail Link shuttle takes you from the station to the terminal in a couple of minutes.\n- **Car:** the airport is off junction 6 of the M42. There's a charge for the drop-off area outside the terminal."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many terminals does Birmingham Airport have?",
+      "answer": "One."
+    },
+    {
+      "question": "Is there a train station at Birmingham Airport?",
+      "answer": "Yes, Birmingham International, linked to the terminal by the free Air-Rail Link shuttle."
+    }
+  ]
+}

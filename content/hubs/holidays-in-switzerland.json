@@ -1,0 +1,42 @@
+{
+  "published": true,
+  "kind": "country",
+  "country": "CH",
+  "name": "Switzerland",
+  "title": "Holidays in Switzerland",
+  "intro": "Lakes, glaciers, scenic trains and some of the best skiing in Europe. Here's where to go on holiday in Switzerland, how long to stay and the best time to visit.",
+  "seo_title": "Where to go in Switzerland: the best places for a holiday",
+  "seo_description": "",
+  "sections": [
+    {
+      "heading": "Scenic train journeys",
+      "text": "Switzerland's trains are a holiday on their own. The [Glacier Express](/destinations/glacier-express) runs between Zermatt and St Moritz in about 8 hours, the [Bernina Express](/destinations/bernina-express) climbs over the Alps and down into Italy, and the [GoldenPass Express](/destinations/goldenpass-express) links Lake Geneva with Interlaken. June to September is best for views, though the Glacier and Bernina Express also run in winter, through the snow."
+    },
+    {
+      "heading": "Lakes and mountains in summer",
+      "text": "[Interlaken](/destinations/interlaken) sits between two lakes with the Jungfrau above it, and is the easiest base for mountain railways, walks and adventure sports. [Lake Lucerne](/destinations/lake-lucerne) has paddle steamers and a pretty old town. For something warmer, [Lugano](/destinations/lugano) is in the Italian-speaking south, with palm trees and Italian food."
+    },
+    {
+      "heading": "Skiing in Switzerland",
+      "text": "[Zermatt](/destinations/zermatt) has the Matterhorn and skiing that runs late into spring, and its glacier means you can ski there in summer too. [Verbier](/destinations/verbier) is bigger, with more off-piste and a livelier evening scene. Both are car-free or nearly so, and both are expensive, so a week's ski pass and food are worth pricing up before you book."
+    },
+    {
+      "heading": "Getting there and keeping costs down",
+      "text": "Geneva, Zurich and Basel are about 1 hour 45 minutes' flight from the UK. Switzerland is one of the most expensive countries in Europe, so look at a Swiss Travel Pass if you'll take a lot of trains, and supermarket picnics for lunch."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the best time to visit Switzerland?",
+      "answer": "June to September for lakes, walks and scenic trains. December to March for skiing, with Zermatt good into April."
+    },
+    {
+      "question": "Which Swiss train journey is the most scenic?",
+      "answer": "The Glacier Express is the most famous, but the Bernina Express is shorter and has the most dramatic climb, over the Alps into Italy."
+    },
+    {
+      "question": "Is Switzerland expensive for a holiday?",
+      "answer": "Yes, it's one of the most expensive countries in Europe. Trains, hotels and eating out all cost more than in neighbouring countries, so budget for that."
+    }
+  ]
+}

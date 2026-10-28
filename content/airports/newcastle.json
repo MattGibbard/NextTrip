@@ -1,0 +1,32 @@
+{
+  "published": true,
+  "code": "NCL",
+  "name": "Newcastle Airport",
+  "title": "Newcastle Airport guide: terminals, airlines and getting there",
+  "intro": "Newcastle has one terminal and its own Metro station. Here's who flies from it and how to get there.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "The terminal",
+      "airlines": "Jet2, easyJet, TUI, Emirates and others",
+      "text": "One terminal with one security area. Jet2, easyJet and TUI all have aircraft based here, so early mornings are busiest."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to Newcastle Airport",
+      "text": "- **Metro:** the airport has its own station on the Green line, connected to the terminal. It's about 25 minutes from Newcastle city centre.\n- **Car:** the airport is about 6 miles north-west of the city, off the A696. The express drop-off by the terminal charges by the minute. A free drop-off zone at Callerton Parkway has a shuttle to the terminal if you allow extra time."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get from Newcastle to the airport by Metro?",
+      "answer": "Take the Green line to Airport. It takes about 25 minutes from the city centre."
+    },
+    {
+      "question": "How many terminals does Newcastle Airport have?",
+      "answer": "One."
+    }
+  ]
+}

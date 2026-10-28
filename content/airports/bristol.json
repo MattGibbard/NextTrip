@@ -1,0 +1,32 @@
+{
+  "published": true,
+  "code": "BRS",
+  "name": "Bristol Airport",
+  "title": "Bristol Airport guide: terminals, airlines and getting there",
+  "intro": "Bristol has one terminal and no train station, so getting there is the part to plan. Here's who flies from it and the best ways in.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "The terminal",
+      "airlines": "easyJet, Ryanair, TUI and others",
+      "text": "One terminal. A big share of flights leave between about 6am and 8am, so early mornings are the busiest time."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to Bristol Airport",
+      "text": "- **Bus:** the Airport Flyer runs from Bristol Temple Meads station and the city centre, about 30 minutes, and there are buses from Bath and Weston-super-Mare too.\n- **Car:** the airport is on the A38, about 8 miles south of Bristol. Allow for traffic through the city at rush hour. There's a charge for the drop-off zone."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is there a train station at Bristol Airport?",
+      "answer": "No. Take the train to Bristol Temple Meads, then the Airport Flyer bus, about 30 minutes."
+    },
+    {
+      "question": "How many terminals does Bristol Airport have?",
+      "answer": "One."
+    }
+  ]
+}

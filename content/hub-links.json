@@ -165,6 +165,11 @@
     "icon": "🇫🇷"
   },
   {
+    "slug": "holidays-in-germany",
+    "name": "Germany",
+    "icon": "🇩🇪"
+  },
+  {
     "slug": "holidays-in-greece",
     "name": "Greece",
     "icon": "🇬🇷"
@@ -173,6 +178,11 @@
     "slug": "holidays-in-italy",
     "name": "Italy",
     "icon": "🇮🇹"
+  },
+  {
+    "slug": "holidays-in-japan",
+    "name": "Japan",
+    "icon": "🇯🇵"
   },
   {
     "slug": "holidays-in-mexico",
@@ -188,6 +198,11 @@
     "slug": "holidays-in-spain",
     "name": "Spain",
     "icon": "🇪🇸"
+  },
+  {
+    "slug": "holidays-in-switzerland",
+    "name": "Switzerland",
+    "icon": "🇨🇭"
   },
   {
     "slug": "holidays-in-the-usa",

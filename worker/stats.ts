@@ -182,6 +182,7 @@ const BOOK_PLACE_NAMES: Record<string, string> = {
   holiday_picker: "Holiday picker",
   destination_guide: "Destination guides",
   blog: "Blog posts",
+  airport_guide: "Airport guides",
 };
 const BLOG_TAP_NAMES: Record<string, string> = { picker: "🎲 To the holiday picker", signin: "🎟️ To sign up", guide: "📖 To a guide" };
 

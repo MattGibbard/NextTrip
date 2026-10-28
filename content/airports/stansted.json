@@ -1,0 +1,36 @@
+{
+  "published": true,
+  "code": "STN",
+  "name": "Stansted Airport",
+  "title": "Stansted Airport guide: terminals, airlines and getting there",
+  "intro": "Stansted has one terminal, so you can't go to the wrong one. Here's who flies from it, how to get there from London and the east of England, and what to expect inside.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "The terminal",
+      "airlines": "Ryanair (the biggest by far), Jet2, easyJet, TUI and others",
+      "text": "After security, the departure lounge leads to gates in three satellites, most reached by a short shuttle train. The time to your gate shows on the screens, so check it before you sit down to eat."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to Stansted",
+      "text": "- **Stansted Express:** from London Liverpool Street, about 50 minutes, also stopping at Tottenham Hale.\n- **Train from the north:** CrossCountry trains run from Cambridge, Peterborough and Birmingham.\n- **Coach:** National Express and others run from London and around East Anglia, through the night too.\n- **Car:** Stansted is off junction 8 of the M11. There's a charge for the drop-off zone outside the terminal."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many terminals does Stansted have?",
+      "answer": "One. Gates are in three satellite buildings, most reached by shuttle train."
+    },
+    {
+      "question": "How long does the Stansted Express take?",
+      "answer": "About 50 minutes from London Liverpool Street."
+    },
+    {
+      "question": "Which airlines fly from Stansted?",
+      "answer": "Ryanair is by far the biggest, with Jet2, easyJet, TUI and others too."
+    }
+  ]
+}

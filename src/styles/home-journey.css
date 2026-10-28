@@ -1,0 +1,1044 @@
+/* The home page: one idea's journey (HomePage.tsx), from the 2026-10 "One idea's journey" design.
+   Inlined into the prerendered home page by scripts/prerender.mjs, so it draws without a second download. */
+
+.hj {
+  /* The departures board's flaps and statuses, named as in the design system. Fixed in both themes. */
+  --board-tile: #161d1a;
+  --board-tile-edge: #222b27;
+  --board-late: #fb923c;
+  --board-off: #5f6b66;
+}
+.hj .lp-kicker {
+  letter-spacing: 0.08em;
+}
+.hj h1,
+.hj h2,
+.hj h3 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Standby tickets ---------- */
+
+.hj-ticket {
+  display: flex;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card-lg);
+  box-shadow: var(--shadow-lift);
+  overflow: hidden;
+  text-align: left;
+  color: var(--text);
+}
+.hj-ticket-stub {
+  flex: 0 0 26px;
+  background: var(--standby);
+}
+.hj-ticket-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 12px 16px;
+  border-left: 2px dashed var(--standby-line);
+}
+.hj-ticket-from {
+  font: 500 var(--text-2) / 1.2 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--standby-ink);
+}
+.hj-ticket strong {
+  font-size: var(--text-8);
+  white-space: nowrap;
+}
+.hj-ticket-meta {
+  font-size: var(--text-4);
+  color: var(--muted);
+  white-space: nowrap;
+}
+/* Ella's Lake Garda ticket, the idea the page follows. */
+.hj-garda {
+  border: 2px solid var(--standby);
+}
+.hj-garda .hj-ticket-stub {
+  flex-basis: 30px;
+}
+.hj-garda:not(.mini) .hj-ticket-body {
+  padding: 16px 18px;
+  gap: 6px;
+}
+.hj-garda:not(.mini) strong {
+  font-size: var(--text-13);
+  font-weight: 800;
+}
+.hj-garda:not(.mini) .hj-ticket-meta {
+  font-size: var(--text-6);
+  white-space: normal;
+}
+.hj-ticket.mini {
+  flex: 0 1 auto;
+  border-radius: var(--radius-row);
+  box-shadow: var(--shadow-float);
+  transform: rotate(var(--r, 0deg));
+}
+.hj-ticket.mini .hj-ticket-stub {
+  flex-basis: 14px;
+}
+.hj-ticket.mini .hj-ticket-body {
+  padding: 6px 12px 7px;
+  gap: 1px;
+}
+.hj-ticket.mini .hj-ticket-from {
+  font-size: var(--text-1);
+}
+.hj-ticket.mini strong {
+  font-size: var(--text-7);
+}
+
+/* ---------- Hero ---------- */
+
+.hj-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0 130px;
+  scroll-margin-top: 16px;
+}
+.hj-hero-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  text-align: center;
+}
+.hj-hero h1 {
+  max-width: 680px;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+.hj-hero .lp-lead {
+  max-width: 560px;
+  font-size: var(--text-12);
+}
+.hj-hero .lp-form,
+.hj-hero .lp-sent {
+  width: 100%;
+  max-width: 480px;
+  margin-top: 8px;
+  text-align: left;
+}
+.hj-hero .lp-form .muted.small {
+  text-align: center;
+  font-size: var(--text-4);
+}
+.hj-note {
+  text-align: center;
+  font-size: var(--text-6);
+  color: var(--muted);
+}
+@media (min-width: 600px) {
+  /* The design keeps the label for screen readers only, beside the box on wider screens. */
+  .hj-hero .lp-form > label:first-child {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+/* The tickets around the headline: decoration. Each floats in from its own edge, then drifts. */
+.hj-float {
+  --from: -1;
+  transform: rotate(var(--r, 0deg));
+}
+.hj-floats > .hj-float {
+  position: absolute;
+}
+.hj-strip {
+  position: relative;
+  display: none;
+}
+.hj-strip.above {
+  height: 150px;
+  margin: -96px 0 24px;
+}
+.hj-strip.below {
+  height: 110px;
+  margin-top: 24px;
+}
+.hj-strip .hj-float {
+  position: absolute;
+}
+.hj-strip .hj-ticket strong {
+  font-size: var(--text-7);
+}
+.hj-strip .hj-ticket-body {
+  padding: 10px 14px;
+  gap: 3px;
+}
+.hj-strip .hj-ticket-stub {
+  flex-basis: 22px;
+}
+.hj-strip.above .hj-float:nth-child(1) {
+  left: -24px;
+  top: 28px;
+}
+.hj-strip.above .hj-float:nth-child(2) {
+  right: -18px;
+  top: 18px;
+}
+.hj-strip.above .hj-float:nth-child(3) {
+  left: max(96px, 26%);
+  top: 96px;
+}
+.hj-strip.below .hj-float:nth-child(1) {
+  left: 10px;
+  top: 20px;
+}
+.hj-strip.below .hj-float:nth-child(2) {
+  right: -30px;
+  top: 34px;
+}
+/* Phones and tablets: three above the headline and two below the form, instead of six around it. */
+@media (max-width: 1099px) {
+  .hj-floats > .hj-float {
+    display: none;
+  }
+  .hj-strip {
+    display: block;
+  }
+  .hj-hero {
+    padding: 0 0 48px;
+  }
+  .hj-strip.above {
+    margin: 0 0 20px;
+  }
+}
+@media (max-width: 599px) {
+  .hj-hero-text {
+    gap: 16px;
+  }
+  .hj-hero .lp-lead {
+    font-size: var(--text-9);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hj-float {
+    animation: hj-float-in 0.9s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+    animation-delay: calc(0.15s + var(--i, 0) * 0.12s);
+  }
+  .hj-float > .hj-ticket {
+    animation: hj-drift 7s ease-in-out infinite alternate;
+    animation-delay: calc(1.1s + var(--i, 0) * -1.3s);
+  }
+}
+@keyframes hj-float-in {
+  from {
+    opacity: 0;
+    transform: translateX(calc(var(--from) * 160px)) rotate(calc(var(--r, 0deg) + var(--from) * -12deg));
+  }
+}
+@keyframes hj-drift {
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate(4px, -10px) rotate(1.5deg);
+  }
+}
+
+/* ---------- The journey ---------- */
+
+.hj-journey {
+  /* Words slide in from the side, so nothing may poke out sideways. */
+  overflow-x: clip;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 100px 0 110px;
+}
+.hj-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.hj-intro h2 {
+  max-width: 620px;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.1;
+}
+.hj-chapter {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 56px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.hj-chapter.flip .hj-chapter-text {
+  order: 2;
+}
+.hj-chapter-text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.hj-num {
+  font: 500 4rem / 1 var(--mono);
+  color: var(--flight-line);
+}
+.hj-num.standby {
+  color: var(--standby-line);
+}
+.hj-chapter h3 {
+  font-size: var(--text-19);
+  line-height: 1.15;
+}
+.hj-chapter p {
+  font-size: var(--text-10);
+  line-height: 1.5;
+  color: var(--muted);
+}
+.hj-chapter p a {
+  color: var(--accent);
+  font-weight: 600;
+}
+@media (max-width: 899px) {
+  .hj-journey {
+    padding: 48px 0 56px;
+  }
+  .hj-intro {
+    align-items: flex-start;
+    padding-bottom: 8px;
+    text-align: left;
+  }
+  .hj-chapter {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .hj-chapter.flip .hj-chapter-text {
+    order: 0;
+  }
+  .hj-num {
+    font-size: 2.75rem;
+  }
+  .hj-chapter h3 {
+    font-size: var(--text-16);
+  }
+  .hj-chapter p {
+    font-size: var(--text-8);
+  }
+}
+
+.hj-visual {
+  position: relative;
+  border-radius: var(--radius-card-lg);
+}
+
+/* 01: the pool of ideas */
+.hj-pool {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.hj-pool .hj-garda {
+  grid-column: 1 / -1;
+}
+.hj-pool-idea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-row);
+  padding: 12px 14px;
+  font-size: var(--text-7);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 02: points in secret */
+.hj-points {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.hj-person,
+.hj-mine {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: var(--text-7);
+}
+.hj-person-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hj-dot {
+  flex: 0 0 24px;
+  height: 24px;
+  border-radius: var(--radius-round);
+}
+.hj-locked {
+  font: 500 var(--text-3) var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.hj-mine {
+  grid-column: 1 / -1;
+  border-color: var(--accent);
+}
+.hj-mine-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.hj-left {
+  font-size: var(--text-17);
+  font-weight: 800;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.hj-mine-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.hj-mine-row.veto {
+  color: var(--standby-ink);
+}
+.hj-person.waiting {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  border-style: dashed;
+}
+@media (max-width: 599px) {
+  .hj-pool,
+  .hj-points {
+    padding: 14px;
+    gap: 8px;
+  }
+  .hj-person:not(.waiting) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  .hj-person:not(.waiting) .hj-locked {
+    font-size: 0;
+  }
+  .hj-person:not(.waiting) .hj-locked::before {
+    content: "✓";
+    font-size: var(--text-3);
+  }
+  .hj-dot {
+    flex-basis: 20px;
+    height: 20px;
+  }
+  .hj-mine {
+    padding: 14px;
+    gap: 8px;
+  }
+  .hj-left {
+    font-size: var(--text-15);
+  }
+}
+
+/* 03: the departures board */
+.hj-board {
+  background: var(--board);
+  color: var(--on-photo);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hj-board-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  font: 500 var(--text-3) var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--board-muted);
+}
+.hj-board-head span:first-child {
+  color: var(--board-lit);
+}
+.hj-board-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 44px;
+  padding: 12px;
+  border-top: 1px solid var(--board-line);
+}
+.hj-board-row.win {
+  border: 0;
+  border-radius: var(--radius-control);
+  background: color-mix(in srgb, var(--board-lit) 10%, transparent);
+}
+.hj-board-row.win + .hj-board-row {
+  border-top: 0;
+}
+.hj-tiles {
+  display: flex;
+  gap: 3px;
+  flex: 0 0 auto;
+}
+.hj-tile {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 34px;
+  background: var(--board-tile);
+  border: 1px solid var(--board-tile-edge);
+  border-radius: var(--radius-flap);
+  font: 500 var(--text-12) var(--mono);
+  color: var(--on-photo);
+}
+.hj-tile::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px solid rgb(0 0 0 / 0.45);
+}
+.hj-board-place {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: var(--board-dim);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hj-board-row.win .hj-ticket {
+  margin-right: auto;
+}
+.hj-board-row.off .hj-board-place {
+  color: var(--board-off);
+  text-decoration: line-through;
+}
+.hj-board-status {
+  margin-left: auto;
+  font: 500 var(--text-4) var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.win .hj-board-status {
+  color: var(--board-lit);
+}
+.late .hj-board-status {
+  color: var(--board-late);
+}
+.off .hj-board-status {
+  color: var(--board-off);
+}
+@media (max-width: 599px) {
+  .hj-board {
+    padding: 14px;
+    gap: 0;
+  }
+  .hj-board-row {
+    gap: 10px;
+    padding: 10px 8px;
+    font-size: var(--text-7);
+  }
+  .hj-tiles {
+    gap: 2px;
+  }
+  .hj-tile {
+    width: 20px;
+    height: 28px;
+    font-size: var(--text-8);
+  }
+  .hj-board-status {
+    font-size: var(--text-3);
+  }
+  .hj-board-row.win .hj-board-status {
+    font-size: 0;
+  }
+  .hj-board-row.win .hj-board-status::before {
+    content: "Boarding";
+    font-size: var(--text-3);
+  }
+}
+
+/* 04: the boarding pass */
+.hj-plan {
+  padding-top: 18px;
+}
+.hj-plan .pinned {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 42%;
+}
+.hj-pass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pass);
+  box-shadow: var(--shadow-departure);
+  overflow: hidden;
+}
+.hj-pass-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  padding: 28px 24px 20px;
+  background: var(--flight);
+  color: var(--on-photo);
+}
+.hj-pass-head > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hj-pass-head .end {
+  text-align: right;
+}
+.hj-pass-head strong {
+  font-size: var(--text-15);
+  font-weight: 800;
+}
+.hj-pass-label {
+  font: 500 var(--text-2) var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+.hj-pass-tabs {
+  display: flex;
+  gap: 20px;
+  padding: 14px 24px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: var(--text-7);
+  font-weight: 600;
+  color: var(--muted);
+  overflow: hidden;
+}
+.hj-pass-tabs span {
+  padding-bottom: 12px;
+  white-space: nowrap;
+}
+.hj-pass-tabs .on {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+.hj-days {
+  list-style: none;
+  margin: 0;
+  padding: 18px 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: var(--text-7);
+}
+.hj-days li {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+.hj-day {
+  flex: 0 0 48px;
+  font: 500 var(--text-3) var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hj-tick {
+  margin-left: auto;
+  color: var(--accent);
+  font-weight: 700;
+}
+@media (max-width: 599px) {
+  .hj-pass-head {
+    padding: 26px 18px 16px;
+  }
+  .hj-pass-head strong {
+    font-size: var(--text-12);
+  }
+  .hj-pass-tabs {
+    gap: 16px;
+    padding: 12px 18px 0;
+    font-size: var(--text-6);
+  }
+  .hj-days {
+    padding: 14px 18px 18px;
+  }
+  .hj-day {
+    flex-basis: 44px;
+  }
+  /* A phone shows three days, as in the design. */
+  .hj-days li:nth-child(4) {
+    display: none;
+  }
+}
+
+/* ---------- Each chapter building as it scrolls in (HomePage's useAnimatedChapters adds .hj-anim) ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .hj-anim .hj-chapter-text,
+  .hj-anim .hj-piece,
+  .hj-anim .hj-thread,
+  .hj-anim .hj-tile,
+  .hj-anim .hj-board-status {
+    transition:
+      opacity 0.5s ease,
+      transform 0.6s cubic-bezier(0.2, 0.8, 0.3, 1);
+  }
+  .hj-anim .hj-chapter:not(.is-in) .hj-chapter-text {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  .hj-anim .hj-chapter.flip:not(.is-in) .hj-chapter-text {
+    transform: translateX(32px);
+  }
+  /* The visual starts once the words are in. */
+  .hj-anim .hj-piece {
+    transition-delay: calc(0.45s + var(--i, 0) * 0.14s);
+  }
+  .hj-anim .hj-chapter:not(.is-in) .hj-piece {
+    opacity: 0;
+  }
+  .hj-anim .hj-chapter:not(.is-in) .drop {
+    transform: translateY(-28px) rotate(-3deg);
+  }
+  .hj-anim .hj-chapter:not(.is-in) .lock {
+    transform: scale(0.94);
+  }
+  .hj-anim .hj-chapter:not(.is-in) .stamp {
+    transform: scale(1.3);
+  }
+  .hj-anim .hj-chapter:not(.is-in) .tick {
+    transform: translateX(-16px);
+  }
+  .hj-anim .tick .hj-tick {
+    transition: transform 0.3s cubic-bezier(0.3, 1.6, 0.5, 1);
+    transition-delay: calc(0.75s + var(--i, 0) * 0.14s);
+  }
+  .hj-anim .hj-chapter:not(.is-in) .tick .hj-tick {
+    transform: scale(0);
+  }
+
+  /* Ella's ticket glides in to each chapter, the same idea each time. */
+  .hj-anim .hj-thread {
+    transition-delay: 0.3s;
+  }
+  .hj-anim .hj-chapter:not(.is-in) .hj-thread {
+    opacity: 0;
+    transform: translate(-48px, -24px) rotate(-14deg);
+  }
+
+  /* Board rows flip their letters in, then the statuses come up, the winner last. */
+  .hj-anim .hj-tile {
+    transition-delay: calc(0.45s + var(--i, 0) * 0.07s);
+  }
+  .hj-anim .hj-chapter:not(.is-in) .hj-tile {
+    transform: perspective(200px) rotateX(-90deg);
+  }
+  .hj-anim .hj-board-row:not(.win) .hj-board-status {
+    transition-delay: calc(1.4s + var(--i, 0) * 0.25s);
+  }
+  .hj-anim .hj-board-row.win .hj-board-status,
+  .hj-anim .hj-board .hj-thread {
+    transition-delay: 2.3s;
+  }
+  .hj-anim .hj-chapter:not(.is-in) .hj-board-status {
+    opacity: 0;
+  }
+  .hj-anim .hj-board-row.win {
+    transition: background-color 0.5s ease 2.3s;
+  }
+  .hj-anim .hj-chapter:not(.is-in) .hj-board-row.win {
+    background-color: transparent;
+  }
+}
+
+/* ---------- After the trip: postcards ---------- */
+
+.hj-after {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  align-items: center;
+  gap: 48px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+.hj-after-text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.hj-after h2 {
+  font-size: clamp(1.6rem, 3.4vw, 2.1rem);
+  line-height: 1.15;
+}
+.hj-after .lp-lead {
+  font-size: var(--text-9);
+}
+.hj-postcards {
+  position: relative;
+  height: 300px;
+}
+.hj-postcard {
+  position: absolute;
+  top: 30px;
+  left: 4%;
+  width: 260px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-pass-card);
+  overflow: hidden;
+  transform: rotate(var(--r));
+}
+.hj-postcard + .hj-postcard {
+  top: 70px;
+  left: 36%;
+}
+.hj-postcard img {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  object-fit: cover;
+  background: var(--surface-2);
+}
+.hj-postcard span {
+  padding: 10px 12px;
+  font-size: var(--text-6);
+  font-weight: 700;
+}
+.hj-stamp {
+  position: absolute;
+  top: 10px;
+  right: 2%;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--flight-ink);
+  border-radius: var(--radius-round);
+  background: var(--paper);
+  color: var(--flight-ink);
+  font: 500 var(--text-9) var(--mono);
+  letter-spacing: 0.08em;
+  transform: rotate(-10deg);
+}
+:root[data-theme="dark"] .hj-stamp {
+  filter: brightness(1.5);
+}
+@media (max-width: 899px) {
+  .hj-after {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .hj-postcards {
+    height: 200px;
+    margin-top: 4px;
+  }
+  .hj-postcard {
+    top: 10px;
+    left: 0;
+    width: min(200px, 52%);
+    height: 140px;
+  }
+  .hj-postcard + .hj-postcard {
+    top: 40px;
+    left: auto;
+    right: 0;
+  }
+  .hj-postcard span {
+    padding: 8px 10px;
+    font-size: var(--text-4);
+  }
+  .hj-stamp {
+    top: -18px;
+    right: 6px;
+    width: 64px;
+    height: 64px;
+    font-size: var(--text-4);
+  }
+}
+
+/* ---------- Popular guides: the Destinations page's cards, with the whole card linking to its guide ---------- */
+
+.dx-grid.lp-guides {
+  grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lp-guides .dx-card {
+  position: relative;
+}
+.lp-guides h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card-lg);
+}
+.lp-guides h3 a:focus-visible {
+  outline: none;
+}
+.lp-guides h3 a:focus-visible::after {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+/* On a phone, two small cards a row, so eight guides don't fill several screens */
+@media (max-width: 759px) {
+  .dx-grid.lp-guides {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .lp-guides .dx-card-body {
+    padding: 10px 12px 12px;
+  }
+  .lp-guides .dx-card h3 {
+    font-size: var(--text-8);
+  }
+  .lp-guides .dx-card-body p {
+    display: none;
+  }
+}
+.lp-guides-more {
+  display: inline-block;
+  margin-top: 24px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ---------- Questions ---------- */
+
+.hj-faq {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+.hj-faq-inner {
+  max-width: 808px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+.hj-faq h2 {
+  margin-bottom: 12px;
+  font-size: var(--text-19);
+}
+.hj-faq details {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-row);
+}
+.hj-faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  padding: 10px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+.hj-faq summary::-webkit-details-marker {
+  display: none;
+}
+.hj-faq summary::after {
+  content: "+";
+  font: 500 var(--text-13) / 1 var(--mono);
+  color: var(--accent);
+}
+.hj-faq details[open] summary::after {
+  content: "−";
+}
+.hj-faq summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-row);
+}
+.hj-faq details p {
+  padding: 0 18px 16px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.hj-faq details a {
+  color: var(--accent);
+  font-weight: 600;
+}
+@media (max-width: 899px) {
+  .hj-faq-inner {
+    gap: 12px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .hj-faq h2 {
+    margin-bottom: 6px;
+    font-size: var(--text-16);
+  }
+}
+
+/* ---------- Final call to action ---------- */
+
+.hj-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  text-align: center;
+}
+.hj-cta h2 {
+  max-width: 640px;
+  font-size: clamp(1.9rem, 5vw, 2.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+.hj-cta .btn {
+  min-height: 52px;
+  padding: 0 26px;
+  font-size: var(--text-9);
+}
+@media (max-width: 899px) {
+  .hj-cta {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}

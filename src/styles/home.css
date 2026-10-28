@@ -127,44 +127,74 @@
   color: var(--accent);
   background: var(--accent-soft);
 }
-/* On phones the header keeps just the Destinations link and the button; the rest come back on wider screens and are in the footer. */
-.lp-nav a:not(.lp-nav-keep) {
+/* On phones the header keeps the button, and the links move into the menu. */
+.lp-nav {
   display: none;
+}
+.lp-menu-btn {
+  flex: 0 0 44px;
+  height: 44px;
+  margin-right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+.lp-menu-btn:focus-visible {
+  outline: 2px solid var(--accent);
+}
+.lp-menu .lp-wrap {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4px;
+  padding-bottom: 12px;
+}
+.lp-menu a {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  border-top: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+.lp-menu a[aria-current] {
+  color: var(--accent);
 }
 @media (max-width: 759px) {
   .lp-top-inner {
-    gap: 4px;
+    gap: 6px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
-  .lp-nav a {
-    padding: 10px 10px;
+  .lp-top .lp-brand {
+    margin-right: auto;
   }
   .lp-top .btn {
-    padding: 0.6rem 0.75rem;
+    padding: 0.6rem 0.85rem;
     font-size: var(--text-7);
   }
 }
-/* Smaller phones tighten the header so the Destinations link and the button both fit. */
-@media (max-width: 413px) {
+@media (max-width: 359px) {
   .lp-top .lp-brand {
     font-size: 1.05rem;
-  }
-  .lp-nav a {
-    padding: 10px 6px;
-    font-size: var(--text-7);
   }
   .lp-top .btn {
     padding: 0.6rem;
   }
 }
-/* The narrowest phones drop the Destinations link too, so the button always fits; it's in the footer. */
-@media (max-width: 374px) {
-  .lp-nav {
-    display: none;
-  }
-}
 @media (min-width: 760px) {
-  .lp-nav a:not(.lp-nav-keep) {
-    display: inline;
+  .lp-nav {
+    display: flex;
+  }
+  .lp-menu-btn,
+  .lp-menu {
+    display: none;
   }
 }
 .lp-kicker,
@@ -173,9 +203,6 @@
 .lp-pass-head,
 .lp-pass-facts span,
 .lp-pass-win,
-.lp-mini-label,
-.lp-stub span,
-.lp-modes span,
 .lp-board-status,
 .lp-board-cols {
   font-family: var(--mono);
@@ -216,16 +243,6 @@
 .lp-hero .lp-lead {
   font-size: var(--text-12);
   max-width: 520px;
-}
-.lp-perks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 16px;
-  font-size: var(--text-6);
-  color: var(--muted);
-}
-.lp-perks strong {
-  color: var(--text);
 }
 
 /* Other signed-out pages (sign-in link, family link, legal) inside the home page's header and footer */
@@ -426,59 +443,6 @@
   color: var(--flight-ink);
   white-space: nowrap;
 }
-.lp-mini {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
-.lp-mini strong {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.lp-stub-ticket {
-  display: flex;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-.lp-stub {
-  flex: 0 0 34px;
-  background: var(--train);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.lp-stub span {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  font-size: var(--text-1);
-  color: var(--on-photo);
-}
-.lp-mini-body,
-.lp-standby {
-  padding: 12px 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-}
-.lp-standby {
-  background: var(--surface);
-  border: 1px dashed var(--standby-line);
-  border-radius: var(--radius-card-lg);
-}
-.lp-mini-label {
-  font-size: var(--text-1);
-}
-.lp-mini-label.train {
-  color: var(--train-ink);
-}
-.lp-mini-label.standby {
-  color: var(--standby-ink);
-}
 
 /* How it works: a departures board */
 .lp-section-how {
@@ -590,201 +554,6 @@
   letter-spacing: -0.02em;
   line-height: 1.15;
 }
-.lp-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 18px;
-}
-.lp-feature {
-  margin: 0;
-  padding: 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.lp-feature h3 {
-  font-size: var(--text-13);
-  font-weight: 800;
-}
-.lp-feature-icon {
-  font-size: var(--text-18);
-  line-height: 1;
-}
-.lp-feature-foot {
-  margin-top: auto;
-}
-.lp-modes,
-.lp-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  padding-top: 6px;
-}
-.lp-modes span {
-  font-size: var(--text-2);
-  letter-spacing: 0.12em;
-  color: var(--on-photo);
-  padding: 5px 9px;
-  border-radius: var(--radius-pill);
-}
-.lp-modes .flight,
-.lp-stamps .flight {
-  --c: var(--flight);
-}
-.lp-modes .train,
-.lp-stamps .train {
-  --c: var(--train);
-}
-.lp-modes .cruise,
-.lp-stamps .cruise {
-  --c: var(--cruise);
-}
-.lp-modes .road {
-  --c: var(--road);
-}
-.lp-modes span {
-  background: var(--c);
-}
-.lp-stamps {
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-row);
-  padding: 12px;
-  display: flex;
-  gap: 10px;
-  justify-content: space-around;
-}
-.lp-stamps span {
-  width: 52px;
-  height: 52px;
-  border: 2px solid var(--c);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--mono);
-  font-size: var(--text-4);
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: var(--c);
-}
-.lp-stamps .round {
-  border-radius: var(--radius-round);
-}
-.lp-stamps .square {
-  border-style: dashed;
-  border-radius: var(--radius-sm);
-}
-.lp-stamps span:nth-child(1) {
-  transform: rotate(-8deg);
-}
-.lp-stamps span:nth-child(2) {
-  transform: rotate(6deg);
-}
-.lp-stamps span:nth-child(3) {
-  transform: rotate(-3deg);
-}
-:root[data-theme="dark"] .lp-stamps span {
-  filter: brightness(1.5);
-}
-.lp-chips span {
-  font-size: var(--text-5);
-  font-weight: 600;
-  background: var(--accent-soft);
-  color: var(--text);
-  padding: 5px 10px;
-  border-radius: var(--radius-pill);
-}
-.lp-points {
-  background: var(--accent-soft);
-  border-radius: var(--radius-row);
-  padding: 12px 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-.lp-points div {
-  display: flex;
-  flex-direction: column;
-}
-.lp-points strong {
-  font-size: var(--text-17);
-  line-height: 1.1;
-  color: var(--accent);
-  font-variant-numeric: tabular-nums;
-}
-.lp-points div span {
-  font-size: var(--text-5);
-}
-.lp-veto {
-  font-size: var(--text-5);
-  font-weight: 600;
-  background: var(--surface);
-  padding: 5px 10px;
-  border-radius: var(--radius-pill);
-}
-/* The Trip plan card: a countdown on the departures board and the budget so far. */
-.lp-plan {
-  background: var(--board);
-  color: var(--on-photo);
-  border-radius: var(--radius-control);
-  padding: 9px 11px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.lp-plan-count {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.lp-plan-label {
-  font: 500 0.56rem var(--mono);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  color: var(--board-muted);
-}
-.lp-flaps {
-  display: flex;
-  gap: 3px;
-}
-.lp-flaps span {
-  position: relative;
-  font: 500 var(--text-7)/1 var(--mono);
-  background: var(--board-line);
-  border-radius: var(--radius-xs);
-  padding: 0.22rem 0.24rem;
-  min-width: 0.85rem;
-  text-align: center;
-}
-.lp-flaps span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  border-top: 1px solid rgb(0 0 0 / 0.35);
-}
-.lp-plan-bar {
-  height: 4px;
-  border-radius: var(--radius-pill);
-  background: var(--board-line);
-  overflow: hidden;
-}
-.lp-plan-bar span {
-  display: block;
-  width: 47%;
-  height: 100%;
-  background: var(--board-lit);
-}
-.lp-plan-money {
-  font-size: var(--text-3);
-  color: var(--board-muted);
-}
-.lp-plan-money strong {
-  color: var(--on-photo);
-}
 .lp-why {
   background: var(--surface);
   border-top: 1px solid var(--border);
@@ -812,57 +581,7 @@
   line-height: 1.2;
 }
 
-/* Popular guides: the Destinations page's cards, with the whole card linking to its guide */
-.dx-grid.lp-guides {
-  grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.lp-guides .dx-card {
-  position: relative;
-}
-.lp-guides h3 a::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-card-lg);
-}
-.lp-guides h3 a:focus-visible {
-  outline: none;
-}
-.lp-guides h3 a:focus-visible::after {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-/* On a phone, two small cards a row, so eight guides don't fill several screens */
-@media (max-width: 759px) {
-  .dx-grid.lp-guides {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-  .lp-guides .dx-card-body {
-    padding: 10px 12px 12px;
-  }
-  .lp-guides .dx-card h3 {
-    font-size: var(--text-8);
-  }
-  .lp-guides .dx-card-body p {
-    display: none;
-  }
-}
-.lp-guides-more {
-  display: inline-block;
-  margin-top: 24px;
-  font-weight: 700;
-  color: var(--accent);
-}
-
 /* Final call to action */
-#signin {
-  padding-top: 80px;
-  scroll-margin-top: 16px;
-}
 .lp-cta {
   background: var(--surface);
   border: 1px solid var(--border);

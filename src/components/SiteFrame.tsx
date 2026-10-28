@@ -30,10 +30,29 @@ const NAV: { id: SiteSection; label: string; href: string }[] = [
 
 /**
  * The signed-out header, the same on every public page. `current` lights up the section the page is in;
- * `exact` says the page is that section's front page. On the home page sign-in scrolls rather than reloads.
+ * `exact` says the page is that section's front page. On the home page sign-in and How it works scroll rather than reload.
+ * Phones get the button and a menu of the links instead.
  */
 export function SiteHeader({ current, exact = false, home = false }: { current?: SiteSection; exact?: boolean; home?: boolean }) {
+  const [open, setOpen] = useState(false);
   const signin = home ? { href: "#signin", onClick: jump } : { href: "/#signin" };
+  const link = (n: (typeof NAV)[number]) => (home && n.id === "how" ? { href: "#how", onClick: jump } : { href: n.href });
+  useEffect(() => {
+    if (!open) return;
+    const close = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    addEventListener("keydown", close);
+    return () => removeEventListener("keydown", close);
+  }, [open]);
+  const links = (
+    <>
+      {NAV.map((n) => (
+        <a key={n.id} {...link(n)} aria-current={n.id === current ? (exact ? "page" : "true") : undefined}>
+          {n.label}
+        </a>
+      ))}
+      <a {...signin}>Sign in</a>
+    </>
+  );
   return (
     <header className="lp-top">
       <div className="lp-wrap lp-top-inner">
@@ -41,17 +60,21 @@ export function SiteHeader({ current, exact = false, home = false }: { current?:
           somewhere<span aria-hidden>🎉</span>
         </a>
         <nav className="lp-nav" aria-label="Main">
-          {NAV.map((n) => (
-            <a key={n.id} className={n.id === "inspire" ? "lp-nav-keep" : undefined} href={n.href} aria-current={n.id === current ? (exact ? "page" : "true") : undefined}>
-              {n.label}
-            </a>
-          ))}
-          <a {...signin}>Sign in</a>
+          {links}
         </nav>
         <a className="btn" {...signin}>
           Start planning
         </a>
+        <button type="button" className="lp-menu-btn" aria-expanded={open} aria-controls="site-menu" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}>
+          <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+          </svg>
+        </button>
       </div>
+      {/* Links close the menu as they go, including the ones that only scroll the home page. */}
+      <nav id="site-menu" className="lp-menu" aria-label="Menu" hidden={!open} onClick={(e) => (e.target as HTMLElement).closest("a") && setOpen(false)}>
+        <div className="lp-wrap">{links}</div>
+      </nav>
     </header>
   );
 }
@@ -220,12 +243,6 @@ export function SiteFooter({ sections = false, signedIn = false }: { sections?: 
             <ul>
               <li>
                 <a href="/how-it-works">How it works</a>
-              </li>
-              <li>
-                <a {...home("features")}>Features</a>
-              </li>
-              <li>
-                <a {...home("why")}>Why use it</a>
               </li>
               <li>
                 <a href="/how-to-decide-where-to-go-on-holiday">Deciding where to go</a>

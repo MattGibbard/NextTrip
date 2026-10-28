@@ -222,7 +222,7 @@ export function headTags(page: FixedPage, words?: { title?: string; description?
     ...(words?.description ? { description: words.description } : {}),
     ...(words?.jsonLd ? { jsonLd: words.jsonLd } : {}),
   };
-  return metaTags(page === "home" ? { ...m, jsonLd: structuredData(m.description) } : m);
+  return metaTags(page === "home" ? { ...m, jsonLd: [...structuredData(m.description), ...(words?.jsonLd ?? [])] } : m);
 }
 
 /** The <head> tags for any page, from its details. */

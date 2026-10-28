@@ -860,55 +860,46 @@ collections:
               - { label: Small heading, name: kicker, widget: string, required: false }
               - { label: Main heading, name: heading, widget: string }
               - { label: Introduction, name: lead, widget: text, required: false }
-              - { label: Points under the sign-up box, name: perks, widget: list, required: false, hint: "Put **two stars** around words to make them bold." }
-          - label: How it works
-            name: how
+              - { label: Sign-up button, name: button, widget: string, hint: "e.g. Start your list" }
+              - { label: Line under the sign-up box, name: note, widget: string, required: false }
+          - label: How it works (one idea's journey)
+            name: journey
             widget: object
+            hint: Each chapter sits beside its own picture of Ella's Lake Garda idea, so chapters can't be added or reordered here.
             fields:
-              - { label: Board label, name: label, widget: string, required: false }
+              - { label: Small heading, name: kicker, widget: string, required: false }
               - { label: Heading, name: heading, widget: string }
-              - label: Steps
-                name: steps
-                widget: list
-                summary: "{{title}}"
-                hint: The last step's status lights up on the board.
-                fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Description, name: text, widget: text, required: false }
-                  - { label: Status, name: status, widget: string, required: false, hint: "e.g. On standby, Boarding" }
-              - { label: Link to the How it works page, name: link_text, widget: string, required: false, hint: "Under the board. Leave empty for no link." }
-          - label: What's inside
-            name: features
+              - { label: "01. On standby (the pool of ideas)", name: standby, widget: object, fields: [{ label: Title, name: title, widget: string }, { label: Text, name: text, widget: text, hint: "Put [words](/destinations) in square brackets and the address in round ones to make a link." }] }
+              - { label: "02. Points in secret (people locking in)", name: points, widget: object, fields: [{ label: Title, name: title, widget: string }, { label: Text, name: text, widget: text, hint: "Put [words](/destinations) in square brackets and the address in round ones to make a link." }] }
+              - { label: "03. The draw (departures board)", name: draw, widget: object, fields: [{ label: Title, name: title, widget: string }, { label: Text, name: text, widget: text, hint: "Put [words](/destinations) in square brackets and the address in round ones to make a link." }] }
+              - { label: "04. The trip plan (boarding pass)", name: plan, widget: object, fields: [{ label: Title, name: title, widget: string }, { label: Text, name: text, widget: text, hint: "Put [words](/destinations) in square brackets and the address in round ones to make a link." }] }
+          - label: Postcards (after the trip)
+            name: postcards
             widget: object
             fields:
               - { label: Small heading, name: kicker, widget: string, required: false }
               - { label: Heading, name: heading, widget: string }
-              - { label: Introduction, name: lead, widget: text, required: false }
-              - { label: Been card, name: been, widget: object, fields: [{ label: Title, name: title, widget: string }, { label: Text, name: text, widget: text }] }
-              - { label: Places card, name: places, widget: object, fields: [{ label: Title, name: title, widget: string }, { label: Text, name: text, widget: text }] }
-              - { label: Next card, name: next, widget: object, fields: [{ label: Title, name: title, widget: string }, { label: Text, name: text, widget: text }] }
-              - { label: Draw card, name: draw, widget: object, fields: [{ label: Title, name: title, widget: string }, { label: Text, name: text, widget: text }] }
-              - { label: Plan card, name: plan, widget: object, fields: [{ label: Title, name: title, widget: string }, { label: Text, name: text, widget: text }] }
-          - label: Why use it
-            name: why
+              - { label: Text, name: text, widget: text, required: false }
+          - label: Questions
+            name: faq
             widget: object
+            hint: Also shown to Google as questions and answers.
             fields:
-              - { label: Small heading, name: kicker, widget: string, required: false }
               - { label: Heading, name: heading, widget: string }
-              - label: Reasons
-                name: reasons
+              - label: Questions
+                name: questions
                 widget: list
-                summary: "{{title}}"
+                summary: "{{question}}"
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Text, name: text, widget: text }
-          - label: Sign-up box at the bottom
-            name: signup
+                  - { label: Question, name: question, widget: string }
+                  - { label: Answer, name: answer, widget: text, hint: "Put [words](/destinations) in square brackets and the address in round ones to make a link." }
+          - label: Call to action at the bottom
+            name: cta
             widget: object
+            hint: The button takes people back up to the sign-up box.
             fields:
-              - { label: Strip label, name: strip, widget: string, required: false }
               - { label: Heading, name: heading, widget: string }
-              - { label: Text, name: lead, widget: text, required: false }
+              - { label: Button, name: button, widget: string }
       - name: how_it_works
         label: How it works page
         file: content/site/how-it-works.json

@@ -64,7 +64,13 @@ try {
     if (!file) throw new Error(`No ${name} styles in the build`);
     return `\n    <link rel="stylesheet" crossorigin href="/assets/${file}">`;
   };
-  const pageStyles = { how: ownStyles("HowItWorks"), picker: ownStyles("HolidayPicker") };
+  // The home page's own styles go inside it like the site's, so the first page most people see doesn't wait on them.
+  const inlineStyles = async (name) => {
+    const file = assets.find((f) => f.startsWith(`${name}-`) && f.endsWith(".css"));
+    if (!file) throw new Error(`No ${name} styles in the build`);
+    return `<style>${(await readFile(new URL(`assets/${file}`, OUT), "utf8")).replaceAll("</style", "<\\/style")}</style>`;
+  };
+  const pageStyles = { home: await inlineStyles("HomePage"), how: ownStyles("HowItWorks"), picker: ownStyles("HolidayPicker") };
   const pageStyle = (page) => pageStyles[page.startsWith("pick:") || page === "reveal" ? "picker" : page] ?? "";
   // The Guides pages' code (every guide's card) loads on its own too, so those pages start fetching it
   // alongside the site's own code instead of after it.

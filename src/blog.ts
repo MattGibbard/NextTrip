@@ -57,14 +57,28 @@ export interface PostPlace {
   months: { code: string; rating: MonthRating }[];
 }
 
+/** One part of a post under its heading. */
+export interface Section {
+  heading: string;
+  text: string;
+  /** Its own photo (public/images/blog), with a description and an optional caption. */
+  image: string;
+  image_alt: string;
+  image_caption: string;
+  image_size: [number, number] | null;
+}
+
 export interface Post extends PostCard {
   seo_description: string;
   /** The UK airport an airport post is about, e.g. MAN, for its departures board. Empty for other posts. */
   airport: string;
   /** The guides it's about: its cover photo's guide, then the ones it links to, in order. */
   places: PostPlace[];
-  /** Each section's text is short paragraphs, "- " lists, **bold** and [links](/somewhere), as on the content pages. */
-  sections: { heading: string; text: string }[];
+  /**
+   * Each section's text is short paragraphs, "- " lists, **bold** and [links](/somewhere), as on the content pages,
+   * plus Tip:/Watch out:/Local knowledge: boxes and "|" tables. A section may have its own photo, shown after its words.
+   */
+  sections: Section[];
   faqs: { question: string; answer: string }[];
 }
 
@@ -109,7 +123,14 @@ export function readPost(slug: string, raw: Record<string, unknown>): Post {
     airport: /^[A-Za-z]{3}$/.test(str(raw.airport)) ? str(raw.airport).toUpperCase() : "",
     places: list(raw.places).map(readPlace),
     sections: list(raw.sections)
-      .map((s) => ({ heading: str(s.heading), text: str(s.text) }))
+      .map((s): Section => ({
+        heading: str(s.heading),
+        text: str(s.text),
+        image: str(s.image),
+        image_alt: str(s.image_alt),
+        image_caption: str(s.image_caption),
+        image_size: size(s.image_size),
+      }))
       .filter((s) => s.heading || s.text),
     faqs: list(raw.faqs)
       .map((f) => ({ question: str(f.question), answer: str(f.answer) }))
@@ -117,9 +138,10 @@ export function readPost(slug: string, raw: Record<string, unknown>): Post {
   };
 }
 
+const size = (v: unknown) => (Array.isArray(v) && v.length === 2 && v.every((n) => typeof n === "number") ? (v as [number, number]) : null);
+
 function readPlace(p: Record<string, unknown>): PostPlace {
   const num = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? v : null);
-  const size = Array.isArray(p.image_size) && p.image_size.length === 2 && p.image_size.every((n) => typeof n === "number") ? (p.image_size as [number, number]) : null;
   return {
     slug: str(p.slug),
     name: str(p.name),
@@ -130,7 +152,7 @@ function readPlace(p: Record<string, unknown>): PostPlace {
     to_code: str(p.to_code),
     image: str(p.image),
     image_alt: str(p.image_alt),
-    image_size: size,
+    image_size: size(p.image_size),
     months: list(p.months).map((m) => ({ code: str(m.code), rating: m.rating === "best" || m.rating === "good" ? m.rating : "quiet" })),
   };
 }
@@ -174,6 +196,59 @@ export async function loadPost(slug: string): Promise<Post | undefined> {
   const p = loaded.get(slug) ?? withCard(readPost(slug, await load()));
   loaded.set(slug, p);
   return p;
+}
+
+/** Whether a section is a post's opening "The short answer" (or "The short version"), shown as a box. */
+export function isShortAnswer(s: { heading: string }): boolean {
+  return /^the short (answer|version)$/i.test(s.heading.trim());
+}
+
+/** A photo inside a post: the section's own, or a guide's that the section links to. */
+export interface PostPhoto {
+  image: string;
+  alt: string;
+  size: [number, number] | null;
+  caption: string;
+  /** The guide it came from, and its name, for the caption's link. Empty for the section's own photo. */
+  guide: string;
+  name: string;
+}
+
+/**
+ * The photos shown after each section. A section's own photo always shows. Otherwise the first section to
+ * link a guide shows that guide's photo (two side by side when it links two), as long as the section
+ * before had no photo, so there's a picture every screen or two without one after every section. The
+ * opening short answer has none: places it links show with the section after it. The cover's guide is
+ * skipped, and no guide's photo shows twice.
+ */
+export function sectionPhotos(post: Post): PostPhoto[][] {
+  const shown = new Set(post.cover?.guide ? [post.cover.guide] : []);
+  let last = -2;
+  // Places the short answer links to show with the section after it.
+  let fromAnswer: string[] = [];
+  return post.sections.map((s, i) => {
+    if (s.image) {
+      last = i;
+      return [{ image: s.image, alt: s.image_alt, size: s.image_size, caption: s.image_caption, guide: "", name: "" }];
+    }
+    const links = [...s.text.matchAll(/\]\(\/destinations\/([a-z0-9-]+)\)/g)].map((m) => m[1]);
+    if (i === 0 && isShortAnswer(s)) {
+      fromAnswer = links;
+      return [];
+    }
+    if (i - last < 2) return [];
+    const linked = [...new Set([...fromAnswer, ...links])];
+    fromAnswer = [];
+    const places = linked
+      .filter((slug) => !shown.has(slug))
+      .map((slug) => post.places.find((p) => p.slug === slug))
+      .filter((p): p is PostPlace => !!p?.image)
+      .slice(0, 2);
+    if (places.length === 0) return [];
+    last = i;
+    places.forEach((p) => shown.add(p.slug));
+    return places.map((p) => ({ image: p.image, alt: p.image_alt, size: p.image_size, caption: "", guide: p.slug, name: p.name }));
+  });
 }
 
 /** A post's title in search results and the browser tab. */

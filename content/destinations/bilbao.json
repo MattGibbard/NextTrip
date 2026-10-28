@@ -1,0 +1,200 @@
+{
+  "name": "Bilbao",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Bilbao",
+  "intro": "A Basque city on a river with the shining Guggenheim museum, a medieval old town full of pintxos bars, and wild coast a metro ride away. Here's what Bilbao is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/building-6822814_1280.webp",
+  "image_alt": "The curved titanium Guggenheim Museum Bilbao beside the Nervión river, with Louise Bourgeois's giant spider sculpture Maman and the Iberdrola Tower behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Bilbao",
+  "to_code": "BIO",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Bilbao is in the green, rainy north of Spain, so pack a light waterproof whatever the month. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, often rainy",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, often rainy",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild, spring",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild, showers",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, green",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, long days",
+      "temp": 24
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm, busy",
+      "temp": 26
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm, Aste Nagusia festival",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 24
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild, pleasant",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool, wet",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, festive",
+      "temp": 14
+    }
+  },
+  "when_to_go": "May to October is the best time, with warm days rarely too hot to walk around. August brings Aste Nagusia, the city's big nine-day festival. Winters are mild but wet, which suits a museum-and-pintxos weekend more than a beach trip.",
+  "things": [
+    {
+      "name": "Guggenheim Museum Bilbao",
+      "tag": "Ticketed",
+      "blurb": "Frank Gehry's titanium-clad museum of modern art, worth seeing from the outside even if you don't go in.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Casco Viejo",
+      "tag": "Free",
+      "blurb": "The old town's 'seven streets', packed with pintxos bars, small shops and the arcaded Plaza Nueva.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "La Ribera market",
+      "tag": "Free",
+      "blurb": "A huge riverside food market, with a pintxos hall upstairs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Artxanda funicular",
+      "tag": "Ticketed",
+      "blurb": "A short funicular ride up to a viewpoint over the whole city and the hills around it.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vizcaya Bridge",
+      "tag": "Ticketed",
+      "blurb": "The world's oldest transporter bridge, a UNESCO site, where a hanging gondola carries people and cars across the river.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "San Juan de Gaztelugatxe",
+      "tag": "Outdoors",
+      "blurb": "A tiny hermitage on a rocky islet joined to the coast by a winding stone path, a drive or bus ride from the city. Book a free slot in busy months.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Getxo and the coast",
+      "tag": "Free",
+      "blurb": "Take the metro to Getxo for seafront promenades, an old fishing port and surf beaches.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Bilbao from the UK?",
+      "answer": "Fly direct from London Gatwick, London Heathrow or Manchester, with some seasonal routes from other UK airports. Check the latest timetables, as routes change by season. The airport bus to the city centre takes about 20 minutes."
+    },
+    {
+      "question": "Bilbao or San Sebastián?",
+      "answer": "Bilbao is a bigger, livelier city with the Guggenheim and great pintxos. San Sebastián has the famous beach and a reputation for food. They're about an hour apart, so lots of people do both."
+    },
+    {
+      "question": "How many days do you need in Bilbao?",
+      "answer": "Two or three days covers the Guggenheim, the old town and a trip to the coast. Add a day or two for San Sebastián."
+    },
+    {
+      "question": "Is Bilbao worth visiting?",
+      "answer": "Yes, especially if you like food, art and architecture. It's less touristy than many Spanish cities and easy to get around on foot and by metro."
+    }
+  ],
+  "similar": [
+    {
+      "name": "San Sebastián",
+      "code": "BIO",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Porto",
+      "code": "OPO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bordeaux",
+      "code": "BOD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Asturias",
+      "code": "OVD",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-28T06:46:06Z",
+  "updated": "2026-10-28T06:46:06Z"
+}

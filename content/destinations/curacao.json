@@ -1,0 +1,200 @@
+{
+  "name": "Curaçao",
+  "published": true,
+  "country": "CW",
+  "title": "Holidays in Curaçao",
+  "intro": "A Dutch Caribbean island with a colourful UNESCO-listed capital, small sandy coves, clear water for snorkelling and sunshine all year. Here's what Curaçao is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/willemstad-4881036_1280.webp",
+  "image_alt": "The Queen Emma pontoon bridge crossing St Anna Bay to the row of colourful Dutch-style buildings on Willemstad's Handelskade waterfront",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cura%C3%A7ao",
+  "to_code": "CUR",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "relax"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 to 5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Caribbean guilder (Cg); US dollars widely taken",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for holiday stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 127V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Curaçao asks visitors to fill in an online immigration card before they fly, so check the latest entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Hot, dry, breezy",
+      "temp": 30
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Hot, dry, breezy",
+      "temp": 30
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Hot, dry, breezy",
+      "temp": 31
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Hot, dry",
+      "temp": 31
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot, sunny",
+      "temp": 32
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, sunny",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, breezy",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, calmer",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hottest, calm sea",
+      "temp": 33
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Hot, short showers",
+      "temp": 32
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Hot, short showers",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Hot, festive",
+      "temp": 30
+    }
+  },
+  "when_to_go": "Curaçao is warm and sunny all year and sits south of the main hurricane belt. January to April is the driest and breeziest time, and the most popular. October to December brings short tropical showers, and September and October are the hottest months, with the calmest sea for snorkelling and diving.",
+  "things": [
+    {
+      "name": "Willemstad",
+      "tag": "Free",
+      "blurb": "The colourful capital, a UNESCO World Heritage Site, split into Punda and Otrobanda on either side of St Anna Bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Queen Emma Bridge",
+      "tag": "Free",
+      "blurb": "A floating pedestrian bridge that swings open to let ships into the harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Playa Kenepa",
+      "tag": "Free",
+      "blurb": "A small, much-photographed bay of white sand and turquoise water on the west coast, also called Grote Knip.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Snorkelling and diving",
+      "tag": "Tour",
+      "blurb": "Clear water and reefs right off the shore, with spots like Tugboat Beach, where a small sunken boat lies in shallow water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Klein Curaçao",
+      "tag": "Tour",
+      "blurb": "A day trip by boat to a flat, uninhabited island with a white beach, an old lighthouse and turtles.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Christoffel National Park",
+      "tag": "Ticketed",
+      "blurb": "A park in the wild north-west with hiking trails and a climb up Christoffelberg, the island's highest hill.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Shete Boka National Park",
+      "tag": "Ticketed",
+      "blurb": "A rugged north coast where waves crash into rocky inlets and sea turtles nest.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Curaçao from the UK?",
+      "answer": "There are no direct flights from the UK. Most people fly via Amsterdam, which has daily flights, or connect through the US."
+    },
+    {
+      "question": "Is Curaçao in the hurricane belt?",
+      "answer": "It sits just south of the main hurricane belt, so storms are rare, although the season still runs from June to November."
+    },
+    {
+      "question": "What currency does Curaçao use?",
+      "answer": "The Caribbean guilder, which replaced the Netherlands Antillean guilder in 2025. US dollars are widely accepted and cards work in most places."
+    },
+    {
+      "question": "How many days do you need in Curaçao?",
+      "answer": "A week is enough for Willemstad, a few beaches and a boat trip. Ten days to two weeks makes the long journey more worthwhile."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Grenada",
+      "code": "GND",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Guadeloupe",
+      "code": "PTP",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Puerto Rico",
+      "code": "SJU",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T06:46:06Z",
+  "updated": "2026-10-28T06:46:06Z"
+}

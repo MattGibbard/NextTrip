@@ -194,6 +194,11 @@
     "lat": 43.4833,
     "lon": -1.5593
   },
+  "bilbao": {
+    "query": "Bilbao|ES",
+    "lat": 43.263,
+    "lon": -2.935
+  },
   "bodrum": {
     "query": "Bodrum|TR",
     "lat": 37.0344,
@@ -398,6 +403,11 @@
     "query": "Cuenca|ES",
     "lat": 40.0661,
     "lon": -2.1314
+  },
+  "curacao": {
+    "query": "Curaçao|CW",
+    "lat": 12.1091,
+    "lon": -68.9316
   },
   "cusco": {
     "query": "Cusco|PE",
@@ -1043,6 +1053,11 @@
     "query": "Morocco desert road trip|MA",
     "lat": 30.9189,
     "lon": -6.8934
+  },
+  "mosel-valley": {
+    "query": "Mosel Valley|DE",
+    "lat": 49.9161,
+    "lon": 7.0705
   },
   "nafplio": {
     "query": "Nafplio|GR",

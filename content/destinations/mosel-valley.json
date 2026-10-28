@@ -1,0 +1,201 @@
+{
+  "name": "Mosel Valley",
+  "published": true,
+  "country": "DE",
+  "title": "Holidays in Mosel Valley",
+  "intro": "A winding German river valley of steep vineyards, half-timbered wine towns and fairy-tale castles, with riverside cycle paths and boat trips. Here's what Mosel Valley is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/sky-2585096_1280.webp",
+  "image_alt": "The Reichsburg castle on a wooded hill above Cochem's riverside houses and the Mosel, with river cruise boats moored along the bank",
+  "wikipedia": "https://en.wikipedia.org/wiki/Mosel_(wine_region)",
+  "to_code": "LUX",
+  "holiday_types": [
+    "nature",
+    "food",
+    "culture",
+    "road-trip"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Many wineries, river boats and small guesthouses close from November to March, so check opening dates if you go in winter. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, much closed",
+      "temp": 4
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, much closed",
+      "temp": 6
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Chilly, waking up",
+      "temp": 11
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild, blossom",
+      "temp": 15
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, green",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, long days",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm, wine festivals",
+      "temp": 24
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm, wine festivals",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, harvest",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Golden vineyards",
+      "temp": 14
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 8
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas markets",
+      "temp": 5
+    }
+  },
+  "when_to_go": "May to September is the best time, with warm days for cycling, walking and boat trips, and wine festivals in most towns through the summer. October is quieter, with golden vineyards and the grape harvest. Much closes in winter, apart from December's Christmas markets in Trier, Bernkastel-Kues and Traben-Trarbach.",
+  "things": [
+    {
+      "name": "Cochem",
+      "tag": "Free",
+      "blurb": "A pretty wine town below the Reichsburg, a rebuilt castle you can tour, with riverside cafés and boat trips.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Burg Eltz",
+      "tag": "Ticketed",
+      "blurb": "A storybook castle hidden in a wooded side valley, owned by the same family for centuries. Open roughly spring to autumn.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bernkastel-Kues",
+      "tag": "Free",
+      "blurb": "A wine town with a market square of crooked half-timbered houses and castle ruins in the vineyards above.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Trier",
+      "tag": "Free",
+      "blurb": "Germany's oldest city, with Roman remains such as the Porta Nigra gate, Roman baths and an amphitheatre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mosel cycle path",
+      "tag": "Outdoors",
+      "blurb": "A mostly flat riverside cycle route you can do in short stretches, catching a train or boat back.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wine tasting",
+      "tag": "Ticketed",
+      "blurb": "Family wineries along the river pour Riesling from some of the steepest vineyards in Europe.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "River boat trips",
+      "tag": "Ticketed",
+      "blurb": "Short boat trips between the wine towns, the easiest way to see the river's loops.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to the Mosel Valley from the UK?",
+      "answer": "Fly to Luxembourg, then drive about one and a half to two hours to Cochem or Bernkastel-Kues, or take the train via Trier. Frankfurt is a longer but busier option."
+    },
+    {
+      "question": "Cochem or Bernkastel-Kues?",
+      "answer": "Cochem has the big castle and is closer to Burg Eltz. Bernkastel-Kues is smaller, with a lovely market square. Many people stay in one and visit the other."
+    },
+    {
+      "question": "Do you need a car in the Mosel Valley?",
+      "answer": "It helps, but you can get around by train, bus, bike and river boat between the main towns."
+    },
+    {
+      "question": "When are the Mosel wine festivals?",
+      "answer": "Most towns hold wine festivals between late spring and October. The biggest, in Bernkastel-Kues, is usually around the first weekend of September."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Colmar",
+      "code": "BSL",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Douro Valley",
+      "code": "OPO",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Romantic Road",
+      "code": "FRA",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Saxon Switzerland",
+      "code": "DRS",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-28T06:46:06Z",
+  "updated": "2026-10-28T06:46:06Z"
+}

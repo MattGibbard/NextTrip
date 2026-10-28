@@ -1,0 +1,45 @@
+{
+  "published": true,
+  "code": "MAN",
+  "name": "Manchester Airport",
+  "title": "Manchester Airport guide: terminals, airlines and getting there",
+  "intro": "Manchester now has two terminals: Terminal 2 for most airlines, and Terminal 3, mainly for Ryanair. Here's which airline goes where and how to get there.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "Terminal 2",
+      "airlines": "easyJet, Jet2, TUI, Virgin Atlantic, Emirates, Aer Lingus and most other airlines",
+      "text": "The main terminal, rebuilt and much bigger than before, with all the long-haul flights."
+    },
+    {
+      "name": "Terminal 3",
+      "airlines": "Ryanair and a few other short-haul airlines",
+      "text": "Ryanair's home at Manchester. Terminal 1 has closed, and its space is going into Terminal 3, so if you last flew from Terminal 1, you'll now be in Terminal 2 or 3."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to Manchester Airport",
+      "text": "- **Train:** Manchester Airport station is between Terminals 2 and 3, linked by covered walkways. Trains to Manchester Piccadilly take about 15 to 20 minutes, with direct trains from across the north of England.\n- **Metrolink tram:** from Manchester city centre, slower than the train but stops across south Manchester.\n- **Car:** the airport is off junction 5 of the M56. Both terminals charge for the drop-off zone."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many terminals does Manchester Airport have?",
+      "answer": "Two: Terminal 2 and Terminal 3. Terminal 1 has closed."
+    },
+    {
+      "question": "Which terminal is Jet2 at Manchester?",
+      "answer": "Terminal 2."
+    },
+    {
+      "question": "Which terminal is Ryanair at Manchester?",
+      "answer": "Terminal 3."
+    },
+    {
+      "question": "Which terminal is easyJet at Manchester?",
+      "answer": "Terminal 2."
+    }
+  ]
+}

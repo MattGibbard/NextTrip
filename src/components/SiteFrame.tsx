@@ -232,6 +232,9 @@ export function SiteFooter({ sections = false, signedIn = false }: { sections?: 
                 <a href="/blog">Blog</a>
               </li>
               <li>
+                <a href="/airports">Airport guides</a>
+              </li>
+              <li>
                 <a href="/about">About us</a>
               </li>
               <li>

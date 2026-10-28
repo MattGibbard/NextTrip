@@ -1,0 +1,32 @@
+{
+  "published": true,
+  "code": "LCY",
+  "name": "London City Airport",
+  "title": "London City Airport guide: terminals, airlines and getting there",
+  "intro": "London City is small, close to central London and on the DLR. Here's who flies from it and how to get there.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "The terminal",
+      "airlines": "British Airways (BA CityFlyer), KLM and a handful of others",
+      "text": "A single, compact terminal. It's quick to get through, but small, so the airport asks you not to arrive more than 2 hours before your flight."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to London City Airport",
+      "text": "- **DLR:** London City Airport has its own DLR station next to the terminal, about 20 minutes from Bank. Change at Canning Town for the Jubilee and Elizabeth lines.\n- **Elizabeth line:** to Custom House, then a short DLR hop or taxi.\n- **Car and taxi:** there's a drop-off area outside the terminal, though the DLR is usually quicker at busy times."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Which airlines fly from London City Airport?",
+      "answer": "British Airways (BA CityFlyer) is the biggest, plus KLM and a few others."
+    },
+    {
+      "question": "Is there a station at London City Airport?",
+      "answer": "Yes, the DLR station is right next to the terminal."
+    }
+  ]
+}

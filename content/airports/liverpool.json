@@ -1,0 +1,32 @@
+{
+  "published": true,
+  "code": "LPL",
+  "name": "Liverpool John Lennon Airport",
+  "title": "Liverpool John Lennon Airport guide: terminals, airlines and getting there",
+  "intro": "Liverpool has one compact terminal, so there's little walking. Here's who flies from it and how to get there.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "The terminal",
+      "airlines": "easyJet, Ryanair and others",
+      "text": "Small and quick to get around, with short walks to the gates."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to Liverpool Airport",
+      "text": "- **Train and bus:** take the train to Liverpool South Parkway, then a short bus ride to the airport. Buses also run from Liverpool city centre.\n- **Car:** the airport is in Speke, south of the city, and is easy to reach from the M62 and M56. The express drop-off is closest to the terminal, and there's a free drop-off area a short walk away."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is there a train station at Liverpool Airport?",
+      "answer": "No. The nearest is Liverpool South Parkway, a short bus ride away."
+    },
+    {
+      "question": "How many terminals does Liverpool Airport have?",
+      "answer": "One."
+    }
+  ]
+}

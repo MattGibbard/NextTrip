@@ -615,6 +615,86 @@ collections:
           - { label: Question, name: question, widget: string }
           - { label: Answer, name: answer, widget: text }
 
+  - name: airports
+    label: Airport guides
+    label_singular: Airport guide
+    description: One page per UK or Irish airport at somewhere.party/airports/<name>, about its terminals and getting there. The page also lists the blog posts about that airport (posts with the same Airport) and a departures board of the places they link to, so don't repeat how early to arrive or where you can fly direct here. Untick "Published" to take one off the site.
+    folder: content/airports
+    format: json
+    extension: json
+    create: true
+    identifier_field: name
+    slug: "{{slug}}"
+    summary: "{{name}} ({{code}})"
+    preview_path: airports/{{slug}}
+    editor:
+      preview: false
+    fields:
+      - { label: Published, name: published, widget: boolean, default: false, hint: "Only published airport guides appear on the site and in the sitemap." }
+      - label: Airport
+        name: code
+        widget: select
+        hint: "Which airport this is. Blog posts with the same Airport are listed on its page."
+        options:
+          - { label: "London Heathrow (LHR)", value: LHR }
+          - { label: "London Gatwick (LGW)", value: LGW }
+          - { label: "London Stansted (STN)", value: STN }
+          - { label: "London Luton (LTN)", value: LTN }
+          - { label: "London City (LCY)", value: LCY }
+          - { label: "Manchester (MAN)", value: MAN }
+          - { label: "Birmingham (BHX)", value: BHX }
+          - { label: "Bristol (BRS)", value: BRS }
+          - { label: "East Midlands (EMA)", value: EMA }
+          - { label: "Leeds Bradford (LBA)", value: LBA }
+          - { label: "Newcastle (NCL)", value: NCL }
+          - { label: "Liverpool (LPL)", value: LPL }
+          - { label: "Edinburgh (EDI)", value: EDI }
+          - { label: "Glasgow (GLA)", value: GLA }
+          - { label: "Aberdeen (ABZ)", value: ABZ }
+          - { label: "Inverness (INV)", value: INV }
+          - { label: "Belfast City (BHD)", value: BHD }
+          - { label: "Belfast International (BFS)", value: BFS }
+          - { label: "Cardiff (CWL)", value: CWL }
+          - { label: "Southampton (SOU)", value: SOU }
+          - { label: "Bournemouth (BOH)", value: BOH }
+          - { label: "Exeter (EXT)", value: EXT }
+          - { label: "Norwich (NWI)", value: NWI }
+          - { label: "Dublin (DUB)", value: DUB }
+          - { label: "Cork (ORK)", value: ORK }
+          - { label: "Shannon (SNN)", value: SNN }
+      - { label: Name, name: name, widget: string, hint: "e.g. Manchester Airport. A new guide's address comes from this, e.g. somewhere.party/airports/manchester-airport, so shorten the address to the town (manchester) when you first save it." }
+      - { label: Page heading, name: title, widget: string, hint: "e.g. Manchester Airport guide: terminals, airlines and getting there." }
+      - { label: Introduction, name: intro, widget: text, hint: "One or two sentences under the heading. Google also shows this under the page title in search results, cut off after about 155 characters." }
+      - { label: Google title, name: seo_title, widget: string, required: false, hint: "Optional. The page title in search results, about 50 characters. Leave empty for \"Manchester Airport: terminals, airlines and getting there\"." }
+      - { label: Google description, name: seo_description, widget: text, required: false, hint: "Optional. Leave empty to use the introduction." }
+      - label: Terminals
+        name: terminals
+        widget: list
+        summary: "{{name}}"
+        hint: "One for each terminal, or just one for an airport with a single terminal."
+        fields:
+          - { label: Name, name: name, widget: string, hint: "e.g. Terminal 2 or North Terminal." }
+          - { label: Airlines, name: airlines, widget: string, required: false, hint: "Who flies from it, e.g. Jet2, TUI, easyJet and most other airlines." }
+          - { label: About it, name: text, widget: text, required: false, hint: "A few lines: what's there, how to get between terminals. **two stars** make bold and [words](/address) make a link." }
+      - label: Longer writing
+        name: sections
+        widget: list
+        required: false
+        summary: "{{heading}}"
+        hint: "Getting there, parking, facilities. A blank line starts a new paragraph, lines starting \"- \" make a list, **two stars** make bold and [words](/address) make a link."
+        fields:
+          - { label: Heading, name: heading, widget: string, required: false }
+          - { label: Text, name: text, widget: text }
+      - label: Common questions
+        name: faqs
+        widget: list
+        required: false
+        summary: "{{question}}"
+        hint: Shown near the bottom of the page. These can show up as questions and answers in Google.
+        fields:
+          - { label: Question, name: question, widget: string }
+          - { label: Answer, name: answer, widget: text }
+
   - name: blog
     label: Blog
     label_singular: Blog post

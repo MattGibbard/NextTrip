@@ -1,0 +1,32 @@
+{
+  "published": true,
+  "code": "EMA",
+  "name": "East Midlands Airport",
+  "title": "East Midlands Airport guide: terminals, airlines and getting there",
+  "intro": "East Midlands sits between Derby, Nottingham and Leicester, with one terminal. Here's who flies from it and how to get there.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "The terminal",
+      "airlines": "Jet2, Ryanair, TUI and others",
+      "text": "One terminal with one security area."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to East Midlands Airport",
+      "text": "- **Train and bus:** take the train to East Midlands Parkway, then the Skylink bus to the airport. Skylink buses also run from Derby, Nottingham and Leicester.\n- **Car:** the airport is next to junctions 23A and 24 of the M1. There's a charge for the drop-off zone."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is there a train station at East Midlands Airport?",
+      "answer": "No. The nearest is East Midlands Parkway, linked to the airport by the Skylink bus."
+    },
+    {
+      "question": "How many terminals does East Midlands Airport have?",
+      "answer": "One."
+    }
+  ]
+}

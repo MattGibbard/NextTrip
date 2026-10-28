@@ -8,6 +8,8 @@ import { NotFound } from "./views/NotFound";
 import { LegalView } from "./views/Legal";
 import { DestinationPage, DestinationsIndex } from "./views/DestinationPage";
 import { HubPage } from "./views/HubPage";
+import { AirportPage, AirportsIndex } from "./views/AirportPage";
+import { AIRPORTS, airportMeta, airportsJsonLd, findAirport } from "./airportPages";
 import { DESTINATIONS, destinationMeta, readDestination } from "./destinations";
 import { HUBS, countryHub, hubMeta, readHub } from "./hubs";
 import { CREATORS, HOME, HOW } from "./site";
@@ -38,6 +40,7 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
     { page: "how", file: "how-it-works.html", source: "content/site/how-it-works.json" },
     { page: "picker", file: "holiday-picker.html" },
     { page: "reveal", file: "holiday-picker/reveal.html" },
+    { page: "airports", file: "airports.html", source: "content/airports" },
     ...(Object.keys(INFO_PAGES) as Info[]).map((page) => ({ page, file: `${INFO_PAGES[page].path.slice(1)}.html`, source: infoSource(page) })),
     { page: "notfound", file: "404.html" },
   ];
@@ -48,6 +51,7 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
     ...HUBS.map((h) => ({ page: `destination:${h.slug}` as const, file: `destinations/${h.slug}.html`, path: `/destinations/${h.slug}`, index: true, source: `content/hubs/${h.slug}.json` })),
     // Each guide's holiday picker result, kept out of search.
     ...DESTINATIONS.map((d) => ({ page: `pick:${d.slug}` as const, file: `holiday-picker/${d.slug}.html`, path: `/holiday-picker/${d.slug}`, index: false })),
+    ...AIRPORTS.map((a) => ({ page: `airport:${a.slug}` as const, file: `airports/${a.slug}.html`, path: `/airports/${a.slug}`, index: true, source: `content/airports/${a.slug}.json` })),
     ...POSTS.map((p) => ({ page: `post:${p.slug}` as const, file: `blog/${p.slug}.html`, path: `/blog/${p.slug}`, index: true, source: `content/blog/${p.slug}.json` })),
     // The blog's pages of posts, and each tag's. Nearly empty tags are kept out of search results until they fill up.
     ...listings().map((l) => {
@@ -84,6 +88,11 @@ function post(page: PublicPage) {
   return raw ? withCard(readPost(slug, raw)) : undefined;
 }
 
+/** The airport guide an airport page is for. */
+function airport(page: PublicPage) {
+  return page.startsWith("airport:") ? findAirport(page.slice("airport:".length)) : undefined;
+}
+
 /** The guide a holiday picker result page is for. */
 function pick(page: PublicPage) {
   return page.startsWith("pick:") ? DESTINATIONS.find((d) => d.slug === page.slice("pick:".length)) : undefined;
@@ -104,6 +113,9 @@ export function headTags(page: PublicPage, updated?: string, published?: string)
   if (p) return metaTags(postMeta(p, updated));
   const picked = pick(page);
   if (picked) return metaTags(pickMeta(picked));
+  const a = airport(page);
+  if (a) return metaTags(airportMeta(a, updated));
+  if (page === "airports") return fixedTags("airports", { jsonLd: airportsJsonLd() });
   const l = listing(page);
   if (l) return metaTags(listingMeta(l));
   if (page === "home") return fixedTags("home", { title: HOME.seo_title, description: HOME.seo_description });
@@ -133,6 +145,9 @@ function pageBody(page: PublicPage) {
   if (p) return <BlogPost post={p} />;
   const picked = pick(page);
   if (picked) return <HolidayPicker slug={picked.slug} />;
+  const a = airport(page);
+  if (a) return <AirportPage airport={a} />;
+  if (page === "airports") return <AirportsIndex />;
   if (page === "picker") return <HolidayPicker />;
   if (page === "reveal") return <HolidayPicker reveal />;
   const l = listing(page);

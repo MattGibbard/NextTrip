@@ -1,0 +1,59 @@
+{
+  "published": true,
+  "code": "LHR",
+  "name": "Heathrow Airport",
+  "title": "Heathrow Airport guide: terminals, airlines and getting there",
+  "intro": "Heathrow has four terminals, and airlines are mostly grouped by alliance. Here's which airline flies from which terminal, how to get between them and the quickest ways into London.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "Terminal 2",
+      "airlines": "Star Alliance airlines (Lufthansa, United, Air Canada, Singapore Airlines, SWISS), Aer Lingus and Air India",
+      "text": "Also called the Queen's Terminal. It's next to Terminal 3, a short walk away, and shares a station with it."
+    },
+    {
+      "name": "Terminal 3",
+      "airlines": "Virgin Atlantic, American Airlines, Cathay Pacific, Emirates and most other oneworld airlines",
+      "text": "Most long-haul flights from Terminal 3 go to North America, the Middle East and Asia. It shares the Terminals 2 and 3 station."
+    },
+    {
+      "name": "Terminal 4",
+      "airlines": "SkyTeam airlines (KLM, Air France, Korean Air), Qatar Airways, Etihad and others",
+      "text": "Set apart on the south side of the airport, with its own Elizabeth line and Piccadilly line stops."
+    },
+    {
+      "name": "Terminal 5",
+      "airlines": "British Airways and Iberia",
+      "text": "BA's home. Gates are in the main building (A) and two satellites (B and C), reached by a short underground train, so allow a few extra minutes for B and C gates."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to Heathrow",
+      "text": "- **Heathrow Express:** non-stop from London Paddington, about 15 minutes to Terminals 2 and 3 and about 21 to Terminal 5.\n- **Elizabeth line:** from central London without changing, about 30 to 40 minutes, and cheaper than the Express.\n- **Piccadilly line:** the cheapest way from central London, but slow, at around 50 minutes or more.\n- **Car:** Heathrow is by the M4 and M25. Every terminal charges for the drop-off zone, so check the price before you go."
+    },
+    {
+      "heading": "Moving between terminals",
+      "text": "Terminals 2 and 3 are a short walk apart. To get to Terminal 4 or 5, take the Heathrow Express or the Elizabeth line, which are free between the Heathrow stations. If you're connecting between flights, follow the purple Flight Connections signs instead."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many terminals does Heathrow have?",
+      "answer": "Four: Terminals 2, 3, 4 and 5. Terminal 1 closed in 2015."
+    },
+    {
+      "question": "Which terminal does British Airways use at Heathrow?",
+      "answer": "Mostly Terminal 5, though a few BA flights leave from Terminal 3. Check your booking."
+    },
+    {
+      "question": "Which terminal does Virgin Atlantic use at Heathrow?",
+      "answer": "Terminal 3."
+    },
+    {
+      "question": "Is it free to travel between Heathrow terminals?",
+      "answer": "Yes. The Heathrow Express and the Elizabeth line are free between the Heathrow stations."
+    }
+  ]
+}

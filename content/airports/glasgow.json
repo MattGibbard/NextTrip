@@ -1,0 +1,32 @@
+{
+  "published": true,
+  "code": "GLA",
+  "name": "Glasgow Airport",
+  "title": "Glasgow Airport guide: terminals, airlines and getting there",
+  "intro": "Glasgow has one terminal, about 8 miles west of the city. Here's who flies from it and how to get there.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "The terminal",
+      "airlines": "easyJet, Jet2, TUI, British Airways, Loganair and others",
+      "text": "One terminal with one security area."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to Glasgow Airport",
+      "text": "- **Bus:** the Glasgow Airport Express bus runs from the city centre, about 15 to 25 minutes.\n- **Train:** there's no station at the airport. The nearest is Paisley Gilmour Street, a short bus or taxi ride away.\n- **Car:** the airport is next to junction 28 of the M8. The drop-off area outside the terminal charges by the minute."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is there a train station at Glasgow Airport?",
+      "answer": "No. Take the Glasgow Airport Express bus from the city centre, or a train to Paisley Gilmour Street and then a bus or taxi."
+    },
+    {
+      "question": "How many terminals does Glasgow Airport have?",
+      "answer": "One."
+    }
+  ]
+}

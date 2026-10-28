@@ -1,0 +1,32 @@
+{
+  "published": true,
+  "code": "ABZ",
+  "name": "Aberdeen Airport",
+  "title": "Aberdeen Airport guide: terminals, airlines and getting there",
+  "intro": "Aberdeen has one terminal, in Dyce, north-west of the city. Here's who flies from it and how to get there.",
+  "seo_title": "",
+  "seo_description": "",
+  "terminals": [
+    {
+      "name": "The terminal",
+      "airlines": "Loganair, British Airways, KLM, easyJet and others",
+      "text": "One terminal with one security area. Helicopter flights to the North Sea leave from separate terminals nearby."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting to Aberdeen Airport",
+      "text": "- **Bus:** the Jet 727 bus runs from Aberdeen city centre and the bus and train stations, about 35 minutes.\n- **Train:** Dyce station is about 2 miles away, a short bus or taxi ride from the terminal.\n- **Car:** the airport is off the A96 at Dyce. There's a charge for the drop-off zone."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is there a train station at Aberdeen Airport?",
+      "answer": "No. Dyce station is about 2 miles away, or take the Jet 727 bus from the city centre."
+    },
+    {
+      "question": "How many terminals does Aberdeen Airport have?",
+      "answer": "One for passenger flights."
+    }
+  ]
+}

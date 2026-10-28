@@ -32,7 +32,9 @@
   color: var(--text);
 }
 .hj-ticket-stub {
-  flex: 0 0 26px;
+  /* A width as well as the flex basis: Safari leaves the basis out when it works out how wide the ticket is. */
+  flex: none;
+  width: 26px;
   background: var(--standby);
 }
 .hj-ticket-body {
@@ -63,7 +65,7 @@
   border: 2px solid var(--standby);
 }
 .hj-garda .hj-ticket-stub {
-  flex-basis: 30px;
+  width: 30px;
 }
 .hj-garda:not(.mini) .hj-ticket-body {
   padding: 16px 18px;
@@ -84,7 +86,7 @@
   transform: rotate(var(--r, 0deg));
 }
 .hj-ticket.mini .hj-ticket-stub {
-  flex-basis: 14px;
+  width: 14px;
 }
 .hj-ticket.mini .hj-ticket-body {
   padding: 6px 12px 7px;
@@ -182,7 +184,7 @@
   gap: 3px;
 }
 .hj-strip .hj-ticket-stub {
-  flex-basis: 22px;
+  width: 22px;
 }
 .hj-strip.above .hj-float:nth-child(1) {
   left: -24px;
@@ -394,7 +396,8 @@
   gap: 8px;
 }
 .hj-dot {
-  flex: 0 0 24px;
+  flex: none;
+  width: 24px;
   height: 24px;
   border-radius: var(--radius-round);
 }
@@ -456,7 +459,7 @@
     font-size: var(--text-3);
   }
   .hj-dot {
-    flex-basis: 20px;
+    width: 20px;
     height: 20px;
   }
   .hj-mine {
@@ -670,7 +673,8 @@
   gap: 14px;
 }
 .hj-day {
-  flex: 0 0 48px;
+  flex: none;
+  width: 48px;
   font: 500 var(--text-3) var(--mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -697,7 +701,7 @@
     padding: 14px 18px 18px;
   }
   .hj-day {
-    flex-basis: 44px;
+    width: 44px;
   }
   /* A phone shows three days, as in the design. */
   .hj-days li:nth-child(4) {

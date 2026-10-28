@@ -1,20 +1,21 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import { CREATORS, HOME, HOW, HOW_STEPS, ONBOARDING, POPULAR, bannerEnded, bannerKey, readBanner, readCreators, readFeatured, readHome, readHow, readOnboarding } from "../src/site";
+import { CHAPTER_KEYS, CREATORS, HOME, HOW, HOW_STEPS, ONBOARDING, POPULAR, bannerEnded, bannerKey, readBanner, readCreators, readFeatured, readHome, readHow, readOnboarding } from "../src/site";
 
 describe("home page words", () => {
   it("come from the editor's file", () => {
-    expect(HOME.hero.heading).toBe("Can't agree where to go next? Let the draw decide.");
-    expect(HOME.how.steps).toHaveLength(5);
-    expect(HOME.features.draw.title).toBe("The draw");
-    expect(HOME.features.plan.title).toBe("Trip plan");
+    expect(HOME.hero.heading).toBe("Every family has a list of somewheres.");
+    expect(HOME.hero.lead).toContain("decide where to go on holiday");
+    for (const k of CHAPTER_KEYS) expect(HOME.journey[k].title).not.toBe("");
+    expect(HOME.faq.questions.length).toBeGreaterThan(0);
+    expect(HOME.cta.button).not.toBe("");
   });
 
   it("drop empty entries rather than breaking", () => {
-    const h = readHome({ hero: { perks: ["", "Free"] }, how: { steps: [{ title: "" }, { title: "One" }] } });
-    expect(h.hero.perks).toEqual(["Free"]);
-    expect(h.how.steps.map((s) => s.title)).toEqual(["One"]);
-    expect(h.features.been).toEqual({ title: "", text: "" });
+    const h = readHome({ hero: { heading: " Hi " }, faq: { questions: [{ question: "Free?" }, { question: "One?", answer: "Yes" }] } });
+    expect(h.hero.heading).toBe("Hi");
+    expect(h.faq.questions).toEqual([{ question: "One?", answer: "Yes" }]);
+    expect(h.journey.draw).toEqual({ title: "", text: "" });
   });
 });
 
@@ -24,7 +25,6 @@ describe("How it works page words", () => {
       expect(HOW.steps[k].title).not.toBe("");
       expect(HOW.steps[k].text).not.toBe("");
     }
-    expect(HOME.how.link_text).not.toBe("");
   });
 
   it("drop empty fields rather than breaking", () => {

@@ -18,56 +18,46 @@ const list = (v: unknown): Record<string, unknown>[] => (Array.isArray(v) ? v.ma
 export interface HomeContent {
   seo_title: string;
   seo_description: string;
-  hero: { kicker: string; heading: string; lead: string; perks: string[] };
-  how: { label: string; heading: string; steps: { title: string; text: string; status: string }[]; link_text: string };
-  features: { kicker: string; heading: string; lead: string } & Record<FeatureKey, { title: string; text: string }>;
-  why: { kicker: string; heading: string; reasons: { title: string; text: string }[] };
-  signup: { strip: string; heading: string; lead: string };
+  hero: { kicker: string; heading: string; lead: string; button: string; note: string };
+  journey: { kicker: string; heading: string } & Record<ChapterKey, { title: string; text: string }>;
+  postcards: { kicker: string; heading: string; text: string };
+  faq: { heading: string; questions: { question: string; answer: string }[] };
+  cta: { heading: string; button: string };
 }
 
-export const FEATURE_KEYS = ["been", "places", "next", "draw", "plan"] as const;
-export type FeatureKey = (typeof FEATURE_KEYS)[number];
+/** The home page's four chapters. Fixed, because each one is tied to its own picture. */
+export const CHAPTER_KEYS = ["standby", "points", "draw", "plan"] as const;
+export type ChapterKey = (typeof CHAPTER_KEYS)[number];
 
 /** Reads the home page file, so a field left empty in the editor just drops out instead of breaking the build. */
 export function readHome(raw: unknown): HomeContent {
   const r = obj(raw);
   const hero = obj(r.hero);
-  const how = obj(r.how);
-  const features = obj(r.features);
-  const why = obj(r.why);
-  const signup = obj(r.signup);
-  const card = (k: FeatureKey) => ({ title: str(obj(features[k]).title), text: str(obj(features[k]).text) });
+  const journey = obj(r.journey);
+  const postcards = obj(r.postcards);
+  const faq = obj(r.faq);
+  const cta = obj(r.cta);
+  const chapter = (k: ChapterKey) => ({ title: str(obj(journey[k]).title), text: str(obj(journey[k]).text) });
   return {
     seo_title: str(r.seo_title),
     seo_description: str(r.seo_description),
-    hero: {
-      kicker: str(hero.kicker),
-      heading: str(hero.heading),
-      lead: str(hero.lead),
-      perks: (Array.isArray(hero.perks) ? hero.perks : []).map(str).filter(Boolean),
+    hero: { kicker: str(hero.kicker), heading: str(hero.heading), lead: str(hero.lead), button: str(hero.button), note: str(hero.note) },
+    journey: {
+      kicker: str(journey.kicker),
+      heading: str(journey.heading),
+      standby: chapter("standby"),
+      points: chapter("points"),
+      draw: chapter("draw"),
+      plan: chapter("plan"),
     },
-    how: {
-      label: str(how.label),
-      heading: str(how.heading),
-      steps: list(how.steps).map((s) => ({ title: str(s.title), text: str(s.text), status: str(s.status) })).filter((s) => s.title),
-      link_text: str(how.link_text),
+    postcards: { kicker: str(postcards.kicker), heading: str(postcards.heading), text: str(postcards.text) },
+    faq: {
+      heading: str(faq.heading),
+      questions: list(faq.questions)
+        .map((q) => ({ question: str(q.question), answer: str(q.answer) }))
+        .filter((q) => q.question && q.answer),
     },
-    features: {
-      kicker: str(features.kicker),
-      heading: str(features.heading),
-      lead: str(features.lead),
-      been: card("been"),
-      places: card("places"),
-      next: card("next"),
-      draw: card("draw"),
-      plan: card("plan"),
-    },
-    why: {
-      kicker: str(why.kicker),
-      heading: str(why.heading),
-      reasons: list(why.reasons).map((x) => ({ title: str(x.title), text: str(x.text) })).filter((x) => x.title),
-    },
-    signup: { strip: str(signup.strip), heading: str(signup.heading), lead: str(signup.lead) },
+    cta: { heading: str(cta.heading), button: str(cta.button) },
   };
 }
 

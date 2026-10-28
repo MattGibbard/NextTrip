@@ -118,7 +118,7 @@ export function headTags(page: PublicPage, updated?: string, published?: string)
   if (page === "airports") return fixedTags("airports", { jsonLd: airportsJsonLd() });
   const l = listing(page);
   if (l) return metaTags(listingMeta(l));
-  if (page === "home") return fixedTags("home", { title: HOME.seo_title, description: HOME.seo_description });
+  if (page === "home") return fixedTags("home", { title: HOME.seo_title, description: HOME.seo_description, jsonLd: homeJsonLd() });
   if (page === "creators") return fixedTags("creators", { title: CREATORS.seo_title, description: CREATORS.seo_description });
   if (page === "how") return fixedTags("how", { title: HOW.seo_title, description: HOW.seo_description });
   const info = page in INFO_PAGES ? (page as Info) : null;
@@ -160,4 +160,17 @@ function pageBody(page: PublicPage) {
   const info = page in INFO_PAGES ? (page as Info) : null;
   if (info) return <InfoPage page={info} />;
   return <LegalView page={page as "privacy" | "terms"} />;
+}
+
+/** The home page's questions, for search results. Links and bold in the answers become plain words. */
+function homeJsonLd(): unknown[] {
+  const plain = (t: string) => t.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\*\*(.+?)\*\*/g, "$1");
+  if (!HOME.faq.questions.length) return [];
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: HOME.faq.questions.map((q) => ({ "@type": "Question", name: q.question, acceptedAnswer: { "@type": "Answer", text: plain(q.answer) } })),
+    },
+  ];
 }

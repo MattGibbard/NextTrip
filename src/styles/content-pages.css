@@ -867,14 +867,14 @@
 .lp-article .bl-answer-rows li:first-child {
   border-top: 0;
 }
-.bl-answer-rows li.chip {
+.bl-answer-rows li.bl-answer-pair {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px 14px;
   flex-wrap: wrap;
 }
-.bl-answer-rows li.chip strong {
+.bl-answer-rows li.bl-answer-pair strong {
   flex: 1 1 14rem;
   min-width: 0;
   font-weight: 600;

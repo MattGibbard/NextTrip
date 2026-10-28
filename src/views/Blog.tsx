@@ -251,7 +251,7 @@ function ShortAnswer({ section, id, code }: { section: Section; id?: string; cod
           const m = chips ? item.match(CHIP) : null;
           const chip = !!m;
           return (
-            <li key={j} className={chip ? "chip" : undefined}>
+            <li key={j} className={chip ? "bl-answer-pair" : undefined}>
               {chip ? (
                 <>
                   <strong>

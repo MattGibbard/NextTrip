@@ -1,0 +1,192 @@
+{
+  "name": "Ayia Napa",
+  "published": true,
+  "country": "CY",
+  "title": "Holidays in Ayia Napa",
+  "intro": "Powder-white sand and turquoise sea in Cyprus's south-east corner, with sea caves, a quiet old monastery and long summer nights. Here's what Ayia Napa is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/ayia-napa-6824447_1280.webp",
+  "image_alt": "Sandstone rock formations and still water along the coast near Ayia Napa, Cyprus",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ayia_Napa",
+  "to_code": "LCA",
+  "holiday_types": [
+    "beach",
+    "nature"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Larnaca airport is about 45 minutes away. Cyprus drives on the left, like the UK. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 17
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 17
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 19
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 23
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 27
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild, sunny",
+      "temp": 23
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 19
+    }
+  },
+  "when_to_go": "May, June, September and October are best, with long sunny days and a warm sea. July and August are very hot and the busiest time. November and spring are mild and quiet, good for walking the coast. Winter is mild but many bars and hotels close.",
+  "things": [
+    {
+      "name": "Nissi Beach",
+      "tag": "Free",
+      "blurb": "White sand and shallow turquoise water, with a small island you can wade to.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fig Tree Bay",
+      "tag": "Free",
+      "blurb": "A beautiful sandy bay in nearby Protaras with calm, clear water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cape Greco",
+      "tag": "Outdoors",
+      "blurb": "Sea caves, cliffs and coastal paths in a national park. Swim at the Blue Lagoon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ayia Napa Monastery",
+      "tag": "Free",
+      "blurb": "A peaceful 16th-century monastery in the middle of town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sea caves",
+      "tag": "Free",
+      "blurb": "Wave-carved rock arches west of town, best seen at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Konnos Bay",
+      "tag": "Free",
+      "blurb": "A sheltered cove with pine trees and clear water.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Ayia Napa just for clubbing?",
+      "answer": "No. The nightlife is centred on one square, while Protaras, Cape Greco and the beaches suit quieter holidays."
+    },
+    {
+      "question": "What is the best beach in Ayia Napa?",
+      "answer": "Nissi Beach is the most famous, but Makronissos and Konnos Bay are calmer."
+    },
+    {
+      "question": "How far is Ayia Napa from Larnaca airport?",
+      "answer": "About 50 kilometres, around 45 minutes by car or the airport bus."
+    },
+    {
+      "question": "Is Ayia Napa hot in October?",
+      "answer": "Yes, it's usually around 28°C with warm sea, making it one of Europe's best October beach spots."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Paphos",
+      "code": "PFO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Limassol",
+      "code": "LCA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Rhodes",
+      "code": "RHO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

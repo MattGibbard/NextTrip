@@ -1,0 +1,193 @@
+{
+  "name": "Abu Dhabi",
+  "published": true,
+  "country": "AE",
+  "title": "Holidays in Abu Dhabi",
+  "intro": "The UAE's capital, with a dazzling white mosque, the Louvre on the water, theme parks on Yas Island and calm beaches. Here's what Abu Dhabi is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/abu-dhabi-4191991_1280.webp",
+  "image_alt": "The white domes and arches of Sheikh Zayed Grand Mosque in Abu Dhabi",
+  "wikipedia": "https://en.wikipedia.org/wiki/Abu_Dhabi",
+  "to_code": "AUH",
+  "holiday_types": [
+    "city",
+    "beach",
+    "culture"
+  ],
+  "nights": "4 to 6",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3 to 4 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "UAE dirham (AED)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa needed in advance",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Dress modestly at the mosque, where long clothes and headscarves for women are required. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 24
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 29
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 34
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 39
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Extreme heat",
+      "temp": 41
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Extreme heat",
+      "temp": 42
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Extreme heat",
+      "temp": 43
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 40
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 36
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 26
+    }
+  },
+  "when_to_go": "November to March is the best time, warm and sunny around 24 to 30°C. April and October are hot but manageable. From May to September it's extremely hot, so days are spent indoors, in the pool or at Yas Island's indoor parks.",
+  "things": [
+    {
+      "name": "Sheikh Zayed Grand Mosque",
+      "tag": "Free",
+      "blurb": "A vast white mosque of marble domes and chandeliers. Book a free slot online.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Louvre Abu Dhabi",
+      "tag": "Ticketed",
+      "blurb": "Art from every era under a huge dome that lets in a rain of light.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ferrari World",
+      "tag": "Ticketed",
+      "blurb": "Home to one of the world's fastest roller coasters, on Yas Island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Warner Bros. World and Yas Waterworld",
+      "tag": "Ticketed",
+      "blurb": "An indoor theme park and a big water park, side by side.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Saadiyat Beach",
+      "tag": "Free",
+      "blurb": "A long natural beach with calm water and dunes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Desert safari",
+      "tag": "Tour",
+      "blurb": "Dune driving, camels and dinner in the desert.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Abu Dhabi or Dubai better?",
+      "answer": "Abu Dhabi is calmer, with culture and theme parks. Dubai has more nightlife, shopping and big attractions."
+    },
+    {
+      "question": "Is Abu Dhabi good for families?",
+      "answer": "Yes. Yas Island's theme parks, calm beaches and big pools make it popular for family holidays."
+    },
+    {
+      "question": "How long is the flight to Abu Dhabi?",
+      "answer": "About 7 hours direct from London."
+    },
+    {
+      "question": "Can you visit Dubai from Abu Dhabi?",
+      "answer": "Yes. It's about 1.5 hours by road, and buses run often."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Dubai",
+      "code": "DXB",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Oman",
+      "code": "MCT",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Maldives",
+      "code": "MLE",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Mauritius",
+      "code": "MRU",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

@@ -1,0 +1,192 @@
+{
+  "name": "Aruba",
+  "published": true,
+  "country": "AW",
+  "title": "Holidays in Aruba",
+  "intro": "A sunny, dry Dutch Caribbean island of white-sand beaches, cactus deserts and pastel Oranjestad, south of the hurricane belt. Here's what Aruba is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/aruba-4881228_1280.webp",
+  "image_alt": "A pastel Dutch colonial building with white gables in Oranjestad, Aruba",
+  "wikipedia": "https://en.wikipedia.org/wiki/Aruba",
+  "to_code": "AUA",
+  "holiday_types": [
+    "beach",
+    "relax"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 hrs behind the UK (5 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Aruban florin (Afl)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B / F · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Fill in the online embarkation card before you travel. US dollars are widely accepted. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, breezy",
+      "temp": 29
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, breezy",
+      "temp": 30
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 30
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 31
+    },
+    "may": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 31
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Windy",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Windy",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 33
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 32
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 30
+    }
+  },
+  "when_to_go": "Aruba is warm, sunny and dry all year, and sits outside the main hurricane belt. January to May is the driest and most popular time. Summer is windier, which suits kitesurfers, and October to December brings some short showers.",
+  "things": [
+    {
+      "name": "Eagle Beach",
+      "tag": "Free",
+      "blurb": "A wide white-sand beach with famous twisted fofoti trees.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Palm Beach",
+      "tag": "Free",
+      "blurb": "Calmer water and a strip of resorts, bars and watersports.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Arikok National Park",
+      "tag": "Outdoors",
+      "blurb": "Cactus desert, caves and the sheltered natural pool of Conchi.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Oranjestad",
+      "tag": "Free",
+      "blurb": "Pastel Dutch colonial buildings and a free street tram.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Snorkelling the Antilla wreck",
+      "tag": "Tour",
+      "blurb": "One of the biggest shipwrecks in the Caribbean, in shallow water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Baby Beach",
+      "tag": "Free",
+      "blurb": "A shallow, calm lagoon at the island's southern tip.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Does Aruba get hurricanes?",
+      "answer": "Rarely. It's south of the main hurricane belt, which makes it a safer bet from August to October."
+    },
+    {
+      "question": "How do you get to Aruba from the UK?",
+      "answer": "Fly via Amsterdam with KLM, or connect through the USA."
+    },
+    {
+      "question": "Is Aruba expensive?",
+      "answer": "Yes. Hotels and food are priced like the US, though supermarkets and food trucks help."
+    },
+    {
+      "question": "What is the best beach in Aruba?",
+      "answer": "Eagle Beach is often rated among the world's best. Baby Beach suits children."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Curaçao",
+      "code": "CUR",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Turks and Caicos",
+      "code": "PLS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Punta Cana",
+      "code": "PUJ",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

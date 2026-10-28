@@ -1,0 +1,193 @@
+{
+  "name": "Honolulu",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Honolulu",
+  "intro": "Waikiki's famous beach and surf under Diamond Head, with Pearl Harbor, rainforest hikes and the North Shore across the island of Oʻahu. Here's what Honolulu is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/honolulu-996344_1280.webp",
+  "image_alt": "Hotels along Waikiki Beach in Honolulu, with Diamond Head crater behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Honolulu",
+  "to_code": "HNL",
+  "holiday_types": [
+    "beach",
+    "city",
+    "adventure"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "10 to 11 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Warm, big surf",
+      "temp": 27
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 27
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 27
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 28
+    },
+    "may": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 29
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 30
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 30
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 29
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 27
+    }
+  },
+  "when_to_go": "April, May, September and October are the best times, with warm, dry weather and fewer visitors. Summer is hot and busy. Winter brings more rain and giant waves on the North Shore, which surfers love, but Waikiki stays warm year-round.",
+  "things": [
+    {
+      "name": "Waikiki Beach",
+      "tag": "Free",
+      "blurb": "Learn to surf on gentle waves where surfing was made famous.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Diamond Head",
+      "tag": "Ticketed",
+      "blurb": "A short, steep hike up an old crater. Book an entry slot.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pearl Harbor",
+      "tag": "Free",
+      "blurb": "The USS Arizona Memorial. Reserve free tickets online.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hanauma Bay",
+      "tag": "Ticketed",
+      "blurb": "A sheltered bay for snorkelling over coral. Book ahead; closed Mondays and Tuesdays.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "North Shore",
+      "tag": "Day trip",
+      "blurb": "Big-wave beaches in winter, turtles at Laniakea and shrimp trucks in Haleʻiwa.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kualoa Ranch",
+      "tag": "Tour",
+      "blurb": "Lush valleys where Jurassic Park was filmed.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long is the flight to Honolulu from the UK?",
+      "answer": "Usually 18 to 22 hours, with a stop on the US West Coast."
+    },
+    {
+      "question": "Is Honolulu worth it, or should you go to Maui?",
+      "answer": "Honolulu has the city, history and most flights. Maui is quieter and more scenic. Many people combine two islands."
+    },
+    {
+      "question": "How many days do you need in Honolulu?",
+      "answer": "Five days covers Waikiki, Pearl Harbor, a hike and a North Shore trip."
+    },
+    {
+      "question": "Is Hawaii expensive?",
+      "answer": "Yes, especially hotels and eating out. Self-catering and food trucks help."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Maui",
+      "code": "OGG",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Hawaii cruise",
+      "code": "HNL",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Los Angeles",
+      "code": "LAX",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bora Bora",
+      "code": "BOB",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

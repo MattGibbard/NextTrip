@@ -1,0 +1,193 @@
+{
+  "name": "Saint-Tropez",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Saint-Tropez",
+  "intro": "A pastel fishing port turned Riviera legend, with yachts in the harbour, beach clubs on Pampelonne and hilltop villages behind. Here's what Saint-Tropez is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/saint-tropez-7960721_1280.webp",
+  "image_alt": "Aerial view of Saint-Tropez harbour and old town on the French Riviera",
+  "wikipedia": "https://en.wikipedia.org/wiki/Saint-Tropez",
+  "to_code": "NCE",
+  "holiday_types": [
+    "beach",
+    "food",
+    "relax"
+  ],
+  "nights": "4 to 6",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Nice airport is about 1.5 to 2 hours by road; summer boats also run from Nice and Cannes. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, crowded",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, crowded",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet, closed",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    }
+  },
+  "when_to_go": "June and September are the best months, warm and sunny without the peak-season traffic jams. July and August are glamorous but crowded and very expensive. May and October are quieter and good for walking. Many hotels and beach clubs close from November to March.",
+  "things": [
+    {
+      "name": "Vieux Port",
+      "tag": "Free",
+      "blurb": "Pastel houses, superyachts and café terraces around the old harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pampelonne beach",
+      "tag": "Free",
+      "blurb": "Five kilometres of sand with famous beach clubs and quieter public stretches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Citadel",
+      "tag": "Ticketed",
+      "blurb": "A 17th-century fort above town with a maritime museum and the best views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Place des Lices market",
+      "tag": "Food",
+      "blurb": "Tuesday and Saturday market under plane trees, with boules games after.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sentier du Littoral",
+      "tag": "Outdoors",
+      "blurb": "A coastal path past rocky coves and hidden beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gassin and Ramatuelle",
+      "tag": "Free",
+      "blurb": "Hilltop villages a short drive away, with views over the vineyards to the sea.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Saint-Tropez expensive?",
+      "answer": "In summer, very. Staying in nearby villages or Sainte-Maxime and visiting by ferry saves a lot."
+    },
+    {
+      "question": "How do you get to Saint-Tropez?",
+      "answer": "Fly to Nice and drive or take a transfer, about 1.5 to 2 hours. Toulon airport is a little closer but has fewer flights."
+    },
+    {
+      "question": "What is the best beach near Saint-Tropez?",
+      "answer": "Pampelonne is the famous one. Plage de l'Escalet and Gigaro are quieter and more natural."
+    },
+    {
+      "question": "When is Saint-Tropez quietest?",
+      "answer": "May, late September and October, when it's still warm but the crowds have gone."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Nice",
+      "code": "NCE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Corsica",
+      "code": "AJA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Menton",
+      "code": "NCE",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Marbella",
+      "code": "AGP",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

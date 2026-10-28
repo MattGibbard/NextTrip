@@ -1,0 +1,193 @@
+{
+  "name": "Paros",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Paros",
+  "intro": "A relaxed Cycladic island of fishing villages, sandy coves and marble lanes, right in the middle of the ferry routes. Here's what Paros is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/paros-3773172_1280.webp",
+  "image_alt": "A whitewashed alley with blue doors and a clay pot on Paros",
+  "wikipedia": "https://en.wikipedia.org/wiki/Paros",
+  "to_code": "PAS",
+  "holiday_types": [
+    "beach",
+    "food",
+    "relax"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The island airport takes small planes from Athens; most people arrive by ferry from Piraeus or Rafina. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Windy, closed",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Windy, closed",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, calm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sunny",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Windy, busy",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Windy, busy",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 16
+    }
+  },
+  "when_to_go": "June and September are ideal: hot, sunny and calmer, with the sea warmest in September. July and August are busy and windy, which windsurfers love. May and October are quiet and lovely for walking. Most of the island winds down from November to April.",
+  "things": [
+    {
+      "name": "Naoussa",
+      "tag": "Free",
+      "blurb": "A fishing harbour of tavernas, octopus drying in the sun and evening cocktails.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Parikia",
+      "tag": "Free",
+      "blurb": "The port town, with the 1,500-year-old Church of a Hundred Doors.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lefkes",
+      "tag": "Free",
+      "blurb": "A hill village of marble lanes. A Byzantine path leads down to the coast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kolymbithres",
+      "tag": "Free",
+      "blurb": "Smooth granite rocks shaped like little pools around a sandy bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Golden Beach",
+      "tag": "Outdoors",
+      "blurb": "A long sandy beach that's a hub for windsurfing and kitesurfing.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Antiparos",
+      "tag": "Day trip",
+      "blurb": "A smaller island ten minutes by ferry, with a big cave and laid-back village.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Paros or Mykonos better?",
+      "answer": "Paros is calmer, cheaper and more traditional. Mykonos is glitzier with bigger nightlife. They're 40 minutes apart by ferry."
+    },
+    {
+      "question": "Do you need a car on Paros?",
+      "answer": "Buses link the main villages and beaches, but a car or quad helps you reach quieter coves."
+    },
+    {
+      "question": "How do you get to Paros?",
+      "answer": "Ferries from Athens take 3 to 5 hours, or fly to Athens and take a 35-minute connecting flight."
+    },
+    {
+      "question": "Is Paros good for island hopping?",
+      "answer": "Yes. It's a hub, with frequent ferries to Naxos, Mykonos, Santorini and Ios."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Naxos",
+      "code": "JNX",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Mykonos",
+      "code": "JMK",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Milos",
+      "code": "MLO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Santorini",
+      "code": "JTR",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

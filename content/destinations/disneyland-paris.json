@@ -1,0 +1,191 @@
+{
+  "name": "Disneyland Paris",
+  "published": true,
+  "country": "FR",
+  "title": "Holidays in Disneyland Paris",
+  "intro": "Two Disney parks, themed hotels and fireworks over Sleeping Beauty Castle, just east of Paris. Here's what Disneyland Paris is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/disneyland-paris-2272907_1280.webp",
+  "image_alt": "The Disneyland Paris entrance arch with flags and the pink Disneyland Hotel behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Disneyland_Paris",
+  "to_code": "CDG",
+  "holiday_types": [
+    "city"
+  ],
+  "nights": "2 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The Eurostar no longer runs direct; go to Paris and take the RER A (about 40 minutes). The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, short queues",
+      "temp": 7
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cold, quieter",
+      "temp": 8
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 12
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Busy at Easter",
+      "temp": 16
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, long days",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 25
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Quieter",
+      "temp": 21
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Halloween",
+      "temp": 16
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Christmas starts",
+      "temp": 10
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive, busy",
+      "temp": 7
+    }
+  },
+  "when_to_go": "May, June and September usually mean shorter queues and pleasant weather, outside the school holidays. Halloween in October and Christmas from mid November bring decorations and parades, but also crowds at half term and over the festive weeks. Winter weekdays in January are the quietest, if cold.",
+  "things": [
+    {
+      "name": "Disneyland Park",
+      "tag": "Ticketed",
+      "blurb": "The classic park, with Sleeping Beauty Castle, Big Thunder Mountain and Pirates of the Caribbean.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Disney Adventure World",
+      "tag": "Ticketed",
+      "blurb": "The second park, home to Marvel, Toy Story and the new Frozen land.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Night-time show",
+      "tag": "Ticketed",
+      "blurb": "Fireworks and projections on the castle close the park each night.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Disney Village",
+      "tag": "Free",
+      "blurb": "Restaurants, shops and a cinema between the parks and the hotels.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Character dining",
+      "tag": "Food",
+      "blurb": "Book a meal with Mickey or the princesses ahead, as they fill quickly.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paris",
+      "tag": "Day trip",
+      "blurb": "The RER A train reaches central Paris in about 40 minutes.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need at Disneyland Paris?",
+      "answer": "Two or three days lets you see both parks without rushing. Four suits younger children who need breaks."
+    },
+    {
+      "question": "How do you get to Disneyland Paris from the airport?",
+      "answer": "The Magical Shuttle bus runs from Charles de Gaulle and Orly, or take the TGV from Charles de Gaulle to Marne-la-Vallée in about 10 minutes."
+    },
+    {
+      "question": "Can you get the Eurostar to Disneyland Paris?",
+      "answer": "Not direct any more. Take the Eurostar to Paris or Lille and change, either onto the RER A in Paris or a TGV from Lille."
+    },
+    {
+      "question": "When is Disneyland Paris quietest?",
+      "answer": "Weekdays outside the French and UK school holidays, especially January, early March and September."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Paris",
+      "code": "CDG",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Orlando",
+      "code": "MCO",
+      "label": "🎢 Theme parks"
+    },
+    {
+      "name": "Amsterdam",
+      "code": "AMS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bruges",
+      "code": "BRU",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

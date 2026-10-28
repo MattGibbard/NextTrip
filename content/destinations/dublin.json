@@ -1,0 +1,193 @@
+{
+  "name": "Dublin",
+  "published": true,
+  "country": "IE",
+  "title": "Holidays in Dublin",
+  "intro": "A friendly, walkable capital of Georgian squares, cosy pubs and live music, with sea cliffs and mountains a short train ride away. Here's what Dublin is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/dublin-1049403_1280.webp",
+  "image_alt": "The white Ha'penny Bridge over the River Liffey in Dublin",
+  "wikipedia": "https://en.wikipedia.org/wiki/Dublin",
+  "to_code": "DUB",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": true
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No passport checks from the UK",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": false
+    }
+  ],
+  "facts_note": "No passport is needed for UK and Irish citizens, but airlines and ferries ask for photo ID. Other nationalities should check the rules.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, damp",
+      "temp": 8
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "St Patrick's",
+      "temp": 11
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 13
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild, long days",
+      "temp": 15
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 18
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warmest",
+      "temp": 20
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 19
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 17
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Halloween",
+      "temp": 14
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Wet",
+      "temp": 10
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive",
+      "temp": 8
+    }
+  },
+  "when_to_go": "May to September brings the mildest weather and longest days, though rain is never far away. March is busy with St Patrick's Day. Winter is cold and damp but cosy, with festive lights in December. Hotel prices are high all year, so book ahead.",
+  "things": [
+    {
+      "name": "Trinity College and the Book of Kells",
+      "tag": "Ticketed",
+      "blurb": "A ninth-century illuminated manuscript and the grand Long Room library.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Guinness Storehouse",
+      "tag": "Ticketed",
+      "blurb": "Seven floors on the famous stout, ending at a rooftop bar with city views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Temple Bar and pubs",
+      "tag": "Free",
+      "blurb": "Live traditional music most nights. Quieter pubs lie just outside the area.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "National museums",
+      "tag": "Free",
+      "blurb": "Free entry to archaeology, natural history and art collections.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Howth",
+      "tag": "Day trip",
+      "blurb": "A fishing village with clifftop walks, 30 minutes on the DART train.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kilmainham Gaol",
+      "tag": "Ticketed",
+      "blurb": "The old prison at the heart of Ireland's independence story. Book ahead.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Dublin?",
+      "answer": "Two or three days covers the sights. Add a day for Howth, Glendalough or the Wicklow mountains."
+    },
+    {
+      "question": "Do you need a passport to go to Dublin from the UK?",
+      "answer": "UK and Irish citizens don't need a passport, but airlines and ferries usually ask for photo ID, and a passport is the simplest."
+    },
+    {
+      "question": "Is Dublin expensive?",
+      "answer": "Hotels and drinks are pricey. The museums are free, and pub lunches help keep costs down."
+    },
+    {
+      "question": "How do you get from Dublin Airport to the city?",
+      "answer": "Express buses run to the centre in about 30 minutes."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Wild Atlantic Way",
+      "code": "SNN",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Amsterdam",
+      "code": "AMS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Copenhagen",
+      "code": "CPH",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bruges",
+      "code": "BRU",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

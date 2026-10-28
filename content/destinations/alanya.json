@@ -1,0 +1,192 @@
+{
+  "name": "Alanya",
+  "published": true,
+  "country": "TR",
+  "title": "Holidays in Alanya",
+  "intro": "A Turkish Riviera resort under a castle-topped headland, with Cleopatra Beach, boat trips to sea caves and the Taurus mountains behind. Here's what Alanya is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/alanya-8627430_1280.webp",
+  "image_alt": "Alanya harbour with a lighthouse, and the castle hill and town rising behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Alanya",
+  "to_code": "AYT",
+  "holiday_types": [
+    "beach",
+    "culture"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK (3 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Turkish lira (₺)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Antalya airport is about 2 hours away; the small Gazipaşa airport is closer but has fewer flights. Your passport needs at least 150 days left on it when you arrive. Check entry rules and the latest travel advice on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, rainy",
+      "temp": 16
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 16
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 30
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 30
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 21
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, rainy",
+      "temp": 17
+    }
+  },
+  "when_to_go": "May, June, September and October are the best months, hot and sunny with a warm sea. July and August are very hot and humid. The season runs long, and late October is still beach weather. Winter is mild but wet, and quieter.",
+  "things": [
+    {
+      "name": "Cleopatra Beach",
+      "tag": "Free",
+      "blurb": "A long sandy beach below the castle, with clear water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alanya Castle",
+      "tag": "Ticketed",
+      "blurb": "Seljuk walls wrap the headland. Take the cable car up for views along the coast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Red Tower",
+      "tag": "Ticketed",
+      "blurb": "An octagonal 13th-century tower guarding the harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Boat trip to the caves",
+      "tag": "Tour",
+      "blurb": "Round the headland to Damlataş, the Pirates' Cave and the Lovers' Cave.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dim River",
+      "tag": "Outdoors",
+      "blurb": "Riverside restaurants on platforms over the water, in the cool hills.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sapadere Canyon",
+      "tag": "Day trip",
+      "blurb": "A walkway through a narrow gorge of waterfalls and pools.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Alanya cheap?",
+      "answer": "Compared with most Mediterranean resorts, yes, especially for food and all-inclusive hotels."
+    },
+    {
+      "question": "Which airport is best for Alanya?",
+      "answer": "Antalya has the most flights and is about 2 hours by transfer. Gazipaşa is only 40 minutes away, but routes are limited."
+    },
+    {
+      "question": "Is the sea warm in Alanya in October?",
+      "answer": "Yes, around 25°C, and days are usually still in the mid 20s."
+    },
+    {
+      "question": "Is Alanya good for a beach holiday?",
+      "answer": "Yes. Cleopatra Beach and the long beaches east of town are sandy, with calm water."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Antalya",
+      "code": "AYT",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Marmaris",
+      "code": "DLM",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Kaş",
+      "code": "DLM",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Paphos",
+      "code": "PFO",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

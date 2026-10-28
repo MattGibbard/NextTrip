@@ -1,0 +1,193 @@
+{
+  "name": "Kuala Lumpur",
+  "published": true,
+  "country": "MY",
+  "title": "Holidays in Kuala Lumpur",
+  "intro": "Malaysia's capital, where the Petronas Towers rise over hawker stalls, temples and rainforest parks, and the beaches of Langkawi and Penang are a short flight away. Here's what Kuala Lumpur is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/kuala-lumpur-1820944_1280.webp",
+  "image_alt": "The Petronas Twin Towers lit up above the Kuala Lumpur skyline at dusk",
+  "wikipedia": "https://en.wikipedia.org/wiki/Kuala_Lumpur",
+  "to_code": "KUL",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "2 to 4",
+  "trip_length": "two-weeks",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 to 8 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Malaysian ringgit (RM)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Fill in the Malaysia Digital Arrival Card online before you land. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Hot, drier",
+      "temp": 32
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Hot, drier",
+      "temp": 33
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Hot, showers",
+      "temp": 33
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 33
+    },
+    "may": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 33
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Drier",
+      "temp": 33
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Drier",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Drier",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Wet",
+      "temp": 32
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Wettest",
+      "temp": 32
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 32
+    }
+  },
+  "when_to_go": "Kuala Lumpur is hot and humid all year, around 32°C. June to August and January to February tend to be drier. Heavy afternoon storms are common from October to November and in spring, but usually pass quickly.",
+  "things": [
+    {
+      "name": "Petronas Twin Towers",
+      "tag": "Ticketed",
+      "blurb": "Walk the skybridge and visit the observation deck. The park below has free light shows.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Batu Caves",
+      "tag": "Free",
+      "blurb": "A huge limestone cave temple up 272 rainbow-painted steps.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jalan Alor",
+      "tag": "Food",
+      "blurb": "A street of hawker stalls and restaurants that comes alive at night.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Merdeka Square",
+      "tag": "Free",
+      "blurb": "Colonial buildings around the square where independence was declared.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "KL Forest Eco Park",
+      "tag": "Outdoors",
+      "blurb": "A canopy walk through rainforest in the middle of the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Islamic Arts Museum",
+      "tag": "Ticketed",
+      "blurb": "Beautiful tiles, textiles and manuscripts in a calm building.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Kuala Lumpur?",
+      "answer": "Two or three days, then head on to Penang, Langkawi or the Cameron Highlands."
+    },
+    {
+      "question": "Is Kuala Lumpur good for a stopover?",
+      "answer": "Yes. It's cheap, with great food and easy airport trains."
+    },
+    {
+      "question": "How do you get from KLIA to the city?",
+      "answer": "The KLIA Ekspres train takes about 30 minutes to KL Sentral."
+    },
+    {
+      "question": "Is Kuala Lumpur expensive?",
+      "answer": "No. Food, transport and hotels are good value, especially compared with Singapore."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Penang",
+      "code": "PEN",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Langkawi",
+      "code": "LGK",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Singapore",
+      "code": "SIN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Borneo",
+      "code": "BKI",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

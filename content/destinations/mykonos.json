@@ -1,0 +1,192 @@
+{
+  "name": "Mykonos",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Mykonos",
+  "intro": "The Cycladic island of white cubes, windmills and Little Venice sunsets, with golden beaches and famous nightlife. Here's what Mykonos is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/mykonos-627679_1280.webp",
+  "image_alt": "The famous windmills of Mykonos on a hill under a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Mykonos",
+  "to_code": "JMK",
+  "holiday_types": [
+    "beach",
+    "food"
+  ],
+  "nights": "4 to 6",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Most hotels and flights run from May to October. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Windy, closed",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Windy, closed",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, calm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sunny",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Windy, busy",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Windy, busy",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Quiet",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 15
+    }
+  },
+  "when_to_go": "June and September are the best months: hot, sunny and less hectic than high summer, with the sea warm by September. July and August are busy and expensive, and the meltemi wind can blow hard. May and October are quieter and cheaper. From November to April much of the island shuts.",
+  "things": [
+    {
+      "name": "Mykonos Town (Chora)",
+      "tag": "Free",
+      "blurb": "A maze of white lanes, blue doors and bougainvillea, made to get lost in.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Little Venice",
+      "tag": "Free",
+      "blurb": "Houses with balconies over the sea. Come for the sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kato Mili windmills",
+      "tag": "Free",
+      "blurb": "The row of old windmills on the hill above town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Delos",
+      "tag": "Day trip",
+      "blurb": "An uninhabited island of ancient ruins, once the birthplace of Apollo, half an hour by boat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Beaches",
+      "tag": "Free",
+      "blurb": "Platis Gialos and Ornos are calm and handy; Psarou and Paradise are livelier.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ano Mera",
+      "tag": "Free",
+      "blurb": "An inland village with a monastery and tavernas, away from the crowds.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Mykonos expensive?",
+      "answer": "Yes, it's one of Greece's priciest islands, especially in July and August. June and September are better value."
+    },
+    {
+      "question": "Is Mykonos only for partying?",
+      "answer": "No. The town, Delos and quieter beaches like Agios Sostis suit a relaxed trip too."
+    },
+    {
+      "question": "How many days do you need in Mykonos?",
+      "answer": "Three to five days covers the town, beaches and Delos. Many people pair it with Paros, Naxos or Santorini."
+    },
+    {
+      "question": "How do you get to Mykonos?",
+      "answer": "Direct flights run in summer, or fly to Athens and take a ferry from Piraeus or Rafina, about 2.5 to 5 hours."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Paros",
+      "code": "PAS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Santorini",
+      "code": "JTR",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Naxos",
+      "code": "JNX",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Ibiza",
+      "code": "IBZ",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

@@ -1,0 +1,193 @@
+{
+  "name": "Bahamas",
+  "published": true,
+  "country": "BS",
+  "title": "Holidays in Bahamas",
+  "intro": "Hundreds of islands in impossibly clear water, from lively Nassau and Paradise Island to the swimming pigs and empty sandbars of the Exumas. Here's what the Bahamas is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/bahamas-116954_1280.webp",
+  "image_alt": "A lighthouse on a rocky point at the mouth of Nassau harbour, Bahamas, with resort towers behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/The_Bahamas",
+  "to_code": "NAS",
+  "holiday_types": [
+    "beach",
+    "adventure",
+    "relax"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Bahamian dollar (= US$)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "US dollars are accepted everywhere at the same value. Hurricane season runs from June to November, peaking from August to October. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, dry",
+      "temp": 25
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild, dry",
+      "temp": 26
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 27
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 28
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 30
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, showers",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 30
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drying out",
+      "temp": 28
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Dry",
+      "temp": 26
+    }
+  },
+  "when_to_go": "March to May is the sweet spot, warm and dry before the summer humidity, and calmer than the winter peak. December to February is pleasant but can feel cool in the water. June to November is hot and humid, with hurricane risk peaking from August to October.",
+  "things": [
+    {
+      "name": "Nassau",
+      "tag": "Free",
+      "blurb": "The capital, with colonial pink buildings, the Straw Market and Fort Fincastle.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paradise Island",
+      "tag": "Free",
+      "blurb": "Long Cabbage Beach and the giant Atlantis resort and water park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Exuma Cays",
+      "tag": "Tour",
+      "blurb": "Boat trips to swimming pigs, nurse sharks and sandbars in pale blue water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Harbour Island",
+      "tag": "Day trip",
+      "blurb": "A pastel village and Pink Sands Beach, reached by fast ferry.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Snorkelling and diving",
+      "tag": "Outdoors",
+      "blurb": "Clear water, reefs and wrecks around every island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Junkanoo",
+      "tag": "Seasonal",
+      "blurb": "A street carnival of costumes and drums on Boxing Day and New Year's Day.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Which Bahamas island is best?",
+      "answer": "Nassau and Paradise Island are easiest to reach and busiest. The Exumas and Eleuthera are quieter and more beautiful."
+    },
+    {
+      "question": "Is the Bahamas expensive?",
+      "answer": "Yes. Most food is imported, so meals and hotels cost more than on most Caribbean islands."
+    },
+    {
+      "question": "How long is the flight to the Bahamas from the UK?",
+      "answer": "About 9.5 hours direct from London to Nassau."
+    },
+    {
+      "question": "Can you swim with pigs in the Bahamas?",
+      "answer": "Yes, at Big Major Cay in the Exumas, on day trips from Nassau or from Great Exuma."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Turks and Caicos",
+      "code": "PLS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Florida Keys",
+      "code": "MIA",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Jamaica",
+      "code": "MBJ",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

@@ -1,0 +1,193 @@
+{
+  "name": "Brussels",
+  "published": true,
+  "country": "BE",
+  "title": "Holidays in Brussels",
+  "intro": "Europe's capital, with a gilded medieval square, art nouveau houses, comic-strip murals and the world's best chips, waffles and chocolate. Here's what Brussels is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/brussels-3707925_1280.webp",
+  "image_alt": "The ornate guild houses of the Grand-Place in Brussels with crowds in the square",
+  "wikipedia": "https://en.wikipedia.org/wiki/Brussels",
+  "to_code": "BRU",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The Eurostar from London takes about 2 hours. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, wet",
+      "temp": 6
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 7
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 11
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 15
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 18
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 23
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Flower carpet",
+      "temp": 23
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 19
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Damp",
+      "temp": 10
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas market",
+      "temp": 6
+    }
+  },
+  "when_to_go": "April to June and September are best for walking the city. In mid August of even-numbered years the Grand-Place is covered in a flower carpet. December brings the Winter Wonders market and lights. Rain is common at any time of year.",
+  "things": [
+    {
+      "name": "Grand-Place",
+      "tag": "Free",
+      "blurb": "One of Europe's finest squares, ringed by gilded guild houses. Lovely lit up at night.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Manneken Pis",
+      "tag": "Free",
+      "blurb": "The tiny statue of a boy, often dressed in one of his hundreds of costumes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Atomium",
+      "tag": "Ticketed",
+      "blurb": "A giant model of an iron crystal from the 1958 World's Fair, with a viewing sphere.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Comic strip trail",
+      "tag": "Free",
+      "blurb": "Murals of Tintin and other comic heroes painted on walls around the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Royal Museums of Fine Arts and Magritte Museum",
+      "tag": "Ticketed",
+      "blurb": "Flemish masters and the world's biggest Magritte collection.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bruges or Ghent",
+      "tag": "Day trip",
+      "blurb": "Both medieval canal towns are under an hour by train.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Brussels?",
+      "answer": "Two days covers the city. Add a day for Bruges, Ghent or Antwerp."
+    },
+    {
+      "question": "How do you get to Brussels from London?",
+      "answer": "The Eurostar from St Pancras takes about 2 hours to Brussels-Midi."
+    },
+    {
+      "question": "What food is Brussels famous for?",
+      "answer": "Frites with mayonnaise, waffles, chocolate, mussels and a huge range of Belgian beers."
+    },
+    {
+      "question": "Is Brussels expensive?",
+      "answer": "It's mid-priced for a European capital. Hotels are cheaper at weekends, when EU business travel drops."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bruges",
+      "code": "BRU",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Ghent",
+      "code": "BRU",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Amsterdam",
+      "code": "AMS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Paris",
+      "code": "CDG",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

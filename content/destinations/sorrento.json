@@ -1,0 +1,193 @@
+{
+  "name": "Sorrento",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Sorrento",
+  "intro": "A clifftop town of lemon groves and piazzas looking across the Bay of Naples to Vesuvius, and the best base for Capri and Pompeii. Here's what Sorrento is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/sorrento-2776671_1280.webp",
+  "image_alt": "Bathing piers below the cliffs of Sorrento, with boats and swimmers in the bay",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sorrento",
+  "to_code": "NAP",
+  "holiday_types": [
+    "culture",
+    "food",
+    "nature"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Naples airport is about 1 hr 15 mins away by bus or transfer. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    }
+  },
+  "when_to_go": "May, June, September and early October are the best times, warm enough to swim with the boats and buses less packed. July and August are hot and very busy. Winter is mild but quiet, with some hotels closed and fewer ferries.",
+  "things": [
+    {
+      "name": "Piazza Tasso and the old town",
+      "tag": "Free",
+      "blurb": "Evening strolls through lanes of limoncello shops and cafés.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Capri",
+      "tag": "Day trip",
+      "blurb": "Fast ferries reach the island in about 25 minutes. Take the chairlift up Monte Solaro.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pompeii",
+      "tag": "Ticketed",
+      "blurb": "The Roman town buried by Vesuvius, half an hour away on the Circumvesuviana train.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Amalfi Coast drive",
+      "tag": "Day trip",
+      "blurb": "Buses and boats follow the cliffs to Positano and Amalfi.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bagni della Regina Giovanna",
+      "tag": "Free",
+      "blurb": "A natural rock pool among Roman ruins, a short walk out of town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Marina Grande",
+      "tag": "Food",
+      "blurb": "The old fishing harbour, for seafood lunches by the water.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Sorrento or the Amalfi Coast better to stay?",
+      "answer": "Sorrento is easier, with more hotels, flatter streets and better transport. Positano and Amalfi are prettier but steeper and pricier."
+    },
+    {
+      "question": "How do you get from Naples airport to Sorrento?",
+      "answer": "The Curreri bus runs straight there in about 75 minutes. A private transfer is a little quicker."
+    },
+    {
+      "question": "Does Sorrento have a beach?",
+      "answer": "Only small ones and bathing piers at the foot of the cliffs. Most people swim from the lidos at Marina Grande and Marina Piccola."
+    },
+    {
+      "question": "How many days do you need in Sorrento?",
+      "answer": "A week covers Capri, Pompeii and the Amalfi Coast with time to relax."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Amalfi Coast",
+      "code": "NAP",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Naples",
+      "code": "NAP",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Ischia",
+      "code": "NAP",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Taormina",
+      "code": "CTA",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

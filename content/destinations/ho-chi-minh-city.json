@@ -1,0 +1,193 @@
+{
+  "name": "Ho Chi Minh City",
+  "published": true,
+  "country": "VN",
+  "title": "Holidays in Ho Chi Minh City",
+  "intro": "Vietnam's biggest city, still called Saigon by many, with French colonial buildings, rooftop bars, war history and the Mekong Delta close by. Here's what Ho Chi Minh City is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/ho-chi-minh-city-9069634_1280.webp",
+  "image_alt": "The Ho Chi Minh City skyline reflected in the Saigon River at dusk",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City",
+  "to_code": "SGN",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "two-weeks",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Vietnamese dong (₫)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 45 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, hot",
+      "temp": 32
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 33
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Hot, dry",
+      "temp": 34
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hottest",
+      "temp": 35
+    },
+    "may": {
+      "rating": "good",
+      "note": "Rains start",
+      "temp": 34
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Wet",
+      "temp": 33
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Wet",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Wet",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Wettest",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Wet",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drying out",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 31
+    }
+  },
+  "when_to_go": "December to April is the dry season and best time to visit, hot and sunny. March and April are the hottest. From May to November it rains most afternoons, usually in short, heavy bursts, so mornings are often fine.",
+  "things": [
+    {
+      "name": "War Remnants Museum",
+      "tag": "Ticketed",
+      "blurb": "A powerful, hard-hitting look at the Vietnam War.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Notre-Dame Cathedral and Central Post Office",
+      "tag": "Free",
+      "blurb": "French colonial landmarks side by side.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ben Thanh Market",
+      "tag": "Food",
+      "blurb": "A big market of food stalls and souvenirs, with a night market outside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cu Chi Tunnels",
+      "tag": "Day trip",
+      "blurb": "A wartime network of tunnels, 1.5 hours north.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mekong Delta",
+      "tag": "Day trip",
+      "blurb": "Boat trips through canals, orchards and floating markets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rooftop bars",
+      "tag": "Free",
+      "blurb": "Watch the city light up from high above District 1.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Ho Chi Minh City?",
+      "answer": "Two or three days, plus a day each for the Cu Chi Tunnels and the Mekong Delta."
+    },
+    {
+      "question": "Is it Saigon or Ho Chi Minh City?",
+      "answer": "Both. The official name is Ho Chi Minh City, but locals still call the centre Saigon."
+    },
+    {
+      "question": "How do you get around Ho Chi Minh City?",
+      "answer": "Ride-hailing apps like Grab are cheap and easy. The new metro line runs from the centre to the east."
+    },
+    {
+      "question": "Where should you stay in Ho Chi Minh City?",
+      "answer": "District 1 is closest to the sights and nightlife. District 3 is a little calmer."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Hoi An",
+      "code": "DAD",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Phu Quoc",
+      "code": "PQC",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Siem Reap",
+      "code": "SAI",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Bangkok",
+      "code": "BKK",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

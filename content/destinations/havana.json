@@ -1,0 +1,192 @@
+{
+  "name": "Havana",
+  "published": true,
+  "country": "CU",
+  "title": "Holidays in Havana",
+  "intro": "Crumbling colonial grandeur, 1950s cars and live son music on every corner in Cuba's unforgettable capital. Here's what Havana is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/havana-1638594_1280.webp",
+  "image_alt": "Classic American cars on a colourful street in Havana, with the Capitolio dome behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Havana",
+  "to_code": "HAV",
+  "holiday_types": [
+    "city",
+    "culture"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Cuban peso (CUP)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Tourist card (e-visa) needed",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B / C · 110V and 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Bring cash in euros or pounds, as cards often don't work and US-issued cards never do. Power cuts and shortages are common. Check the latest advice on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 26
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 27
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, warm",
+      "temp": 28
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 29
+    },
+    "may": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 30
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, wet",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 30
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drying out",
+      "temp": 28
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 27
+    }
+  },
+  "when_to_go": "November to April is the best time, warm, dry and less humid. May to October is hot and wet, with hurricane season peaking from August to October. Christmas, New Year and Easter are the busiest times.",
+  "things": [
+    {
+      "name": "Habana Vieja",
+      "tag": "Free",
+      "blurb": "The old town's four main squares, restored mansions and lively streets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Malecón",
+      "tag": "Free",
+      "blurb": "Walk the long seafront wall at sunset, when locals gather.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Classic car tour",
+      "tag": "Tour",
+      "blurb": "Ride in an open-top 1950s Chevrolet through the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Museo Nacional de Bellas Artes",
+      "tag": "Ticketed",
+      "blurb": "The best collection of Cuban art.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Live music",
+      "tag": "Free",
+      "blurb": "Son, salsa and jazz in bars across the old town, often with no cover charge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Viñales",
+      "tag": "Day trip",
+      "blurb": "Tobacco farms and limestone hills, about 3 hours west.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you need a visa for Cuba?",
+      "answer": "Yes, UK visitors need a tourist card (now an e-visa) and must fill in the online D'Viajeros form before travel."
+    },
+    {
+      "question": "Can you use cards in Cuba?",
+      "answer": "Not reliably. Bring enough euros or pounds in cash for your whole trip."
+    },
+    {
+      "question": "How many days do you need in Havana?",
+      "answer": "Three or four days, then add Viñales, Trinidad or a beach at Varadero."
+    },
+    {
+      "question": "Where should you stay in Havana?",
+      "answer": "A casa particular, a room in a local home, is often better value and more reliable than state hotels."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cartagena",
+      "code": "CTG",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Mexico City",
+      "code": "MEX",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Punta Cana",
+      "code": "PUJ",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Puerto Rico",
+      "code": "SJU",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

@@ -1,0 +1,192 @@
+{
+  "name": "Agadir",
+  "published": true,
+  "country": "MA",
+  "title": "Holidays in Agadir",
+  "intro": "Morocco's sunniest beach resort, with a ten-kilometre sandy bay, a hilltop kasbah and winter warmth just four hours from the UK. Here's what Agadir is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/agadir-4440131_1280.webp",
+  "image_alt": "Agadir's long sandy bay and port seen from the kasbah hill",
+  "wikipedia": "https://en.wikipedia.org/wiki/Agadir",
+  "to_code": "AGA",
+  "holiday_types": [
+    "beach",
+    "relax"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "0 to 1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Moroccan dirham (MAD)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Dirhams can only be bought in Morocco. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Winter sun",
+      "temp": 20
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Winter sun",
+      "temp": 21
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm, hazy",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 27
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 27
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Winter sun",
+      "temp": 23
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Winter sun",
+      "temp": 21
+    }
+  },
+  "when_to_go": "Agadir is sunny nearly all year, and the sea breeze keeps summer comfortable at around 27°C. It's best known for winter sun, with days around 20 to 23°C from November to March. The Atlantic stays cool, around 18 to 22°C.",
+  "things": [
+    {
+      "name": "Agadir beach",
+      "tag": "Free",
+      "blurb": "A long, wide sweep of sand with a palm-lined promenade.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kasbah Oufella",
+      "tag": "Free",
+      "blurb": "The hilltop ruins above town, with views over the bay at sunset. Ride the cable car up.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Souk El Had",
+      "tag": "Free",
+      "blurb": "A huge walled market of spices, produce and crafts.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Taghazout",
+      "tag": "Day trip",
+      "blurb": "A surf village up the coast, with beginner waves and cafés.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paradise Valley",
+      "tag": "Day trip",
+      "blurb": "Palm-lined rock pools in a gorge in the Atlas foothills.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Souss-Massa National Park",
+      "tag": "Outdoors",
+      "blurb": "Dunes and wetlands where rare bald ibis live.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Agadir warm in winter?",
+      "answer": "Yes. It's one of the warmest places within 4 hours of the UK, at around 20 to 23°C, though evenings are cool."
+    },
+    {
+      "question": "Is Agadir good for a beach holiday?",
+      "answer": "Yes. The beach is long and sandy with lifeguards, though the Atlantic can be wavy and cool."
+    },
+    {
+      "question": "Can you visit Marrakech from Agadir?",
+      "answer": "Yes. It's about 3 hours by road, so it's better with an overnight stay."
+    },
+    {
+      "question": "How long is the flight to Agadir?",
+      "answer": "About 3.5 to 4 hours from the UK."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Essaouira",
+      "code": "ESU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Marrakech",
+      "code": "RAK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Tenerife",
+      "code": "TFS",
+      "label": "☀️ Winter sun"
+    },
+    {
+      "name": "Cape Verde",
+      "code": "SID",
+      "label": "☀️ Winter sun"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

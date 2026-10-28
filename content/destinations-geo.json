@@ -1,13 +1,33 @@
 {
+  "abu-dhabi": {
+    "query": "Abu Dhabi|AE",
+    "lat": 24.4538,
+    "lon": 54.3774
+  },
   "acadia": {
     "query": "Acadia National Park|US",
     "lat": 44.3386,
     "lon": -68.2733
   },
+  "agadir": {
+    "query": "Agadir|MA",
+    "lat": 30.4205,
+    "lon": -9.5839
+  },
+  "alanya": {
+    "query": "Alanya|TR",
+    "lat": 36.8866,
+    "lon": 30.703
+  },
   "alaska-inside-passage": {
     "query": "Alaska's Inside Passage|US",
     "lat": 58.3019,
     "lon": -134.4197
+  },
+  "albufeira": {
+    "query": "Albufeira|PT",
+    "lat": 37.0882,
+    "lon": -8.2526
   },
   "alentejo": {
     "query": "Alentejo|PT",
@@ -74,6 +94,11 @@
     "lat": 25.2048,
     "lon": 55.2708
   },
+  "aruba": {
+    "query": "Aruba|AW",
+    "lat": 12.524,
+    "lon": -70.027
+  },
   "asheville": {
     "query": "Asheville|US",
     "lat": 35.5951,
@@ -89,6 +114,11 @@
     "lat": 37.9756,
     "lon": 23.7348
   },
+  "auckland": {
+    "query": "Auckland|NZ",
+    "lat": -36.8521,
+    "lon": 174.7632
+  },
   "austin": {
     "query": "Austin|US",
     "lat": 30.2711,
@@ -98,6 +128,11 @@
     "query": "Aveiro|PT",
     "lat": 40.6405,
     "lon": -8.6538
+  },
+  "ayia-napa": {
+    "query": "Ayia Napa|CY",
+    "lat": 34.9893,
+    "lon": 33.9962
   },
   "azores": {
     "query": "Azores|PT",
@@ -113,6 +148,11 @@
     "query": "Baden-Baden|DE",
     "lat": 48.7606,
     "lon": 8.2398
+  },
+  "bahamas": {
+    "query": "Bahamas|BS",
+    "lat": 25.0566,
+    "lon": -77.3262
   },
   "bali": {
     "query": "Bali|ID",
@@ -148,6 +188,11 @@
     "query": "Belgrade to Bar railway|RS",
     "lat": 42.59,
     "lon": 19.35
+  },
+  "benidorm": {
+    "query": "Benidorm|ES",
+    "lat": 38.5406,
+    "lon": -0.1291
   },
   "beppu": {
     "query": "Beppu|JP",
@@ -209,6 +254,11 @@
     "lat": 44.4938,
     "lon": 11.3426
   },
+  "bora-bora": {
+    "query": "Bora Bora|PF",
+    "lat": -16.5004,
+    "lon": -151.7415
+  },
   "bordeaux": {
     "query": "Bordeaux|FR",
     "lat": 44.8412,
@@ -239,6 +289,11 @@
     "lat": 51.2093,
     "lon": 3.2247
   },
+  "brussels": {
+    "query": "Brussels|BE",
+    "lat": 50.8467,
+    "lon": 4.3525
+  },
   "budapest": {
     "query": "Budapest|HU",
     "lat": 47.4979,
@@ -263,6 +318,11 @@
     "query": "Cádiz|ES",
     "lat": 36.5297,
     "lon": -6.2929
+  },
+  "cairo": {
+    "query": "Cairo|EG",
+    "lat": 30.0444,
+    "lon": 31.2357
   },
   "california-zephyr": {
     "query": "California Zephyr|US",
@@ -384,6 +444,11 @@
     "lat": 42.15,
     "lon": 9.1
   },
+  "costa-brava": {
+    "query": "Costa Brava|ES",
+    "lat": 41.7038,
+    "lon": 2.9416
+  },
   "costa-rica": {
     "query": "Costa Rica|CR",
     "lat": 9.7489,
@@ -429,6 +494,11 @@
     "lat": 27.0378,
     "lon": 88.2632
   },
+  "disneyland-paris": {
+    "query": "Disneyland Paris|FR",
+    "lat": 48.8701,
+    "lon": 2.7741
+  },
   "dolomites": {
     "query": "Dolomites|IT",
     "lat": 46.2946,
@@ -458,6 +528,11 @@
     "query": "Dubai|AE",
     "lat": 25.2653,
     "lon": 55.2925
+  },
+  "dublin": {
+    "query": "Dublin|IE",
+    "lat": 53.3494,
+    "lon": -6.2606
   },
   "dubrovnik": {
     "query": "Dubrovnik|HR",
@@ -494,6 +569,11 @@
     "lat": 36.6221,
     "lon": 29.1153
   },
+  "fiji": {
+    "query": "Fiji|FJ",
+    "lat": -17.7765,
+    "lon": 177.4356
+  },
   "flam-railway": {
     "query": "Flåm Railway|NO",
     "lat": 60.8631,
@@ -508,6 +588,11 @@
     "query": "Florida Keys|US",
     "lat": 24.7136,
     "lon": -81.0904
+  },
+  "formentera": {
+    "query": "Formentera|ES",
+    "lat": 38.7062,
+    "lon": 1.4334
   },
   "fuerteventura": {
     "query": "Fuerteventura|ES",
@@ -558,6 +643,11 @@
     "query": "Goa|IN",
     "lat": 15.2993,
     "lon": 74.124
+  },
+  "gold-coast": {
+    "query": "Gold Coast|AU",
+    "lat": -28.0024,
+    "lon": 153.4146
   },
   "goldenpass-express": {
     "query": "GoldenPass Express|CH",
@@ -634,15 +724,30 @@
     "lat": 47.5622,
     "lon": 13.6493
   },
+  "hanoi": {
+    "query": "Hanoi|VN",
+    "lat": 21.0283,
+    "lon": 105.854
+  },
   "harz-steam-railway": {
     "query": "Harz steam railway|DE",
     "lat": 51.8352,
     "lon": 10.7853
   },
+  "havana": {
+    "query": "Havana|CU",
+    "lat": 23.1353,
+    "lon": -82.359
+  },
   "hawaii-cruise": {
     "query": "Hawaii cruise|US",
     "lat": 21.3069,
     "lon": -157.8583
+  },
+  "helsinki": {
+    "query": "Helsinki|FI",
+    "lat": 60.1666,
+    "lon": 24.9435
   },
   "heviz": {
     "query": "Hévíz|HU",
@@ -654,10 +759,30 @@
     "lat": 34.3917,
     "lon": 132.4518
   },
+  "ho-chi-minh-city": {
+    "query": "Ho Chi Minh City|VN",
+    "lat": 10.7737,
+    "lon": 106.7166
+  },
   "hoi-an": {
     "query": "Hoi An|VN",
     "lat": 15.8801,
     "lon": 108.338
+  },
+  "hong-kong": {
+    "query": "Hong Kong|HK",
+    "lat": 22.2793,
+    "lon": 114.1628
+  },
+  "honolulu": {
+    "query": "Honolulu|US",
+    "lat": 21.3045,
+    "lon": -157.8557
+  },
+  "hurghada": {
+    "query": "Hurghada|EG",
+    "lat": 27.2226,
+    "lon": 33.8307
   },
   "hurtigruten": {
     "query": "Hurtigruten coastal voyage|NO",
@@ -699,10 +824,20 @@
     "lat": 40.7342,
     "lon": 13.9471
   },
+  "istanbul": {
+    "query": "Istanbul|TR",
+    "lat": 41.0064,
+    "lon": 28.9759
+  },
   "istria": {
     "query": "Istria|HR",
     "lat": 45.25,
     "lon": 13.9
+  },
+  "jamaica": {
+    "query": "Jamaica|JM",
+    "lat": 18.1851,
+    "lon": -77.3948
   },
   "japan-bullet-train": {
     "query": "Japan by bullet train|JP",
@@ -769,6 +904,11 @@
     "lat": 42.9607,
     "lon": 17.1355
   },
+  "kos": {
+    "query": "Kos|GR",
+    "lat": 36.894,
+    "lon": 27.2867
+  },
   "kotor": {
     "query": "Kotor|ME",
     "lat": 42.4247,
@@ -783,6 +923,21 @@
     "query": "Kraków|PL",
     "lat": 50.0619,
     "lon": 19.9369
+  },
+  "kruger": {
+    "query": "Kruger National Park|ZA",
+    "lat": -23.9358,
+    "lon": 31.5084
+  },
+  "kuala-lumpur": {
+    "query": "Kuala Lumpur|MY",
+    "lat": 3.1517,
+    "lon": 101.6942
+  },
+  "kusadasi": {
+    "query": "Kuşadası|TR",
+    "lat": 37.8632,
+    "lon": 27.2669
   },
   "kyoto": {
     "query": "Kyoto|JP",
@@ -854,6 +1009,11 @@
     "lat": 29.0469,
     "lon": -13.59
   },
+  "las-vegas": {
+    "query": "Las Vegas|US",
+    "lat": 36.1674,
+    "lon": -115.1484
+  },
   "lecce": {
     "query": "Lecce|IT",
     "lat": 40.3515,
@@ -873,6 +1033,11 @@
     "query": "Levi|FI",
     "lat": 67.804,
     "lon": 24.809
+  },
+  "limassol": {
+    "query": "Limassol|CY",
+    "lat": 34.6853,
+    "lon": 33.0333
   },
   "lisbon": {
     "query": "Lisbon|PT",
@@ -959,6 +1124,16 @@
     "lat": 35.8885,
     "lon": 14.4477
   },
+  "marbella": {
+    "query": "Marbella|ES",
+    "lat": 36.5075,
+    "lon": -4.8047
+  },
+  "marmaris": {
+    "query": "Marmaris|TR",
+    "lat": 36.8523,
+    "lon": 28.2743
+  },
   "marrakech": {
     "query": "Marrakech|MA",
     "lat": 31.6258,
@@ -988,6 +1163,11 @@
     "query": "Mekong river cruise|VN",
     "lat": 10.36,
     "lon": 106.36
+  },
+  "melbourne": {
+    "query": "Melbourne|AU",
+    "lat": -37.8142,
+    "lon": 144.9632
   },
   "mendoza": {
     "query": "Mendoza|AR",
@@ -1029,6 +1209,11 @@
     "lat": 25.7742,
     "lon": -80.1936
   },
+  "milan": {
+    "query": "Milan|IT",
+    "lat": 45.4642,
+    "lon": 9.1896
+  },
   "milos": {
     "query": "Milos|GR",
     "lat": 36.697,
@@ -1058,6 +1243,16 @@
     "query": "Mosel Valley|DE",
     "lat": 49.9161,
     "lon": 7.0705
+  },
+  "munich": {
+    "query": "Munich|DE",
+    "lat": 48.1371,
+    "lon": 11.5754
+  },
+  "mykonos": {
+    "query": "Mykonos|GR",
+    "lat": 37.445,
+    "lon": 25.326
   },
   "nafplio": {
     "query": "Nafplio|GR",
@@ -1098,6 +1293,11 @@
     "query": "New York|US",
     "lat": 40.7127,
     "lon": -74.006
+  },
+  "niagara-falls": {
+    "query": "Niagara Falls|CA",
+    "lat": 43.1066,
+    "lon": -79.0639
   },
   "nice": {
     "query": "Nice|FR",
@@ -1159,6 +1359,16 @@
     "lat": 28.5421,
     "lon": -81.379
   },
+  "osaka": {
+    "query": "Osaka|JP",
+    "lat": 34.6938,
+    "lon": 135.5015
+  },
+  "oslo": {
+    "query": "Oslo|NO",
+    "lat": 59.9133,
+    "lon": 10.739
+  },
   "pacific-coast-highway": {
     "query": "Pacific Coast Highway|US",
     "lat": 36.2704,
@@ -1198,6 +1408,11 @@
     "query": "Park City|US",
     "lat": 40.6461,
     "lon": -111.498
+  },
+  "paros": {
+    "query": "Paros|GR",
+    "lat": 37.0651,
+    "lon": 25.192
   },
   "paxos": {
     "query": "Paxos|GR",
@@ -1269,6 +1484,11 @@
     "lat": 41.0086,
     "lon": 16.5128
   },
+  "punta-cana": {
+    "query": "Punta Cana|DO",
+    "lat": 18.5566,
+    "lon": -68.3692
+  },
   "quebec-city": {
     "query": "Quebec City|CA",
     "lat": 46.8139,
@@ -1308,6 +1528,11 @@
     "query": "Riga|LV",
     "lat": 56.9496,
     "lon": 24.1052
+  },
+  "rimini": {
+    "query": "Rimini|IT",
+    "lat": 43.9465,
+    "lon": 12.6307
   },
   "rio-de-janeiro": {
     "query": "Rio de Janeiro|BR",
@@ -1368,6 +1593,11 @@
     "query": "Saint-Malo|FR",
     "lat": 48.6495,
     "lon": -2.026
+  },
+  "saint-tropez": {
+    "query": "Saint-Tropez|FR",
+    "lat": 43.2727,
+    "lon": 6.6405
   },
   "salzburg": {
     "query": "Salzburg|AT",
@@ -1444,6 +1674,11 @@
     "lat": -4.6796,
     "lon": 55.492
   },
+  "sharm-el-sheikh": {
+    "query": "Sharm el-Sheikh|EG",
+    "lat": 27.8644,
+    "lon": 34.2954
+  },
   "sibenik": {
     "query": "Šibenik|HR",
     "lat": 43.7341,
@@ -1488,6 +1723,11 @@
     "query": "Sofia|BG",
     "lat": 42.6977,
     "lon": 23.3217
+  },
+  "sorrento": {
+    "query": "Sorrento|IT",
+    "lat": 40.6249,
+    "lon": 14.3748
   },
   "split": {
     "query": "Split|HR",
@@ -1623,6 +1863,16 @@
     "query": "Tromsø|NO",
     "lat": 69.6496,
     "lon": 18.956
+  },
+  "tulum": {
+    "query": "Tulum|MX",
+    "lat": 20.4296,
+    "lon": -87.6529
+  },
+  "turks-and-caicos": {
+    "query": "Turks and Caicos|TC",
+    "lat": 21.7907,
+    "lon": -72.1737
   },
   "utah-national-parks": {
     "query": "Utah's national parks|US",

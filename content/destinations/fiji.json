@@ -1,0 +1,193 @@
+{
+  "name": "Fiji",
+  "published": true,
+  "country": "FJ",
+  "title": "Holidays in Fiji",
+  "intro": "More than 300 South Pacific islands of palm-fringed beaches, soft coral reefs and warm village welcomes. Here's what Fiji is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/fiji-9963510_1280.webp",
+  "image_alt": "The green, rocky peak of Kuata Island in Fiji rising above the sea",
+  "wikipedia": "https://en.wikipedia.org/wiki/Fiji",
+  "to_code": "NAN",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "adventure"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "11 to 12 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Fijian dollar (FJ$)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type I · 240V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Cyclone season runs from November to April. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Hot, wet",
+      "temp": 31
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cyclone risk",
+      "temp": 31
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cyclone risk",
+      "temp": 31
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Drying out",
+      "temp": 30
+    },
+    "may": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 29
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Dry, cooler",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 30
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Hot, wet",
+      "temp": 31
+    }
+  },
+  "when_to_go": "May to October is the dry season and best time, with sunny days around 28°C and calm, clear water. November to April is hotter and wetter, with cyclones possible, but it's quieter and cheaper. Fijian school holidays in July and December are busy.",
+  "things": [
+    {
+      "name": "Mamanuca Islands",
+      "tag": "Free",
+      "blurb": "Small islands with white beaches and resorts, an easy boat ride from Nadi.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Yasawa Islands",
+      "tag": "Tour",
+      "blurb": "A remote chain of islands, reached by catamaran, for snorkelling and village visits.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Coral Coast",
+      "tag": "Free",
+      "blurb": "The south coast of the main island, with resorts, reefs and sand dunes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Diving with sharks",
+      "tag": "Tour",
+      "blurb": "Beqa Lagoon is famous for shark dives.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Village visit",
+      "tag": "Culture",
+      "blurb": "Join a kava ceremony. Bring a gift of kava root and cover your shoulders.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Garden of the Sleeping Giant",
+      "tag": "Ticketed",
+      "blurb": "Orchid gardens in the hills near Nadi.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Fiji from the UK?",
+      "answer": "Fly to Nadi via Asia, Australia, New Zealand or the USA, usually 24 hours or more in total."
+    },
+    {
+      "question": "Which Fiji island is best?",
+      "answer": "The Mamanucas are easiest to reach. The Yasawas are more remote, and Taveuni suits divers and walkers."
+    },
+    {
+      "question": "Is Fiji expensive?",
+      "answer": "Island resorts can be pricey, but backpacker resorts and the Coral Coast offer cheaper options."
+    },
+    {
+      "question": "How long should you spend in Fiji?",
+      "answer": "Ten days to two weeks, or a week as a stopover on the way to Australia or New Zealand."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bora Bora",
+      "code": "BOB",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Maldives",
+      "code": "MLE",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Auckland",
+      "code": "AKL",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

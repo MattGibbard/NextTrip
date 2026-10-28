@@ -1,0 +1,193 @@
+{
+  "name": "Oslo",
+  "published": true,
+  "country": "NO",
+  "title": "Holidays in Oslo",
+  "intro": "Norway's capital on a fjord, with bold new architecture, Viking ships and Munch's The Scream, and forests and islands close to the centre. Here's what Oslo is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/oslo-7627803_1280.webp",
+  "image_alt": "Boats in a marina on the Oslo fjord, with the city and wooded hills behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Oslo",
+  "to_code": "OSL",
+  "holiday_types": [
+    "city",
+    "culture",
+    "nature"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Norwegian krone (kr)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Norway isn't in the EU but is in the Schengen area, so the same new entry checks apply. Check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, dark",
+      "temp": -1
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 0
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Bright, cold",
+      "temp": 4
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 10
+    },
+    "may": {
+      "rating": "best",
+      "note": "Light nights",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 16
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 9
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Dark",
+      "temp": 4
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive",
+      "temp": 0
+    }
+  },
+  "when_to_go": "May to August is best, with long light evenings, island swims and outdoor cafés. June has nearly 19 hours of daylight. Winter is cold and dark but can be magical with snow, and cross-country skiing starts at the end of the metro line.",
+  "things": [
+    {
+      "name": "Opera House",
+      "tag": "Free",
+      "blurb": "Walk up the sloping white marble roof for views over the fjord.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Munch Museum",
+      "tag": "Ticketed",
+      "blurb": "Versions of The Scream and much more by Edvard Munch, in a tall waterfront building.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vigeland Park",
+      "tag": "Free",
+      "blurb": "More than 200 sculptures of people of all ages in a big city park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bygdøy",
+      "tag": "Ticketed",
+      "blurb": "A peninsula of museums: the Fram polar ship, Kon-Tiki and the folk museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fjord islands",
+      "tag": "Free",
+      "blurb": "Public ferries hop to islands for picnics and swims. Your transport ticket covers them.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Holmenkollen",
+      "tag": "Outdoors",
+      "blurb": "The ski jump and forest trails above the city, reached by metro.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Oslo expensive?",
+      "answer": "Yes, especially for eating and drinking out. Supermarket picnics and free sights like the parks and Opera House roof help."
+    },
+    {
+      "question": "How many days do you need in Oslo?",
+      "answer": "Two to three days is enough for the main sights and a fjord island trip."
+    },
+    {
+      "question": "How do you get from Oslo Airport to the city?",
+      "answer": "The Flytoget express takes about 20 minutes, and regular trains are cheaper and nearly as fast."
+    },
+    {
+      "question": "Can you see the fjords from Oslo?",
+      "answer": "Oslo sits on a fjord, but the dramatic west-coast fjords are a train ride away. The Oslo to Bergen railway is the classic route."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bergen",
+      "code": "BGO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Stockholm",
+      "code": "ARN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Copenhagen",
+      "code": "CPH",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Helsinki",
+      "code": "HEL",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

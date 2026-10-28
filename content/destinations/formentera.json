@@ -1,0 +1,193 @@
+{
+  "name": "Formentera",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Formentera",
+  "intro": "Ibiza's small, quiet neighbour, with white sand, astonishingly clear water and lanes made for cycling. Here's what Formentera is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/formentera-6602316_1280.webp",
+  "image_alt": "The white lighthouse of Far de la Mola on Formentera under a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Formentera",
+  "to_code": "IBZ",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "nature"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "There's no airport, so fly to Ibiza and take the 30-minute ferry from Ibiza Town. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, closed",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, closed",
+      "temp": 16
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 18
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warming up",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, quiet",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, closed",
+      "temp": 16
+    }
+  },
+  "when_to_go": "June and September are perfect: hot, calm and not too busy, with the sea at its warmest in September. July and August are lovely but crowded with day-trippers from Ibiza, and prices peak. May and October are quieter and cheaper. From November to March much of the island closes.",
+  "things": [
+    {
+      "name": "Ses Illetes",
+      "tag": "Free",
+      "blurb": "A long finger of white sand with turquoise water on both sides, often called one of Europe's best beaches.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cala Saona",
+      "tag": "Free",
+      "blurb": "A small sandy cove with red cliffs, best at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Far de la Mola",
+      "tag": "Free",
+      "blurb": "A lonely lighthouse on cliffs at the island's eastern tip.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cycling the green routes",
+      "tag": "Outdoors",
+      "blurb": "Flat, quiet paths through pine woods and salt flats. Hire bikes near the port.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Platja de Migjorn",
+      "tag": "Free",
+      "blurb": "Kilometres of quiet beach along the south coast, with a few chiringuitos.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Espalmador",
+      "tag": "Tour",
+      "blurb": "Boat over to a tiny uninhabited island with clear water and a sandy bay.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Formentera?",
+      "answer": "Fly to Ibiza, then take a ferry from Ibiza Town. Fast boats take about 30 minutes and run often in summer."
+    },
+    {
+      "question": "Do you need a car on Formentera?",
+      "answer": "No. Bikes, scooters and buses cover most of it, as the island is only about 20 kilometres long."
+    },
+    {
+      "question": "Is Formentera expensive?",
+      "answer": "Yes, hotels and beach restaurants cost more than on most Spanish islands. Self-catering apartments help."
+    },
+    {
+      "question": "Is Formentera a day trip from Ibiza?",
+      "answer": "It's easy as a day trip, but staying lets you enjoy the beaches once the day boats leave."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Ibiza",
+      "code": "IBZ",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Menorca",
+      "code": "MAH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Mallorca",
+      "code": "PMI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Milos",
+      "code": "MLO",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

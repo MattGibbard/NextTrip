@@ -1,0 +1,192 @@
+{
+  "name": "Kuşadası",
+  "published": true,
+  "country": "TR",
+  "title": "Holidays in Kuşadası",
+  "intro": "A lively Aegean resort near the ancient city of Ephesus, with sandy beaches, a busy cruise port and a pigeon-island castle. Here's what Kuşadası is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/kusadasi-7462845_1280.webp",
+  "image_alt": "A cruise ship in port at Kuşadası, with palm trees and turquoise water in front",
+  "wikipedia": "https://en.wikipedia.org/wiki/Kuşadası",
+  "to_code": "ADB",
+  "holiday_types": [
+    "beach",
+    "culture"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK (3 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Turkish lira (₺)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "İzmir airport is about 1 hour 15 minutes away. Your passport needs at least 150 days left on it when you arrive. Check entry rules and the latest travel advice on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, rainy",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 26
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 15
+    }
+  },
+  "when_to_go": "April, May, September and October are the best times, especially for visiting Ephesus before the heat. June to August are hot and sunny, ideal for the beach but tough for sightseeing in the middle of the day. Winter is cool and wet.",
+  "things": [
+    {
+      "name": "Ephesus",
+      "tag": "Ticketed",
+      "blurb": "One of the best-preserved Roman cities anywhere, with the Library of Celsus and a vast theatre. Go early.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pigeon Island",
+      "tag": "Free",
+      "blurb": "A little fortress on an island joined to the town by a causeway.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ladies Beach",
+      "tag": "Free",
+      "blurb": "The handiest sandy beach, lined with cafés.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dilek Peninsula",
+      "tag": "Outdoors",
+      "blurb": "A national park of quiet coves and pine forest south of town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Şirince",
+      "tag": "Day trip",
+      "blurb": "A hill village known for fruit wines and old stone houses.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "House of the Virgin Mary",
+      "tag": "Ticketed",
+      "blurb": "A small chapel on a wooded hill near Ephesus, a place of pilgrimage.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How far is Ephesus from Kuşadası?",
+      "answer": "About 20 kilometres, a 25-minute drive or a short dolmuş ride to Selçuk."
+    },
+    {
+      "question": "Is Kuşadası good for a beach holiday?",
+      "answer": "Yes. Ladies Beach and Long Beach are sandy, and the national park beaches are quieter."
+    },
+    {
+      "question": "Which airport is closest to Kuşadası?",
+      "answer": "İzmir, about 80 kilometres away. Bodrum is further, around 2 hours."
+    },
+    {
+      "question": "Can you go to Greece from Kuşadası?",
+      "answer": "Yes. Ferries run to the island of Samos in about 1.5 hours in season."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bodrum",
+      "code": "BJV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Marmaris",
+      "code": "DLM",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Pamukkale",
+      "code": "DNZ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Istanbul",
+      "code": "IST",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

@@ -1,0 +1,193 @@
+{
+  "name": "Auckland",
+  "published": true,
+  "country": "NZ",
+  "title": "Holidays in Auckland",
+  "intro": "New Zealand's biggest city, spread across volcanic hills between two harbours, with island wineries and black-sand surf beaches nearby. Here's what Auckland is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/auckland-5213705_1280.webp",
+  "image_alt": "Auckland's waterfront skyline and Sky Tower lit up at dusk",
+  "wikipedia": "https://en.wikipedia.org/wiki/Auckland",
+  "to_code": "AKL",
+  "holiday_types": [
+    "city",
+    "nature",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "11 to 13 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "New Zealand dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "NZeTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type I · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The NZeTA comes with a visitor levy, both paid online. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 24
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 21
+    },
+    "may": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 18
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Cool, wet",
+      "temp": 16
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 15
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 15
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 17
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 18
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 22
+    }
+  },
+  "when_to_go": "December to March is the best time, warm and sunny for beaches and islands. Spring and autumn are mild and quieter. Winter is cool and damp but rarely cold. Like all of New Zealand, the weather changes quickly.",
+  "things": [
+    {
+      "name": "Sky Tower",
+      "tag": "Ticketed",
+      "blurb": "The city's landmark tower, with views over both harbours.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Waiheke Island",
+      "tag": "Day trip",
+      "blurb": "Vineyards, beaches and olive groves, 40 minutes by ferry.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Eden",
+      "tag": "Free",
+      "blurb": "A volcanic cone with a crater and city views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Piha",
+      "tag": "Outdoors",
+      "blurb": "A wild black-sand surf beach in the west, below Lion Rock.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Auckland Museum",
+      "tag": "Ticketed",
+      "blurb": "Māori and Pacific treasures in the Domain park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rangitoto Island",
+      "tag": "Day trip",
+      "blurb": "Climb the young volcano across the harbour by ferry.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Auckland?",
+      "answer": "Two or three days, then head to the Bay of Islands, Rotorua or the South Island."
+    },
+    {
+      "question": "How long is the flight to Auckland?",
+      "answer": "Usually 24 to 26 hours from the UK, with one stop in Asia or the Middle East."
+    },
+    {
+      "question": "Is Auckland worth visiting?",
+      "answer": "Yes, for the harbour, islands and beaches, and it's the natural start of a North Island road trip."
+    },
+    {
+      "question": "How do you get from Auckland Airport to the city?",
+      "answer": "The SkyDrive bus runs to the centre in 40 to 60 minutes."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Rotorua",
+      "code": "ROT",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Queenstown",
+      "code": "ZQN",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Sydney",
+      "code": "SYD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Fiji",
+      "code": "NAN",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

@@ -199,3 +199,150 @@ a.icon-btn {
   gap: 1rem;
   margin-bottom: 1rem;
 }
+
+/* Explore: the rest of the site for signed-in families. A dropdown after the tabs on desktop… */
+.explore {
+  position: relative;
+}
+.tabs .explore > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.tabs .explore > button[aria-expanded="true"] {
+  background: var(--surface-2);
+}
+.explore-drop {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 1001;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lift);
+}
+.explore-link,
+.tabs .explore-drop .explore-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  width: 100%;
+  min-height: 0;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: var(--radius-row);
+  background: none;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.explore-link:hover,
+.tabs .explore-drop .explore-link:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+.explore-link b {
+  font-size: var(--text-8);
+  font-weight: 600;
+}
+.explore-link[aria-current] b {
+  color: var(--accent);
+}
+.explore-link small {
+  font-size: var(--text-6);
+  font-weight: 400;
+  color: var(--muted);
+}
+.explore-help {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-top: 4px;
+  padding: 10px 12px 4px;
+  border-top: 1px solid var(--border);
+}
+.explore-help a,
+.tabs .explore-drop .explore-help a {
+  display: inline;
+  min-height: 0;
+  padding: 0;
+  border-radius: 0;
+  color: var(--muted);
+  font-size: var(--text-6);
+  font-weight: 500;
+  text-decoration: none;
+}
+.explore-help a:hover,
+.tabs .explore-drop .explore-help a:hover {
+  color: var(--accent);
+}
+
+/* …and on phones a menu button in the top bar, opening a sheet from the bottom. */
+.icon-btn.menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--text);
+}
+.phone-menu-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background: rgb(0 0 0 / 0.4);
+}
+.phone-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px max(12px, env(safe-area-inset-right)) calc(16px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  background: var(--surface);
+  border-radius: var(--radius-sheet) var(--radius-sheet) 0 0;
+  box-shadow: var(--shadow-lift);
+  animation: phone-menu-up 0.2s ease-out;
+}
+.phone-menu-grab {
+  align-self: center;
+  width: 36px;
+  height: 4px;
+  margin: 2px 0 10px;
+  border-radius: 4px;
+  background: var(--border);
+}
+.phone-menu .mono-label {
+  padding: 0 12px 4px;
+  color: var(--muted);
+}
+.phone-menu .explore-link {
+  min-height: 52px;
+  justify-content: center;
+}
+@keyframes phone-menu-up {
+  from {
+    transform: translateY(24px);
+    opacity: 0.6;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .phone-menu {
+    animation: none;
+  }
+}
+
+/* Room under the footer for the bottom bar, on public pages a signed-in family is reading. */
+.app-nav-room {
+  height: calc(64px + env(safe-area-inset-bottom));
+}

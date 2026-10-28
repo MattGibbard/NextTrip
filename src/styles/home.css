@@ -108,7 +108,8 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  margin-left: auto;
+  /* Centred in the space between the wordmark and the button, the same as the app's tabs. */
+  margin: 0 auto;
   font-size: var(--text-8);
   font-weight: 600;
 }
@@ -126,6 +127,12 @@
 .lp-nav a[aria-current] {
   color: var(--accent);
   background: var(--accent-soft);
+}
+/* Signed in last time: the app's header is on its way (index.html), so don't flash the visitors' links first. */
+.signed-in .lp-top .lp-nav,
+.signed-in .lp-top .lp-top-inner > .btn,
+.signed-in .lp-top .lp-menu-btn {
+  visibility: hidden;
 }
 /* On phones the header keeps the button, and the links move into the menu. */
 .lp-nav {

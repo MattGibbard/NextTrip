@@ -37,6 +37,8 @@ export function forgetFamilyData() {
 /** Signed out: nothing of the family stays on this browser. */
 export function forgetFamily() {
   save(SIGNED_IN, false);
+  // Show the visitors' header again, which index.html hid while it expected the app's.
+  if (typeof document !== "undefined") document.documentElement.classList.remove("signed-in");
   forget(LAST_ME);
   forgetFamilyData();
 }

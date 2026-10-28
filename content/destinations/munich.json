@@ -1,0 +1,193 @@
+{
+  "name": "Munich",
+  "published": true,
+  "country": "DE",
+  "title": "Holidays in Munich",
+  "intro": "Bavaria's capital of beer gardens, baroque churches and grand museums, with the Alps on the horizon and fairy-tale castles a day trip away. Here's what Munich is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/munich-63268_1280.webp",
+  "image_alt": "Munich's old town rooftops with the Frauenkirche towers and the New Town Hall spire",
+  "wikipedia": "https://en.wikipedia.org/wiki/Munich",
+  "to_code": "MUC",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Oktoberfest runs from late September to early October, when hotels fill and prices soar. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 3
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 5
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 10
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 15
+    },
+    "may": {
+      "rating": "best",
+      "note": "Beer gardens",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Oktoberfest",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 14
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold, grey",
+      "temp": 8
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas markets",
+      "temp": 4
+    }
+  },
+  "when_to_go": "May to early September is beer garden season, warm and long. Late September is Oktoberfest: unforgettable but busy and expensive. Late November and December bring some of Germany's best Christmas markets. January to March is cold, though the museums are quiet.",
+  "things": [
+    {
+      "name": "Marienplatz",
+      "tag": "Free",
+      "blurb": "The main square. Watch the Glockenspiel figures dance on the New Town Hall at 11am and noon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "English Garden",
+      "tag": "Free",
+      "blurb": "A huge park with a beer garden by a Chinese tower and surfers riding a river wave.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Viktualienmarkt",
+      "tag": "Food",
+      "blurb": "A daily food market with stalls, snacks and a beer garden.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Residenz",
+      "tag": "Ticketed",
+      "blurb": "The vast palace of the Bavarian kings, with treasury and ornate halls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Deutsches Museum",
+      "tag": "Indoors",
+      "blurb": "One of the world's biggest science and technology museums.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Neuschwanstein Castle",
+      "tag": "Day trip",
+      "blurb": "The fairy-tale castle in the Alpine foothills, about 2 hours away. Book tickets ahead.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Munich?",
+      "answer": "Three days covers the city and a day trip to Neuschwanstein or Salzburg."
+    },
+    {
+      "question": "When is Oktoberfest?",
+      "answer": "It starts in the second half of September and ends on the first Sunday of October, or 3 October if that's later."
+    },
+    {
+      "question": "How do you get from Munich Airport to the city?",
+      "answer": "The S-Bahn S1 and S8 trains reach the centre in about 40 minutes."
+    },
+    {
+      "question": "Is Munich worth visiting at Christmas?",
+      "answer": "Yes. The Christkindlmarkt on Marienplatz and smaller markets around the city run from late November."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Salzburg",
+      "code": "SZG",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Nuremberg",
+      "code": "NUE",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Vienna",
+      "code": "VIE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Berchtesgaden",
+      "code": "SZG",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

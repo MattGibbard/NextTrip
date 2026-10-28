@@ -1,0 +1,193 @@
+{
+  "name": "Marbella",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Marbella",
+  "intro": "Glossy beach clubs, the yachts of Puerto Banús and a whitewashed old town full of orange trees, below the mountains of the Costa del Sol. Here's what Marbella is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/marbella-806346_1280.webp",
+  "image_alt": "Yachts in the marina at Puerto Banús near Marbella, with La Concha mountain behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Marbella",
+  "to_code": "AGP",
+  "holiday_types": [
+    "beach",
+    "food",
+    "relax"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Malaga airport is about 45 minutes away by car or bus. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, sunny",
+      "temp": 17
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 17
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring sun",
+      "temp": 19
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 17
+    }
+  },
+  "when_to_go": "May, June, September and October are the best months for the beach without the peak summer crowds or prices. July and August are hot, sunny and at their busiest and most expensive. Winter is mild, with plenty of sunny days around 17°C, good for walking, golf and long lunches.",
+  "things": [
+    {
+      "name": "Casco Antiguo",
+      "tag": "Free",
+      "blurb": "The old town, with Plaza de los Naranjos at its heart and flowers spilling off white walls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Puerto Banús",
+      "tag": "Free",
+      "blurb": "The marina of superyachts and designer shops. Come for a drink and some people-watching.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Beach clubs",
+      "tag": "Ticketed",
+      "blurb": "Day beds, pools and long lunches by the sea along the Golden Mile and beyond.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paseo Marítimo",
+      "tag": "Free",
+      "blurb": "A seafront promenade that runs for miles, made for a morning walk or bike ride.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "La Concha",
+      "tag": "Outdoors",
+      "blurb": "The mountain behind town. The hike is steep but the views reach Gibraltar and Africa.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ronda",
+      "tag": "Day trip",
+      "blurb": "A clifftop town split by a deep gorge, about an hour inland on a dramatic mountain road.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Marbella expensive?",
+      "answer": "It can be, especially in Puerto Banús and the beach clubs. The old town's tapas bars and the public beaches are much cheaper."
+    },
+    {
+      "question": "How do you get from Malaga airport to Marbella?",
+      "answer": "Direct buses run from the airport in about 45 minutes, or a taxi or transfer takes a little less."
+    },
+    {
+      "question": "What is the best beach in Marbella?",
+      "answer": "Playa de Cabopino, east of town, has dunes and calmer water. Venus beach is the handiest from the old town."
+    },
+    {
+      "question": "How many days do you need in Marbella?",
+      "answer": "A week lets you mix beach days with the old town, Puerto Banús and a trip to Ronda."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Malaga",
+      "code": "AGP",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Nerja",
+      "code": "AGP",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Ronda",
+      "code": "AGP",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Algarve",
+      "code": "FAO",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

@@ -1,0 +1,192 @@
+{
+  "name": "Las Vegas",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Las Vegas",
+  "intro": "The neon city in the Nevada desert, with themed mega-resorts, big shows and pools, and the Grand Canyon and Red Rock Canyon within reach. Here's what Las Vegas is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/las-vegas-680953_1280.webp",
+  "image_alt": "The Las Vegas Strip at night, with the Bellagio fountains and hotel lights",
+  "wikipedia": "https://en.wikipedia.org/wiki/Las_Vegas",
+  "to_code": "LAS",
+  "holiday_types": [
+    "city",
+    "adventure"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Most hotels add a daily resort fee on top of the room rate. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 17
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 26
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 38
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Extreme heat",
+      "temp": 40
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Extreme heat",
+      "temp": 39
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 34
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 27
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 14
+    }
+  },
+  "when_to_go": "March, April, October and November are the best months, warm and sunny without the extreme summer heat. June to August often tops 40°C, though pools and air conditioning help. Winter is cool and dry, and good value outside big holiday weekends.",
+  "things": [
+    {
+      "name": "The Strip",
+      "tag": "Free",
+      "blurb": "Walk past the Bellagio fountains, a mini Eiffel Tower and Venice canals inside the Venetian.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Shows",
+      "tag": "Ticketed",
+      "blurb": "Cirque du Soleil, magic and big-name residencies.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sphere",
+      "tag": "Ticketed",
+      "blurb": "A giant LED-covered globe with immersive films and concerts inside.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fremont Street",
+      "tag": "Free",
+      "blurb": "Old Vegas downtown, under a canopy of light shows.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Red Rock Canyon",
+      "tag": "Outdoors",
+      "blurb": "Red sandstone cliffs and hiking trails, 30 minutes from the Strip.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Canyon",
+      "tag": "Day trip",
+      "blurb": "The West Rim and Skywalk is about 2.5 hours away. The South Rim is a longer trip.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Las Vegas?",
+      "answer": "Three or four days covers the Strip, a show and a day trip. Add more if you plan to road trip to the national parks."
+    },
+    {
+      "question": "Is Las Vegas good for families?",
+      "answer": "More than you'd think: pools, shows, aquariums and roller coasters, though children can't go on casino floors."
+    },
+    {
+      "question": "Can you visit the Grand Canyon from Las Vegas?",
+      "answer": "Yes. The West Rim is about 2.5 hours by road. The South Rim is about 4.5 hours, so it's better with an overnight stay."
+    },
+    {
+      "question": "When is Las Vegas cheapest?",
+      "answer": "Midweek, outside big conventions and holidays. Weekend room rates can be several times higher."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Grand Canyon",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Utah's national parks",
+      "code": "LAS",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Los Angeles",
+      "code": "LAX",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Palm Springs",
+      "code": "PSP",
+      "label": "🧘 Relax & spa"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

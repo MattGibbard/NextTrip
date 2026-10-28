@@ -1,0 +1,193 @@
+{
+  "name": "Hong Kong",
+  "published": true,
+  "country": "HK",
+  "title": "Holidays in Hong Kong",
+  "intro": "A skyline packed between mountains and harbour, with dim sum, Star Ferry crossings and green island hikes minutes from the towers. Here's what Hong Kong is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/hong-kong-5838029_1280.webp",
+  "image_alt": "Hong Kong's skyline lit up at night across Victoria Harbour",
+  "wikipedia": "https://en.wikipedia.org/wiki/Hong_Kong",
+  "to_code": "HKG",
+  "holiday_types": [
+    "city",
+    "food",
+    "nature"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 to 8 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Hong Kong dollar (HK$)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 180 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Get an Octopus card or use a contactless card for transport. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cool, dry",
+      "temp": 19
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cool, misty",
+      "temp": 19
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 22
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 25
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Humid",
+      "temp": 29
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Hot, wet",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Typhoon risk",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Typhoon risk",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 28
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild, sunny",
+      "temp": 24
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Cool, clear",
+      "temp": 20
+    }
+  },
+  "when_to_go": "October to December is the best time, sunny, dry and comfortable. Spring is mild but often misty. June to September is hot, humid and wet, with typhoons possible, when attractions may close for a day.",
+  "things": [
+    {
+      "name": "Victoria Peak",
+      "tag": "Ticketed",
+      "blurb": "Ride the Peak Tram up for the classic view over the harbour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Star Ferry",
+      "tag": "Ticketed",
+      "blurb": "A cheap, short crossing between Kowloon and Hong Kong Island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dim sum",
+      "tag": "Food",
+      "blurb": "Try the city's teahouses, from old-school halls to Michelin-starred spots.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Big Buddha and Ngong Ping",
+      "tag": "Ticketed",
+      "blurb": "A cable car over Lantau Island to a giant bronze Buddha.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dragon's Back",
+      "tag": "Outdoors",
+      "blurb": "A ridge hike with sea views that ends at a beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Symphony of Lights",
+      "tag": "Free",
+      "blurb": "A nightly light show across the skyline at 8pm.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Hong Kong?",
+      "answer": "Three to four days covers the city, the Peak, Lantau and a hike."
+    },
+    {
+      "question": "Is Hong Kong expensive?",
+      "answer": "Hotels are expensive, but transport is cheap and great food can be found at all prices."
+    },
+    {
+      "question": "How do you get from the airport to the city?",
+      "answer": "The Airport Express reaches Central in about 25 minutes."
+    },
+    {
+      "question": "Is Hong Kong good for a stopover?",
+      "answer": "Yes. It's a common stop on the way to Australia and Asia, and two or three days works well."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Singapore",
+      "code": "SIN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Taipei",
+      "code": "TPE",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Tokyo",
+      "code": "HND",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Seoul",
+      "code": "ICN",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

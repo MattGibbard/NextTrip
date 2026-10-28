@@ -1,0 +1,193 @@
+{
+  "name": "Istanbul",
+  "published": true,
+  "country": "TR",
+  "title": "Holidays in Istanbul",
+  "intro": "The city on two continents, with domes and minarets above the Bosphorus, buzzing bazaars and ferries criss-crossing between Europe and Asia. Here's what Istanbul is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/istanbul-6835457_1280.webp",
+  "image_alt": "The Süleymaniye Mosque above the Golden Horn in Istanbul, with ferries in front",
+  "wikipedia": "https://en.wikipedia.org/wiki/Istanbul",
+  "to_code": "IST",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK (3 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Turkish lira (₺)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Istanbul Airport is about 45 to 60 minutes from the old city; Sabiha Gökçen serves the Asian side. Your passport needs at least 150 days left on it when you arrive. Check entry rules and the latest travel advice on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, wet",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 12
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Tulips",
+      "temp": 16
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Hot, busy",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hot, busy",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 20
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 15
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold, wet",
+      "temp": 11
+    }
+  },
+  "when_to_go": "April, May, September and October are best for walking the city, with mild days and tulips in April. July and August are hot, humid and crowded at the big sights. Winter is cold, grey and wet, but cheap and quiet, and you'll see the mosques without the queues.",
+  "things": [
+    {
+      "name": "Hagia Sophia",
+      "tag": "Ticketed",
+      "blurb": "A 1,500-year-old church turned mosque, with a vast dome.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Mosque",
+      "tag": "Free",
+      "blurb": "Six minarets and blue tiles. Visit between prayer times and cover up.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Topkapı Palace",
+      "tag": "Ticketed",
+      "blurb": "The Ottoman sultans' palace, with treasury, harem and Bosphorus views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Bazaar and Spice Bazaar",
+      "tag": "Free",
+      "blurb": "Covered markets for carpets, lamps, spices and Turkish delight.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bosphorus ferry",
+      "tag": "Ticketed",
+      "blurb": "Ride a public ferry between Europe and Asia for a few lira.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Basilica Cistern",
+      "tag": "Ticketed",
+      "blurb": "A huge underground Byzantine water store, lit among columns.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Istanbul?",
+      "answer": "Three to four days covers the old city, a Bosphorus trip and the Asian side."
+    },
+    {
+      "question": "Is Istanbul safe for tourists?",
+      "answer": "Generally yes. Watch for pickpockets and overly friendly touts in busy areas, and check the latest GOV.UK advice."
+    },
+    {
+      "question": "Where should you stay in Istanbul?",
+      "answer": "Sultanahmet is closest to the big sights. Karaköy and Beyoğlu are livelier, with more restaurants."
+    },
+    {
+      "question": "How do you get from Istanbul Airport to the city?",
+      "answer": "The Havaist bus and the M11 metro both run to the centre, or a taxi takes about 45 minutes."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Athens",
+      "code": "ATH",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Cappadocia",
+      "code": "NAV",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Marrakech",
+      "code": "RAK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Budapest",
+      "code": "BUD",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

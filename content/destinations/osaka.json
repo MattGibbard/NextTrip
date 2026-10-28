@@ -1,0 +1,193 @@
+{
+  "name": "Osaka",
+  "published": true,
+  "country": "JP",
+  "title": "Holidays in Osaka",
+  "intro": "Japan's food capital, all neon canals, street food and a towering castle, with Kyoto, Nara and Universal Studios close by. Here's what Osaka is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/osaka-5572289_1280.webp",
+  "image_alt": "Neon signs over the canal in Dotonbori, Osaka, at sunset",
+  "wikipedia": "https://en.wikipedia.org/wiki/Osaka",
+  "to_code": "KIX",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 to 9 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Japanese yen (¥)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A · 100V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Japan plans to bring in an online pre-travel registration, so check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, dry",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 10
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Plum blossom",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Cherry blossom",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Rainy season",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Hot, humid",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hot, humid",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Typhoon risk",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Autumn colours",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cool, clear",
+      "temp": 12
+    }
+  },
+  "when_to_go": "Late March to early May brings cherry blossom and mild weather, and October and November bring autumn colours and clear skies. June is the rainy season, and July and August are hot and humid. Winter is cool and dry, with fewer crowds.",
+  "things": [
+    {
+      "name": "Dotonbori",
+      "tag": "Food",
+      "blurb": "Neon-lit canal streets of takoyaki, okonomiyaki and the giant Glico running man.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Osaka Castle",
+      "tag": "Ticketed",
+      "blurb": "A reconstructed castle in a big park, lovely in blossom season.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kuromon Market",
+      "tag": "Food",
+      "blurb": "A covered market of fresh seafood, wagyu and fruit.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Universal Studios Japan",
+      "tag": "Ticketed",
+      "blurb": "Home to Super Nintendo World and the Wizarding World of Harry Potter.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nara",
+      "tag": "Day trip",
+      "blurb": "Friendly deer and the giant Buddha of Todai-ji, 45 minutes by train.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Shinsekai",
+      "tag": "Free",
+      "blurb": "An old-fashioned neighbourhood under Tsutenkaku tower, known for kushikatsu.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Osaka or Kyoto better to stay?",
+      "answer": "Osaka is livelier, cheaper and better for food and nightlife. Kyoto is quieter with more temples. They're 15 to 30 minutes apart by train."
+    },
+    {
+      "question": "How many days do you need in Osaka?",
+      "answer": "Two or three days, plus day trips to Kyoto, Nara and Himeji."
+    },
+    {
+      "question": "How do you get from Kansai Airport to Osaka?",
+      "answer": "The Nankai Rapi:t or JR Haruka train reaches the city in 35 to 50 minutes."
+    },
+    {
+      "question": "What food is Osaka famous for?",
+      "answer": "Takoyaki octopus balls, okonomiyaki pancakes and kushikatsu deep-fried skewers."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kyoto",
+      "code": "KIX",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Tokyo",
+      "code": "HND",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Hiroshima",
+      "code": "HIJ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Seoul",
+      "code": "ICN",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

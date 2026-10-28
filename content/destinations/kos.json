@@ -1,0 +1,192 @@
+{
+  "name": "Kos",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Kos",
+  "intro": "A flat, sunny Greek island of long sandy beaches, cycle paths and ancient ruins, a short boat ride from Turkey. Here's what Kos is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/kos-4522104_1280.webp",
+  "image_alt": "A white Orthodox chapel with a blue dome above the sea on the island of Kos",
+  "wikipedia": "https://en.wikipedia.org/wiki/Kos",
+  "to_code": "KGS",
+  "holiday_types": [
+    "beach",
+    "culture"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Most flights run from May to October. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, closed",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, closed",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sunny",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, windy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, closed",
+      "temp": 16
+    }
+  },
+  "when_to_go": "May, June, September and early October are best, hot and sunny with a warm sea and fewer crowds. July and August are hottest, but the north wind keeps it bearable. From November to April most hotels close and there are few flights.",
+  "things": [
+    {
+      "name": "Kos Town",
+      "tag": "Free",
+      "blurb": "A harbour town with a Knights' castle, ancient ruins in the streets and lively squares.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Asklepion",
+      "tag": "Ticketed",
+      "blurb": "The ancient healing sanctuary linked to Hippocrates, on terraces above the coast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Paradise beach",
+      "tag": "Free",
+      "blurb": "Soft sand and clear water on the south coast, with bubbles rising from the seabed.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cycling",
+      "tag": "Outdoors",
+      "blurb": "Kos is flat, and bike lanes run along the coast from Kos Town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zia",
+      "tag": "Free",
+      "blurb": "A mountain village famous for its sunset views over the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bodrum or Nisyros",
+      "tag": "Day trip",
+      "blurb": "Ferries reach Bodrum in Turkey or the volcano island of Nisyros.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Which part of Kos is best to stay?",
+      "answer": "Kos Town for a mix of sights and nightlife, Kefalos and Kardamena for beaches, and Marmari or Tigaki for quiet sand and calm sea."
+    },
+    {
+      "question": "Is Kos good for a beach holiday?",
+      "answer": "Yes. The island is ringed with sandy beaches, many shallow and calm."
+    },
+    {
+      "question": "Can you go to Turkey from Kos?",
+      "answer": "Yes. Ferries to Bodrum take about 30 to 45 minutes. Take your passport."
+    },
+    {
+      "question": "How many days do you need in Kos?",
+      "answer": "A week gives you time for beaches, Kos Town, the Asklepion and a boat trip."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Rhodes",
+      "code": "RHO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Bodrum",
+      "code": "BJV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Crete",
+      "code": "HER",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Zakynthos",
+      "code": "ZTH",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

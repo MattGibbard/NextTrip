@@ -1,0 +1,193 @@
+{
+  "name": "Helsinki",
+  "published": true,
+  "country": "FI",
+  "title": "Holidays in Helsinki",
+  "intro": "A calm, design-loving Nordic capital on the Baltic, with island fortresses, public saunas and long summer evenings by the sea. Here's what Helsinki is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/helsinki-4189824_1280.webp",
+  "image_alt": "Helsinki Cathedral's white dome and green towers above the harbour",
+  "wikipedia": "https://en.wikipedia.org/wiki/Helsinki",
+  "to_code": "HEL",
+  "holiday_types": [
+    "city",
+    "culture",
+    "relax"
+  ],
+  "nights": "2 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Ferries to Tallinn take about 2 hours. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, dark",
+      "temp": -2
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Frozen sea",
+      "temp": -3
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold, bright",
+      "temp": 1
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 8
+    },
+    "may": {
+      "rating": "best",
+      "note": "Light nights",
+      "temp": 15
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Midsummer",
+      "temp": 19
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 20
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 15
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 8
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Dark",
+      "temp": 3
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Festive",
+      "temp": 0
+    }
+  },
+  "when_to_go": "June to August is best, with long light evenings and outdoor terraces. Midsummer, in late June, is when many locals head to the countryside. Winter is cold and dark, but snow, saunas and sea swims make it special. December has a Christmas market on Senate Square.",
+  "things": [
+    {
+      "name": "Senate Square and Cathedral",
+      "tag": "Free",
+      "blurb": "The white cathedral and its broad steps sit above a neoclassical square.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Suomenlinna",
+      "tag": "Free",
+      "blurb": "An island sea fortress, 15 minutes by public ferry.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Löyly",
+      "tag": "Ticketed",
+      "blurb": "A modern public sauna by the sea. Cool off with a dip in the Baltic.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Market Square and Old Market Hall",
+      "tag": "Food",
+      "blurb": "Harbourside stalls and a hall of Finnish food, from salmon soup to rye bread.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Oodi Library",
+      "tag": "Free",
+      "blurb": "A striking public library with a top-floor reading room in the clouds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tallinn",
+      "tag": "Day trip",
+      "blurb": "The Estonian capital's medieval old town is 2 hours away by ferry.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Helsinki?",
+      "answer": "Two or three days covers the city, Suomenlinna and a sauna. Add a day for Tallinn."
+    },
+    {
+      "question": "Is Helsinki expensive?",
+      "answer": "It's pricey but cheaper than Oslo. Lunch deals are good value."
+    },
+    {
+      "question": "How do you get from Helsinki Airport to the city?",
+      "answer": "Trains run to the central station in about 30 minutes."
+    },
+    {
+      "question": "Can you see the northern lights in Helsinki?",
+      "answer": "Very rarely. For a good chance, head north to Lapland, such as Rovaniemi or Saariselkä."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tallinn",
+      "code": "TLL",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Stockholm",
+      "code": "ARN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Rovaniemi",
+      "code": "RVN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Oslo",
+      "code": "OSL",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

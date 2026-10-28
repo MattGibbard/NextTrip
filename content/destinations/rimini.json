@@ -1,0 +1,193 @@
+{
+  "name": "Rimini",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Rimini",
+  "intro": "Fifteen kilometres of sandy beach lined with neat rows of umbrellas, Roman monuments in town and the hill country of San Marino on the doorstep. Here's what Rimini is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/rimini-7414938_1280.webp",
+  "image_alt": "The Roman Bridge of Tiberius in Rimini reflected in the canal at sunset",
+  "wikipedia": "https://en.wikipedia.org/wiki/Rimini",
+  "to_code": "RMI",
+  "holiday_types": [
+    "beach",
+    "food",
+    "culture"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Rimini's own airport has few flights; Bologna is about an hour away by train. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 8
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 10
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Hot, lively",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 20
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Damp",
+      "temp": 14
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    }
+  },
+  "when_to_go": "June, July and early September are the best for the beach, with warm, shallow sea. August is packed with Italian holidaymakers. Spring and autumn suit the old town and San Marino, but most beach clubs open only from late May to mid September.",
+  "things": [
+    {
+      "name": "The beach",
+      "tag": "Ticketed",
+      "blurb": "The sand is split into numbered bagni with sunbeds, play areas and cafés. Free stretches exist too.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bridge of Tiberius",
+      "tag": "Free",
+      "blurb": "A Roman stone bridge still in use after 2,000 years.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Arch of Augustus",
+      "tag": "Free",
+      "blurb": "The oldest surviving Roman arch in Italy, at the end of the old main road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "San Marino",
+      "tag": "Day trip",
+      "blurb": "A tiny republic on a mountain top with three towers and wide views, about 40 minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fellini Museum",
+      "tag": "Ticketed",
+      "blurb": "Rimini was Fellini's home town, and this museum tells his story.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Italia in Miniatura",
+      "tag": "Ticketed",
+      "blurb": "A park of Italian landmarks at small scale, plus rides.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are Rimini's beaches free?",
+      "answer": "Most of the sand belongs to bagni that charge for sunbeds and umbrellas, but you can walk along the shore and use the free spiaggia libera areas."
+    },
+    {
+      "question": "Which airport is best for Rimini?",
+      "answer": "Bologna has the most flights, and trains reach Rimini in about an hour. Rimini airport has a few summer routes."
+    },
+    {
+      "question": "Is Rimini good for a beach holiday?",
+      "answer": "Yes. The sea is shallow and calm, with lifeguards, playgrounds and lots of hotels right by the sand."
+    },
+    {
+      "question": "What else is near Rimini?",
+      "answer": "San Marino, the hill towns of Romagna and the mosaics of Ravenna are all easy day trips."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bologna",
+      "code": "BLQ",
+      "label": "🍷 Food & drink"
+    },
+    {
+      "name": "Puglia",
+      "code": "BRI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Florence",
+      "code": "FLR",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

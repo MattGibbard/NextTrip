@@ -1,0 +1,192 @@
+{
+  "name": "Marmaris",
+  "published": true,
+  "country": "TR",
+  "title": "Holidays in Marmaris",
+  "intro": "A busy harbour resort in a horseshoe bay of pine-covered hills, with a castle, a long promenade and boat trips to hidden coves. Here's what Marmaris is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/marmaris-4727301_1280.webp",
+  "image_alt": "Sunlight over Marmaris and its bay, with mountains behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Marmaris",
+  "to_code": "DLM",
+  "holiday_types": [
+    "beach",
+    "nature"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK (3 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Turkish lira (₺)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 90 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Dalaman airport is about 1.5 hours away by transfer. Your passport needs at least 150 days left on it when you arrive. Check entry rules and the latest travel advice on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, rainy",
+      "temp": 15
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, rainy",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 26
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 34
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 30
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 16
+    }
+  },
+  "when_to_go": "May, June, September and October are best, hot and sunny with a warm sea and quieter streets. July and August are very hot. Winter is mild but rainy, and many hotels close.",
+  "things": [
+    {
+      "name": "Marmaris Castle and old town",
+      "tag": "Ticketed",
+      "blurb": "A small castle and museum above lanes of shops by the marina.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Boat trips",
+      "tag": "Tour",
+      "blurb": "Day cruises around the bay stop at coves for swimming.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "İçmeler",
+      "tag": "Free",
+      "blurb": "A quieter resort around the bay, with a long sandy beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Turunç",
+      "tag": "Free",
+      "blurb": "A small, peaceful bay reached by water taxi or a hilly road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dalyan",
+      "tag": "Day trip",
+      "blurb": "River boats past Lycian rock tombs to the turtle beach of İztuzu.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Bazaar",
+      "tag": "Free",
+      "blurb": "Covered market streets for spices, textiles and souvenirs.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Marmaris or İçmeler better?",
+      "answer": "Marmaris is livelier with the bazaar, marina and nightlife. İçmeler is calmer, with a better beach."
+    },
+    {
+      "question": "How far is Marmaris from Dalaman airport?",
+      "answer": "About 90 kilometres, which is 1.5 hours by transfer or the Havaş bus."
+    },
+    {
+      "question": "Can you go to Rhodes from Marmaris?",
+      "answer": "Yes. Ferries cross to Rhodes in about an hour from April to October."
+    },
+    {
+      "question": "Is Marmaris good for a beach holiday?",
+      "answer": "The town beach is fine and long, but İçmeler, Turunç and the coves reached by boat are nicer."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Fethiye",
+      "code": "DLM",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Bodrum",
+      "code": "BJV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Rhodes",
+      "code": "RHO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Alanya",
+      "code": "AYT",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

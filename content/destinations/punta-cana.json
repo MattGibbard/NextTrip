@@ -1,0 +1,192 @@
+{
+  "name": "Punta Cana",
+  "published": true,
+  "country": "DO",
+  "title": "Holidays in Punta Cana",
+  "intro": "Long white beaches fringed with coconut palms on the Dominican Republic's eastern tip, with all-inclusive resorts and warm, clear sea. Here's what Punta Cana is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/punta-cana-741296_1280.webp",
+  "image_alt": "Palm trees leaning over a white-sand beach in Punta Cana",
+  "wikipedia": "https://en.wikipedia.org/wiki/Punta_Cana",
+  "to_code": "PUJ",
+  "holiday_types": [
+    "beach",
+    "relax"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 hrs behind the UK (5 in winter)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Dominican peso (RD$)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Fill in the free e-Ticket form online before you fly in and out. Hurricane season runs from June to November, peaking from August to October. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 28
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 28
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 29
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 29
+    },
+    "may": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 30
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drying out",
+      "temp": 30
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 29
+    }
+  },
+  "when_to_go": "December to April is the best time: dry, sunny and less humid, but also the priciest. May to November is hotter and more humid, with short showers, and hurricane season peaks from August to October. Summer is still busy and good value.",
+  "things": [
+    {
+      "name": "Bávaro Beach",
+      "tag": "Free",
+      "blurb": "Kilometres of white sand and calm water, with resorts all along it.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Saona Island",
+      "tag": "Day trip",
+      "blurb": "Catamaran trips to a national-park island with starfish shallows.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hoyo Azul",
+      "tag": "Ticketed",
+      "blurb": "A turquoise freshwater pool at the foot of a cliff in Scape Park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Snorkelling and diving",
+      "tag": "Tour",
+      "blurb": "Reef trips along the coast, with turtles and tropical fish.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Altos de Chavón",
+      "tag": "Day trip",
+      "blurb": "A replica 16th-century Mediterranean village above a river gorge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Macao Beach",
+      "tag": "Free",
+      "blurb": "A wilder public beach with surfing and local fish shacks.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Punta Cana only all-inclusive?",
+      "answer": "Mostly, yes. Resorts dominate, though there are some apartments and smaller hotels."
+    },
+    {
+      "question": "Do you need a visa for the Dominican Republic?",
+      "answer": "UK passport holders don't need one for a holiday, but must complete the free online e-Ticket before arrival and departure."
+    },
+    {
+      "question": "Is there seaweed in Punta Cana?",
+      "answer": "Sargassum seaweed can wash up from spring to autumn. Resorts clear it, and the beaches further north are often less affected."
+    },
+    {
+      "question": "How long is the flight to Punta Cana from the UK?",
+      "answer": "About 9 hours direct from London."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cancún",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Jamaica",
+      "code": "MBJ",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Puerto Rico",
+      "code": "SJU",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

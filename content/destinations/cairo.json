@@ -1,0 +1,192 @@
+{
+  "name": "Cairo",
+  "published": true,
+  "country": "EG",
+  "title": "Holidays in Cairo",
+  "intro": "A vast, chaotic and thrilling city on the Nile, home to the Pyramids of Giza, the new Grand Egyptian Museum and medieval Islamic streets. Here's what Cairo is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/cairo-5584652_1280.webp",
+  "image_alt": "The Pyramids of Giza in golden desert under a blue sky, with camels in front",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cairo",
+  "to_code": "CAI",
+  "holiday_types": [
+    "city",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Egyptian pound (E£)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Visa on arrival or e-visa",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Sphinx International Airport is closer to Giza but has fewer flights. Check the latest travel advice on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Mild, sunny",
+      "temp": 19
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 21
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm, dusty",
+      "temp": 29
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 33
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 35
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 35
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 35
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 33
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 30
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 21
+    }
+  },
+  "when_to_go": "October to April is the best time, warm and sunny without the fierce heat. December and January can feel cool in the evenings. Spring sometimes brings dusty khamsin winds. May to September is very hot, so plan sightseeing for early mornings.",
+  "things": [
+    {
+      "name": "Pyramids of Giza",
+      "tag": "Ticketed",
+      "blurb": "The last surviving wonder of the ancient world, with the Sphinx below.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Egyptian Museum",
+      "tag": "Ticketed",
+      "blurb": "A huge new museum near the pyramids, home to Tutankhamun's treasures.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Islamic Cairo",
+      "tag": "Free",
+      "blurb": "Mosques, minarets and old caravanserais along Al-Muizz Street.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Khan el-Khalili",
+      "tag": "Free",
+      "blurb": "A sprawling bazaar for lamps, spices and coffee at Fishawy's café.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Saqqara",
+      "tag": "Ticketed",
+      "blurb": "The step pyramid of Djoser, the oldest pyramid in Egypt.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Felucca on the Nile",
+      "tag": "Tour",
+      "blurb": "A sailing boat trip at sunset, away from the traffic.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Cairo?",
+      "answer": "Three days covers the pyramids, the Grand Egyptian Museum and Islamic Cairo. Many people add a Nile cruise or Red Sea beach."
+    },
+    {
+      "question": "Is Cairo safe for tourists?",
+      "answer": "Most visits are trouble-free, but expect persistent touts at big sights. Check the latest GOV.UK advice."
+    },
+    {
+      "question": "Where should you stay in Cairo?",
+      "answer": "Near the pyramids for views and early starts, or Zamalek and Downtown for restaurants and the old city."
+    },
+    {
+      "question": "Is the Grand Egyptian Museum open?",
+      "answer": "Yes, it opened fully in November 2025, beside the Giza plateau."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Nile cruise",
+      "code": "LXR",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Jordan",
+      "code": "AMM",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Istanbul",
+      "code": "IST",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Marrakech",
+      "code": "RAK",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

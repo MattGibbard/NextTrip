@@ -1,0 +1,192 @@
+{
+  "name": "Niagara Falls",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Niagara Falls",
+  "intro": "The mighty Horseshoe Falls on the Canada–US border, with boat rides into the spray, wine country nearby and Toronto 90 minutes away. Here's what Niagara Falls is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/niagara-falls-5050298_1280.webp",
+  "image_alt": "A tour boat in the spray below the Niagara Falls",
+  "wikipedia": "https://en.wikipedia.org/wiki/Niagara_Falls",
+  "to_code": "YYZ",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Crossing to the US side needs an ESTA as well. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Frozen",
+      "temp": -1
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Frozen",
+      "temp": 0
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 5
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 12
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 27
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colours",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 8
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Winter lights",
+      "temp": 2
+    }
+  },
+  "when_to_go": "May, June, September and early October are the best times, warm enough for the boats without the summer crowds. July and August are busiest. The boat rides run from about April to November. Winter is freezing but quiet, with ice around the falls and the Winter Festival of Lights.",
+  "things": [
+    {
+      "name": "Niagara City Cruises",
+      "tag": "Ticketed",
+      "blurb": "The boat ride right into the mist of the Horseshoe Falls. You'll get wet.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Journey Behind the Falls",
+      "tag": "Ticketed",
+      "blurb": "Tunnels lead to viewing decks behind the falling water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Skylon Tower",
+      "tag": "Ticketed",
+      "blurb": "A tall tower with views over all three falls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Niagara-on-the-Lake",
+      "tag": "Day trip",
+      "blurb": "A pretty historic town among wineries, known for ice wine.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Niagara Parkway",
+      "tag": "Free",
+      "blurb": "A riverside road and cycle path running north from the falls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Clifton Hill",
+      "tag": "Ticketed",
+      "blurb": "A strip of arcades, haunted houses and a big wheel.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Canadian or US side of Niagara Falls better?",
+      "answer": "The Canadian side has the best views of all the falls, especially the Horseshoe Falls."
+    },
+    {
+      "question": "How do you get to Niagara Falls from Toronto?",
+      "answer": "It's about 1.5 hours by car, or take the GO train or bus."
+    },
+    {
+      "question": "How long do you need at Niagara Falls?",
+      "answer": "A day covers the main sights. Stay a night to see the falls lit up and add the wine country."
+    },
+    {
+      "question": "Do the Niagara Falls freeze?",
+      "answer": "Not completely, but in a cold winter ice builds up around them, which is spectacular."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Toronto",
+      "code": "YYZ",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Montreal",
+      "code": "YUL",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "New York",
+      "code": "JFK",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Quebec City",
+      "code": "YQB",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

@@ -1,0 +1,193 @@
+{
+  "name": "Jamaica",
+  "published": true,
+  "country": "JM",
+  "title": "Holidays in Jamaica",
+  "intro": "A Caribbean island of reggae, jerk chicken and seven-mile beaches, with waterfalls to climb and misty Blue Mountains to explore. Here's what Jamaica is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/jamaica-289132_1280.webp",
+  "image_alt": "A palm tree silhouetted against an orange sunset over the sea at Negril, Jamaica",
+  "wikipedia": "https://en.wikipedia.org/wiki/Jamaica",
+  "to_code": "MBJ",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "food"
+  ],
+  "nights": "10 to 14",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK (6 in summer)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Jamaican dollar (J$)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 110V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Most resorts are around Montego Bay, Negril and Ocho Rios. Hurricane season runs from June to November, peaking from August to October. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 30
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 30
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 30
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 31
+    },
+    "may": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 31
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Wettest",
+      "temp": 32
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drying out",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 30
+    }
+  },
+  "when_to_go": "Mid December to April is the best time, dry and sunny with a sea breeze, though prices are highest. May to November is hotter and wetter, with hurricane risk from August to October, but many days are still sunny and resorts are cheaper.",
+  "things": [
+    {
+      "name": "Seven Mile Beach, Negril",
+      "tag": "Free",
+      "blurb": "A long sweep of soft sand with calm water and beach bars.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rick's Café",
+      "tag": "Food",
+      "blurb": "Cliff jumpers and sunset drinks on Negril's West End cliffs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dunn's River Falls",
+      "tag": "Ticketed",
+      "blurb": "Climb the terraced waterfall hand in hand near Ocho Rios.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Mountains",
+      "tag": "Outdoors",
+      "blurb": "Coffee farms and hiking trails in cool, misty hills above Kingston.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bob Marley Museum",
+      "tag": "Ticketed",
+      "blurb": "The reggae legend's home and studio in Kingston.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Martha Brae rafting",
+      "tag": "Tour",
+      "blurb": "Drift down a jungle river on a bamboo raft.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where is the best place to stay in Jamaica?",
+      "answer": "Negril for beaches and sunsets, Montego Bay for easy airport access, and Ocho Rios for waterfalls and activities."
+    },
+    {
+      "question": "Is Jamaica safe for tourists?",
+      "answer": "Resort areas are generally safe, but crime is high in parts of Kingston and Montego Bay. Use licensed taxis and check GOV.UK advice."
+    },
+    {
+      "question": "How long is the flight to Jamaica from the UK?",
+      "answer": "About 10 hours direct to Montego Bay or Kingston."
+    },
+    {
+      "question": "What food should you try in Jamaica?",
+      "answer": "Jerk chicken and pork, ackee and saltfish, patties and fresh fish with festival dumplings."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Punta Cana",
+      "code": "PUJ",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "St Lucia",
+      "code": "UVF",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Bahamas",
+      "code": "NAS",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

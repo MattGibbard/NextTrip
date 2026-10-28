@@ -1,0 +1,192 @@
+{
+  "name": "Bora Bora",
+  "published": true,
+  "country": "PF",
+  "title": "Holidays in Bora Bora",
+  "intro": "A jagged green volcano in a turquoise lagoon, ringed by overwater bungalows, in the heart of French Polynesia. Here's what Bora Bora is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/bora-bora-5783440_1280.webp",
+  "image_alt": "Mount Otemanu above Bora Bora's turquoise lagoon, with a palm-topped islet in front",
+  "wikipedia": "https://en.wikipedia.org/wiki/Bora_Bora",
+  "to_code": "BOB",
+  "holiday_types": [
+    "beach",
+    "relax"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "10 to 11 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "CFP franc (XPF)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B / E · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Fly to Papeete in Tahiti, then take a 50-minute flight to Bora Bora. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Hot, wet",
+      "temp": 30
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Hot, wet",
+      "temp": 30
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 30
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Drying out",
+      "temp": 30
+    },
+    "may": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 29
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Dry, breezy",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 29
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 29
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Hot, wet",
+      "temp": 30
+    }
+  },
+  "when_to_go": "May to October is the dry season and best time, sunny with calm water and lower humidity. November to April is hotter and wetter, with short tropical downpours, but quieter and a little cheaper.",
+  "things": [
+    {
+      "name": "Overwater bungalows",
+      "tag": "Free",
+      "blurb": "The classic Bora Bora stay, with steps straight into the lagoon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lagoon tour",
+      "tag": "Tour",
+      "blurb": "Snorkel with rays and blacktip reef sharks, with a picnic on a motu.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Matira Beach",
+      "tag": "Free",
+      "blurb": "The island's best public beach, with soft sand and shallow water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Otemanu by 4x4",
+      "tag": "Tour",
+      "blurb": "Bumpy drives to lookout points and old wartime cannons.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Coral Gardens",
+      "tag": "Outdoors",
+      "blurb": "Some of the lagoon's best snorkelling, among bright coral and fish.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Vaitape",
+      "tag": "Free",
+      "blurb": "The main village, with shops for black pearls and local crafts.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Bora Bora from the UK?",
+      "answer": "Fly to Papeete in Tahiti, usually via Los Angeles or Paris, then take a short Air Tahiti flight."
+    },
+    {
+      "question": "Is Bora Bora expensive?",
+      "answer": "Very. Overwater bungalows and food cost a lot, so many people stay a few nights and combine it with cheaper islands like Moorea."
+    },
+    {
+      "question": "How many nights should you spend in Bora Bora?",
+      "answer": "Four to five nights is plenty, as part of a longer trip around French Polynesia."
+    },
+    {
+      "question": "Is Bora Bora good for a honeymoon?",
+      "answer": "It's one of the world's classic honeymoon spots, thanks to the lagoon and overwater villas."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Maldives",
+      "code": "MLE",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Fiji",
+      "code": "NAN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Seychelles",
+      "code": "SEZ",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Maui",
+      "code": "OGG",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

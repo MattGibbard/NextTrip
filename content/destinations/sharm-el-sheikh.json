@@ -1,0 +1,193 @@
+{
+  "name": "Sharm el-Sheikh",
+  "published": true,
+  "country": "EG",
+  "title": "Holidays in Sharm el-Sheikh",
+  "intro": "Red Sea resorts between the desert mountains and some of the world's best coral reefs, with winter sun and snorkelling straight from the beach. Here's what Sharm el-Sheikh is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/sharm-el-sheikh-938993_1280.webp",
+  "image_alt": "Beach umbrellas on a sandy bay at Sharm el-Sheikh, with reefs and boats in the turquoise Red Sea",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sharm_El_Sheikh",
+  "to_code": "SSH",
+  "holiday_types": [
+    "beach",
+    "adventure",
+    "relax"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Egyptian pound (E£)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Free Sinai visa or visa on arrival",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "A free Sinai-only stamp covers stays in the resort area; buy a full visa on arrival to travel further. Check the latest travel advice on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Winter sun",
+      "temp": 22
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Winter sun",
+      "temp": 23
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 30
+    },
+    "may": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 34
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 37
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 38
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 38
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 36
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 32
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Winter sun",
+      "temp": 24
+    }
+  },
+  "when_to_go": "March to May and October to November are the best times, hot but not scorching, with the sea warm. Winter brings reliable sun around 22 to 24°C, though evenings are cool and the sea is fresh. June to September regularly passes 37°C.",
+  "things": [
+    {
+      "name": "Ras Mohammed",
+      "tag": "Tour",
+      "blurb": "A marine national park with coral walls, sharks and shoals of fish.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Naama Bay",
+      "tag": "Free",
+      "blurb": "The lively centre, with a beach promenade, restaurants and shops.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "House reefs",
+      "tag": "Free",
+      "blurb": "Many hotels sit on a reef, so you can snorkel right from the jetty.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tiran Island",
+      "tag": "Tour",
+      "blurb": "Boat trips to some of the Red Sea's most famous reefs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old Market",
+      "tag": "Free",
+      "blurb": "Spices, lamps and souvenirs around a modern mosque.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Desert safari",
+      "tag": "Tour",
+      "blurb": "Quad bikes, camels and a Bedouin dinner under the stars.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Sharm el-Sheikh good in winter?",
+      "answer": "Yes, it's one of the warmest places within 5 hours of the UK, at around 22 to 24°C. Bring a jumper for evenings and boat trips."
+    },
+    {
+      "question": "Do you need a visa for Sharm el-Sheikh?",
+      "answer": "A free Sinai stamp covers stays in Sharm and the south Sinai coast for up to 15 days. For Cairo or Luxor, buy a full visa."
+    },
+    {
+      "question": "Is the snorkelling good in Sharm?",
+      "answer": "It's some of the best in the world. Ras Mohammed and the Tiran reefs are highlights."
+    },
+    {
+      "question": "How long is the flight to Sharm el-Sheikh?",
+      "answer": "About 5 to 5.5 hours from the UK."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Hurghada",
+      "code": "HRG",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Jordan",
+      "code": "AMM",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Dubai",
+      "code": "DXB",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Cape Verde",
+      "code": "SID",
+      "label": "☀️ Winter sun"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

@@ -1,0 +1,192 @@
+{
+  "name": "Albufeira",
+  "published": true,
+  "country": "PT",
+  "title": "Holidays in Albufeira",
+  "intro": "The Algarve's liveliest resort, with golden cliffs, sandy coves and a whitewashed old town above the beach. Here's what Albufeira is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/albufeira-2053018_1280.webp",
+  "image_alt": "White houses of Albufeira old town on the cliff above the beach",
+  "wikipedia": "https://en.wikipedia.org/wiki/Albufeira",
+  "to_code": "FAO",
+  "holiday_types": [
+    "beach",
+    "food"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": true
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Faro airport is about 40 minutes away by road. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 16
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 17
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 19
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, rain",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 17
+    }
+  },
+  "when_to_go": "May, June, September and October are the best months: warm and sunny, with fewer crowds than July and August. The Atlantic stays cool even in summer, peaking around 21°C. Winter is mild, with sunny days near 17°C, good for walking and golf.",
+  "things": [
+    {
+      "name": "Praia dos Pescadores",
+      "tag": "Free",
+      "blurb": "The main town beach, right below the old town, with fishing boats at one end.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old town",
+      "tag": "Free",
+      "blurb": "Whitewashed lanes, little squares and seafood restaurants on the hill.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Praia da Falésia",
+      "tag": "Free",
+      "blurb": "Kilometres of sand under red and orange cliffs, east of town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Benagil cave",
+      "tag": "Tour",
+      "blurb": "Boat trips from Albufeira visit the famous sea cave and hidden coves.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zoomarine",
+      "tag": "Ticketed",
+      "blurb": "A marine park with shows, rides and pools, ten minutes away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lagos and Ponta da Piedade",
+      "tag": "Day trip",
+      "blurb": "Rock arches and sea stacks along the coast to the west.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Albufeira good for a beach holiday?",
+      "answer": "Yes. There are over 20 beaches nearby, from the busy town beach to quieter coves like Praia da Coelha."
+    },
+    {
+      "question": "Is Albufeira lively?",
+      "answer": "The Strip in Areias de São João is very lively at night. The old town and resorts like Galé and Olhos de Água are calmer."
+    },
+    {
+      "question": "How far is Albufeira from Faro airport?",
+      "answer": "About 40 kilometres, which is 30 to 40 minutes by car or transfer."
+    },
+    {
+      "question": "Is the sea warm in Albufeira?",
+      "answer": "It's the Atlantic, so it's cooler than the Mediterranean, around 20 to 21°C in August and September."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Algarve",
+      "code": "FAO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Tavira",
+      "code": "FAO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lisbon",
+      "code": "LIS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Marbella",
+      "code": "AGP",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

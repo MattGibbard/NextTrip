@@ -1,0 +1,193 @@
+{
+  "name": "Turks and Caicos",
+  "published": true,
+  "country": "TC",
+  "title": "Holidays in Turks and Caicos",
+  "intro": "A British Overseas Territory of low coral islands, with powder-white Grace Bay and some of the clearest water in the Caribbean. Here's what Turks and Caicos is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/turks-and-caicos-1220019_1280.webp",
+  "image_alt": "Turquoise water lapping a white sand beach in Turks and Caicos",
+  "wikipedia": "https://en.wikipedia.org/wiki/Turks_and_Caicos_Islands",
+  "to_code": "PLS",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Hurricane season runs from June to November, peaking from August to October. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, breezy",
+      "temp": 27
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 27
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 28
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 29
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 30
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drying out",
+      "temp": 29
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 28
+    }
+  },
+  "when_to_go": "December to May is the best time, sunny and dry with a cooling trade wind, though it's also the priciest. June and July are hot but usually fine. Hurricane season peaks from August to October, when some hotels close.",
+  "things": [
+    {
+      "name": "Grace Bay Beach",
+      "tag": "Free",
+      "blurb": "Twelve miles of soft white sand and calm, clear water on Providenciales.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Smith's Reef and Bight Reef",
+      "tag": "Free",
+      "blurb": "Snorkel straight off the beach over coral, turtles and rays.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chalk Sound",
+      "tag": "Free",
+      "blurb": "A startlingly turquoise lagoon dotted with little rocky islands.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Iguana Island",
+      "tag": "Tour",
+      "blurb": "Boat trips to Little Water Cay, home to rare rock iguanas.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand Turk",
+      "tag": "Day trip",
+      "blurb": "The small capital island, with a lighthouse, donkeys and wall diving.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Seasonal",
+      "blurb": "Humpback whales pass between January and April.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Turks and Caicos expensive?",
+      "answer": "Yes, it's one of the priciest Caribbean destinations, as nearly everything is imported."
+    },
+    {
+      "question": "How do you get to Turks and Caicos from the UK?",
+      "answer": "British Airways flies via Antigua, or connect through Miami or another US airport."
+    },
+    {
+      "question": "What is the best beach in Turks and Caicos?",
+      "answer": "Grace Bay is the famous one. Taylor Bay and Sapodilla Bay are shallow, calm and quieter."
+    },
+    {
+      "question": "Do you need a visa for Turks and Caicos?",
+      "answer": "No. UK passport holders can visit for up to 90 days. Connecting through the US needs an ESTA."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bahamas",
+      "code": "NAS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Antigua",
+      "code": "ANU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Barbados",
+      "code": "BGI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Punta Cana",
+      "code": "PUJ",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

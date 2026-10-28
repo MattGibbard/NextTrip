@@ -1,0 +1,193 @@
+{
+  "name": "Costa Brava",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Costa Brava",
+  "intro": "Pine-backed coves, clear water and white fishing villages along the rugged coast north of Barcelona. Here's what the Costa Brava is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/costa-brava-838724_1280.webp",
+  "image_alt": "White houses of Cadaqués on the Costa Brava, looking over the bay and fishing boats",
+  "wikipedia": "https://en.wikipedia.org/wiki/Costa_Brava",
+  "to_code": "GRO",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "food"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Girona airport is closest; Barcelona airport is about 1 hr 15 mins from the southern towns. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 25
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rain, wind",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 14
+    }
+  },
+  "when_to_go": "June and September are best, with warm sea, sunny days and room on the beaches. July and August are hot and very busy, especially in Lloret de Mar and Tossa. May and October are good for walking the coastal paths. Winter is cool, and many beach hotels close.",
+  "things": [
+    {
+      "name": "Tossa de Mar",
+      "tag": "Free",
+      "blurb": "A walled medieval old town on a headland above a sandy bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Camí de Ronda",
+      "tag": "Outdoors",
+      "blurb": "Old coastal paths that link coves and villages, with the best stretch around Calella de Palafrugell.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cadaqués",
+      "tag": "Day trip",
+      "blurb": "A whitewashed fishing village at the far north where Dalí spent his summers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dalí Theatre-Museum",
+      "tag": "Ticketed",
+      "blurb": "Dalí's own surreal museum in Figueres, topped with giant eggs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Girona old town",
+      "tag": "Free",
+      "blurb": "Colourful houses over the river, a cathedral on a huge stairway and Jewish quarter lanes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Medes Islands",
+      "tag": "Tour",
+      "blurb": "Snorkel or take a glass-bottomed boat around a marine reserve off L'Estartit.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where is the best place to stay on the Costa Brava?",
+      "answer": "Tossa de Mar and Calella de Palafrugell are pretty and relaxed. Lloret de Mar is the liveliest, with the most hotels."
+    },
+    {
+      "question": "Which airport is best for the Costa Brava?",
+      "answer": "Girona is the closest, about 30 minutes from the coast. Barcelona has more flights and is roughly 1 to 1.5 hours away."
+    },
+    {
+      "question": "Is the Costa Brava good for beaches?",
+      "answer": "Yes, but many are small coves. For long sandy beaches, head to Platja d'Aro, Lloret or Roses."
+    },
+    {
+      "question": "Can you visit Barcelona from the Costa Brava?",
+      "answer": "Yes. Buses and trains reach Barcelona in about 1.5 hours from the southern towns."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Barcelona",
+      "code": "BCN",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Girona",
+      "code": "GRO",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Mallorca",
+      "code": "PMI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Corsica",
+      "code": "AJA",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

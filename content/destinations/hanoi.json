@@ -1,0 +1,193 @@
+{
+  "name": "Hanoi",
+  "published": true,
+  "country": "VN",
+  "title": "Holidays in Hanoi",
+  "intro": "Vietnam's capital of scooter-filled streets, lakeside temples and street food on tiny plastic stools, and the gateway to Ha Long Bay. Here's what Hanoi is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/hanoi-8612554_1280.webp",
+  "image_alt": "A temple pavilion on the water in Hanoi, surrounded by trees",
+  "wikipedia": "https://en.wikipedia.org/wiki/Hanoi",
+  "to_code": "HAN",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Vietnamese dong (₫)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for up to 45 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cool, drizzly",
+      "temp": 19
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cool, Tet",
+      "temp": 20
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 23
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 27
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Hot, wet",
+      "temp": 33
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Hot, wet",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Wettest",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 29
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 26
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 22
+    }
+  },
+  "when_to_go": "October to December and March to April are the best times, mild and fairly dry. January and February can be cool and grey, and Tet, the lunar new year, closes many shops for a few days. May to September is hot, humid and rainy.",
+  "things": [
+    {
+      "name": "Old Quarter",
+      "tag": "Free",
+      "blurb": "Thirty-six streets once named after the goods they sold, full of shops and food stalls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hoan Kiem Lake",
+      "tag": "Free",
+      "blurb": "The lake at the heart of the city, with a red bridge to a temple. Weekend evenings are traffic-free.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Temple of Literature",
+      "tag": "Ticketed",
+      "blurb": "Vietnam's first university, from 1070, with peaceful courtyards.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Street food tour",
+      "tag": "Food",
+      "blurb": "Pho, bun cha and egg coffee, often best on a walking tour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Train Street",
+      "tag": "Free",
+      "blurb": "Cafés line a railway track where trains squeeze through houses.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ha Long Bay",
+      "tag": "Day trip",
+      "blurb": "Limestone islands in emerald water, best on an overnight cruise.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Hanoi?",
+      "answer": "Two or three days in the city, plus one or two for Ha Long Bay or Ninh Binh."
+    },
+    {
+      "question": "Do you need a visa for Vietnam?",
+      "answer": "UK passport holders can stay up to 45 days without a visa."
+    },
+    {
+      "question": "Is Hanoi or Ho Chi Minh City better?",
+      "answer": "Hanoi is more traditional, with old streets and lakes. Ho Chi Minh City is bigger, busier and more modern."
+    },
+    {
+      "question": "How do you get from Hanoi airport to the city?",
+      "answer": "Bus 86 runs to the Old Quarter in about an hour, or a taxi takes 30 to 45 minutes."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Ha Long Bay",
+      "code": "HAN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Ninh Binh",
+      "code": "HAN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Hoi An",
+      "code": "DAD",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Luang Prabang",
+      "code": "LPQ",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

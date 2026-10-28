@@ -1,0 +1,193 @@
+{
+  "name": "Melbourne",
+  "published": true,
+  "country": "AU",
+  "title": "Holidays in Melbourne",
+  "intro": "Australia's culture capital, with laneway cafés, street art, big sport and beaches by the tram, and the Great Ocean Road on the doorstep. Here's what Melbourne is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/melbourne-5076470_1280.webp",
+  "image_alt": "Melbourne's skyline and Princes Bridge over the Yarra River on a sunny day",
+  "wikipedia": "https://en.wikipedia.org/wiki/Melbourne",
+  "to_code": "MEL",
+  "holiday_types": [
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "9 to 11 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Australian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eVisitor for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type I · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The eVisitor is free to apply for online. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Warm, Australian Open",
+      "temp": 26
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Mild, sunny",
+      "temp": 24
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 20
+    },
+    "may": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 17
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Cold, damp",
+      "temp": 14
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 14
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 15
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 17
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 20
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 24
+    }
+  },
+  "when_to_go": "March to May and October to November are the best months, mild and settled. Summer, from December to February, is warm, with the odd very hot day, and January brings the Australian Open. Winter is cool and grey, but great for food, galleries and sport. The weather can change fast, so pack layers.",
+  "things": [
+    {
+      "name": "Laneways and arcades",
+      "tag": "Free",
+      "blurb": "Hidden lanes of cafés, bars and street art like Hosier Lane and Degraves Street.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Queen Victoria Market",
+      "tag": "Food",
+      "blurb": "A huge historic market with a summer night market.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Royal Botanic Gardens",
+      "tag": "Free",
+      "blurb": "Lawns, lakes and ancient trees by the river.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "St Kilda",
+      "tag": "Free",
+      "blurb": "A seaside suburb with a pier where little penguins come ashore at dusk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Melbourne Cricket Ground",
+      "tag": "Ticketed",
+      "blurb": "Watch footy or cricket at the vast MCG, or take a stadium tour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Great Ocean Road",
+      "tag": "Day trip",
+      "blurb": "Coastal cliffs and the Twelve Apostles. Better with an overnight stop.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Melbourne?",
+      "answer": "Three or four days covers the city, with extra time for the Great Ocean Road or Phillip Island."
+    },
+    {
+      "question": "Is Melbourne or Sydney better?",
+      "answer": "Sydney has the harbour and beaches. Melbourne is better for food, coffee, culture and sport."
+    },
+    {
+      "question": "How do you get around Melbourne?",
+      "answer": "Trams are free in the city centre, and a Myki card covers the wider network."
+    },
+    {
+      "question": "How long is the flight to Melbourne?",
+      "answer": "About 22 to 24 hours from the UK, with one stop."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Sydney",
+      "code": "SYD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Great Ocean Road",
+      "code": "MEL",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Tasmania",
+      "code": "HBA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Auckland",
+      "code": "AKL",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

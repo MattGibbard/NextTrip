@@ -1,0 +1,192 @@
+{
+  "name": "Benidorm",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in Benidorm",
+  "intro": "Two long sandy bays, a skyline of towers and an old town on a headland, with sunshine nearly all year. Here's what Benidorm is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/benidorm-5118539_1280.webp",
+  "image_alt": "High-rise hotels behind the curve of Levante beach in Benidorm, with waves rolling onto the sand",
+  "wikipedia": "https://en.wikipedia.org/wiki/Benidorm",
+  "to_code": "ALC",
+  "holiday_types": [
+    "beach",
+    "city"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Alicante airport is about 45 minutes away by bus or transfer. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, sunny",
+      "temp": 16
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, sunny",
+      "temp": 17
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Warming up",
+      "temp": 19
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm spells",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, long days",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, calmer",
+      "temp": 25
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild winter sun",
+      "temp": 20
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 16
+    }
+  },
+  "when_to_go": "May, June, September and October are the sweet spot: hot enough for the beach, with warm sea and fewer crowds than the school holidays. July and August are very hot and the busiest time. Winter is mild and sunny, around 16 to 20°C, which is why it's popular for winter sun even if the sea is too cold for most.",
+  "things": [
+    {
+      "name": "Levante beach",
+      "tag": "Free",
+      "blurb": "The livelier of the two main beaches, two kilometres of golden sand lined with bars and cafés.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Poniente beach",
+      "tag": "Free",
+      "blurb": "Longer and calmer than Levante, with a promenade that's lovely at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old town and Balcón del Mediterráneo",
+      "tag": "Free",
+      "blurb": "Narrow streets of tapas bars lead up to a white lookout point between the two bays.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Terra Mítica",
+      "tag": "Ticketed",
+      "blurb": "A big theme park on the edge of town with rides themed on ancient Egypt, Greece and Rome.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Aqualandia",
+      "tag": "Ticketed",
+      "blurb": "One of Europe's oldest water parks, with steep slides and lazy rivers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Guadalest",
+      "tag": "Day trip",
+      "blurb": "A tiny castle village perched on a rock in the mountains, about 40 minutes inland.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Benidorm good for a week in winter?",
+      "answer": "Yes, if you want mild sun rather than beach heat. Days are usually 16 to 20°C with lots of sunshine, and prices are low."
+    },
+    {
+      "question": "Which is better, Levante or Poniente?",
+      "answer": "Levante is closer to the nightlife and old town. Poniente is quieter and roomier, and suits a relaxed beach holiday."
+    },
+    {
+      "question": "How far is Benidorm from Alicante airport?",
+      "answer": "About 60 kilometres, which is 45 minutes to an hour by transfer or the direct bus."
+    },
+    {
+      "question": "Is there more to Benidorm than the beach?",
+      "answer": "The old town, the theme parks, boat trips to Benidorm Island and mountain villages like Guadalest are all easy to fit in."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Valencia",
+      "code": "VLC",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Altea",
+      "code": "ALC",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Mallorca",
+      "code": "PMI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Malaga",
+      "code": "AGP",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

@@ -1,0 +1,193 @@
+{
+  "name": "Limassol",
+  "published": true,
+  "country": "CY",
+  "title": "Holidays in Limassol",
+  "intro": "Cyprus's buzzing second city, with a long seafront promenade, a smart marina, a castle in the old town and wine villages in the hills. Here's what Limassol is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/limassol-4751374_1280.webp",
+  "image_alt": "Limassol's seafront and high-rise towers seen from the hills above the city",
+  "wikipedia": "https://en.wikipedia.org/wiki/Limassol",
+  "to_code": "LCA",
+  "holiday_types": [
+    "beach",
+    "city",
+    "food"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · same as the UK",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Larnaca and Paphos airports are both about 45 to 60 minutes away. Cyprus drives on the left. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 18
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 18
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 20
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 27
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 30
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild, sunny",
+      "temp": 24
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild",
+      "temp": 20
+    }
+  },
+  "when_to_go": "April, May, October and November are the best times, warm and sunny without the heat of high summer. July and August are very hot, though the sea breeze helps. Winter is mild and green, and good for city sights and walking in the Troodos mountains.",
+  "things": [
+    {
+      "name": "Molos promenade",
+      "tag": "Free",
+      "blurb": "A seafront park and path that runs from the old port to the marina.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Limassol Castle",
+      "tag": "Ticketed",
+      "blurb": "A medieval castle in the old town, home to a museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kourion",
+      "tag": "Ticketed",
+      "blurb": "A Roman city on a clifftop, with a theatre facing the sea and fine mosaics.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Omodos and the wine villages",
+      "tag": "Day trip",
+      "blurb": "Stone villages and wineries in the foothills of the Troodos mountains.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lady's Mile",
+      "tag": "Free",
+      "blurb": "A long, quiet sandy beach just south of the port.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old town tavernas",
+      "tag": "Food",
+      "blurb": "Try meze, a long parade of small Cypriot dishes.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Limassol good for a beach holiday?",
+      "answer": "It has long, mostly grey-sand beaches along the seafront. For softer sand, head to Governor's Beach or Lady's Mile."
+    },
+    {
+      "question": "Which airport is best for Limassol?",
+      "answer": "Larnaca and Paphos are both about 45 to 60 minutes away. Airport shuttle buses run from each."
+    },
+    {
+      "question": "What is there to do in Limassol in winter?",
+      "answer": "Mild days suit the castle, Kourion, wine villages and walks in the Troodos mountains, where it sometimes snows."
+    },
+    {
+      "question": "How many days do you need in Limassol?",
+      "answer": "A week lets you mix beach time with Kourion, the wine villages and the mountains."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Paphos",
+      "code": "PFO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Ayia Napa",
+      "code": "LCA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Athens",
+      "code": "ATH",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Malta",
+      "code": "MLA",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

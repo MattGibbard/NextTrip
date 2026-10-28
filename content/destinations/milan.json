@@ -1,0 +1,193 @@
+{
+  "name": "Milan",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Milan",
+  "intro": "Italy's stylish second city, with a gleaming cathedral, The Last Supper and aperitivo along the canals, and the lakes an hour away. Here's what Milan is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/milan-2436458_1280.webp",
+  "image_alt": "The white Gothic front of Milan Cathedral above a busy Piazza del Duomo",
+  "wikipedia": "https://en.wikipedia.org/wiki/Milan",
+  "to_code": "MXP",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Book The Last Supper weeks ahead, as tickets sell out. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, foggy",
+      "temp": 6
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Hot, humid",
+      "temp": 30
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hot, shops shut",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 18
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Damp",
+      "temp": 11
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cold, festive",
+      "temp": 6
+    }
+  },
+  "when_to_go": "April, May, September and October are the best months to explore on foot. July is hot and humid, and in August many locals leave and some restaurants close. December is cold but festive, with Christmas markets and lights.",
+  "things": [
+    {
+      "name": "Duomo and its rooftop",
+      "tag": "Ticketed",
+      "blurb": "Walk among the spires on the cathedral roof for views over the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Last Supper",
+      "tag": "Ticketed",
+      "blurb": "Leonardo's mural in Santa Maria delle Grazie, seen in small timed groups.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Galleria Vittorio Emanuele II",
+      "tag": "Free",
+      "blurb": "A grand 19th-century glass-roofed arcade next to the Duomo.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Navigli",
+      "tag": "Food",
+      "blurb": "Canal-side bars for the evening aperitivo, where a drink comes with snacks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sforza Castle",
+      "tag": "Ticketed",
+      "blurb": "A huge brick castle with museums and Michelangelo's last sculpture.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake Como",
+      "tag": "Day trip",
+      "blurb": "Trains reach Varenna or Como in about an hour.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Milan?",
+      "answer": "Two or three days covers the main sights. Add a day for Lake Como."
+    },
+    {
+      "question": "Which Milan airport is best?",
+      "answer": "Malpensa has the most flights and is 50 minutes by train. Linate is closer to the centre, and Bergamo serves budget airlines."
+    },
+    {
+      "question": "Is Milan worth visiting?",
+      "answer": "Yes, especially for art, food and shopping, and as a base for the lakes."
+    },
+    {
+      "question": "Is it hard to see The Last Supper?",
+      "answer": "Tickets go on sale in batches and sell fast, so book as soon as you know your dates or join a guided tour."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lake Como",
+      "code": "MXP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Verona",
+      "code": "VRN",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Bergamo",
+      "code": "BGY",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Bologna",
+      "code": "BLQ",
+      "label": "🍷 Food & drink"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

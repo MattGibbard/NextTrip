@@ -1,0 +1,192 @@
+{
+  "name": "Gold Coast",
+  "published": true,
+  "country": "AU",
+  "title": "Holidays in Gold Coast",
+  "intro": "Fifty kilometres of surf beaches, theme parks and high-rise Surfers Paradise, with rainforest in the hinterland behind. Here's what the Gold Coast is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/gold-coast-4457845_1280.webp",
+  "image_alt": "High-rise towers along the long sandy beach of the Gold Coast, Australia",
+  "wikipedia": "https://en.wikipedia.org/wiki/Gold_Coast,_Queensland",
+  "to_code": "OOL",
+  "holiday_types": [
+    "beach",
+    "adventure"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "9 to 10 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Australian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eVisitor for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type I · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The eVisitor is free to apply for online. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Hot, humid",
+      "temp": 29
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Hot, stormy",
+      "temp": 29
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 28
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Mild, sunny",
+      "temp": 21
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Whale season",
+      "temp": 22
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 27
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 28
+    }
+  },
+  "when_to_go": "April to October is the best time, sunny and dry, with mild days in the low 20s and whales offshore from June to October. Summer, from December to February, is hot and humid with storms, and the beaches are at their busiest.",
+  "things": [
+    {
+      "name": "Surfers Paradise",
+      "tag": "Free",
+      "blurb": "The famous beach, with flagged swimming areas and a buzzing strip behind.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Burleigh Heads",
+      "tag": "Free",
+      "blurb": "A relaxed beach town with a headland walk and good surf.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Theme parks",
+      "tag": "Ticketed",
+      "blurb": "Movie World, Sea World, Dreamworld and Wet'n'Wild are all close by.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "SkyPoint",
+      "tag": "Ticketed",
+      "blurb": "An observation deck near the top of one of Australia's tallest buildings.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Springbrook and Lamington",
+      "tag": "Day trip",
+      "blurb": "Rainforest walks, waterfalls and glow-worm caves in the hinterland.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Seasonal",
+      "blurb": "Humpbacks pass the coast from June to October.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Gold Coast good for families?",
+      "answer": "Yes. Patrolled beaches and big theme parks make it one of Australia's most popular family spots."
+    },
+    {
+      "question": "Is the sea safe on the Gold Coast?",
+      "answer": "Swim between the red and yellow flags, where lifeguards patrol. Rips can be strong."
+    },
+    {
+      "question": "How far is the Gold Coast from Brisbane?",
+      "answer": "About an hour by car or train from Brisbane, and 1.5 hours from Brisbane airport."
+    },
+    {
+      "question": "When is the Gold Coast quietest?",
+      "answer": "Outside Australian school holidays, especially May and early June."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Whitsundays",
+      "code": "PPP",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Sydney",
+      "code": "SYD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Orlando",
+      "code": "MCO",
+      "label": "🎢 Theme parks"
+    },
+    {
+      "name": "Hawaii cruise",
+      "code": "HNL",
+      "label": "🛳️ Cruise"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

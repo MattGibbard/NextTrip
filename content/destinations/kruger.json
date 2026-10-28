@@ -1,0 +1,192 @@
+{
+  "name": "Kruger National Park",
+  "published": true,
+  "country": "ZA",
+  "title": "Holidays in Kruger National Park",
+  "intro": "One of Africa's great wildlife parks, where lions, elephants, leopards and rhinos roam bushveld the size of Wales. Here's what Kruger National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/kruger-4767758_1280.webp",
+  "image_alt": "Three elephants crossing a road in Kruger National Park, South Africa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Kruger_National_Park",
+  "to_code": "MQP",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 to 2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "South African rand (R)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / M / N · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Kruger is a malaria area, so ask your GP about tablets. Passports need two blank pages. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Hot, wet",
+      "temp": 32
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Hot, wet",
+      "temp": 31
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Warm, green",
+      "temp": 30
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Drying out",
+      "temp": 28
+    },
+    "may": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 27
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Dry, cool nights",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Dry, cool nights",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 27
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Dry, best sightings",
+      "temp": 30
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Hot, dry",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Rains start",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Hot, wet",
+      "temp": 32
+    }
+  },
+  "when_to_go": "May to October is the dry season and best for game viewing, as animals gather at waterholes and the bush thins out. Nights are cold in June and July. November to March is hot and green, with baby animals and great birdwatching, but thicker bush and a higher malaria risk.",
+  "things": [
+    {
+      "name": "Self-drive safari",
+      "tag": "Ticketed",
+      "blurb": "Drive the park's roads yourself and stay in rest camps.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Private game reserves",
+      "tag": "Tour",
+      "blurb": "Lodges in Sabi Sand and other reserves offer guided drives in open vehicles.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Night drive",
+      "tag": "Tour",
+      "blurb": "Ranger-led drives to spot leopards, hyenas and other night animals.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bush walk",
+      "tag": "Tour",
+      "blurb": "Track animals on foot with armed rangers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Panorama Route",
+      "tag": "Day trip",
+      "blurb": "God's Window, Blyde River Canyon and waterfalls on the way to the park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lower Sabie and Satara",
+      "tag": "Free",
+      "blurb": "Two areas known for good big cat and elephant sightings.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Kruger?",
+      "answer": "Three to four nights gives you the best chance of seeing the Big Five."
+    },
+    {
+      "question": "Can you drive yourself in Kruger?",
+      "answer": "Yes. The roads are good and well signed. Stick to speed limits and stay in your car."
+    },
+    {
+      "question": "Which airport is best for Kruger?",
+      "answer": "Kruger Mpumalanga International near Nelspruit, Skukuza inside the park, or Hoedspruit for the private reserves."
+    },
+    {
+      "question": "Is Kruger good for children?",
+      "answer": "Yes, especially in malaria-free reserves nearby like Madikwe, or in the park's southern rest camps."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cape Town",
+      "code": "CPT",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Garden Route",
+      "code": "CPT",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Maasai Mara",
+      "code": "NBO",
+      "label": "🦁 Safari"
+    },
+    {
+      "name": "Okavango Delta",
+      "code": "MUB",
+      "label": "🦁 Safari"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

@@ -1,0 +1,193 @@
+{
+  "name": "Tulum",
+  "published": true,
+  "country": "MX",
+  "title": "Holidays in Tulum",
+  "intro": "Maya ruins on a clifftop above the Caribbean, white-sand beaches, jungle hotels and freshwater cenotes to swim in. Here's what Tulum is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/tulum-2656540_1280.webp",
+  "image_alt": "The Maya ruins of Tulum on a rocky clifftop above turquoise Caribbean water",
+  "wikipedia": "https://en.wikipedia.org/wiki/Tulum",
+  "to_code": "CUN",
+  "holiday_types": [
+    "beach",
+    "culture",
+    "nature"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 to 6 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Mexican peso ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 127V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Cancún airport is about 1 hr 45 mins away; Tulum's own airport has a few direct flights. Seaweed can wash up from spring to autumn. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 28
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 29
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 30
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 31
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Rainy",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Hurricane risk",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Wet",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Drying out",
+      "temp": 29
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 28
+    }
+  },
+  "when_to_go": "December to April is the best time, dry and sunny, though it's also the busiest and priciest. May to November is hotter and more humid, with hurricane risk from August to October. Sargassum seaweed can affect the beaches from spring to autumn.",
+  "things": [
+    {
+      "name": "Tulum ruins",
+      "tag": "Ticketed",
+      "blurb": "A walled Maya city on the cliffs. Arrive at opening to beat heat and crowds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cenotes",
+      "tag": "Ticketed",
+      "blurb": "Swim or snorkel in Gran Cenote, Dos Ojos and other limestone sinkholes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tulum beaches",
+      "tag": "Free",
+      "blurb": "Playa Paraíso and Las Palmas have soft white sand and palms.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Coba",
+      "tag": "Day trip",
+      "blurb": "Jungle ruins where you can still climb a tall pyramid. Hire a bike to get around.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sian Ka'an",
+      "tag": "Tour",
+      "blurb": "A biosphere reserve of lagoons and mangroves, with dolphins and turtles.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Akumal",
+      "tag": "Outdoors",
+      "blurb": "A bay where you can snorkel with green turtles.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How far is Tulum from Cancún airport?",
+      "answer": "About 130 kilometres, which is 1 hr 45 mins by transfer or ADO bus."
+    },
+    {
+      "question": "Is Tulum expensive?",
+      "answer": "Beach hotels are pricey. Staying in Tulum town and cycling to the beach is cheaper."
+    },
+    {
+      "question": "Is Tulum or Cancún better?",
+      "answer": "Tulum is smaller and more boho, with ruins and cenotes on the doorstep. Cancún has bigger resorts, more nightlife and easier transfers."
+    },
+    {
+      "question": "How long should you stay in Tulum?",
+      "answer": "Four or five days for the ruins, cenotes and beaches. A week allows trips to Coba and Bacalar."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cancún",
+      "code": "CUN",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Bacalar",
+      "code": "CUN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Mexico City",
+      "code": "MEX",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Oaxaca",
+      "code": "OAX",
+      "label": "🍷 Food & drink"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

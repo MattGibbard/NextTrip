@@ -1,0 +1,192 @@
+{
+  "name": "Hurghada",
+  "published": true,
+  "country": "EG",
+  "title": "Holidays in Hurghada",
+  "intro": "A long Red Sea strip of resorts and sandy beaches, with coral islands offshore and ancient Luxor a day trip away. Here's what Hurghada is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/hurghada-8627419_1280.webp",
+  "image_alt": "Palm trees silhouetted against an orange sunset over the Red Sea at Hurghada",
+  "wikipedia": "https://en.wikipedia.org/wiki/Hurghada",
+  "to_code": "HRG",
+  "holiday_types": [
+    "beach",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "week",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Egyptian pound (E£)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "Visa on arrival or e-visa",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Many hotels are all-inclusive. Check the latest travel advice on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Winter sun",
+      "temp": 21
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Winter sun",
+      "temp": 22
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "may": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 32
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 34
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 35
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 35
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Hot",
+      "temp": 33
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm sea",
+      "temp": 30
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Winter sun",
+      "temp": 23
+    }
+  },
+  "when_to_go": "March to May and September to November are the best times, hot and sunny with a warm sea. Winter is sunny and around 21 to 23°C, though windy at times. July and August are very hot, but a sea breeze helps on the coast.",
+  "things": [
+    {
+      "name": "Giftun Islands",
+      "tag": "Tour",
+      "blurb": "Boat trips to white-sand islands and coral reefs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "El Gouna",
+      "tag": "Free",
+      "blurb": "A lagoon town of canals, beaches and restaurants, 30 minutes north.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hurghada Marina",
+      "tag": "Free",
+      "blurb": "A promenade of cafés and boats, best in the evening.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Diving and snorkelling",
+      "tag": "Outdoors",
+      "blurb": "Reefs, dolphins and wrecks, with many dive centres for beginners.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Luxor",
+      "tag": "Day trip",
+      "blurb": "The Valley of the Kings and Karnak Temple, about 4 hours away by road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Makadi Bay",
+      "tag": "Free",
+      "blurb": "A calmer resort area south of town with house reefs.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Hurghada good for a beach holiday?",
+      "answer": "Yes. Most hotels have their own beach, and many have reefs for snorkelling."
+    },
+    {
+      "question": "Can you visit Luxor from Hurghada?",
+      "answer": "Yes, on a long day trip by road, about 4 hours each way, or stay overnight."
+    },
+    {
+      "question": "Is Hurghada or Sharm el-Sheikh better?",
+      "answer": "Sharm has better reefs and mountain scenery. Hurghada is cheaper, with more choice and easy trips to Luxor."
+    },
+    {
+      "question": "How long is the flight to Hurghada?",
+      "answer": "About 5 hours from the UK."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Sharm el-Sheikh",
+      "code": "SSH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Cairo",
+      "code": "CAI",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Nile cruise",
+      "code": "LXR",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Agadir",
+      "code": "AGA",
+      "label": "☀️ Winter sun"
+    }
+  ],
+  "date": "2026-10-28T15:00:00Z",
+  "updated": "2026-10-28T15:00:00Z"
+}

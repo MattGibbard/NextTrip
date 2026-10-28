@@ -192,3 +192,37 @@
   font-size: var(--text-6);
   color: var(--muted);
 }
+/* Light, dark or follow the device, a small segmented switch in the bottom strip. */
+.lp-foot-theme {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+.lp-foot-theme button {
+  min-height: 32px;
+  padding: 0 0.8rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.lp-foot-theme button:hover {
+  color: var(--text);
+}
+.lp-foot-theme button[aria-checked="true"] {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+@media (max-width: 640px) {
+  .lp-foot-base {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

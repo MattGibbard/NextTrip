@@ -22,5 +22,8 @@ export function setThemeChoice(choice: ThemeChoice) {
   apply(choice);
 }
 
-dark?.addEventListener("change", () => apply(themeChoice()));
-apply(themeChoice());
+// The footer imports this while pages are prerendered, where there is no document.
+if (typeof document !== "undefined" && document.documentElement) {
+  dark?.addEventListener("change", () => apply(themeChoice()));
+  apply(themeChoice());
+}

@@ -4,6 +4,8 @@ import type { MouseEvent, ReactNode } from "react";
 import hubLinks from "../../content/hub-links.json";
 import { destinationPath } from "../../shared/seo";
 import { FEATURED } from "../site";
+import { setThemeChoice, themeChoice } from "../theme";
+import type { ThemeChoice } from "../theme";
 
 /** The page frame for signed-out pages other than the home page: the home page's header and footer around the content. */
 export function Frame({ children }: { children: ReactNode }) {
@@ -298,9 +300,36 @@ export function SiteFooter({ sections = false, signedIn = false }: { sections?: 
 
       <div className="lp-wrap lp-foot-base">
         <p>© {new Date().getFullYear()} somewhere.party</p>
+        <ThemeSwitch />
         <p className="lp-foot-label">ADMIT ONE FAMILY · ANY DESTINATION</p>
       </div>
     </footer>
+  );
+}
+
+const THEMES: { key: ThemeChoice; label: string }[] = [
+  { key: "system", label: "Device" },
+  { key: "light", label: "Light" },
+  { key: "dark", label: "Dark" },
+];
+
+/** Light, dark or follow the device, for this browser. The same choice as Settings > This device. */
+function ThemeSwitch() {
+  // Pages are prerendered, so read the saved choice once the page is in the browser.
+  const [choice, setChoice] = useState<ThemeChoice>("system");
+  useEffect(() => setChoice(themeChoice()), []);
+  const pick = (c: ThemeChoice) => {
+    setThemeChoice(c);
+    setChoice(c);
+  };
+  return (
+    <div className="lp-foot-theme" role="radiogroup" aria-label="Appearance">
+      {THEMES.map((t) => (
+        <button type="button" key={t.key} role="radio" aria-checked={choice === t.key} onClick={() => pick(t.key)}>
+          {t.label}
+        </button>
+      ))}
+    </div>
   );
 }
 

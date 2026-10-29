@@ -1,0 +1,197 @@
+{
+  "name": "Great Smoky Mountains National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Great Smoky Mountains National Park",
+  "intro": "Misty forested ridges, waterfalls and old log cabins on the Tennessee and North Carolina border, and the most visited national park in America. Here's what Great Smoky Mountains National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/great-smoky-mountains-national-park-68089_1280.webp",
+  "image_alt": "Green meadows and forested ridges of the Smoky Mountains under a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Great_Smoky_Mountains_National_Park",
+  "to_code": "TYS",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "There's no entry fee, but you need a parking tag to park anywhere in the park for more than 15 minutes, bought online or at visitor centres. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 10
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Wildflowers",
+      "temp": 22
+    },
+    "may": {
+      "rating": "best",
+      "note": "Wildflowers",
+      "temp": 26
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Fireflies",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Late colour",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 11
+    }
+  },
+  "when_to_go": "April and May bring spring wildflowers, and early June the famous synchronous fireflies. Summer is warm, humid and busy, with afternoon storms. October is the most popular month, when the ridges turn red and gold, starting high up and working down the slopes. Winter is mild and quiet, though snow can close the high roads.",
+  "things": [
+    {
+      "name": "Kuwohi",
+      "tag": "Free",
+      "blurb": "The highest point in the park, formerly called Clingmans Dome, with a steep paved walk to an observation tower above the clouds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cades Cove",
+      "tag": "Free",
+      "blurb": "An 11-mile loop road through a valley of old churches, cabins and mills, with deer, turkeys and often black bears.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Laurel Falls",
+      "tag": "Outdoors",
+      "blurb": "A popular walk on a paved path to a two-tiered waterfall. Go early to find a parking space.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Newfound Gap Road",
+      "tag": "Free",
+      "blurb": "The main road over the mountains between Tennessee and North Carolina, with viewpoints on the state line.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Synchronous fireflies",
+      "tag": "Ticketed",
+      "blurb": "For a couple of weeks in early June, thousands of fireflies flash in time at Elkmont. Places are given out by lottery.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gatlinburg and Pigeon Forge",
+      "tag": "Ticketed",
+      "blurb": "The busy towns at the gate, with pancake houses, a mountain coaster, an aquarium and Dollywood theme park.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Great Smoky Mountains good for a family holiday?",
+      "answer": "Yes. There are easy waterfall walks, streams to paddle in, bears and deer to spot, and Gatlinburg and Dollywood for rainy days."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights covers the park and a day at Dollywood. It's often part of a road trip with Nashville or Asheville."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Knoxville, about an hour from Gatlinburg. Asheville and Atlanta airports are about one and three and a half hours away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Do you see bears in the Smoky Mountains?",
+      "answer": "Often, yes. The park has around 1,900 black bears. Stay at least 50 yards away and never feed them."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Asheville",
+      "code": "AVL",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Shenandoah National Park",
+      "code": "IAD",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "New River Gorge National Park",
+      "code": "CRW",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Acadia National Park",
+      "code": "BHB",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

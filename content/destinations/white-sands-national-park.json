@@ -1,0 +1,196 @@
+{
+  "name": "White Sands National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in White Sands National Park",
+  "intro": "Rolling dunes of brilliant white gypsum sand in the New Mexico desert, made for sledging, barefoot walks and sunsets. Here's what White Sands National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/white-sands-national-park-1911395_1280.webp",
+  "image_alt": "Rippled white gypsum dunes with plants under a blue sky at White Sands National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/White_Sands_National_Park",
+  "to_code": "ELP",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "1 to 2",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, cold nights",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 16
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Spring, windy",
+      "temp": 21
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 30
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 35
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, storms",
+      "temp": 35
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, storms",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 25
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 13
+    }
+  },
+  "when_to_go": "March to May and September to November are best, with warm days and comfortable sand. Summer is hot, though the white gypsum stays cooler underfoot than ordinary sand. Spring can be very windy. Winter days are mild and sunny but nights are cold. Highway 70 and the park sometimes close for a few hours during missile tests at the range next door.",
+  "things": [
+    {
+      "name": "Dune sledging",
+      "tag": "Cheap",
+      "blurb": "Buy a waxed plastic sledge at the visitor centre shop and slide down the dunes. The best fun in the park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dunes Drive",
+      "tag": "Free",
+      "blurb": "An eight-mile road into the heart of the dunes, with picnic shelters and car parks along the way.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Interdune Boardwalk",
+      "tag": "Free",
+      "blurb": "An easy, accessible boardwalk with signs about the plants and animals that live in the dunes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sunset stroll",
+      "tag": "Free",
+      "blurb": "Join a ranger for a walk into the dunes as the sand turns pink and gold.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alkali Flat Trail",
+      "tag": "Outdoors",
+      "blurb": "A five-mile loop over the dunes following marker posts, for fit older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Full moon nights",
+      "tag": "Ticketed",
+      "blurb": "On some summer full moons the park stays open late, and the white sand glows.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is White Sands good for a family holiday?",
+      "answer": "Yes. Sledging down the dunes and running barefoot on the soft white sand is brilliant for children of any age."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "One or two nights in Alamogordo or Las Cruces is enough. Combine it with Carlsbad Caverns or Santa Fe."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to El Paso, about an hour and a half away. Albuquerque is about three and a half hours away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Does the sand get hot?",
+      "answer": "Less than you'd expect. Gypsum reflects the sun, so it's often cool enough to walk barefoot even in summer, but the air gets very hot."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Great Sand Dunes National Park",
+      "code": "COS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Carlsbad Caverns National Park",
+      "code": "ELP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Santa Fe",
+      "code": "ABQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Death Valley National Park",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

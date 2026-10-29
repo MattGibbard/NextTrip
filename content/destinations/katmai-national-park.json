@@ -1,0 +1,196 @@
+{
+  "name": "Katmai National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Katmai National Park",
+  "intro": "A remote Alaskan wilderness famous for brown bears catching salmon at Brooks Falls, reached only by floatplane. Here's what Katmai National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/katmai-national-park-2067674_1280.webp",
+  "image_alt": "A brown bear wading through a river near Brooks Falls in Katmai National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Katmai_National_Park_and_Preserve",
+  "to_code": "AKN",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "1 to 3",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "9 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "There's no entry fee, but flights and lodges are expensive and book up months ahead. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 0
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 0
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 2
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 6
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 11
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Brooks Camp opens",
+      "temp": 15
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Bears at falls",
+      "temp": 17
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Bears fishing",
+      "temp": 16
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Fat bears",
+      "temp": 12
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Season over",
+      "temp": 5
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": 1
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Closed",
+      "temp": -1
+    }
+  },
+  "when_to_go": "July and September are the best months for bears at Brooks Falls. In July the salmon run peaks and dozens of bears gather at the falls. In August many bears fish elsewhere, though there are still plenty about. September brings fat bears fishing for spawned-out salmon in the river. Brooks Camp is open from June to mid September only.",
+  "things": [
+    {
+      "name": "Brooks Falls",
+      "tag": "Free",
+      "blurb": "Watch bears catch leaping salmon from a raised viewing platform, just a few metres away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bear school",
+      "tag": "Free",
+      "blurb": "Every visitor has a short ranger talk on how to behave around bears when they arrive.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Valley of Ten Thousand Smokes",
+      "tag": "Tour",
+      "blurb": "A bus tour from Brooks Camp to a valley buried in ash by a huge eruption in 1912.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bear day trip",
+      "tag": "Tour",
+      "blurb": "If you can't stay, floatplane day trips fly from Anchorage, Homer or King Salmon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fishing",
+      "tag": "Outdoors",
+      "blurb": "World-class fly fishing for rainbow trout and salmon, though bears get right of way.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fat Bear Week",
+      "tag": "Free",
+      "blurb": "Every October the park holds an online vote for the fattest bear, watched on live webcams.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Katmai good for a family holiday?",
+      "answer": "For older children who love wildlife, it's a trip of a lifetime. It's remote and expensive, and you must stay calm and quiet around bears."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "One to three nights at Brooks Camp, or a day trip by floatplane, as part of a wider Alaska holiday."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Anchorage, then take a flight to King Salmon and a floatplane to Brooks Camp."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can you stay at Brooks Camp?",
+      "answer": "There's a small lodge and a campground. Lodge rooms are given out by lottery and the campground books up quickly, so plan a year ahead."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Denali National Park",
+      "code": "FAI",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Kenai Fjords National Park",
+      "code": "ANC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Glacier Bay National Park",
+      "code": "JNU",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Kluane National Park",
+      "code": "YXY",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

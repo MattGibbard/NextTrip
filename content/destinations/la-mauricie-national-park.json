@@ -1,0 +1,196 @@
+{
+  "name": "La Mauricie National Park",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in La Mauricie National Park",
+  "intro": "More than 150 lakes in rolling Laurentian forest in Quebec, made for canoeing, swimming and wildlife, two hours from Montreal. Here's what La Mauricie National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/la-mauricie-national-park-2304692_1280.webp",
+  "image_alt": "A floating wooden bridge across a forest lake in La Mauricie National Park, Quebec",
+  "wikipedia": "https://en.wikipedia.org/wiki/La_Mauricie_National_Park",
+  "to_code": "YUL",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need a Parks Canada pass to stop in the park: a day pass, or a Discovery Pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Skiing",
+      "temp": -8
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Skiing",
+      "temp": -6
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 0
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Thawing",
+      "temp": 9
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 18
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 19
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 11
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 3
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Skiing",
+      "temp": -5
+    }
+  },
+  "when_to_go": "June to early October is the best time. July and August are warm and perfect for canoeing and swimming, though there are biting flies in early summer. Late September and early October bring some of the best autumn colour in Quebec. Winter is cold and snowy, with cross-country skiing and snowshoeing.",
+  "things": [
+    {
+      "name": "Canoeing on Lac Wapizagonke",
+      "tag": "Outdoors",
+      "blurb": "Hire a canoe and paddle a long, narrow lake between forested hills, with beaches to stop at.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Les Cascades",
+      "tag": "Free",
+      "blurb": "A stream flowing over smooth rock slabs that make natural water slides.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Waber Falls",
+      "tag": "Outdoors",
+      "blurb": "A walk through the forest to a waterfall, often combined with a canoe trip.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lac Édouard beach",
+      "tag": "Free",
+      "blurb": "A sandy beach on a lake with lifeguards in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Parkway",
+      "tag": "Free",
+      "blurb": "A 63km scenic road across the park with lake viewpoints, gorgeous in autumn.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wildlife",
+      "tag": "Free",
+      "blurb": "Look out for beavers, moose, black bears and loons calling on the lakes at dusk.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is La Mauricie good for a family holiday?",
+      "answer": "Yes. Canoeing, swimming at beaches and sliding down the natural rock slides at Les Cascades are perfect for children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights, in a cabin or campground. Combine it with Montreal and Quebec City."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Montreal, about two hours' drive away. Quebec City is also about two hours away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Do you need to speak French?",
+      "answer": "It helps, as this is a French-speaking area, but park staff speak English and so do many people in tourism."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Montreal",
+      "code": "YUL",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Quebec City",
+      "code": "YQB",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Bruce Peninsula National Park",
+      "code": "YYZ",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Acadia National Park",
+      "code": "BHB",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

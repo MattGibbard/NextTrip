@@ -1,0 +1,197 @@
+{
+  "name": "Fundy National Park",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Fundy National Park",
+  "intro": "Forest, waterfalls and a rugged coast on the Bay of Fundy in New Brunswick, home to the highest tides in the world. Here's what Fundy National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/fundy-national-park-2469342_1280.webp",
+  "image_alt": "The forested coast of the Bay of Fundy in New Brunswick under a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Fundy_National_Park",
+  "to_code": "YQM",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "beach"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need a Parks Canada pass to stop in the park: a day pass, or a Discovery Pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -3
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -2
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 2
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 8
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 15
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 23
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 23
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 18
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 12
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 6
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 0
+    }
+  },
+  "when_to_go": "June to September is the best time, when everything is open and the weather is mild. July and August are warmest. Late September and early October bring brilliant autumn colour. The tides are huge all year, rising and falling up to 12m twice a day, so check the tide times to see both high and low.",
+  "things": [
+    {
+      "name": "Walk the ocean floor",
+      "tag": "Free",
+      "blurb": "At low tide, walk out across the sea bed at Alma or Herring Cove, then watch the water flood back in.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hopewell Rocks",
+      "tag": "Ticketed",
+      "blurb": "Huge 'flowerpot' rocks about 40 minutes from the park, walkable at low tide and surrounded by water at high tide.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Point Wolfe",
+      "tag": "Free",
+      "blurb": "A red covered bridge over a river and a beach of pebbles and tide pools.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dickson Falls",
+      "tag": "Free",
+      "blurb": "A short boardwalk loop through a mossy ravine to a waterfall.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alma",
+      "tag": "Food",
+      "blurb": "The fishing village at the gate, where lobster boats sit on the mud at low tide. Eat fresh lobster and sticky buns.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bennett Lake",
+      "tag": "Outdoors",
+      "blurb": "A lake with canoe and kayak hire, plus a beach for a dip.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Fundy National Park good for a family holiday?",
+      "answer": "Yes. Walking on the sea bed at low tide is something children never forget, and there are easy waterfall walks, beaches and lakes."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights. It's an easy stop on a Maritimes road trip with Prince Edward Island and Nova Scotia."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Moncton, about an hour's drive away, or Halifax, about three and a half hours away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How high are the tides?",
+      "answer": "In the park they rise and fall up to around 12m. Further up the bay, near Hopewell Rocks, they can reach about 15m."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Prince Edward Island National Park",
+      "code": "YYG",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Cape Breton Highlands National Park",
+      "code": "YQY",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Halifax",
+      "code": "YHZ",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Acadia National Park",
+      "code": "BHB",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

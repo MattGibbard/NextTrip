@@ -1,0 +1,197 @@
+{
+  "name": "Cape Breton Highlands National Park",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Cape Breton Highlands National Park",
+  "intro": "Highlands, sea cliffs and whale-watching coves along the Cabot Trail in Nova Scotia, with Acadian and Celtic music in the villages. Here's what Cape Breton Highlands National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/cape-breton-highlands-national-park-3626454_1280.webp",
+  "image_alt": "The Cabot Trail road curving along the coast and green highlands of Cape Breton",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cape_Breton_Highlands_National_Park",
+  "to_code": "YQY",
+  "holiday_types": [
+    "nature",
+    "road-trip",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need a Parks Canada pass to stop in the park: a day pass, or a Discovery Pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -1
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -1
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 2
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 8
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 14
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 19
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer, whales",
+      "temp": 23
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer, whales",
+      "temp": 23
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Whales",
+      "temp": 19
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour, music",
+      "temp": 13
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 7
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 2
+    }
+  },
+  "when_to_go": "July to mid October is the best time. July and August are warmest, with whales off the coast and beaches at their best. Late September to mid October is many people's favourite, when the highlands turn red and gold and the Celtic Colours music festival fills the island. Winter is snowy and many places close.",
+  "things": [
+    {
+      "name": "Cabot Trail",
+      "tag": "Free",
+      "blurb": "One of the world's great coastal drives, looping around the highlands with lookouts over the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Skyline Trail",
+      "tag": "Outdoors",
+      "blurb": "A walk along a headland to a boardwalk high above the sea, where moose graze and whales swim below. Best at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Tour",
+      "blurb": "Boat trips from Pleasant Bay, Chéticamp and Ingonish to see pilot, minke and humpback whales.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ingonish Beach",
+      "tag": "Free",
+      "blurb": "A sandy beach with a freshwater lake right behind it, so you can choose sea or lake swimming.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chéticamp",
+      "tag": "Culture",
+      "blurb": "A French-speaking Acadian village known for hooked rugs, seafood and fiddle music.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Middle Head",
+      "tag": "Outdoors",
+      "blurb": "An easy walk out along a narrow peninsula with sea views on both sides.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Cape Breton Highlands good for a family holiday?",
+      "answer": "Yes. Spotting moose and whales, beach days and short walks are easy with children, and the drive is spectacular."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights, staying in Chéticamp on one side and Ingonish on the other."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Sydney, Nova Scotia, about an hour and a half from Ingonish, or Halifax, about four and a half hours away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Which way should you drive the Cabot Trail?",
+      "answer": "Clockwise keeps you on the inside lane, away from the cliff edge. Anticlockwise puts the sea on your side for the views."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cabot Trail",
+      "code": "YHZ",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Halifax",
+      "code": "YHZ",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Gros Morne National Park",
+      "code": "YDF",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Fundy National Park",
+      "code": "YQM",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

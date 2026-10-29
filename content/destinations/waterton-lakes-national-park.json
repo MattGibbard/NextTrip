@@ -1,0 +1,197 @@
+{
+  "name": "Waterton Lakes National Park",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Waterton Lakes National Park",
+  "intro": "Where the Rockies meet the prairie in southern Alberta, with deep lakes, a grand old hotel, deer in the village and boat trips into Montana. Here's what Waterton Lakes National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/waterton-lakes-national-park-3707_1280.webp",
+  "image_alt": "The Prince of Wales Hotel on a hill above Upper Waterton Lake and mountains",
+  "wikipedia": "https://en.wikipedia.org/wiki/Waterton_Lakes_National_Park",
+  "to_code": "YYC",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need a Parks Canada pass to stop in the park: a day pass, or a Discovery Pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy, windy",
+      "temp": -1
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 1
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 5
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 10
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring flowers",
+      "temp": 15
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Wildflowers",
+      "temp": 19
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 23
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 23
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 18
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 12
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 4
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 0
+    }
+  },
+  "when_to_go": "June to September is the best time, when the boat cruise and the hotel are open. June has wildflowers, July and August are warm and busy, and September is quieter with autumn colour. Much of the village closes from mid October to May. It's one of the windiest places in Alberta, so pack a windproof layer.",
+  "things": [
+    {
+      "name": "Prince of Wales Hotel",
+      "tag": "Food",
+      "blurb": "A grand wooden hotel on a windy bluff above the lake. Stop for afternoon tea and the view.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Waterton Shoreline Cruise",
+      "tag": "Tour",
+      "blurb": "A boat trip down Upper Waterton Lake across the border to Goat Haunt in Montana.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cameron Falls",
+      "tag": "Free",
+      "blurb": "A waterfall over some of the oldest rock in the Rockies, right in the village.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Red Rock Canyon",
+      "tag": "Free",
+      "blurb": "A short walk around a small canyon of red and green rock, at the end of a scenic road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bear's Hump",
+      "tag": "Outdoors",
+      "blurb": "A short, steep climb to a viewpoint over the village and the lakes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bison Paddock",
+      "tag": "Free",
+      "blurb": "A loop road through a paddock where a herd of plains bison grazes.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Waterton good for a family holiday?",
+      "answer": "Yes. The village is small and easy, deer wander the streets, and there are short walks, boat trips and paddling in the lakes."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights. It joins Glacier National Park in Montana, and together they make the Waterton-Glacier International Peace Park."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Calgary, about three hours' drive away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can you cross into the USA from Waterton?",
+      "answer": "Yes. The boat stops at Goat Haunt in Glacier National Park, and you need a passport and US entry permission to step ashore. Check the crossing is open before you book."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Glacier National Park",
+      "code": "FCA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Banff",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Yoho National Park",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Jasper National Park",
+      "code": "YEG",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

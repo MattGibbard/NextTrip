@@ -1,0 +1,196 @@
+{
+  "name": "Mount Rainier National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Mount Rainier National Park",
+  "intro": "A huge glacier-covered volcano near Seattle, ringed by wildflower meadows, waterfalls and old forests. Here's what Mount Rainier National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/mount-rainier-national-park-6571820_1280.webp",
+  "image_alt": "Mount Rainier reflected in Tipsoo Lake with evergreen trees around the shore",
+  "wikipedia": "https://en.wikipedia.org/wiki/Mount_Rainier_National_Park",
+  "to_code": "SEA",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Deep snow",
+      "temp": 1
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Deep snow",
+      "temp": 2
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 3
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 6
+    },
+    "may": {
+      "rating": "good",
+      "note": "Snow melting",
+      "temp": 9
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Lower trails",
+      "temp": 13
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Wildflowers",
+      "temp": 17
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Wildflowers",
+      "temp": 17
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Clear days",
+      "temp": 14
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 9
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Snow returns",
+      "temp": 3
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Deep snow",
+      "temp": 1
+    }
+  },
+  "when_to_go": "Late July to mid September is the best time, when the snow has melted from the meadows and the wildflowers are out. Sunrise, the highest point you can drive to, is usually only open from July to September. In recent summers you've needed a timed entry reservation for the Paradise and Sunrise areas. Winter brings huge amounts of snow, with snowshoeing and sledging at Paradise.",
+  "things": [
+    {
+      "name": "Paradise",
+      "tag": "Free",
+      "blurb": "Meadows on the mountain's slopes with wildflowers in summer, a historic inn and the Skyline Trail.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Myrtle Falls",
+      "tag": "Free",
+      "blurb": "A short, paved walk from Paradise to a waterfall with the mountain behind it.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sunrise",
+      "tag": "Free",
+      "blurb": "The highest point reachable by car, with close views of the glaciers and easy walks. Summer only.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Reflection Lakes",
+      "tag": "Free",
+      "blurb": "Small lakes beside the road where Rainier is mirrored on calm mornings.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tipsoo Lake",
+      "tag": "Free",
+      "blurb": "A pretty lake at Chinook Pass with a flat loop path and a picnic area.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Narada Falls",
+      "tag": "Free",
+      "blurb": "A powerful waterfall a short walk from the road between Longmire and Paradise.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Mount Rainier good for a family holiday?",
+      "answer": "Yes. Many viewpoints and waterfalls are short walks from the road, and the summer meadows are full of flowers and marmots."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights. It's an easy add-on to a few days in Seattle or a trip to Olympic National Park."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Seattle, about two hours' drive from the Nisqually entrance."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Do you need a reservation for Mount Rainier?",
+      "answer": "In recent summers you've needed a timed entry reservation from Recreation.gov for the Paradise and Sunrise areas. Check this year's rules before you go."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Olympic National Park",
+      "code": "SEA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Crater Lake National Park",
+      "code": "MFR",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lassen Volcanic National Park",
+      "code": "RDD",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Vancouver",
+      "code": "YVR",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

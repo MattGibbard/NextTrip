@@ -1,0 +1,197 @@
+{
+  "name": "Capitol Reef National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Capitol Reef National Park",
+  "intro": "A quiet Utah park of red cliffs, white domes and old pioneer orchards where you can pick fruit, with far fewer people than its famous neighbours. Here's what Capitol Reef National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/capitol-reef-national-park-7374125_1280.webp",
+  "image_alt": "Red and white layered cliffs above green trees in Capitol Reef National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Capitol_Reef_National_Park",
+  "to_code": "SLC",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "2",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 6
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Blossom",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 30
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, storms",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, storms",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Apple season",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 19
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 11
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 5
+    }
+  },
+  "when_to_go": "Spring and autumn are best. The orchards blossom in April, and from June to October you can pick cherries, apricots, peaches, pears and apples in season. Summer is hot with afternoon storms, though less so than Moab. Winter is cold and very quiet. Torrey, just outside, is the nearest town, and it's small, so book a room early.",
+  "things": [
+    {
+      "name": "Fruita orchards",
+      "tag": "Cheap",
+      "blurb": "Pick fruit straight from the trees of an old Mormon settlement when the orchards are open, paying a small fee for what you take away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gifford Homestead",
+      "tag": "Food",
+      "blurb": "A pioneer farmhouse selling home-made fruit pies and ice cream. They sell out, so go in the morning.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hickman Bridge",
+      "tag": "Outdoors",
+      "blurb": "A two-mile round walk to a big natural bridge, one of the best family hikes in the park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Scenic Drive and Capitol Gorge",
+      "tag": "Free",
+      "blurb": "A paved road along the cliffs, ending in a gravel track through a narrow gorge with pioneer names carved in the rock.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Petroglyphs",
+      "tag": "Free",
+      "blurb": "Ancient Fremont rock carvings of people and bighorn sheep, seen from a boardwalk beside the main road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cathedral Valley",
+      "tag": "Day trip",
+      "blurb": "Huge sandstone monoliths in the remote north of the park, reached on a long dirt loop by 4x4 or on a tour.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Capitol Reef good for a family holiday?",
+      "answer": "Yes. It's quiet, the walks are short and varied, and picking fruit and eating pie at the old homestead goes down well with children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "One or two nights is enough. It sits on Scenic Byway 12 between Bryce Canyon and Moab, so it's an easy stop on a Utah road trip."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Salt Lake City and drive about three and a half hours to Torrey. From Las Vegas it's around five hours."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is there an entry fee?",
+      "answer": "You can drive Highway 24 through the park for free. There's a fee for the Scenic Drive beyond Fruita, and an annual pass covers it."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bryce Canyon National Park",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Arches National Park",
+      "code": "CNY",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Utah's national parks",
+      "code": "LAS",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Canyonlands National Park",
+      "code": "CNY",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

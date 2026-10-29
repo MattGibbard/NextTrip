@@ -1,0 +1,196 @@
+{
+  "name": "Point Pelee National Park",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Point Pelee National Park",
+  "intro": "A sandy spit at the southern tip of mainland Canada on Lake Erie, with marsh boardwalks, beaches and huge spring bird migrations. Here's what Point Pelee National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/point-pelee-national-park-4724829_1280.webp",
+  "image_alt": "A picnic table silhouetted against an orange sunset on the beach at Point Pelee",
+  "wikipedia": "https://en.wikipedia.org/wiki/Point_Pelee_National_Park",
+  "to_code": "YQG",
+  "holiday_types": [
+    "nature",
+    "beach"
+  ],
+  "nights": "1 to 2",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need a Parks Canada pass to stop in the park: a day pass, or a Discovery Pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": -1
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 0
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 6
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Birds arrive",
+      "temp": 13
+    },
+    "may": {
+      "rating": "best",
+      "note": "Bird migration",
+      "temp": 20
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Beach weather",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Beach weather",
+      "temp": 27
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Monarch butterflies",
+      "temp": 23
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 16
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 9
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 2
+    }
+  },
+  "when_to_go": "May is the busiest month, when millions of songbirds stop here on their migration north and birdwatchers arrive from around the world. July and August are hot, with warm water for swimming. September brings monarch butterflies gathering before they fly to Mexico. Winter is cold and quiet.",
+  "things": [
+    {
+      "name": "The Tip",
+      "tag": "Free",
+      "blurb": "Walk to the very end of the sandy point, the southernmost tip of mainland Canada. A shuttle runs there in season.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Marsh Boardwalk",
+      "tag": "Free",
+      "blurb": "A floating boardwalk through the marsh with a lookout tower, plus canoe and bike hire nearby.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spring bird migration",
+      "tag": "Free",
+      "blurb": "In May the woods fill with warblers, orioles and hummingbirds resting after flying across Lake Erie.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Monarch butterflies",
+      "tag": "Free",
+      "blurb": "In September thousands of orange monarchs gather in the trees before flying south.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Beaches",
+      "tag": "Free",
+      "blurb": "Long sandy beaches with warm, shallow water in summer. Watch for strong currents near the Tip.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pelee Island",
+      "tag": "Day trip",
+      "blurb": "Take the ferry from Leamington to Canada's southernmost inhabited island, with wineries and quiet roads to cycle.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Point Pelee good for a family holiday?",
+      "answer": "As a weekend, yes. Standing at the tip of Canada, canoeing the marsh and swimming from warm beaches all suit children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "One or two nights in Leamington or Kingsville. It pairs with Toronto or Niagara Falls on a longer trip."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Windsor, about 45 minutes away, or Detroit, about an hour away across the border. Toronto is about four hours' drive."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can you swim at the Tip?",
+      "answer": "No. Swimming at the Tip is banned because of dangerous currents, but the beaches along the sides of the point are fine."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bruce Peninsula National Park",
+      "code": "YYZ",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Niagara Falls",
+      "code": "YYZ",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Toronto",
+      "code": "YYZ",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Cuyahoga Valley National Park",
+      "code": "CLE",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

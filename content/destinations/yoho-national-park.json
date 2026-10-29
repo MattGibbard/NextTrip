@@ -1,0 +1,196 @@
+{
+  "name": "Yoho National Park",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Yoho National Park",
+  "intro": "Emerald Lake, one of Canada's tallest waterfalls and 500-million-year-old fossils, just over the Continental Divide from Lake Louise in British Columbia. Here's what Yoho National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/yoho-national-park-3593378_1280.webp",
+  "image_alt": "Turquoise Emerald Lake with forest and mountains in Yoho National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Yoho_National_Park",
+  "to_code": "YYC",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need a Parks Canada pass to stop in the park: a day pass, or a Discovery Pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -6
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -2
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 3
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Thawing",
+      "temp": 9
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 15
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Lakes thawed",
+      "temp": 19
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 22
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 22
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Larches",
+      "temp": 16
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 8
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -1
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -6
+    }
+  },
+  "when_to_go": "July to September is best. Emerald Lake usually thaws in June, and the road to Takakkaw Falls opens from late June to early October, when the falls are at their fullest in early summer. Late September brings golden larches. Winter is snowy and quiet, with cross-country skiing around Emerald Lake.",
+  "things": [
+    {
+      "name": "Emerald Lake",
+      "tag": "Outdoors",
+      "blurb": "A brilliant green lake with canoe hire and an easy loop path around the shore.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Takakkaw Falls",
+      "tag": "Free",
+      "blurb": "One of the tallest waterfalls in Canada, about 370m, a short walk from the end of the Yoho Valley road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Natural Bridge",
+      "tag": "Free",
+      "blurb": "The Kicking Horse River squeezing through a hole it has worn in the rock, right by the road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spiral Tunnels",
+      "tag": "Free",
+      "blurb": "A viewpoint where long freight trains loop through tunnels inside the mountain, so you can see both ends at once.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Burgess Shale",
+      "tag": "Tour",
+      "blurb": "Guided hikes to one of the world's most important fossil beds, with sea creatures from 500 million years ago. For fit older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake O'Hara",
+      "tag": "Outdoors",
+      "blurb": "A beautiful alpine lake reached by a park bus you book by lottery, or a long walk up the road.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Yoho good for a family holiday?",
+      "answer": "Yes. The best sights are short walks from the car, and children enjoy the trains in the Spiral Tunnels and canoeing on Emerald Lake."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights, or day trips from Lake Louise or Banff. Field and Golden are the closest places to stay."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Calgary, about two and a half hours' drive away along the Trans-Canada Highway."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is Yoho the same as Banff?",
+      "answer": "No, it's a separate park next door, in British Columbia. A Parks Canada pass covers both."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Banff",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Jasper National Park",
+      "code": "YEG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Waterton Lakes National Park",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Rocky Mountaineer",
+      "code": "YVR",
+      "label": "🚆 By train"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

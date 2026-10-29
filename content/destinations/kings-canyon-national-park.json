@@ -1,0 +1,197 @@
+{
+  "name": "Kings Canyon National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Kings Canyon National Park",
+  "intro": "One of the deepest canyons in North America, plus the giant General Grant Tree, in the quieter twin of Sequoia National Park in California. Here's what Kings Canyon National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/kings-canyon-national-park-6600645_1280.webp",
+  "image_alt": "Forested granite mountains in Kings Canyon National Park, California",
+  "wikipedia": "https://en.wikipedia.org/wiki/Kings_Canyon_National_Park",
+  "to_code": "FAT",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "2",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy, canyon shut",
+      "temp": 6
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy, canyon shut",
+      "temp": 7
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 9
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Canyon reopens",
+      "temp": 12
+    },
+    "may": {
+      "rating": "best",
+      "note": "Waterfalls",
+      "temp": 17
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 26
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 22
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 16
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Canyon closes",
+      "temp": 10
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 6
+    }
+  },
+  "when_to_go": "Late May to October is the time to go, when the Kings Canyon Scenic Byway down to Cedar Grove is open and the waterfalls are flowing. Early summer has the fullest rivers. Grant Grove is open all year and pretty under snow, but the canyon road closes from about November to late April. Summer is the busiest time but still quiet compared with Yosemite.",
+  "things": [
+    {
+      "name": "General Grant Tree",
+      "tag": "Free",
+      "blurb": "The second-largest tree on earth, known as the Nation's Christmas Tree, on a short paved loop in Grant Grove.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kings Canyon Scenic Byway",
+      "tag": "Free",
+      "blurb": "A dramatic road down into the canyon, past viewpoints over the river, to Cedar Grove at the bottom.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zumwalt Meadow",
+      "tag": "Free",
+      "blurb": "An easy loop through a meadow below sheer granite walls, one of the best family walks in the park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Roaring River Falls",
+      "tag": "Free",
+      "blurb": "A powerful waterfall in a granite chute, a few minutes' walk from the road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Panoramic Point",
+      "tag": "Free",
+      "blurb": "A short climb above Grant Grove to a view over the high Sierra peaks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hume Lake",
+      "tag": "Outdoors",
+      "blurb": "A forest lake just outside the park with swimming, canoes and an ice cream shop.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Kings Canyon good for a family holiday?",
+      "answer": "Yes. The walks are short and flat, the river beaches at Cedar Grove are good for paddling, and it's much quieter than Yosemite."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two nights covers Grant Grove and a day in the canyon. Most families see it together with Sequoia National Park."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Fresno, about an hour and a half from the Big Stump entrance. Cedar Grove is another hour or so down the canyon."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "When is the road to Cedar Grove open?",
+      "answer": "Usually from late April or May to mid November, depending on snow. Grant Grove stays open all year."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Sequoia National Park",
+      "code": "FAT",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Yosemite National Park",
+      "code": "FAT",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lassen Volcanic National Park",
+      "code": "RDD",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "San Francisco",
+      "code": "SFO",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

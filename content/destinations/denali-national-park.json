@@ -1,0 +1,196 @@
+{
+  "name": "Denali National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Denali National Park",
+  "intro": "North America's highest mountain towering over six million acres of Alaskan wilderness, where grizzlies, moose and caribou roam. Here's what Denali National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/denali-national-park-1733313_1280.webp",
+  "image_alt": "Snowy Alaska Range mountains above Wonder Lake in Denali National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Denali_National_Park_and_Preserve",
+  "to_code": "FAI",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "9 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Dark, very cold",
+      "temp": -12
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Very cold",
+      "temp": -8
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": -3
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 5
+    },
+    "may": {
+      "rating": "good",
+      "note": "Season opens",
+      "temp": 13
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Midnight sun",
+      "temp": 19
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 20
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer, rain",
+      "temp": 18
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 12
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Season over",
+      "temp": 2
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Dark, very cold",
+      "temp": -7
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Dark, very cold",
+      "temp": -10
+    }
+  },
+  "when_to_go": "Late May to mid September is the season, when the buses run and lodges are open. June and July have almost 24-hour daylight. August can be wetter, and late August and early September bring autumn colour on the tundra. The mountain itself is hidden by cloud on most days, so give yourself a few days for a chance to see it. Winter is dark and bitterly cold.",
+  "things": [
+    {
+      "name": "Park bus tour",
+      "tag": "Tour",
+      "blurb": "Private cars can only drive the first 15 miles, so buses take you deeper into the park to spot bears, moose and caribou. Part of the road has been closed by a landslide while a bridge is built.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sled dog kennels",
+      "tag": "Free",
+      "blurb": "Meet the park rangers' working huskies and watch a sledding demonstration.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Flightseeing",
+      "tag": "Tour",
+      "blurb": "A small plane flight around the mountain, some landing on a glacier. Expensive but unforgettable.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Savage River Loop",
+      "tag": "Free",
+      "blurb": "An easy walk along a river at the end of the public road, with marmots and Dall sheep on the slopes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Horseshoe Lake",
+      "tag": "Outdoors",
+      "blurb": "A forest walk near the entrance to a lake with beaver lodges.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alaska Railroad",
+      "tag": "Ticketed",
+      "blurb": "A scenic train from Anchorage or Fairbanks with glass-domed carriages, stopping at the park.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Denali good for a family holiday?",
+      "answer": "Yes, for families who love wildlife. The bus rides are long, but spotting grizzlies and moose keeps children glued to the window, and the sled dogs are a favourite."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights near the park, as part of a longer Alaska trip with Anchorage and the Kenai Peninsula."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Fairbanks, about two hours' drive away, or Anchorage, about four hours away. The Alaska Railroad also runs from both cities in summer."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Will we see Denali?",
+      "answer": "Maybe. The mountain makes its own weather and is fully visible only about a third of the time in summer. Clear mornings give the best chance."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kenai Fjords National Park",
+      "code": "ANC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Alaska's Inside Passage",
+      "code": "SEA",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Katmai National Park",
+      "code": "AKN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Kluane National Park",
+      "code": "YXY",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

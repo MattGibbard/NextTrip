@@ -1,0 +1,197 @@
+{
+  "name": "Bryce Canyon National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Bryce Canyon National Park",
+  "intro": "A huge natural amphitheatre filled with orange rock spires called hoodoos, high on a Utah plateau with some of the darkest night skies in America. Here's what Bryce Canyon National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/bryce-canyon-national-park-7589819_1280.webp",
+  "image_alt": "Orange hoodoo rock spires and pine trees in Bryce Canyon, Utah",
+  "wikipedia": "https://en.wikipedia.org/wiki/Bryce_Canyon_National_Park",
+  "to_code": "LAS",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snow on hoodoos",
+      "temp": 2
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 4
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cold, quiet",
+      "temp": 8
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 12
+    },
+    "may": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 18
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm days",
+      "temp": 24
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer, storms",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer, storms",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Fewer crowds",
+      "temp": 22
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cool, crisp",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 8
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 2
+    }
+  },
+  "when_to_go": "Bryce is high, at around 2,400m, so it stays far cooler than Zion. May to September is the best time, with warm days, cool nights and the free summer shuttle. Summer afternoons often bring thunderstorms, so walk in the morning. Winter is cold and snowy, but the snow-dusted hoodoos are beautiful and the park stays open. Pack layers whatever the month.",
+  "things": [
+    {
+      "name": "Sunrise and Sunset Points",
+      "tag": "Free",
+      "blurb": "The classic viewpoints over the amphitheatre, a short walk apart along the rim. Sunrise lights the hoodoos up orange.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Navajo Loop and Queen's Garden",
+      "tag": "Outdoors",
+      "blurb": "The best walk in the park, dropping down among the hoodoos and through Wall Street's narrow slot. About three miles, with a steady climb back up.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rim Trail",
+      "tag": "Free",
+      "blurb": "An easy, mostly flat path along the canyon edge between the main viewpoints, good for little legs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Scenic drive to Rainbow Point",
+      "tag": "Free",
+      "blurb": "An 18-mile road along the plateau with viewpoints all the way to the park's highest point.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Horse rides",
+      "tag": "Ticketed",
+      "blurb": "Guided rides from the lodge take you down into the canyon on horse or mule. Children need to be at least seven.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Astronomy programmes",
+      "tag": "Free",
+      "blurb": "Rangers run night-sky talks and telescope sessions. On a clear night you'll see the Milky Way from the car park.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Bryce Canyon good for a family holiday?",
+      "answer": "Yes. The viewpoints are a short walk from the car park, the rim path is flat, and the Navajo Loop is a real adventure for children who can manage the climb back up."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two nights is plenty for the walks and a sunrise. Most families stop here between Zion and Capitol Reef on a Utah road trip."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Las Vegas or Salt Lake City, both about four hours' drive away. Cedar City, an hour and a half away, has a small airport with flights from Salt Lake City."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is Bryce Canyon cold?",
+      "answer": "Often, yes. Even in summer mornings can be close to freezing, and it snows from November to April. Bring warm layers and a hat."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Zion National Park",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Capitol Reef National Park",
+      "code": "SLC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Utah's national parks",
+      "code": "LAS",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Arches National Park",
+      "code": "CNY",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

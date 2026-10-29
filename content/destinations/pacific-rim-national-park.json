@@ -1,0 +1,197 @@
+{
+  "name": "Pacific Rim National Park Reserve",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Pacific Rim National Park Reserve",
+  "intro": "Long sandy surf beaches, giant cedar rainforest and rocky coast on the wild west side of Vancouver Island, between Tofino and Ucluelet. Here's what Pacific Rim National Park Reserve is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/pacific-rim-national-park-4538085_1280.webp",
+  "image_alt": "Rocks and small tree-covered islands on a sandy beach near Tofino, Vancouver Island",
+  "wikipedia": "https://en.wikipedia.org/wiki/Pacific_Rim_National_Park_Reserve",
+  "to_code": "YAZ",
+  "holiday_types": [
+    "nature",
+    "beach",
+    "adventure"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need a Parks Canada pass to stop in the park: a day pass, or a Discovery Pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Storm watching",
+      "temp": 8
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Storm watching",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Grey whales",
+      "temp": 10
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Whales",
+      "temp": 12
+    },
+    "may": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 15
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 17
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 19
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 19
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 18
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Rain returns",
+      "temp": 14
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Storm watching",
+      "temp": 10
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Storm watching",
+      "temp": 8
+    }
+  },
+  "when_to_go": "June to September has the driest, warmest weather and the best conditions for beaches and kayaking. Grey whales pass in March and April and many stay all summer. Winter is wet and wild, with huge storms rolling in off the Pacific, and cosy storm-watching breaks are popular. The sea is cold all year, so surfers wear wetsuits.",
+  "things": [
+    {
+      "name": "Long Beach",
+      "tag": "Free",
+      "blurb": "Sixteen kilometres of sand in Wickaninnish Bay, with gentle waves for surf lessons and tide pools.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rainforest Trail",
+      "tag": "Free",
+      "blurb": "Two short boardwalk loops through ancient cedars and hemlocks dripping with moss.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wild Pacific Trail",
+      "tag": "Free",
+      "blurb": "A clifftop path near Ucluelet past a lighthouse, with crashing waves and the chance to spot whales.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whale watching",
+      "tag": "Tour",
+      "blurb": "Boat trips from Tofino and Ucluelet to see grey and humpback whales, sea lions and sometimes orcas.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kwisitis Visitor Centre",
+      "tag": "Indoors",
+      "blurb": "Exhibits about the Nuu-chah-nulth peoples and the coast, with a café looking out over the beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hot Springs Cove",
+      "tag": "Day trip",
+      "blurb": "A boat or floatplane trip from Tofino to natural hot pools by the sea, often spotting whales on the way.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Pacific Rim good for a family holiday?",
+      "answer": "Yes. Beaches, rock pools, surfing lessons and whale watching keep children busy, and the boardwalk walks suit all ages."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights in Tofino or Ucluelet. Add a few nights in Vancouver or Victoria."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Tofino-Long Beach airport, a short hop from Vancouver. Or fly to Vancouver, take the ferry to Nanaimo and drive about three hours."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can you swim in the sea?",
+      "answer": "It's cold, around 12°C to 15°C in summer, and there are strong rip currents. Children paddle and surfers wear wetsuits."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Tofino",
+      "code": "YAZ",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Vancouver",
+      "code": "YVR",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Olympic National Park",
+      "code": "SEA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Whistler",
+      "code": "YVR",
+      "label": "🧗 Adventure"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

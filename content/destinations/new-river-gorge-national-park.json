@@ -1,0 +1,196 @@
+{
+  "name": "New River Gorge National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in New River Gorge National Park",
+  "intro": "A deep, forested gorge in West Virginia, famous for whitewater rafting, rock climbing and a giant steel bridge you can walk underneath. Here's what New River Gorge National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/new-river-gorge-national-park-4261419_1280.webp",
+  "image_alt": "The New River Gorge Bridge spanning a forested valley in West Virginia",
+  "wikipedia": "https://en.wikipedia.org/wiki/New_River_Gorge_National_Park_and_Preserve",
+  "to_code": "CRW",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "There's no entry fee to visit the park. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 5
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 7
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 13
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Spring, rafting",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer, rafting",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer, rafting",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer, rafting",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Rafting",
+      "temp": 25
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour, Bridge Day",
+      "temp": 19
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 13
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 7
+    }
+  },
+  "when_to_go": "May to October is the season, when the rafting companies run trips and the climbing and trails are at their best. Summer is warm, with gentler water for families on the upper river. October brings autumn colour and Bridge Day, on the third Saturday, when the bridge closes to traffic and BASE jumpers leap off it. Winter is cold and quiet.",
+  "things": [
+    {
+      "name": "New River Gorge Bridge",
+      "tag": "Free",
+      "blurb": "One of the longest single-span arch bridges in the world, seen from viewpoints at the Canyon Rim visitor centre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bridge Walk",
+      "tag": "Tour",
+      "blurb": "A guided walk along a catwalk underneath the bridge, almost 270m above the river. Ages ten and up.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Whitewater rafting",
+      "tag": "Tour",
+      "blurb": "The lower river has big rapids for teenagers, and the upper river has gentler trips for younger children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grandview",
+      "tag": "Free",
+      "blurb": "A clifftop viewpoint over a huge bend in the river, lovely at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Thurmond",
+      "tag": "Free",
+      "blurb": "An old railroad ghost town on the riverbank, with trains still passing through.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Endless Wall Trail",
+      "tag": "Outdoors",
+      "blurb": "A walk through rhododendron forest to cliff-edge views, popular with climbers.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is New River Gorge good for a family holiday?",
+      "answer": "Yes, especially for active families. Rafting, zip lines and climbing suit older children, and there are easy viewpoints and trails for younger ones."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights in Fayetteville covers rafting, the bridge and a few walks."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Charleston, West Virginia, about an hour away. Washington, D.C. is about five hours' drive."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How old do you have to be to go rafting?",
+      "answer": "It depends on the trip. Gentle upper river trips often take children from around six, and the big lower river rapids usually need them to be 12 or older."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Shenandoah National Park",
+      "code": "IAD",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Great Smoky Mountains National Park",
+      "code": "TYS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Cuyahoga Valley National Park",
+      "code": "CLE",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Asheville",
+      "code": "AVL",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

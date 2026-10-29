@@ -1,0 +1,196 @@
+{
+  "name": "Everglades National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Everglades National Park",
+  "intro": "A vast subtropical wetland of sawgrass and mangroves at the tip of Florida, where alligators, manatees and wading birds are easy to spot. Here's what Everglades National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/everglades-national-park-7111297_1280.webp",
+  "image_alt": "Sawgrass wetland stretching to the horizon in Everglades National Park, Florida",
+  "wikipedia": "https://en.wikipedia.org/wiki/Everglades_National_Park",
+  "to_code": "MIA",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "1 to 2",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, wildlife",
+      "temp": 24
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, wildlife",
+      "temp": 25
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, wildlife",
+      "temp": 27
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Dry, warm",
+      "temp": 29
+    },
+    "may": {
+      "rating": "good",
+      "note": "Getting humid",
+      "temp": 31
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Wet, mosquitoes",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Wet, mosquitoes",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Wet, hurricanes",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Wet, hurricanes",
+      "temp": 32
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Drying out",
+      "temp": 30
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Dry",
+      "temp": 27
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, wildlife",
+      "temp": 25
+    }
+  },
+  "when_to_go": "December to April is the dry season and the best time to go. It's warm, the mosquitoes are fewer, and animals gather around the remaining water, so you see far more. From June to October it's hot, humid and wet, with lots of mosquitoes and the risk of hurricanes. Many boat tours and ranger walks run only in the dry season.",
+  "things": [
+    {
+      "name": "Anhinga Trail",
+      "tag": "Free",
+      "blurb": "A short boardwalk where you'll almost always see alligators, turtles and wading birds up close.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Shark Valley tram tour",
+      "tag": "Tour",
+      "blurb": "A two-hour open tram ride along a flat road, with a tall tower at the halfway point. You can also hire bikes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Airboat ride",
+      "tag": "Tour",
+      "blurb": "A fast, loud ride across the sawgrass. Airboats aren't allowed in most of the park, so tours run from its edges along the Tamiami Trail.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Flamingo",
+      "tag": "Outdoors",
+      "blurb": "The far end of the main road, with boat tours, kayak hire, manatees in the marina and American crocodiles.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pa-hay-okee Overlook",
+      "tag": "Free",
+      "blurb": "A short boardwalk to a raised platform over the 'river of grass'.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ten Thousand Islands",
+      "tag": "Tour",
+      "blurb": "Boat trips and kayaking from Everglades City through mangrove islands, with dolphins and pelicans.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the Everglades good for a family holiday?",
+      "answer": "Yes, as a day or two from Miami or on the way to the Florida Keys. Seeing alligators from the boardwalks and riding an airboat are big hits with children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "One or two nights, or a long day trip from Miami. Homestead and Florida City make easy bases."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Miami, about an hour from the main entrance near Homestead and from Shark Valley."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Are the mosquitoes bad?",
+      "answer": "In summer, very. In the dry season from December to April they're much less of a problem, but bring repellent all year."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Florida Keys",
+      "code": "MIA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Miami",
+      "code": "MIA",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Orlando",
+      "code": "MCO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Savannah",
+      "code": "SAV",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

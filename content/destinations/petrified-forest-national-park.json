@@ -1,0 +1,197 @@
+{
+  "name": "Petrified Forest National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Petrified Forest National Park",
+  "intro": "Giant logs turned to rainbow-coloured stone, painted badlands and ancient rock art in northeast Arizona, right on old Route 66. Here's what Petrified Forest National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/petrified-forest-national-park-5045697_1280.webp",
+  "image_alt": "Fallen petrified logs lying in the desert of Petrified Forest National Park, Arizona",
+  "wikipedia": "https://en.wikipedia.org/wiki/Petrified_Forest_National_Park",
+  "to_code": "FLG",
+  "holiday_types": [
+    "nature",
+    "culture",
+    "road-trip"
+  ],
+  "nights": "1",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK, 8 in summer",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cold, quiet",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cold",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Spring, windy",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 31
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, storms",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, storms",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 14
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cold",
+      "temp": 9
+    }
+  },
+  "when_to_go": "Spring and autumn are the most comfortable, with warm days for the short walks. Summer is hot, with dramatic afternoon storms over the Painted Desert. Winter is cold but quiet and clear. The park road is only open in the daytime, so plan to drive through between morning and late afternoon.",
+  "things": [
+    {
+      "name": "Giant Logs Trail",
+      "tag": "Free",
+      "blurb": "A short loop behind the Rainbow Forest Museum among some of the biggest petrified logs, glittering with quartz.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blue Mesa",
+      "tag": "Outdoors",
+      "blurb": "A loop path down among blue, purple and grey striped badlands.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Painted Desert",
+      "tag": "Free",
+      "blurb": "Viewpoints over hills streaked red, orange and pink, best in the late afternoon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Newspaper Rock",
+      "tag": "Free",
+      "blurb": "Hundreds of petroglyphs carved into a cluster of boulders, seen through telescopes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Route 66",
+      "tag": "Free",
+      "blurb": "The only national park crossed by old Route 66, marked by a rusty 1932 Studebaker.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Painted Desert Inn",
+      "tag": "Indoors",
+      "blurb": "A historic adobe inn turned museum, with murals and a view over the desert.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Petrified Forest good for a family holiday?",
+      "answer": "For a day or a night, yes. The walks are short and flat, and children are fascinated by the stone logs, the fossils and the rock carvings."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "One night, or just a day driving through. It's an easy stop between the Grand Canyon and Santa Fe or on a Route 66 trip."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Flagstaff, about two hours away, or Phoenix, about three and a half hours away. Albuquerque is about three and a half hours east."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can you take petrified wood home?",
+      "answer": "Not from inside the park, which is against the law. Shops just outside sell pieces collected legally on private land."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Grand Canyon",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Route 66",
+      "code": "ORD",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Sedona",
+      "code": "PHX",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Mesa Verde National Park",
+      "code": "DRO",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

@@ -1,0 +1,197 @@
+{
+  "name": "Glacier National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Glacier National Park",
+  "intro": "Glacier-carved peaks, turquoise lakes and the famous Going-to-the-Sun Road in Montana, on the border with Canada. Here's what Glacier National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/glacier-national-park-7443329_1280.webp",
+  "image_alt": "Clear water and coloured pebbles at Lake McDonald with mountains behind, Glacier National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Glacier_National_Park_(U.S.)",
+  "to_code": "FCA",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snow, roads shut",
+      "temp": -1
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snow, roads shut",
+      "temp": 2
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 7
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 12
+    },
+    "may": {
+      "rating": "good",
+      "note": "Lower valleys",
+      "temp": 17
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Road opening",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 27
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 27
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Quieter",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 12
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 4
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 0
+    }
+  },
+  "when_to_go": "July to mid September is the time to go. Going-to-the-Sun Road usually only opens fully in early July, once the snow is cleared, and closes again in October. August can bring wildfire smoke. Early summer has the best waterfalls, and September is quieter with autumn colour. In recent summers you've needed a vehicle reservation for the busiest areas, so check before you go.",
+  "things": [
+    {
+      "name": "Going-to-the-Sun Road",
+      "tag": "Free",
+      "blurb": "One of the great mountain drives, past waterfalls and cliffs to Logan Pass. Leave early, or take the free shuttle or a red bus tour.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hidden Lake Overlook",
+      "tag": "Outdoors",
+      "blurb": "A boardwalk walk from Logan Pass through alpine meadows where mountain goats and bighorn sheep roam.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake McDonald",
+      "tag": "Free",
+      "blurb": "The park's largest lake, famous for its rainbow-coloured pebbles. Paddle or take a boat trip.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Red bus tours",
+      "tag": "Tour",
+      "blurb": "Vintage open-top buses that have driven visitors over the pass since the 1930s.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Trail of the Cedars",
+      "tag": "Free",
+      "blurb": "A flat boardwalk loop through an old forest, with a longer walk on to Avalanche Lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Many Glacier",
+      "tag": "Outdoors",
+      "blurb": "The wilder east side, with boat trips, moose and walks towards Grinnell Glacier.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Glacier National Park good for a family holiday?",
+      "answer": "Yes. There are easy boardwalks, boat trips and lots of wildlife, plus big hikes for older children. Plan around the short summer season."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights, ideally split between the west side near Lake McDonald and the east side at Many Glacier or St Mary."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Glacier Park International near Kalispell, about 30 minutes from the west entrance, usually changing in Denver, Seattle or another US hub. Amtrak's Empire Builder train also stops at the park."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Are there grizzly bears in Glacier?",
+      "answer": "Yes. Carry bear spray on every walk, make noise on the trail and keep your distance from any bear you see."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Waterton Lakes National Park",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Banff",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Grand Teton National Park",
+      "code": "JAC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Yellowstone",
+      "code": "BZN",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

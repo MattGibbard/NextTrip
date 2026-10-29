@@ -1,0 +1,196 @@
+{
+  "name": "Kluane National Park",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Kluane National Park",
+  "intro": "Canada's highest mountains and the largest icefields outside the poles in the Yukon wilderness, best seen on a flight over the glaciers. Here's what Kluane National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/kluane-national-park-534580_1280.webp",
+  "image_alt": "A vast glacier flowing between mountains in Kluane National Park, Yukon",
+  "wikipedia": "https://en.wikipedia.org/wiki/Kluane_National_Park_and_Reserve",
+  "to_code": "YXY",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK, 7 in winter",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need a Parks Canada pass to stop in the park: a day pass, or a Discovery Pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Dark, very cold",
+      "temp": -14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Very cold",
+      "temp": -10
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": -3
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 5
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 13
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Midnight sun",
+      "temp": 18
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 20
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 18
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 12
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 3
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Very cold",
+      "temp": -7
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Dark, very cold",
+      "temp": -12
+    }
+  },
+  "when_to_go": "June to August is the best time, with long days, wildflowers and the most flightseeing trips. Late August and early September bring autumn colour and fewer bugs. It's cool at any time of year, and the weather can change fast. Winter is dark and very cold, but you might see the northern lights.",
+  "things": [
+    {
+      "name": "Flightseeing",
+      "tag": "Tour",
+      "blurb": "A small plane flight over the icefields and Mount Logan, Canada's highest peak, some landing on a glacier.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kathleen Lake",
+      "tag": "Outdoors",
+      "blurb": "A clear blue lake with a short boardwalk, picnic tables and longer walks along the shore.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Thechàl Dhâl",
+      "tag": "Free",
+      "blurb": "Also called Sheep Mountain, where you can often spot white Dall sheep on the slopes from the visitor centre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kluane Lake",
+      "tag": "Free",
+      "blurb": "The Yukon's largest lake, alongside the Alaska Highway, stunning on a calm day.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Da Kų Cultural Centre",
+      "tag": "Indoors",
+      "blurb": "The visitor centre in Haines Junction, shared with the Champagne and Aishihik First Nations, telling their story.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Haines Highway",
+      "tag": "Free",
+      "blurb": "A beautiful drive south towards Alaska past lakes, mountains and glaciers.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Kluane good for a family holiday?",
+      "answer": "For adventurous families, yes. Most of the park is roadless wilderness, but the lakes, short walks, wildlife and a glacier flight are all possible with children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights in Haines Junction, as part of a Yukon or Alaska road trip."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Whitehorse, usually via Vancouver or Calgary, then drive about an hour and a half to Haines Junction."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Are there bears in Kluane?",
+      "answer": "Yes, it has one of the densest populations of grizzly bears in North America. Carry bear spray and make noise on trails."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Denali National Park",
+      "code": "FAI",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Alaska's Inside Passage",
+      "code": "SEA",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Glacier Bay National Park",
+      "code": "JNU",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Jasper National Park",
+      "code": "YEG",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

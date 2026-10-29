@@ -1,0 +1,196 @@
+{
+  "name": "Lassen Volcanic National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Lassen Volcanic National Park",
+  "intro": "Bubbling mud pots, steaming vents and mountain lakes around a volcano in northern California, without the crowds of the bigger parks. Here's what Lassen Volcanic National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/lassen-volcanic-national-park-2707438_1280.webp",
+  "image_alt": "Lassen Peak reflected in a calm blue lake in Lassen Volcanic National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lassen_Volcanic_National_Park",
+  "to_code": "RDD",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "2",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Deep snow",
+      "temp": 6
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Deep snow",
+      "temp": 7
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 9
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 12
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Road still shut",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Road opens",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 27
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 27
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, quiet",
+      "temp": 23
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 17
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Snow returns",
+      "temp": 10
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Deep snow",
+      "temp": 6
+    }
+  },
+  "when_to_go": "July to September is the time to go. Lassen gets huge amounts of snow, and the main park highway is usually only fully open from June or early July until the first big snow in October or November. Summer days are warm and sunny, with cool nights. In winter you can snowshoe from the visitor centre, but most sights are under snow.",
+  "things": [
+    {
+      "name": "Bumpass Hell",
+      "tag": "Outdoors",
+      "blurb": "A three-mile round walk to a valley of boiling pools, mud pots and steam vents on boardwalks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sulphur Works",
+      "tag": "Free",
+      "blurb": "Bubbling mud and steam right beside the main road, so you barely need to leave the car.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Manzanita Lake",
+      "tag": "Outdoors",
+      "blurb": "A lake with a flat loop path, kayak hire and great reflections of Lassen Peak.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lassen Peak",
+      "tag": "Outdoors",
+      "blurb": "A steep five-mile round climb to the top of the volcano, for fit older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kings Creek Falls",
+      "tag": "Outdoors",
+      "blurb": "A walk through meadows and forest to a pretty waterfall.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cinder Cone",
+      "tag": "Outdoors",
+      "blurb": "A climb up a perfect cone of black volcanic gravel, with views of the multicoloured Painted Dunes.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Lassen Volcanic National Park good for a family holiday?",
+      "answer": "Yes. Children love the steaming, smelly, bubbling ground, and the walks are shorter and quieter than at Yellowstone."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two nights is enough. Lassen fits well into a road trip between San Francisco, Redwood and Crater Lake."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Redding, about an hour from the park. Sacramento is about three hours away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "When does the park road open?",
+      "answer": "It depends on the snow, but the road through the park usually opens fully between June and early July and stays open until autumn snow."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Crater Lake National Park",
+      "code": "MFR",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Yellowstone",
+      "code": "BZN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Redwood National Park",
+      "code": "ACV",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Yosemite National Park",
+      "code": "FAT",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

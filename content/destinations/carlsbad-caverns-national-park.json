@@ -1,0 +1,196 @@
+{
+  "name": "Carlsbad Caverns National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Carlsbad Caverns National Park",
+  "intro": "Huge underground chambers full of stalactites below the New Mexico desert, with hundreds of thousands of bats flying out at dusk in summer. Here's what Carlsbad Caverns National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/carlsbad-caverns-national-park-3647889_1280.webp",
+  "image_alt": "Stalactites and rock formations lit up inside Carlsbad Caverns, New Mexico",
+  "wikipedia": "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
+  "to_code": "ELP",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "1 to 2",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, cave cool",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 17
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 21
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 26
+    },
+    "may": {
+      "rating": "best",
+      "note": "Bats return",
+      "temp": 31
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Bat flights",
+      "temp": 35
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Bat flights",
+      "temp": 35
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Bat flights",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Bat flights",
+      "temp": 30
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Last bat flights",
+      "temp": 25
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 14
+    }
+  },
+  "when_to_go": "Any time is good for the caves, which stay about 13°C all year. Late May to October is best for the evening bat flight, peaking in August and September when the young bats join in. Summer is hot outside, so the cool cave is a relief. You need a timed entry reservation to go into the cavern, so book ahead.",
+  "things": [
+    {
+      "name": "Big Room",
+      "tag": "Ticketed",
+      "blurb": "A flat, self-guided path around one of the largest cave chambers in North America. A lift takes you down and back up.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Natural Entrance",
+      "tag": "Outdoors",
+      "blurb": "Walk down a steep, winding path from the cave mouth into the darkness, about the height of a 75-storey building.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bat flight",
+      "tag": "Free",
+      "blurb": "Sit in the outdoor amphitheatre at sunset and watch thousands of bats spiral out of the cave. No phones or cameras allowed.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "King's Palace tour",
+      "tag": "Tour",
+      "blurb": "A ranger-led tour through some of the most decorated rooms, including a moment of total darkness.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Walnut Canyon Desert Drive",
+      "tag": "Free",
+      "blurb": "A gravel scenic loop through the desert above the caves.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Guadalupe Mountains",
+      "tag": "Day trip",
+      "blurb": "Texas's highest peak and a quieter national park, about 40 minutes away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Carlsbad Caverns good for a family holiday?",
+      "answer": "Yes. The Big Room path is flat and suitable for most ages, children find the bat flight unforgettable, and the cave is cool in summer."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "One or two nights in Carlsbad or White's City. Combine it with White Sands or Big Bend on a southwest road trip."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to El Paso, about two and a half hours away. Carlsbad has a small airport with limited flights."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Do you need to book Carlsbad Caverns?",
+      "answer": "Yes. You need a timed entry reservation from Recreation.gov to go into the cavern, and ranger tours are booked separately."
+    }
+  ],
+  "similar": [
+    {
+      "name": "White Sands National Park",
+      "code": "ELP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Big Bend National Park",
+      "code": "MAF",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Yellowstone",
+      "code": "BZN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Santa Fe",
+      "code": "ABQ",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

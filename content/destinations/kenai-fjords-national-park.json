@@ -1,0 +1,196 @@
+{
+  "name": "Kenai Fjords National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Kenai Fjords National Park",
+  "intro": "Glaciers tumbling into the sea from a giant icefield in Alaska, with boat trips from Seward past whales, sea otters and puffins. Here's what Kenai Fjords National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/kenai-fjords-national-park-3321005_1280.webp",
+  "image_alt": "A sea otter floating on its back in the water at Kenai Fjords National Park, Alaska",
+  "wikipedia": "https://en.wikipedia.org/wiki/Kenai_Fjords_National_Park",
+  "to_code": "ANC",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "9 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Dark, snowy",
+      "temp": -1
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 1
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 3
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Grey whales",
+      "temp": 8
+    },
+    "may": {
+      "rating": "best",
+      "note": "Boats start",
+      "temp": 12
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 16
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 17
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 17
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Rainier, quieter",
+      "temp": 13
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Season over",
+      "temp": 7
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Dark",
+      "temp": 1
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Dark, snowy",
+      "temp": -1
+    }
+  },
+  "when_to_go": "Mid May to mid September is the season, when the boat tours run from Seward. June to August is warmest, with long days, whales and nesting puffins. May is quieter, and early season tours look for migrating grey whales. It can be cool, wet and windy at sea whatever the month, so bring waterproofs and seasickness tablets.",
+  "things": [
+    {
+      "name": "Glacier and wildlife cruise",
+      "tag": "Tour",
+      "blurb": "A day boat trip from Seward to tidewater glaciers, watching for humpback and orca whales, sea lions, otters and puffins.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Exit Glacier",
+      "tag": "Free",
+      "blurb": "The only part of the park you can drive to, with an easy walk to a viewpoint near the glacier's face.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Harding Icefield Trail",
+      "tag": "Outdoors",
+      "blurb": "A steep, all-day climb to a view over a vast icefield, for fit teenagers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sea kayaking",
+      "tag": "Tour",
+      "blurb": "Guided paddles in Resurrection Bay or near glaciers, some suitable for older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alaska SeaLife Center",
+      "tag": "Ticketed",
+      "blurb": "An aquarium and marine rescue centre in Seward with puffins, seals and octopus.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Coastal Classic train",
+      "tag": "Ticketed",
+      "blurb": "A scenic Alaska Railroad trip from Anchorage to Seward along the coast and through the mountains.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Kenai Fjords good for a family holiday?",
+      "answer": "Yes. The boat trips are packed with wildlife, Exit Glacier is an easy walk, and Seward is a friendly little harbour town."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights in Seward, as part of a longer Alaska trip with Denali and Anchorage."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Anchorage, then drive about two and a half hours to Seward on a beautiful road, or take the train."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Which boat trip should we take?",
+      "answer": "Shorter trips stay in Resurrection Bay. Longer ones reach the tidewater glaciers and see more wildlife, but the open sea can be rough."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Denali National Park",
+      "code": "FAI",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Glacier Bay National Park",
+      "code": "JNU",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Alaska's Inside Passage",
+      "code": "SEA",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Katmai National Park",
+      "code": "AKN",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

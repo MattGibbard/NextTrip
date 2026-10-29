@@ -1,0 +1,196 @@
+{
+  "name": "Badlands National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Badlands National Park",
+  "intro": "Striped, eroded buttes and spires rising out of the South Dakota prairie, with bison, bighorn sheep, prairie dogs and fossil beds. Here's what Badlands National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/badlands-national-park-4572967_1280.webp",
+  "image_alt": "Eroded grey and tan rock formations stretching across Badlands National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Badlands_National_Park",
+  "to_code": "RAP",
+  "holiday_types": [
+    "nature",
+    "road-trip"
+  ],
+  "nights": "1 to 2",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 1
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 3
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 9
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 15
+    },
+    "may": {
+      "rating": "best",
+      "note": "Spring, green",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, storms",
+      "temp": 32
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, storms",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 17
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 8
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 2
+    }
+  },
+  "when_to_go": "May, June and September are best, with warm days and green prairie. July and August are hot, with little shade and the odd thunderstorm, so walk early and late. Winter is cold and windy, but quiet and striking under snow. It's a natural stop on a road trip between the Black Hills, Mount Rushmore and Yellowstone.",
+  "things": [
+    {
+      "name": "Badlands Loop Road",
+      "tag": "Free",
+      "blurb": "A scenic road through the park with viewpoints over the buttes every mile or so.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Door and Window Trails",
+      "tag": "Free",
+      "blurb": "Two short, easy walks into the formations from the same car park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Notch Trail",
+      "tag": "Outdoors",
+      "blurb": "A walk up a log ladder and along a ledge to a view across the White River Valley. Not for anyone scared of heights.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fossil Preparation Lab",
+      "tag": "Free",
+      "blurb": "Watch scientists clean fossils of ancient rhinos and sabre-toothed cats found in the park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sage Creek Rim Road",
+      "tag": "Free",
+      "blurb": "A gravel road through the quieter west of the park, past prairie dog towns and bison herds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wall Drug",
+      "tag": "Food",
+      "blurb": "A sprawling roadside shop in the town of Wall, with free iced water, doughnuts and a giant dinosaur.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Badlands National Park good for a family holiday?",
+      "answer": "As a stop of a night or two, yes. The viewpoints and short walks are easy, prairie dogs and bison are fun to spot, and children can see real fossils being prepared."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "One or two nights. Spend a few more in the Black Hills for Mount Rushmore and Custer State Park."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Rapid City, about an hour from the park's northeast entrance."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can you climb on the rocks?",
+      "answer": "Yes. Unusually, the park lets you walk off-trail and scramble on the formations, but the rock is crumbly and steep in places."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Yellowstone",
+      "code": "BZN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Grand Teton National Park",
+      "code": "JAC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Rocky Mountain National Park",
+      "code": "DEN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Route 66",
+      "code": "ORD",
+      "label": "🚗 Road trip"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

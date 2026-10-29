@@ -94,6 +94,11 @@
     "lat": 25.2048,
     "lon": 55.2708
   },
+  "arches-national-park": {
+    "query": "Arches National Park|US",
+    "lat": 38.7265,
+    "lon": -109.563
+  },
   "aruba": {
     "query": "Aruba|AW",
     "lat": 12.524,
@@ -153,6 +158,11 @@
     "query": "Baden-Baden|DE",
     "lat": 48.7606,
     "lon": 8.2398
+  },
+  "badlands-national-park": {
+    "query": "Badlands National Park|US",
+    "lat": 43.5271,
+    "lon": -102.3617
   },
   "bahamas": {
     "query": "Bahamas|BS",
@@ -244,6 +254,11 @@
     "lat": 43.4833,
     "lon": -1.5593
   },
+  "big-bend-national-park": {
+    "query": "Big Bend National Park|US",
+    "lat": 29.3332,
+    "lon": -103.1943
+  },
   "bilbao": {
     "query": "Bilbao|ES",
     "lat": 43.263,
@@ -289,6 +304,11 @@
     "lat": 48.1435,
     "lon": 17.1083
   },
+  "bruce-peninsula-national-park": {
+    "query": "Bruce Peninsula National Park|CA",
+    "lat": 45.1942,
+    "lon": -81.532
+  },
   "bruges": {
     "query": "Bruges|BE",
     "lat": 51.2093,
@@ -298,6 +318,11 @@
     "query": "Brussels|BE",
     "lat": 50.8467,
     "lon": 4.3525
+  },
+  "bryce-canyon-national-park": {
+    "query": "Bryce Canyon National Park|US",
+    "lat": 37.5708,
+    "lon": -112.1856
   },
   "budapest": {
     "query": "Budapest|HU",
@@ -344,6 +369,16 @@
     "lat": 21.1617,
     "lon": -86.851
   },
+  "canyonlands-national-park": {
+    "query": "Canyonlands National Park|US",
+    "lat": 38.2333,
+    "lon": -109.9207
+  },
+  "cape-breton-highlands-national-park": {
+    "query": "Cape Breton Highlands National Park|CA",
+    "lat": 46.7302,
+    "lon": -60.4959
+  },
   "cape-town": {
     "query": "Cape Town|ZA",
     "lat": -33.9288,
@@ -353,6 +388,11 @@
     "query": "Cape Verde|CV",
     "lat": 16.75,
     "lon": -22.95
+  },
+  "capitol-reef-national-park": {
+    "query": "Capitol Reef National Park|US",
+    "lat": 38.067,
+    "lon": -111.1553
   },
   "cappadocia": {
     "query": "Cappadocia|TR",
@@ -368,6 +408,11 @@
     "query": "Caribbean cruises|BB",
     "lat": 13.0975,
     "lon": -59.6167
+  },
+  "carlsbad-caverns-national-park": {
+    "query": "Carlsbad Caverns National Park|US",
+    "lat": 32.1212,
+    "lon": -104.6012
   },
   "cartagena": {
     "query": "Cartagena|CO",
@@ -464,6 +509,11 @@
     "lat": 41.0886,
     "lon": 9.5462
   },
+  "crater-lake-national-park": {
+    "query": "Crater Lake National Park|US",
+    "lat": 42.9317,
+    "lon": -122.1279
+  },
   "crete": {
     "query": "Crete|GR",
     "lat": 35.3088,
@@ -484,6 +534,11 @@
     "lat": -13.5226,
     "lon": -71.9673
   },
+  "cuyahoga-valley-national-park": {
+    "query": "Cuyahoga Valley National Park|US",
+    "lat": 41.2551,
+    "lon": -81.5376
+  },
   "dalmatian-coast-cruise": {
     "query": "Dalmatian coast|HR",
     "lat": 43.5081,
@@ -498,6 +553,16 @@
     "query": "Darjeeling|IN",
     "lat": 27.0378,
     "lon": 88.2632
+  },
+  "death-valley-national-park": {
+    "query": "Death Valley National Park|US",
+    "lat": 36.4702,
+    "lon": -117.0884
+  },
+  "denali-national-park": {
+    "query": "Denali National Park|US",
+    "lat": 63.2317,
+    "lon": -151.0406
   },
   "disneyland-paris": {
     "query": "Disneyland Paris|FR",
@@ -559,6 +624,11 @@
     "lat": 49.7075,
     "lon": 0.2032
   },
+  "everglades-national-park": {
+    "query": "Everglades National Park|US",
+    "lat": 25.3679,
+    "lon": -80.8783
+  },
   "faroe-islands": {
     "query": "Faroe Islands|FO",
     "lat": 62.0107,
@@ -604,6 +674,11 @@
     "lat": 28.4004,
     "lon": -14.0049
   },
+  "fundy-national-park": {
+    "query": "Fundy National Park|CA",
+    "lat": 45.6148,
+    "lon": -65.0436
+  },
   "galapagos": {
     "query": "Galápagos Islands|EC",
     "lat": -0.9538,
@@ -639,10 +714,20 @@
     "lat": 40.0771,
     "lon": 20.1393
   },
+  "glacier-bay-national-park": {
+    "query": "Glacier Bay National Park|US",
+    "lat": 58.8142,
+    "lon": -136.8721
+  },
   "glacier-express": {
     "query": "Glacier Express|CH",
     "lat": 46.3191,
     "lon": 7.9883
+  },
+  "glacier-national-park": {
+    "query": "Glacier National Park|US",
+    "lat": 48.6175,
+    "lon": -113.7609
   },
   "goa": {
     "query": "Goa|IN",
@@ -689,10 +774,25 @@
     "lat": 36.0544,
     "lon": -112.1401
   },
+  "grand-teton-national-park": {
+    "query": "Grand Teton National Park|US",
+    "lat": 43.8106,
+    "lon": -110.6488
+  },
   "great-ocean-road": {
     "query": "Great Ocean Road|AU",
     "lat": -38.3383,
     "lon": 144.2835
+  },
+  "great-sand-dunes-national-park": {
+    "query": "Great Sand Dunes National Park|US",
+    "lat": 37.7912,
+    "lon": -105.6123
+  },
+  "great-smoky-mountains-national-park": {
+    "query": "Great Smoky Mountains National Park|US",
+    "lat": 35.6342,
+    "lon": -83.4024
   },
   "greek-islands-cruises": {
     "query": "Greek islands|GR",
@@ -704,6 +804,11 @@
     "lat": 12.1165,
     "lon": -61.679
   },
+  "gros-morne-national-park": {
+    "query": "Gros Morne National Park|CA",
+    "lat": 49.6359,
+    "lon": -57.6535
+  },
   "guadeloupe": {
     "query": "Guadeloupe|GP",
     "lat": 16.2529,
@@ -713,6 +818,11 @@
     "query": "Ha Long Bay|VN",
     "lat": 20.9084,
     "lon": 107.0683
+  },
+  "haleakala-national-park": {
+    "query": "Haleakalā National Park|US",
+    "lat": 20.6991,
+    "lon": -156.1324
   },
   "halifax": {
     "query": "Halifax|CA",
@@ -749,6 +859,11 @@
     "lat": 21.3069,
     "lon": -157.8583
   },
+  "hawaii-volcanoes-national-park": {
+    "query": "Hawaiʻi Volcanoes National Park|US",
+    "lat": 19.2608,
+    "lon": -155.3579
+  },
   "helsinki": {
     "query": "Helsinki|FI",
     "lat": 60.1666,
@@ -783,6 +898,11 @@
     "query": "Honolulu|US",
     "lat": 21.3045,
     "lon": -157.8557
+  },
+  "hot-springs-national-park": {
+    "query": "Hot Springs National Park|US",
+    "lat": 34.5291,
+    "lon": -93.0301
   },
   "hurghada": {
     "query": "Hurghada|EG",
@@ -849,6 +969,11 @@
     "lat": 35.6812,
     "lon": 139.7671
   },
+  "jasper-national-park": {
+    "query": "Jasper National Park|CA",
+    "lat": 52.8041,
+    "lon": -117.8048
+  },
   "jeju": {
     "query": "Jeju|KR",
     "lat": 33.4888,
@@ -858,6 +983,11 @@
     "query": "Jordan|JO",
     "lat": 31.95,
     "lon": 35.93
+  },
+  "joshua-tree-national-park": {
+    "query": "Joshua Tree National Park|US",
+    "lat": 33.8971,
+    "lon": -115.9511
   },
   "kanazawa": {
     "query": "Kanazawa|JP",
@@ -879,20 +1009,40 @@
     "lat": 36.2018,
     "lon": 29.6377
   },
+  "katmai-national-park": {
+    "query": "Katmai National Park|US",
+    "lat": 58.505,
+    "lon": -155.0896
+  },
   "kefalonia": {
     "query": "Kefalonia|GR",
     "lat": 38.1754,
     "lon": 20.5692
+  },
+  "kenai-fjords-national-park": {
+    "query": "Kenai Fjords National Park|US",
+    "lat": 59.8686,
+    "lon": -150.0258
   },
   "kerala": {
     "query": "Kerala|IN",
     "lat": 10.1632,
     "lon": 76.6413
   },
+  "kings-canyon-national-park": {
+    "query": "Kings Canyon National Park|US",
+    "lat": 36.9153,
+    "lon": -118.6077
+  },
   "kiruna": {
     "query": "Kiruna|SE",
     "lat": 67.8496,
     "lon": 20.3063
+  },
+  "kluane-national-park": {
+    "query": "Kluane National Park|CA",
+    "lat": 60.665,
+    "lon": -139.1899
   },
   "koh-lanta": {
     "query": "Koh Lanta|TH",
@@ -953,6 +1103,11 @@
     "query": "La Gomera|ES",
     "lat": 28.1128,
     "lon": -17.1953
+  },
+  "la-mauricie-national-park": {
+    "query": "La Mauricie National Park|CA",
+    "lat": 46.7829,
+    "lon": -72.9648
   },
   "la-palma": {
     "query": "La Palma|ES",
@@ -1018,6 +1173,11 @@
     "query": "Las Vegas|US",
     "lat": 36.1674,
     "lon": -115.1484
+  },
+  "lassen-volcanic-national-park": {
+    "query": "Lassen Volcanic National Park|US",
+    "lat": 40.4938,
+    "lon": -121.4045
   },
   "lecce": {
     "query": "Lecce|IT",
@@ -1194,6 +1354,11 @@
     "lat": 20.9671,
     "lon": -89.6237
   },
+  "mesa-verde-national-park": {
+    "query": "Mesa Verde National Park|US",
+    "lat": 37.2538,
+    "lon": -108.4556
+  },
   "messinia": {
     "query": "Messinia|GR",
     "lat": 37.0438,
@@ -1249,6 +1414,11 @@
     "lat": 49.9161,
     "lon": 7.0705
   },
+  "mount-rainier-national-park": {
+    "query": "Mount Rainier National Park|US",
+    "lat": 46.8543,
+    "lon": -121.7063
+  },
   "munich": {
     "query": "Munich|DE",
     "lat": 48.1371,
@@ -1293,6 +1463,11 @@
     "query": "New Orleans|US",
     "lat": 29.9759,
     "lon": -90.0782
+  },
+  "new-river-gorge-national-park": {
+    "query": "New River Gorge National Park|US",
+    "lat": 38.0696,
+    "lon": -81.0802
   },
   "new-york": {
     "query": "New York|US",
@@ -1354,6 +1529,11 @@
     "lat": 26.2124,
     "lon": 127.6809
   },
+  "olympic-national-park": {
+    "query": "Olympic National Park|US",
+    "lat": 47.7865,
+    "lon": -123.5361
+  },
   "oman": {
     "query": "Oman|OM",
     "lat": 21.4735,
@@ -1378,6 +1558,11 @@
     "query": "Pacific Coast Highway|US",
     "lat": 36.2704,
     "lon": -121.8081
+  },
+  "pacific-rim-national-park": {
+    "query": "Pacific Rim National Park Reserve|CA",
+    "lat": 49.0297,
+    "lon": -125.6878
   },
   "palawan": {
     "query": "Palawan|PH",
@@ -1434,6 +1619,11 @@
     "lat": 41.77,
     "lon": -8.15
   },
+  "petrified-forest-national-park": {
+    "query": "Petrified Forest National Park|US",
+    "lat": 34.9745,
+    "lon": -109.708
+  },
   "phu-quoc": {
     "query": "Phu Quoc|VN",
     "lat": 10.2163,
@@ -1459,6 +1649,11 @@
     "lat": 42.1419,
     "lon": 24.7499
   },
+  "point-pelee-national-park": {
+    "query": "Point Pelee National Park|CA",
+    "lat": 41.9452,
+    "lon": -82.5131
+  },
   "polignano-a-mare": {
     "query": "Polignano a Mare|IT",
     "lat": 40.9944,
@@ -1473,6 +1668,11 @@
     "query": "Prague|CZ",
     "lat": 50.0875,
     "lon": 14.4213
+  },
+  "prince-edward-island-national-park": {
+    "query": "Prince Edward Island National Park|CA",
+    "lat": 46.4146,
+    "lon": -63.0107
   },
   "puerto-rico": {
     "query": "Puerto Rico|PR",
@@ -1508,6 +1708,11 @@
     "query": "Rajasthan|IN",
     "lat": 26.2389,
     "lon": 73.0243
+  },
+  "redwood-national-park": {
+    "query": "Redwood National Park|US",
+    "lat": 41.7681,
+    "lon": -124.0505
   },
   "reunion": {
     "query": "Réunion|RE",
@@ -1548,6 +1753,11 @@
     "query": "Riquewihr|FR",
     "lat": 48.1661,
     "lon": 7.298
+  },
+  "rocky-mountain-national-park": {
+    "query": "Rocky Mountain National Park|US",
+    "lat": 40.3554,
+    "lon": -105.7177
   },
   "rocky-mountaineer": {
     "query": "Rocky Mountaineer|CA",
@@ -1593,6 +1803,11 @@
     "query": "Saariselkä|FI",
     "lat": 68.4195,
     "lon": 27.414
+  },
+  "saguaro-national-park": {
+    "query": "Saguaro National Park|US",
+    "lat": 32.1684,
+    "lon": -110.6183
   },
   "saint-malo": {
     "query": "Saint-Malo|FR",
@@ -1669,6 +1884,11 @@
     "lat": 37.5667,
     "lon": 126.9783
   },
+  "sequoia-national-park": {
+    "query": "Sequoia National Park|US",
+    "lat": 36.4958,
+    "lon": -118.5599
+  },
   "seville": {
     "query": "Seville|ES",
     "lat": 37.3886,
@@ -1683,6 +1903,11 @@
     "query": "Sharm el-Sheikh|EG",
     "lat": 27.8644,
     "lon": 34.2954
+  },
+  "shenandoah-national-park": {
+    "query": "Shenandoah National Park|US",
+    "lat": 38.472,
+    "lon": -78.4637
   },
   "sibenik": {
     "query": "Šibenik|HR",
@@ -1939,6 +2164,11 @@
     "lat": 38.8951,
     "lon": -77.0364
   },
+  "waterton-lakes-national-park": {
+    "query": "Waterton Lakes National Park|CA",
+    "lat": 49.1011,
+    "lon": -113.981
+  },
   "western-mediterranean-cruise": {
     "query": "Western Mediterranean cruise|ES",
     "lat": 41.3851,
@@ -1948,6 +2178,11 @@
     "query": "Whistler|CA",
     "lat": 50.1163,
     "lon": -122.9574
+  },
+  "white-sands-national-park": {
+    "query": "White Sands National Park|US",
+    "lat": 32.7642,
+    "lon": -106.3312
   },
   "whitsundays": {
     "query": "Whitsundays|AU",
@@ -1978,6 +2213,16 @@
     "query": "Yogyakarta|ID",
     "lat": -7.7953,
     "lon": 110.3673
+  },
+  "yoho-national-park": {
+    "query": "Yoho National Park|CA",
+    "lat": 51.3748,
+    "lon": -116.5358
+  },
+  "yosemite-national-park": {
+    "query": "Yosemite National Park|US",
+    "lat": 37.8393,
+    "lon": -119.5165
   },
   "zadar": {
     "query": "Zadar|HR",
@@ -2013,5 +2258,10 @@
     "query": "Zermatt|CH",
     "lat": 46.0207,
     "lon": 7.7491
+  },
+  "zion-national-park": {
+    "query": "Zion National Park|US",
+    "lat": 37.3222,
+    "lon": -113.0048
   }
 }

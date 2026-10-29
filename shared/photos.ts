@@ -15,6 +15,8 @@ export interface PhotoSearch {
   /** False until the Worker has a Pixabay key. The sheet then only offers a link box. */
   enabled: boolean;
   photos: PhotoSuggestion[];
+  /** True when Pixabay didn't answer, so "no photos" means "try again", not "nothing matches". */
+  busy?: boolean;
 }
 
 /** How many photos the picker shows, and how many places it looks up. */

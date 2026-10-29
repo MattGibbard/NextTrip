@@ -10,17 +10,34 @@ const CACHE = { cacheTtlByStatus: { "200-299": 86400, "300-599": 0 }, cacheEvery
 /** A copied photo bigger than this isn't kept. D1 rows top out at 2 MB. */
 const MAX_BYTES = 1_500_000;
 
-/** Photos from one Pixabay search, or null when Pixabay didn't answer, as when it's busy. */
+/** How long to wait before asking Pixabay again when it says it's busy. */
+const RETRY_MS = [600, 1500];
+
+const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * Photos from one Pixabay search, or null when Pixabay didn't answer. It often
+ * turns Workers away with a 429 even when our key has plenty left, likely because
+ * Cloudflare's outgoing addresses are shared, so a busy answer is tried again.
+ */
 async function pixabay(key: string, params: Record<string, string>): Promise<PhotoSuggestion[] | null> {
   const url = new URL("https://pixabay.com/api/");
   url.search = new URLSearchParams({ key, image_type: "photo", orientation: "horizontal", safesearch: "true", ...params }).toString();
-  const res = await fetch(url, { cf: CACHE }).catch((e: Error) => e);
-  if (res instanceof Error || !res.ok) {
+  for (let attempt = 0; ; attempt++) {
+    const res = await fetch(url, { cf: CACHE }).catch((e: Error) => e);
+    if (!(res instanceof Error) && res.ok) return parsePixabay(await res.json().catch(() => null));
+    const busy = res instanceof Error || res.status === 429 || res.status >= 500;
+    if (busy && attempt < RETRY_MS.length) {
+      await wait(RETRY_MS[attempt]);
+      continue;
+    }
     // Shows up in the Worker's logs, so a bad key or a used-up allowance is easy to spot.
-    console.warn(`Pixabay search failed: ${res instanceof Error ? res.message : `${res.status} ${(await res.text().catch(() => "")).slice(0, 300)}`}`);
+    const left = res instanceof Error ? null : res.headers.get("X-RateLimit-Remaining");
+    console.warn(
+      `Pixabay search failed after ${attempt + 1} tries: ${res instanceof Error ? res.message : `${res.status} ${(await res.text().catch(() => "")).slice(0, 300)}`}${left ? ` (key has ${left} left)` : ""}`,
+    );
     return null;
   }
-  return parsePixabay(await res.json().catch(() => null));
 }
 
 /**
@@ -33,16 +50,23 @@ export async function findPhotos(env: Env, queries: string[], page = 1): Promise
   if (!key) return { enabled: false, photos: [] };
   const params = { per_page: String(PHOTO_COUNT), page: String(Math.min(Math.max(1, Math.floor(page) || 1), PHOTO_PAGES)) };
   const terms = [...new Set(queries.map((q) => q.trim().slice(0, 200)).filter(Boolean))].slice(0, PHOTO_PLACES);
+  let failed = false;
+  const search = async (q: string) => {
+    const found = await pixabay(key, { q: q.slice(0, 100), ...params });
+    if (!found) failed = true;
+    return found ?? [];
+  };
   const lists = await Promise.all(
     terms.map(async (t) => {
       const { name, country } = splitQuery(t);
       if (!name) return [];
-      const found = (await pixabay(key, { q: name.slice(0, 100), ...params })) ?? [];
+      const found = await search(name);
       if (found.length >= 4 || !country) return found;
-      return [...found, ...((await pixabay(key, { q: country.slice(0, 100), ...params })) ?? [])];
+      return [...found, ...(await search(country))];
     }),
   );
-  return { enabled: true, photos: mixPhotos(lists) };
+  const photos = mixPhotos(lists);
+  return { enabled: true, photos, ...(failed && !photos.length ? { busy: true } : {}) };
 }
 
 const randomKey = () => [...crypto.getRandomValues(new Uint8Array(16))].map((b) => b.toString(16).padStart(2, "0")).join("");

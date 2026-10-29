@@ -126,7 +126,8 @@ export const api = {
   addManyTodos: (id: number, items: TodoInput[]) => request<{ added: number }>("POST", `/plans/${id}/todos/many`, { items }),
   deleteTodo: (id: number, todoId: number) => request("DELETE", `/plans/${id}/todos/${todoId}`),
 
-  photos: (queries: string[]) => request<PhotoSearch>("GET", `/photos?${queries.map((q) => `q=${encodeURIComponent(q)}`).join("&")}`),
+  photos: (queries: string[], page = 1) =>
+    request<PhotoSearch>("GET", `/photos?${[...queries.map((q) => `q=${encodeURIComponent(q)}`), ...(page > 1 ? [`page=${page}`] : [])].join("&")}`),
   /** Copies a suggested photo to somewhere🎉 and gives back the link to save as the cover. */
   savePhoto: (id: number) => request<{ url: string }>("POST", "/photos", { id }),
   geocode: (q: string) => request<GeocodeResult[]>("GET", `/geocode?q=${encodeURIComponent(q)}`),

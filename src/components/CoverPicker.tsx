@@ -1,41 +1,64 @@
 import { useEffect, useRef, useState } from "react";
 import type { Place } from "../../shared/types";
 import type { PhotoSuggestion } from "../../shared/photos";
-import { PHOTO_COUNT, PHOTO_PATH, PIXABAY_URL, photoQueries } from "../../shared/photos";
+import { PHOTO_COUNT, PHOTO_PAGES, PHOTO_PATH, PIXABAY_URL, photoQueries } from "../../shared/photos";
 import { api } from "../api";
 
-type Search = { state: "loading" | "ready" | "error" | "off"; photos: PhotoSuggestion[] };
+type Search = { state: "loading" | "ready" | "error" | "off"; photos: PhotoSuggestion[]; page: number; more: boolean };
 
 /**
  * Cover photo: a few photos of the trip's places to tap, from Pixabay, with a
- * link box tucked underneath for a photo of your own. A tapped photo is copied
- * to somewhere🎉 first, since Pixabay's own links only last a day.
+ * search box for other photos ("eiffel tower" rather than just "Paris") and a
+ * link box for a photo of your own. A tapped photo is copied to somewhere🎉
+ * first, since Pixabay's own links only last a day.
  */
 export function CoverPicker({ places, value, onChange, hint }: { places: Place[]; value: string; onChange: (v: string) => void; hint: string }) {
-  const [search, setSearch] = useState<Search>({ state: "loading", photos: [] });
+  const [search, setSearch] = useState<Search>({ state: "loading", photos: [], page: 1, more: false });
   // Which suggestion each saved link came from, so the tapped tile stays ticked.
   const [picked, setPicked] = useState<Record<number, string>>({});
   const [saving, setSaving] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
   const own = value !== "" && !value.startsWith(PHOTO_PATH);
   const [showLink, setShowLink] = useState(own);
-  const key = photoQueries(places).join("\n");
+  // Words typed into the photo search, or null while it shows the places. Never saved.
+  const [words, setWords] = useState<string | null>(null);
+  const typed = words?.replace(/\|/g, " ").trim() ?? "";
+  const key = words !== null ? typed : photoQueries(places).join("\n");
   const seq = useRef(0);
 
   // Asked even with no places yet, to find out whether photo search is set up at all.
   useEffect(() => {
     const mine = ++seq.current;
-    setSearch((s) => (s.state === "off" ? s : { state: "loading", photos: s.photos }));
+    setSearch((s) => (s.state === "off" ? s : { state: "loading", photos: words !== null ? [] : s.photos, page: 1, more: false }));
     const t = setTimeout(async () => {
       try {
         const found = await api.photos(key ? key.split("\n") : []);
-        if (mine === seq.current) setSearch({ state: found.enabled ? "ready" : "off", photos: found.photos });
+        if (mine === seq.current) setSearch({ state: found.enabled ? "ready" : "off", photos: found.photos, page: 1, more: found.photos.length >= PHOTO_COUNT });
       } catch {
-        if (mine === seq.current) setSearch({ state: "error", photos: [] });
+        if (mine === seq.current) setSearch({ state: "error", photos: [], page: 1, more: false });
       }
     }, key ? 400 : 0);
     return () => clearTimeout(t);
   }, [key]);
+
+  const loadMore = async () => {
+    const mine = seq.current;
+    const page = search.page + 1;
+    setSearch((s) => ({ ...s, state: "loading" }));
+    try {
+      const found = await api.photos(key.split("\n"), page);
+      if (mine !== seq.current) return;
+      setSearch((s) => {
+        const seen = new Set(s.photos.map((p) => p.id));
+        const fresh = found.photos.filter((p) => !seen.has(p.id));
+        return { state: "ready", photos: [...s.photos, ...fresh], page, more: fresh.length > 0 && found.photos.length >= PHOTO_COUNT && page < PHOTO_PAGES };
+      });
+    } catch {
+      if (mine === seq.current) setSearch((s) => ({ ...s, state: "ready", more: false }));
+    }
+  };
+
+  const openSearch = () => setWords(places[0]?.name ?? "");
 
   const pick = async (p: PhotoSuggestion) => {
     setError(null);
@@ -56,7 +79,7 @@ export function CoverPicker({ places, value, onChange, hint }: { places: Place[]
   // The cover the trip already has, first, when it isn't one of today's suggestions.
   const current = value && !Object.values(picked).includes(value) ? value : null;
   const off = search.state === "off";
-  const tiles = search.state === "loading" && !search.photos.length ? PHOTO_COUNT - (current ? 1 : 0) : 0;
+  const tiles = key && search.state === "loading" && !search.photos.length ? PHOTO_COUNT - (current ? 1 : 0) : 0;
 
   return (
     <div className="ts-field cover-picker">
@@ -69,6 +92,28 @@ export function CoverPicker({ places, value, onChange, hint }: { places: Place[]
 
       {!off && (
         <>
+          {words !== null && (
+            <div className="cover-search">
+              <svg className="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" />
+              </svg>
+              <input
+                type="search"
+                aria-label="Search for other photos"
+                value={words}
+                maxLength={100}
+                onChange={(e) => setWords(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && e.preventDefault()}
+                placeholder="Try “eiffel tower” or “beach sunset”"
+                enterKeyHint="search"
+                autoFocus
+              />
+              <button type="button" className="cover-search-close" onClick={() => setWords(null)}>
+                {places.length ? "Back to places" : "Close"}
+              </button>
+            </div>
+          )}
           {key || current ? (
             <div className="cover-grid" role="group" aria-labelledby="cover-label" aria-busy={search.state === "loading"}>
               {current && (
@@ -99,11 +144,18 @@ export function CoverPicker({ places, value, onChange, hint }: { places: Place[]
               ))}
             </div>
           ) : (
-            <p className="cover-empty muted small">Add a place and photos of it show up here to pick from.</p>
+            <p className="cover-empty muted small">{words !== null ? "Type what you'd like a photo of." : "Add a place and photos of it show up here to pick from."}</p>
           )}
-          {key && search.state === "ready" && !search.photos.length && <p className="muted small">No photos found for these places. Paste a link to one of your own instead.</p>}
+          {key && search.state === "ready" && !search.photos.length && (
+            <p className="muted small">{words !== null ? "No photos for that. Try other words, or paste a link to one of your own." : "No photos found for these places. Search for other photos or paste a link to one of your own."}</p>
+          )}
           {search.state === "error" && <p className="muted small">Couldn't load photos right now. You can still paste a link to one.</p>}
           {error && <p className="error-text small">{error}</p>}
+          {key && search.more && (
+            <button type="button" className="btn small ghost cover-more" onClick={loadMore} disabled={search.state === "loading"}>
+              {search.state === "loading" ? "Loading…" : "More photos"}
+            </button>
+          )}
           <div className="cover-foot">
             {search.photos.length > 0 && (
               <span className="muted small">
@@ -113,11 +165,18 @@ export function CoverPicker({ places, value, onChange, hint }: { places: Place[]
                 </a>
               </span>
             )}
-            {!showLink && (
-              <button type="button" className="cover-own" onClick={() => setShowLink(true)}>
-                Use your own photo link
-              </button>
-            )}
+            <span className="cover-links">
+              {words === null && (
+                <button type="button" className="cover-own" onClick={openSearch}>
+                  Search other photos
+                </button>
+              )}
+              {!showLink && (
+                <button type="button" className="cover-own" onClick={() => setShowLink(true)}>
+                  Use your own photo link
+                </button>
+              )}
+            </span>
           </div>
         </>
       )}

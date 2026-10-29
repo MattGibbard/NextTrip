@@ -91,6 +91,18 @@ describe("photo routes", () => {
     expect(fetches.every((f) => f.includes("key=test-key"))).toBe(true);
   });
 
+  it("searches typed words as they are, a page at a time", async () => {
+    stubPixabay();
+    const res = await (await call(a, "GET", `/photos?q=${encodeURIComponent("eiffel tower")}&page=3`)).json();
+    expect(res.photos.map((p: PhotoSuggestion) => p.id)).toEqual([1, 2, 3, 4, 5]);
+    expect(fetches).toHaveLength(1);
+    expect(new URL(fetches[0]).searchParams.get("q")).toBe("eiffel tower");
+    expect(new URL(fetches[0]).searchParams.get("page")).toBe("3");
+    fetches.length = 0;
+    await call(a, "GET", "/photos?q=Paris&page=999");
+    expect(new URL(fetches[0]).searchParams.get("page")).toBe("10");
+  });
+
   it("says when there's no key, without calling Pixabay", async () => {
     stubPixabay();
     const res = await worker.fetch(new Request("https://somewhere.party/api/photos?q=Lisbon", { headers: { Cookie: a } }), { ...env, PIXABAY_API_KEY: undefined }, {} as ExecutionContext);

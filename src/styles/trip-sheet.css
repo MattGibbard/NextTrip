@@ -470,6 +470,57 @@
   flex-wrap: wrap;
   min-height: 24px;
 }
+.cover-links {
+  margin-left: auto;
+  display: flex;
+  gap: 4px 16px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.cover-links .cover-own {
+  margin-left: 0;
+}
+/* Other photos: a search box over the grid, for "eiffel tower" rather than just "Paris" */
+.cover-search {
+  position: relative;
+}
+.cover-search .search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+}
+.trip-sheet .cover-search > input[type="search"] {
+  width: 100%;
+  padding-left: 42px;
+  padding-right: 128px;
+}
+.cover-search > input::-webkit-search-cancel-button {
+  display: none;
+}
+.cover-search-close {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 6px 10px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: none;
+  color: var(--mode-ink);
+  font: inherit;
+  font-size: var(--text-6);
+  font-weight: 600;
+  cursor: pointer;
+}
+.cover-search-close:hover {
+  background: color-mix(in srgb, var(--mode) 12%, transparent);
+}
+.cover-more {
+  align-self: center;
+}
 .cover-foot a {
   color: inherit;
 }

@@ -20,7 +20,7 @@ export function searchRoutes(app: Hono<App>) {
     return c.json(nearestAirport(lat, lon));
   });
 
-  app.get("/photos", async (c) => c.json(await findPhotos(c.env, c.req.queries("q") ?? [])));
+  app.get("/photos", async (c) => c.json(await findPhotos(c.env, c.req.queries("q") ?? [], Number(c.req.query("page") ?? 1))));
 
   app.post("/photos", async (c) => {
     const b = await c.req.json<{ id?: unknown }>().catch(() => ({}) as { id?: unknown });

@@ -20,6 +20,8 @@ export interface PhotoSearch {
 /** How many photos the picker shows, and how many places it looks up. */
 export const PHOTO_COUNT = 8;
 export const PHOTO_PLACES = 3;
+/** How far "More photos" goes. Pixabay stops at 500 results anyway. */
+export const PHOTO_PAGES = 10;
 
 export const PIXABAY_URL = "https://pixabay.com/";
 

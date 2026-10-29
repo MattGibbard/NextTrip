@@ -10,7 +10,7 @@ import countries from "i18n-iso-countries";
 export const MAP_WIDTH = 600;
 export const MAP_HEIGHT = 400;
 /** How far across the map is on the ground, in km, wherever in the world the place is. */
-const SPAN_KM = 2400;
+const SPAN_KM = 3500;
 const EARTH_KM = 6371;
 
 let shapes;

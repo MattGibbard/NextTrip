@@ -1347,7 +1347,7 @@ a.dg-similar-card:hover {
 /*
  * "At a glance": the facts board and the map side by side from 760px, the map below on phones. Side by
  * side they're the same height: the map takes the board's, trimming the region around the pin, down to
- * about 280px with its caption; a shorter board grows to match and centres its rows.
+ * 280px; a shorter board grows to match and centres its rows. Phones keep the caption under the map.
  */
 .dg-glance {
   display: grid;
@@ -1363,12 +1363,7 @@ a.dg-similar-card:hover {
     justify-content: center;
   }
   .dg-glance .dg-map {
-    display: flex;
-    flex-direction: column;
-  }
-  .dg-glance .dg-map-frame {
-    flex: 1;
-    min-height: 160px;
+    min-height: 280px;
   }
   .dg-glance .dg-map svg {
     position: absolute;
@@ -1376,8 +1371,22 @@ a.dg-similar-card:hover {
     height: 100%;
     aspect-ratio: auto;
   }
+  /* The caption becomes a label on the map, so the map has the whole height. */
+  .dg-glance .dg-map figcaption {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    max-width: calc(100% - 20px);
+    padding: 8px 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-row);
+    box-shadow: var(--shadow);
+  }
 }
+/* The world map sits on top of the map, and side by side with the board, the caption does too. */
 .dg-map {
+  position: relative;
   margin: 0;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1390,10 +1399,6 @@ a.dg-similar-card:hover {
 :root[data-theme="dark"] .dg-map {
   --map-sea: var(--bg);
   --map-land: var(--surface-2);
-}
-.dg-map-frame {
-  position: relative;
-  border-bottom: 1px solid var(--border);
 }
 .dg-map svg {
   display: block;
@@ -1440,14 +1445,14 @@ a.dg-similar-card:hover {
   fill: var(--text);
   opacity: 0.2;
 }
-/* The whole world in the corner, with a dot where the map is. */
+/* The whole world in the top corner, with a dot where the map is. */
 .dg-map-world {
   position: absolute;
-  left: 10px;
-  bottom: 10px;
-  width: 25%;
-  min-width: 84px;
-  max-width: 128px;
+  right: 10px;
+  top: 10px;
+  width: 32%;
+  min-width: 112px;
+  max-width: 180px;
   aspect-ratio: 720 / 284;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1477,14 +1482,15 @@ a.dg-similar-card:hover {
   top: calc(4px + (100% - 8px) * var(--y));
 }
 .dg-map figcaption {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 4px 12px;
   padding: 12px 16px;
+  border-top: 1px solid var(--border);
 }
 .dg-map figcaption .dg-label {
-  flex-basis: 100%;
+  display: block;
+  margin-bottom: 2px;
+}
+.dg-map figcaption strong {
+  margin-right: 10px;
 }
 .dg-map-coords {
   font-family: var(--mono);

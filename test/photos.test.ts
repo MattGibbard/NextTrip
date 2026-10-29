@@ -1,7 +1,7 @@
 import { afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import worker from "../worker/index";
 import type { Env } from "../worker/env";
-import { mixPhotos, parsePixabay, photoQueries, sized, splitQuery } from "../shared/photos";
+import { findPhotos, mixPhotos, parsePixabay, photoQueries, pixabaySearch, sized, splitQuery } from "../shared/photos";
 import type { PhotoSuggestion } from "../shared/photos";
 import { sqliteD1 } from "./sqliteD1";
 
@@ -26,6 +26,34 @@ describe("photo helpers", () => {
   it("takes turns between places and drops repeats", () => {
     const p = (id: number) => ({ id }) as PhotoSuggestion;
     expect(mixPhotos([[p(1), p(2), p(3)], [p(2), p(4)], []], 4).map((x) => x.id)).toEqual([1, 2, 4, 3]);
+  });
+
+  const photo = (id: number) => ({ id, thumb: "t", preview: "p", alt: "" });
+  const asked: Record<string, string>[] = [];
+  const fake = async (params: Record<string, string>) => {
+    asked.push(params);
+    return params.q === "Busy" ? null : params.q === "Tiny" ? [photo(90)] : params.q === "Portugal" ? [photo(91), photo(92)] : [1, 2, 3, 4, 5].map(photo);
+  };
+
+  it("searches each place, falling back to the country", async () => {
+    asked.length = 0;
+    const res = await findPhotos(fake, ["Lisbon|Portugal", "Tiny|Portugal"]);
+    expect(res.photos.map((p) => p.id)).toEqual([1, 90, 2, 91, 3, 92, 4, 5]);
+    expect(res.busy).toBeUndefined();
+  });
+
+  it("searches typed words as they are, a page at a time", async () => {
+    asked.length = 0;
+    await findPhotos(fake, ["eiffel tower"], 3);
+    expect(asked).toEqual([{ q: "eiffel tower", per_page: "8", page: "3" }]);
+    asked.length = 0;
+    await findPhotos(fake, ["Paris"], 999);
+    expect(asked[0].page).toBe("10");
+  });
+
+  it("says Pixabay was busy rather than that nothing matched", async () => {
+    expect(await findPhotos(fake, ["Busy"])).toEqual({ photos: [], busy: true });
+    expect(pixabaySearch("k", { q: "a b" })).toBe("https://pixabay.com/api/?key=k&image_type=photo&orientation=horizontal&safesearch=true&q=a+b");
   });
 });
 
@@ -79,54 +107,36 @@ describe("photo routes", () => {
     });
 
   it("needs a sign-in to search or save", async () => {
-    expect((await call(null, "GET", "/photos?q=Lisbon")).status).toBe(401);
+    expect((await call(null, "GET", "/photos")).status).toBe(401);
     expect((await call(null, "POST", "/photos", { id: 1 })).status).toBe(401);
   });
 
-  it("searches Pixabay for each place, falling back to the country", async () => {
-    stubPixabay();
-    const res = await (await call(a, "GET", `/photos?q=${encodeURIComponent("Lisbon|Portugal")}&q=${encodeURIComponent("Tiny|Portugal")}`)).json();
-    expect(res.enabled).toBe(true);
-    expect(res.photos.map((p: PhotoSuggestion) => p.id)).toEqual([1, 90, 2, 91, 3, 92, 4, 5]);
-    expect(fetches.every((f) => f.includes("key=test-key"))).toBe(true);
+  it("hands the Pixabay key to signed-in browsers, or null without one", async () => {
+    expect(await (await call(a, "GET", "/photos")).json()).toEqual({ key: "test-key" });
+    const res = await worker.fetch(new Request("https://somewhere.party/api/photos", { headers: { Cookie: a } }), { ...env, PIXABAY_API_KEY: undefined }, {} as ExecutionContext);
+    expect(await res.json()).toEqual({ key: null });
   });
 
-  it("searches typed words as they are, a page at a time", async () => {
-    stubPixabay();
-    const res = await (await call(a, "GET", `/photos?q=${encodeURIComponent("eiffel tower")}&page=3`)).json();
-    expect(res.photos.map((p: PhotoSuggestion) => p.id)).toEqual([1, 2, 3, 4, 5]);
-    expect(fetches).toHaveLength(1);
-    expect(new URL(fetches[0]).searchParams.get("q")).toBe("eiffel tower");
-    expect(new URL(fetches[0]).searchParams.get("page")).toBe("3");
-    fetches.length = 0;
-    await call(a, "GET", "/photos?q=Paris&page=999");
-    expect(new URL(fetches[0]).searchParams.get("page")).toBe("10");
-  });
+  it("keeps a photo the browser downloaded, once per family", async () => {
+    const jpeg = new Uint8Array([0xff, 0xd8, 0xff, 0xe0, 9, 9]);
+    const upload = (cookie: string, id: unknown, body: Uint8Array) =>
+      worker.fetch(
+        new Request(`https://somewhere.party/api/photos/upload?id=${id}`, { method: "POST", headers: { Cookie: cookie, "Content-Type": "image/jpeg" }, body }),
+        env,
+        {} as ExecutionContext,
+      );
+    const { url } = await (await upload(a, 55, jpeg)).json();
+    expect(url).toMatch(/^\/api\/photos\/[0-9a-f]{32}$/);
+    const img = await worker.fetch(new Request(`https://somewhere.party${url}`), env, {} as ExecutionContext);
+    expect(img.headers.get("Content-Type")).toBe("image/jpeg");
+    expect([...new Uint8Array(await img.arrayBuffer())]).toEqual([...jpeg]);
 
-  it("asks Pixabay again when it's busy, and says so if it stays busy", async () => {
-    let calls = 0;
-    vi.stubGlobal("fetch", async (input: RequestInfo | URL) => {
-      const q = new URL(String(input)).searchParams.get("q");
-      calls++;
-      if (q === "Busy" || calls === 1) return new Response("[ERROR 429] Rate limit exceeded", { status: 429 });
-      return Response.json({ hits: [hit(1), hit(2), hit(3), hit(4)] });
-    });
-    const ok = await (await call(a, "GET", "/photos?q=Paris")).json();
-    expect(ok.photos.map((p: PhotoSuggestion) => p.id)).toEqual([1, 2, 3, 4]);
-    expect(ok.busy).toBeUndefined();
-    expect(calls).toBe(2);
-
-    calls = 0;
-    const busy = await (await call(a, "GET", "/photos?q=Busy")).json();
-    expect(busy).toEqual({ enabled: true, photos: [], busy: true });
-    expect(calls).toBe(3);
-  });
-
-  it("says when there's no key, without calling Pixabay", async () => {
-    stubPixabay();
-    const res = await worker.fetch(new Request("https://somewhere.party/api/photos?q=Lisbon", { headers: { Cookie: a } }), { ...env, PIXABAY_API_KEY: undefined }, {} as ExecutionContext);
-    expect(await res.json()).toEqual({ enabled: false, photos: [] });
-    expect(fetches).toEqual([]);
+    expect((await (await upload(a, 55, jpeg)).json()).url).toBe(url);
+    expect((await (await upload(b, 55, jpeg)).json()).url).not.toBe(url);
+    // Only real photos, with a real Pixabay id, from someone signed in.
+    expect((await upload(a, 56, new TextEncoder().encode("<script>alert(1)</script>"))).status).toBe(400);
+    expect((await upload(a, "nope", jpeg)).status).toBe(400);
+    expect((await worker.fetch(new Request("https://somewhere.party/api/photos/upload?id=57", { method: "POST", headers: { "Content-Type": "image/jpeg" }, body: jpeg }), env, {} as ExecutionContext)).status).toBe(401);
   });
 
   it("copies a picked photo, serves it, and lets it be a cover", async () => {

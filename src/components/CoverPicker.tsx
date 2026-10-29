@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import type { Place } from "../../shared/types";
 import type { PhotoSuggestion } from "../../shared/photos";
 import { PHOTO_COUNT, PHOTO_PAGES, PHOTO_PATH, PIXABAY_URL, photoQueries } from "../../shared/photos";
-import { api } from "../api";
+import { keepPhoto, photoKey, searchPhotos } from "../pixabay";
 
 type Search = { state: "loading" | "ready" | "busy" | "error" | "off"; photos: PhotoSuggestion[]; page: number; more: boolean };
 
@@ -35,9 +35,10 @@ export function CoverPicker({ places, value, onChange, hint }: { places: Place[]
     // Typed words wait a little longer, so a search isn't sent for every few letters.
     const t = setTimeout(async () => {
       try {
-        const found = await api.photos(key ? key.split("\n") : []);
+        const pixabay = await photoKey();
+        const found = pixabay && key ? await searchPhotos(pixabay, key.split("\n")) : { photos: [] };
         if (mine === seq.current)
-          setSearch({ state: !found.enabled ? "off" : found.busy ? "busy" : "ready", photos: found.photos, page: 1, more: found.photos.length >= PHOTO_COUNT });
+          setSearch({ state: !pixabay ? "off" : found.busy ? "busy" : "ready", photos: found.photos, page: 1, more: found.photos.length >= PHOTO_COUNT });
       } catch {
         if (mine === seq.current) setSearch({ state: "error", photos: [], page: 1, more: false });
       }
@@ -50,7 +51,8 @@ export function CoverPicker({ places, value, onChange, hint }: { places: Place[]
     const page = search.page + 1;
     setSearch((s) => ({ ...s, state: "loading" }));
     try {
-      const found = await api.photos(key.split("\n"), page);
+      const pixabay = await photoKey();
+      const found = pixabay ? await searchPhotos(pixabay, key.split("\n"), page) : { photos: [], busy: true };
       if (mine !== seq.current) return;
       if (found.busy) {
         setError("Pixabay is busy right now. Try again in a moment.");
@@ -75,7 +77,7 @@ export function CoverPicker({ places, value, onChange, hint }: { places: Place[]
     if (picked[p.id]) return onChange(picked[p.id]);
     setSaving(p.id);
     try {
-      const { url } = await api.savePhoto(p.id);
+      const url = await keepPhoto(p);
       setPicked((m) => ({ ...m, [p.id]: url }));
       onChange(url);
     } catch (e) {

@@ -2,7 +2,7 @@ import type { Bootstrap, FamilyPart, GeocodeResult, HomeEnds, Idea, IdeaInput, P
 import type { RoundFilters } from "../shared/roundFilters";
 import type { TripDates } from "../shared/tripDates";
 import type { Terminal, TerminalSearchResult } from "../shared/terminals";
-import type { PhotoSearch } from "../shared/photos";
+import type { PhotoSetup } from "../shared/photos";
 import type { CostCategory, CostStatus, ItemStatus, TripPlan } from "../shared/plan";
 import { forget, load } from "./storage";
 
@@ -126,10 +126,20 @@ export const api = {
   addManyTodos: (id: number, items: TodoInput[]) => request<{ added: number }>("POST", `/plans/${id}/todos/many`, { items }),
   deleteTodo: (id: number, todoId: number) => request("DELETE", `/plans/${id}/todos/${todoId}`),
 
-  photos: (queries: string[], page = 1) =>
-    request<PhotoSearch>("GET", `/photos?${[...queries.map((q) => `q=${encodeURIComponent(q)}`), ...(page > 1 ? [`page=${page}`] : [])].join("&")}`),
-  /** Copies a suggested photo to somewhere🎉 and gives back the link to save as the cover. */
+  /** The Pixabay key for cover photo search (src/pixabay.ts), null when it isn't set up. */
+  photoSetup: () => request<PhotoSetup>("GET", "/photos"),
+  /** Asks the Worker to copy a suggested photo to somewhere🎉 itself. Pixabay often turns it away, so uploadPhoto comes first. */
   savePhoto: (id: number) => request<{ url: string }>("POST", "/photos", { id }),
+  /** Keeps a suggested photo this browser downloaded from Pixabay, and gives back the link to save as the cover. */
+  uploadPhoto: async (id: number, file: Blob) => {
+    const res = await fetch(`/api/photos/upload?id=${id}`, { method: "POST", headers: { "Content-Type": file.type || "application/octet-stream" }, body: file }).catch(() => {
+      throw new Error("Couldn't reach somewhere🎉. Check your connection.");
+    });
+    const data = (await res.json().catch(() => ({}))) as { url?: string; error?: string };
+    if (res.status === 401) signedOut();
+    if (!res.ok || !data.url) throw new Error(data.error ?? `Request failed (${res.status})`);
+    return { url: data.url };
+  },
   geocode: (q: string) => request<GeocodeResult[]>("GET", `/geocode?q=${encodeURIComponent(q)}`),
   nearestAirport: (lat: number, lon: number) => request<Terminal | null>("GET", `/terminals/nearest?lat=${lat}&lon=${lon}`),
   terminals: (kind: "airport" | "station", q: string) => request<TerminalSearchResult[]>("GET", `/terminals?kind=${kind}&q=${encodeURIComponent(q)}`),

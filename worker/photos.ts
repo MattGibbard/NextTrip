@@ -1,72 +1,23 @@
 import { HttpError } from "./env";
 import type { Env } from "./env";
-import { PHOTO_COUNT, PHOTO_PAGES, PHOTO_PATH, PHOTO_PLACES, mixPhotos, parsePixabay, sized, splitQuery } from "../shared/photos";
-import type { PhotoSearch, PhotoSuggestion } from "../shared/photos";
+import { PHOTO_PATH, parsePixabay, pixabaySearch, sized } from "../shared/photos";
+import type { PhotoSuggestion } from "../shared/photos";
 
-// Pixabay asks for answers to be kept for a day, and the same places are looked up
-// again and again as people edit. Errors aren't kept, so a fixed key works straight away.
+// Pixabay asks for answers to be kept for a day. Errors aren't kept, so a fixed key works straight away.
 const CACHE = { cacheTtlByStatus: { "200-299": 86400, "300-599": 0 }, cacheEverything: true };
 
 /** A copied photo bigger than this isn't kept. D1 rows top out at 2 MB. */
 const MAX_BYTES = 1_500_000;
 
-/** How long to wait before asking Pixabay again when it says it's busy. */
-const RETRY_MS = [600, 1500];
-
-const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
-
-/**
- * Photos from one Pixabay search, or null when Pixabay didn't answer. It often
- * turns Workers away with a 429 even when our key has plenty left, likely because
- * Cloudflare's outgoing addresses are shared, so a busy answer is tried again.
- */
+/** Photos from one Pixabay lookup, or null when Pixabay didn't answer. */
 async function pixabay(key: string, params: Record<string, string>): Promise<PhotoSuggestion[] | null> {
-  const url = new URL("https://pixabay.com/api/");
-  url.search = new URLSearchParams({ key, image_type: "photo", orientation: "horizontal", safesearch: "true", ...params }).toString();
-  for (let attempt = 0; ; attempt++) {
-    const res = await fetch(url, { cf: CACHE }).catch((e: Error) => e);
-    if (!(res instanceof Error) && res.ok) return parsePixabay(await res.json().catch(() => null));
-    const busy = res instanceof Error || res.status === 429 || res.status >= 500;
-    if (busy && attempt < RETRY_MS.length) {
-      await wait(RETRY_MS[attempt]);
-      continue;
-    }
+  const res = await fetch(pixabaySearch(key, params), { cf: CACHE }).catch((e: Error) => e);
+  if (res instanceof Error || !res.ok) {
     // Shows up in the Worker's logs, so a bad key or a used-up allowance is easy to spot.
-    const left = res instanceof Error ? null : res.headers.get("X-RateLimit-Remaining");
-    console.warn(
-      `Pixabay search failed after ${attempt + 1} tries: ${res instanceof Error ? res.message : `${res.status} ${(await res.text().catch(() => "")).slice(0, 300)}`}${left ? ` (key has ${left} left)` : ""}`,
-    );
+    console.warn(`Pixabay lookup failed: ${res instanceof Error ? res.message : `${res.status} ${(await res.text().catch(() => "")).slice(0, 300)}`}`);
     return null;
   }
-}
-
-/**
- * A few cover photos of some places, or of whatever someone typed. Each place is
- * searched by name, and by its country too when the name alone finds too few, as
- * it does for small towns. Later pages carry on further down the same results.
- */
-export async function findPhotos(env: Env, queries: string[], page = 1): Promise<PhotoSearch> {
-  const key = env.PIXABAY_API_KEY;
-  if (!key) return { enabled: false, photos: [] };
-  const params = { per_page: String(PHOTO_COUNT), page: String(Math.min(Math.max(1, Math.floor(page) || 1), PHOTO_PAGES)) };
-  const terms = [...new Set(queries.map((q) => q.trim().slice(0, 200)).filter(Boolean))].slice(0, PHOTO_PLACES);
-  let failed = false;
-  const search = async (q: string) => {
-    const found = await pixabay(key, { q: q.slice(0, 100), ...params });
-    if (!found) failed = true;
-    return found ?? [];
-  };
-  const lists = await Promise.all(
-    terms.map(async (t) => {
-      const { name, country } = splitQuery(t);
-      if (!name) return [];
-      const found = await search(name);
-      if (found.length >= 4 || !country) return found;
-      return [...found, ...(await search(country))];
-    }),
-  );
-  const photos = mixPhotos(lists);
-  return { enabled: true, photos, ...(failed && !photos.length ? { busy: true } : {}) };
+  return parsePixabay(await res.json().catch(() => null));
 }
 
 const randomKey = () => [...crypto.getRandomValues(new Uint8Array(16))].map((b) => b.toString(16).padStart(2, "0")).join("");
@@ -79,26 +30,14 @@ async function download(url: string) {
   return data.byteLength <= MAX_BYTES ? { type, data } : null;
 }
 
-/**
- * Copies a Pixabay photo into the database, as Pixabay's rules ask, and gives back
- * its new link. Only an id comes from the browser, so the Worker never fetches a
- * link someone made up. Picking the same photo twice reuses the first copy.
- */
-export async function savePhoto(env: Env, family: number, id: unknown): Promise<string> {
-  const key = env.PIXABAY_API_KEY;
-  if (!key) throw new HttpError(503, "Photo search isn't set up yet");
-  if (typeof id !== "number" || !Number.isSafeInteger(id) || id <= 0) throw new HttpError(400, "Pick a photo");
-  const db = env.DB;
+const validId = (id: unknown): id is number => typeof id === "number" && Number.isSafeInteger(id) && id > 0;
+
+async function copied(db: D1Database, family: number, id: number) {
   const had = await db.prepare("SELECT key FROM photos WHERE family_id = ? AND pixabay_id = ?").bind(family, id).first<{ key: string }>();
-  if (had) return PHOTO_PATH + had.key;
+  return had ? PHOTO_PATH + had.key : null;
+}
 
-  const found = await pixabay(key, { id: String(id) });
-  if (!found) throw new HttpError(503, "Pixabay is busy. Try again in a minute.");
-  const [photo] = found;
-  if (!photo) throw new HttpError(404, "That photo isn't on Pixabay any more");
-  const file = (await download(sized(photo.preview, 960))) ?? (await download(photo.preview));
-  if (!file) throw new HttpError(503, "Couldn't copy that photo. Try another one.");
-
+async function keep(db: D1Database, family: number, id: number, file: { type: string; data: ArrayBuffer }) {
   const name = randomKey();
   await db.batch([
     db.prepare("INSERT INTO photos (key, family_id, pixabay_id, content_type, data) VALUES (?, ?, ?, ?, ?)").bind(name, family, id, file.type, file.data),
@@ -112,6 +51,53 @@ export async function savePhoto(env: Env, family: number, id: unknown): Promise<
       .bind(family, PHOTO_PATH),
   ]);
   return PHOTO_PATH + name;
+}
+
+/**
+ * Copies a Pixabay photo into the database, as Pixabay's rules ask, and gives back
+ * its new link. Only an id comes from the browser, so the Worker never fetches a
+ * link someone made up. Picking the same photo twice reuses the first copy. Only a
+ * fallback now: Pixabay turns most Worker requests away, so browsers send the photo.
+ */
+export async function savePhoto(env: Env, family: number, id: unknown): Promise<string> {
+  const key = env.PIXABAY_API_KEY;
+  if (!key) throw new HttpError(503, "Photo search isn't set up yet");
+  if (!validId(id)) throw new HttpError(400, "Pick a photo");
+  const had = await copied(env.DB, family, id);
+  if (had) return had;
+
+  const found = await pixabay(key, { id: String(id) });
+  if (!found) throw new HttpError(503, "Pixabay is busy. Try again in a minute.");
+  const [photo] = found;
+  if (!photo) throw new HttpError(404, "That photo isn't on Pixabay any more");
+  const file = (await download(sized(photo.preview, 960))) ?? (await download(photo.preview));
+  if (!file) throw new HttpError(503, "Couldn't copy that photo. Try another one.");
+  return keep(env.DB, family, id, file);
+}
+
+/** What a JPEG, PNG or WebP file starts with, so only real photos are kept. */
+function imageType(data: ArrayBuffer): string | null {
+  const b = new Uint8Array(data.slice(0, 12));
+  if (b[0] === 0xff && b[1] === 0xd8 && b[2] === 0xff) return "image/jpeg";
+  if (b[0] === 0x89 && b[1] === 0x50 && b[2] === 0x4e && b[3] === 0x47) return "image/png";
+  if (String.fromCharCode(...b.slice(0, 4)) === "RIFF" && String.fromCharCode(...b.slice(8, 12)) === "WEBP") return "image/webp";
+  return null;
+}
+
+/**
+ * Keeps a Pixabay photo the browser downloaded itself, since Pixabay answers
+ * browsers but not the Worker. The file must really be a photo, and no bigger
+ * than one copied here would be. Picking the same photo twice reuses the first copy.
+ */
+export async function keepUploadedPhoto(env: Env, family: number, id: unknown, data: ArrayBuffer): Promise<string> {
+  if (!env.PIXABAY_API_KEY) throw new HttpError(503, "Photo search isn't set up yet");
+  if (!validId(id)) throw new HttpError(400, "Pick a photo");
+  const had = await copied(env.DB, family, id);
+  if (had) return had;
+  if (data.byteLength > MAX_BYTES) throw new HttpError(400, "That photo is too big. Try another one.");
+  const type = imageType(data);
+  if (!type) throw new HttpError(400, "That isn't a photo");
+  return keep(env.DB, family, id, { type, data });
 }
 
 /** A copied photo. Its link is a long random key, so it's served without a sign-in, like any image link. */

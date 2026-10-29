@@ -1,0 +1,200 @@
+{
+  "name": "Trieste",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Trieste",
+  "intro": "An elegant Italian port city on the Slovenian border with grand Habsburg squares, historic coffee houses, a fairy-tale seaside castle and swims off the rocks. Here's what Trieste is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/castle-4357440_1280.webp",
+  "image_alt": "The white Miramare Castle on a rocky point above the sparkling Gulf of Trieste, framed by trees",
+  "wikipedia": "https://en.wikipedia.org/wiki/Trieste",
+  "to_code": "TRS",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Trieste's winter wind, the bora, can gust very hard, so check the forecast. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, windy",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, windy",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild, spring",
+      "temp": 13
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild, pleasant",
+      "temp": 17
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, swimming",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy seafront",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy seafront",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, sea still warm",
+      "temp": 23
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild, Barcolana regatta",
+      "temp": 18
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool, damp",
+      "temp": 13
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool, festive",
+      "temp": 9
+    }
+  },
+  "when_to_go": "May, June and September are the best months, warm enough for swimming without the peak summer heat. October brings the Barcolana, one of the world's biggest sailing regattas. Winters are mild but can be cold and very windy when the bora blows.",
+  "things": [
+    {
+      "name": "Piazza Unità d'Italia",
+      "tag": "Free",
+      "blurb": "A huge square of grand buildings that opens straight onto the sea, lovely at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Miramare Castle",
+      "tag": "Ticketed",
+      "blurb": "A white 19th-century castle on the water, with lavish rooms and big seaside gardens.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Historic cafés",
+      "tag": "Free",
+      "blurb": "Coffee houses like Caffè San Marco and Caffè Tommaseo, where writers including James Joyce once sat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Barcola seafront",
+      "tag": "Free",
+      "blurb": "A long promenade where locals sunbathe and swim off the concrete terraces in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grotta Gigante",
+      "tag": "Tour",
+      "blurb": "A giant show cave on the plateau above the city, with a huge main chamber.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Canal Grande",
+      "tag": "Free",
+      "blurb": "A short canal lined with boats and cafés, at the heart of the old Borgo Teresiano district.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "San Giusto",
+      "tag": "Free",
+      "blurb": "A hilltop cathedral and castle with Roman ruins and views over the city and port.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Trieste from the UK?",
+      "answer": "Fly direct to Trieste airport from London Stansted, then take the bus or train into the city, about 40 minutes. Venice is another option, around two hours away by train or coach."
+    },
+    {
+      "question": "Is Trieste worth visiting?",
+      "answer": "Yes, especially if you like coffee, history and quieter cities. It feels different from the rest of Italy, with Austrian and Slavic influences, and it isn't crowded."
+    },
+    {
+      "question": "How many days do you need in Trieste?",
+      "answer": "Two or three days covers the centre, Miramare and a swim. Add a day for a trip to Slovenia's coast or Ljubljana."
+    },
+    {
+      "question": "Can you swim in Trieste?",
+      "answer": "Yes. Locals swim off the seafront at Barcola and at small beaches near Miramare. There's also a historic bathing house with separate areas for men and women."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Ljubljana",
+      "code": "LJU",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Piran",
+      "code": "TRS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Istria",
+      "code": "PUY",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Verona",
+      "code": "VRN",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-29T06:45:28Z",
+  "updated": "2026-10-29T06:45:28Z"
+}

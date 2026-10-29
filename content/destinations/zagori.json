@@ -1,0 +1,200 @@
+{
+  "name": "Zagori",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Zagori",
+  "intro": "A wild mountain corner of north-west Greece with 46 stone villages, old arched bridges and the deep Vikos Gorge, listed by UNESCO in 2023. Here's what Zagori is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/vikos-2678073_1280.webp",
+  "image_alt": "Green slopes and wildflowers below the towering grey cliffs of the Vikos Gorge in Zagori, under a blue sky with white clouds",
+  "wikipedia": "https://en.wikipedia.org/wiki/Zagori",
+  "to_code": "PVK",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "culture"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Buses are rare, so most people hire a car for the narrow mountain roads. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, snow in villages",
+      "temp": 10
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, snow in villages",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool, waking up",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild, wildflowers",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, green, best hiking",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, long days",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot in town, cooler up high",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot in town, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, best hiking",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colours",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 15
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cosy, snowy",
+      "temp": 11
+    }
+  },
+  "when_to_go": "May, June, September and October are the best months for hiking, with mild days, green slopes or autumn colours, and fewer people. July and August are hot in Ioannina but cooler in the mountain villages, and busier with Greek visitors. Winter is cold and often snowy, which suits a cosy stay by the fire more than long walks.",
+  "things": [
+    {
+      "name": "Vikos Gorge",
+      "tag": "Outdoors",
+      "blurb": "Hike through one of the deepest gorges in the world, usually from Monodendri to Vikos village. Allow five to seven hours, and arrange a lift back.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Oxia viewpoint",
+      "tag": "Free",
+      "blurb": "A short walk from Monodendri to a lookout over the full depth of the Vikos Gorge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stone bridges",
+      "tag": "Free",
+      "blurb": "Old arched bridges hidden in the woods, like the three-arched Kalogeriko bridge near Kipi.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Papingo rock pools",
+      "tag": "Free",
+      "blurb": "Clear natural pools carved into the rock near Mikro Papingo, for a cold swim on hot days.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Voidomatis river",
+      "tag": "Outdoors",
+      "blurb": "Swim in icy clear water near the springs, or try rafting further down the river.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stone villages",
+      "tag": "Free",
+      "blurb": "Wander slate-roofed villages like Monodendri, Megalo Papingo and Dilofo, with tavernas serving mountain pies.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ioannina",
+      "tag": "Free",
+      "blurb": "The nearest town, on a lake, with an old castle quarter and a small island you can reach by boat.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Zagori from the UK?",
+      "answer": "Fly to Preveza, which has summer flights from several UK airports, then drive for around two and a half hours. Ioannina airport is closer, but it has few international flights. You can also fly to Athens and take a domestic flight to Ioannina."
+    },
+    {
+      "question": "How long is the Vikos Gorge hike?",
+      "answer": "The classic route from Monodendri to Vikos village takes most people five to seven hours. It's one way, so arrange a taxi or a lift back."
+    },
+    {
+      "question": "Do you need a car in Zagori?",
+      "answer": "It's the easiest way. Buses between the villages are rare, though taxis and walking routes link many of them."
+    },
+    {
+      "question": "How many days do you need in Zagori?",
+      "answer": "Four or five days gives time for the gorge, a few shorter walks and the rock pools. A week lets you add Ioannina and the river."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Meteora",
+      "code": "SKG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Lake Ohrid",
+      "code": "OHD",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Soča Valley",
+      "code": "LJU",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Gjirokastër",
+      "code": "TIA",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-29T06:45:28Z",
+  "updated": "2026-10-29T06:45:28Z"
+}

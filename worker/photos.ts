@@ -1,6 +1,6 @@
 import { HttpError } from "./env";
 import type { Env } from "./env";
-import { PHOTO_COUNT, PHOTO_PATH, PHOTO_PLACES, mixPhotos, parsePixabay, sized, splitQuery } from "../shared/photos";
+import { PHOTO_COUNT, PHOTO_PAGES, PHOTO_PATH, PHOTO_PLACES, mixPhotos, parsePixabay, sized, splitQuery } from "../shared/photos";
 import type { PhotoSearch, PhotoSuggestion } from "../shared/photos";
 
 // Pixabay asks for answers to be kept for a day, and the same places are looked up
@@ -23,20 +23,22 @@ async function pixabay(key: string, params: Record<string, string>): Promise<Pho
 }
 
 /**
- * A few cover photos of some places. Each place is searched by name, and by its
- * country too when the name alone finds too few, as it does for small towns.
+ * A few cover photos of some places, or of whatever someone typed. Each place is
+ * searched by name, and by its country too when the name alone finds too few, as
+ * it does for small towns. Later pages carry on further down the same results.
  */
-export async function findPhotos(env: Env, queries: string[]): Promise<PhotoSearch> {
+export async function findPhotos(env: Env, queries: string[], page = 1): Promise<PhotoSearch> {
   const key = env.PIXABAY_API_KEY;
   if (!key) return { enabled: false, photos: [] };
+  const params = { per_page: String(PHOTO_COUNT), page: String(Math.min(Math.max(1, Math.floor(page) || 1), PHOTO_PAGES)) };
   const terms = [...new Set(queries.map((q) => q.trim().slice(0, 200)).filter(Boolean))].slice(0, PHOTO_PLACES);
   const lists = await Promise.all(
     terms.map(async (t) => {
       const { name, country } = splitQuery(t);
       if (!name) return [];
-      const found = await pixabay(key, { q: name.slice(0, 100), per_page: String(PHOTO_COUNT) });
+      const found = await pixabay(key, { q: name.slice(0, 100), ...params });
       if (found.length >= 4 || !country) return found;
-      return [...found, ...(await pixabay(key, { q: country.slice(0, 100), per_page: String(PHOTO_COUNT) }))];
+      return [...found, ...(await pixabay(key, { q: country.slice(0, 100), ...params }))];
     }),
   );
   return { enabled: true, photos: mixPhotos(lists) };

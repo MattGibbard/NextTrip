@@ -10,14 +10,15 @@ const CACHE = { cacheTtlByStatus: { "200-299": 86400, "300-599": 0 }, cacheEvery
 /** A copied photo bigger than this isn't kept. D1 rows top out at 2 MB. */
 const MAX_BYTES = 1_500_000;
 
-async function pixabay(key: string, params: Record<string, string>): Promise<PhotoSuggestion[]> {
+/** Photos from one Pixabay search, or null when Pixabay didn't answer, as when it's busy. */
+async function pixabay(key: string, params: Record<string, string>): Promise<PhotoSuggestion[] | null> {
   const url = new URL("https://pixabay.com/api/");
   url.search = new URLSearchParams({ key, image_type: "photo", orientation: "horizontal", safesearch: "true", ...params }).toString();
   const res = await fetch(url, { cf: CACHE }).catch((e: Error) => e);
   if (res instanceof Error || !res.ok) {
     // Shows up in the Worker's logs, so a bad key or a used-up allowance is easy to spot.
     console.warn(`Pixabay search failed: ${res instanceof Error ? res.message : `${res.status} ${(await res.text().catch(() => "")).slice(0, 300)}`}`);
-    return [];
+    return null;
   }
   return parsePixabay(await res.json().catch(() => null));
 }
@@ -36,9 +37,9 @@ export async function findPhotos(env: Env, queries: string[], page = 1): Promise
     terms.map(async (t) => {
       const { name, country } = splitQuery(t);
       if (!name) return [];
-      const found = await pixabay(key, { q: name.slice(0, 100), ...params });
+      const found = (await pixabay(key, { q: name.slice(0, 100), ...params })) ?? [];
       if (found.length >= 4 || !country) return found;
-      return [...found, ...(await pixabay(key, { q: country.slice(0, 100), ...params }))];
+      return [...found, ...((await pixabay(key, { q: country.slice(0, 100), ...params })) ?? [])];
     }),
   );
   return { enabled: true, photos: mixPhotos(lists) };
@@ -67,7 +68,9 @@ export async function savePhoto(env: Env, family: number, id: unknown): Promise<
   const had = await db.prepare("SELECT key FROM photos WHERE family_id = ? AND pixabay_id = ?").bind(family, id).first<{ key: string }>();
   if (had) return PHOTO_PATH + had.key;
 
-  const [photo] = await pixabay(key, { id: String(id) });
+  const found = await pixabay(key, { id: String(id) });
+  if (!found) throw new HttpError(503, "Pixabay is busy. Try again in a minute.");
+  const [photo] = found;
   if (!photo) throw new HttpError(404, "That photo isn't on Pixabay any more");
   const file = (await download(sized(photo.preview, 960))) ?? (await download(photo.preview));
   if (!file) throw new HttpError(503, "Couldn't copy that photo. Try another one.");

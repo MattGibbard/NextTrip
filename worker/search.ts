@@ -1,7 +1,8 @@
 import type { Hono } from "hono";
 import { HttpError } from "./env";
 import type { App } from "./env";
-import { findPhotos, savePhoto } from "./photos";
+import { keepUploadedPhoto, savePhoto } from "./photos";
+import type { PhotoSetup } from "../shared/photos";
 import { cleanText } from "./request";
 import { findTerminals, nearestAirport } from "./terminals";
 import { parseNominatim } from "../shared/geocode";
@@ -20,7 +21,14 @@ export function searchRoutes(app: Hono<App>) {
     return c.json(nearestAirport(lat, lon));
   });
 
-  app.get("/photos", async (c) => c.json(await findPhotos(c.env, c.req.queries("q") ?? [], Number(c.req.query("page") ?? 1))));
+  // Signed-in browsers search Pixabay themselves, as it turns most Worker requests away.
+  app.get("/photos", (c) => c.json({ key: c.env.PIXABAY_API_KEY || null } satisfies PhotoSetup));
+
+  // A picked photo the browser downloaded from Pixabay, as the file itself.
+  app.post("/photos/upload", async (c) => {
+    if (Number(c.req.header("Content-Length") ?? 0) > 2_000_000) throw new HttpError(400, "That photo is too big. Try another one.");
+    return c.json({ url: await keepUploadedPhoto(c.env, c.get("family"), Number(c.req.query("id")), await c.req.arrayBuffer()) });
+  });
 
   app.post("/photos", async (c) => {
     const b = await c.req.json<{ id?: unknown }>().catch(() => ({}) as { id?: unknown });

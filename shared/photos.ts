@@ -12,11 +12,18 @@ export interface PhotoSuggestion {
 }
 
 export interface PhotoSearch {
-  /** False until the Worker has a Pixabay key. The sheet then only offers a link box. */
-  enabled: boolean;
   photos: PhotoSuggestion[];
   /** True when Pixabay didn't answer, so "no photos" means "try again", not "nothing matches". */
   busy?: boolean;
+}
+
+/**
+ * The Pixabay key, for signed-in browsers to search with. Pixabay turns away
+ * most searches from Cloudflare's shared servers, so browsers ask it directly.
+ * Null until the Worker has a key; the sheet then only offers a link box.
+ */
+export interface PhotoSetup {
+  key: string | null;
 }
 
 /** How many photos the picker shows, and how many places it looks up. */
@@ -39,6 +46,39 @@ export function photoQueries(places: Place[]): string[] {
     if (out.length === PHOTO_PLACES) break;
   }
   return out;
+}
+
+/** A Pixabay search link. */
+export function pixabaySearch(key: string, params: Record<string, string>): string {
+  return `https://pixabay.com/api/?${new URLSearchParams({ key, image_type: "photo", orientation: "horizontal", safesearch: "true", ...params })}`;
+}
+
+/**
+ * A few cover photos of some places, or of whatever someone typed. Each place is
+ * searched by name, and by its country too when the name alone finds too few, as
+ * it does for small towns. Later pages carry on further down the same results.
+ * `search` gives null when Pixabay didn't answer.
+ */
+export async function findPhotos(search: (params: Record<string, string>) => Promise<PhotoSuggestion[] | null>, queries: string[], page = 1): Promise<PhotoSearch> {
+  const params = { per_page: String(PHOTO_COUNT), page: String(Math.min(Math.max(1, Math.floor(page) || 1), PHOTO_PAGES)) };
+  const terms = [...new Set(queries.map((q) => q.trim().slice(0, 200)).filter(Boolean))].slice(0, PHOTO_PLACES);
+  let failed = false;
+  const one = async (q: string) => {
+    const found = await search({ q: q.slice(0, 100), ...params });
+    if (!found) failed = true;
+    return found ?? [];
+  };
+  const lists = await Promise.all(
+    terms.map(async (t) => {
+      const { name, country } = splitQuery(t);
+      if (!name) return [];
+      const found = await one(name);
+      if (found.length >= 4 || !country) return found;
+      return [...found, ...(await one(country))];
+    }),
+  );
+  const photos = mixPhotos(lists);
+  return { photos, ...(failed && !photos.length ? { busy: true } : {}) };
 }
 
 /** "Lisbon|Portugal" back into its parts. */

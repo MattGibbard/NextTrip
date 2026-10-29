@@ -260,32 +260,30 @@ export function DestinationPage({ destination: d, family }: { destination: Desti
             <h2 id="dg-facts">{d.name} at a glance</h2>
             <div className={map && facts.length > 0 ? "dg-glance" : "dg-section"}>
               {facts.length > 0 && (
-                <div className="dg-section">
-                  <dl className="dg-board">
-                    {facts.map((f) =>
-                      f.flight ? (
-                        <div key="flight">
-                          <dt>
-                            <Geo from={from} geo="fact-label" />
-                          </dt>
-                          <dd className="lit">
-                            <Geo from={from} geo="hours" to={d} fmt="fact" />
-                          </dd>
-                        </div>
-                      ) : (
-                        <div key={f.label}>
-                          <dt>{f.label.toUpperCase()}</dt>
-                          <dd className={f.highlight ? "lit" : ""}>{f.value.toUpperCase()}</dd>
-                        </div>
-                      ),
-                    )}
-                  </dl>
-                  {d.facts_note && <p className="muted small">{d.facts_note}</p>}
-                  {flight && <FlyingFrom from={from} home={!!fromTerminal(airport)} />}
-                </div>
+                <dl className="dg-board">
+                  {facts.map((f) =>
+                    f.flight ? (
+                      <div key="flight">
+                        <dt>
+                          <Geo from={from} geo="fact-label" />
+                        </dt>
+                        <dd className="lit">
+                          <Geo from={from} geo="hours" to={d} fmt="fact" />
+                        </dd>
+                      </div>
+                    ) : (
+                      <div key={f.label}>
+                        <dt>{f.label.toUpperCase()}</dt>
+                        <dd className={f.highlight ? "lit" : ""}>{f.value.toUpperCase()}</dd>
+                      </div>
+                    ),
+                  )}
+                </dl>
               )}
               {map && <GuideMap map={map} name={d.name} country={d.country} lat={map.lat} lon={map.lon} />}
             </div>
+            {d.facts_note && <p className="muted small">{d.facts_note}</p>}
+            {flight && <FlyingFrom from={from} home={!!fromTerminal(airport)} />}
           </section>
         )}
 

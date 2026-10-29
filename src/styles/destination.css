@@ -1344,15 +1344,37 @@ a.dg-similar-card:hover {
   min-height: 44px;
 }
 
-/* "At a glance": the facts board and the map side by side from 760px, the map below on phones. */
+/*
+ * "At a glance": the facts board and the map side by side from 760px, the map below on phones. Side by
+ * side they're the same height: the map takes the board's, trimming the region around the pin, down to
+ * about 280px with its caption; a shorter board grows to match and centres its rows.
+ */
 .dg-glance {
   display: grid;
   gap: 16px;
-  align-items: start;
 }
 @media (min-width: 760px) {
   .dg-glance {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .dg-glance .dg-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .dg-glance .dg-map {
+    display: flex;
+    flex-direction: column;
+  }
+  .dg-glance .dg-map-frame {
+    flex: 1;
+    min-height: 160px;
+  }
+  .dg-glance .dg-map svg {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    aspect-ratio: auto;
   }
 }
 .dg-map {

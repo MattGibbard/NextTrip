@@ -6,6 +6,7 @@
 import { readFile, readdir } from "node:fs/promises";
 import countries from "i18n-iso-countries";
 import en from "i18n-iso-countries/langs/en.json" with { type: "json" };
+import { guideMap } from "./guide-map.mjs";
 
 countries.registerLocale(en);
 
@@ -214,16 +215,28 @@ export async function popularGuides(raw) {
   return { kicker: raw.kicker ?? "", heading: raw.heading ?? "", link_text: raw.link_text ?? "", guides };
 }
 
+/** A guide in full, with its "Where in the world" map (scripts/guide-map.mjs), its pin where the guide's page puts it. */
+export async function fullGuide(raw, slug) {
+  const str = (v) => (typeof v === "string" ? v.trim() : "");
+  const num = (v) => (typeof v === "number" && Number.isFinite(v) ? v : null);
+  const name = str(raw.name) || slug;
+  const code = (/^[A-Za-z]{2}$/.test(str(raw.country)) ? str(raw.country) : str(raw.country_code)).toUpperCase();
+  const positions = await readJson(POSITIONS);
+  const position = positions?.[slug]?.query === `${name}|${code}` ? positions[slug] : undefined;
+  return { ...raw, map: await guideMap(position?.lat ?? num(raw.lat), position?.lon ?? num(raw.lon), code) };
+}
+
 export function destinationCards() {
   return {
     name: "destination-cards",
     enforce: "pre",
     async load(id) {
       const [file, query] = id.split("?");
-      if ((query !== "card" && query !== "post" && query !== "airport") || !file.endsWith(".json")) return null;
+      if ((query !== "card" && query !== "post" && query !== "airport" && query !== "guide") || !file.endsWith(".json")) return null;
       this.addWatchFile(file);
       const raw = JSON.parse(await readFile(file, "utf8"));
       if (query === "post") return { code: `export default ${JSON.stringify(await fullPost(raw))};`, moduleType: "js" };
+      if (query === "guide") return { code: `export default ${JSON.stringify(await fullGuide(raw, file.replace(/^.*[\\/]|\.json$/g, "")))};`, moduleType: "js" };
       if (query === "airport") return { code: `export default ${JSON.stringify(await fullAirport(raw))};`, moduleType: "js" };
       const card = /[\\/]content[\\/]site[\\/]popular-guides\.json$/.test(file)
         ? await popularGuides(raw)

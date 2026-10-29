@@ -109,6 +109,11 @@
     "lat": 43.2928,
     "lon": -5.993
   },
+  "atacama-desert": {
+    "query": "Atacama Desert|CL",
+    "lat": -22.9087,
+    "lon": -68.1997
+  },
   "athens": {
     "query": "Athens|GR",
     "lat": 37.9756,
@@ -1854,6 +1859,11 @@
     "lat": -50.9423,
     "lon": -73.4068
   },
+  "trieste": {
+    "query": "Trieste|IT",
+    "lat": 45.6496,
+    "lon": 13.7773
+  },
   "trogir": {
     "query": "Trogir|HR",
     "lat": 43.5164,
@@ -1973,6 +1983,11 @@
     "query": "Zadar|HR",
     "lat": 44.1194,
     "lon": 15.2314
+  },
+  "zagori": {
+    "query": "Zagori|GR",
+    "lat": 39.8649,
+    "lon": 20.8813
   },
   "zakopane": {
     "query": "Zakopane|PL",

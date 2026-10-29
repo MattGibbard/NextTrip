@@ -1,0 +1,199 @@
+{
+  "name": "Atacama Desert",
+  "published": true,
+  "country": "CL",
+  "title": "Holidays in Atacama Desert",
+  "intro": "One of the driest places on Earth, in northern Chile, with red rock valleys, salt flats full of flamingos, steaming geysers and some of the clearest night skies anywhere. Here's what Atacama Desert is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/chile-6472056_1280.webp",
+  "image_alt": "Red and golden plains at Piedras Rojas in the Atacama Desert, with a salt lagoon below pink and purple Andes peaks",
+  "wikipedia": "https://en.wikipedia.org/wiki/Atacama_Desert",
+  "to_code": "CJC",
+  "holiday_types": [
+    "adventure",
+    "nature"
+  ],
+  "nights": "4 to 6",
+  "trip_length": "two-weeks",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3 to 5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Chilean peso ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / L · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "San Pedro de Atacama sits at about 2,400 metres and some trips go above 4,000 metres, so take it easy for the first day or two. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Warm, some summer storms",
+      "temp": 26
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Warm, some summer storms",
+      "temp": 25
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Warm, clear",
+      "temp": 25
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm days, cold nights",
+      "temp": 24
+    },
+    "may": {
+      "rating": "good",
+      "note": "Mild days, cold nights",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Cool, freezing nights",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Cool, freezing nights",
+      "temp": 20
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Cool, windy",
+      "temp": 21
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, clear",
+      "temp": 23
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, clear",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Warm, clear",
+      "temp": 25
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 26
+    }
+  },
+  "when_to_go": "You can visit all year, and days are sunny almost every day. March to May and September to November are the sweet spots, with warm days and fewer crowds. June to August days are still pleasant but nights drop well below freezing. In January and February, summer storms in the high Andes can close some high-altitude trips.",
+  "things": [
+    {
+      "name": "Valle de la Luna",
+      "tag": "Ticketed",
+      "blurb": "The 'Valley of the Moon', with salt-crusted ridges, sand dunes and rock formations that glow red at sunset. Book tickets ahead.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "El Tatio geysers",
+      "tag": "Tour",
+      "blurb": "A dawn trip to one of the highest geyser fields in the world, at around 4,300 metres, best just after sunrise.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Altiplano lagoons",
+      "tag": "Tour",
+      "blurb": "Bright blue high-altitude lagoons and the red plains of Piedras Rojas, with volcanoes all around.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Laguna Chaxa",
+      "tag": "Ticketed",
+      "blurb": "A lagoon on the Salar de Atacama salt flat where flamingos feed, beautiful at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stargazing",
+      "tag": "Tour",
+      "blurb": "Night tours with telescopes to see the Milky Way in some of the darkest, clearest skies on the planet.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Floating lagoons",
+      "tag": "Ticketed",
+      "blurb": "Salt lagoons like Laguna Cejar, where the water is so salty you float.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sandboarding",
+      "tag": "Tour",
+      "blurb": "Slide down the big dunes of Valle de la Muerte, near San Pedro.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to the Atacama Desert from the UK?",
+      "answer": "Fly to Santiago, which British Airways serves direct from London Heathrow, or connect through a European hub. Then take a two-hour domestic flight to Calama and a transfer of about an hour and a half to San Pedro de Atacama."
+    },
+    {
+      "question": "Is altitude a problem in the Atacama?",
+      "answer": "San Pedro is at around 2,400 metres, and trips to the geysers and lagoons go above 4,000 metres. Rest on your first day, drink plenty of water and do the high trips later in your stay."
+    },
+    {
+      "question": "How many days do you need in the Atacama?",
+      "answer": "Four to six days covers the main trips without rushing, with time to get used to the altitude. Many people add it to a longer trip around Chile."
+    },
+    {
+      "question": "When is the best time to visit the Atacama?",
+      "answer": "It's good all year, but March to May and September to November have warm days and fewer crowds. Pack warm layers whatever the month, as nights are cold."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Torres del Paine",
+      "code": "PUQ",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Mendoza",
+      "code": "MDZ",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Cusco",
+      "code": "CUZ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Namibia",
+      "code": "WDH",
+      "label": "🧗 Adventure"
+    }
+  ],
+  "date": "2026-10-29T06:45:28Z",
+  "updated": "2026-10-29T06:45:28Z"
+}

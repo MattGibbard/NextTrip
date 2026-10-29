@@ -9,13 +9,14 @@ function coordinates(lat: number, lon: number) {
 /**
  * Where a guide's place is: its region with the country shaded and a pin in the middle, and a small
  * world map in the corner with a dot. The region is drawn when the site builds (scripts/guide-map.mjs);
- * the world is public/images/world.svg, coloured by CSS, from 84°N to 58°S.
+ * the world is public/images/world.svg, coloured by CSS, from 84°N to 58°S. Beside the facts board the
+ * map takes the board's height, trimming the region's edges around the pin.
  */
 export function GuideMap({ map, name, country, lat, lon }: { map: Map; name: string; country: string; lat: number; lon: number }) {
   return (
     <figure className="dg-map">
       <div className="dg-map-frame">
-        <svg viewBox="0 0 600 400" role="img" aria-label={`Map showing where ${name} is${country ? ` in ${country}` : ""}`}>
+        <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label={`Map showing where ${name} is${country ? ` in ${country}` : ""}`}>
           <rect className="dg-map-sea" width="600" height="400" />
           <path className="dg-map-land" d={map.land} />
           {map.country && <path className="dg-map-country" d={map.country} />}

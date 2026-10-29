@@ -909,22 +909,6 @@
   margin: 0;
   padding: 0;
 }
-.lp-guides .dx-card {
-  position: relative;
-}
-.lp-guides h3 a::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-card-lg);
-}
-.lp-guides h3 a:focus-visible {
-  outline: none;
-}
-.lp-guides h3 a:focus-visible::after {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
 /* On a phone, two small cards a row, so eight guides don't fill several screens */
 @media (max-width: 759px) {
   .dx-grid.lp-guides {

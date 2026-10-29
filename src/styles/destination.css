@@ -861,16 +861,18 @@ a.dg-similar-card:hover {
   gap: 24px 20px;
 }
 .dx-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-card-lg);
   box-shadow: var(--shadow);
-  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .dx-card:hover {
   transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
 }
 .dx-card-photo {
   position: relative;
@@ -922,8 +924,23 @@ a.dg-similar-card:hover {
   color: var(--text);
   text-decoration: none;
 }
-.dx-card h3 a:hover {
+/* The name's link stretches over the whole card, so a click anywhere opens the guide.
+   The card's own buttons sit above it (.dx-card-actions a). */
+.dx-card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card-lg);
+}
+.dx-card:hover h3 a {
   color: var(--accent);
+}
+.dx-card h3 a:focus-visible {
+  outline: none;
+}
+.dx-card h3 a:focus-visible::after {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 .dx-pills {
   display: flex;
@@ -1011,6 +1028,8 @@ a.dg-similar-card:hover {
   justify-content: space-between;
 }
 .dx-card-actions a {
+  position: relative;
+  z-index: 1;
   min-height: 44px;
   display: inline-flex;
   align-items: center;

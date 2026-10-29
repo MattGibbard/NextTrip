@@ -4,7 +4,7 @@ import type { PhotoSuggestion } from "../../shared/photos";
 import { PHOTO_COUNT, PHOTO_PAGES, PHOTO_PATH, PIXABAY_URL, photoQueries } from "../../shared/photos";
 import { api } from "../api";
 
-type Search = { state: "loading" | "ready" | "error" | "off"; photos: PhotoSuggestion[]; page: number; more: boolean };
+type Search = { state: "loading" | "ready" | "busy" | "error" | "off"; photos: PhotoSuggestion[]; page: number; more: boolean };
 
 /**
  * Cover photo: a few photos of the trip's places to tap, from Pixabay, with a
@@ -25,21 +25,25 @@ export function CoverPicker({ places, value, onChange, hint }: { places: Place[]
   const typed = words?.replace(/\|/g, " ").trim() ?? "";
   const key = words !== null ? typed : photoQueries(places).join("\n");
   const seq = useRef(0);
+  // Bumped by "Try again" when Pixabay was busy.
+  const [tries, setTries] = useState(0);
 
   // Asked even with no places yet, to find out whether photo search is set up at all.
   useEffect(() => {
     const mine = ++seq.current;
     setSearch((s) => (s.state === "off" ? s : { state: "loading", photos: words !== null ? [] : s.photos, page: 1, more: false }));
+    // Typed words wait a little longer, so a search isn't sent for every few letters.
     const t = setTimeout(async () => {
       try {
         const found = await api.photos(key ? key.split("\n") : []);
-        if (mine === seq.current) setSearch({ state: found.enabled ? "ready" : "off", photos: found.photos, page: 1, more: found.photos.length >= PHOTO_COUNT });
+        if (mine === seq.current)
+          setSearch({ state: !found.enabled ? "off" : found.busy ? "busy" : "ready", photos: found.photos, page: 1, more: found.photos.length >= PHOTO_COUNT });
       } catch {
         if (mine === seq.current) setSearch({ state: "error", photos: [], page: 1, more: false });
       }
-    }, key ? 400 : 0);
+    }, !key ? 0 : words !== null ? 700 : 400);
     return () => clearTimeout(t);
-  }, [key]);
+  }, [key, tries]);
 
   const loadMore = async () => {
     const mine = seq.current;
@@ -48,6 +52,11 @@ export function CoverPicker({ places, value, onChange, hint }: { places: Place[]
     try {
       const found = await api.photos(key.split("\n"), page);
       if (mine !== seq.current) return;
+      if (found.busy) {
+        setError("Pixabay is busy right now. Try again in a moment.");
+        return setSearch((s) => ({ ...s, state: "ready" }));
+      }
+      setError(null);
       setSearch((s) => {
         const seen = new Set(s.photos.map((p) => p.id));
         const fresh = found.photos.filter((p) => !seen.has(p.id));
@@ -148,6 +157,14 @@ export function CoverPicker({ places, value, onChange, hint }: { places: Place[]
           )}
           {key && search.state === "ready" && !search.photos.length && (
             <p className="muted small">{words !== null ? "No photos for that. Try other words, or paste a link to one of your own." : "No photos found for these places. Search for other photos or paste a link to one of your own."}</p>
+          )}
+          {search.state === "busy" && (
+            <p className="muted small">
+              Pixabay is busy right now.{" "}
+              <button type="button" className="cover-own" onClick={() => setTries((n) => n + 1)}>
+                Try again
+              </button>
+            </p>
           )}
           {search.state === "error" && <p className="muted small">Couldn't load photos right now. You can still paste a link to one.</p>}
           {error && <p className="error-text small">{error}</p>}

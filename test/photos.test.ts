@@ -103,6 +103,25 @@ describe("photo routes", () => {
     expect(new URL(fetches[0]).searchParams.get("page")).toBe("10");
   });
 
+  it("asks Pixabay again when it's busy, and says so if it stays busy", async () => {
+    let calls = 0;
+    vi.stubGlobal("fetch", async (input: RequestInfo | URL) => {
+      const q = new URL(String(input)).searchParams.get("q");
+      calls++;
+      if (q === "Busy" || calls === 1) return new Response("[ERROR 429] Rate limit exceeded", { status: 429 });
+      return Response.json({ hits: [hit(1), hit(2), hit(3), hit(4)] });
+    });
+    const ok = await (await call(a, "GET", "/photos?q=Paris")).json();
+    expect(ok.photos.map((p: PhotoSuggestion) => p.id)).toEqual([1, 2, 3, 4]);
+    expect(ok.busy).toBeUndefined();
+    expect(calls).toBe(2);
+
+    calls = 0;
+    const busy = await (await call(a, "GET", "/photos?q=Busy")).json();
+    expect(busy).toEqual({ enabled: true, photos: [], busy: true });
+    expect(calls).toBe(3);
+  });
+
   it("says when there's no key, without calling Pixabay", async () => {
     stubPixabay();
     const res = await worker.fetch(new Request("https://somewhere.party/api/photos?q=Lisbon", { headers: { Cookie: a } }), { ...env, PIXABAY_API_KEY: undefined }, {} as ExecutionContext);

@@ -8,9 +8,10 @@ function coordinates(lat: number, lon: number) {
 
 /**
  * Where a guide's place is: its region with the country shaded and a pin in the middle, a world map
- * in the top corner with a dot, and the place's name underneath (a label on the map beside the board). The region is drawn when the site builds (scripts/guide-map.mjs);
- * the world is public/images/world.svg, coloured by CSS, from 84°N to 58°S. Beside the facts board the
- * map takes the board's height, trimming the region's edges around the pin.
+ * in the top corner with a dot, and the place's name underneath. The region is drawn when the site
+ * builds (scripts/guide-map.mjs); the world is public/images/world.svg, coloured by CSS, from 84°N to
+ * 58°S. Beside the facts board the map takes the board's height, trimming the region's edges around
+ * the pin, and the name becomes a label on the map.
  */
 export function GuideMap({ map, name, country, lat, lon }: { map: Map; name: string; country: string; lat: number; lon: number }) {
   return (

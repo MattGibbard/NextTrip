@@ -62,10 +62,18 @@ export interface Destination {
   things: { tag: string; name: string; blurb: string; image: string; image_alt: string }[];
   faqs: { question: string; answer: string }[];
   similar: { name: string; code: string; label: string }[];
+  /** The "Where in the world" map, drawn when the site builds (scripts/guide-map.mjs). Null without a position. */
+  map: GuideMap | null;
+}
+
+/** SVG paths on a 600 × 400 map with the place in the middle: every other country, and the place's own. */
+export interface GuideMap {
+  land: string;
+  country: string;
 }
 
 /** What the list of guides knows about each one: everything but the guide's own words further down its page. Months have their ratings but not their notes. */
-export type DestinationCard = Omit<Destination, "facts" | "facts_note" | "when_to_go" | "things" | "faqs" | "similar" | "wikipedia">;
+export type DestinationCard = Omit<Destination, "facts" | "facts_note" | "when_to_go" | "things" | "faqs" | "similar" | "wikipedia" | "map">;
 
 const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
 const num = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? v : null);
@@ -138,6 +146,7 @@ export function readDestination(slug: string, raw: Record<string, unknown>, posi
     similar: list(raw.similar)
       .map((s) => ({ name: str(s.name), code: str(s.code).toUpperCase(), label: str(s.label) }))
       .filter((s) => s.name),
+    map: raw.map && typeof raw.map === "object" && typeof (raw.map as GuideMap).land === "string" ? (raw.map as GuideMap) : null,
   };
 }
 
@@ -145,8 +154,8 @@ const slugOf = (path: string) => path.replace(/^.*\/|\.json(\?.*)?$/g, "");
 
 // Only the card fields of each file (scripts/destination-cards.mjs), so this stays small as guides are added.
 const cards = import.meta.glob<Record<string, unknown>>("/content/destinations/*.json", { eager: true, query: "?card", import: "default" });
-// Each full guide is its own file, fetched when its page opens.
-const guides = import.meta.glob<Record<string, unknown>>("/content/destinations/*.json", { import: "default" });
+// Each full guide is its own file, with its map, fetched when its page opens.
+const guides = import.meta.glob<Record<string, unknown>>("/content/destinations/*.json", { query: "?guide", import: "default" });
 
 /** Every published guide's card, A to Z. Unpublished ones stay in the editor and off the site. */
 export const DESTINATIONS: DestinationCard[] = Object.entries(cards)

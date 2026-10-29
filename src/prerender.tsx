@@ -62,7 +62,7 @@ export function pages(): { page: PublicPage; file: string; path: string; index: 
 }
 
 // Every guide in full. The browser loads them one at a time (loadDestination); this file never reaches it.
-const guides = import.meta.glob<Record<string, unknown>>("/content/destinations/*.json", { eager: true, import: "default" });
+const guides = import.meta.glob<Record<string, unknown>>("/content/destinations/*.json", { eager: true, query: "?guide", import: "default" });
 
 function destination(page: PublicPage) {
   const slug = page.startsWith("destination:") ? page.slice("destination:".length) : "";

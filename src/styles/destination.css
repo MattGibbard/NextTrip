@@ -1343,3 +1343,129 @@ a.dg-similar-card:hover {
 .dg-flying-pick select {
   min-height: 44px;
 }
+
+/* "At a glance": the facts board and the map side by side from 760px, the map below on phones. */
+.dg-glance {
+  display: grid;
+  gap: 16px;
+  align-items: start;
+}
+@media (min-width: 760px) {
+  .dg-glance {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+.dg-map {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  --map-sea: var(--surface-2);
+  --map-land: var(--surface);
+}
+:root[data-theme="dark"] .dg-map {
+  --map-sea: var(--bg);
+  --map-land: var(--surface-2);
+}
+.dg-map-frame {
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
+.dg-map svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+}
+.dg-map-sea {
+  fill: var(--map-sea);
+}
+.dg-map-land {
+  fill: var(--map-land);
+  stroke: var(--border);
+  stroke-width: 1;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.dg-map-country {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.dg-map-pin {
+  fill: var(--accent);
+  stroke: var(--surface);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+.dg-map-pin-dot {
+  fill: var(--surface);
+}
+.dg-map-halo {
+  fill: var(--accent);
+  fill-opacity: 0.12;
+  stroke: var(--accent);
+  stroke-opacity: 0.5;
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+  vector-effect: non-scaling-stroke;
+}
+.dg-map-shadow {
+  fill: var(--text);
+  opacity: 0.2;
+}
+/* The whole world in the corner, with a dot where the map is. */
+.dg-map-world {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 25%;
+  min-width: 84px;
+  max-width: 128px;
+  aspect-ratio: 720 / 284;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+  box-sizing: content-box;
+  padding: 4px;
+  box-shadow: var(--shadow);
+}
+.dg-map-world::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: var(--muted);
+  opacity: 0.45;
+  -webkit-mask: url("/images/world.svg") center / 100% 100% no-repeat;
+  mask: url("/images/world.svg") center / 100% 100% no-repeat;
+}
+.dg-map-world i {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: var(--radius-round);
+  background: var(--accent);
+  box-shadow: 0 0 0 2px var(--surface);
+  left: calc(4px + (100% - 8px) * var(--x));
+  top: calc(4px + (100% - 8px) * var(--y));
+}
+.dg-map figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  padding: 12px 16px;
+}
+.dg-map figcaption .dg-label {
+  flex-basis: 100%;
+}
+.dg-map-coords {
+  font-family: var(--mono);
+  font-size: var(--text-5);
+  color: var(--muted);
+}

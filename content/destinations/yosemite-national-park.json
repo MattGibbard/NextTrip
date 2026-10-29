@@ -1,0 +1,197 @@
+{
+  "name": "Yosemite National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Yosemite National Park",
+  "intro": "Granite cliffs, thundering waterfalls and giant sequoias in California's Sierra Nevada, centred on the famous valley below El Capitan and Half Dome. Here's what Yosemite National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/yosemite-national-park-9577976_1280.webp",
+  "image_alt": "View over Yosemite Valley with granite cliffs and Half Dome from Glacier Point",
+  "wikipedia": "https://en.wikipedia.org/wiki/Yosemite_National_Park",
+  "to_code": "FAT",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snow, quiet",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snow, quiet",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Waterfalls build",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Waterfalls",
+      "temp": 18
+    },
+    "may": {
+      "rating": "best",
+      "note": "Waterfalls peak",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Busy, hot",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Busy, hot",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, calmer",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool, quiet",
+      "temp": 13
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 8
+    }
+  },
+  "when_to_go": "May and June are best for waterfalls, as the snow melts and Yosemite Falls roars. July and August are warm and very busy, and some falls dry up by late summer. September and October are calmer and still warm. Tioga Road and Glacier Point Road usually close with snow from November to late May. In recent summers you've needed a reservation to drive in at peak times, so check before you go.",
+  "things": [
+    {
+      "name": "Yosemite Valley",
+      "tag": "Free",
+      "blurb": "The heart of the park, with El Capitan, Half Dome and Bridalveil Fall. A free shuttle runs around the valley floor.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lower Yosemite Fall",
+      "tag": "Free",
+      "blurb": "An easy, flat loop to the foot of one of the tallest waterfalls in North America. Loudest in May and June.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mist Trail",
+      "tag": "Outdoors",
+      "blurb": "A steep stone staircase beside Vernal Fall, where the spray soaks you on the way up. A good half-day hike for older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Glacier Point",
+      "tag": "Free",
+      "blurb": "A clifftop viewpoint straight across to Half Dome, about an hour's drive from the valley in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mariposa Grove",
+      "tag": "Free",
+      "blurb": "Hundreds of giant sequoias near the south entrance, including the Grizzly Giant, on easy forest trails.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tuolumne Meadows",
+      "tag": "Day trip",
+      "blurb": "High alpine meadows and lakes along Tioga Road, only open in summer and far quieter than the valley.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Yosemite good for a family holiday?",
+      "answer": "Yes. The valley has easy flat walks, river beaches, bike hire and Junior Ranger badges, and there are bigger hikes for teenagers."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three nights covers the valley and Glacier Point. Stay five to add the giant sequoias and Tuolumne Meadows. It pairs well with San Francisco on a California road trip."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Fresno, about one and a half to two and a half hours away depending on where you stay, or San Francisco, about four hours away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Do you need a reservation for Yosemite?",
+      "answer": "In recent summers you've needed a reservation to drive in during peak hours, and in some years at weekends only. Rules change each year, so check the park website before you go."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Sequoia National Park",
+      "code": "FAT",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "San Francisco",
+      "code": "SFO",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Pacific Coast Highway",
+      "code": "SFO",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Kings Canyon National Park",
+      "code": "FAT",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

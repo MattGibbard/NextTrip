@@ -1,0 +1,197 @@
+{
+  "name": "Bruce Peninsula National Park",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Bruce Peninsula National Park",
+  "intro": "Turquoise water, white limestone cliffs and sea caves on Georgian Bay in Ontario, with boat trips to Flowerpot Island and shipwrecks. Here's what Bruce Peninsula National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/bruce-peninsula-national-park-4086366_1280.webp",
+  "image_alt": "A wooden cabin beside a lake in the forest near Tobermory, Bruce Peninsula",
+  "wikipedia": "https://en.wikipedia.org/wiki/Bruce_Peninsula_National_Park",
+  "to_code": "YYZ",
+  "holiday_types": [
+    "nature",
+    "beach",
+    "adventure"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need a Parks Canada pass, and in summer you must book a parking slot to visit the Grotto. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -3
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -2
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 2
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 9
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 13
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 6
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 0
+    }
+  },
+  "when_to_go": "July and August are warmest, when the water is at its most inviting, though Georgian Bay is still chilly. June and September are quieter and just as pretty. October brings autumn colour. You need to book a parking slot to visit the Grotto in summer, and they sell out, so book as soon as you know your dates.",
+  "things": [
+    {
+      "name": "The Grotto",
+      "tag": "Outdoors",
+      "blurb": "A sea cave with clear blue water, reached by a walk and a scramble down the cliffs. Book parking ahead in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Indian Head Cove",
+      "tag": "Free",
+      "blurb": "A pebbly cove of turquoise water and limestone boulders beside the Grotto, great for a cold swim.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Flowerpot Island",
+      "tag": "Tour",
+      "blurb": "Take a boat from Tobermory to an island with tall rock pillars shaped like flowerpots, part of Fathom Five National Marine Park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Glass-bottom boat",
+      "tag": "Tour",
+      "blurb": "See 19th-century shipwrecks in Big Tub Harbour through the bottom of the boat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Singing Sands",
+      "tag": "Free",
+      "blurb": "A shallow, sandy beach on Lake Huron with warmer water for little ones.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cyprus Lake",
+      "tag": "Outdoors",
+      "blurb": "A calm lake in the forest with canoe hire and walks to the coast.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Bruce Peninsula good for a family holiday?",
+      "answer": "Yes. The coves, boat trips and shipwrecks are exciting for children, though the rocky paths to the Grotto need care with little ones."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights in Tobermory. Combine it with Toronto and Niagara Falls."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Toronto, then drive about four hours north to Tobermory."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is the water warm enough to swim?",
+      "answer": "Georgian Bay is cold, around 18°C to 20°C at the height of summer. Singing Sands on the Lake Huron side is shallower and warmer."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Toronto",
+      "code": "YYZ",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Niagara Falls",
+      "code": "YYZ",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Point Pelee National Park",
+      "code": "YQG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "La Mauricie National Park",
+      "code": "YUL",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

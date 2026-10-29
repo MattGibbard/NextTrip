@@ -1,0 +1,197 @@
+{
+  "name": "Death Valley National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Death Valley National Park",
+  "intro": "The hottest, driest and lowest place in North America, with salt flats, sand dunes and painted hills on the edge of California and Nevada. Here's what Death Valley National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/death-valley-national-park-2562806_1280.webp",
+  "image_alt": "Eroded golden desert hills at Zabriskie Point in Death Valley",
+  "wikipedia": "https://en.wikipedia.org/wiki/Death_Valley_National_Park",
+  "to_code": "LAS",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "1 to 2",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Mild, sunny",
+      "temp": 19
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Mild, sunny",
+      "temp": 23
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Wildflowers",
+      "temp": 28
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 32
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Hot",
+      "temp": 38
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Extreme heat",
+      "temp": 43
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Extreme heat",
+      "temp": 47
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Extreme heat",
+      "temp": 46
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 41
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 33
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 25
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 18
+    }
+  },
+  "when_to_go": "November to March is the time to go, with warm, sunny days and cool nights. Spring after a wet winter can bring wildflowers. From May to September the heat is extreme, often over 45°C, so only drive between viewpoints with air conditioning and never walk after 10am. Fill up with fuel and water before you arrive, as places are far apart.",
+  "things": [
+    {
+      "name": "Badwater Basin",
+      "tag": "Free",
+      "blurb": "Walk out onto the salt flats at 86m below sea level, the lowest point in North America.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zabriskie Point",
+      "tag": "Free",
+      "blurb": "A short walk up to a view over golden, rippled badlands. Best at sunrise.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Artists Drive",
+      "tag": "Free",
+      "blurb": "A one-way loop road past hills streaked pink, green and purple by minerals.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mesquite Flat Sand Dunes",
+      "tag": "Free",
+      "blurb": "Rolling dunes near Stovepipe Wells that children can run up and slide down. Go early or late.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dante's View",
+      "tag": "Free",
+      "blurb": "A mountain viewpoint 1,600m above Badwater, much cooler than the valley floor.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Furnace Creek",
+      "tag": "Food",
+      "blurb": "The oasis at the heart of the park, with date palms, a visitor centre, pools and places to eat.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Death Valley good for a family holiday?",
+      "answer": "As a stop of a night or two in the cooler months, yes. The sights are mostly short walks from the car, and the dunes and salt flats feel like another planet."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "One or two nights is enough. It's often part of a road trip between Las Vegas, Yosemite and Los Angeles."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Las Vegas, about two hours' drive from Furnace Creek."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is it safe to visit Death Valley in summer?",
+      "answer": "It can be, if you stay in an air-conditioned car, drink lots of water and don't walk after mid-morning. People die here from the heat, so take it seriously."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Las Vegas",
+      "code": "LAS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Joshua Tree National Park",
+      "code": "PSP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Yosemite National Park",
+      "code": "FAT",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "White Sands National Park",
+      "code": "ELP",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

@@ -1,0 +1,197 @@
+{
+  "name": "Great Sand Dunes National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Great Sand Dunes National Park",
+  "intro": "The tallest sand dunes in North America piled against snowy mountains in southern Colorado, with a seasonal creek that turns into a beach. Here's what Great Sand Dunes National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/great-sand-dunes-national-park-6857317_1280.webp",
+  "image_alt": "Sand dunes in front of snow-capped mountains at Great Sand Dunes National Park, Colorado",
+  "wikipedia": "https://en.wikipedia.org/wiki/Great_Sand_Dunes_National_Park_and_Preserve",
+  "to_code": "COS",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "1 to 2",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 3
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 6
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool, windy",
+      "temp": 10
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Windy",
+      "temp": 14
+    },
+    "may": {
+      "rating": "best",
+      "note": "Creek flowing",
+      "temp": 19
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Creek at its best",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot sand",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot sand, storms",
+      "temp": 27
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 16
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 8
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 3
+    }
+  },
+  "when_to_go": "Late May and June are best, when the snowmelt Medano Creek flows across the foot of the dunes in waves, like a beach. September and October are also lovely. In summer the sand gets dangerously hot by afternoon, so climb the dunes at dawn or in the evening. Spring is windy, and winter is cold but beautiful with snow on the dunes.",
+  "things": [
+    {
+      "name": "Sand sledding",
+      "tag": "Ticketed",
+      "blurb": "Hire a sand sled or sandboard just outside the park and slide down the dunes. Children love it.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Medano Creek",
+      "tag": "Free",
+      "blurb": "In late spring the creek runs across the sand in little waves, making a shallow paddling beach in the desert.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "High Dune",
+      "tag": "Outdoors",
+      "blurb": "Climb to the top of the first big dune for a view across the dunefield. Harder than it looks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zapata Falls",
+      "tag": "Outdoors",
+      "blurb": "Just south of the park, a short walk and a paddle up a stream into a cave with a waterfall.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stargazing",
+      "tag": "Free",
+      "blurb": "A dark sky park, with some of the clearest night skies in the state.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Medano Pass road",
+      "tag": "Outdoors",
+      "blurb": "A sandy 4x4 track into the mountains behind the dunes, for high-clearance vehicles only.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Great Sand Dunes good for a family holiday?",
+      "answer": "Yes, for a night or two. Sledding down the dunes and splashing in the creek is pure fun for children, and there's not much more you need."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "One or two nights is plenty. It pairs well with Colorado Springs, Mesa Verde or a Rockies road trip."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Colorado Springs, about two and a half hours away, or Denver, about three and a half hours away. Alamosa, 40 minutes away, has a small airport with flights from Denver."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How hot does the sand get?",
+      "answer": "In summer the sand surface can reach over 60°C in the afternoon. Wear shoes and climb early in the morning or in the evening."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Rocky Mountain National Park",
+      "code": "DEN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "White Sands National Park",
+      "code": "ELP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Mesa Verde National Park",
+      "code": "DRO",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Santa Fe",
+      "code": "ABQ",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

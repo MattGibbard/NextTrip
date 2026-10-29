@@ -150,6 +150,11 @@
     "icon": "🎆"
   },
   {
+    "slug": "national-parks",
+    "name": "National parks",
+    "icon": "🏞️"
+  },
+  {
     "slug": "holidays-in-canada",
     "name": "Canada",
     "icon": "🇨🇦"

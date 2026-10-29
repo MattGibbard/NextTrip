@@ -1,0 +1,197 @@
+{
+  "name": "Canyonlands National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Canyonlands National Park",
+  "intro": "Vast desert canyons carved by the Colorado and Green rivers, seen from the clifftop viewpoints of Island in the Sky near Moab, Utah. Here's what Canyonlands National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/canyonlands-national-park-6600504_1280.webp",
+  "image_alt": "Layered red canyons stretching to the horizon in Canyonlands National Park, Utah",
+  "wikipedia": "https://en.wikipedia.org/wiki/Canyonlands_National_Park",
+  "to_code": "CNY",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 6
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot",
+      "temp": 36
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, storms",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 12
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 6
+    }
+  },
+  "when_to_go": "April, May, September and October are the best months, warm but not too hot. Summer is very hot with little shade, so visit the viewpoints early and late. Winter is cold and quiet, with the odd dusting of snow on the red rock. Island in the Sky is open all year and needs no reservation, unlike Arches next door.",
+  "things": [
+    {
+      "name": "Mesa Arch",
+      "tag": "Free",
+      "blurb": "A short walk to an arch on the cliff edge that frames the canyon below. At sunrise the underside glows orange.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grand View Point",
+      "tag": "Free",
+      "blurb": "The end of the road at Island in the Sky, with an easy rim walk and a view over hundreds of miles of canyons.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Green River Overlook",
+      "tag": "Free",
+      "blurb": "A quieter viewpoint looking down on the bends of the Green River.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Shafer Trail",
+      "tag": "Outdoors",
+      "blurb": "A dramatic dirt road of hairpins down the cliffs, for high-clearance 4x4s only. Jeep tours from Moab do it for you.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Needles",
+      "tag": "Day trip",
+      "blurb": "The park's southern district, about 90 minutes from Moab, with striped rock spires and longer hikes like Chesler Park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dead Horse Point State Park",
+      "tag": "Ticketed",
+      "blurb": "Just outside the park, a clifftop view of a giant gooseneck bend in the Colorado River.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Canyonlands good for a family holiday?",
+      "answer": "Yes, as a day or two from Moab. The Island in the Sky viewpoints are short walks from the car, though most have big drops and no railings, so hold little hands."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Base yourself in Moab for two or three nights and see Canyonlands and Arches together."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Salt Lake City and drive about four hours to Moab, or fly to Moab's small Canyonlands airport from Denver. Island in the Sky is 40 minutes from town."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Which part of Canyonlands should you visit?",
+      "answer": "Island in the Sky is closest to Moab and has the easiest viewpoints. The Needles suits keen walkers, and The Maze is remote backcountry for experienced hikers only."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Arches National Park",
+      "code": "CNY",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Capitol Reef National Park",
+      "code": "SLC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Grand Canyon",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Utah's national parks",
+      "code": "LAS",
+      "label": "🚗 Road trip"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

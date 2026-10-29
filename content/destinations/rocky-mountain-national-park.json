@@ -1,0 +1,197 @@
+{
+  "name": "Rocky Mountain National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Rocky Mountain National Park",
+  "intro": "Alpine lakes, elk herds and one of the highest roads in America in the Colorado Rockies, less than two hours from Denver. Here's what Rocky Mountain National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/rocky-mountain-national-park-3893777_1280.webp",
+  "image_alt": "Bear Lake surrounded by pine trees and mountains in Rocky Mountain National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Rocky_Mountain_National_Park",
+  "to_code": "DEN",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 4
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 5
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 9
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 13
+    },
+    "may": {
+      "rating": "good",
+      "note": "Thawing",
+      "temp": 18
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 24
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer, storms",
+      "temp": 27
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer, storms",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Elk rut",
+      "temp": 22
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Aspens, elk",
+      "temp": 16
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 9
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 4
+    }
+  },
+  "when_to_go": "June to September is best, when Trail Ridge Road is open and the high trails are clear. Summer afternoons often bring thunderstorms, so walk in the morning. September and early October bring golden aspens and the elk rut, when bugling bulls gather in the meadows. You usually need a timed entry reservation from late May to mid October. Winter is snowy and quiet, with snowshoeing near Bear Lake.",
+  "things": [
+    {
+      "name": "Trail Ridge Road",
+      "tag": "Free",
+      "blurb": "A drive over the top of the Rockies, climbing to over 3,700m, with tundra viewpoints and marmots. Usually open from late May to October.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bear Lake",
+      "tag": "Free",
+      "blurb": "An easy, flat loop around a mountain lake, and the start of walks to Nymph, Dream and Emerald Lakes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alberta Falls",
+      "tag": "Outdoors",
+      "blurb": "A gentle walk through the forest to a rushing waterfall, good for younger children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Moraine Park",
+      "tag": "Free",
+      "blurb": "A wide valley where herds of elk graze. In autumn you'll hear the bulls bugling at dusk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sprague Lake",
+      "tag": "Free",
+      "blurb": "A flat, buggy-friendly path around a lake with views of the peaks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Estes Park",
+      "tag": "Food",
+      "blurb": "The mountain town at the gate, with ice cream shops, an aerial tramway and elk wandering the streets.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Rocky Mountain National Park good for a family holiday?",
+      "answer": "Yes. The lake walks are short and pretty, wildlife is easy to spot, and Estes Park has plenty for children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights in Estes Park or Grand Lake covers the main sights. Add a couple of nights in Denver either side."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Denver, about one and a half to two hours' drive from Estes Park."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Do you need a reservation for Rocky Mountain National Park?",
+      "answer": "Usually, yes, from late May to mid October. Timed entry permits are booked on Recreation.gov, with a separate one for the Bear Lake road. Check this year's dates before you go."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Great Sand Dunes National Park",
+      "code": "COS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Grand Teton National Park",
+      "code": "JAC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Mesa Verde National Park",
+      "code": "DRO",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Park City",
+      "code": "SLC",
+      "label": "🧗 Adventure"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

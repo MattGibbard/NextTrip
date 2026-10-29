@@ -1,0 +1,196 @@
+{
+  "name": "Shenandoah National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Shenandoah National Park",
+  "intro": "The Blue Ridge Mountains of Virginia, with the 105-mile Skyline Drive along the top, waterfalls in the hollows and deer in the meadows, two hours from Washington. Here's what Shenandoah National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/shenandoah-national-park-4913571_1280.webp",
+  "image_alt": "View from Skyline Drive over the Blue Ridge Mountains in Shenandoah National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Shenandoah_National_Park",
+  "to_code": "IAD",
+  "holiday_types": [
+    "nature",
+    "road-trip"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 4
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 6
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 11
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 17
+    },
+    "may": {
+      "rating": "best",
+      "note": "Wildflowers",
+      "temp": 21
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, hazy",
+      "temp": 27
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, hazy",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Clear days",
+      "temp": 23
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 17
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 11
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 6
+    }
+  },
+  "when_to_go": "May and June bring wildflowers and fresh green forest, and October is the peak for autumn colour, usually around the middle of the month. Summer is warm and often hazy, but cooler on the ridge than in the lowlands. Winter is cold and quiet, and parts of Skyline Drive can close in snow or ice.",
+  "things": [
+    {
+      "name": "Skyline Drive",
+      "tag": "Free",
+      "blurb": "A slow road along the mountain crest with about 70 viewpoints over the Shenandoah Valley. The speed limit is 35mph.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dark Hollow Falls",
+      "tag": "Outdoors",
+      "blurb": "A short, steep walk to a waterfall tumbling over rocks. The climb back up takes longer than you think.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stony Man",
+      "tag": "Outdoors",
+      "blurb": "An easy walk to one of the best views in the park, good for younger children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Big Meadows",
+      "tag": "Free",
+      "blurb": "An open meadow where deer graze at dusk, with a lodge, campground and visitor centre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old Rag",
+      "tag": "Outdoors",
+      "blurb": "A famous hike with a rock scramble near the top. You need a day-use ticket from March to November.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Luray Caverns",
+      "tag": "Ticketed",
+      "blurb": "Huge caves just outside the park, full of stalactites and a stone organ played by tapping the rock.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Shenandoah good for a family holiday?",
+      "answer": "Yes. Many viewpoints are right by the road, there are short waterfall walks, and deer are easy to spot. It's an easy add-on to a few days in Washington."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights covers Skyline Drive and a few walks. Stay at Skyland or Big Meadows lodges inside the park."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Washington Dulles, about an hour and a half from the northern entrance at Front Royal."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "When is the best time to see the autumn colours?",
+      "answer": "Usually in mid to late October. Weekends get very busy, so go midweek if you can."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Washington, D.C.",
+      "code": "IAD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Great Smoky Mountains National Park",
+      "code": "TYS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "New River Gorge National Park",
+      "code": "CRW",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Asheville",
+      "code": "AVL",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

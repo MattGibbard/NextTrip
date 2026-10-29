@@ -1,0 +1,196 @@
+{
+  "name": "Saguaro National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Saguaro National Park",
+  "intro": "Forests of giant saguaro cacti, the classic cactus of Wild West films, on either side of Tucson in the Arizona desert. Here's what Saguaro National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/saguaro-national-park-534758_1280.webp",
+  "image_alt": "A tall saguaro cactus in the desert under a blue sky in Saguaro National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Saguaro_National_Park",
+  "to_code": "TUS",
+  "holiday_types": [
+    "nature",
+    "road-trip"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK, 8 in summer",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Mild, sunny",
+      "temp": 19
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 21
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Spring blooms",
+      "temp": 24
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 29
+    },
+    "may": {
+      "rating": "good",
+      "note": "Saguaro flowers",
+      "temp": 34
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 39
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Hot, storms",
+      "temp": 38
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hot, storms",
+      "temp": 37
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 36
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 30
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 24
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 19
+    }
+  },
+  "when_to_go": "October to April is the best time, with warm, sunny days that are perfect for desert walks. Late April to June is when the saguaros flower, but it's getting very hot. Summer is extremely hot, with spectacular monsoon storms in July and August. Winter is mild, making Tucson a good winter sun break.",
+  "things": [
+    {
+      "name": "Cactus Forest Loop Drive",
+      "tag": "Free",
+      "blurb": "An eight-mile road through dense saguaro forest in the eastern district, with short walks along the way.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Signal Hill",
+      "tag": "Free",
+      "blurb": "A short climb to rocks covered in ancient petroglyphs in the western district.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bajada Loop Drive",
+      "tag": "Free",
+      "blurb": "A gravel road through the western district's thick saguaro forest. Lovely at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Valley View Overlook",
+      "tag": "Outdoors",
+      "blurb": "An easy walk to a viewpoint over a valley of cacti.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Arizona-Sonora Desert Museum",
+      "tag": "Ticketed",
+      "blurb": "A brilliant zoo, garden and museum of desert life right next to the park, with mountain lions and hummingbirds.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mount Lemmon",
+      "tag": "Day trip",
+      "blurb": "A scenic drive from Tucson up into cool pine forest, about 20°C cooler than the desert.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Saguaro National Park good for a family holiday?",
+      "answer": "Yes. The scenic drives and short walks are easy, the cacti are huge, and the Desert Museum next door is one of the best family days out in Arizona."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights in Tucson covers both districts and the Desert Museum."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Tucson, about 30 minutes from either district. Phoenix is about two hours away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How tall do saguaros grow?",
+      "answer": "Up to about 12m. They grow very slowly, and a saguaro doesn't grow its first arm until it's around 50 to 70 years old."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Sedona",
+      "code": "PHX",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Joshua Tree National Park",
+      "code": "PSP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Petrified Forest National Park",
+      "code": "FLG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Grand Canyon",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

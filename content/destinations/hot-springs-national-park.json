@@ -1,0 +1,197 @@
+{
+  "name": "Hot Springs National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Hot Springs National Park",
+  "intro": "A historic spa town in the Arkansas hills, with grand old bathhouses, hot spring water you can drink from fountains and wooded walking trails. Here's what Hot Springs National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/hot-springs-national-park-3584889_1280.webp",
+  "image_alt": "The tiled lobby of the Fordyce Bathhouse in Hot Springs National Park, Arkansas",
+  "wikipedia": "https://en.wikipedia.org/wiki/Hot_Springs_National_Park",
+  "to_code": "LIT",
+  "holiday_types": [
+    "culture",
+    "relax",
+    "nature"
+  ],
+  "nights": "2",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "There's no entry fee to visit the park. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, quiet",
+      "temp": 11
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 14
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 19
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 24
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, humid",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Hot, humid",
+      "temp": 34
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hot, humid",
+      "temp": 34
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 30
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 25
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild, quiet",
+      "temp": 12
+    }
+  },
+  "when_to_go": "Spring and autumn are best, with warm days for walking the trails and the trees in blossom or turning colour. Summer is hot and humid, but the bathhouses are a good place to escape it. Winter is mild and quiet, and a hot spring bath on a cold day is the whole point.",
+  "things": [
+    {
+      "name": "Bathhouse Row",
+      "tag": "Free",
+      "blurb": "A street of grand bathhouses from the early 1900s, with a promenade behind them.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fordyce Bathhouse",
+      "tag": "Free",
+      "blurb": "The park's visitor centre, restored to show the stained glass, marble baths and odd old spa equipment.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Buckstaff Bathhouse",
+      "tag": "Ticketed",
+      "blurb": "A traditional bath, still run the way it was a century ago. Best for adults and older children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Quapaw Baths",
+      "tag": "Ticketed",
+      "blurb": "A modern spa with warm thermal pools that families can share.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spring water fountains",
+      "tag": "Free",
+      "blurb": "Fill your bottle with hot spring water from public fountains around town. It's safe to drink and locals queue with jugs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hot Springs Mountain Tower",
+      "tag": "Ticketed",
+      "blurb": "A lift to the top of a tower over the forest and the Ouachita Mountains.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Hot Springs National Park good for a family holiday?",
+      "answer": "For a weekend, yes. Children enjoy the old bathhouses, the drinkable hot water and the mountain tower, and there are easy trails and a lake nearby."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two nights is enough. It fits into a road trip with Memphis, Nashville or New Orleans."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Little Rock, about an hour's drive away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is it really a national park?",
+      "answer": "Yes. It's America's smallest and one of its oldest, protected since 1832 for its hot springs, and it's mostly in town."
+    }
+  ],
+  "similar": [
+    {
+      "name": "New Orleans",
+      "code": "MSY",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Austin",
+      "code": "AUS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Yellowstone",
+      "code": "BZN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Palm Springs",
+      "code": "PSP",
+      "label": "🧘 Relax & spa"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

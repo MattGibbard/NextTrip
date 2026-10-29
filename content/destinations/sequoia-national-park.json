@@ -1,0 +1,197 @@
+{
+  "name": "Sequoia National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Sequoia National Park",
+  "intro": "Home to the General Sherman Tree, the largest living tree on earth, with forests of giant sequoias, granite domes and caves in California's Sierra Nevada. Here's what Sequoia National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/sequoia-national-park-1752848_1280.webp",
+  "image_alt": "The huge red trunk of a giant sequoia tree in Sequoia National Park, California",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sequoia_National_Park",
+  "to_code": "FAT",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy forest",
+      "temp": 7
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 8
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 10
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 13
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 17
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 26
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 17
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 11
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 7
+    }
+  },
+  "when_to_go": "May to October is best, when the Generals Highway is clear and Crystal Cave and Moro Rock are open. Summer is warm in the forest but very hot in the foothills at the park entrance. Winter brings snow to the giant forest, so you need snow chains in the car, but the trees look magical. The road from the foothills is long and twisty, with length limits for big vehicles.",
+  "things": [
+    {
+      "name": "General Sherman Tree",
+      "tag": "Free",
+      "blurb": "The largest tree on earth by volume, at the end of a short paved path through the giant forest.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Congress Trail",
+      "tag": "Free",
+      "blurb": "An easy, paved two-mile loop from General Sherman among some of the biggest sequoias in the park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Moro Rock",
+      "tag": "Outdoors",
+      "blurb": "Climb about 350 steps cut into a granite dome for a view across the Sierra. Handrails all the way.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tunnel Log",
+      "tag": "Free",
+      "blurb": "A fallen sequoia with a tunnel cut through it that you can drive your car under.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Crystal Cave",
+      "tag": "Tour",
+      "blurb": "A marble cave of stalactites, open on guided tours in summer. Tickets must be bought in advance.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tokopah Falls",
+      "tag": "Outdoors",
+      "blurb": "A gentle riverside walk to a tall waterfall, where you might spot marmots on the rocks.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Sequoia National Park good for a family holiday?",
+      "answer": "Yes. The biggest trees are a short, easy walk from the car parks, and climbing Moro Rock and driving through Tunnel Log are fun for children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights is plenty. Combine it with Kings Canyon, which joins it to the north, or with Yosemite, about three hours away."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Fresno, about an hour and a half from the park entrance. Los Angeles is about four hours away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is Sequoia the same park as Kings Canyon?",
+      "answer": "They're two national parks run together, joined by the Generals Highway, and one entry fee covers both."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kings Canyon National Park",
+      "code": "FAT",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Yosemite National Park",
+      "code": "FAT",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Redwood National Park",
+      "code": "ACV",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Los Angeles",
+      "code": "LAX",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

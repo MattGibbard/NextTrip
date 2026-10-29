@@ -1,0 +1,197 @@
+{
+  "name": "Olympic National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Olympic National Park",
+  "intro": "Three parks in one in Washington state: snowy mountains, mossy temperate rainforest and wild Pacific beaches with sea stacks and tide pools. Here's what Olympic National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/olympic-national-park-7058560_1280.webp",
+  "image_alt": "Calm Lake Crescent surrounded by forested mountains in Olympic National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Olympic_National_Park",
+  "to_code": "SEA",
+  "holiday_types": [
+    "nature",
+    "road-trip",
+    "beach"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 7
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 8
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Wet",
+      "temp": 10
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 13
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 18
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Dry, summer",
+      "temp": 21
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Dry, summer",
+      "temp": 21
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Sunny",
+      "temp": 19
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Rain returns",
+      "temp": 14
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 9
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 7
+    }
+  },
+  "when_to_go": "July to September is the best time, the driest part of the year, with the mountain roads clear of snow. The rainforest is green and dripping whatever the month, as it gets over three metres of rain a year. Spring and autumn are quieter and wetter. Winter is very wet on the coast and snowy in the mountains.",
+  "things": [
+    {
+      "name": "Hoh Rain Forest",
+      "tag": "Free",
+      "blurb": "Walk the Hall of Mosses among huge trees draped in moss and ferns. Elk often graze near the visitor centre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hurricane Ridge",
+      "tag": "Free",
+      "blurb": "A mountain road from Port Angeles to alpine meadows with views of the Olympic peaks and deer by the path.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lake Crescent",
+      "tag": "Outdoors",
+      "blurb": "A deep, clear blue lake with kayak hire and an easy forest walk to Marymere Falls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rialto Beach",
+      "tag": "Free",
+      "blurb": "A wild beach of driftwood logs and sea stacks. At low tide walk to the Hole-in-the-Wall arch.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ruby Beach",
+      "tag": "Free",
+      "blurb": "Sea stacks, tide pools full of starfish and anemones, and pebbles to skim.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sol Duc Hot Springs",
+      "tag": "Ticketed",
+      "blurb": "A resort with hot mineral pools in the forest, a good end to a wet day.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Olympic National Park good for a family holiday?",
+      "answer": "Yes. Rainforest walks, beach rock-pooling, lakes and mountains in one trip means there's always something new for children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights, moving round the park, as it's big and there's no road through the middle. Port Angeles and Forks make good bases."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Seattle, then drive about two and a half to three hours to Port Angeles, often with a ferry across Puget Sound."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Does it rain all the time?",
+      "answer": "On the coast and in the rainforest it often does, but summer is much drier. Pack waterproofs whenever you go."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Mount Rainier National Park",
+      "code": "SEA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Vancouver",
+      "code": "YVR",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Pacific Rim National Park Reserve",
+      "code": "YAZ",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Redwood National Park",
+      "code": "ACV",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

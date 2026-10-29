@@ -1,0 +1,197 @@
+{
+  "name": "Grand Teton National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Grand Teton National Park",
+  "intro": "Jagged snowy peaks rising straight out of lakes and sagebrush in Wyoming, with moose, bison and the cowboy town of Jackson next door. Here's what Grand Teton National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/grand-teton-national-park-5794420_1280.webp",
+  "image_alt": "The Grand Teton mountains reflected in a lake in Grand Teton National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Grand_Teton_National_Park",
+  "to_code": "JAC",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Skiing",
+      "temp": -4
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Skiing",
+      "temp": -1
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 4
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Thawing",
+      "temp": 9
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring, wildlife",
+      "temp": 15
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 21
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 27
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 20
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Cool, elk",
+      "temp": 13
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 3
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Skiing",
+      "temp": -3
+    }
+  },
+  "when_to_go": "June to September is the best time, when the lakes are open and the walks are clear of snow. Late September brings golden aspens and the elk rut. Winter is snowy and very cold, good for skiing at Jackson Hole, but many park roads and services close. Spring is muddy but great for spotting baby animals.",
+  "things": [
+    {
+      "name": "Jenny Lake",
+      "tag": "Outdoors",
+      "blurb": "Take the boat across the lake, then walk up to Hidden Falls and Inspiration Point. One of the best family walks in the park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mormon Row",
+      "tag": "Free",
+      "blurb": "Old wooden barns in a meadow with the Tetons behind them, one of the most photographed views in the West.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Oxbow Bend",
+      "tag": "Free",
+      "blurb": "A bend in the Snake River where moose, elk and otters often feed at dawn and dusk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Snake River float trip",
+      "tag": "Tour",
+      "blurb": "A gentle guided raft trip down the river, watching for bald eagles and beavers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Colter Bay",
+      "tag": "Outdoors",
+      "blurb": "Lakeside walks, canoe hire and a beach on Jackson Lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jackson",
+      "tag": "Food",
+      "blurb": "A Western town with wooden boardwalks, a square framed by antler arches and rodeos on summer evenings.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Grand Teton good for a family holiday?",
+      "answer": "Yes. There are short lakeside walks, boat trips, rafting and lots of wildlife, and Jackson makes a fun base."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights for the Tetons alone. Yellowstone is right next door, so many families spend a week or more seeing both."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Jackson Hole airport, which is inside the park, usually changing in Denver, Salt Lake City or another US hub."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Do you see bears in Grand Teton?",
+      "answer": "Often, yes, both black bears and grizzlies. Carry bear spray on walks, make noise and never get close."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Yellowstone",
+      "code": "BZN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Glacier National Park",
+      "code": "FCA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Rocky Mountain National Park",
+      "code": "DEN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Banff",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

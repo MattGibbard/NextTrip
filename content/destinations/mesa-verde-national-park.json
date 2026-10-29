@@ -1,0 +1,197 @@
+{
+  "name": "Mesa Verde National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Mesa Verde National Park",
+  "intro": "Ancient stone villages built into cliff alcoves by the Ancestral Puebloans in southwest Colorado, reached by ladders on ranger-led tours. Here's what Mesa Verde National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/mesa-verde-national-park-3886010_1280.webp",
+  "image_alt": "Cliff Palace, ancient stone dwellings under a rock overhang at Mesa Verde National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Mesa_Verde_National_Park",
+  "to_code": "DRO",
+  "holiday_types": [
+    "nature",
+    "culture",
+    "road-trip"
+  ],
+  "nights": "2",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy, tours shut",
+      "temp": 5
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 7
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 11
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 16
+    },
+    "may": {
+      "rating": "best",
+      "note": "Tours start",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer, storms",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer, storms",
+      "temp": 29
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 25
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 18
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 10
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 5
+    }
+  },
+  "when_to_go": "Mid May to October is the best time, when the ranger-guided tours into the cliff dwellings run and Wetherill Mesa is open. Summer is warm, with afternoon thunderstorms. Spring and autumn are quieter and cooler. In winter the cliff dwellings are closed to visitors, though you can still see some from viewpoints and the museum stays open.",
+  "things": [
+    {
+      "name": "Cliff Palace tour",
+      "tag": "Tour",
+      "blurb": "Climb ladders into the largest cliff dwelling in North America with a ranger. Book tickets ahead on Recreation.gov.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Balcony House tour",
+      "tag": "Tour",
+      "blurb": "An adventurous tour with a 10m ladder and a crawl through a narrow tunnel. Brilliant for confident children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mesa Top Loop Road",
+      "tag": "Free",
+      "blurb": "A drive past pit houses, villages and viewpoints over the cliff dwellings, showing how the villages changed over 700 years.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chapin Mesa Archeological Museum",
+      "tag": "Indoors",
+      "blurb": "Dioramas, pottery and tools that tell the story of the people who lived here.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spruce Tree House",
+      "tag": "Free",
+      "blurb": "One of the best-preserved dwellings, seen from a viewpoint near the museum.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Durango & Silverton railroad",
+      "tag": "Day trip",
+      "blurb": "A historic steam train through the mountains from Durango, about an hour away.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Mesa Verde good for a family holiday?",
+      "answer": "Yes, especially for children who like history and climbing ladders. Book the tours ahead, as they sell out in summer."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two nights is enough. Stay in the park or in Durango or Cortez, and combine it with the Rockies, Arches or the Grand Canyon."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Durango, about an hour and a quarter away, usually changing in Denver or Phoenix."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can you go inside the cliff dwellings?",
+      "answer": "Only on ranger-guided tours, which run from about May to October and need tickets bought in advance."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Arches National Park",
+      "code": "CNY",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Santa Fe",
+      "code": "ABQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Grand Canyon",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Great Sand Dunes National Park",
+      "code": "COS",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

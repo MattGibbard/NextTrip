@@ -1,0 +1,197 @@
+{
+  "name": "Gros Morne National Park",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Gros Morne National Park",
+  "intro": "Land-locked fjords, flat-topped mountains and bare orange rock from deep inside the earth on the west coast of Newfoundland. Here's what Gros Morne National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/gros-morne-national-park-6977813_1280.webp",
+  "image_alt": "Steep cliffs above the waters of Western Brook Pond fjord in Gros Morne National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Gros_Morne_National_Park",
+  "to_code": "YDF",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "culture"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "3½ hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need a Parks Canada pass to stop in the park: a day pass, or a Discovery Pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -3
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -3
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 0
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 5
+    },
+    "may": {
+      "rating": "good",
+      "note": "Cool",
+      "temp": 11
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Boats start",
+      "temp": 16
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 20
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 20
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 16
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 10
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 4
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -1
+    }
+  },
+  "when_to_go": "July and August are the best months, with the warmest weather and every boat tour running. June and September are quieter and cooler. The weather changes fast, so pack waterproofs and warm layers even in summer. Winter brings deep snow, and the park is popular for backcountry skiing.",
+  "things": [
+    {
+      "name": "Western Brook Pond",
+      "tag": "Tour",
+      "blurb": "Walk about 3km across bog and forest to the dock, then take a boat into a fjord with waterfalls tumbling down 600m cliffs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Tablelands",
+      "tag": "Free",
+      "blurb": "Walk on bare orange rock pushed up from the earth's mantle, which looks more like a desert than Newfoundland.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lobster Cove Head",
+      "tag": "Free",
+      "blurb": "A lighthouse above Rocky Harbour with a short walk and a great sunset view.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gros Morne Mountain",
+      "tag": "Outdoors",
+      "blurb": "A tough all-day climb to the top of the park's highest peak, for fit teenagers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bonne Bay",
+      "tag": "Tour",
+      "blurb": "Boat trips and kayaking around the bay, sometimes with whales, plus the little towns of Woody Point and Norris Point.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Green Gardens",
+      "tag": "Outdoors",
+      "blurb": "A walk down to sea stacks, caves and meadows with sheep grazing above the cliffs.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Gros Morne good for a family holiday?",
+      "answer": "Yes. The boat tour, the strange Tablelands and the beaches are all great with children, and the walks range from short and easy to very hard."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights in Rocky Harbour or Woody Point."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Deer Lake, about 45 minutes away, usually changing in Toronto, Montreal or Halifax."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Why is Gros Morne a World Heritage Site?",
+      "answer": "Its rocks show how the continents move, including part of the earth's mantle that's normally deep underground, now sitting out in the open."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cape Breton Highlands National Park",
+      "code": "YQY",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Faroe Islands",
+      "code": "FAE",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Fundy National Park",
+      "code": "YQM",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Halifax",
+      "code": "YHZ",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

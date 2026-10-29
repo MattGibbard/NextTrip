@@ -1,0 +1,197 @@
+{
+  "name": "Prince Edward Island National Park",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Prince Edward Island National Park",
+  "intro": "Red sandstone cliffs, sand dunes and some of the warmest sea in Canada on PEI's north shore, home of Anne of Green Gables. Here's what Prince Edward Island National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/prince-edward-island-national-park-54984_1280.webp",
+  "image_alt": "A red-roofed lighthouse beside fishing huts and the shore on Prince Edward Island",
+  "wikipedia": "https://en.wikipedia.org/wiki/Prince_Edward_Island_National_Park",
+  "to_code": "YYG",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "culture"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "4 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need a Parks Canada pass to stop in the park: a day pass, or a Discovery Pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -3
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": -3
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 1
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 7
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 14
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Beach weather",
+      "temp": 24
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Beach weather",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 19
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn",
+      "temp": 13
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 6
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 0
+    }
+  },
+  "when_to_go": "July and August are the beach months, with sea temperatures warm for Canada, often over 20°C. June and September are quieter and still pleasant, though the sea is cooler. In autumn the island is lovely and peaceful, but many places close by mid October. Winter is snowy and cold.",
+  "things": [
+    {
+      "name": "Cavendish Beach",
+      "tag": "Free",
+      "blurb": "A long sandy beach below red cliffs with lifeguards in summer and warm, shallow water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Green Gables Heritage Place",
+      "tag": "Ticketed",
+      "blurb": "The farmhouse that inspired Anne of Green Gables, with the Haunted Wood and Lovers' Lane trails.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Greenwich dunes",
+      "tag": "Free",
+      "blurb": "A floating boardwalk across a pond to tall, rolling sand dunes on the east of the park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Covehead lighthouse",
+      "tag": "Free",
+      "blurb": "A little white lighthouse on the dunes, near Brackley Beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Lobster suppers",
+      "tag": "Food",
+      "blurb": "A PEI tradition in church halls and restaurants, with lobster, mussels, chowder and pie.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cycling",
+      "tag": "Outdoors",
+      "blurb": "Flat roads and the Gulf Shore Way path make the park easy to explore by bike.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Prince Edward Island National Park good for a family holiday?",
+      "answer": "Yes. Warm, shallow beaches, flat bike paths and Anne of Green Gables make it one of Canada's best family seaside spots."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three to five nights in Cavendish or North Rustico, or longer as part of a Maritimes road trip."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Charlottetown, about 30 minutes away, or drive over the Confederation Bridge from New Brunswick."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is the sea really warm?",
+      "answer": "For Canada, yes. In late July and August the water often reaches 20°C to 22°C, warmer than most UK beaches."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Fundy National Park",
+      "code": "YQM",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Cape Breton Highlands National Park",
+      "code": "YQY",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Halifax",
+      "code": "YHZ",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Quebec City",
+      "code": "YQB",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

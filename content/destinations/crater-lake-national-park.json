@@ -1,0 +1,196 @@
+{
+  "name": "Crater Lake National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Crater Lake National Park",
+  "intro": "The deepest lake in the United States, an astonishing blue, filling the crater of a collapsed volcano in the Oregon Cascades. Here's what Crater Lake National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/crater-lake-national-park-5193975_1280.webp",
+  "image_alt": "Deep blue Crater Lake with Wizard Island and pine trees on the rim",
+  "wikipedia": "https://en.wikipedia.org/wiki/Crater_Lake_National_Park",
+  "to_code": "MFR",
+  "holiday_types": [
+    "nature",
+    "road-trip"
+  ],
+  "nights": "1 to 2",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Deep snow",
+      "temp": 2
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Deep snow",
+      "temp": 2
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Deep snow",
+      "temp": 3
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 6
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 10
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Snow melting",
+      "temp": 15
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Rim Drive open",
+      "temp": 21
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 21
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Clear, quiet",
+      "temp": 17
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Snow returns",
+      "temp": 10
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 4
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Deep snow",
+      "temp": 1
+    }
+  },
+  "when_to_go": "July to September is the time to go. Crater Lake gets some of the heaviest snow in America, and Rim Drive usually only opens fully in July and closes again in October. The boat tours run in summer only. Late summer can bring wildfire smoke that hides the lake. In winter you can reach the rim at Rim Village, but the lake is often hidden by cloud and snow.",
+  "things": [
+    {
+      "name": "Rim Drive",
+      "tag": "Free",
+      "blurb": "A 33-mile road around the crater with viewpoints over the lake. Allow half a day with stops.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Boat tour",
+      "tag": "Tour",
+      "blurb": "Take a boat around the lake, with a stop on Wizard Island in some tours. Reaching the boat means a steep walk down Cleetwood Cove Trail.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Watchman Peak",
+      "tag": "Outdoors",
+      "blurb": "A short climb to a fire lookout with the best sunset view of the lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Swimming at Cleetwood Cove",
+      "tag": "Free",
+      "blurb": "The only place you can reach the water. It's icy cold and very deep, and jumping off the rocks is a rite of passage.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Plaikni Falls",
+      "tag": "Free",
+      "blurb": "An easy, flat walk through forest to a waterfall, good for younger children.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pinnacles",
+      "tag": "Free",
+      "blurb": "Strange spires of volcanic ash on the quieter southeast side of the park.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Crater Lake good for a family holiday?",
+      "answer": "As a stop of a night or two, yes. The lake is breathtaking and most viewpoints are right beside the road."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "One or two nights, at Crater Lake Lodge or the cabins at Mazama Village. It fits into a road trip with Redwood and Lassen."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Medford, about an hour and a half away. Portland is about four and a half hours away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Why is Crater Lake so blue?",
+      "answer": "It's very deep, about 594m, and very clear, with no rivers flowing in to bring sediment, so it absorbs every colour but blue."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lassen Volcanic National Park",
+      "code": "RDD",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Redwood National Park",
+      "code": "ACV",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Mount Rainier National Park",
+      "code": "SEA",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Yellowstone",
+      "code": "BZN",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

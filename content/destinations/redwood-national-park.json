@@ -1,0 +1,197 @@
+{
+  "name": "Redwood National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Redwood National Park",
+  "intro": "Forests of the tallest trees on earth running down to a wild Pacific coast in northern California, with ferny canyons and herds of elk. Here's what Redwood National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/redwood-national-park-2138582_1280.webp",
+  "image_alt": "A road through tall redwood trees in Redwood National Park, California",
+  "wikipedia": "https://en.wikipedia.org/wiki/Redwood_National_and_State_Parks",
+  "to_code": "ACV",
+  "holiday_types": [
+    "nature",
+    "road-trip",
+    "beach"
+  ],
+  "nights": "2 to 4",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Rainy, mild",
+      "temp": 13
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 13
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Showers",
+      "temp": 14
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 15
+    },
+    "may": {
+      "rating": "best",
+      "note": "Fresh",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 17
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer, fog",
+      "temp": 18
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer, fog",
+      "temp": 19
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Sunny",
+      "temp": 19
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn",
+      "temp": 17
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 15
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Rainy",
+      "temp": 13
+    }
+  },
+  "when_to_go": "May to October is best, with the driest weather. Summer brings morning sea fog that drifts through the trees, which is part of the magic, and inland is warmer. September and October are often the sunniest months on the coast. Winter is mild but wet. It's cool all year, so pack a fleece and a rain jacket.",
+  "things": [
+    {
+      "name": "Lady Bird Johnson Grove",
+      "tag": "Free",
+      "blurb": "An easy one-mile loop through old-growth redwoods, the best first walk in the park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fern Canyon",
+      "tag": "Outdoors",
+      "blurb": "A narrow canyon with walls covered in ferns, where you walk along a stream. You need a permit to drive there in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Elk Prairie",
+      "tag": "Free",
+      "blurb": "Watch herds of Roosevelt elk grazing by the road. Keep your distance, especially in autumn.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stout Grove",
+      "tag": "Free",
+      "blurb": "A quiet, flat loop among huge trees near Crescent City, by a river where children can paddle.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Klamath River Overlook",
+      "tag": "Free",
+      "blurb": "A clifftop viewpoint where you might spot whales and sea lions.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Trees of Mystery",
+      "tag": "Ticketed",
+      "blurb": "A family attraction with a gondola ride over the treetops and giant statues of Paul Bunyan and his ox.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Redwood National Park good for a family holiday?",
+      "answer": "Yes. The forest walks are flat and easy, there are beaches and rivers to explore, and spotting elk is a highlight for children."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two to four nights. It's a natural stop on a Pacific coast road trip between San Francisco and Oregon."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Arcata-Eureka, about 45 minutes south, or Crescent City in the north. San Francisco is about five and a half hours' drive away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is Redwood National Park free?",
+      "answer": "The national park is free to enter, but the state parks within it charge a day-use fee at some car parks and campgrounds."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Pacific Coast Highway",
+      "code": "SFO",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Sequoia National Park",
+      "code": "FAT",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Crater Lake National Park",
+      "code": "MFR",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Olympic National Park",
+      "code": "SEA",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

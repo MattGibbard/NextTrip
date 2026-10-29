@@ -1,0 +1,197 @@
+{
+  "name": "Joshua Tree National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Joshua Tree National Park",
+  "intro": "Spiky Joshua trees and giant piles of boulders in the California desert, made for scrambling by day and stargazing by night, close to Palm Springs. Here's what Joshua Tree National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/joshua-tree-national-park-74399_1280.webp",
+  "image_alt": "A Joshua tree and boulders under a blue sky in Joshua Tree National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park",
+  "to_code": "PSP",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "relax"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Mild, sunny",
+      "temp": 17
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Mild, sunny",
+      "temp": 19
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Wildflowers",
+      "temp": 23
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 27
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm",
+      "temp": 32
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Hot",
+      "temp": 37
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 40
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 39
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 35
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 29
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 22
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Mild, cool nights",
+      "temp": 16
+    }
+  },
+  "when_to_go": "October to April is the best time, with warm sunny days and cold, clear nights. March and April can bring desert wildflowers. From June to September it's dangerously hot by midday, so only walk early in the morning. Winter nights can drop below freezing, so pack warm clothes for stargazing.",
+  "things": [
+    {
+      "name": "Hidden Valley",
+      "tag": "Free",
+      "blurb": "An easy one-mile loop through a valley ringed by boulders, said to have been used by cattle rustlers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Skull Rock",
+      "tag": "Free",
+      "blurb": "A giant boulder that looks like a skull, right by the road, with plenty of rocks to climb on around it.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cholla Cactus Garden",
+      "tag": "Free",
+      "blurb": "A short boardwalk through thousands of fuzzy-looking cholla cacti. Look, don't touch.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Keys View",
+      "tag": "Free",
+      "blurb": "A mountain viewpoint over the Coachella Valley and the San Andreas Fault. Lovely at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rock climbing",
+      "tag": "Tour",
+      "blurb": "One of the world's best places for climbing and bouldering. Local guides run family taster sessions.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stargazing",
+      "tag": "Free",
+      "blurb": "Joshua Tree is a dark sky park. Lie out on a blanket after dark and look for the Milky Way.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Joshua Tree good for a family holiday?",
+      "answer": "Yes. Children love scrambling over the boulders, the walks are short, and Palm Springs nearby has pools and places to eat."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights is enough. Many families stay in Palm Springs and visit for a day or two, or stay in the town of Joshua Tree for the night skies."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Palm Springs, about an hour from the park. Los Angeles is about two and a half hours away."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is there water in the park?",
+      "answer": "Hardly any, and there's little shade. Bring several litres of water per person, plus snacks and sun hats."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Palm Springs",
+      "code": "PSP",
+      "label": "🧘 Relax & spa"
+    },
+    {
+      "name": "Death Valley National Park",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Saguaro National Park",
+      "code": "TUS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Los Angeles",
+      "code": "LAX",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

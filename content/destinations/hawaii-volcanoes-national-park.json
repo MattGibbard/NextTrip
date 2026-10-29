@@ -1,0 +1,197 @@
+{
+  "name": "Hawaiʻi Volcanoes National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Hawaiʻi Volcanoes National Park",
+  "intro": "Two of the world's most active volcanoes on Hawaii's Big Island, with steaming craters, lava tubes and roads that end where lava flowed into the sea. Here's what Hawaiʻi Volcanoes National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/hawaii-volcanoes-national-park-281131_1280.webp",
+  "image_alt": "The floor of Kīlauea Iki crater surrounded by rainforest in Hawaiʻi Volcanoes National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Hawaiʻi_Volcanoes_National_Park",
+  "to_code": "ITO",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "beach"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "10 hrs behind the UK, 11 in summer",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Cool, showers",
+      "temp": 21
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Cool, showers",
+      "temp": 21
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Showers",
+      "temp": 21
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Showers",
+      "temp": 21
+    },
+    "may": {
+      "rating": "best",
+      "note": "Drier",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Drier",
+      "temp": 23
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 23
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 24
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 24
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Rainier",
+      "temp": 22
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Rainier",
+      "temp": 21
+    }
+  },
+  "when_to_go": "It's a good park to visit all year. The summit is around 1,200m up, so it's cooler and often rainy and misty, even when the coast is hot and sunny. Pack a rain jacket and a warm layer. Whether you can see lava depends on what the volcano is doing, so check the park's eruption updates before you go.",
+  "things": [
+    {
+      "name": "Kīlauea caldera",
+      "tag": "Free",
+      "blurb": "Viewpoints around the rim of the summit crater. During eruptions you may see a red glow after dark.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kīlauea Iki Trail",
+      "tag": "Outdoors",
+      "blurb": "A four-mile loop through rainforest and across the floor of a crater that was a lake of lava in 1959.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nāhuku lava tube",
+      "tag": "Free",
+      "blurb": "Walk through a tunnel left by flowing lava, surrounded by ferny rainforest.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chain of Craters Road",
+      "tag": "Free",
+      "blurb": "A road down from the summit past craters and old lava flows to the Hōlei Sea Arch on the coast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Steam vents",
+      "tag": "Free",
+      "blurb": "Clouds of steam rising from cracks in the ground beside the crater rim drive.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Junior Ranger programme",
+      "tag": "Free",
+      "blurb": "Children complete an activity booklet about volcanoes and earn a badge.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Hawaiʻi Volcanoes National Park good for a family holiday?",
+      "answer": "Yes. Walking across a crater and through a lava tube is a real adventure, and the short walks suit all ages. Spend the rest of the trip on the Big Island's beaches."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights in the village of Volcano, so you can see the craters after dark too, as part of a week or more on the Big Island."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Hilo, about 45 minutes from the park, or Kona, about two hours away. Most flights connect through Honolulu or the US West Coast."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can you see lava?",
+      "answer": "Sometimes. Kīlauea erupts on and off, and when it does you can often see the glow from viewpoints. Check the park's updates for what's happening."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Haleakalā National Park",
+      "code": "OGG",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Honolulu",
+      "code": "HNL",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Hawaii cruise",
+      "code": "HNL",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Maui",
+      "code": "OGG",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

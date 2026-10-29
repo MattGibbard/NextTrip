@@ -1,0 +1,197 @@
+{
+  "name": "Haleakalā National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Haleakalā National Park",
+  "intro": "A volcano summit high above the clouds on Maui, famous for sunrise over the crater, plus waterfalls and bamboo forest on the road to Hāna. Here's what Haleakalā National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/haleakala-national-park-4612315_1280.webp",
+  "image_alt": "The red and brown crater of Haleakalā volcano with clouds below, Maui",
+  "wikipedia": "https://en.wikipedia.org/wiki/Haleakalā_National_Park",
+  "to_code": "OGG",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "beach"
+  ],
+  "nights": "1 to 2",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "10 hrs behind the UK, 11 in summer",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, and you need to book a reservation in advance to drive up for sunrise. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cold summit",
+      "temp": 11
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cold summit",
+      "temp": 11
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cold summit",
+      "temp": 11
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Cool summit",
+      "temp": 12
+    },
+    "may": {
+      "rating": "best",
+      "note": "Clearer",
+      "temp": 13
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Clear",
+      "temp": 14
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Clear",
+      "temp": 15
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Clear",
+      "temp": 15
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Clear",
+      "temp": 15
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Cool summit",
+      "temp": 14
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Rainier",
+      "temp": 13
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cold summit",
+      "temp": 11
+    }
+  },
+  "when_to_go": "Haleakalā is good all year, though the summit at over 3,000m is cold, often near freezing before dawn, so bring warm clothes even in summer. Summer and early autumn usually have the clearest skies. Kīpahulu, the coastal part of the park near Hāna, is warm, green and often rainy. Sunrise reservations are released 60 days ahead and go quickly.",
+  "things": [
+    {
+      "name": "Sunrise at the summit",
+      "tag": "Ticketed",
+      "blurb": "Watch the sun rise over a sea of clouds from the crater rim. Book a reservation and wrap up warm.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sunset and stargazing",
+      "tag": "Free",
+      "blurb": "Sunset needs no reservation, and the summit has some of the clearest night skies in the world.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sliding Sands Trail",
+      "tag": "Outdoors",
+      "blurb": "Walk down into the crater past cinder cones and silversword plants. Remember the climb back up at altitude.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Pīpīwai Trail",
+      "tag": "Outdoors",
+      "blurb": "In the Kīpahulu district, a walk through a creaking bamboo forest to the 120m Waimoku Falls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Silverswords and nēnē",
+      "tag": "Free",
+      "blurb": "Look out for rare silversword plants and nēnē, Hawaii's state bird, near the summit.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Road to Hāna",
+      "tag": "Day trip",
+      "blurb": "A famous winding coastal drive to the Kīpahulu side of the park, with waterfalls and black sand beaches.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Haleakalā good for a family holiday?",
+      "answer": "Yes, as part of a Maui trip. Sunrise is an early start for children, so many families go for sunset instead, and the walks at Kīpahulu are a highlight."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "The park is a day trip from anywhere on Maui. Spend a night in Hāna to explore Kīpahulu without rushing."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Kahului on Maui, about an hour and a half's drive from the summit."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "How cold is it at the top?",
+      "answer": "Often between 0°C and 10°C at sunrise, with strong winds. Bring coats, hats and blankets."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Maui",
+      "code": "OGG",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Hawaiʻi Volcanoes National Park",
+      "code": "ITO",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Honolulu",
+      "code": "HNL",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Hawaii cruise",
+      "code": "HNL",
+      "label": "🛳️ Cruise"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

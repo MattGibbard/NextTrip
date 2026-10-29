@@ -1,0 +1,197 @@
+{
+  "name": "Glacier Bay National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Glacier Bay National Park",
+  "intro": "A huge bay of tidewater glaciers, icebergs and whales in southeast Alaska, reached only by boat or plane. Here's what Glacier Bay National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/glacier-bay-national-park-8430043_1280.webp",
+  "image_alt": "Icebergs in front of Margerie Glacier and snowy mountains in Glacier Bay, Alaska",
+  "wikipedia": "https://en.wikipedia.org/wiki/Glacier_Bay_National_Park_and_Preserve",
+  "to_code": "JNU",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "culture"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "9 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "There's no entry fee, but boat tours and cruises charge. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Dark, snowy",
+      "temp": 0
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 1
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Snowy",
+      "temp": 4
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Quiet",
+      "temp": 8
+    },
+    "may": {
+      "rating": "good",
+      "note": "Season starts",
+      "temp": 12
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Whales",
+      "temp": 15
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 17
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 16
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Rainier",
+      "temp": 13
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Season over",
+      "temp": 8
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Dark",
+      "temp": 3
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Dark",
+      "temp": 1
+    }
+  },
+  "when_to_go": "Late May to mid September is the season, when the day boat runs and the lodge is open. June to August has the warmest weather and long days, with humpback whales feeding in the bay. It's cool and often wet at any time, and cold out on the water near the ice, so pack warm waterproof layers.",
+  "things": [
+    {
+      "name": "Day boat tour",
+      "tag": "Tour",
+      "blurb": "An eight-hour boat trip from Bartlett Cove up the bay to the glaciers, with rangers pointing out bears, mountain goats and whales.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Margerie Glacier",
+      "tag": "Free",
+      "blurb": "A huge wall of ice where you might see chunks crashing into the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bartlett Cove trails",
+      "tag": "Free",
+      "blurb": "Easy forest and shoreline walks near the lodge, where moose sometimes wander.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Huna Tribal House",
+      "tag": "Free",
+      "blurb": "A beautifully carved Tlingit tribal house at Bartlett Cove, telling the story of the people whose homeland this is.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sea kayaking",
+      "tag": "Tour",
+      "blurb": "Guided paddles from Bartlett Cove among islands and seals.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cruise ship visit",
+      "tag": "Tour",
+      "blurb": "Many Alaska cruises spend a day in the bay, the easiest way to see it.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Glacier Bay good for a family holiday?",
+      "answer": "Yes. The glaciers and whales are spectacular, though the day boat is long for little ones. Many families see it as part of an Alaska cruise."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Two or three nights at Gustavus or Glacier Bay Lodge, or a single day on a cruise."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Juneau, then take a short summer flight or a ferry to Gustavus. There are no roads to the park."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Can you see Glacier Bay on a cruise?",
+      "answer": "Yes. A limited number of cruise ships are allowed into the bay each day, with park rangers on board."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Alaska's Inside Passage",
+      "code": "SEA",
+      "label": "🛳️ Cruise"
+    },
+    {
+      "name": "Kenai Fjords National Park",
+      "code": "ANC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Denali National Park",
+      "code": "FAI",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Kluane National Park",
+      "code": "YXY",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

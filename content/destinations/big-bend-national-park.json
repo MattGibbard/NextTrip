@@ -1,0 +1,197 @@
+{
+  "name": "Big Bend National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Big Bend National Park",
+  "intro": "A huge, remote desert park on the Rio Grande in West Texas, with canyons, mountains, hot springs and some of the darkest skies in America. Here's what Big Bend National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/big-bend-national-park-1587302_1280.webp",
+  "image_alt": "Santa Elena Canyon's sheer cliffs above the Rio Grande in Big Bend National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Big_Bend_National_Park",
+  "to_code": "MAF",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Mild, sunny",
+      "temp": 17
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 20
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 24
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 28
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 32
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Very hot",
+      "temp": 34
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Hot, storms",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Hot, storms",
+      "temp": 32
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm, storms",
+      "temp": 30
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 26
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 21
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Mild",
+      "temp": 17
+    }
+  },
+  "when_to_go": "November to April is the best time, with warm, sunny days and cool nights. March is busy with spring break and blooming cacti. From May to September the desert and river areas are very hot, so families head up to the cooler Chisos Mountains. Summer brings afternoon storms. It's very remote, so fill up with fuel and supplies before you arrive.",
+  "things": [
+    {
+      "name": "Santa Elena Canyon",
+      "tag": "Free",
+      "blurb": "A short walk into a narrow canyon with 450m cliffs either side of the Rio Grande. Mexico is the left bank.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Chisos Basin",
+      "tag": "Outdoors",
+      "blurb": "Mountains in the middle of the desert, with cooler air, the Window Trail and the Lost Mine Trail.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hot Springs",
+      "tag": "Free",
+      "blurb": "Soak in a stone tub of warm spring water right beside the Rio Grande, at an old bathhouse ruin.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Boquillas",
+      "tag": "Day trip",
+      "blurb": "Cross the river by rowing boat to a little Mexican village for lunch. Bring your passport and check the crossing is open.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ross Maxwell Scenic Drive",
+      "tag": "Free",
+      "blurb": "A road through the desert past volcanic rock and viewpoints, ending at Santa Elena Canyon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stargazing",
+      "tag": "Free",
+      "blurb": "Big Bend has some of the darkest skies in North America. On a moonless night the Milky Way casts shadows.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Big Bend good for a family holiday?",
+      "answer": "Yes, for families who like wild places. There are short walks, a hot spring by the river and a day trip to Mexico, but distances are long and there's little shade."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights, as it takes time to get around. Book a room at Chisos Mountains Lodge or in Terlingua well ahead."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Midland, about three and a half hours away, or El Paso, about four and a half hours away. It's one of the most remote parks in the lower 48 states."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is Big Bend safe?",
+      "answer": "Yes. The main risks are heat, dehydration and long distances. Carry plenty of water and keep the fuel tank topped up."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Carlsbad Caverns National Park",
+      "code": "ELP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "White Sands National Park",
+      "code": "ELP",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Austin",
+      "code": "AUS",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Santa Fe",
+      "code": "ABQ",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

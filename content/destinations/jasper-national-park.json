@@ -1,0 +1,197 @@
+{
+  "name": "Jasper National Park",
+  "published": true,
+  "country": "CA",
+  "title": "Holidays in Jasper National Park",
+  "intro": "The biggest park in the Canadian Rockies, with turquoise lakes, glaciers, elk in town and the Icefields Parkway running south to Banff. Here's what Jasper National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/jasper-national-park-5819878_1280.webp",
+  "image_alt": "The Athabasca River winding through forest below mountains in Jasper National Park",
+  "wikipedia": "https://en.wikipedia.org/wiki/Jasper_National_Park",
+  "to_code": "YEG",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "4 to 5",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Canadian dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need a Parks Canada pass to stop in the park: a day pass, or a Discovery Pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Skiing, ice walks",
+      "temp": -7
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Skiing",
+      "temp": -3
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 3
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Thawing",
+      "temp": 10
+    },
+    "may": {
+      "rating": "good",
+      "note": "Spring, wildlife",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 23
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Summer",
+      "temp": 22
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Autumn, elk rut",
+      "temp": 16
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Quiet",
+      "temp": 9
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 0
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Skiing",
+      "temp": -6
+    }
+  },
+  "when_to_go": "June to September is the best time, when the lakes have thawed, the boat cruises run and the Icefields Parkway is at its best. September brings golden larches and the elk rut. Winter is cold but beautiful, with skiing at Marmot Basin and guided ice walks through Maligne Canyon. A wildfire in 2024 burned part of the town and the forest around it, but Jasper is open and welcoming visitors.",
+  "things": [
+    {
+      "name": "Maligne Lake",
+      "tag": "Tour",
+      "blurb": "A boat cruise across a glacier-fed lake to tiny Spirit Island, one of the most famous views in Canada.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Maligne Canyon",
+      "tag": "Free",
+      "blurb": "Bridges over a deep, narrow limestone gorge. In winter you can walk on the frozen canyon floor with a guide.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Icefields Parkway",
+      "tag": "Free",
+      "blurb": "One of the world's great drives, 230km south to Lake Louise past glaciers, waterfalls and lakes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Columbia Icefield",
+      "tag": "Tour",
+      "blurb": "Ride a giant all-terrain bus onto the Athabasca Glacier and walk out on the glass-floored Skywalk.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Athabasca Falls",
+      "tag": "Free",
+      "blurb": "A powerful waterfall crashing through a gorge, a short walk from the road.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Miette Hot Springs",
+      "tag": "Ticketed",
+      "blurb": "The hottest springs in the Canadian Rockies, in outdoor pools surrounded by mountains.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Jasper good for a family holiday?",
+      "answer": "Yes. There are lakes to paddle, easy canyon walks, glaciers to stand on and lots of wildlife, and the town is quieter and more relaxed than Banff."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Four or five nights in Jasper, ideally as part of a Rockies road trip with a few nights in Banff or Lake Louise."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Edmonton, about four hours' drive away, or Calgary, about four and a half hours away via the Icefields Parkway. VIA Rail's Canadian train also stops in Jasper."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "No, but British passport holders flying to Canada, children included, need an eTA, which you apply for online. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Is Jasper open after the wildfire?",
+      "answer": "Yes. The 2024 fire destroyed some homes and businesses and burned forest near town, but the park, the town and most of its sights are open."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Banff",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Yoho National Park",
+      "code": "YYC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Rocky Mountaineer",
+      "code": "YVR",
+      "label": "🚆 By train"
+    },
+    {
+      "name": "The Canadian",
+      "code": "YYZ",
+      "label": "🚆 By train"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

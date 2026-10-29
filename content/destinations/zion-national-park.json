@@ -1,0 +1,197 @@
+{
+  "name": "Zion National Park",
+  "published": true,
+  "country": "US",
+  "title": "Holidays in Zion National Park",
+  "intro": "Towering red and cream cliffs above the Virgin River in southern Utah, with river hikes, a free shuttle and a little town right at the gate. Here's what Zion National Park is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/zion-national-park-2846983_1280.webp",
+  "image_alt": "Red sandstone cliffs and green trees in a canyon in Zion National Park, Utah",
+  "wikipedia": "https://en.wikipedia.org/wiki/Zion_National_Park",
+  "to_code": "LAS",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "3 to 4",
+  "trip_length": "week",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "US dollar ($)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "ESTA for UK passports",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 120V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "The park charges an entry fee per vehicle, or buy an America the Beautiful annual pass if you're visiting several parks. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 12
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring, busy",
+      "temp": 19
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Spring",
+      "temp": 24
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 29
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot",
+      "temp": 35
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot, storms",
+      "temp": 38
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, storms",
+      "temp": 37
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm",
+      "temp": 33
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Autumn colour",
+      "temp": 26
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Cool, quiet",
+      "temp": 17
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 11
+    }
+  },
+  "when_to_go": "April, May, September and October are the sweet spot: warm days, cool nights and the river walks at their best. June to August is very hot in the canyon, and July and August bring afternoon thunderstorms and flash-flood warnings that can shut The Narrows. Winter is quiet and mild by day, and you can drive the scenic road yourself when the shuttle isn't running. The canyon is busy all year, so start early.",
+  "things": [
+    {
+      "name": "Zion Canyon shuttle",
+      "tag": "Free",
+      "blurb": "From spring to autumn the free shuttle is the only way up the Scenic Drive, stopping at every trailhead. Catch it early to beat the queues.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Narrows",
+      "tag": "Outdoors",
+      "blurb": "Walk up the Virgin River between walls a thousand feet high. Older children love it; hire canyon shoes and a stick in Springdale and check the flood forecast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Riverside Walk and Emerald Pools",
+      "tag": "Free",
+      "blurb": "Two easy trails for little legs: a flat paved path along the river, and a short climb to pools fed by trickling waterfalls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Angels Landing",
+      "tag": "Outdoors",
+      "blurb": "A famous chain-assisted ridge walk with sheer drops. You need a permit from the lottery, and it isn't for young children or anyone nervous of heights.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Canyon Overlook Trail",
+      "tag": "Free",
+      "blurb": "A short, rocky walk on the east side of the tunnel with a huge view down the canyon. Best near sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kolob Canyons",
+      "tag": "Day trip",
+      "blurb": "The park's quieter north corner, about 45 minutes from Springdale, with a scenic drive and far fewer people.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Zion National Park good for a family holiday?",
+      "answer": "Yes. The shuttle makes it easy without a car, the river walks suit all ages, and Springdale at the gate has places to stay, eat and hire gear. Save Angels Landing for teenagers with a head for heights."
+    },
+    {
+      "question": "How many nights do you need?",
+      "answer": "Three or four nights covers the main walks and a day in The Narrows. Zion is often part of a loop with Bryce Canyon, the Grand Canyon and Las Vegas."
+    },
+    {
+      "question": "How do you get there?",
+      "answer": "Fly to Las Vegas, then drive about two and a half hours. St George, an hour away, has a small airport with connecting flights."
+    },
+    {
+      "question": "Do UK families need a visa?",
+      "answer": "Most British passport holders, children included, apply for an ESTA online before they fly rather than a visa. Check GOV.UK for the current rules."
+    },
+    {
+      "question": "Do you need a permit to hike Angels Landing?",
+      "answer": "Yes. Permits are given out by lottery on Recreation.gov, both months ahead and the day before. You don't need one for most other trails, but you do for The Narrows from the top."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bryce Canyon National Park",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Utah's national parks",
+      "code": "LAS",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Grand Canyon",
+      "code": "LAS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Sedona",
+      "code": "PHX",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-29T11:30:00Z",
+  "updated": "2026-10-29T11:30:00Z"
+}

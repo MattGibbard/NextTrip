@@ -1,0 +1,193 @@
+{
+  "name": "Snowdonia",
+  "published": true,
+  "country": "GB",
+  "title": "Holidays in Snowdonia",
+  "intro": "Eryri, as it's called in Welsh, has the highest mountain in Wales, glacial lakes, castles and zip lines through old slate quarries. Here's what Snowdonia is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/mountain-lake-nature-travel-6749451_1280.webp",
+  "image_alt": "A lake surrounded by mountains in Snowdonia (Eryri) national park in north Wales",
+  "wikipedia": "https://en.wikipedia.org/wiki/Snowdonia",
+  "to_code": "LPL",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "culture"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time zone",
+      "value": "UK time (GMT, BST in summer)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Pound sterling (£)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No passport checks within the UK",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK and Irish citizens don't need a passport to travel within the UK, but airlines ask for photo ID. Most other visitors need an Electronic Travel Authorisation (ETA), so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, snow on peaks",
+      "temp": 7
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 8
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool",
+      "temp": 10
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Lambs, spring",
+      "temp": 13
+    },
+    "may": {
+      "rating": "best",
+      "note": "Driest, long days",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days",
+      "temp": 18
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 20
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Busiest",
+      "temp": 19
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Calmer, mild",
+      "temp": 17
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 14
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Wet, windy",
+      "temp": 10
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold, wet",
+      "temp": 8
+    }
+  },
+  "when_to_go": "May, June and September are the best months, with the best chance of dry, clear days on the mountains. July and August are the busiest, and Snowdon's summit paths and car parks fill up early. The Snowdon Mountain Railway runs from about March to October, reaching the summit from May. Winter brings snow and ice to the peaks, so only experienced walkers should go up then.",
+  "things": [
+    {
+      "name": "Yr Wyddfa (Snowdon)",
+      "tag": "Outdoors",
+      "blurb": "Climb the highest mountain in Wales. The Llanberis Path is the longest but gentlest way up.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Snowdon Mountain Railway",
+      "tag": "Ticketed",
+      "blurb": "A rack railway from Llanberis to the summit since 1896. Book ahead in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Zip World",
+      "tag": "Ticketed",
+      "blurb": "Fly over Penrhyn Quarry on the fastest zip line in the world, or try the underground trampolines.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Betws-y-Coed",
+      "tag": "Free",
+      "blurb": "A stone village among the forests, with Swallow Falls and easy riverside walks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Caernarfon Castle",
+      "tag": "Ticketed",
+      "blurb": "A huge 13th-century castle on the water's edge, where the Prince of Wales was invested.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Portmeirion",
+      "tag": "Day trip",
+      "blurb": "A colourful Italianate village on the coast, with woodland gardens and a sandy estuary.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long does it take to climb Snowdon?",
+      "answer": "Most people take five to seven hours up and down. The Llanberis Path is the easiest, and Miners' and Pyg tracks are shorter but steeper."
+    },
+    {
+      "question": "Is it called Snowdonia or Eryri?",
+      "answer": "Both. The national park uses its Welsh name, Eryri, and the mountain Snowdon is Yr Wyddfa. Most English speakers still say Snowdonia."
+    },
+    {
+      "question": "Where should you stay in Snowdonia?",
+      "answer": "Llanberis for Snowdon and the railway, Betws-y-Coed for woodland walks, and Beddgelert or Caernarfon for something quieter."
+    },
+    {
+      "question": "What is the nearest airport to Snowdonia?",
+      "answer": "Liverpool and Manchester are both about two hours' drive away. Trains run along the north Wales coast to Bangor and Llandudno Junction."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lake District",
+      "code": "MAN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Isle of Skye",
+      "code": "INV",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Cornwall",
+      "code": "NQY",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Dolomites",
+      "code": "VCE",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-30T11:30:00Z",
+  "updated": "2026-10-30T11:30:00Z"
+}

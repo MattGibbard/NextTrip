@@ -1,0 +1,193 @@
+{
+  "name": "Belfast",
+  "published": true,
+  "country": "GB",
+  "title": "Holidays in Belfast",
+  "intro": "Titanic's birthplace, lively pubs, murals with stories to tell and the Giant's Causeway an hour up the coast. Here's what Belfast is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/titanic-titanic-quarter-museum-7571745_1280.webp",
+  "image_alt": "The angular silver Titanic Belfast museum building against a blue sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Belfast",
+  "to_code": "BFS",
+  "holiday_types": [
+    "city",
+    "culture",
+    "nature"
+  ],
+  "nights": "2 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time zone",
+      "value": "UK time (GMT, BST in summer)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Pound sterling (£)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No passport checks within the UK",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK and Irish citizens don't need a passport to travel within the UK, but airlines ask for photo ID. Most other visitors need an Electronic Travel Authorisation (ETA), so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 8
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, cheaper",
+      "temp": 8
+    },
+    "mar": {
+      "rating": "good",
+      "note": "St Patrick's Day",
+      "temp": 10
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 12
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild, long days",
+      "temp": 15
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days",
+      "temp": 18
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warmest, busy",
+      "temp": 19
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Busy, festivals",
+      "temp": 19
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild, calmer",
+      "temp": 17
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Halloween festivals",
+      "temp": 14
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Damp, dark early",
+      "temp": 10
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas market",
+      "temp": 8
+    }
+  },
+  "when_to_go": "May, June and September are the best months for mild weather and the coast road. July and August are the warmest and busiest. Late November to December brings the Christmas market at City Hall. It rains often in every season, but Titanic Belfast and the pubs make wet days easy.",
+  "things": [
+    {
+      "name": "Titanic Belfast",
+      "tag": "Ticketed",
+      "blurb": "The story of the Titanic on the slipways where it was built, with SS Nomadic moored next door.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Giant's Causeway",
+      "tag": "Day trip",
+      "blurb": "Forty thousand basalt columns on the coast, about an hour's drive or a coach tour away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Black taxi tour",
+      "tag": "Tour",
+      "blurb": "Local drivers explain the Troubles and the murals and peace walls of west Belfast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "St George's Market",
+      "tag": "Food",
+      "blurb": "A Victorian market hall with food stalls, crafts and live music from Friday to Sunday.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cave Hill and Belfast Castle",
+      "tag": "Outdoors",
+      "blurb": "Walk up to views over the city and the lough, past the castle and its gardens.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ulster Museum",
+      "tag": "Free",
+      "blurb": "Dinosaurs, Egyptian mummies and Irish history in the Botanic Gardens.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Belfast?",
+      "answer": "Two days covers Titanic Belfast, a taxi tour and the city centre. Add a day for the Giant's Causeway and the Causeway Coast."
+    },
+    {
+      "question": "How far is the Giant's Causeway from Belfast?",
+      "answer": "About 60 miles, or an hour and a quarter by car. Coach tours run daily and stop at the Carrick-a-Rede rope bridge and Dunluce Castle too."
+    },
+    {
+      "question": "What currency is used in Belfast?",
+      "answer": "The pound sterling, as in the rest of the UK. Northern Irish banks print their own notes, which work across the UK but some shops in England may refuse them."
+    },
+    {
+      "question": "Which airport is best for Belfast?",
+      "answer": "Belfast City Airport is close to the centre, with UK flights. Belfast International has more international flights and is about 30 minutes away by bus."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Dublin",
+      "code": "DUB",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Edinburgh",
+      "code": "EDI",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Wild Atlantic Way",
+      "code": "SNN",
+      "label": "🚗 Road trip"
+    },
+    {
+      "name": "Isle of Skye",
+      "code": "INV",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-30T11:30:00Z",
+  "updated": "2026-10-30T11:30:00Z"
+}

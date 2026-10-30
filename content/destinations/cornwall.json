@@ -1,0 +1,193 @@
+{
+  "name": "Cornwall",
+  "published": true,
+  "country": "GB",
+  "title": "Holidays in Cornwall",
+  "intro": "Golden beaches, turquoise coves, surf, fishing villages and pasties at the far south-west tip of England. Here's what Cornwall is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/beach-cliffs-sea-ocean-turquoise-5182349_1280.webp",
+  "image_alt": "A sandy cove with turquoise water below green cliffs on the Cornish coast",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cornwall",
+  "to_code": "NQY",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "food"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time zone",
+      "value": "UK time (GMT, BST in summer)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Pound sterling (£)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No passport checks within the UK",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK and Irish citizens don't need a passport to travel within the UK, but airlines ask for photo ID. Most other visitors need an Electronic Travel Authorisation (ETA), so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Wild, stormy",
+      "temp": 9
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Spring flowers",
+      "temp": 11
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Easter, cool sea",
+      "temp": 13
+    },
+    "may": {
+      "rating": "best",
+      "note": "Sunny, quiet beaches",
+      "temp": 16
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days",
+      "temp": 18
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 20
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Busiest, traffic",
+      "temp": 20
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warmest sea",
+      "temp": 18
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Surf, mild",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Wet, windy",
+      "temp": 12
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 10
+    }
+  },
+  "when_to_go": "June and September are the sweet spot, with warm days and beaches that aren't packed. September has the warmest sea. July and August are the busiest months, with crowded beaches and slow traffic on the A30, so book well ahead. May is often sunny and quiet. Winter is mild but wet and windy, good for storm watching and cosy pubs.",
+  "things": [
+    {
+      "name": "St Ives",
+      "tag": "Free",
+      "blurb": "Sandy beaches, a busy harbour, cobbled lanes and Tate St Ives.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Eden Project",
+      "tag": "Ticketed",
+      "blurb": "Giant biomes with a rainforest and Mediterranean gardens in an old clay pit near St Austell.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Minack Theatre",
+      "tag": "Ticketed",
+      "blurb": "An open-air theatre carved into the cliffs above Porthcurno beach. Catch a show or just visit.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Surf lessons in Newquay",
+      "tag": "Outdoors",
+      "blurb": "Fistral and Watergate Bay have surf schools for all ages and the best waves in Britain.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "St Michael's Mount",
+      "tag": "Ticketed",
+      "blurb": "Walk the causeway at low tide, or take a boat, to the castle on an island off Marazion.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Padstow",
+      "tag": "Food",
+      "blurb": "A fishing harbour famous for seafood restaurants, with the Camel Trail cycle path to Wadebridge.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where is the best place to stay in Cornwall?",
+      "answer": "Newquay for surf and lively beaches, St Ives for sand and galleries, Padstow and Rock for food, and Falmouth or the Roseland for a quieter, sheltered south coast."
+    },
+    {
+      "question": "Is the sea warm enough to swim in Cornwall?",
+      "answer": "It's chilly. The sea is about 16 to 17°C in August and September. Most people swim in a wetsuit, and lifeguards patrol the main beaches in summer."
+    },
+    {
+      "question": "Do you need a car in Cornwall?",
+      "answer": "A car makes it much easier to reach coves and villages. Trains run to Penzance, St Ives, Newquay and Falmouth, and buses link the main towns."
+    },
+    {
+      "question": "How do you get to Cornwall?",
+      "answer": "Fly to Newquay, take the train from London to Penzance (about five hours), or drive down the M5 and A30."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Algarve",
+      "code": "FAO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Asturias",
+      "code": "OVD",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lake District",
+      "code": "MAN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Cotswolds",
+      "code": "BRS",
+      "label": "🚗 Road trip"
+    }
+  ],
+  "date": "2026-10-30T11:30:00Z",
+  "updated": "2026-10-30T11:30:00Z"
+}

@@ -1,0 +1,193 @@
+{
+  "name": "Edinburgh",
+  "published": true,
+  "country": "GB",
+  "title": "Holidays in Edinburgh",
+  "intro": "A castle on a volcanic rock, a medieval Old Town and the world's biggest arts festival every August. Here's what Edinburgh is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/edinburgh-castle-castle-rock-1607908_1280.webp",
+  "image_alt": "Edinburgh Castle on top of Castle Rock above green trees and gardens",
+  "wikipedia": "https://en.wikipedia.org/wiki/Edinburgh",
+  "to_code": "EDI",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 4",
+  "trip_length": "weekend",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time zone",
+      "value": "UK time (GMT, BST in summer)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Pound sterling (£)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No passport checks within the UK",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK and Irish citizens don't need a passport to travel within the UK, but airlines ask for photo ID. Most other visitors need an Electronic Travel Authorisation (ETA), so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, dark early",
+      "temp": 7
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, quieter",
+      "temp": 8
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Cool, quiet",
+      "temp": 10
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 12
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild, long days",
+      "temp": 15
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long, light evenings",
+      "temp": 18
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warmest, busy",
+      "temp": 19
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Fringe festival, packed",
+      "temp": 19
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild, calmer",
+      "temp": 17
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 13
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cold, damp",
+      "temp": 10
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas, Hogmanay",
+      "temp": 7
+    }
+  },
+  "when_to_go": "May, June and September are the best months, mild and light until late in the evening. August is the festival month: the Fringe fills the city with shows, but hotels are expensive and book up months ahead. December brings Christmas markets and the Hogmanay street party on New Year's Eve. Winters are cold and dark by 4pm, and it can be windy and wet at any time.",
+  "things": [
+    {
+      "name": "Edinburgh Castle",
+      "tag": "Ticketed",
+      "blurb": "The fortress on Castle Rock, with the Scottish crown jewels and the one o'clock gun.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "The Royal Mile",
+      "tag": "Free",
+      "blurb": "The Old Town's main street, running from the castle down to the Palace of Holyroodhouse, with closes and courtyards off it.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Arthur's Seat",
+      "tag": "Outdoors",
+      "blurb": "An old volcano in Holyrood Park. The climb takes about an hour and the views reach the sea.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "National Museum of Scotland",
+      "tag": "Free",
+      "blurb": "Dolly the sheep, Viking treasures and a rooftop terrace with castle views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Calton Hill",
+      "tag": "Free",
+      "blurb": "A short climb for the classic view along Princes Street to the castle, best at sunset.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stirling and the Highlands",
+      "tag": "Day trip",
+      "blurb": "Coach tours run to Stirling Castle, Loch Lomond and Glencoe, or further to Loch Ness.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Edinburgh?",
+      "answer": "Two or three days covers the castle, the Old Town and Arthur's Seat. Add a day or two for a trip to the Highlands."
+    },
+    {
+      "question": "When is Hogmanay in Edinburgh?",
+      "answer": "Hogmanay runs from about 29 December to 1 January, with a torchlight procession, a street party and fireworks over the castle at midnight. The street party needs a ticket, so book early."
+    },
+    {
+      "question": "When is the Edinburgh Festival Fringe?",
+      "answer": "The Fringe runs for most of August, alongside the Edinburgh International Festival and the Military Tattoo at the castle."
+    },
+    {
+      "question": "Is Edinburgh walkable?",
+      "answer": "Yes. The Old Town and New Town sit side by side and most sights are within a 20-minute walk, though the streets are hilly and cobbled. A tram runs to the airport."
+    }
+  ],
+  "similar": [
+    {
+      "name": "York",
+      "code": "LBA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Isle of Skye",
+      "code": "INV",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Dublin",
+      "code": "DUB",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Belfast",
+      "code": "BFS",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-30T11:30:00Z",
+  "updated": "2026-10-30T11:30:00Z"
+}

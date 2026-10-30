@@ -1,0 +1,193 @@
+{
+  "name": "Isle of Skye",
+  "published": true,
+  "country": "GB",
+  "title": "Holidays on the Isle of Skye",
+  "intro": "Jagged mountains, fairy pools, sea cliffs and some of the most dramatic scenery in Scotland. Here's what the Isle of Skye is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/mountains-moss-nature-mood-lake-5477320_1280.webp",
+  "image_alt": "The green ridges and cliffs of the Quiraing on the Isle of Skye under a cloudy sky",
+  "wikipedia": "https://en.wikipedia.org/wiki/Isle_of_Skye",
+  "to_code": "INV",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "road-trip"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time zone",
+      "value": "UK time (GMT, BST in summer)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Pound sterling (£)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No passport checks within the UK",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK and Irish citizens don't need a passport to travel within the UK, but airlines ask for photo ID. Most other visitors need an Electronic Travel Authorisation (ETA), so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Dark, stormy",
+      "temp": 7
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 7
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold, few open",
+      "temp": 8
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Fewer crowds",
+      "temp": 10
+    },
+    "may": {
+      "rating": "best",
+      "note": "Driest, few midges",
+      "temp": 13
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Long days, midges",
+      "temp": 15
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Busiest, midges",
+      "temp": 16
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Busy, midges",
+      "temp": 16
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Calmer, mild",
+      "temp": 15
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn, stags",
+      "temp": 12
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Wet, short days",
+      "temp": 9
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Dark, stormy",
+      "temp": 7
+    }
+  },
+  "when_to_go": "May and September are the best months, with the driest weather, fewer crowds and fewer midges. June to August have very long days but busy roads, full car parks and biting midges, so book accommodation months ahead. Many places close from November to March, and winter brings storms and short days. The weather changes fast, so bring layers and waterproofs whenever you go.",
+  "things": [
+    {
+      "name": "The Quiraing",
+      "tag": "Outdoors",
+      "blurb": "A landslip of cliffs, pinnacles and hidden plateaus, with a walk of about two hours.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Old Man of Storr",
+      "tag": "Outdoors",
+      "blurb": "A steep walk of about an hour up to a giant rock pinnacle above the Sound of Raasay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Fairy Pools",
+      "tag": "Outdoors",
+      "blurb": "Clear blue pools and waterfalls below the Cuillin mountains, an easy walk from the car park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Portree",
+      "tag": "Free",
+      "blurb": "Skye's main town, with a colourful harbour, seafood and the best choice of places to eat.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Neist Point",
+      "tag": "Outdoors",
+      "blurb": "A lighthouse on the most westerly tip of Skye, great at sunset and for spotting whales.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dunvegan Castle",
+      "tag": "Ticketed",
+      "blurb": "The home of the MacLeod clan for 800 years, with gardens and boat trips to see seals.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need on the Isle of Skye?",
+      "answer": "Three days covers the main sights in the north and around the Cuillin. Four or five lets you allow for bad weather."
+    },
+    {
+      "question": "Do you need a car on Skye?",
+      "answer": "Yes. Buses are infrequent and most walks start from remote car parks. Many roads are single track with passing places."
+    },
+    {
+      "question": "How do you get to the Isle of Skye?",
+      "answer": "Drive over the Skye Bridge at Kyle of Lochalsh, about two hours from Inverness, or take the ferry from Mallaig. Inverness has the nearest airport, and Glasgow is about five hours' drive away."
+    },
+    {
+      "question": "When are the midges worst on Skye?",
+      "answer": "June to August, especially on still, damp evenings. Bring repellent and a head net, and choose breezy spots."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Lake District",
+      "code": "MAN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Snowdonia",
+      "code": "LPL",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Faroe Islands",
+      "code": "FAE",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Edinburgh",
+      "code": "EDI",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-30T11:30:00Z",
+  "updated": "2026-10-30T11:30:00Z"
+}

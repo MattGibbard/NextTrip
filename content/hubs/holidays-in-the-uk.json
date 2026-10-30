@@ -1,0 +1,42 @@
+{
+  "published": true,
+  "kind": "country",
+  "country": "GB",
+  "name": "United Kingdom",
+  "title": "Holidays in the UK",
+  "intro": "Big cities, castles, lakes, mountains and beaches, all within a train ride or a short flight of each other. Here's where to go on holiday in the UK, how long to stay and the best time to visit.",
+  "seo_title": "Where to go in the UK: the best places for a holiday",
+  "seo_description": "",
+  "sections": [
+    {
+      "heading": "City breaks",
+      "text": "[London](/destinations/london) has royal palaces, West End shows and free museums, and needs at least three days. [Edinburgh](/destinations/edinburgh) has a castle on a volcanic rock, the Fringe in August and Hogmanay at New Year. [York](/destinations/york) and [Bath](/destinations/bath) are smaller and easy to see in a weekend: medieval walls and Vikings in York, Roman baths and Georgian crescents in Bath. [Belfast](/destinations/belfast) has Titanic Belfast and the Giant's Causeway up the coast."
+    },
+    {
+      "heading": "Mountains and lakes",
+      "text": "The [Lake District](/destinations/lake-district) has England's highest mountains, lake steamers and Beatrix Potter. [Snowdonia](/destinations/snowdonia) in north Wales has Yr Wyddfa (Snowdon), its mountain railway and zip lines. The [Isle of Skye](/destinations/isle-of-skye) is the wildest of the three, with jagged peaks, fairy pools and sea cliffs. Allow at least a few days in each, so you can fit walks around the weather."
+    },
+    {
+      "heading": "Beaches and countryside",
+      "text": "[Cornwall](/destinations/cornwall) has the UK's best beaches, surfing and seafood, and is the classic summer holiday. The [Cotswolds](/destinations/cotswolds) are the opposite: honey-coloured villages, country pubs and gentle walks, best for a long weekend."
+    },
+    {
+      "heading": "Best time to go and getting around",
+      "text": "May, June and September are the best months almost everywhere, with long days and fewer crowds than July and August. Rain can come in any month, so pack layers and a waterproof. Trains link the cities, but you'll want a car for Cornwall, the Cotswolds, Skye and the national parks."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the best time for a holiday in the UK?",
+      "answer": "May, June and September usually have the best mix of mild weather, long days and smaller crowds. July and August are the warmest but the busiest, with school holidays."
+    },
+    {
+      "question": "Where is the best place for a beach holiday in the UK?",
+      "answer": "Cornwall, with sandy coves, surf beaches and the warmest sea in the UK, at about 17°C in late summer."
+    },
+    {
+      "question": "Where should you go in the UK for mountains and walking?",
+      "answer": "The Lake District for lakes and fells, Snowdonia for Wales's highest peak, and the Isle of Skye for the most dramatic scenery."
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "name": "Lake District",
+  "published": true,
+  "country": "GB",
+  "title": "Holidays in the Lake District",
+  "intro": "England's biggest national park, with sixteen lakes, its highest mountains, lake steamers and the landscapes that inspired Wordsworth and Beatrix Potter. Here's what the Lake District is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/nature-lake-travel-exploration-8803489_1280.webp",
+  "image_alt": "A wooden boathouse on the shore of Ullswater in the Lake District, with wooded hills reflected in the lake",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lake_District",
+  "to_code": "MAN",
+  "holiday_types": [
+    "nature",
+    "adventure",
+    "relax"
+  ],
+  "nights": "3 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time zone",
+      "value": "UK time (GMT, BST in summer)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Pound sterling (£)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No passport checks within the UK",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK and Irish citizens don't need a passport to travel within the UK, but airlines ask for photo ID. Most other visitors need an Electronic Travel Authorisation (ETA), so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, snow on the fells",
+      "temp": 7
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 7
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Daffodils",
+      "temp": 9
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Lambs, spring walks",
+      "temp": 12
+    },
+    "may": {
+      "rating": "best",
+      "note": "Driest month",
+      "temp": 15
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Long days",
+      "temp": 17
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 19
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Busy, school holidays",
+      "temp": 18
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Calmer, mild",
+      "temp": 16
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 12
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Wet, dark early",
+      "temp": 9
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cold, cosy pubs",
+      "temp": 7
+    }
+  },
+  "when_to_go": "May, June and September are the best months, with the driest weather of the year and long days for walking. July and August are the warmest but the roads and car parks around Windermere, Ambleside and Keswick get busy. October brings autumn colour. Winter is cold and wet, with snow on the high fells, but cosy pubs and empty paths. It rains a lot here in every season, so bring waterproofs.",
+  "things": [
+    {
+      "name": "Windermere lake cruise",
+      "tag": "Tour",
+      "blurb": "Steamers and launches link Lakeside, Bowness and Ambleside on England's longest lake.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Catbells",
+      "tag": "Outdoors",
+      "blurb": "A short, steep family favourite above Derwentwater, with views over Keswick from the top.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ullswater 'Steamers'",
+      "tag": "Tour",
+      "blurb": "Take the boat to Howtown or Glenridding and walk back along the shore, or visit Aira Force waterfall.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "World of Beatrix Potter",
+      "tag": "Ticketed",
+      "blurb": "Peter Rabbit and friends in Bowness, with Hill Top, her farmhouse, a short drive away.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Grasmere",
+      "tag": "Free",
+      "blurb": "Wordsworth's village, with Dove Cottage and the famous Grasmere gingerbread shop.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Scafell Pike",
+      "tag": "Outdoors",
+      "blurb": "England's highest mountain, a full day's hike from Wasdale for fit walkers.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where is the best place to stay in the Lake District?",
+      "answer": "Keswick and Ambleside are good bases with shops, pubs and walks from the door. Bowness and Windermere have the most hotels and lake cruises. Coniston, Grasmere and Ullswater are quieter."
+    },
+    {
+      "question": "Do you need a car in the Lake District?",
+      "answer": "It helps, but you can manage without one. Trains run to Windermere and Penrith, and buses and boats link the main towns in summer."
+    },
+    {
+      "question": "How many days do you need in the Lake District?",
+      "answer": "A long weekend is enough for a taste, but a week lets you explore several lakes and fit walks around the weather."
+    },
+    {
+      "question": "What is the nearest airport to the Lake District?",
+      "answer": "Manchester is about two hours' drive away. Trains run from Manchester Airport to Windermere, changing at Oxenholme."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Snowdonia",
+      "code": "LPL",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Isle of Skye",
+      "code": "INV",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "York",
+      "code": "LBA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Lake Garda",
+      "code": "VRN",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-30T11:30:00Z",
+  "updated": "2026-10-30T11:30:00Z"
+}

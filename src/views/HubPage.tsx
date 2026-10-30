@@ -91,7 +91,7 @@ export function HubPage({ hub, family }: { hub: Hub; family?: Family }) {
             </ul>
             <p>
               {shown !== null && board.length === 0
-                ? "Nothing here is at its best this shown. See when to go below."
+                ? "Nothing here is at its best this month. See when to go below."
                 : shown !== null && board.length > 5
                   ? `And ${board.length - 5} more below.`
                   : "See every guide below."}

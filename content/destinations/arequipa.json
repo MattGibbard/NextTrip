@@ -1,0 +1,200 @@
+{
+  "name": "Arequipa",
+  "published": true,
+  "country": "PE",
+  "title": "Holidays in Arequipa",
+  "intro": "Peru's elegant 'White City', built from pale volcanic stone beneath snow-capped volcanoes, with a vast colonial convent, great food and the Colca Canyon nearby. Here's what Arequipa is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/arequipa-2308382_1280.webp",
+  "image_alt": "Arequipa's Plaza de Armas and cathedral lit up at dusk, with palm trees in front and the cone of El Misti volcano behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Arequipa",
+  "to_code": "AQP",
+  "holiday_types": [
+    "culture",
+    "food",
+    "adventure"
+  ],
+  "nights": "3 to 5",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "5 to 6 hrs behind the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Peruvian sol (S/)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for holiday stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / C · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Arequipa sits at about 2,300 metres and the Colca Canyon is much higher, so take it easy for the first day. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Warm, some rain",
+      "temp": 22
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Warm, rainiest month",
+      "temp": 21
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Warm, rains easing",
+      "temp": 22
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Sunny, dry",
+      "temp": 22
+    },
+    "may": {
+      "rating": "best",
+      "note": "Sunny, dry",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Sunny, cold nights",
+      "temp": 22
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Sunny, cold nights",
+      "temp": 22
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Sunny, city's anniversary",
+      "temp": 23
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Sunny, dry",
+      "temp": 23
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Sunny, dry",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Sunny, dry",
+      "temp": 23
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Sunny, some rain",
+      "temp": 23
+    }
+  },
+  "when_to_go": "Arequipa is sunny almost all year, with warm days and cool nights. April to November is the dry season and the best time to visit, especially for the Colca Canyon, where condors are easiest to see from about May to December. January to March brings some rain, mostly in the afternoons. Mid-August is lively, with celebrations for the city's anniversary.",
+  "things": [
+    {
+      "name": "Santa Catalina Monastery",
+      "tag": "Ticketed",
+      "blurb": "A huge 16th-century convent like a small walled town, with bright blue and red streets, courtyards and cells.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Plaza de Armas",
+      "tag": "Free",
+      "blurb": "One of Peru's most beautiful main squares, with arcades, the white cathedral and volcano views.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Colca Canyon",
+      "tag": "Tour",
+      "blurb": "One of the world's deepest canyons, a long day trip or two-day tour away, where Andean condors soar past the Cruz del Condor lookout.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Museo Santuarios Andinos",
+      "tag": "Ticketed",
+      "blurb": "A museum about the Inca child sacrifices found on the volcanoes, including the 'Juanita' mummy.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Yanahuara viewpoint",
+      "tag": "Free",
+      "blurb": "White stone arches in a quiet neighbourhood, framing a view of El Misti.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Picanterías",
+      "tag": "Free",
+      "blurb": "Traditional restaurants serving Arequipa's famous food, like rocoto relleno, stuffed spicy peppers.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "San Camilo market",
+      "tag": "Free",
+      "blurb": "The city's busy central market, with fruit juices, cheese and local snacks.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Arequipa from the UK?",
+      "answer": "There are no direct flights. Fly to Lima, usually with one stop, then take a domestic flight of about an hour and a half to Arequipa."
+    },
+    {
+      "question": "Is Arequipa high altitude?",
+      "answer": "It's at about 2,300 metres, high enough to feel short of breath at first. The Colca Canyon route crosses passes of more than 4,800 metres, so spend a couple of days in Arequipa first."
+    },
+    {
+      "question": "How many days do you need in Arequipa?",
+      "answer": "Two days for the city, plus two for a Colca Canyon tour. Many people stop here on the way to Lake Titicaca and Cusco."
+    },
+    {
+      "question": "When is the best time to see condors in the Colca Canyon?",
+      "answer": "The dry season, roughly May to December, in the morning, when the condors ride the warm air rising from the canyon."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cusco",
+      "code": "CUZ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Atacama Desert",
+      "code": "CJC",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Oaxaca",
+      "code": "OAX",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Cartagena",
+      "code": "CTG",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-30T06:45:54Z",
+  "updated": "2026-10-30T06:45:54Z"
+}

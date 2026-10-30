@@ -1,0 +1,201 @@
+{
+  "name": "Cagliari",
+  "published": true,
+  "country": "IT",
+  "title": "Holidays in Cagliari",
+  "intro": "Sardinia's sunny capital, with a hilltop old town, a long city beach where flamingos wade in the lagoons behind, and quiet coves an hour away. Here's what Cagliari is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/cagliari-3671983_1280.webp",
+  "image_alt": "Cagliari's pastel houses and apartment blocks spreading down to the sea, with the harbour and the Gulf of Cagliari behind, in warm evening light",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cagliari",
+  "to_code": "CAG",
+  "holiday_types": [
+    "beach",
+    "city",
+    "food",
+    "culture"
+  ],
+  "nights": "4 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F / L · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Many UK flights to Cagliari only run in summer, so check timetables if you're going in winter. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Mild, quiet",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild, spring",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm, Sant'Efisio festival",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, beaches opening",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, beach days",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Hot, sea at its warmest",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 24
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, showers",
+      "temp": 19
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Mild, festive",
+      "temp": 15
+    }
+  },
+  "when_to_go": "May, June, September and early October are the best months, hot enough for the beach without the August crowds. July and August are very hot and the coast gets busy with Italian holidaymakers. Winters are mild and sunny enough for a city break, and on 1 May the city holds Sant'Efisio, one of Sardinia's biggest festivals.",
+  "things": [
+    {
+      "name": "Castello",
+      "tag": "Free",
+      "blurb": "The walled old town on the hill, with narrow lanes, a cathedral and towers looking out over the city.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bastione di Saint Remy",
+      "tag": "Free",
+      "blurb": "A grand terrace on the old walls with the best views of the city and the bay.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Poetto beach",
+      "tag": "Free",
+      "blurb": "A long sandy city beach with beach bars, a short bus ride from the centre.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Molentargius park",
+      "tag": "Free",
+      "blurb": "Salt pans and lagoons beside Poetto where pink flamingos feed all year.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Villasimius",
+      "tag": "Outdoors",
+      "blurb": "Beaches with white sand and clear turquoise water about an hour's drive east.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Nora",
+      "tag": "Ticketed",
+      "blurb": "The ruins of an ancient Phoenician and Roman town on a headland by the sea near Pula.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Su Nuraxi di Barumini",
+      "tag": "Ticketed",
+      "blurb": "A UNESCO-listed Bronze Age stone fortress about an hour inland, the best of Sardinia's nuraghi.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Cagliari from the UK?",
+      "answer": "Fly direct from London. Ryanair flies from Stansted, and there are summer flights from other London airports and some other UK airports. Check timetables, as many routes are seasonal. The airport is about 10 minutes from the centre by train."
+    },
+    {
+      "question": "Is Cagliari worth visiting?",
+      "answer": "Yes. It's a real working city with a lovely old town, good food and a beach on the doorstep, and it's much less busy than the north of Sardinia."
+    },
+    {
+      "question": "Do you need a car in Cagliari?",
+      "answer": "Not for the city and Poetto, which are easy by bus. Hire a car for a day or two to reach the beaches around Villasimius and the south-west coast."
+    },
+    {
+      "question": "How many days do you need in Cagliari?",
+      "answer": "Three or four days covers the city and a couple of beach days. A week lets you explore more of southern Sardinia."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Alghero",
+      "code": "AHO",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Costa Smeralda",
+      "code": "OLB",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Menorca",
+      "code": "MAH",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Corsica",
+      "code": "AJA",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-10-30T06:45:54Z",
+  "updated": "2026-10-30T06:45:54Z"
+}

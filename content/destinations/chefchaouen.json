@@ -1,0 +1,200 @@
+{
+  "name": "Chefchaouen",
+  "published": true,
+  "country": "MA",
+  "title": "Holidays in Chefchaouen",
+  "intro": "A blue-washed mountain town in Morocco's Rif Mountains, with relaxed medina lanes, rooftop views and hikes to waterfalls in the hills around it. Here's what Chefchaouen is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/chefchaouen-1921173_1280.webp",
+  "image_alt": "Blue-painted steps and walls in Chefchaouen's medina, decorated with colourful flower pots",
+  "wikipedia": "https://en.wikipedia.org/wiki/Chefchaouen",
+  "to_code": "TNG",
+  "holiday_types": [
+    "culture",
+    "nature",
+    "relax"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "0 to 1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Moroccan dirham (MAD)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / E · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Morocco's clocks change during Ramadan, so the time difference can vary. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, often wet",
+      "temp": 14
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, often wet",
+      "temp": 15
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild, green hills",
+      "temp": 17
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Warm, wildflowers",
+      "temp": 19
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, great hiking",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 27
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busy",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, pleasant",
+      "temp": 23
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Mild, rains start",
+      "temp": 18
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool, wet",
+      "temp": 15
+    }
+  },
+  "when_to_go": "April, May, September and October are the best months, warm enough for the rooftops and hiking without the summer crowds. July and August are hot and busy with Moroccan holidaymakers. Winter is cool and wet in the Rif Mountains, and nights can be cold.",
+  "things": [
+    {
+      "name": "The blue medina",
+      "tag": "Free",
+      "blurb": "Wander the steep, blue-painted lanes and stairways of the old town, best early in the morning before the day-trippers arrive.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Plaza Outa el Hammam",
+      "tag": "Free",
+      "blurb": "The main square, lined with cafés and overlooked by the old kasbah and the Great Mosque.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kasbah",
+      "tag": "Ticketed",
+      "blurb": "A small fortress with a garden, a little museum and views over the town from its tower.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Spanish Mosque viewpoint",
+      "tag": "Free",
+      "blurb": "A short uphill walk to an old mosque on the hill, the classic spot for sunset over the blue town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Ras el Ma",
+      "tag": "Free",
+      "blurb": "The spring at the edge of the medina where locals do laundry and cafés sit by the stream.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Akchour waterfalls",
+      "tag": "Outdoors",
+      "blurb": "A day trip to waterfalls and a natural rock arch, 'God's Bridge', in the Talassemtane National Park.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Goat's cheese and local food",
+      "tag": "Free",
+      "blurb": "Try the soft local goat's cheese, tagines and fresh bread in small family-run restaurants.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Chefchaouen from the UK?",
+      "answer": "Fly to Tangier, which has some direct flights from the UK, mainly from Manchester, then drive or take a transfer for about two hours. Fes is another option, around four hours away by road. There's no train to Chefchaouen."
+    },
+    {
+      "question": "Why is Chefchaouen blue?",
+      "answer": "No one knows for sure. Popular explanations include Jewish traditions brought by refugees in the 1930s, keeping mosquitoes away, and simply that it attracts visitors. Locals keep repainting it every year."
+    },
+    {
+      "question": "How many days do you need in Chefchaouen?",
+      "answer": "Two nights is enough to see the town at its quietest, early and late. Add a day for a hike to the Akchour waterfalls."
+    },
+    {
+      "question": "Is Chefchaouen worth visiting?",
+      "answer": "Yes. It's far calmer than Marrakech or Fes, with less hassle, mountain air and lovely walks. It gets busy with day-trippers in the middle of the day."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Fes",
+      "code": "FEZ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Essaouira",
+      "code": "ESU",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Ronda",
+      "code": "AGP",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Marrakech",
+      "code": "RAK",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-10-30T06:45:54Z",
+  "updated": "2026-10-30T06:45:54Z"
+}

@@ -210,6 +210,11 @@
     "icon": "🇨🇭"
   },
   {
+    "slug": "holidays-in-the-uk",
+    "name": "United Kingdom",
+    "icon": "🇬🇧"
+  },
+  {
     "slug": "holidays-in-the-usa",
     "name": "United States",
     "icon": "🇺🇸"

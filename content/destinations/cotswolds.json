@@ -1,0 +1,193 @@
+{
+  "name": "Cotswolds",
+  "published": true,
+  "country": "GB",
+  "title": "Holidays in the Cotswolds",
+  "intro": "Honey-coloured stone villages, rolling hills, thatched cottages and country pubs, two hours from London. Here's what the Cotswolds are like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/bibury-cotswolds-cotswold-cottage-5073407_1280.webp",
+  "image_alt": "The stone cottages of Arlington Row in Bibury, a village in the Cotswolds",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cotswolds",
+  "to_code": "BRS",
+  "holiday_types": [
+    "nature",
+    "relax",
+    "food"
+  ],
+  "nights": "2 to 4",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time zone",
+      "value": "UK time (GMT, BST in summer)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Pound sterling (£)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No passport checks within the UK",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK and Irish citizens don't need a passport to travel within the UK, but airlines ask for photo ID. Most other visitors need an Electronic Travel Authorisation (ETA), so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, frosty",
+      "temp": 7
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Snowdrops",
+      "temp": 8
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring lambs",
+      "temp": 11
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Blossom",
+      "temp": 14
+    },
+    "may": {
+      "rating": "best",
+      "note": "Wisteria, long days",
+      "temp": 17
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Gardens in bloom",
+      "temp": 20
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 22
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Busy, lavender",
+      "temp": 22
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Mild, calmer",
+      "temp": 19
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Damp, quiet",
+      "temp": 10
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cosy pubs, Christmas",
+      "temp": 8
+    }
+  },
+  "when_to_go": "May, June and September are the best months, with gardens in bloom and pleasant walking weather. July and August are warm, but Bourton-on-the-Water, Bibury and Castle Combe get crowded with coaches, so arrive early. October has autumn colour, and December is cosy, with log fires and Christmas markets. Winter is cold and quiet.",
+  "things": [
+    {
+      "name": "Bourton-on-the-Water",
+      "tag": "Free",
+      "blurb": "The 'Venice of the Cotswolds', with low stone bridges over the River Windrush and a model village.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bibury",
+      "tag": "Free",
+      "blurb": "Arlington Row, a lane of 17th-century weavers' cottages, is one of England's most photographed streets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Broadway Tower",
+      "tag": "Ticketed",
+      "blurb": "A folly on a hilltop with views over sixteen counties, and red deer in the park around it.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blenheim Palace",
+      "tag": "Ticketed",
+      "blurb": "Churchill's birthplace, with a huge palace, gardens, a maze and an adventure playground.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cotswold Way",
+      "tag": "Outdoors",
+      "blurb": "Walk a section of the 102-mile trail between Chipping Campden and Bath.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Cotswold Farm Park",
+      "tag": "Ticketed",
+      "blurb": "Rare breeds, tractor rides and lamb feeding, run by Adam Henson from BBC Countryfile.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the best base in the Cotswolds?",
+      "answer": "Stow-on-the-Wold, Chipping Campden and Moreton-in-Marsh are central, with trains from London at Moreton. Cirencester and Burford suit the southern villages."
+    },
+    {
+      "question": "Do you need a car in the Cotswolds?",
+      "answer": "Yes, really. Buses between villages are few, though you can reach Moreton-in-Marsh, Kingham and Stroud by train and walk or cycle from there."
+    },
+    {
+      "question": "How many days do you need in the Cotswolds?",
+      "answer": "A weekend covers a handful of villages. Three or four days lets you add walks, Blenheim Palace or a day in Bath or Oxford."
+    },
+    {
+      "question": "Which are the prettiest Cotswold villages?",
+      "answer": "Bibury, Castle Combe, Lower Slaughter, Bourton-on-the-Water, Snowshill and Painswick are the favourites."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Bath",
+      "code": "BRS",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "York",
+      "code": "LBA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Lake District",
+      "code": "MAN",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Bruges",
+      "code": "BRU",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-10-30T11:30:00Z",
+  "updated": "2026-10-30T11:30:00Z"
+}

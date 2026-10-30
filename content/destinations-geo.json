@@ -204,6 +204,16 @@
     "lat": 41.3829,
     "lon": 2.1774
   },
+  "bath": {
+    "query": "Bath|GB",
+    "lat": 51.3814,
+    "lon": -2.3597
+  },
+  "belfast": {
+    "query": "Belfast|GB",
+    "lat": 54.5964,
+    "lon": -5.9302
+  },
   "belgrade-bar-railway": {
     "query": "Belgrade to Bar railway|RS",
     "lat": 42.59,
@@ -504,6 +514,11 @@
     "lat": 39.6217,
     "lon": 19.9181
   },
+  "cornwall": {
+    "query": "Cornwall|GB",
+    "lat": 50.4433,
+    "lon": -4.6247
+  },
   "corsica": {
     "query": "Corsica|FR",
     "lat": 42.15,
@@ -523,6 +538,11 @@
     "query": "Costa Smeralda|IT",
     "lat": 41.0886,
     "lon": 9.5462
+  },
+  "cotswolds": {
+    "query": "Cotswolds|GB",
+    "lat": 51.9302,
+    "lon": -1.724
   },
   "crater-lake-national-park": {
     "query": "Crater Lake National Park|US",
@@ -623,6 +643,11 @@
     "query": "Dubrovnik|HR",
     "lat": 42.6403,
     "lon": 18.1083
+  },
+  "edinburgh": {
+    "query": "Edinburgh|GB",
+    "lat": 55.9533,
+    "lon": -3.1884
   },
   "ericeira": {
     "query": "Ericeira|PT",
@@ -964,6 +989,11 @@
     "lat": 40.7342,
     "lon": 13.9471
   },
+  "isle-of-skye": {
+    "query": "Isle of Skye|GB",
+    "lat": 57.363,
+    "lon": -6.3023
+  },
   "istanbul": {
     "query": "Istanbul|TR",
     "lat": 41.0064,
@@ -1149,6 +1179,11 @@
     "lat": 45.9918,
     "lon": 9.2649
   },
+  "lake-district": {
+    "query": "Lake District|GB",
+    "lat": 54.4609,
+    "lon": -3.0886
+  },
   "lake-garda": {
     "query": "Lake Garda|IT",
     "lat": 45.6328,
@@ -1243,6 +1278,11 @@
     "query": "Lombok|ID",
     "lat": -8.651,
     "lon": 116.3249
+  },
+  "london": {
+    "query": "London|GB",
+    "lat": 51.5074,
+    "lon": -0.1278
   },
   "los-angeles": {
     "query": "Los Angeles|US",
@@ -1959,6 +1999,11 @@
     "lat": 39.1662,
     "lon": 23.4889
   },
+  "snowdonia": {
+    "query": "Snowdonia|GB",
+    "lat": 53.0712,
+    "lon": -4.0742
+  },
   "soca-valley": {
     "query": "Soča Valley|SI",
     "lat": 46.3375,
@@ -2233,6 +2278,11 @@
     "query": "Yoho National Park|CA",
     "lat": 51.3748,
     "lon": -116.5358
+  },
+  "york": {
+    "query": "York|GB",
+    "lat": 53.9657,
+    "lon": -1.0743
   },
   "yosemite-national-park": {
     "query": "Yosemite National Park|US",

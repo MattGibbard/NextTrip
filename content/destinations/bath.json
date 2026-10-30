@@ -1,0 +1,193 @@
+{
+  "name": "Bath",
+  "published": true,
+  "country": "GB",
+  "title": "Holidays in Bath",
+  "intro": "Roman baths, golden Georgian crescents and natural hot springs you can still swim in. Here's what Bath is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/bath-river-bridge-city-travel-7317549_1280.webp",
+  "image_alt": "Pulteney Bridge and the weir on the River Avon in Bath",
+  "wikipedia": "https://en.wikipedia.org/wiki/Bath,_Somerset",
+  "to_code": "BRS",
+  "holiday_types": [
+    "city",
+    "culture",
+    "relax"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 3,
+  "facts": [
+    {
+      "label": "Time zone",
+      "value": "UK time (GMT, BST in summer)",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Pound sterling (£)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No passport checks within the UK",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK and Irish citizens don't need a passport to travel within the UK, but airlines ask for photo ID. Most other visitors need an Electronic Travel Authorisation (ETA), so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, quiet",
+      "temp": 8
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold, cheaper",
+      "temp": 9
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Spring",
+      "temp": 12
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild",
+      "temp": 14
+    },
+    "may": {
+      "rating": "best",
+      "note": "Mild, gardens",
+      "temp": 18
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, long days",
+      "temp": 21
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, busy",
+      "temp": 23
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Busy",
+      "temp": 22
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Jane Austen Festival",
+      "temp": 19
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Autumn colour",
+      "temp": 15
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Christmas market starts",
+      "temp": 11
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Christmas market",
+      "temp": 8
+    }
+  },
+  "when_to_go": "May, June and September are the best months for walking the city in mild weather. September has the Jane Austen Festival, with a costumed promenade through the streets. From late November to mid December, the Christmas market fills the streets around the Abbey. Summer is busy with day trippers. A soak in the rooftop pool at Thermae Bath Spa works in any weather.",
+  "things": [
+    {
+      "name": "Roman Baths",
+      "tag": "Ticketed",
+      "blurb": "The steaming Great Bath and temple ruins, almost 2,000 years old. Children love the audio guide.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Thermae Bath Spa",
+      "tag": "Ticketed",
+      "blurb": "Swim in natural hot spring water in a rooftop pool with views over the city. Over-16s only.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Royal Crescent",
+      "tag": "Free",
+      "blurb": "A sweeping curve of Georgian townhouses. No. 1 Royal Crescent is a museum of how they lived.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bath Abbey",
+      "tag": "Ticketed",
+      "blurb": "Climb the tower for views over the rooftops and the Roman Baths below.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jane Austen Centre",
+      "tag": "Ticketed",
+      "blurb": "The story of Jane Austen's years in Bath, with tea in the Regency tearoom.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Stonehenge",
+      "tag": "Day trip",
+      "blurb": "The stone circle is about an hour away by car or tour bus, and Wells and Glastonbury are close too.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many days do you need in Bath?",
+      "answer": "Two days is enough to see the Roman Baths, the Royal Crescent and the Abbey and soak in the spa. Add a day for Stonehenge or the Cotswolds."
+    },
+    {
+      "question": "Can you swim in the Roman Baths?",
+      "answer": "No, the Roman Baths are a museum. You can swim in the same hot spring water next door at Thermae Bath Spa."
+    },
+    {
+      "question": "When is the Bath Christmas Market?",
+      "answer": "It usually runs from mid November to mid December, with wooden chalets around Bath Abbey."
+    },
+    {
+      "question": "How do you get to Bath?",
+      "answer": "Trains from London Paddington take about 90 minutes. Bristol Airport is about 45 minutes away by car or airport bus."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Cotswolds",
+      "code": "BRS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "York",
+      "code": "LBA",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Edinburgh",
+      "code": "EDI",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Baden-Baden",
+      "code": "FKB",
+      "label": "🧘 Relax & spa"
+    }
+  ],
+  "date": "2026-10-30T11:30:00Z",
+  "updated": "2026-10-30T11:30:00Z"
+}

@@ -479,6 +479,11 @@
     "lat": 44.1222,
     "lon": 9.7133
   },
+  "cluj-napoca": {
+    "query": "Cluj-Napoca|RO",
+    "lat": 46.7694,
+    "lon": 23.59
+  },
   "coimbra": {
     "query": "Coimbra|PT",
     "lat": 40.2112,
@@ -648,6 +653,11 @@
     "query": "Edinburgh|GB",
     "lat": 55.9533,
     "lon": -3.1884
+  },
+  "el-hierro": {
+    "query": "El Hierro|ES",
+    "lat": 27.7077,
+    "lon": -17.9771
   },
   "ericeira": {
     "query": "Ericeira|PT",
@@ -1073,6 +1083,11 @@
     "query": "Kerala|IN",
     "lat": 10.1632,
     "lon": 76.6413
+  },
+  "khao-sok": {
+    "query": "Khao Sok|TH",
+    "lat": 8.913,
+    "lon": 98.529
   },
   "kings-canyon-national-park": {
     "query": "Kings Canyon National Park|US",

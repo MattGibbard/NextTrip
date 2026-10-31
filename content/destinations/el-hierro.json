@@ -1,0 +1,200 @@
+{
+  "name": "El Hierro",
+  "published": true,
+  "country": "ES",
+  "title": "Holidays in El Hierro",
+  "intro": "The smallest and wildest of the main Canary Islands, a quiet volcanic UNESCO biosphere reserve with natural rock pools, twisted juniper forests and some of Europe's best diving. Here's what El Hierro is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/gulf-4681457_1280.webp",
+  "image_alt": "View from the clifftops over El Golfo valley on El Hierro, with green slopes and villages running down to a calm Atlantic Ocean",
+  "wikipedia": "https://en.wikipedia.org/wiki/El_Hierro",
+  "to_code": "VDE",
+  "holiday_types": [
+    "nature",
+    "relax",
+    "adventure"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "Same as the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "There are no direct flights from the UK, so most people connect through Tenerife. A hire car is the best way to get around. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Mild, sunny spells",
+      "temp": 21
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Mild, sunny spells",
+      "temp": 21
+    },
+    "mar": {
+      "rating": "good",
+      "note": "Mild, spring",
+      "temp": 22
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild, wildflowers",
+      "temp": 22
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 23
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, sunny",
+      "temp": 24
+    },
+    "jul": {
+      "rating": "best",
+      "note": "Warm, sea warming",
+      "temp": 25
+    },
+    "aug": {
+      "rating": "best",
+      "note": "Warm, calm sea",
+      "temp": 26
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, best diving",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, sea still warm",
+      "temp": 25
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Mild, showers",
+      "temp": 23
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Mild, winter sun",
+      "temp": 22
+    }
+  },
+  "when_to_go": "El Hierro is mild all year, so it suits winter sun as well as summer. May to October has the most sunshine, and the sea is warmest and clearest for diving from August to October. Winter is still warm on the coast, though the high middle of the island can be cloudy and cool.",
+  "things": [
+    {
+      "name": "La Restinga",
+      "tag": "Tour",
+      "blurb": "A fishing village at the southern tip, next to a marine reserve that's one of the best places in Europe to dive and snorkel.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Charco Azul",
+      "tag": "Free",
+      "blurb": "A natural pool of clear blue water under a rocky arch on the north coast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "El Sabinar",
+      "tag": "Outdoors",
+      "blurb": "Juniper trees twisted almost flat by the wind, one of the island's most famous sights.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mirador de la Peña",
+      "tag": "Free",
+      "blurb": "A clifftop viewpoint and restaurant designed by César Manrique, looking down over El Golfo.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "El Golfo",
+      "tag": "Outdoors",
+      "blurb": "A huge green bay formed by a giant landslide, with villages, vineyards and natural pools along the coast.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hiking",
+      "tag": "Outdoors",
+      "blurb": "Waymarked trails across volcanic craters, pine forests and old farm paths, including routes to the island's highest point.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Gorona del Viento",
+      "tag": "Tour",
+      "blurb": "A wind and water power plant that has made El Hierro a world leader in renewable energy.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to El Hierro from the UK?",
+      "answer": "Fly to Tenerife, then take a short flight from Tenerife North or a ferry of about two and a half hours from Los Cristianos in the south. There are also flights from Gran Canaria."
+    },
+    {
+      "question": "Is El Hierro good for beaches?",
+      "answer": "It's more about natural rock pools and clear sea than sandy beaches. Swimming is best in the pools and the calm water around La Restinga."
+    },
+    {
+      "question": "How many days do you need on El Hierro?",
+      "answer": "Five days to a week lets you see the island at a gentle pace, with time for a dive or two and some walking."
+    },
+    {
+      "question": "Is El Hierro warm in winter?",
+      "answer": "Yes, the coast is usually in the low 20s °C even in winter, making it a quiet winter-sun choice. The higher parts of the island are cooler and cloudier."
+    }
+  ],
+  "similar": [
+    {
+      "name": "La Gomera",
+      "code": "TFS",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "La Palma",
+      "code": "SPC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Madeira",
+      "code": "FNC",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Azores",
+      "code": "PDL",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-31T06:44:52Z",
+  "updated": "2026-10-31T06:44:52Z"
+}

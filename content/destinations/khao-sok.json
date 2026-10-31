@@ -1,0 +1,199 @@
+{
+  "name": "Khao Sok",
+  "published": true,
+  "country": "TH",
+  "title": "Holidays in Khao Sok",
+  "intro": "An ancient rainforest in southern Thailand with a vast green lake ringed by limestone cliffs, where you can sleep in floating raft houses and listen to gibbons at dawn. Here's what Khao Sok is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/thailand-1742563_1280.webp",
+  "image_alt": "A floating raft house and a long-tail boat on the green water of Cheow Lan Lake in Khao Sok, below jungle-covered limestone cliffs",
+  "wikipedia": "https://en.wikipedia.org/wiki/Khao_Sok_National_Park",
+  "to_code": "URT",
+  "holiday_types": [
+    "nature",
+    "adventure"
+  ],
+  "nights": "2 to 4",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "6 to 7 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Thai baht (฿)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short holiday stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B / C / O · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Thailand asks visitors to fill in an online arrival card before they fly, and its visa-free rules have been changing, so check GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 31
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Dry, sunny",
+      "temp": 32
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Dry, hot",
+      "temp": 34
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Hot, storms starting",
+      "temp": 35
+    },
+    "may": {
+      "rating": "good",
+      "note": "Showers, green",
+      "temp": 34
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Showers, quieter",
+      "temp": 33
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Showers, quieter",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Showers, quieter",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Wetter",
+      "temp": 33
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Wettest month",
+      "temp": 32
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy, then clearing",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Dry, busy",
+      "temp": 30
+    }
+  },
+  "when_to_go": "December to April is the driest time and the most popular, with calm water on the lake, though raft houses can be busy over the holidays. May to August brings regular showers but a lush green jungle and fewer people. September to November is the wettest, and some caves and trails close after heavy rain.",
+  "things": [
+    {
+      "name": "Cheow Lan Lake",
+      "tag": "Tour",
+      "blurb": "A huge reservoir in the park, with limestone cliffs rising out of emerald water. Most people go on a long-tail boat trip, often overnight.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Floating raft houses",
+      "tag": "Ticketed",
+      "blurb": "Sleep in a simple bamboo bungalow floating on the lake, with swimming and kayaking from your door.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Jungle trekking",
+      "tag": "Tour",
+      "blurb": "Guided walks on rainforest trails to waterfalls, looking out for hornbills, gibbons and macaques.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Caves",
+      "tag": "Tour",
+      "blurb": "Cave walks from the lake, some wading through underground streams. These close in heavy rain.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Night safari",
+      "tag": "Tour",
+      "blurb": "A guided night walk with torches to spot frogs, insects, snakes and sometimes civets.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Sok river",
+      "tag": "Outdoors",
+      "blurb": "Float down the river near the park headquarters in a tube or canoe, under jungle and cliffs.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Rafflesia flower",
+      "tag": "Outdoors",
+      "blurb": "One of the world's biggest flowers grows here and blooms for a few days at a time, mostly in the cooler months.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Khao Sok from the UK?",
+      "answer": "Fly to Bangkok, usually with one stop, then take a short domestic flight to Surat Thani, about an hour or so by road from the park. Phuket and Krabi are around two and a half to three hours away by road, so Khao Sok is easy to add to a beach holiday."
+    },
+    {
+      "question": "How many days do you need in Khao Sok?",
+      "answer": "Two or three nights is enough for a lake trip with a night on a raft house and a jungle walk. Many people combine it with Krabi, Phuket or Koh Samui."
+    },
+    {
+      "question": "When is the best time to visit Khao Sok?",
+      "answer": "December to April is driest. Visit in May to August for fewer people and a greener jungle, but expect showers. Avoid October if you can, as it's the wettest month."
+    },
+    {
+      "question": "Can you stay overnight on Cheow Lan Lake?",
+      "answer": "Yes. Raft house stays are usually booked as a tour with boat transfers, meals and activities included."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Krabi",
+      "code": "KBV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Koh Lanta",
+      "code": "KBV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Borneo",
+      "code": "BKI",
+      "label": "🥾 Nature & hiking"
+    },
+    {
+      "name": "Ninh Binh",
+      "code": "HAN",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-10-31T06:44:52Z",
+  "updated": "2026-10-31T06:44:52Z"
+}

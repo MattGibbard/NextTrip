@@ -1,0 +1,200 @@
+{
+  "name": "Thassos",
+  "published": true,
+  "country": "GR",
+  "title": "Holidays in Thassos",
+  "intro": "Greece's green northern island, covered in pine forest and ringed by sandy coves and white marble beaches, with mountain villages, ancient ruins and a slow, easy-going pace. Here's what Thassos is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/thassos-5372421_1280.webp",
+  "image_alt": "Aerial view of a turquoise bay with a sandy beach on Thassos, backed by pine-covered hills and the blue Aegean Sea",
+  "wikipedia": "https://en.wikipedia.org/wiki/Thasos",
+  "to_code": "KVA",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "relax"
+  ],
+  "nights": "7",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Thassos is reached by a short ferry from Keramoti or Kavala on the mainland. Hiring a car is the easiest way to get round the island. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, most places shut",
+      "temp": 11
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, most places shut",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 15
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Mild, spring flowers",
+      "temp": 19
+    },
+    "may": {
+      "rating": "good",
+      "note": "Warm, green",
+      "temp": 24
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, sea warming",
+      "temp": 29
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, busiest",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, busiest",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, warm sea",
+      "temp": 27
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild, quieter",
+      "temp": 21
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool, most places shut",
+      "temp": 16
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool, most places shut",
+      "temp": 12
+    }
+  },
+  "when_to_go": "June and September are the best months, with hot sunny days, a warm sea and fewer people than in high summer. July and August are hottest and busiest, especially with visitors from Greece and the Balkans. May and October are pleasant for walking, while most hotels and tavernas close from November to April.",
+  "things": [
+    {
+      "name": "Marble Beach",
+      "tag": "Free",
+      "blurb": "A bright white beach made of crushed marble from nearby quarries, with very clear turquoise water.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Giola",
+      "tag": "Free",
+      "blurb": "A natural rock pool on the south coast, filled by the sea and reached by a short but rocky path down the cliffs, so wear proper shoes.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Limenas",
+      "tag": "Free",
+      "blurb": "The island's main town and port, with an ancient agora, a theatre and Greek walls in among the cafés and fish tavernas.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Aliki",
+      "tag": "Free",
+      "blurb": "A small peninsula with ancient marble quarries, ruined temples and two clear-water bays for swimming.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Panagia and Potamia",
+      "tag": "Free",
+      "blurb": "Mountain villages with stone houses, plane trees and springs, where tavernas serve local honey and lamb.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kastro",
+      "tag": "Outdoors",
+      "blurb": "An old hilltop village in the middle of the island, reached by a winding mountain road through the forest.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Boat trips",
+      "tag": "Tour",
+      "blurb": "Round-the-island cruises that stop at beaches and coves only reachable by sea.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Thassos from the UK?",
+      "answer": "Fly to Kavala, then it's a short drive to Keramoti and a ferry of about 35 minutes to Limenas. Jet2 is adding flights to Kavala from Birmingham, Manchester and Stansted from summer 2027. You can also fly to Thessaloniki and drive about two and a half hours to Keramoti."
+    },
+    {
+      "question": "Is Thassos worth visiting?",
+      "answer": "Yes, if you want beaches, forest and quiet villages without the crowds of the better-known islands. It's greener than most Greek islands and still feels relaxed."
+    },
+    {
+      "question": "How many days do you need on Thassos?",
+      "answer": "A week is ideal. You can drive round the whole island in a day, but a week gives time for the beaches, villages and a boat trip."
+    },
+    {
+      "question": "What is the best beach on Thassos?",
+      "answer": "Marble Beach is the most famous for its white stones and clear water. Golden Beach, Paradise Beach and Aliki are also popular."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Halkidiki",
+      "code": "SKG",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Skiathos",
+      "code": "JSI",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Lefkada",
+      "code": "PVK",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Corfu",
+      "code": "CFU",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-11-01T06:46:29Z",
+  "updated": "2026-11-01T06:46:29Z"
+}

@@ -1,0 +1,200 @@
+{
+  "name": "Bohol",
+  "published": true,
+  "country": "PH",
+  "title": "Holidays in Bohol",
+  "intro": "A laid-back island in the central Philippines, home to the strange Chocolate Hills, tiny wide-eyed tarsiers, jungle river cruises and the white sand and coral reefs of Panglao. Here's what Bohol is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/chocolate-2692912_1280.webp",
+  "image_alt": "The rounded green Chocolate Hills of Bohol stretching into the distance under a blue sky with white clouds",
+  "wikipedia": "https://en.wikipedia.org/wiki/Bohol",
+  "to_code": "TAG",
+  "holiday_types": [
+    "beach",
+    "nature",
+    "adventure"
+  ],
+  "nights": "5 to 7",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "7 to 8 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Philippine peso (₱)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for stays up to 30 days",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B / C · 220V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "You need to register on the Philippines' free eTravel website shortly before you travel. Typhoons can hit between June and November, so check GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Warm, drier",
+      "temp": 30
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 30
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Hot, dry",
+      "temp": 31
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Hot, dry",
+      "temp": 32
+    },
+    "may": {
+      "rating": "good",
+      "note": "Hot, humid",
+      "temp": 33
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Showers starting",
+      "temp": 32
+    },
+    "jul": {
+      "rating": "quiet",
+      "note": "Rainy, typhoon risk",
+      "temp": 31
+    },
+    "aug": {
+      "rating": "quiet",
+      "note": "Rainy, typhoon risk",
+      "temp": 31
+    },
+    "sep": {
+      "rating": "quiet",
+      "note": "Rainy, typhoon risk",
+      "temp": 31
+    },
+    "oct": {
+      "rating": "quiet",
+      "note": "Rainy, typhoon risk",
+      "temp": 31
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Rainy, typhoon risk",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Warm, drier",
+      "temp": 30
+    }
+  },
+  "when_to_go": "December to May is the best time, with drier weather and calmer seas for diving and island trips. March to May is the hottest. June to November is the wetter season, when showers are common and typhoons are possible, though prices are lower and the hills are greenest.",
+  "things": [
+    {
+      "name": "Chocolate Hills",
+      "tag": "Ticketed",
+      "blurb": "More than a thousand grassy, cone-shaped hills that turn brown in the dry season. Climb the viewing deck at Carmen for the classic view.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Philippine tarsiers",
+      "tag": "Ticketed",
+      "blurb": "See some of the world's smallest primates, with huge eyes, at a sanctuary in Corella where they live in the forest.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Loboc River",
+      "tag": "Tour",
+      "blurb": "A slow lunch cruise on a floating restaurant along a jungle-lined green river, often with music.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Alona Beach",
+      "tag": "Free",
+      "blurb": "Panglao Island's busiest beach, with white sand, dive shops, bars and seafood restaurants.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Balicasag Island",
+      "tag": "Tour",
+      "blurb": "A small island off Panglao with a marine sanctuary, coral walls, sea turtles and some of the best snorkelling and diving in the area.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Anda",
+      "tag": "Free",
+      "blurb": "Quieter white-sand beaches and cave pools on the far east of the island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Baclayon Church",
+      "tag": "Free",
+      "blurb": "One of the oldest stone churches in the Philippines, restored after an earthquake in 2013.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Bohol from the UK?",
+      "answer": "Fly to Manila, with a direct flight from Heathrow or with one stop, then take a domestic flight of about an hour and a half to Bohol-Panglao airport. Another option is to fly to Cebu and take a fast ferry of about two hours to Tagbilaran."
+    },
+    {
+      "question": "Is Bohol worth visiting?",
+      "answer": "Yes. It mixes beaches and diving with sights you won't see anywhere else, like the Chocolate Hills and tarsiers, and it's easy to combine with Cebu or Palawan."
+    },
+    {
+      "question": "How many days do you need in Bohol?",
+      "answer": "Four to seven days lets you do a countryside tour of the hills, tarsiers and river, plus a few beach days and a snorkelling trip."
+    },
+    {
+      "question": "Can you hold the tarsiers?",
+      "answer": "No. Tarsiers are shy and easily stressed, so good sanctuaries keep visitors quiet and at a distance, with no touching or flash photos."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Palawan",
+      "code": "PPS",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Langkawi",
+      "code": "LGK",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Krabi",
+      "code": "KBV",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Bali",
+      "code": "DPS",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-11-01T06:46:29Z",
+  "updated": "2026-11-01T06:46:29Z"
+}

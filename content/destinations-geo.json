@@ -284,6 +284,11 @@
     "lat": 37.0344,
     "lon": 27.4307
   },
+  "bohol": {
+    "query": "Bohol|PH",
+    "lat": 9.8333,
+    "lon": 124.1616
+  },
   "bologna": {
     "query": "Bologna|IT",
     "lat": 44.4938,
@@ -2114,6 +2119,11 @@
     "lat": 28.2936,
     "lon": -16.6214
   },
+  "thassos": {
+    "query": "Thassos|GR",
+    "lat": 40.7782,
+    "lon": 24.7059
+  },
   "the-canadian": {
     "query": "The Canadian|CA",
     "lat": 52.8737,
@@ -2313,6 +2323,11 @@
     "query": "Zagori|GR",
     "lat": 39.8649,
     "lon": 20.8813
+  },
+  "zagreb": {
+    "query": "Zagreb|HR",
+    "lat": 45.8131,
+    "lon": 15.9773
   },
   "zakopane": {
     "query": "Zakopane|PL",

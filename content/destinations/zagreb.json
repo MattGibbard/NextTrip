@@ -1,0 +1,200 @@
+{
+  "name": "Zagreb",
+  "published": true,
+  "country": "HR",
+  "title": "Holidays in Zagreb",
+  "intro": "Croatia's easy-going capital, with a hilltop old town, grand Austro-Hungarian streets, a busy café culture and one of Europe's best-loved Christmas markets. Here's what Zagreb is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/church-189325_1280.webp",
+  "image_alt": "St Mark's Church in Zagreb's Upper Town, with its colourful tiled roof showing the coats of arms of Croatia and Zagreb",
+  "wikipedia": "https://en.wikipedia.org/wiki/Zagreb",
+  "to_code": "ZAG",
+  "holiday_types": [
+    "city",
+    "culture",
+    "food"
+  ],
+  "nights": "2 to 4",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Euro (€)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Zagreb is about two hours by road from Plitvice Lakes, so it's a good start or end to a Croatia road trip. The EU is bringing in new entry checks, so check the rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cold, grey",
+      "temp": 4
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cold",
+      "temp": 7
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cool, spring coming",
+      "temp": 12
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Mild, blossom",
+      "temp": 17
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, café terraces",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Warm, festivals",
+      "temp": 26
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, quieter",
+      "temp": 28
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, quieter",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, golden",
+      "temp": 22
+    },
+    "oct": {
+      "rating": "good",
+      "note": "Mild, autumn colours",
+      "temp": 16
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool, grey",
+      "temp": 10
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Cold, Advent market",
+      "temp": 5
+    }
+  },
+  "when_to_go": "May, June and September are the best months for walking the city and sitting out at café terraces. July and August are hot and some locals head to the coast. December is the big draw in winter, when Advent in Zagreb fills the squares and parks with markets, lights and ice skating.",
+  "things": [
+    {
+      "name": "Upper Town",
+      "tag": "Free",
+      "blurb": "The old hilltop quarter of cobbled lanes, with St Mark's Church and its tiled roof, and the Lotrščak Tower where a cannon fires every day at noon.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Funicular",
+      "tag": "Ticketed",
+      "blurb": "One of the shortest funicular railways in the world, linking the Lower Town to the Upper Town in under a minute.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Museum of Broken Relationships",
+      "tag": "Ticketed",
+      "blurb": "A moving and often funny museum of objects left over from break-ups, donated by people around the world.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Dolac market",
+      "tag": "Free",
+      "blurb": "The city's main open-air market, with red umbrellas, fruit, cheese and flowers just above the main square.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Mirogoj Cemetery",
+      "tag": "Free",
+      "blurb": "A peaceful cemetery with long ivy-covered arcades and domes, often called one of the most beautiful in Europe.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tkalčićeva Street",
+      "tag": "Free",
+      "blurb": "A lively street of bars and cafés running below the Upper Town, busiest in the evening.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Advent in Zagreb",
+      "tag": "Free",
+      "blurb": "The Christmas market, from late November to early January, with food stalls, lights, concerts and skating in the city's squares and parks.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Zagreb from the UK?",
+      "answer": "Fly direct in about two and a half hours. British Airways flies from Heathrow and Ryanair flies from Stansted. Check the latest timetables, as routes change. The airport is about 30 minutes from the centre."
+    },
+    {
+      "question": "Is Zagreb worth visiting?",
+      "answer": "Yes. It's less crowded than Croatia's coast, with good food, cafés and museums, and it's a handy base for Plitvice Lakes."
+    },
+    {
+      "question": "How many days do you need in Zagreb?",
+      "answer": "Two or three days is enough to see the city. Add a day for a trip to Plitvice Lakes."
+    },
+    {
+      "question": "Is the Zagreb Christmas market good?",
+      "answer": "Yes. Advent in Zagreb was voted the best Christmas market in Europe by European Best Destinations three years running, from 2016 to 2018."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Ljubljana",
+      "code": "LJU",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Budapest",
+      "code": "BUD",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Vienna",
+      "code": "VIE",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Sarajevo",
+      "code": "SJJ",
+      "label": "🏙️ City break"
+    }
+  ],
+  "date": "2026-11-01T06:46:29Z",
+  "updated": "2026-11-01T06:46:29Z"
+}

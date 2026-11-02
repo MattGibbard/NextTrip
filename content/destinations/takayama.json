@@ -1,0 +1,200 @@
+{
+  "name": "Takayama",
+  "published": true,
+  "country": "JP",
+  "title": "Holidays in Takayama",
+  "intro": "An old merchant town in the mountains of central Japan, with dark wooden streets, sake breweries, morning markets and some of the country's most famous festivals. Here's what Takayama is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/japan-4934967_1280.webp",
+  "image_alt": "A quiet street of dark wooden houses and shops in Takayama's old town at dusk, lit by street lamps",
+  "wikipedia": "https://en.wikipedia.org/wiki/Takayama,_Gifu",
+  "to_code": "NGO",
+  "holiday_types": [
+    "culture",
+    "food",
+    "nature"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "week",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "8 to 9 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Japanese yen (¥)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type A / B · 100V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK plugs need an adapter. Takayama is about two and a half hours from Nagoya by the Hida limited express train, which is covered by the Japan Rail Pass. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "good",
+      "note": "Cold, snowy",
+      "temp": 3
+    },
+    "feb": {
+      "rating": "good",
+      "note": "Cold, snowy",
+      "temp": 4
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Cold, thawing",
+      "temp": 9
+    },
+    "apr": {
+      "rating": "best",
+      "note": "Mild, spring festival",
+      "temp": 16
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, fresh green",
+      "temp": 22
+    },
+    "jun": {
+      "rating": "quiet",
+      "note": "Warm, rainy season",
+      "temp": 25
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Hot, humid",
+      "temp": 29
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Hot, humid",
+      "temp": 30
+    },
+    "sep": {
+      "rating": "good",
+      "note": "Warm, cooling",
+      "temp": 26
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild, autumn festival",
+      "temp": 19
+    },
+    "nov": {
+      "rating": "best",
+      "note": "Cool, autumn colours",
+      "temp": 13
+    },
+    "dec": {
+      "rating": "good",
+      "note": "Cold, first snow",
+      "temp": 6
+    }
+  },
+  "when_to_go": "April, May, October and November are the best months, with mild weather, spring blossom or autumn leaves, and the town's two big festivals in mid April and early October. Summer is hot and humid but cooler than Japan's big cities, and June is the rainy season. Winter is cold and snowy, which makes nearby Shirakawa-go look magical.",
+  "things": [
+    {
+      "name": "Sanmachi Suji",
+      "tag": "Free",
+      "blurb": "The old merchant quarter of dark timber houses, now full of sake breweries, craft shops and cafés. Look for the cedar balls hung outside breweries.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Morning markets",
+      "tag": "Free",
+      "blurb": "Two markets, by the Miyagawa river and in front of Takayama Jinya, selling pickles, fruit, flowers and crafts each morning.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Takayama Jinya",
+      "tag": "Ticketed",
+      "blurb": "A rare surviving government office from the Edo period, with tatami rooms, storehouses and a garden.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hida Folk Village",
+      "tag": "Ticketed",
+      "blurb": "An open-air museum of old thatched farmhouses moved here from around the region, set around a pond.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Hida beef",
+      "tag": "Free",
+      "blurb": "Try the local marbled beef as sushi, skewers or grilled at the table, sold all over the old town.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Shirakawa-go",
+      "tag": "Tour",
+      "blurb": "A UNESCO-listed village of steep thatched farmhouses, about an hour away by bus and popular as a day trip.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Takayama Festival",
+      "tag": "Free",
+      "blurb": "Held each spring and autumn, with ornate festival floats, some with mechanical puppets, paraded through the streets. Check dates before you go.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Takayama from the UK?",
+      "answer": "Fly to Tokyo or Osaka, usually direct from Heathrow to Tokyo. Take the shinkansen to Nagoya, then the Hida limited express train, about two and a half hours through the mountains to Takayama."
+    },
+    {
+      "question": "How many days do you need in Takayama?",
+      "answer": "Two nights is enough for the old town, the morning markets and a day trip to Shirakawa-go. Add a night if you want to visit the hot springs of Okuhida."
+    },
+    {
+      "question": "When is the Takayama Festival?",
+      "answer": "The spring festival is held on 14 and 15 April and the autumn festival on 9 and 10 October each year. Book a room early if you plan to go."
+    },
+    {
+      "question": "Is Takayama worth visiting?",
+      "answer": "Yes. It's one of Japan's best-preserved old towns and a good stop between Tokyo or Kyoto and Kanazawa, with a quieter feel than the big cities."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Kanazawa",
+      "code": "KMQ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Kyoto",
+      "code": "KIX",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Tokyo",
+      "code": "HND",
+      "label": "🏙️ City break"
+    },
+    {
+      "name": "Hiroshima",
+      "code": "HIJ",
+      "label": "🏛️ Culture & history"
+    }
+  ],
+  "date": "2026-11-02T06:46:34Z",
+  "updated": "2026-11-02T06:46:34Z"
+}

@@ -609,6 +609,11 @@
     "lat": 63.2317,
     "lon": -151.0406
   },
+  "diani-beach": {
+    "query": "Diani Beach|KE",
+    "lat": -4.2906,
+    "lon": 39.5858
+  },
   "disneyland-paris": {
     "query": "Disneyland Paris|FR",
     "lat": 48.8701,
@@ -1489,6 +1494,11 @@
     "lat": 49.9161,
     "lon": 7.0705
   },
+  "mostar": {
+    "query": "Mostar|BA",
+    "lat": 43.3436,
+    "lon": 17.8077
+  },
   "mount-rainier-national-park": {
     "query": "Mount Rainier National Park|US",
     "lat": 46.8543,
@@ -2083,6 +2093,11 @@
     "query": "Taipei|TW",
     "lat": 25.0375,
     "lon": 121.5637
+  },
+  "takayama": {
+    "query": "Takayama|JP",
+    "lat": 36.1396,
+    "lon": 137.251
   },
   "tallinn": {
     "query": "Tallinn|EE",

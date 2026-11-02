@@ -1,0 +1,200 @@
+{
+  "name": "Mostar",
+  "published": true,
+  "country": "BA",
+  "title": "Holidays in Mostar",
+  "intro": "A small Ottoman-era town in Herzegovina, built around a famous stone bridge over the bright green Neretva river, with cobbled bazaar lanes, mosques and waterfalls nearby. Here's what Mostar is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/bosnia-1111419_1280.webp",
+  "image_alt": "The arched Stari Most stone bridge in Mostar over the green Neretva river, with old stone towers and houses on either bank",
+  "wikipedia": "https://en.wikipedia.org/wiki/Mostar",
+  "to_code": "DBV",
+  "holiday_types": [
+    "culture",
+    "city",
+    "nature"
+  ],
+  "nights": "2 to 3",
+  "trip_length": "weekend",
+  "budget": 1,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "1 hr ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Convertible mark (KM)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "No visa for short stays",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type C / F · 230V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "Bosnia and Herzegovina isn't in the EU. Many places take euros, but you'll get change in marks. Mostar has its own small airport, but most UK visitors fly to Dubrovnik and drive about two and a half hours. Check entry rules on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 10
+    },
+    "feb": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 12
+    },
+    "mar": {
+      "rating": "quiet",
+      "note": "Mild, spring coming",
+      "temp": 16
+    },
+    "apr": {
+      "rating": "good",
+      "note": "Warm, blossom",
+      "temp": 20
+    },
+    "may": {
+      "rating": "best",
+      "note": "Warm, green",
+      "temp": 25
+    },
+    "jun": {
+      "rating": "best",
+      "note": "Hot, long days",
+      "temp": 30
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Very hot, busy",
+      "temp": 33
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Very hot, busy",
+      "temp": 33
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, quieter",
+      "temp": 28
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Mild, autumn colours",
+      "temp": 22
+    },
+    "nov": {
+      "rating": "quiet",
+      "note": "Cool, showers",
+      "temp": 15
+    },
+    "dec": {
+      "rating": "quiet",
+      "note": "Cool, quiet",
+      "temp": 11
+    }
+  },
+  "when_to_go": "May, June, September and October are the best months, warm enough for swimming at the waterfalls without the fierce heat of high summer. July and August are among the hottest in Europe, often in the mid 30s °C, and the old town is busy with day trips from the coast. Winters are mild but quiet, and some guesthouses close.",
+  "things": [
+    {
+      "name": "Stari Most",
+      "tag": "Free",
+      "blurb": "The 16th-century Old Bridge, destroyed in 1993 and rebuilt stone by stone in 2004. Watch local divers jump about 20 metres into the river once enough tips are collected.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kujundžiluk",
+      "tag": "Free",
+      "blurb": "The old bazaar street by the bridge, lined with copper workshops, rug stalls and cafés serving Bosnian coffee.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Koski Mehmed Pasha Mosque",
+      "tag": "Ticketed",
+      "blurb": "A 17th-century mosque by the river. Climb its minaret for the classic view of the bridge.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kravice waterfalls",
+      "tag": "Ticketed",
+      "blurb": "A wide horseshoe of waterfalls about 40 km away, with a swimming area in summer.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Blagaj Tekke",
+      "tag": "Ticketed",
+      "blurb": "A dervish house built against a cliff at the source of the Buna river, about 12 km from town, with riverside restaurants serving fresh trout.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Počitelj",
+      "tag": "Free",
+      "blurb": "A walled hillside village of stone houses above the Neretva, with a fort and views down the valley.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Bosnian food",
+      "tag": "Free",
+      "blurb": "Try ćevapi, burek and stuffed vegetables in the old town's grill houses, ideally on a terrace above the river.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Mostar from the UK?",
+      "answer": "Fly to Dubrovnik and drive or take a transfer of about two and a half hours, crossing into Bosnia and Herzegovina. You can also fly to Sarajevo and take the train, which runs along the Neretva valley in about two hours. Check timetables, as routes change."
+    },
+    {
+      "question": "Is Mostar worth staying overnight?",
+      "answer": "Yes. Most visitors come on a day trip from Dubrovnik or Split, so the old town is far quieter in the evening and early morning, when the bridge is lit up."
+    },
+    {
+      "question": "How many days do you need in Mostar?",
+      "answer": "One full day covers the old town. Two or three days gives time for Kravice, Blagaj and Počitelj."
+    },
+    {
+      "question": "Is Mostar safe to visit?",
+      "answer": "Mostar is a popular and friendly place to visit. In the countryside, stick to marked roads and paths, as there are still landmines in some areas from the 1990s war. Check GOV.UK for the latest advice."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Sarajevo",
+      "code": "SJJ",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Dubrovnik",
+      "code": "DBV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Kotor",
+      "code": "TIV",
+      "label": "🏛️ Culture & history"
+    },
+    {
+      "name": "Lake Ohrid",
+      "code": "OHD",
+      "label": "🥾 Nature & hiking"
+    }
+  ],
+  "date": "2026-11-02T06:46:34Z",
+  "updated": "2026-11-02T06:46:34Z"
+}

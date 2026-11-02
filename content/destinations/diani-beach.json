@@ -1,0 +1,200 @@
+{
+  "name": "Diani Beach",
+  "published": true,
+  "country": "KE",
+  "title": "Holidays in Diani Beach",
+  "intro": "A long white-sand beach on Kenya's south coast, lined with palms and protected by a coral reef, where you can swim with dolphins, kitesurf and add a safari to a beach holiday. Here's what Diani Beach is like, when to go and how long to stay.",
+  "seo_title": "",
+  "seo_description": "",
+  "image": "/images/destinations/africa-4052510_1280.webp",
+  "image_alt": "A traditional wooden sailing boat in the shallow turquoise water off Diani Beach in Kenya, with the Indian Ocean behind",
+  "wikipedia": "https://en.wikipedia.org/wiki/Diani_Beach",
+  "to_code": "MBA",
+  "holiday_types": [
+    "beach",
+    "relax",
+    "adventure"
+  ],
+  "nights": "7 to 10",
+  "trip_length": "two-weeks",
+  "budget": 2,
+  "facts": [
+    {
+      "label": "Time difference",
+      "value": "2 to 3 hrs ahead of the UK",
+      "highlight": false
+    },
+    {
+      "label": "Currency",
+      "value": "Kenyan shilling (KSh)",
+      "highlight": false
+    },
+    {
+      "label": "Entry",
+      "value": "eTA needed before you fly",
+      "highlight": false
+    },
+    {
+      "label": "Plugs",
+      "value": "Type G · 240V",
+      "highlight": false
+    }
+  ],
+  "facts_note": "UK plugs work without an adapter. The FCDO advises against travel to some parts of Kenya, but not the Diani area. Check entry rules and the latest advice on GOV.UK before you book.",
+  "months": {
+    "jan": {
+      "rating": "best",
+      "note": "Hot, dry",
+      "temp": 32
+    },
+    "feb": {
+      "rating": "best",
+      "note": "Hot, dry",
+      "temp": 33
+    },
+    "mar": {
+      "rating": "best",
+      "note": "Hot, dry",
+      "temp": 33
+    },
+    "apr": {
+      "rating": "quiet",
+      "note": "Hot, long rains",
+      "temp": 31
+    },
+    "may": {
+      "rating": "quiet",
+      "note": "Wettest month",
+      "temp": 29
+    },
+    "jun": {
+      "rating": "good",
+      "note": "Warm, rains easing",
+      "temp": 28
+    },
+    "jul": {
+      "rating": "good",
+      "note": "Warm, drier",
+      "temp": 27
+    },
+    "aug": {
+      "rating": "good",
+      "note": "Warm, safari season",
+      "temp": 28
+    },
+    "sep": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 29
+    },
+    "oct": {
+      "rating": "best",
+      "note": "Warm, dry",
+      "temp": 30
+    },
+    "nov": {
+      "rating": "good",
+      "note": "Warm, short rains",
+      "temp": 31
+    },
+    "dec": {
+      "rating": "best",
+      "note": "Hot, dry, busy",
+      "temp": 32
+    }
+  },
+  "when_to_go": "December to March is the hottest and driest time, with calm, clear sea for snorkelling and diving, and it's a classic winter-sun escape. July to October is also dry and a little cooler, and it lines up with the best safari season. April to June brings the long rains, when some hotels close, and November has shorter showers.",
+  "things": [
+    {
+      "name": "Diani Beach",
+      "tag": "Free",
+      "blurb": "Around 17 km of white sand facing a coral reef, with calm, warm water at high tide and rock pools at low tide.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Wasini Island and Kisite",
+      "tag": "Tour",
+      "blurb": "A dhow trip to the Kisite-Mpunguti marine park to snorkel coral reefs and look for dolphins, usually with a seafood lunch on Wasini Island.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Colobus Conservation",
+      "tag": "Ticketed",
+      "blurb": "A small centre protecting the black-and-white colobus monkeys that live in Diani's coastal forest, with guided walks.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Shimba Hills",
+      "tag": "Tour",
+      "blurb": "A national reserve in the hills above the coast, with elephants, rare sable antelope and the Sheldrick Falls.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kitesurfing",
+      "tag": "Outdoors",
+      "blurb": "Steady trade winds make Diani one of East Africa's best kitesurfing spots, with schools along the beach.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Kaya Kinondo",
+      "tag": "Tour",
+      "blurb": "A sacred forest of the Mijikenda people, part of a UNESCO World Heritage Site, visited with a local guide.",
+      "image": "",
+      "image_alt": ""
+    },
+    {
+      "name": "Tsavo safari",
+      "tag": "Tour",
+      "blurb": "Tsavo East and West National Parks can be reached by road from the coast for a one or two night safari.",
+      "image": "",
+      "image_alt": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you get to Diani Beach from the UK?",
+      "answer": "Fly direct from Heathrow to Nairobi with British Airways or Kenya Airways, then take a short domestic flight to Ukunda airstrip in Diani or to Mombasa. From Mombasa it's about an hour or more by road, depending on traffic."
+    },
+    {
+      "question": "Do you need a visa for Kenya?",
+      "answer": "British passport holders need an electronic travel authorisation (eTA), applied for online before you travel. Check the latest rules and fee on GOV.UK."
+    },
+    {
+      "question": "When is the best time to visit Diani Beach?",
+      "answer": "December to March is hot, dry and best for the sea. July to October is dry too and great for combining with a safari. Avoid April to June, the long rains."
+    },
+    {
+      "question": "Can you combine Diani Beach with a safari?",
+      "answer": "Yes. Tsavo and Shimba Hills are reachable by road, or you can fly to the Maasai Mara from Nairobi before heading to the coast."
+    }
+  ],
+  "similar": [
+    {
+      "name": "Zanzibar",
+      "code": "ZNZ",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Maasai Mara",
+      "code": "NBO",
+      "label": "🧗 Adventure"
+    },
+    {
+      "name": "Mauritius",
+      "code": "MRU",
+      "label": "🏖️ Beach"
+    },
+    {
+      "name": "Seychelles",
+      "code": "SEZ",
+      "label": "🏖️ Beach"
+    }
+  ],
+  "date": "2026-11-02T06:46:34Z",
+  "updated": "2026-11-02T06:46:34Z"
+}

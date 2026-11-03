@@ -101,3 +101,6 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-02 | innsbruck-or-salzburg-at-christmas | i | salzburg |  |
 | 2026-11-02 | porto-in-3-days | e | porto |  |
 | 2026-11-02 | where-can-you-fly-direct-from-belfast-international-airport | a | rome |  |
+| 2026-11-03 | how-early-should-you-arrive-at-cardiff-airport | d | rainy-gate-window-1043636_1280.webp |  |
+| 2026-11-03 | quietest-time-to-visit-rome | h | rome |  |
+| 2026-11-03 | winter-sun-from-birmingham-in-february | k | sharm-el-sheikh |  |

@@ -104,3 +104,6 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-03 | how-early-should-you-arrive-at-cardiff-airport | d | rainy-gate-window-1043636_1280.webp |  |
 | 2026-11-03 | quietest-time-to-visit-rome | h | rome |  |
 | 2026-11-03 | winter-sun-from-birmingham-in-february | k | sharm-el-sheikh |  |
+| 2026-11-04 | how-early-should-you-arrive-at-southampton-airport | d | propeller-plane-landing-2820680_1280.webp |  |
+| 2026-11-04 | how-to-plan-a-group-holiday-with-friends | m | puglia |  |
+| 2026-11-04 | is-tenerife-warm-in-february | f | tenerife |  |

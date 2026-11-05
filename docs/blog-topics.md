@@ -107,3 +107,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-04 | how-early-should-you-arrive-at-southampton-airport | d | propeller-plane-landing-2820680_1280.webp |  |
 | 2026-11-04 | how-to-plan-a-group-holiday-with-friends | m | puglia |  |
 | 2026-11-04 | is-tenerife-warm-in-february | f | tenerife |  |
+| 2026-11-05 | cool-summer-holidays-in-europe | p | faroe-islands |  |
+| 2026-11-05 | winter-sun-from-gatwick-in-january | k | barbados |  |

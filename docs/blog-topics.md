@@ -115,3 +115,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-07 | seville-or-malaga-in-winter | i | malaga |  |
 | 2026-11-08 | where-can-you-fly-direct-from-dublin-airport | a | new-york |  |
 | 2026-11-08 | amsterdam-at-christmas | f | amsterdam |  |
+| 2026-11-09 | where-can-you-fly-direct-from-luton-airport | a | levi |  |
+| 2026-11-09 | bruges-at-christmas | f | bruges |  |

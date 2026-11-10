@@ -117,3 +117,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-08 | amsterdam-at-christmas | f | amsterdam |  |
 | 2026-11-09 | where-can-you-fly-direct-from-luton-airport | a | levi |  |
 | 2026-11-09 | bruges-at-christmas | f | bruges |  |
+| 2026-11-10 | how-early-should-you-arrive-at-shannon-airport | d | boston |  |
+| 2026-11-10 | is-gran-canaria-warm-in-december | f | gran-canaria |  |

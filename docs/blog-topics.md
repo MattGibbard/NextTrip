@@ -119,3 +119,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-09 | bruges-at-christmas | f | bruges |  |
 | 2026-11-10 | how-early-should-you-arrive-at-shannon-airport | d | boston |  |
 | 2026-11-10 | is-gran-canaria-warm-in-december | f | gran-canaria |  |
+| 2026-11-11 | direct-flights-to-christmas-markets-from-the-uk | f | nuremberg |  |
+| 2026-11-11 | madeira-at-new-year | f | madeira |  |

@@ -121,3 +121,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-10 | is-gran-canaria-warm-in-december | f | gran-canaria |  |
 | 2026-11-11 | direct-flights-to-christmas-markets-from-the-uk | f | nuremberg |  |
 | 2026-11-11 | madeira-at-new-year | f | madeira |  |
+| 2026-11-12 | where-can-you-fly-direct-from-gatwick-airport | a | la-palma |  |
+| 2026-11-12 | is-lanzarote-warm-in-january | f | lanzarote |  |

@@ -123,3 +123,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-11 | madeira-at-new-year | f | madeira |  |
 | 2026-11-12 | where-can-you-fly-direct-from-gatwick-airport | a | la-palma |  |
 | 2026-11-12 | is-lanzarote-warm-in-january | f | lanzarote |  |
+| 2026-11-13 | where-can-you-fly-direct-from-cork-airport | j | algarve |  |
+| 2026-11-13 | alternatives-to-paris | g | lyon |  |

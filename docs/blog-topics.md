@@ -125,3 +125,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-12 | is-lanzarote-warm-in-january | f | lanzarote |  |
 | 2026-11-13 | where-can-you-fly-direct-from-cork-airport | j | algarve |  |
 | 2026-11-13 | alternatives-to-paris | g | lyon |  |
+| 2026-11-14 | where-can-you-fly-direct-from-shannon-airport | j | rovaniemi |  |
+| 2026-11-14 | christmas-abroad-with-the-whole-family | m | tenerife |  |

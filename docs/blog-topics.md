@@ -127,3 +127,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-13 | alternatives-to-paris | g | lyon |  |
 | 2026-11-14 | where-can-you-fly-direct-from-shannon-airport | j | rovaniemi |  |
 | 2026-11-14 | christmas-abroad-with-the-whole-family | m | tenerife |  |
+| 2026-11-16 | winter-sun-from-bristol-in-february | k | hurghada |  |
+| 2026-11-16 | ski-and-sun-holidays | n | granada |  |

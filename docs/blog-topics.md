@@ -129,3 +129,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-14 | christmas-abroad-with-the-whole-family | m | tenerife |  |
 | 2026-11-16 | winter-sun-from-bristol-in-february | k | hurghada |  |
 | 2026-11-16 | ski-and-sun-holidays | n | granada |  |
+| 2026-11-17 | where-can-you-fly-direct-from-exeter-airport | j | corfu |  |
+| 2026-11-17 | is-marrakech-warm-in-january | f | marrakech |  |

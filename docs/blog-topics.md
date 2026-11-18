@@ -131,3 +131,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-16 | ski-and-sun-holidays | n | granada |  |
 | 2026-11-17 | where-can-you-fly-direct-from-exeter-airport | j | corfu |  |
 | 2026-11-17 | is-marrakech-warm-in-january | f | marrakech |  |
+| 2026-11-18 | winter-sun-from-stansted-in-february | k | la-palma |  |
+| 2026-11-18 | is-cape-verde-warm-in-january | f | cape-verde |  |

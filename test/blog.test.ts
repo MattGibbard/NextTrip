@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { AUTHORS, PAGE_SIZE, POSTS, findPost, listing, listingMeta, listingPath, listings, loadPost, postDate, postMeta, postTitle, postsAboutGuide, postsAboutHub, postsTagged, readPost, relatedPosts, sectionPhotos, usedTags } from "../src/blog";
+import { AUTHORS, PAGE_SIZE, POSTS, findPost, listing, listingMeta, listingPath, listings, loadPost, postDate, postMeta, postTitle, postsAboutAirport, postsAboutGuide, postsAboutHub, postsTagged, readPost, relatedPosts, sectionPhotos, usedTags } from "../src/blog";
 import { calloutOf, tableRows } from "../src/views/InfoPage";
 import { BLOG_TAGS, TAG_INDEX_MIN, isBlogTag } from "../src/blogTags";
 import { feedXml } from "../src/feed";
@@ -102,6 +102,14 @@ describe("tags", () => {
 });
 
 describe("links between posts and guides", () => {
+  it("links an airport post to the other posts about its airport, how early to arrive first", () => {
+    expect(postsAboutAirport("LTN", "where-can-you-fly-direct-from-luton-airport").map((p) => p.slug)[0]).toBe("how-early-should-you-arrive-at-luton-airport");
+    expect(postsAboutAirport("LTN", "how-early-should-you-arrive-at-luton-airport").map((p) => p.slug)[0]).toBe("where-can-you-fly-direct-from-luton-airport");
+    expect(postsAboutAirport("")).toEqual([]);
+    // Every "how early" post names its airport, so it gets these links.
+    for (const p of POSTS.filter((x) => x.slug.startsWith("how-early-"))) expect(p.airport, p.slug).toMatch(/^[A-Z]{3}$/);
+  });
+
   it("knows which guides each post links to, and picks a cover photo from one", () => {
     const lisbon = findPost("lisbon-or-porto")!;
     expect(lisbon.guides).toEqual(expect.arrayContaining(["lisbon", "porto"]));

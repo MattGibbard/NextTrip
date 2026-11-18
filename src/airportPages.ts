@@ -27,7 +27,7 @@ export interface Airport extends AirportCard {
   /** Getting there, parking and the like, in the same form as a blog post's sections. */
   sections: { heading: string; text: string }[];
   faqs: { question: string; answer: string }[];
-  /** The blog posts about this airport (their `airport` field), direct-flights posts first. */
+  /** The blog posts about this airport (their `airport` field): how early to arrive, then direct flights, then the rest. `intro` is the search description where the post has one, as it leads with the answer. */
   posts: { slug: string; title: string; intro: string }[];
   /** The places those posts link to, for the departures board. */
   places: PostPlace[];

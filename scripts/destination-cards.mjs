@@ -33,7 +33,7 @@ const CARD_FIELDS = [
 const HUB_CARD_FIELDS = ["published", "kind", "holiday_type", "country", "month", "guides", "icon", "name", "title", "seo_title"];
 
 /** The fields links to a blog post need. */
-const POST_CARD_FIELDS = ["published", "title", "date", "updated", "intro", "seo_title", "author", "tags"];
+const POST_CARD_FIELDS = ["published", "title", "date", "updated", "intro", "seo_title", "author", "tags", "airport"];
 
 /** The fields links to an airport page need. */
 const AIRPORT_CARD_FIELDS = ["published", "code", "name"];
@@ -147,8 +147,9 @@ async function placesFor(slugs, max) {
 
 /**
  * An airport page in full (content/airports), with the blog posts about that airport (by their
- * `airport` field) and the places those posts link to, for its departures board. Direct-flights posts
- * come first, as their places are the ones you can fly to without changing.
+ * `airport` field) and the places those posts link to, for its departures board. The posts come how
+ * early to arrive first, then direct flights, as those are what people search for; on the board,
+ * direct-flights places come first, as they're the ones you can fly to without changing.
  */
 export async function fullAirport(raw) {
   const code = typeof raw.code === "string" ? raw.code.trim().toUpperCase() : "";
@@ -160,14 +161,17 @@ export async function fullAirport(raw) {
     if (!p || p.published !== true || typeof p.airport !== "string" || p.airport.trim().toUpperCase() !== code) continue;
     const slug = file.replace(/\.json$/, "");
     const direct = /direct/.test(slug);
-    posts.push({ slug, title: p.title ?? slug, intro: p.intro ?? "", direct });
+    const early = slug.startsWith("how-early-");
+    // The search description where there is one, as it leads with the answer ("2 hours with hand luggage…").
+    const intro = (typeof p.seo_description === "string" && p.seo_description.trim()) || p.intro || "";
+    posts.push({ slug, title: p.title ?? slug, intro, rank: early ? 0 : direct ? 1 : 2 });
     const text = [...(Array.isArray(p.sections) ? p.sections : []).map((s) => s?.text ?? ""), ...(Array.isArray(p.faqs) ? p.faqs : []).map((f) => f?.answer ?? "")].join("\n");
     const slugs = [...text.matchAll(/\]\(\/destinations\/([a-z0-9-]+)/g)].map((m) => m[1]);
     if (direct) linked.unshift(...slugs);
     else linked.push(...slugs);
   }
-  posts.sort((a, b) => Number(b.direct) - Number(a.direct) || a.slug.localeCompare(b.slug));
-  return { ...raw, posts: posts.map(({ direct: _d, ...p }) => p), places: await placesFor(linked, AIRPORT_PLACES) };
+  posts.sort((a, b) => a.rank - b.rank || a.slug.localeCompare(b.slug));
+  return { ...raw, posts: posts.map(({ rank: _r, ...p }) => p), places: await placesFor(linked, AIRPORT_PLACES) };
 }
 
 /** An airport page's card fields: enough to link to it. */

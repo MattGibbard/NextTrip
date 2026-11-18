@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { isShortAnswer, listingPath, postDate, relatedPosts, sectionPhotos, usedTags } from "../blog";
+import { isShortAnswer, listingPath, postDate, postsAboutAirport, relatedPosts, sectionPhotos, usedTags } from "../blog";
 import type { Listing, Post, PostPhoto, Section } from "../blog";
 import { BLOG_TAGS, tagInSentence, tagPath } from "../blogTags";
 import type { BlogTag } from "../blogTags";
@@ -9,7 +9,9 @@ import { PostCards, PostLink } from "../components/PostCards";
 import { Inline, RichText, anchor } from "./InfoPage";
 import { PostBoxes } from "../components/PostBoxes";
 import { INFO } from "../infoPages";
-import { INFO_PAGES, destinationPath } from "../../shared/seo";
+import { INFO_PAGES, destinationPath, postPath } from "../../shared/seo";
+import { mainAirport } from "../../shared/mainAirports";
+import { airportGuide } from "../airports";
 
 /** How many other posts a post suggests at the bottom. */
 const MORE = 3;
@@ -181,14 +183,18 @@ export function BlogPost({ post }: { post: Post }) {
             <article className="lp-article">
               {post.sections.map((s, i) => {
                 const id = s.heading ? anchor(s.heading) : undefined;
-                if (i === 0 && isShortAnswer(s)) return <ShortAnswer key={i} section={s} id={id} code={post.airport} />;
-                return (
-                  <section key={i} id={id}>
-                    {s.heading && <h2>{s.heading}</h2>}
-                    <RichText text={s.text} />
-                    {photos[i].length > 0 && <PostPhotos photos={photos[i]} />}
-                  </section>
-                );
+                const section =
+                  i === 0 && isShortAnswer(s) ? (
+                    <ShortAnswer key={i} section={s} id={id} code={post.airport} />
+                  ) : (
+                    <section key={i} id={id}>
+                      {s.heading && <h2>{s.heading}</h2>}
+                      <RichText text={s.text} />
+                      {photos[i].length > 0 && <PostPhotos photos={photos[i]} />}
+                    </section>
+                  );
+                // An airport post links to the airport's guide and its other posts straight after the answer.
+                return i === 0 && post.airport ? [section, <AirportLinks key="airport" post={post} />] : section;
               })}
             </article>
 
@@ -280,6 +286,37 @@ function ShortAnswer({ section, id, code }: { section: Section; id?: string; cod
         </div>
       )}
     </section>
+  );
+}
+
+/**
+ * Under an airport post's answer: the airport's own guide and the other posts about the airport, so
+ * the guide, "how early to arrive" and "where can you fly direct" each point to the others.
+ */
+function AirportLinks({ post }: { post: Post }) {
+  const guide = airportGuide(post.airport);
+  const posts = postsAboutAirport(post.airport, post.slug);
+  const main = mainAirport(post.airport)?.[1];
+  const name = guide?.name ?? (main && (/airport/i.test(main) ? main : `${main} Airport`));
+  if (!name || (!guide && posts.length === 0)) return null;
+  return (
+    <nav className="bl-airport" aria-labelledby="bl-airport">
+      <h2 id="bl-airport">
+        <span aria-hidden>{post.airport}</span>More on {name}
+      </h2>
+      <ul>
+        {posts.map((p) => (
+          <li key={p.slug}>
+            <a href={postPath(p.slug)}>{p.title}</a>
+          </li>
+        ))}
+        {guide && (
+          <li>
+            <a href={guide.path}>{guide.name} guide: terminals, airlines and getting there</a>
+          </li>
+        )}
+      </ul>
+    </nav>
   );
 }
 

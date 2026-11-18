@@ -1022,6 +1022,54 @@
 .bl-board-guide a {
   color: var(--board-lit);
 }
+/* Under an airport post's answer: the airport's guide and its other posts */
+.bl-airport {
+  display: grid;
+  gap: 10px;
+}
+.bl-airport {
+  margin-block: 8px 24px;
+}
+.lp-article .bl-airport h2,
+.bl-airport h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: var(--text-11);
+}
+.bl-airport h2 span {
+  padding: 2px 8px;
+  border-radius: var(--radius-tag);
+  background: var(--board);
+  color: var(--board-lit);
+  font-family: var(--mono);
+  font-size: var(--text-4);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+.lp-article .bl-airport ul,
+.bl-airport ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.bl-airport li a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: var(--radius-row);
+  background: var(--surface-2);
+  font-weight: 600;
+  text-decoration: none;
+}
+.bl-airport li a::after {
+  content: " →";
+}
+.bl-airport li a:hover {
+  text-decoration: underline;
+}
 .ap-code {
   margin: 0;
   font-family: var(--mono);

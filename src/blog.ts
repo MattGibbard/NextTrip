@@ -36,6 +36,8 @@ export interface PostCard {
   /** Who wrote it, one of AUTHORS, or empty for the site itself. */
   author: string;
   tags: BlogTag[];
+  /** The UK or Irish airport an airport post is about, e.g. MAN, for its departures board and its links to the airport's guide and other posts. Empty for other posts. */
+  airport: string;
   /** The guides and hubs it links to, by slug (worked out by scripts/destination-cards.mjs). */
   guides: string[];
   hubs: string[];
@@ -70,8 +72,6 @@ export interface Section {
 
 export interface Post extends PostCard {
   seo_description: string;
-  /** The UK airport an airport post is about, e.g. MAN, for its departures board. Empty for other posts. */
-  airport: string;
   /** The guides it's about: its cover photo's guide, then the ones it links to, in order. */
   places: PostPlace[];
   /**
@@ -172,7 +172,7 @@ const files = import.meta.glob<Record<string, unknown>>("/content/blog/*.json", 
 /** Every published post, newest first. */
 export const POSTS: PostCard[] = Object.entries(cards)
   .map(([path, raw]): PostCard => {
-    const { seo_description: _d, sections: _s, faqs: _f, airport: _a, places: _p, ...card } = readPost(slugOf(path), raw);
+    const { seo_description: _d, sections: _s, faqs: _f, places: _p, ...card } = readPost(slugOf(path), raw);
     return card;
   })
   .filter((p) => p.published)
@@ -505,5 +505,17 @@ export function postsAboutHub(slug: string, guides: string[], n: number): PostCa
     .filter((x) => x.s >= 2)
     .sort((a, b) => b.s - a.s || a.i - b.i)
     .slice(0, n)
+    .map((x) => x.p);
+}
+
+/** What an airport post is, for putting the ones about the same airport in a useful order. */
+const airportPostRank = (slug: string) => (slug.startsWith("how-early-") ? 0 : /direct/.test(slug) ? 1 : 2);
+
+/** The other posts about an airport (their `airport` field): how early to arrive, then direct flights, then the rest newest first. */
+export function postsAboutAirport(code: string, except = ""): PostCard[] {
+  if (!code) return [];
+  return POSTS.map((p, i) => ({ p, i }))
+    .filter(({ p }) => p.airport === code && p.slug !== except)
+    .sort((a, b) => airportPostRank(a.p.slug) - airportPostRank(b.p.slug) || a.i - b.i)
     .map((x) => x.p);
 }

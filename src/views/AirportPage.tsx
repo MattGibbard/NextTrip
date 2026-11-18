@@ -43,6 +43,18 @@ export function AirportPage({ airport: a }: { airport: Airport }) {
 
         <div className="lp-wrap lp-info-body bl-body">
           <div className="bl-main">
+            <section className="ap-posts" aria-labelledby="ap-posts">
+              <h2 id="ap-posts">Before you fly from {a.name}</h2>
+              <ul>
+                {posts.map((p) => (
+                  <li key={p.slug}>
+                    <a href={postPath(p.slug)}>{p.title}</a>
+                    {p.intro && <span className="muted small">{p.intro}</span>}
+                  </li>
+                ))}
+              </ul>
+            </section>
+
             {a.terminals.length > 0 && (
               <section className="ap-terminals" aria-labelledby="ap-terminals">
                 <h2 id="ap-terminals">{a.terminals.length === 1 ? "The terminal" : `${a.terminals.length} terminals: which airline goes where`}</h2>
@@ -63,18 +75,6 @@ export function AirportPage({ airport: a }: { airport: Airport }) {
                 <p className="muted small">Airlines sometimes change terminals, so check your booking or the airport's website before you go.</p>
               </section>
             )}
-
-            <section className="ap-posts" aria-labelledby="ap-posts">
-              <h2 id="ap-posts">Before you fly</h2>
-              <ul>
-                {posts.map((p) => (
-                  <li key={p.slug}>
-                    <a href={postPath(p.slug)}>{p.title}</a>
-                    {p.intro && <span className="muted small">{p.intro}</span>}
-                  </li>
-                ))}
-              </ul>
-            </section>
 
             {a.sections.length > 0 && (
               <article className="lp-article">

@@ -47,12 +47,14 @@ describe("airport guide files", () => {
 });
 
 describe("airport pages", () => {
-  it("lists the blog posts about the airport, direct flights first, and the places they link to", () => {
+  it("lists the blog posts about the airport, how early to arrive then direct flights, and the places they link to", () => {
     const man = findAirport("manchester")!;
     const posts = POSTS.filter((p) => man.posts.some((x) => x.slug === p.slug));
     expect(posts.length).toBe(man.posts.length);
-    expect(man.posts[0].slug).toMatch(/direct/);
-    expect(man.posts.some((p) => p.slug.startsWith("how-early"))).toBe(true);
+    expect(man.posts[0].slug).toBe("how-early-should-you-arrive-at-manchester-airport");
+    expect(man.posts[1].slug).toBe("where-can-you-fly-direct-from-manchester-airport");
+    // Under each title, the search description, which leads with the answer.
+    expect(man.posts[0].intro).toMatch(/^About 2 hours/);
     expect(man.places.length).toBeGreaterThan(0);
     for (const p of man.places) expect(DESTINATIONS.some((d) => d.slug === p.slug)).toBe(true);
   });

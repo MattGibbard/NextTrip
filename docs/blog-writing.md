@@ -8,7 +8,11 @@ The rules for every post in `content/blog`, used by the daily blog run. Posts go
 - Each run writes 2 or 3 posts:
   - **At least one practical airport or flight post** (themes a, c, d, j or k). These reach Google page 1 fastest. Prefer an airport not yet covered for that question.
   - **Most days, one seasonal post** for whatever falls 6 to 10 weeks ahead (winter and February half-term angles from mid-October to early December, Easter in January and February, summer in March and April, October half-term in July and August).
-  - **The rest** from the other themes, rotating. Never two posts from the same niche theme (g to p) in one run, and not the same niche theme as the previous run.
+  - **The rest** from the other themes, rotating. Never two posts from the same niche theme (g to p) in one run, and not the same niche theme as the previous run (except theme i, below).
+- **Favour the formats that win clicks.** In Search Console (November 2026), "X or Y" comparisons (theme i, such as Vienna or Prague at Christmas, Budapest or Krakow at Christmas, Malta or Cyprus in winter) and "which side of the plane to sit on flying to <destination>" posts (theme c) get 2 to 4% click-through at page-one positions. Broad "holidays in X" topics rank too low to get clicks. So:
+  - **Most runs include one i comparison**, which can be the seasonal post (two warm places to compare for a winter month, two Christmas cities). Theme i is exempt from the previous-run rule, but still one per run.
+  - **About every other run, make the airport or flight post a c plane-side post** for a destination people fly to from the UK (an island, a mountain or coastal approach). Check the runway direction and usual approach, and say which side is usually best and why, without promising it.
+  - Avoid broad "holidays in <place>" or "<place> holidays" angles.
 - Prefer topics that link naturally to several existing guides.
 
 ### Don't compete with hub pages
@@ -18,13 +22,13 @@ Never write a post whose main search phrase a hub targets. Check the `title` and
 ### Themes
 
 - **a.** "Where can you fly direct from <airport>?" for the main UK and Irish airports: destinations, airlines, flight times, seasonal routes, linking our guides.
-- **c.** Best side of the plane for a specific route or approach, framed as guidance not a guarantee (runway, wind, weather, direction).
+- **c.** Best side of the plane for a specific route or approach, framed as guidance not a guarantee (runway, wind, weather, direction). Slug pattern: `which-side-of-the-plane-to-sit-on-flying-to-<destination>`.
 - **d.** "How early should you arrive at <airport>?": by airline, hand vs hold luggage, short vs long-haul, peak times, transport, linking the airport's official guidance. Say rules change and to check with the airport or airline.
 - **e.** Best destinations or a plan for an N-day trip (3-day European breaks, weekends with direct flights from the UK, a country in 4 days): weigh flight time, transfers, size and realistic sightseeing time.
 - **f.** Own ideas likely to reach page 1 for a small new site: long-tail questions with clear intent and weak competition, tied to deciding where to go and planning the trip.
 - **g.** Alternatives to X: quieter swaps for crowded places, favouring swaps we have guides for.
 - **h.** Quietest time to visit X: crowd patterns, school holidays, cruise-ship days and events, with weather trade-offs.
-- **i.** X or Y comparisons between two of our guides.
+- **i.** X or Y comparisons between two of our guides, ideally tied to a month or season (`<x>-or-<y>`, or `<x>-or-<y>-in-<month or season>`, `<x>-or-<y>-at-christmas`). Put a side-by-side table near the top and a clear verdict on who should pick which.
 - **j.** Direct flights from smaller UK and Irish airports (Exeter, Southampton, Norwich, Inverness, Belfast City, Cardiff, Bournemouth, Cork, Shannon). Routes change often; verify carefully.
 - **k.** Airport + month + flight time, e.g. "Sun within 3 hours of Birmingham in May": checked direct routes plus climate data for the month.
 - **l.** No jet lag: warm places on UK time or within an hour of it, with the time difference and when each is warm.

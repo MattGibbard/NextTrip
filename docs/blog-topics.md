@@ -133,3 +133,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-17 | is-marrakech-warm-in-january | f | marrakech |  |
 | 2026-11-18 | winter-sun-from-stansted-in-february | k | la-palma |  |
 | 2026-11-18 | is-cape-verde-warm-in-january | f | cape-verde |  |
+| 2026-11-19 | which-side-of-the-plane-to-sit-on-flying-to-gran-canaria | c | gran-canaria |  |
+| 2026-11-19 | hurghada-or-sharm-el-sheikh-in-winter | i | sharm-el-sheikh |  |

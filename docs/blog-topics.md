@@ -135,3 +135,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-18 | is-cape-verde-warm-in-january | f | cape-verde |  |
 | 2026-11-19 | which-side-of-the-plane-to-sit-on-flying-to-gran-canaria | c | gran-canaria |  |
 | 2026-11-19 | hurghada-or-sharm-el-sheikh-in-winter | i | sharm-el-sheikh |  |
+| 2026-11-20 | winter-sun-from-newcastle-in-january | k | fuerteventura |  |
+| 2026-11-20 | tenerife-or-lanzarote-in-winter | i | lanzarote |  |

@@ -137,3 +137,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-19 | hurghada-or-sharm-el-sheikh-in-winter | i | sharm-el-sheikh |  |
 | 2026-11-20 | winter-sun-from-newcastle-in-january | k | fuerteventura |  |
 | 2026-11-20 | tenerife-or-lanzarote-in-winter | i | lanzarote |  |
+| 2026-11-21 | which-side-of-the-plane-to-sit-on-flying-to-fuerteventura | c | fuerteventura |  |
+| 2026-11-21 | dubai-or-tenerife-in-winter | i | dubai |  |

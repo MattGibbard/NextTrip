@@ -139,3 +139,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-20 | tenerife-or-lanzarote-in-winter | i | lanzarote |  |
 | 2026-11-21 | which-side-of-the-plane-to-sit-on-flying-to-fuerteventura | c | fuerteventura |  |
 | 2026-11-21 | dubai-or-tenerife-in-winter | i | dubai |  |
+| 2026-11-22 | winter-sun-from-leeds-bradford-in-february | k | tenerife |  |
+| 2026-11-22 | algarve-or-malaga-in-winter | i | algarve |  |

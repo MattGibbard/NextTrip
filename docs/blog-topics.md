@@ -141,3 +141,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-21 | dubai-or-tenerife-in-winter | i | dubai |  |
 | 2026-11-22 | winter-sun-from-leeds-bradford-in-february | k | tenerife |  |
 | 2026-11-22 | algarve-or-malaga-in-winter | i | algarve |  |
+| 2026-11-23 | winter-sun-from-glasgow-in-february | k | gran-canaria |  |
+| 2026-11-23 | agadir-or-tenerife-in-winter | i | agadir |  |

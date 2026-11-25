@@ -145,3 +145,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-23 | agadir-or-tenerife-in-winter | i | agadir |  |
 | 2026-11-24 | which-side-of-the-plane-to-sit-on-flying-to-malaga | c | malaga |  |
 | 2026-11-24 | iceland-or-tromso-for-the-northern-lights | i | tromso |  |
+| 2026-11-25 | winter-sun-from-edinburgh-in-january | k | lanzarote |  |
+| 2026-11-25 | seville-or-granada-in-winter | i | granada |  |

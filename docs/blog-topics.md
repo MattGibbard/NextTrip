@@ -147,3 +147,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-24 | iceland-or-tromso-for-the-northern-lights | i | tromso |  |
 | 2026-11-25 | winter-sun-from-edinburgh-in-january | k | lanzarote |  |
 | 2026-11-25 | seville-or-granada-in-winter | i | granada |  |
+| 2026-11-26 | how-early-should-you-arrive-at-bournemouth-airport | d | algarve |  |
+| 2026-11-26 | marrakech-or-seville-in-winter | i | marrakech |  |

@@ -149,3 +149,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-25 | seville-or-granada-in-winter | i | granada |  |
 | 2026-11-26 | how-early-should-you-arrive-at-bournemouth-airport | d | algarve |  |
 | 2026-11-26 | marrakech-or-seville-in-winter | i | marrakech |  |
+| 2026-11-27 | winter-sun-from-east-midlands-in-february | k | fuerteventura |  |
+| 2026-11-27 | abu-dhabi-or-dubai-in-winter | i | abu-dhabi |  |

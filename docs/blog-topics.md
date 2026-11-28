@@ -151,3 +151,5 @@ Theme letters are the themes in [blog-writing.md](blog-writing.md#themes). Cover
 | 2026-11-26 | marrakech-or-seville-in-winter | i | marrakech |  |
 | 2026-11-27 | winter-sun-from-east-midlands-in-february | k | fuerteventura |  |
 | 2026-11-27 | abu-dhabi-or-dubai-in-winter | i | abu-dhabi |  |
+| 2026-11-28 | which-side-of-the-plane-to-sit-on-flying-to-hurghada | c | hurghada |  |
+| 2026-11-28 | zermatt-or-chamonix-for-skiing | i | zermatt |  |
